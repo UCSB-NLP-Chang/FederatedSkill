@@ -1,0 +1,29 @@
+{
+    "id": "9083ab7e-2d3d-439b-ba62-b2478ad52fd3",
+    "started_at": "2026-05-18T00:17:11.154551",
+    "finished_at": "2026-05-18T00:24:28.361148",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "new_task_11_media_rights_rollfor__R7yPsQT"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

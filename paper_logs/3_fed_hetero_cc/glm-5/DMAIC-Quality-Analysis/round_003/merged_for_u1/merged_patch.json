@@ -1,0 +1,37 @@
+{
+  "worker_id": "u1",
+  "summary": "R3 merge complete for u1 (glm-5). Applied structural enforcement: replaced verbose prose-based SKILL.md with gated 4-step workflow that removes all computation context (formulas, methodology, prose warnings) and forces script usage via hard checkpoints. Added u2's deliverable verification script and output templates, plus u0's enhanced schema with trace mismatches. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/output-templates.md",
+    "statistical-process-analysis/references/schema.md",
+    "statistical-process-analysis/scripts/verify_deliverables.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/references/output-templates.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/references/schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/scripts/verify_deliverables.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "cost_usd": 3.2813237999999996
+}

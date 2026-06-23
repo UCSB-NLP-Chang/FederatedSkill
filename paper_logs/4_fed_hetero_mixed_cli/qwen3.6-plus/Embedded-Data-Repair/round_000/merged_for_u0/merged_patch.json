@@ -1,0 +1,29 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Library has 1 skill: edit-embedded-office-xml. See DECISIONS.md.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/references/openxml-structures.md",
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "edit-embedded-office-xml/references/openxml-structures.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.520772
+}

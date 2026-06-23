@@ -1,0 +1,29 @@
+{
+    "id": "b51c39f2-5b60-4382-80ba-4e4d72de75f0",
+    "started_at": "2026-05-18T01:42:31.058423",
+    "finished_at": "2026-05-18T01:45:58.469156",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "task_family_utility_bills_templa__4sAoWZz"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

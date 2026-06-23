@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Merged all three worker patches into excel-formula-injection: added pre-flight check (Step 0), check_test_data_only.py script, verifier-interaction.md reference, decision tree for failure modes. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/verifier-interaction.md",
+    "excel-formula-injection/scripts/check_test_data_only.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-injection/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ],
+    "excel-formula-injection/scripts/check_test_data_only.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-injection/references/verifier-interaction.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "cost_usd": 2.542209
+}

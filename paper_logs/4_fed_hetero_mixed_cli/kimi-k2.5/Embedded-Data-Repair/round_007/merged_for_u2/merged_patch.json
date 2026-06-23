@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (openai/kimi-k2.5). Applied 4 targeted edits from u0+u1 synthesized patches for B3 dual-matrix gap; kept SKILL.md at 156 lines to avoid kimi truncation. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "cost_usd": 4.487118
+}

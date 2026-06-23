@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied synthesized SKILL.md with STOP-block test execution format. Target u2's R1 failure was infrastructure (max_tokens), not content. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.5567209999999996
+}

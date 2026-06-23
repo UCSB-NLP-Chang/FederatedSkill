@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5 + claude-code). Applied u1's SKILL.md wholesale, added selector-workbook-pattern.md reference, merged u2's selector section into series-catalog-pattern.md. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/selector-workbook-pattern.md",
+    "economic-time-series-correlation/references/series-catalog-pattern.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-correlation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "economic-time-series-correlation/references/selector-workbook-pattern.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "economic-time-series-correlation/references/series-catalog-pattern.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-correlation/SKILL.md"
+  ],
+  "cost_usd": 0.832308
+}

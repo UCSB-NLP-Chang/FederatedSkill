@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "R1 merge complete. Applied u0's validated workflow + B2-specific invariants from task_memory.md to close u1's gap. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md",
+    "spreadsheet-audit-reporting/references/computed-column-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "spreadsheet-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "spreadsheet-audit-reporting/references/computed-column-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.6
+    ]
+  },
+  "conflicts": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "cost_usd": 0.3835236000000001
+}

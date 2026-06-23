@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's patch wholesale (control row formula completeness) + synthesized u0's MergedCell anti-pattern. 2 skills maintained. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-workbook-manipulation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 5.158583999999999
+}

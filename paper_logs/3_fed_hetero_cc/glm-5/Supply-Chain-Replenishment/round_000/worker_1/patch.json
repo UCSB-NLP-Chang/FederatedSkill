@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Creates a skill for Excel workbook operations involving multi-sheet reading, date handling, calculated fields, and structured output generation. The trace shows a clean pattern for inventory/planning calculations that succeeded on first attempt.",
+  "upsert_paths": [
+    "excel-workbook-operations/SKILL.md"
+  ],
+  "delete_paths": []
+}

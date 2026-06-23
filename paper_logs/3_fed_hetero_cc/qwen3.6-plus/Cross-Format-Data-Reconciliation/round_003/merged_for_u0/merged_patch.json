@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's Custom Output Schema Template + absorbed u1's known invariant additions. Rejected u2's 223-line CLI script per prior insight about qwen's poor fit with long argparse scripts. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "cost_usd": 1.0247579999999998
+}

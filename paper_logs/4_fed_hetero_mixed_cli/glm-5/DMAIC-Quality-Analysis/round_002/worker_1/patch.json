@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.6666666666666666,
+  "summary": "The agent wrote custom code instead of using the provided template script, producing JSON with multiple schema violations (wrong field names like `date_range` instead of `primary_analysis_window`, `total_records` instead of `total_records_in_source`, extra fields like `df_between`, `mr_lcl`). The existing skill guidance was correct but ignored. Updates: (1) strengthen the mandate to use the template script, (2) inline critical schema field names directly in SKILL.md so agents have no excuse to skip the reference, (3) update the template script to support flexible date ranges and phase-based filtering since the agent's task required phase-aware windowing.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/scripts/analysis_template.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.9230769230769231,
+  "summary": "The trace shows an agent creating a custom script instead of using the existing clinical-lab-harmonization skill, then declaring success despite verifier failure. The patch adds ICU metabolic panel coverage, additional analytes (Lactate, BUN, Osmolality, blood gas parameters), and strengthens troubleshooting guidance to investigate verifier failures rather than assuming success.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/unit-conversions.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "8d9c8af5-f76b-4c5f-bc07-a3ec565c97d6",
+    "started_at": "2026-05-23T23:44:30.404743",
+    "finished_at": "2026-05-23T23:46:59.583395",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-coldchain-lastmile-correlat__gJsSFLY"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

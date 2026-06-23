@@ -1,0 +1,72 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .F                                                                       [100%]
+E           =================================== FAILURES ===================================
+E           ______________________________ test_summary_file _______________________________
+E           
+E               def test_summary_file():
+E                   assert SUMMARY_FILE.exists(), f"Summary file missing: {SUMMARY_FILE}"
+E                   rows = load_plan_rows()
+E               
+E                   first_week_5 = next((week for week, days, *_ in rows if days == 5), None)
+E                   first_week_4 = next((week for week, days, *_ in rows if days == 4), None)
+E               
+E                   content = SUMMARY_FILE.read_text(encoding="utf-8").strip()
+E                   lines = content.splitlines()
+E                   assert len(lines) == 3, "Summary file must contain exactly 3 lines"
+E               
+E                   m5 = re.fullmatch(r"First_Week_5_Days:\s*(\d+|N/A)", lines[0].strip())
+E                   m4 = re.fullmatch(r"First_Week_4_Days:\s*(\d+|N/A)", lines[1].strip())
+E                   assert m5, "Line 1 must match: First_Week_5_Days: <week-number-or-N/A>"
+E                   assert m4, "Line 2 must match: First_Week_4_Days: <week-number-or-N/A>"
+E               
+E                   got_5 = m5.group(1)
+E                   got_4 = m4.group(1)
+E                   exp_5 = str(first_week_5) if first_week_5 is not None else "N/A"
+E                   exp_4 = str(first_week_4) if first_week_4 is not None else "N/A"
+E                   assert got_5 == exp_5, f"First_Week_5_Days mismatch: expected {exp_5}, got {got_5}"
+E                   assert got_4 == exp_4, f"First_Week_4_Days mismatch: expected {exp_4}, got {got_4}"
+E               
+E                   assert lines[2].startswith("Summary: "), "Line 3 must start with 'Summary: '"
+E                   summary_text = lines[2][len("Summary: "):].strip()
+E                   assert summary_text, "Summary text cannot be empty"
+E               
+E                   words = re.findall(r"\S+", summary_text)
+E                   assert len(words) <= 60, f"Summary exceeds 60 words ({len(words)})"
+E                   sentence_count = len(re.findall(r"[.!?]", summary_text))
+E           >       assert sentence_count <= 3, f"Summary exceeds 3 sentences ({sentence_count})"
+E           E       AssertionError: Summary exceeds 3 sentences (4)
+E           E       assert 4 <= 3
+E           
+E           /tests/test_outputs.py:173: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_summary_file - AssertionError: Summary ...
+E           1 failed, 1 passed in 0.12s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.33s ===============================

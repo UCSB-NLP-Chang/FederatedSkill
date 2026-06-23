@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The agent failed because it claimed success without finding and running the test file. The verification script exited with code 4 (no tests found), but the agent didn't follow the skill's guidance to search manually. This patch strengthens the 'do not claim success without tests' rule and improves test-finding robustness.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/finding-tests.md",
+    "excel-formula-injection/scripts/verify_before_submit.py"
+  ],
+  "delete_paths": []
+}

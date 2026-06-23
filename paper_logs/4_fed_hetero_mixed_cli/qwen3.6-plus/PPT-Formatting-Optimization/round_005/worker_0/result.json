@@ -1,0 +1,29 @@
+{
+    "id": "55a24896-27ed-441d-886d-c3bdf96600c1",
+    "started_at": "2026-05-18T03:52:12.644445",
+    "finished_at": "2026-05-18T03:57:09.753310",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__PPT-Formatting-Optimization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "incident-briefing-caption-cleanu__brw9RhJ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "id": "b8fea43b-3674-442b-9022-177235ae463d",
+    "task_name": "factory-output-at-risk-calc",
+    "trial_name": "factory-output-at-risk-calc__5kviJ9G",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Weighted-Ri<REDACTED>",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Weighted-Ri<REDACTED>"
+    },
+    "source": "Weighted-Risk-Assessment",
+    "task_checksum": "095cde973809f4b443c4536237d55ba8a4497f31943eeb1bcb2cd66ceea57dd5",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Weighted-Ri<REDACTED>",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Weighted-Risk-Assessment"
+        },
+        "trial_name": "factory-output-at-risk-calc__5kviJ9G",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Weighted-Ri<REDACTED>",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "kimi-k2.5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://api.lkeap.cloud.tencent.com/plan/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Weighted-Ri<REDACTED>"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "eaaaebc3-1095-4ffa-a58e-2d8acbfd489e"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 380930,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 5829,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-14T22:56:38.157775Z",
+    "finished_at": "2026-05-14T22:59:41.335409Z",
+    "environment_setup": {
+        "started_at": "2026-05-14T22:56:38.158623Z",
+        "finished_at": "2026-05-14T22:56:40.449220Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-14T22:56:40.449274Z",
+        "finished_at": "2026-05-14T22:56:42.154307Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-14T22:56:42.154404Z",
+        "finished_at": "2026-05-14T22:59:27.786588Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-14T22:59:27.793423Z",
+        "finished_at": "2026-05-14T22:59:29.536349Z"
+    }
+}

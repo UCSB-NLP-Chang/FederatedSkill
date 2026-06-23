@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "R0 merge complete for u2 (kimi-k2.5/kimi-cli). Created unified `clinical-csv-harmonization` skill synthesizing best elements from all three workers: u0's bidirectional conversion testing, u2's validation checklist and anti-patterns, inline thresholds (no external deps for kimi-cli reliability). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-csv-harmonization/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-csv-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.7368421052631579
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.873071
+}

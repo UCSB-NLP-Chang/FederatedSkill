@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The agent repeatedly failed with `AttributeError: 'MergedCell' object attribute 'value' is read-only` before succeeding by removing merges entirely. This is a common openpyxl gotcha not covered in the existing excel-workbook-construction skill. Adding explicit anti-pattern guidance, correct ordering rules, and a decision tree for merges vs styling will prevent future agents from wasting iterations on this brittle pattern.",
+  "upsert_paths": [
+    "excel-workbook-construction/SKILL.md"
+  ],
+  "delete_paths": []
+}

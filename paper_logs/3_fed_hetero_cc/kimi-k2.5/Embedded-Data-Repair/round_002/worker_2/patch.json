@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The task succeeded but revealed a gap in the existing skill: slide notes can contain actionable instructions ('FINAL slot-factor correction: cart to bay = 0.50') that must be parsed to identify which cell to update. The existing skill covers the technical mechanics of editing embedded Excel but lacks guidance on extracting and interpreting slide notes as a data source. This patch adds a 'Reading Slide Notes' section to the skill, documenting how to locate notes in slide XML (they appear as text boxes with <a:t> elements, not in separate notes.xml files), and when to trust notes vs. Excel structure. No new files needed\u2014this is a targeted enhancement to the existing skill's workflow.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "delete_paths": []
+}

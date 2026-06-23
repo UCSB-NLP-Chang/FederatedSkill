@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Created 1 umbrella skill `excel-financial-modeling` synthesizing u2's correct API patterns with u0's verification checklist. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md",
+    "excel-financial-modeling/references/large-model-patterns.md",
+    "excel-financial-modeling/scripts/verify_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/scripts/verify_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.14285714285714285
+    ],
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.14285714285714285
+    ],
+    "excel-financial-modeling/references/large-model-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.14285714285714285
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.153976
+}

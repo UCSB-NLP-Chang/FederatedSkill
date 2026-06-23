@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R6. Applied u0's validated split-run handling (B3 covered), absorbed u2's direct-value-replacement patterns under umbrella to prevent naming divergence. B2 gap persists. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/direct-value-replacement.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-filling/references/direct-value-replacement.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "hwpx-template-filling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-filling/SKILL.md"
+  ],
+  "cost_usd": 0.9195438000000001
+}

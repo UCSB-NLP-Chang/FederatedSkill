@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Update workload-capacity-planning skill to handle duplicate period entries in input data (phases 10, 18, 28 appeared twice in this task). Add 20 hrs/day as a common capacity rate. Add detection and resolution pattern for duplicate periods.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

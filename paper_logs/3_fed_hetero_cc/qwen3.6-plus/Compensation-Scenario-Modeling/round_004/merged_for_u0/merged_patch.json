@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged u1's critical named-range API fix (`.definedName` causes AttributeError \u2192 iterate `wb.defined_names` directly) with u0's pytest mandate. Kept concise numbered format per qwen style fit. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5555555555555556
+    ]
+  },
+  "conflicts": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "cost_usd": 2.65536
+}

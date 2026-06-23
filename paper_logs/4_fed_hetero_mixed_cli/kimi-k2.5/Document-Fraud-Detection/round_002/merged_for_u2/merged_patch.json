@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied crosswalk pattern from u0+u1 to expense-claims-validation. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 4.256022
+}

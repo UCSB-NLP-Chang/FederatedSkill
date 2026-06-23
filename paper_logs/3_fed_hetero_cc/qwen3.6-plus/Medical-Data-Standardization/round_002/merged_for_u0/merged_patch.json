@@ -1,0 +1,32 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) on Medical-Data-Standardization R2.\n\nApplied u0's STOP-checkpoint format (proven for qwen) + u2's explicit (factor, direction) pattern + corrected thyroid thresholds per task_memory (Free_T4>30, Total_T4>200, Total_T3>50). Added Output precision section and thyroid-factors.md reference.\n\nSee DECISIONS.md for detailed rationale.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md",
+    "clinical-lab-harmonization/references/thyroid-factors.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/references/conversion-factors.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8076923076923077
+    ],
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8076923076923077
+    ],
+    "clinical-lab-harmonization/references/thyroid-factors.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.11538461538461539
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md"
+  ],
+  "cost_usd": 4.385442
+}

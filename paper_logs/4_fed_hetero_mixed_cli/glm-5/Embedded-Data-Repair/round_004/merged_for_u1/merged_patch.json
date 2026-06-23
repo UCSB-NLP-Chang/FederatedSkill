@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5, claude-code) R4. Synthesized u1's additive patch + u0's ZIP repack anti-pattern + u2's label alias resolution workflow. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/references/openxml-structures.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.75
+    ],
+    "edit-embedded-office-xml/references/openxml-structures.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.75
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "cost_usd": 3.2238689999999997
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updates cross-format-diff skill to explicitly mandate python3, reinforce using the provided diff script to avoid type-normalization bugs, and add environment/tooling troubleshooting based on agent friction in the trace.",
+  "upsert_paths": [
+    "cross-format-diff/SKILL.md"
+  ],
+  "delete_paths": []
+}

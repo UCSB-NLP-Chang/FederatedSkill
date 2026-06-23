@@ -1,0 +1,12 @@
+{
+  "worker_id": "u2",
+  "reward": 0.8888888888888888,
+  "summary": "Creates a skill for programmatic PowerPoint manipulation via direct XML editing. The trace shows the agent successfully modifying captions (fonts, colors, positioning) and adding slides by treating .pptx as ZIP archives with XML content. Key reusable patterns include: EMU-based positioning (914400 EMUs = 1 inch), XML namespace handling, text formatting via a:rPr elements, and verification strategies that parse slide XML directly rather than relying on high-level libraries.",
+  "upsert_paths": [
+    "pptx-xml-manipulation/SKILL.md",
+    "pptx-xml-manipulation/references/pptx-xml-schema.md",
+    "pptx-xml-manipulation/scripts/extract_pptx.py",
+    "pptx-xml-manipulation/scripts/verify_pptx.py"
+  ],
+  "delete_paths": []
+}

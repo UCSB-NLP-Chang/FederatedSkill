@@ -1,0 +1,221 @@
+# Date & Price Parsing Patterns
+
+## Date Disambiguation
+- `DD/MM/YYYY` vs `MM/DD/YYYY`: Check the first number. If `> 12`, it is the day. If both `<= 12`, context or locale dictates. Default to `DD/MM` for international/Malaysian/European contexts.
+- `MM/YYYY`: Implies first day of month. Normalize to `YYYY-MM-01`.
+- `DD-MM-YYYY` vs `DD/MM/YYYY`: Treat separators interchangeably.
+
+## Invoice Total Keyword Priority
+When extracting totals from invoices, OCR captures multiple line items. Use this priority order to select the correct total:
+1. `GRAND TOTAL`
+2. `TOTAL DUE`
+3. `TOTAL`
+Explicitly exclude lines containing: `SUBTOTAL`, `TAX`, `VAT`, `SHIPPING`, `DISCOUNT`, `AMOUNT DUE` (unless specified).
+If multiple matches exist, pick the highest priority keyword.
+
+### Python Pattern
+```python
+import re
+
+def extract_invoice_total(text):
+    """Extract total amount prioritizing GRAND TOTAL > TOTAL DUE > TOTAL."""
+    lines = text.split('\n')
+    total_keywords = [
+        (r'GRAND\s*TOTAL', 1),
+        (r'TOTAL\s*DUE', 2),
+        (r'\bTOTAL\b', 3)
+    ]
+    exclude_keywords = ['SUBTOTAL', 'TAX', 'VAT', 'SHIPPING', 'DISCOUNT']
+    
+    best_match = None
+    best_priority = 99
+    
+    for line in lines:
+        line_upper = line.upper()
+        if any(kw in line_upper for kw in exclude_keywords):
+            continue
+            
+        for pattern, priority in total_keywords:
+            if re.search(pattern, line_upper):
+                if priority < best_priority:
+                    price_match = re.search(r'(?:RM|MYR|\$|€|£)?\s*([\d,]+\.?\d*)', line)
+                    if price_match:
+                        best_match = float(price_match.group(1).replace(',', ''))
+                        best_priority = priority
+                break
+    return best_match
+```
+
+## Multi-Line Keyword Matching
+
+OCR frequently splits compound keywords across lines with blank lines in between, or separates keywords from their values with blank lines.
+
+### Common Split Patterns
+```
+TOTAL
+
+DUE: 120.75
+```
+```
+PAY THIS AMOUNT
+
+1234.56
+```
+
+### Python Pattern
+```python
+def extract_amount_multiline(text, keywords, max_gap=4):
+    """
+    Extract amount handling multi-line keywords and blank line gaps.
+    
+    Args:
+        text: OCR text
+        keywords: List of keywords in priority order (e.g., ['PAY THIS AMOUNT', 'AMOUNT DUE', 'TOTAL DUE'])
+        max_gap: Maximum lines to search after keyword for value
+    """
+    lines = text.strip().split('\n')
+    
+    for kw in keywords:
+        parts = kw.upper().split()
+        
+        for i, line in enumerate(lines):
+            line_upper = line.strip().upper()
+            
+            # Check if first part of keyword is on this line
+            if parts[0] in line_upper:
+                # Try to find remaining parts in next few lines
+                found_all = True
+                target_line_idx = i
+                
+                if len(parts) > 1:
+                    # Look for remaining parts
+                    for j in range(i + 1, min(i + max_gap, len(lines))):
+                        if all(p in lines[j].upper() for p in parts[1:]):
+                            target_line_idx = j
+                            break
+                    else:
+                        # Not all parts found, check if amount is on current line
+                        m = re.search(r'[\$]?([\d,]+\.\d{2})', line)
+                        if m:
+                            return m.group(1)
+                        continue
+                
+                # Extract amount from target line or subsequent lines
+                m = re.search(r'[\$]?([\d,]+\.\d{2})', lines[target_line_idx])
+                if m:
+                    return m.group(1)
+                
+                # Look in next few lines for amount
+                for k in range(target_line_idx + 1, min(target_line_idx + max_gap, len(lines))):
+                    m = re.search(r'[\$]?([\d,]+\.\d{2})', lines[k])
+                    if m:
+                        return m.group(1)
+    
+    return None
+```
+
+## Price Extraction
+- Strip currency prefixes/suffixes: `$`, `RM`, `MYR`, `€`, `£`, `EACH`, `PER`.
+- Handle thousands separators: Remove commas before parsing.
+- Regex: `(?:RM|MYR|\$|€)?\s*(\d+(?:,\d{3})*(?:\.\d{1,2})?)`
+- Format to 2 decimal places only if the task requires string output; otherwise, keep raw floats.
+
+## Quantity Extraction from Line Items
+
+When extracting quantities from lines where item names contain numbers (e.g., "Concrete C30 50 m³ $150.00"):
+
+### Pitfall
+Naive regex `\d+` will match "30" from "C30" instead of the actual quantity "50".
+
+### Solution: Context-Aware Patterns
+Match quantities AFTER the item name, not just any number on the line.
+
+```python
+def extract_quantity_with_context(line, item_name):
+    """
+    Extract quantity from a line, matching AFTER the item name.
+    
+    Args:
+        line: OCR line like "Concrete C30 50 m³ $150.00"
+        item_name: Item identifier like "Concrete C30" or "Steel reinforcement"
+    
+    Returns:
+        Quantity as string, or None
+    """
+    # Escape special regex chars in item name
+    escaped_name = re.escape(item_name)
+    
+    # Pattern: item name followed by space, then capture the quantity
+    # Look for number AFTER the item name
+    pattern = rf'{escaped_name}\s+(\d+)'
+    match = re.search(pattern, line, re.IGNORECASE)
+    if match:
+        return match.group(1)
+    
+    return None
+
+# Example usage for known item patterns
+ITEM_PATTERNS = [
+    ('Concrete C30', r'C30\s+(\d+)'),           # "Concrete C30 50" → 50
+    ('Steel reinforcement', r'reinforcement\s+(\d+)'),  # "Steel reinforcement 100" → 100
+    ('Brick work', r'work\s+(\d+)'),           # "Brick work 200" → 200
+]
+
+def extract_line_items(text):
+    """Extract line items with quantities, handling embedded numbers in names."""
+    items = []
+    for line in text.split('\n'):
+        for item_name, pattern in ITEM_PATTERNS:
+            if item_name.lower() in line.lower():
+                qty_match = re.search(pattern, line, re.IGNORECASE)
+                price_match = re.search(r'\$(\d+\.\d{2})', line)
+                if qty_match and price_match:
+                    items.append({
+                        'description': item_name,
+                        'quantity': qty_match.group(1),
+                        'unit_price': price_match.group(1)
+                    })
+    return items
+```
+
+## Multi-Item Deduplication Across OCR Strategies
+
+When using multiple OCR strategies (different PSM modes, preprocessing), the same items may be extracted multiple times.
+
+### Python Pattern
+```python
+def deduplicate_items(items, key_fields=('description',)):
+    """
+    Deduplicate items extracted from multiple OCR strategies.
+    
+    Args:
+        items: List of item dicts with fields like description, quantity, unit_price
+        key_fields: Tuple of field names to use for uniqueness check
+    
+    Returns:
+        Deduplicated list of items (first occurrence kept)
+    """
+    seen = set()
+    unique_items = []
+    for item in items:
+        key = tuple(item.get(f, '') for f in key_fields)
+        if key not in seen:
+            seen.add(key)
+            unique_items.append(item)
+    return unique_items
+
+# Usage with multi-strategy OCR
+def extract_items_multi_strategy(img_path):
+    all_items = []
+    for strategy in ['default', 'preprocessed', 'psm6', 'psm11']:
+        text = ocr_with_strategy(img_path, strategy)
+        items = extract_line_items(text)
+        all_items.extend(items)
+    
+    return deduplicate_items(all_items, key_fields=('description',))
+```
+
+## Common OCR Artifacts
+- `0` ↔ `O`, `1` ↔ `I` or `l`, `5` ↔ `S`, `8` ↔ `B`.
+- Dashes vs slashes: `-` vs `/` vs `.`. Normalize to `-` for ISO dates.
+- Missing spaces: `RM10.99` vs `RM 10.99`. Regex should allow optional whitespace.

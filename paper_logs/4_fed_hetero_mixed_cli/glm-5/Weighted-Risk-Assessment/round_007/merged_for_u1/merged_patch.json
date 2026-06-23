@@ -1,0 +1,34 @@
+{
+  "worker_id": "u1",
+  "summary": "",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/finding-tests.md",
+    "excel-formula-injection/scripts/find_tests.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-injection/scripts/find_tests.py": [
+      "upsert",
+      "u0",
+      0.5
+    ],
+    "excel-formula-injection/SKILL.md": [
+      "upsert",
+      "u0",
+      0.5
+    ],
+    "excel-formula-injection/references/finding-tests.md": [
+      "upsert",
+      "u1",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-formula-injection/SKILL.md",
+    "__llm_call_failed__:NotFoundError:litellm.NotFoundError: OpenAIException - The model `qwen3.6-plus` does not exist or you do not have access to it.",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: ",
+    "__task_update_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

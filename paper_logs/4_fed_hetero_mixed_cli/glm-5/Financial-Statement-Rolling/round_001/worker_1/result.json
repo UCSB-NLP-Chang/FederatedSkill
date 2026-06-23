@@ -1,0 +1,29 @@
+{
+    "id": "870cbafa-aeb2-4f6b-99e5-962b93b6a3b0",
+    "started_at": "2026-05-17T20:24:16.397305",
+    "finished_at": "2026-05-17T20:26:12.343858",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "cedar_accrual_rollforward__LjW8J94"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

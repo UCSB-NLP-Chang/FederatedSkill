@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Created `excel-formula-template` skill for kimi-k2.5: synthesized u2's layered architecture with u1's critical pitfall coverage and validation script. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-template/SKILL.md",
+    "excel-formula-template/references/formula-patterns.md",
+    "excel-formula-template/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-template/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-template/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-template/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.9237710000000003
+}

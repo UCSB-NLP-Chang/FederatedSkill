@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's SKILL.md + merged u0/u1 korean-data-transformations.md (unit stripping + score reformatting + text appending). Absorbed u2's sub-task invariants into existing skill, rejected hwpx-editing naming divergence. See DECISIONS.md.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-filling/references/korean-data-transformations.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "hwpx-template-filling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "cost_usd": 0.5544087000000001
+}

@@ -1,0 +1,29 @@
+{
+    "id": "18f30f84-787c-4fef-80c6-dae64bafe83e",
+    "started_at": "2026-05-18T01:27:30.165109",
+    "finished_at": "2026-05-18T01:32:10.879863",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Distribution-Center-Auditing": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_outbound_manifest_audit__aPFRtap"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

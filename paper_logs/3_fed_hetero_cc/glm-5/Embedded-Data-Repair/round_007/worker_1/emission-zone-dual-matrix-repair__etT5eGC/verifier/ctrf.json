@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779493885.9004288,
+            "stop": 1779493886.2206187
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.3014241140335798,
+                "start": 1779493885.9063432,
+                "stop": 1779493886.2205088,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .F.                                                                      [100%]\nE           =================================== FAILURES ===================================\nE           ____________ test_live_matrix_updated_and_archive_matrix_unchanged _____________\nE           \nE               def test_live_matrix_updated_and_archive_matrix_unchanged():\nE                   input_wb, input_path = workbook_from_pptx(INPUT_FILE, data_only=True)\nE                   output_wb, output_path = workbook_from_pptx(RESULT_FILE, data_only=True)\nE                   try:\nE                       input_ws = input_wb[SHEET_NAME]\nE                       output_ws = output_wb[SHEET_NAME]\nE                       direct_coord, inverse_coord, target_bounds = find_pair(output_ws, TARGET_TITLE, FROM_TOKEN, TO_TOKEN)\nE                       direct_value = output_ws.cell(*direct_coord).value\nE                       inverse_value = output_ws.cell(*inverse_coord).value\nE                       assert direct_value is not None, f'Direct rate cell is empty (no cached value)'\nE                       assert abs(direct_value - EXPECTED_RATE) < 1e-4, f'Expected {EXPECTED_RATE}, got {direct_value}'\nE                       # \u53cc\u901a\u8def\u9a8c\u8bc1\uff1a\u5148\u5c1d\u8bd5\u7f13\u5b58\u503c\uff0c\u82e5\u4e3a None \u5219\u56de\u9000\u5230\u516c\u5f0f\u8bed\u4e49\u68c0\u67e5\nE                       if inverse_value is not None:\nE                           assert abs(inverse_value - (1.0 / EXPECTED_RATE)) < 1e-3, f'Expected {1.0 / EXPECTED_RATE}, got {inverse_value}'\nE                       else:\nE                           # \u7f13\u5b58\u503c\u4e3a\u7a7a\uff0c\u56de\u9000\u5230\u516c\u5f0f\u8bed\u4e49\u68c0\u67e5\nE                           output_wb.close()\nE                           os.unlink(output_path)\nE                           output_wb, output_path = workbook_from_pptx(RESULT_FILE, data_only=False)\nE                           output_ws = output_wb[SHEET_NAME]\nE                           inverse_formula = output_ws.cell(*inverse_coord).value\nE                           assert is_formula(inverse_formula), (\nE                               f'Inverse rate cell is neither a cached value nor a formula: {inverse_formula}'\nE                           )\nE                           # \u68c0\u67e5\u516c\u5f0f\u662f\u5426\u5305\u542b\u5bf9\u76f4\u63a5\u503c\u5355\u5143\u683c\u7684\u6b63\u786e\u5f15\u7528\uff081/Dxx \u6216\u7c7b\u4f3c\u7ed3\u6784\uff09\nE                           import re\nE                           direct_cell = output_ws.cell(*direct_coord).coordinate\nE                           norm_formula = str(inverse_formula).replace(' ', '').replace('$', '').upper()\nE                           # \u5141\u8bb8 1/\u76f4\u63a5\u5355\u5143\u683c \u6216 ROUND(1/\u76f4\u63a5\u5355\u5143\u683c) \u7b49\u53d8\u4f53\nE                           pattern = rf'(ROUND\\()?1/{direct_cell}(,\\d+)?\\)?'\nE                           assert re.search(pattern, norm_formula), (\nE                               f'Inverse formula does not reference the direct rate cell correctly: {inverse_formula}'\nE                           )\nE               \nE                       _, _, archive_bounds = find_pair(output_ws, ARCHIVE_TITLE, FROM_TOKEN, TO_TOKEN)\nE               \nE                       for row in archive_bounds[2]:\nE                           for col in archive_bounds[3]:\nE                               coord = output_ws.cell(row=row, column=col).coordinate\nE           >                   assert_same(input_ws.cell(row=row, column=col).value, output_ws.cell(row=row, column=col).value, f'archive!{coord}')\nE           \nE           /tests/test_outputs.py:127: \nE           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nE           \nE           lhs = None, rhs = 1.0526, coord = 'archive!D4'\nE           \nE               def assert_same(lhs, rhs, coord):\nE                   if isinstance(lhs, (int, float)) and isinstance(rhs, (int, float)):\nE                       assert abs(lhs - rhs) < 1e-6, f'Unexpected change at {coord}: {lhs} -> {rhs}'\nE                   else:\nE                       lhs_s = str(lhs).strip() if lhs is not None else None\nE                       rhs_s = str(rhs).strip() if rhs is not None else None\nE           >           assert lhs_s == rhs_s, f'Unexpected change at {coord}: {lhs} -> {rhs}'\nE           E           AssertionError: Unexpected change at archive!D4: None -> 1.0526\nE           E           assert None == '1.0526'\nE           \nE           /tests/test_outputs.py:80: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_live_matrix_updated_and_archive_matrix_unchanged\nE           1 failed, 2 passed in 0.12s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

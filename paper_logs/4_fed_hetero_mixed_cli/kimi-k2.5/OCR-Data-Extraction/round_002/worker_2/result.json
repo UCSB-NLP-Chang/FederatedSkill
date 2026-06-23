@@ -1,0 +1,29 @@
+{
+    "id": "06493cd3-d19c-4c7d-88ac-cad1a4bdfec2",
+    "started_at": "2026-05-18T01:05:15.643570",
+    "finished_at": "2026-05-18T01:08:20.166551",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "task_family_travel_claim_merge__FaFjQMr"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "",
+  "upsert_paths": [
+    "excel-capacity-reconciliation/SKILL.md",
+    "excel-capacity-reconciliation/scripts/verify_rollforward.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-reconciliation/SKILL.md": [
+      "upsert",
+      "u0",
+      0.0
+    ],
+    "excel-capacity-reconciliation/scripts/verify_rollforward.py": [
+      "upsert",
+      "u0",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.0
+}

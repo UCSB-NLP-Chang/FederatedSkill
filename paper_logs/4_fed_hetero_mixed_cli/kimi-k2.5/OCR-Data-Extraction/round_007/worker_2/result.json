@@ -1,0 +1,33 @@
+{
+    "id": "db55ed8f-0797-4259-bd00-7b6276175135",
+    "started_at": "2026-05-18T03:07:26.499769",
+    "finished_at": "2026-05-18T03:37:46.607018",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 1,
+        "evals": {
+            "kimi-cli__kimi-k2.5__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "task_family_case_settlement_pack__iGFYKCq"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "task_family_case_settlement_pack__iGFYKCq"
+                    ]
+                }
+            }
+        }
+    }
+}

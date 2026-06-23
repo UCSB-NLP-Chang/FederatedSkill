@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for Excel-based inventory load planning. Captures the exact supply chain calculation workflow, openpyxl usage patterns, common pitfalls (e.g., date.timedelta import error, binary file reading), and a ready-to-adapt Python scaffold to accelerate future replenishment and balancing tasks.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/scripts/load_plan_calculator.py"
+  ],
+  "delete_paths": []
+}

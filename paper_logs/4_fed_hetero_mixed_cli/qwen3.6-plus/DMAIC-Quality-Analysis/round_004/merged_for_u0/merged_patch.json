@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "R4 merge complete for u0. Applied u0's Excel input support to compute_metrics.py and merged u0/u1 SKILL.md updates with stronger schema-read-first framing. 2 files updated. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/scripts/compute_metrics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "dmaic-statistical-analysis/scripts/compute_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "dmaic-statistical-analysis/SKILL.md"
+  ],
+  "cost_usd": 3.2454240000000003
+}

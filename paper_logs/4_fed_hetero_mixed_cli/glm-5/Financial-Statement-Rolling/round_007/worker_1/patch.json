@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The trace reveals a critical formula bug in the Ending Balance row: formulas referenced the Ending Balance row itself for adds/releases columns (which are empty) instead of the Period Totals row. The verifier failed, indicating the workbook had structural issues despite the agent's claim of success. This update adds Variant C (contract liability) to rebate-rollforward with its unique data structure and filtering, and adds explicit verification guidance to catch the formula reference bug.",
+  "upsert_paths": [
+    "rebate-rollforward/SKILL.md"
+  ],
+  "delete_paths": []
+}

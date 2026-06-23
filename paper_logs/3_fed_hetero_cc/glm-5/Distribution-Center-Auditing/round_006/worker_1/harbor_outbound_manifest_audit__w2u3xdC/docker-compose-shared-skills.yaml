@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing:/root/.config/agent/skills

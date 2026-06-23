@@ -1,0 +1,29 @@
+{
+    "id": "55689a37-b2ff-47c2-b983-614f76481673",
+    "started_at": "2026-05-18T00:54:04.513616",
+    "finished_at": "2026-05-18T00:57:27.654803",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "new_task_11_datacenter_stochasti__inm9VYJ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

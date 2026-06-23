@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Consolidated 3 patches into 1 umbrella skill `inventory-load-planning` with troubleshooting reference. Used u0's validated SKILL.md (reward=1.0) as base. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/troubleshooting.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-load-planning/references/troubleshooting.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "inventory-load-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.24339899999999998
+}

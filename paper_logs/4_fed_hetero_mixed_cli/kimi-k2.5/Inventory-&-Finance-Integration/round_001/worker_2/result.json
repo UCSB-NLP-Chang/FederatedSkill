@@ -1,0 +1,29 @@
+{
+    "id": "1e626b46-7cb7-41c0-b41c-1bccf1b70f46",
+    "started_at": "2026-05-17T22:46:39.367635",
+    "finished_at": "2026-05-17T22:50:17.694498",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "new_task_9_hospital_staffing_res__McGst6r"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

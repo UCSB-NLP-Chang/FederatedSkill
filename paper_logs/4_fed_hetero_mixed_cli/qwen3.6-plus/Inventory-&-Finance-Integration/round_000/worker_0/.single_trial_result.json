@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_gdpval_21__e4nZmMY",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Inventory-%26-Finance-Integration/round_000/worker_0/harbor_gdpval_21__e4nZmMY",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Inventory-&-Finance-Integration/round_000/worker_0/harbor_gdpval_21__e4nZmMY",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

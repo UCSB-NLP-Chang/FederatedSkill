@@ -1,0 +1,29 @@
+{
+  "worker_id": "u0",
+  "summary": "Round 0 merge complete: converged 3 reward=1.0 patches to single umbrella `image-data-extraction` with critical rounding fix and patterns.md reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md",
+    "image-data-extraction/scripts/extract_ocr_data.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/scripts/extract_ocr_data.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/references/patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.42744809999999994
+}

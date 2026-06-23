@@ -1,0 +1,37 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.0.3"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779073726405,
+            "stop": 1779073726994
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 583,
+                "start": 1779073726411,
+                "stop": 1779073726994,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ...F..........                                                           [100%]\nE           =================================== FAILURES ===================================\nE           ____________________________ TestOutput.test_format ____________________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7fa936f63290>\nE           \nE               def test_format(self):\nE                   pat = re.compile(r'^-?\\d+\\.\\d{2}$')\nE                   for c in EXPECTED_COLUMNS:\nE                       for v in self.df[c]:\nE           >               assert pat.match(str(v))\nE           E               AssertionError: assert None\nE           E                +  where None = <built-in method match of re.Pattern object at 0x7fa98e2ea460>('9.9')\nE           E                +    where <built-in method match of re.Pattern object at 0x7fa98e2ea460> = re.compile('^-?\\\\d+\\\\.\\\\d{2}$').match\nE           E                +    and   '9.9' = str('9.9')\nE           \nE           /tests/test_outputs.py:28: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::TestOutput::test_format - AssertionError: as...\nE           1 failed, 13 passed in 0.29s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

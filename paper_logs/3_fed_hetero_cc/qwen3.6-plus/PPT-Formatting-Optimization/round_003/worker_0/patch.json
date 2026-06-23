@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8888888888888888,
+  "summary": "The trace reveals a brittle pattern when modifying auto-numbered bullets: the agent created duplicate <a:buAutoNum> elements by adding new ones without first removing existing ones. This caused malformed XML. The existing pptx-manipulation skill documents the startAt pitfall but lacks guidance on safe replacement of existing auto-numbering. This patch adds a safe replacement workflow and anti-pattern to prevent duplicate buAutoNum elements.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/auto-numbered-bullets.md"
+  ],
+  "delete_paths": []
+}

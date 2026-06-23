@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for filling placeholders in .hwpx (Hancom Word) documents. Captures the critical insight that HWPX is a ZIP archive containing XML, and that modified paragraphs require <hp:linesegarray> cache removal to prevent text overlap. Includes a robust Python script to automate replacement, cache invalidation, and verification.",
+  "upsert_paths": [
+    "fill-hwpx-placeholders/SKILL.md",
+    "fill-hwpx-placeholders/scripts/fill_hwpx.py"
+  ],
+  "delete_paths": []
+}

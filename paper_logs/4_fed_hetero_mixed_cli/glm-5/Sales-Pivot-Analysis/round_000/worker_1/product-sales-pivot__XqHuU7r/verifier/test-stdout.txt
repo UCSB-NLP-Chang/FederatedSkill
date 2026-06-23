@@ -1,0 +1,1107 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.4, pluggy-1.6.0 -- /opt/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.6
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: FFFFFFFFFFFFsssFFFFFFFFFFFFFFEFFFFFFEEF                                  [100%]
+E           ==================================== ERRORS ====================================
+E           ___ ERROR at setup of TestSourceDataContent.test_row_count_matches_expected ____
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E           >           module = importlib.import_module(name)
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:135: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', package = None
+E           
+E               def import_module(name, package=None):
+E                   """Import a module.
+E               
+E                   The 'package' argument is required when performing a relative import. It
+E                   specifies the package to use as the anchor point from which to resolve the
+E                   relative import to an absolute import.
+E               
+E                   """
+E                   level = 0
+E                   if name.startswith('.'):
+E                       if not package:
+E                           raise TypeError("the 'package' argument is required to perform a "
+E                                           f"relative import for {name!r}")
+E                       for character in name:
+E                           if character != '.':
+E                               break
+E                           level += 1
+E           >       return _bootstrap._gcd_import(name[level:], package, level)
+E           E       ModuleNotFoundError: No module named 'lxml'
+E           
+E           /usr/lib/python3.12/importlib/__init__.py:90: ModuleNotFoundError
+E           
+E           During handling of the above exception, another exception occurred:
+E           
+E               @pytest.fixture(scope="module")
+E               def expected_frame():
+E           >       return build_expected_frame()
+E           
+E           /tests/test_outputs.py:274: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:175: in build_expected_frame
+E               catalog = _load_catalog_rows()
+E           /tests/test_outputs.py:167: in _load_catalog_rows
+E               tables = pd.read_html(CATALOG_PDF)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:1240: in read_html
+E               return _parse(
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:971: in _parse
+E               parser = _parser_dispatch(flav)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:918: in _parser_dispatch
+E               import_optional_dependency("lxml.etree")
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E                       module = importlib.import_module(name)
+E                   except ImportError:
+E                       if errors == "raise":
+E           >               raise ImportError(msg)
+E           E               ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:138: ImportError
+E           _ ERROR at setup of TestDataTransformations.test_source_data_matches_independent_expected _
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E           >           module = importlib.import_module(name)
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:135: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', package = None
+E           
+E               def import_module(name, package=None):
+E                   """Import a module.
+E               
+E                   The 'package' argument is required when performing a relative import. It
+E                   specifies the package to use as the anchor point from which to resolve the
+E                   relative import to an absolute import.
+E               
+E                   """
+E                   level = 0
+E                   if name.startswith('.'):
+E                       if not package:
+E                           raise TypeError("the 'package' argument is required to perform a "
+E                                           f"relative import for {name!r}")
+E                       for character in name:
+E                           if character != '.':
+E                               break
+E                           level += 1
+E           >       return _bootstrap._gcd_import(name[level:], package, level)
+E           E       ModuleNotFoundError: No module named 'lxml'
+E           
+E           /usr/lib/python3.12/importlib/__init__.py:90: ModuleNotFoundError
+E           
+E           During handling of the above exception, another exception occurred:
+E           
+E               @pytest.fixture(scope="module")
+E               def expected_frame():
+E           >       return build_expected_frame()
+E           
+E           /tests/test_outputs.py:274: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:175: in build_expected_frame
+E               catalog = _load_catalog_rows()
+E           /tests/test_outputs.py:167: in _load_catalog_rows
+E               tables = pd.read_html(CATALOG_PDF)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:1240: in read_html
+E               return _parse(
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:971: in _parse
+E               parser = _parser_dispatch(flav)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:918: in _parser_dispatch
+E               import_optional_dependency("lxml.etree")
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E                       module = importlib.import_module(name)
+E                   except ImportError:
+E                       if errors == "raise":
+E           >               raise ImportError(msg)
+E           E               ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:138: ImportError
+E           __ ERROR at setup of TestDataTransformations.test_pivot_values_match_expected __
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E           >           module = importlib.import_module(name)
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:135: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', package = None
+E           
+E               def import_module(name, package=None):
+E                   """Import a module.
+E               
+E                   The 'package' argument is required when performing a relative import. It
+E                   specifies the package to use as the anchor point from which to resolve the
+E                   relative import to an absolute import.
+E               
+E                   """
+E                   level = 0
+E                   if name.startswith('.'):
+E                       if not package:
+E                           raise TypeError("the 'package' argument is required to perform a "
+E                                           f"relative import for {name!r}")
+E                       for character in name:
+E                           if character != '.':
+E                               break
+E                           level += 1
+E           >       return _bootstrap._gcd_import(name[level:], package, level)
+E           E       ModuleNotFoundError: No module named 'lxml'
+E           
+E           /usr/lib/python3.12/importlib/__init__.py:90: ModuleNotFoundError
+E           
+E           During handling of the above exception, another exception occurred:
+E           
+E               @pytest.fixture(scope="module")
+E               def expected_frame():
+E           >       return build_expected_frame()
+E           
+E           /tests/test_outputs.py:274: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:175: in build_expected_frame
+E               catalog = _load_catalog_rows()
+E           /tests/test_outputs.py:167: in _load_catalog_rows
+E               tables = pd.read_html(CATALOG_PDF)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:1240: in read_html
+E               return _parse(
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:971: in _parse
+E               parser = _parser_dispatch(flav)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:918: in _parser_dispatch
+E               import_optional_dependency("lxml.etree")
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E                       module = importlib.import_module(name)
+E                   except ImportError:
+E                       if errors == "raise":
+E           >               raise ImportError(msg)
+E           E               ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:138: ImportError
+E           =================================== FAILURES ===================================
+E           _ TestPivotTableConfiguration.test_pivot_exists[Revenue by Category-sum-None] __
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4092f163c0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Revenue by Category', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Revenue by Category'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:82: AssertionError
+E           ___ TestPivotTableConfiguration.test_pivot_exists[Units by Region-sum-None] ____
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f40940c0a70>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Units by Region', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Units by Region'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:82: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Products by Category-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f40914e4980>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Products by Category', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Products by Category'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:82: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Category Region Matrix-sum-region] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4091dd8b00>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Category Region Matrix', expected_agg = 'sum'
+E           col_field = 'region'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Category Region Matrix'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:82: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Revenue by Category-sum-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4091500b30>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Revenue by Category', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:86: IndexError
+E           __ TestPivotTableConfiguration.test_pivot_row_field[Units by Region-sum-None] __
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4090cdc140>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Units by Region', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:86: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Products by Category-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4090cdc290>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Products by Category', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:86: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Category Region Matrix-sum-region] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4090cdc320>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Category Region Matrix', expected_agg = 'sum'
+E           col_field = 'region'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:86: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Revenue by Category-sum-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4090cdc440>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Revenue by Category', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:95: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Units by Region-sum-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4090cdc590>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Units by Region', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:95: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Products by Category-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4090cdc6e0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Products by Category', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:95: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Category Region Matrix-sum-region] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4090cdc770>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Category Region Matrix', expected_agg = 'sum'
+E           col_field = 'region'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:95: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_col_field[Category Region Matrix-sum-region] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f4090cdcc80>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           sheet_name = 'Category Region Matrix', expected_agg = 'sum'
+E           col_field = 'region'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_col_field(self, workbook, sheet_name, expected_agg, col_field):
+E                   if not col_field:
+E                       pytest.skip(f"'{sheet_name}' is not a matrix pivot")
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:103: IndexError
+E           ______ TestSourceDataSheet.test_has_required_column[PRODUCT_ID-<lambda>] _______
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdcec0>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'PRODUCT_ID', match_fn = <function <lambda> at 0x7f40e89cfc40>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing PRODUCT_ID column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f4090280820>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           _____ TestSourceDataSheet.test_has_required_column[PRODUCT_NAME-<lambda>] ______
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdcfb0>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'PRODUCT_NAME', match_fn = <function <lambda> at 0x7f40e8a4d760>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing PRODUCT_NAME column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f4090280ba0>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           _______ TestSourceDataSheet.test_has_required_column[CATEGORY-<lambda>] ________
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdd2b0>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'CATEGORY', match_fn = <function <lambda> at 0x7f4090deed40>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing CATEGORY column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f4090281a80>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           ________ TestSourceDataSheet.test_has_required_column[REGION-<lambda>] _________
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdd340>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'REGION', match_fn = <function <lambda> at 0x7f4090fbb7e0>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing REGION column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f4090283060>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           _______ TestSourceDataSheet.test_has_required_column[QUANTITY-<lambda>] ________
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdd460>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'QUANTITY', match_fn = <function <lambda> at 0x7f4090cd6fc0>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing QUANTITY column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f4090283760>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           ______ TestSourceDataSheet.test_has_required_column[UNIT_PRICE-<lambda>] _______
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdd520>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'UNIT_PRICE', match_fn = <function <lambda> at 0x7f4090cd7d80>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing UNIT_PRICE column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f4090283e60>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           _______ TestSourceDataSheet.test_has_required_column[UNIT_COST-<lambda>] _______
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdd5e0>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'UNIT_COST', match_fn = <function <lambda> at 0x7f4090cd7ec0>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing UNIT_COST column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f40902cc660>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           ________ TestSourceDataSheet.test_has_required_column[REVENUE-<lambda>] ________
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdd6a0>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'REVENUE', match_fn = <function <lambda> at 0x7f4090cd7f60>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing REVENUE column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f4090283a00>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           ________ TestSourceDataSheet.test_has_required_column[PROFIT-<lambda>] _________
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdd760>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'PROFIT', match_fn = <function <lambda> at 0x7f4090cd8040>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing PROFIT column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f4090283300>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           ______ TestSourceDataSheet.test_has_required_column[MARGIN_PCT-<lambda>] _______
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdd820>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'MARGIN_PCT', match_fn = <function <lambda> at 0x7f4090cd80e0>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing MARGIN_PCT column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f4090282c00>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           _____ TestSourceDataSheet.test_has_required_column[PRICE_STATUS-<lambda>] ______
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdd8e0>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'PRICE_STATUS', match_fn = <function <lambda> at 0x7f4090cd8180>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing PRICE_STATUS column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f40902818c0>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           _ TestSourceDataSheet.test_has_required_column[CATALOG_MATCH_STATUS-<lambda>] __
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdd9a0>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'CATALOG_MATCH_STATUS', match_fn = <function <lambda> at 0x7f4090cd8220>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing CATALOG_MATCH_STATUS column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f40902804a0>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           _ TestSourceDataSheet.test_has_required_column[RECONCILIATION_ACTION-<lambda>] _
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f4090cdda60>
+E           headers = ['cleaned and enriched transaction data', '', '', '', '', '', ...]
+E           desc = 'RECONCILIATION_ACTION', match_fn = <function <lambda> at 0x7f4090cd82c0>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing RECONCILIATION_ACTION column. Found: ['cleaned and enriched transaction data', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f4090280120>)
+E           
+E           /tests/test_outputs.py:125: AssertionError
+E           __________________ TestSourceDataContent.test_category_values __________________
+E           
+E           self = <test_outputs.TestSourceDataContent object at 0x7f4090cddd90>
+E           source_frame =      Cleaned and Enriched Transaction Data  ...                 col_15
+E           0                           TRANSACTION_ID  ......                  none
+E           1500                                530794  ...                   none
+E           
+E           [1501 rows x 16 columns]
+E           
+E               def test_category_values(self, source_frame):
+E           >       cat_col = _find_column(source_frame.columns, "category")
+E           
+E           /tests/test_outputs.py:282: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           columns = Index(['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3',
+E                  'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10',
+E                  'col_11', 'col_12', 'col_13', 'col_14', 'col_15'],
+E                 dtype='object')
+E           keywords = ('category',), col = 'col_15'
+E           
+E               def _find_column(columns, *keywords):
+E                   for col in columns:
+E                       normalized = col.lower().replace("_", "").replace(" ", "")
+E                       if all(keyword in normalized for keyword in keywords):
+E                           return col
+E           >       raise AssertionError(f"Missing column with keywords {keywords}. Found: {list(columns)}")
+E           E       AssertionError: Missing column with keywords ('category',). Found: ['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3', 'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10', 'col_11', 'col_12', 'col_13', 'col_14', 'col_15']
+E           
+E           /tests/test_outputs.py:141: AssertionError
+E           ___________________ TestSourceDataContent.test_region_values ___________________
+E           
+E           self = <test_outputs.TestSourceDataContent object at 0x7f4090cddfa0>
+E           source_frame =      Cleaned and Enriched Transaction Data  ...                 col_15
+E           0                           TRANSACTION_ID  ......                  none
+E           1500                                530794  ...                   none
+E           
+E           [1501 rows x 16 columns]
+E           
+E               def test_region_values(self, source_frame):
+E           >       reg_col = _find_column(source_frame.columns, "region")
+E           
+E           /tests/test_outputs.py:288: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           columns = Index(['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3',
+E                  'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10',
+E                  'col_11', 'col_12', 'col_13', 'col_14', 'col_15'],
+E                 dtype='object')
+E           keywords = ('region',), col = 'col_15'
+E           
+E               def _find_column(columns, *keywords):
+E                   for col in columns:
+E                       normalized = col.lower().replace("_", "").replace(" ", "")
+E                       if all(keyword in normalized for keyword in keywords):
+E                           return col
+E           >       raise AssertionError(f"Missing column with keywords {keywords}. Found: {list(columns)}")
+E           E       AssertionError: Missing column with keywords ('region',). Found: ['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3', 'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10', 'col_11', 'col_12', 'col_13', 'col_14', 'col_15']
+E           
+E           /tests/test_outputs.py:141: AssertionError
+E           __________ TestSourceDataContent.test_reconciliation_metadata_values ___________
+E           
+E           self = <test_outputs.TestSourceDataContent object at 0x7f4090cde1b0>
+E           source_frame =      Cleaned and Enriched Transaction Data  ...                 col_15
+E           0                           TRANSACTION_ID  ......                  none
+E           1500                                530794  ...                   none
+E           
+E           [1501 rows x 16 columns]
+E           
+E               def test_reconciliation_metadata_values(self, source_frame):
+E           >       price_status_col = _find_column(source_frame.columns, "price", "status")
+E           
+E           /tests/test_outputs.py:294: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           columns = Index(['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3',
+E                  'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10',
+E                  'col_11', 'col_12', 'col_13', 'col_14', 'col_15'],
+E                 dtype='object')
+E           keywords = ('price', 'status'), col = 'col_15'
+E           
+E               def _find_column(columns, *keywords):
+E                   for col in columns:
+E                       normalized = col.lower().replace("_", "").replace(" ", "")
+E                       if all(keyword in normalized for keyword in keywords):
+E                           return col
+E           >       raise AssertionError(f"Missing column with keywords {keywords}. Found: {list(columns)}")
+E           E       AssertionError: Missing column with keywords ('price', 'status'). Found: ['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3', 'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10', 'col_11', 'col_12', 'col_13', 'col_14', 'col_15']
+E           
+E           /tests/test_outputs.py:141: AssertionError
+E           _______________ TestDataTransformations.test_revenue_calculation _______________
+E           
+E           self = <test_outputs.TestDataTransformations object at 0x7f4090cde0f0>
+E           source_frame =      Cleaned and Enriched Transaction Data  ...                 col_15
+E           0                           TRANSACTION_ID  ......                  none
+E           1500                                530794  ...                   none
+E           
+E           [1501 rows x 16 columns]
+E           
+E               def test_revenue_calculation(self, source_frame):
+E           >       qty_col = _find_column(source_frame.columns, "quantity")
+E           
+E           /tests/test_outputs.py:304: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           columns = Index(['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3',
+E                  'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10',
+E                  'col_11', 'col_12', 'col_13', 'col_14', 'col_15'],
+E                 dtype='object')
+E           keywords = ('quantity',), col = 'col_15'
+E           
+E               def _find_column(columns, *keywords):
+E                   for col in columns:
+E                       normalized = col.lower().replace("_", "").replace(" ", "")
+E                       if all(keyword in normalized for keyword in keywords):
+E                           return col
+E           >       raise AssertionError(f"Missing column with keywords {keywords}. Found: {list(columns)}")
+E           E       AssertionError: Missing column with keywords ('quantity',). Found: ['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3', 'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10', 'col_11', 'col_12', 'col_13', 'col_14', 'col_15']
+E           
+E           /tests/test_outputs.py:141: AssertionError
+E           _______________ TestDataTransformations.test_profit_calculation ________________
+E           
+E           self = <test_outputs.TestDataTransformations object at 0x7f4090cdc800>
+E           source_frame =      Cleaned and Enriched Transaction Data  ...                 col_15
+E           0                           TRANSACTION_ID  ......                  none
+E           1500                                530794  ...                   none
+E           
+E           [1501 rows x 16 columns]
+E           
+E               def test_profit_calculation(self, source_frame):
+E           >       rev_col = _find_column(source_frame.columns, "revenue")
+E           
+E           /tests/test_outputs.py:311: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           columns = Index(['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3',
+E                  'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10',
+E                  'col_11', 'col_12', 'col_13', 'col_14', 'col_15'],
+E                 dtype='object')
+E           keywords = ('revenue',), col = 'col_15'
+E           
+E               def _find_column(columns, *keywords):
+E                   for col in columns:
+E                       normalized = col.lower().replace("_", "").replace(" ", "")
+E                       if all(keyword in normalized for keyword in keywords):
+E                           return col
+E           >       raise AssertionError(f"Missing column with keywords {keywords}. Found: {list(columns)}")
+E           E       AssertionError: Missing column with keywords ('revenue',). Found: ['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3', 'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10', 'col_11', 'col_12', 'col_13', 'col_14', 'col_15']
+E           
+E           /tests/test_outputs.py:141: AssertionError
+E           __________________ TestDataTransformations.test_margin_range ___________________
+E           
+E           self = <test_outputs.TestDataTransformations object at 0x7f4090cde4e0>
+E           source_frame =      Cleaned and Enriched Transaction Data  ...                 col_15
+E           0                           TRANSACTION_ID  ......                  none
+E           1500                                530794  ...                   none
+E           
+E           [1501 rows x 16 columns]
+E           
+E               def test_margin_range(self, source_frame):
+E           >       margin_col = _find_column(source_frame.columns, "margin")
+E           
+E           /tests/test_outputs.py:320: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           columns = Index(['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3',
+E                  'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10',
+E                  'col_11', 'col_12', 'col_13', 'col_14', 'col_15'],
+E                 dtype='object')
+E           keywords = ('margin',), col = 'col_15'
+E           
+E               def _find_column(columns, *keywords):
+E                   for col in columns:
+E                       normalized = col.lower().replace("_", "").replace(" ", "")
+E                       if all(keyword in normalized for keyword in keywords):
+E                           return col
+E           >       raise AssertionError(f"Missing column with keywords {keywords}. Found: {list(columns)}")
+E           E       AssertionError: Missing column with keywords ('margin',). Found: ['Cleaned and Enriched Transaction Data', 'col_1', 'col_2', 'col_3', 'col_4', 'col_5', 'col_6', 'col_7', 'col_8', 'col_9', 'col_10', 'col_11', 'col_12', 'col_13', 'col_14', 'col_15']
+E           
+E           /tests/test_outputs.py:141: AssertionError
+E           _____________ TestDataTransformations.test_pivot_cache_has_fields ______________
+E           
+E           self = <test_outputs.TestDataTransformations object at 0x7f4090cdeb10>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4090cdedb0>
+E           
+E               def test_pivot_cache_has_fields(self, workbook):
+E           >       pivot = workbook["Revenue by Category"]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:376: IndexError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Revenue by Category-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Units by Region-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Products by Category-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Category Region Matrix-sum-region]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Revenue by Category-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Units by Region-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Products by Category-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Category Region Matrix-sum-region]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Revenue by Category-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Units by Region-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Products by Category-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Category Region Matrix-sum-region]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_col_field[Category Region Matrix-sum-region]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[PRODUCT_ID-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[PRODUCT_NAME-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[CATEGORY-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[REGION-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[QUANTITY-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[UNIT_PRICE-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[UNIT_COST-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[REVENUE-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[PROFIT-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[MARGIN_PCT-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[PRICE_STATUS-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[CATALOG_MATCH_STATUS-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[RECONCILIATION_ACTION-<lambda>]
+E           FAILED ../tests/test_outputs.py::TestSourceDataContent::test_category_values
+E           FAILED ../tests/test_outputs.py::TestSourceDataContent::test_region_values - ...
+E           FAILED ../tests/test_outputs.py::TestSourceDataContent::test_reconciliation_metadata_values
+E           FAILED ../tests/test_outputs.py::TestDataTransformations::test_revenue_calculation
+E           FAILED ../tests/test_outputs.py::TestDataTransformations::test_profit_calculation
+E           FAILED ../tests/test_outputs.py::TestDataTransformations::test_margin_range
+E           FAILED ../tests/test_outputs.py::TestDataTransformations::test_pivot_cache_has_fields
+E           ERROR ../tests/test_outputs.py::TestSourceDataContent::test_row_count_matches_expected
+E           ERROR ../tests/test_outputs.py::TestDataTransformations::test_source_data_matches_independent_expected
+E           ERROR ../tests/test_outputs.py::TestDataTransformations::test_pivot_values_match_expected
+E           33 failed, 3 skipped, 3 errors in 0.96s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: FF...
+============================== 1 failed in 1.23s ===============================

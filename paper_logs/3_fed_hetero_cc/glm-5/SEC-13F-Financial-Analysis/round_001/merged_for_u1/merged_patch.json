@@ -1,0 +1,68 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Library renamed to sec-13f-fund-analysis (peer alignment), synthesized threshold enforcement improvements (semantic sanity-check + MANDATORY language), added B2 class_breakdown.py capability. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md",
+    "sec-13f-fund-analysis/scripts/class_breakdown.py",
+    "sec-13f-fund-analysis/scripts/classify_holdings.py",
+    "sec-13f-fund-analysis/scripts/match_manager.py"
+  ],
+  "delete_paths": [
+    "sec-13f-filing-analysis/SKILL.md",
+    "sec-13f-filing-analysis/references/normalization-rules.md",
+    "sec-13f-filing-analysis/scripts/classify_holdings.py",
+    "sec-13f-filing-analysis/scripts/match_manager.py"
+  ],
+  "provenance": {
+    "sec-13f-filing-analysis/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "sec-13f-fund-analysis/scripts/match_manager.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-fund-analysis/scripts/class_breakdown.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "sec-13f-fund-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-filing-analysis/references/normalization-rules.md": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "sec-13f-filing-analysis/scripts/classify_holdings.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-fund-analysis/scripts/classify_holdings.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-filing-analysis/scripts/match_manager.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.8165471999999999
+}

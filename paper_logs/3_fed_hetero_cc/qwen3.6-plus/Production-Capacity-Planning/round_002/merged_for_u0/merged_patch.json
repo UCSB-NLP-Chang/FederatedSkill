@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u2's validated SKILL.md (reward=1.0) wholesale; addresses u0's R2 regression (header synonym, capacity assumption). Kept baseline script. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 0.3621318
+}

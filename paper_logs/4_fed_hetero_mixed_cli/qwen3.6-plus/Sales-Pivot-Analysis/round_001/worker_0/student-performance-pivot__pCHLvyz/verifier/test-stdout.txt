@@ -1,0 +1,723 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.4, pluggy-1.6.0 -- /opt/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.6
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: FFFFFFFFFFFFsssF............E.....EEF                                    [100%]
+E           ==================================== ERRORS ====================================
+E           ___ ERROR at setup of TestSourceDataContent.test_row_count_matches_expected ____
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E           >           module = importlib.import_module(name)
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:135: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', package = None
+E           
+E               def import_module(name, package=None):
+E                   """Import a module.
+E               
+E                   The 'package' argument is required when performing a relative import. It
+E                   specifies the package to use as the anchor point from which to resolve the
+E                   relative import to an absolute import.
+E               
+E                   """
+E                   level = 0
+E                   if name.startswith('.'):
+E                       if not package:
+E                           raise TypeError("the 'package' argument is required to perform a "
+E                                           f"relative import for {name!r}")
+E                       for character in name:
+E                           if character != '.':
+E                               break
+E                           level += 1
+E           >       return _bootstrap._gcd_import(name[level:], package, level)
+E           E       ModuleNotFoundError: No module named 'lxml'
+E           
+E           /usr/lib/python3.12/importlib/__init__.py:90: ModuleNotFoundError
+E           
+E           During handling of the above exception, another exception occurred:
+E           
+E               @pytest.fixture(scope="module")
+E               def expected_frame():
+E           >       return build_expected_frame()
+E           
+E           /tests/test_outputs.py:227: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:151: in build_expected_frame
+E               roster_tables = pd.read_html(ROSTER_PDF)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:1240: in read_html
+E               return _parse(
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:971: in _parse
+E               parser = _parser_dispatch(flav)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:918: in _parser_dispatch
+E               import_optional_dependency("lxml.etree")
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E                       module = importlib.import_module(name)
+E                   except ImportError:
+E                       if errors == "raise":
+E           >               raise ImportError(msg)
+E           E               ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:138: ImportError
+E           _ ERROR at setup of TestDataTransformations.test_source_matches_independent_expected _
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E           >           module = importlib.import_module(name)
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:135: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', package = None
+E           
+E               def import_module(name, package=None):
+E                   """Import a module.
+E               
+E                   The 'package' argument is required when performing a relative import. It
+E                   specifies the package to use as the anchor point from which to resolve the
+E                   relative import to an absolute import.
+E               
+E                   """
+E                   level = 0
+E                   if name.startswith('.'):
+E                       if not package:
+E                           raise TypeError("the 'package' argument is required to perform a "
+E                                           f"relative import for {name!r}")
+E                       for character in name:
+E                           if character != '.':
+E                               break
+E                           level += 1
+E           >       return _bootstrap._gcd_import(name[level:], package, level)
+E           E       ModuleNotFoundError: No module named 'lxml'
+E           
+E           /usr/lib/python3.12/importlib/__init__.py:90: ModuleNotFoundError
+E           
+E           During handling of the above exception, another exception occurred:
+E           
+E               @pytest.fixture(scope="module")
+E               def expected_frame():
+E           >       return build_expected_frame()
+E           
+E           /tests/test_outputs.py:227: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:151: in build_expected_frame
+E               roster_tables = pd.read_html(ROSTER_PDF)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:1240: in read_html
+E               return _parse(
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:971: in _parse
+E               parser = _parser_dispatch(flav)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:918: in _parser_dispatch
+E               import_optional_dependency("lxml.etree")
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E                       module = importlib.import_module(name)
+E                   except ImportError:
+E                       if errors == "raise":
+E           >               raise ImportError(msg)
+E           E               ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:138: ImportError
+E           _ ERROR at setup of TestDataTransformations.test_pivot_aggregates_match_expected _
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E           >           module = importlib.import_module(name)
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:135: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', package = None
+E           
+E               def import_module(name, package=None):
+E                   """Import a module.
+E               
+E                   The 'package' argument is required when performing a relative import. It
+E                   specifies the package to use as the anchor point from which to resolve the
+E                   relative import to an absolute import.
+E               
+E                   """
+E                   level = 0
+E                   if name.startswith('.'):
+E                       if not package:
+E                           raise TypeError("the 'package' argument is required to perform a "
+E                                           f"relative import for {name!r}")
+E                       for character in name:
+E                           if character != '.':
+E                               break
+E                           level += 1
+E           >       return _bootstrap._gcd_import(name[level:], package, level)
+E           E       ModuleNotFoundError: No module named 'lxml'
+E           
+E           /usr/lib/python3.12/importlib/__init__.py:90: ModuleNotFoundError
+E           
+E           During handling of the above exception, another exception occurred:
+E           
+E               @pytest.fixture(scope="module")
+E               def expected_frame():
+E           >       return build_expected_frame()
+E           
+E           /tests/test_outputs.py:227: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:151: in build_expected_frame
+E               roster_tables = pd.read_html(ROSTER_PDF)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:1240: in read_html
+E               return _parse(
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:971: in _parse
+E               parser = _parser_dispatch(flav)
+E           /opt/venv/lib/python3.12/site-packages/pandas/io/html.py:918: in _parser_dispatch
+E               import_optional_dependency("lxml.etree")
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           name = 'lxml.etree', extra = '', errors = 'raise', min_version = None
+E           
+E               def import_optional_dependency(
+E                   name: str,
+E                   extra: str = "",
+E                   errors: str = "raise",
+E                   min_version: str | None = None,
+E               ):
+E                   """
+E                   Import an optional dependency.
+E               
+E                   By default, if a dependency is missing an ImportError with a nice
+E                   message will be raised. If a dependency is present, but too old,
+E                   we raise.
+E               
+E                   Parameters
+E                   ----------
+E                   name : str
+E                       The module name.
+E                   extra : str
+E                       Additional text to include in the ImportError message.
+E                   errors : str {'raise', 'warn', 'ignore'}
+E                       What to do when a dependency is not found or its version is too old.
+E               
+E                       * raise : Raise an ImportError
+E                       * warn : Only applicable when a module's version is to old.
+E                         Warns that the version is too old and returns None
+E                       * ignore: If the module is not installed, return None, otherwise,
+E                         return the module, even if the version is too old.
+E                         It's expected that users validate the version locally when
+E                         using ``errors="ignore"`` (see. ``io/html.py``)
+E                   min_version : str, default None
+E                       Specify a minimum version that is different from the global pandas
+E                       minimum version required.
+E                   Returns
+E                   -------
+E                   maybe_module : Optional[ModuleType]
+E                       The imported module, when found and the version is correct.
+E                       None is returned when the package is not found and `errors`
+E                       is False, or when the package's version is too old and `errors`
+E                       is ``'warn'`` or ``'ignore'``.
+E                   """
+E                   assert errors in {"warn", "raise", "ignore"}
+E               
+E                   package_name = INSTALL_MAPPING.get(name)
+E                   install_name = package_name if package_name is not None else name
+E               
+E                   msg = (
+E                       f"Missing optional dependency '{install_name}'. {extra} "
+E                       f"Use pip or conda to install {install_name}."
+E                   )
+E                   try:
+E                       module = importlib.import_module(name)
+E                   except ImportError:
+E                       if errors == "raise":
+E           >               raise ImportError(msg)
+E           E               ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+E           
+E           /opt/venv/lib/python3.12/site-packages/pandas/compat/_optional.py:138: ImportError
+E           =================================== FAILURES ===================================
+E           _ TestPivotTableConfiguration.test_pivot_exists[Avg Score by Department-average-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3fa8d1cf50>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Avg Score by Department', expected_agg = 'average'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Avg Score by Department'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:67: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Students by Department-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f51a0e840>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Students by Department', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Students by Department'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:67: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Credits by Semester-sum-None] __
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f51a06690>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Credits by Semester', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Credits by Semester'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:67: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Department Semester Matrix-average-semester] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f51a15310>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Department Semester Matrix', expected_agg = 'average'
+E           col_field = 'semester'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Department Semester Matrix'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:67: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Avg Score by Department-average-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f51a15820>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Avg Score by Department', expected_agg = 'average'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:71: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Students by Department-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f50f58830>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Students by Department', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:71: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Credits by Semester-sum-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f50f58980>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Credits by Semester', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:71: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Department Semester Matrix-average-semester] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f50f58a10>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Department Semester Matrix', expected_agg = 'average'
+E           col_field = 'semester'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:71: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Avg Score by Department-average-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f50f58bf0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Avg Score by Department', expected_agg = 'average'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:80: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Students by Department-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f50f58d40>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Students by Department', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:80: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Credits by Semester-sum-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f50f58e90>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Credits by Semester', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:80: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Department Semester Matrix-average-semester] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f50f58f20>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Department Semester Matrix', expected_agg = 'average'
+E           col_field = 'semester'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:80: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_col_field[Department Semester Matrix-average-semester] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f3f50f59310>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           sheet_name = 'Department Semester Matrix', expected_agg = 'average'
+E           col_field = 'semester'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_col_field(self, workbook, sheet_name, expected_agg, col_field):
+E                   if not col_field:
+E                       pytest.skip(f"'{sheet_name}' is not a matrix pivot")
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:88: IndexError
+E           _____________ TestDataTransformations.test_pivot_cache_has_fields ______________
+E           
+E           self = <test_outputs.TestDataTransformations object at 0x7f3f50f5b080>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f3f51a04110>
+E           
+E               def test_pivot_cache_has_fields(self, workbook):
+E           >       pivot = workbook["Avg Score by Department"]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:303: IndexError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Avg Score by Department-average-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Students by Department-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Credits by Semester-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Department Semester Matrix-average-semester]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Avg Score by Department-average-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Students by Department-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Credits by Semester-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Department Semester Matrix-average-semester]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Avg Score by Department-average-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Students by Department-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Credits by Semester-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Department Semester Matrix-average-semester]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_col_field[Department Semester Matrix-average-semester]
+E           FAILED ../tests/test_outputs.py::TestDataTransformations::test_pivot_cache_has_fields
+E           ERROR ../tests/test_outputs.py::TestSourceDataContent::test_row_count_matches_expected
+E           ERROR ../tests/test_outputs.py::TestDataTransformations::test_source_matches_independent_expected
+E           ERROR ../tests/test_outputs.py::TestDataTransformations::test_pivot_aggregates_match_expected
+E           14 failed, 17 passed, 3 skipped, 3 errors in 0.78s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: FF...
+============================== 1 failed in 1.04s ===============================

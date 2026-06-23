@@ -1,0 +1,29 @@
+{
+    "id": "3cf5e1e1-f836-4449-97c4-175f4896ed55",
+    "started_at": "2026-05-14T18:42:03.482047",
+    "finished_at": "2026-05-14T19:01:59.220988",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "01_orchestra_foundation_model__cExLAmJ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

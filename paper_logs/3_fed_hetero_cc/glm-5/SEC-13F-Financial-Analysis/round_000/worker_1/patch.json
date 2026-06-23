@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.42857142857142855,
+  "summary": "The agent failed by accepting a poor fuzzy match (Headlands Technologies for Renaissance Technologies with Levenshtein distance 7). This skill captures SEC 13F filing data extraction with proper manager matching validation, threshold-based acceptance, and no-match handling.",
+  "upsert_paths": [
+    "sec-13f-data-extraction/SKILL.md",
+    "sec-13f-data-extraction/scripts/match_manager.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete \u2014 applied u0's verified patches to excel-queue-simulation (SKILL.md + verify_outputs.py) to handle non-1-based week indices. Rejected u2's queue-recovery-planning (same workflow, different name; B1 already covered). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-queue-simulation/SKILL.md",
+    "excel-queue-simulation/scripts/verify_outputs.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-queue-simulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-queue-simulation/scripts/verify_outputs.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-queue-simulation/SKILL.md",
+    "excel-queue-simulation/scripts/verify_outputs.py"
+  ],
+  "cost_usd": 1.677039
+}

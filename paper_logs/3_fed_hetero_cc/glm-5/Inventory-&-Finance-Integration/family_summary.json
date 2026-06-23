@@ -1,0 +1,238 @@
+{
+  "family_name": "Inventory-&-Finance-Integration",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 8624.65157866478,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.5416666666666666,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 13
+  },
+  "merger_cost_total_usd": 73.224126,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_21"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_21"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_21"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 5.611022999999999,
+      "elapsed_sec": 716.4147391319275
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "new_task_9_hospital_staffing_resilience"
+        ],
+        [
+          "u1",
+          "new_task_9_hospital_staffing_resilience"
+        ],
+        [
+          "u2",
+          "new_task_9_hospital_staffing_resilience"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 7.838307,
+      "elapsed_sec": 884.403491973877
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "new_task_10_maintenance_calcfields_restock"
+        ],
+        [
+          "u1",
+          "new_task_10_maintenance_calcfields_restock"
+        ],
+        [
+          "u2",
+          "new_task_10_maintenance_calcfields_restock"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 6.396855,
+      "elapsed_sec": 944.3497366905212
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "new_task_9_datacenter_capacity_rollforward"
+        ],
+        [
+          "u1",
+          "new_task_9_datacenter_capacity_rollforward"
+        ],
+        [
+          "u2",
+          "new_task_9_datacenter_capacity_rollforward"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 9.90348,
+      "elapsed_sec": 993.2695279121399
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "new_task_10_transit_subsidy_rollforward"
+        ],
+        [
+          "u1",
+          "new_task_10_transit_subsidy_rollforward"
+        ],
+        [
+          "u2",
+          "new_task_10_transit_subsidy_rollforward"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 11.797122,
+      "elapsed_sec": 1323.0318155288696
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "new_task_11_media_rights_rollforward"
+        ],
+        [
+          "u1",
+          "new_task_11_media_rights_rollforward"
+        ],
+        [
+          "u2",
+          "new_task_11_media_rights_rollforward"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 13.116519,
+      "elapsed_sec": 1311.171612739563
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "new_task_12_mealkit_freshness_replenishment"
+        ],
+        [
+          "u1",
+          "new_task_12_mealkit_freshness_replenishment"
+        ],
+        [
+          "u2",
+          "new_task_12_mealkit_freshness_replenishment"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 9.134376,
+      "elapsed_sec": 1053.6670780181885
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "new_task_11_datacenter_stochastic_refills"
+        ],
+        [
+          "u1",
+          "new_task_11_datacenter_stochastic_refills"
+        ],
+        [
+          "u2",
+          "new_task_11_datacenter_stochastic_refills"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 9.426444,
+      "elapsed_sec": 1398.335436820984
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-&-Finance-Integration/worker_skills/u1/Inventory-&-Finance-Integration",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-&-Finance-Integration/worker_skills/u2/Inventory-&-Finance-Integration"
+  }
+}

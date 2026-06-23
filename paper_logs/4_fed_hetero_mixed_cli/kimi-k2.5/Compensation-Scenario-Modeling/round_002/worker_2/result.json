@@ -1,0 +1,29 @@
+{
+    "id": "25ca2aa7-fa0a-40ca-9046-7d1523a3a424",
+    "started_at": "2026-05-18T00:45:56.326925",
+    "finished_at": "2026-05-18T00:56:45.796593",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "03_university_faculty_model__Vs4tddw"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

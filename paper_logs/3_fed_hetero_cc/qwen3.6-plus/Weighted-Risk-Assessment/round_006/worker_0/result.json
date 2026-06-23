@@ -1,0 +1,29 @@
+{
+    "id": "94a0d07c-730c-45f8-af91-df42fdb07674",
+    "started_at": "2026-05-14T18:56:35.148238",
+    "finished_at": "2026-05-14T18:58:50.037392",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "factory-output-at-risk-calc__JFP7YGn"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "id": "a6dfc5c7-f822-408a-a721-16eab7ee0506",
+    "started_at": "2026-05-18T00:03:15.778545",
+    "finished_at": "2026-05-18T00:03:15.782753",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Distribution-Center-Auditing": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_receiving_exception_audit__tWRA2ti"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

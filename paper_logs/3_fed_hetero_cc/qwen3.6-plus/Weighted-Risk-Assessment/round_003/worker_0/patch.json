@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Update template-formula-fill skill to address three failure modes from the trace: (1) QUARTILE.INC parameter mapping (1=25th, 3=75th) was not explicit, causing wrong percentile values; (2) no guidance on write-order safety when writing multiple formula blocks, leading to accidental cell overwrites; (3) missing explicit statistics row-to-function mapping for the 6-row statistics block pattern. These are implementation-level gaps that caused 3 separate fix iterations.",
+  "upsert_paths": [
+    "template-formula-fill/SKILL.md"
+  ],
+  "delete_paths": []
+}

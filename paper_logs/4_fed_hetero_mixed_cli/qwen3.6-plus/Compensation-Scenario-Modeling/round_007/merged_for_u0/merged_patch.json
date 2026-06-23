@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "R7 merge complete for u0. Applied structural fix per task_memory: removed custom verification step (false confidence off-ramp), added pytest_gate.py from u2 as structural constraint. Kept u0's baseline style (numbered steps, bullets), incorporated u1's test discovery improvements and pytest-failures.md additions. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/pytest-failures.md",
+    "excel-workbook-modeling/scripts/pytest_gate.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ],
+    "excel-workbook-modeling/scripts/pytest_gate.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-workbook-modeling/references/pytest-failures.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md"
+  ],
+  "cost_usd": 3.329523
+}

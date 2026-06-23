@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The agent claimed success but the verifier failed. This indicates the need for stronger self-verification that catches what the agent missed. I'm updating the workload-capacity-planning skill with a runnable verification script and enhanced troubleshooting guidance for cases where outputs look correct but fail validation.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md",
+    "workload-capacity-planning/scripts/verify_outputs.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Added research stipend reconciliation example to domain-examples.md and clarified that adjustments can modify fields beyond amounts (e.g., campus codes). The trace showed a campus mismatch validation where the expected campus came from an approved adjustment, not the base authorization - this pattern was missing from the documentation.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md",
+    "cross-document-validation/references/domain-examples.md"
+  ],
+  "delete_paths": []
+}

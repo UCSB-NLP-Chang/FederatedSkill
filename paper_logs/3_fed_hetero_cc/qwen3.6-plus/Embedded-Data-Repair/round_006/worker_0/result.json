@@ -1,0 +1,29 @@
+{
+    "id": "afc6bbb5-8c3e-463f-bc28-26afc41bb429",
+    "started_at": "2026-05-22T19:31:38.092276",
+    "finished_at": "2026-05-22T19:33:59.863163",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Embedded-Data-Repair": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "rebate-band-live-embedding-fix__eyxCSpq"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

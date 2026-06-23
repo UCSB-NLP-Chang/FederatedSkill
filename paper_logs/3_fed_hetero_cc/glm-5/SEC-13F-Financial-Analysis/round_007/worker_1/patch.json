@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "Added guidance for template-based tasks (preserve existing structure), stronger emphasis on using provided scripts over custom bash/awk, and validation checks for result reasonableness. These address issues where agents created custom output formats instead of following schemas, and used custom data processing instead of validated scripts.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R4. Applied u1's patch wholesale \u2014 authoritative fix for named range iteration API (AttributeError on `.definedName`). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md",
+    "excel-financial-modeling/scripts/.gitkeep"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/scripts/.gitkeep": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5555555555555556
+    ]
+  },
+  "conflicts": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "cost_usd": 2.831373
+}

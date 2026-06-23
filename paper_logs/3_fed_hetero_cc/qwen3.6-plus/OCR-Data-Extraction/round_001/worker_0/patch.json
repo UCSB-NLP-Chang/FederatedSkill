@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The agent failed because it manually extracted data from images instead of using OCR automation, incorrectly nulled out 16/20 rows as 'duplicates' when the task likely expected all rows preserved, and formatted prices with fixed 2 decimal places violating the precision rule. This patch extends the existing image-data-extraction skill to cover order/invoice extraction with proper patterns, reference file validation, and explicit anti-patterns against manual extraction and incorrect deduplication.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md",
+    "image-data-extraction/scripts/extract_order_data.py"
+  ],
+  "delete_paths": []
+}

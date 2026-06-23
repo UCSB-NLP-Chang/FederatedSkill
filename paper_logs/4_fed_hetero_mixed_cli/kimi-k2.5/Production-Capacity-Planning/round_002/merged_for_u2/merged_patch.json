@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's validated patches wholesale (SKILL.md + validation-checklist.md). All workers converged on same generalization pattern. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "workload-capacity-planning/references/validation-checklist.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "cost_usd": 1.6341809999999999
+}

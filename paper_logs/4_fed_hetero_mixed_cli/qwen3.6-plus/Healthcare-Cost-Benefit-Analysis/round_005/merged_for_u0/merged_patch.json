@@ -1,0 +1,51 @@
+{
+  "worker_id": "u0",
+  "summary": "R5 merge complete: applied u2's validated oncocooler-dispatch-analysis (reward=1.0), renamed mailer-cycle-analysis \u2192 mailer-policy-analysis to align with peers. Library now has 4 skills at hard cap. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "mailer-policy-analysis/SKILL.md",
+    "mailer-policy-analysis/scripts/compute_mailer_policy.py",
+    "oncocooler-dispatch-analysis/SKILL.md",
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py"
+  ],
+  "delete_paths": [
+    "mailer-cycle-analysis/SKILL.md",
+    "mailer-cycle-analysis/scripts/compute_mailer_policy.py"
+  ],
+  "provenance": {
+    "mailer-policy-analysis/scripts/compute_mailer_policy.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "mailer-cycle-analysis/scripts/compute_mailer_policy.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "mailer-cycle-analysis/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "oncocooler-dispatch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "mailer-policy-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "oncocooler-dispatch-analysis/SKILL.md",
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py"
+  ],
+  "cost_usd": 0.781028
+}

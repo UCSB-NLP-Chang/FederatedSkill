@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The trace reveals a supply-chain coverage variant not covered by existing B1-B5 patterns. This 'legacy/ratio-based' variant uses a Ratio sheet for load size, formula cells in incoming shipments, and output columns (Rounding_Applied, Earliest_Scheduled_Inbound_Date) absent from existing scripts. The agent wrote ad-hoc code and failed the verifier. I'm adding this as variant B6 to the existing skill with a dedicated script and clear decision rules for when to use it versus the existing variants.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md",
+    "supply-chain-coverage-analysis/scripts/build_legacy_coverage.py"
+  ],
+  "delete_paths": []
+}

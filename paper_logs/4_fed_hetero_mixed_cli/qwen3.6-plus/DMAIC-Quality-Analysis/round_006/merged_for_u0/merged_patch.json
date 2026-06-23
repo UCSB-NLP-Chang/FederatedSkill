@@ -1,0 +1,35 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 Applied u0's devops-pipeline-analysis skill with fixes (parameterized project_codename via --project-name argument, added Known Invariants section). Library now has 3 skills covering B1/B2/B3 task buckets. See DECISIONS.md for detailed changes. Peers u1/u2 produced no patches (max_tokens failures).",
+  "upsert_paths": [
+    "devops-pipeline-analysis/SKILL.md",
+    "devops-pipeline-analysis/assets/brief_template.md",
+    "devops-pipeline-analysis/references/output_schema.md",
+    "devops-pipeline-analysis/scripts/compute_pipeline_metrics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "devops-pipeline-analysis/assets/brief_template.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ],
+    "devops-pipeline-analysis/scripts/compute_pipeline_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ],
+    "devops-pipeline-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ],
+    "devops-pipeline-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.1708080000000005
+}

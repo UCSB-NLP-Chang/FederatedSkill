@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction:/root/.config/agent/skills

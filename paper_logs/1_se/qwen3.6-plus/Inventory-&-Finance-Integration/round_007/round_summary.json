@@ -1,0 +1,18 @@
+{
+  "round_idx": 7,
+  "assignments": [
+    [
+      "u0",
+      "new_task_11_datacenter_stochastic_refills"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0
+  },
+  "exceptions": {
+    "u0": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 343.26903223991394
+}

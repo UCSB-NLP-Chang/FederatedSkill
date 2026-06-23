@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "electrolyte-rounding-harmonizati__G5VESrh",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/round_000/worker_1/electrolyte-rounding-harmonizati__G5VESrh",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/round_000/worker_1/electrolyte-rounding-harmonizati__G5VESrh",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

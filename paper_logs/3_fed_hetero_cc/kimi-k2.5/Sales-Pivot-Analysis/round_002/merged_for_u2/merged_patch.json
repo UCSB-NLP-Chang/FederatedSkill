@@ -1,0 +1,38 @@
+{
+  "worker_id": "u2",
+  "summary": "R2 merge complete for u2 (kimi-k2.5). Renamed skill to sales-pivot-analysis (peer-majority), inlined library circulation formulas, added openpyxl pivot anti-pattern, Step 0 mandatory spec-reading, and verifier troubleshooting section. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": [
+    "excel-data-integration/SKILL.md",
+    "excel-data-integration/references/academic-metrics.md",
+    "excel-data-integration/references/sales-metrics.md"
+  ],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "excel-data-integration/references/academic-metrics.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-data-integration/references/sales-metrics.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-data-integration/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.6343013
+}

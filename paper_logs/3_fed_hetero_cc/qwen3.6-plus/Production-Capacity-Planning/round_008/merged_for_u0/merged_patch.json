@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "R8 merge complete. Applied u1's verified SKILL.md wholesale (reward=1.0, chemical 6-day=240 OT=10*(days-4)) + merged u0's JSON handling and stronger no-rounding enforcement. Rejected u2's wrong chemical values (280/220/160, OT=20*(days-4)). See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 0.748587
+}

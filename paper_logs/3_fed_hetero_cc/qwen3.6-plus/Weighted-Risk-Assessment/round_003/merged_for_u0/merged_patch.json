@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged u0's SKILL.md (QUARTILE.INC params + write-order safety) + u2's validation script (deprecated function enforcement). Target qwen has persistent execution gap \u2014 skill content comprehensive, model compliance the bottleneck. See DECISIONS.md.",
+  "upsert_paths": [
+    "template-formula-fill/SKILL.md",
+    "template-formula-fill/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "template-formula-fill/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "template-formula-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.6846704
+}

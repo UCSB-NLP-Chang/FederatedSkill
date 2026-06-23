@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a new skill for mailer policy analysis (45-day vs 90-day cycles) based on the successful trace. Captures the exact CSV schema, financial formulas, decision threshold logic, and output constraints. Includes a reusable Python script to prevent manual calculation errors and explicitly warns against using `python` instead of `python3`.",
+  "upsert_paths": [
+    "mailer-policy-analysis/SKILL.md",
+    "mailer-policy-analysis/scripts/compute_mailer_policy.py"
+  ],
+  "delete_paths": []
+}

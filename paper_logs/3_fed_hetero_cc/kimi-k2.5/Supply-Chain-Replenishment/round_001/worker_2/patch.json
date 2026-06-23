@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The agent successfully completed the task but used a brittle approach that could fail on variants. Key learnings: (1) Dock status filtering logic must be explicitly documented - 'Pending' arrivals are excluded from horizon calculations, (2) Output sheet names vary by task ('SKU_Coverage'/'Pallet_Gap_List' vs 'Load_Detail'/'Load_Action_Summary'), (3) The core calculations are identical to inventory-load-planning but with different naming conventions. Updating the existing skill with a variant-aware section and explicit dock-status handling will prevent future agents from rediscovering these patterns.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

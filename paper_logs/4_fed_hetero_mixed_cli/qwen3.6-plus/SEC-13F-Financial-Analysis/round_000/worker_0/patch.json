@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.42857142857142855,
+  "summary": "Adds a reusable skill for parsing SEC 13F filings (COVERPAGE.tsv/INFOTABLE.tsv), matching managers safely, calculating AUM, and classifying stock holdings. Addresses the trace's failure by replacing brittle Levenshtein matching with a thresholded fallback and fixing substring traps in TITLEOFCLASS classification via tokenized matching.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/13f_schema.md",
+    "sec-13f-analysis/scripts/process_13f.py"
+  ],
+  "delete_paths": []
+}

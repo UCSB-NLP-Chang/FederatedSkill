@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8888888888888888,
+  "summary": "Added guidance for multi-run text extraction and grouped shape handling. The trace showed text split across multiple <a:r> elements causing incomplete extraction, and shapes nested inside <p:grpSp> groups requiring special handling for removal while preserving siblings.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "delete_paths": []
+}

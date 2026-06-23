@@ -1,0 +1,63 @@
+{
+  "run_id": "fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero",
+  "family_name": "Supply-Chain-Replenishment",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallQwenCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallKimiCli",
+      "agent_model": "openai/kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "snack_dc_august_load_plan",
+      "petcare_midmonth_pallet_gap",
+      "bakery_weekly_commit_gap",
+      "produce_lane_restock_gap",
+      "clinic_branch_transfer_gap",
+      "frozen_meal_tracker_refresh",
+      "beauty_zone_alias_gap",
+      "household_route_tracker_refresh",
+      "harbor_gdpval_21"
+    ],
+    "u1": [
+      "snack_dc_august_load_plan",
+      "petcare_midmonth_pallet_gap",
+      "bakery_weekly_commit_gap",
+      "produce_lane_restock_gap",
+      "clinic_branch_transfer_gap",
+      "frozen_meal_tracker_refresh",
+      "beauty_zone_alias_gap",
+      "household_route_tracker_refresh",
+      "harbor_gdpval_21"
+    ],
+    "u2": [
+      "snack_dc_august_load_plan",
+      "petcare_midmonth_pallet_gap",
+      "bakery_weekly_commit_gap",
+      "produce_lane_restock_gap",
+      "clinic_branch_transfer_gap",
+      "frozen_meal_tracker_refresh",
+      "beauty_zone_alias_gap",
+      "household_route_tracker_refresh",
+      "harbor_gdpval_21"
+    ]
+  }
+}

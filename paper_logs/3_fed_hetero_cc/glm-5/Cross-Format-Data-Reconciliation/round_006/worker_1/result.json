@@ -1,0 +1,29 @@
+{
+    "id": "1b575612-5cd6-40fe-8771-f672c58f4ffe",
+    "started_at": "2026-05-14T00:21:16.857384",
+    "finished_at": "2026-05-14T00:23:22.291014",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "07-shipping-container-manifest-d__6WRQpKV"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

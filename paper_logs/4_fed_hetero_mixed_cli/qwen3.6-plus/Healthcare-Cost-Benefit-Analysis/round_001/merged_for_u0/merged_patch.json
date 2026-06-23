@@ -1,0 +1,13 @@
+{
+  "worker_id": "u0",
+  "summary": "",
+  "upsert_paths": [],
+  "delete_paths": [],
+  "provenance": {},
+  "conflicts": [
+    "__llm_call_failed__:NotFoundError:litellm.NotFoundError: OpenAIException - The model `qwen3.6-plus` does not exist or you do not have access to it.",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: ",
+    "__task_update_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

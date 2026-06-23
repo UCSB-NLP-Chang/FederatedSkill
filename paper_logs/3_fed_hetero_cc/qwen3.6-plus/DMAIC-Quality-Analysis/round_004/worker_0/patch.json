@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.3333333333333333,
+  "summary": "Updated statistical-process-analysis SKILL.md to enforce strict use of compute_spc.py, add Excel-to-CSV pre-processing step, and explicitly document anti-patterns from the failed trace (custom keys, p_value=0.0, points array vs int).",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-mixed-cli-M3-hetero",
+  "family_name": "Inventory-&-Finance-Integration",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallQwenCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallKimiCli",
+      "agent_model": "openai/kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "harbor_gdpval_21",
+      "new_task_9_hospital_staffing_resilience",
+      "new_task_10_maintenance_calcfields_restock",
+      "new_task_9_datacenter_capacity_rollforward",
+      "new_task_10_transit_subsidy_rollforward",
+      "new_task_11_media_rights_rollforward",
+      "new_task_12_mealkit_freshness_replenishment",
+      "new_task_11_datacenter_stochastic_refills"
+    ],
+    "u1": [
+      "harbor_gdpval_21",
+      "new_task_9_hospital_staffing_resilience",
+      "new_task_10_maintenance_calcfields_restock",
+      "new_task_9_datacenter_capacity_rollforward",
+      "new_task_10_transit_subsidy_rollforward",
+      "new_task_11_media_rights_rollforward",
+      "new_task_12_mealkit_freshness_replenishment",
+      "new_task_11_datacenter_stochastic_refills"
+    ],
+    "u2": [
+      "harbor_gdpval_21",
+      "new_task_9_hospital_staffing_resilience",
+      "new_task_10_maintenance_calcfields_restock",
+      "new_task_9_datacenter_capacity_rollforward",
+      "new_task_10_transit_subsidy_rollforward",
+      "new_task_11_media_rights_rollforward",
+      "new_task_12_mealkit_freshness_replenishment",
+      "new_task_11_datacenter_stochastic_refills"
+    ]
+  }
+}

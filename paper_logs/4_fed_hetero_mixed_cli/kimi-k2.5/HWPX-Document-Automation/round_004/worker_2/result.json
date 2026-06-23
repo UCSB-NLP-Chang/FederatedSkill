@@ -1,0 +1,29 @@
+{
+    "id": "3bca5856-bd89-4a81-a9ed-9eb9a248f527",
+    "started_at": "2026-05-17T20:59:39.678129",
+    "finished_at": "2026-05-17T21:08:58.124294",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__HWPX-Document-Automation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "hwpx-training-feedback__Ki8MUZo"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

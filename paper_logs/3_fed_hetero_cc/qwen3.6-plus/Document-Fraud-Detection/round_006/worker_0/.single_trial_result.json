@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "warehouse-coldchain-charge-revie__gxD2vdB",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/round_006/worker_0/warehouse-coldchain-charge-revie__gxD2vdB",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/round_006/worker_0/warehouse-coldchain-charge-revie__gxD2vdB",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

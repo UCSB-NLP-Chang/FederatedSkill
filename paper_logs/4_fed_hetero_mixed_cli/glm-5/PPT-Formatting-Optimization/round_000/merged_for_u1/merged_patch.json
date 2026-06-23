@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Created 1 umbrella skill (pptx-xml-editing) synthesizing all three workers' patches. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/pptx-structure.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.7777777777777778
+    ],
+    "pptx-xml-editing/references/pptx-structure.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ]
+  },
+  "conflicts": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "cost_usd": 1.215144
+}

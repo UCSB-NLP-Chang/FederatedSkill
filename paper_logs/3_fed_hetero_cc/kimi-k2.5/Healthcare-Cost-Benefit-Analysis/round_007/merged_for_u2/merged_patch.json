@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Consolidated u0's specific vaxcrate skill into u2's generalized dispatch-cycle-analysis skill, which provides a flexible script, comprehensive variant mappings, and robust workflow that covers the vaxcrate domain while remaining reusable for other dispatch cycle tasks.",
+  "upsert_paths": [
+    "dispatch-cycle-analysis/SKILL.md",
+    "dispatch-cycle-analysis/references/variant-mappings.md",
+    "dispatch-cycle-analysis/scripts/compute_dispatch_cycle.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dispatch-cycle-analysis/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u2",
+      0.6
+    ],
+    "dispatch-cycle-analysis/references/variant-mappings.md": [
+      "upsert",
+      "llm_merge:top=u2",
+      0.6
+    ],
+    "dispatch-cycle-analysis/scripts/compute_dispatch_cycle.py": [
+      "upsert",
+      "llm_merge:top=u2",
+      0.6
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

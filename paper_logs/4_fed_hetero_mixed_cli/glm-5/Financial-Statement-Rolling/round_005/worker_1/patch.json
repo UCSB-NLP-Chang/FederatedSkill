@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The trace reveals a rebate rollforward variant with distinct patterns: running balance formulas for Ending Balance rows (not SUM), CSV patches with override/insert actions, and summary links to column O. This differs from both standard financial rollforwards (which use SUM for Ending Balance) and project-cost rollforwards (which have different column layouts). Adding a dedicated skill captures these patterns for future rebate/market development fund rollforward tasks.",
+  "upsert_paths": [
+    "rebate-rollforward/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "The agent failed verification despite completing the workbook. The trace reveals critical formula errors: (1) Variance formula uses =O12-N12 instead of =N12-N12 (wrong column for GL Balance), (2) Ending Balance formulas self-reference B10 instead of referencing Period Totals B9, (3) GL Balance in summary links to column O instead of N. These are the exact anti-patterns documented in existing skills but the agent still made them. The skill library needs stronger guardrails: a pre-flight checklist that MUST be completed before any formulas are written, and a dedicated contract-liability-rollforward skill that captures the specific column mappings and validation patterns for this task variant.",
+  "upsert_paths": [
+    "contract-liability-rollforward/SKILL.md",
+    "contract-liability-rollforward/scripts/verify_contract_liability.py"
+  ],
+  "delete_paths": []
+}

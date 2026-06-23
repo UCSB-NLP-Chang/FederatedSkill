@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a new skill for processing legal/financial case packets, capturing reusable patterns for OCR artifact repair, document classification, reference-based deduplication, and net settlement aggregation. Includes explicit decision rules for amount extraction fallbacks to prevent date/year mismatches.",
+  "upsert_paths": [
+    "case-settlement-extraction/SKILL.md"
+  ],
+  "delete_paths": []
+}

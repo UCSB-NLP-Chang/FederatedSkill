@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "R5 merge complete for u0. Merged u1's validated B4 multi-item extraction patterns (context-aware quantity extraction, multi-item deduplication) adapted to qwen's concise style. SKILL.md: +20 lines (tabular extraction section, B4 invariants, anti-patterns). parsing_patterns.md: +141 lines (artifact cleaning, context-aware quantity extraction, multi-item dedup). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/parsing_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "cost_usd": 4.188828
+}

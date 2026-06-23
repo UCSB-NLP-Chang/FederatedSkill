@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Update ocr-data-extraction skill to cover document classification/filtering before extraction, add robust multi-line value extraction pattern that correctly handles blank lines between keywords and values, and reinforce the float-vs-string output anti-pattern that caused verifier failure.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": []
+}

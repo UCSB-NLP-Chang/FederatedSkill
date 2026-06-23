@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for healthcare/operational cycle margin analysis. It bundles a deterministic Python script to compute per-item and total margins from CSV inputs, apply a threshold-based decision rule, and generate the exact JSON and Markdown outputs required by the verifier. Prevents manual arithmetic errors and enforces sorting, line-count, and threshold logic constraints observed in the trace.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md",
+    "cycle-margin-analysis/scripts/compute_margin.py"
+  ],
+  "delete_paths": []
+}

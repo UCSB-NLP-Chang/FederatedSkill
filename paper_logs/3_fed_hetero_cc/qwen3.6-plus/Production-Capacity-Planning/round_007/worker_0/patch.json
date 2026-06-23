@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Update excel-capacity-planning skill to handle CSV inputs (seen in ship block task), add the 28 hrs/day capacity variant (6d=168, 5d=140, 4d=112), and note python3 requirement. These changes address gaps exposed by the trace where the agent used CSV instead of Excel and encountered a new capacity pattern.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

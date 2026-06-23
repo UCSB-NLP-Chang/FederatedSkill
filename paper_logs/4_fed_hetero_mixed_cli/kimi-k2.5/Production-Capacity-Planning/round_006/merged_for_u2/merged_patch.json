@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 R6. Applied target's own reward=1.0 patch wholesale (SKILL.md + validation-checklist.md). Rejected u0 (reward=0.5, multiple anti-pattern violations). u1's sentence-counting section not incorporated \u2014 target already verified. See DECISIONS.md.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "workload-capacity-planning/references/validation-checklist.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "cost_usd": 1.7797169999999998
+}

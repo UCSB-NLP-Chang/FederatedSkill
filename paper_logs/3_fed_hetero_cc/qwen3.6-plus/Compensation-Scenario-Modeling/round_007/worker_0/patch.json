@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.7,
+  "summary": "The agent failed the pytest suite despite custom verification passing, repeating the exact anti-pattern the existing skill warns against. Additionally, the trace reveals two new reusable patterns: (1) assumption data structures use base keys with year sub-keys (e.g., `JourneyRate` with `Yr1`, `Yr2`, `Yr3` values) rather than year-suffixed keys, and (2) annual vs quarterly hour confusion (2080 vs 520) caused incorrect totals. This patch strengthens the existing skill with these patterns and reinforces the pytest-first mandate with a concrete failure example from this trace.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": []
+}

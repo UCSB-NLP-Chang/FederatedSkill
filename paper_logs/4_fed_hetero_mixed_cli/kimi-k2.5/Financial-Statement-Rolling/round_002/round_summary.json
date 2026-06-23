@@ -1,0 +1,30 @@
+{
+  "round_idx": 2,
+  "assignments": [
+    [
+      "u0",
+      "northstar_warranty_reserve_consolidation"
+    ],
+    [
+      "u1",
+      "northstar_warranty_reserve_consolidation"
+    ],
+    [
+      "u2",
+      "northstar_warranty_reserve_consolidation"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 0.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 780.3355433940887
+}

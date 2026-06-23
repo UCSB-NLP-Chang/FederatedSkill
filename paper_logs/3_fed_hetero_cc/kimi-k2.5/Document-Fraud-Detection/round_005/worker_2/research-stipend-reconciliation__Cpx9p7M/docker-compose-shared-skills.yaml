@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection:/root/.config/agent/skills

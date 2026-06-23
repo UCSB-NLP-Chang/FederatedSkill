@@ -1,0 +1,37 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus + qwen-code).\n\n**Key change**: Fundamental workflow restructure per task_memory guidance \u2014 pytest moved from step 10 to step 1 (run tests BEFORE building). All workers failed for 4 rounds with pytest at end; none of patches implemented this change.\n\nSee DECISIONS.md for detailed rationale.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/compensation-patterns.md",
+    "excel-workbook-modeling/references/grading-patterns.md",
+    "excel-workbook-modeling/scripts/verify_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/references/compensation-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.6
+    ],
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6
+    ],
+    "excel-workbook-modeling/references/grading-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.4
+    ],
+    "excel-workbook-modeling/scripts/verify_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md"
+  ],
+  "cost_usd": 3.2022360000000005
+}

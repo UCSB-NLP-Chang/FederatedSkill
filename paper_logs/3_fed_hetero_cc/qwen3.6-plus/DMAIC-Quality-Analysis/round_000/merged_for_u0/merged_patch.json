@@ -1,0 +1,29 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Created `statistical-process-analysis` skill with fixed compute_spc.py script (scipy library calls, t-distribution CI). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/spc_formulas.md",
+    "statistical-process-analysis/scripts/compute_spc.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/scripts/compute_spc.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/references/spc_formulas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.2563634
+}

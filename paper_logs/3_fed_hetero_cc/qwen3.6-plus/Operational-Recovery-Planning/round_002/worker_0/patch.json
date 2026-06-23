@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The trace shows the agent wrote custom simulation code from scratch instead of using queue_simulator.py, because the script was hardcoded for SOC headers and parameters. This patch refactors queue_simulator.py to be fully domain-configurable via CONFIG (headers, capacities, overtime, thresholds, row indices), and updates SKILL.md to reinforce the 'modify CONFIG only' rule with a domain adaptation guide. This prevents future agents from reinventing the simulation wheel.",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": []
+}

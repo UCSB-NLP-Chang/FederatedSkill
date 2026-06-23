@@ -1,0 +1,29 @@
+{
+    "id": "b97bbecb-3d39-42e9-9f90-87dab96ccfde",
+    "started_at": "2026-05-15T03:45:16.009834",
+    "finished_at": "2026-05-15T03:49:30.330661",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "research-stipend-reconciliation__Cpx9p7M"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

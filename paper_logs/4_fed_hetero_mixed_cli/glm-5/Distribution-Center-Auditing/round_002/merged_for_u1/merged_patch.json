@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's reward=1.0 SKILL.md wholesale (fixes inspect.py naming collision, adds Date Window Validation, promo-register-audit invariants). Added u0's row-offset gotcha as reference file. Library: 1 skill, 2 references. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "excel-audit-reporting/references/nan-none-handling.md",
+    "excel-audit-reporting/references/row-offset-handling.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-audit-reporting/references/nan-none-handling.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "excel-audit-reporting/references/row-offset-handling.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-audit-reporting/SKILL.md"
+  ],
+  "cost_usd": 3.037344
+}

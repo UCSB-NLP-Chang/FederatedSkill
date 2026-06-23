@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged my own production-planning skill patch (summary files, agricultural reference) with u1's explicit verification snippets and u2's agricultural domain invariants, consolidating all into a single comprehensive SKILL.md and keeping the agricultural examples as a standalone reference.",
+  "upsert_paths": [
+    "production-planning/SKILL.md",
+    "production-planning/references/agricultural_examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-planning/references/agricultural_examples.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.8
+    ],
+    "production-planning/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "production-planning/SKILL.md",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

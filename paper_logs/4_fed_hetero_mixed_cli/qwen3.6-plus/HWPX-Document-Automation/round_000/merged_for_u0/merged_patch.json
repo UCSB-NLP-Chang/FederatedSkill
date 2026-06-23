@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's validated patch with skill renamed from `fill-hwpx-placeholders` to peer-majority `hwpx-template-fill`. Library now has 1 skill. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/scripts/fill_hwpx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-fill/scripts/fill_hwpx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "hwpx-template-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.1367890000000003
+}

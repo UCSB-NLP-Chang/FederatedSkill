@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Fixed the fix_cached_values.py script to handle XML namespaces (s: prefix) that Excel uses in worksheet XML. The existing regex patterns only matched non-namespaced elements like <c>, <f>, <v> but actual Excel XML uses <s:c>, <s:f>, <s:v>. Also updated the reference documentation to mention namespace handling.",
+  "upsert_paths": [
+    "edit-embedded-excel/references/cached_value_fixing.md",
+    "edit-embedded-excel/scripts/fix_cached_values.py"
+  ],
+  "delete_paths": []
+}

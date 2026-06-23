@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The agent completed Excel formula work and self-verified calculations, but the test still failed. This skill captures Excel formula manipulation patterns with openpyxl and emphasizes test-driven verification over self-verification.",
+  "upsert_paths": [
+    "excel-formula-manipulation/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's reward=1.0 SKILL.md wholesale, renamed to `embedded-excel-edit`, added u2's cell types reference. See DECISIONS.md.",
+  "upsert_paths": [
+    "embedded-excel-edit/SKILL.md",
+    "embedded-excel-edit/references/openpyxl_cell_types.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "embedded-excel-edit/references/openpyxl_cell_types.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "embedded-excel-edit/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.2478216
+}

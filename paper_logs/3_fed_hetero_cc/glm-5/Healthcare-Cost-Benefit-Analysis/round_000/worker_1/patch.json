@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.6,
+  "summary": "The agent failed the verifier on a pharmacy refill-cycle margin analysis task. The core reusable capability\u2014comparing 30-day vs 90-day dispensing cycles across multiple therapies by joining acquisition, packaging, and reimbursement data\u2014warrants a skill. The trace reveals key calculation patterns and common pitfalls (e.g., confusing per-fill vs per-dose units, miscounting annual fills, sign errors on margins) that a future agent must avoid.",
+  "upsert_paths": [
+    "pharmacy-cycle-margin-analysis/SKILL.md",
+    "pharmacy-cycle-margin-analysis/references/formulas.md",
+    "pharmacy-cycle-margin-analysis/scripts/cycle_margin.py"
+  ],
+  "delete_paths": []
+}

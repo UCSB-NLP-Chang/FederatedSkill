@@ -1,0 +1,149 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.4, pluggy-1.6.0 -- /opt/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.6
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ....FFFF....sssF...............F                                         [100%]
+E           =================================== FAILURES ===================================
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Avg Salary by Department-average-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5e41d70920>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5e41c2c6b0>
+E           sheet_name = 'Avg Salary by Department', expected_agg = 'average'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E                   pivot = workbook[sheet_name]._pivots[0]
+E                   row_field = _get_field_name_by_index(pivot, pivot.rowFields)
+E                   if "Department" in sheet_name:
+E           >           assert row_field and ("dept" in row_field.lower() or "department" in row_field.lower()), \
+E           E           AssertionError: Row field should be DEPT_NAME, got 'None'
+E           E           assert (None)
+E           
+E           /tests/test_outputs.py:61: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Headcount by Location-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5e41c0a360>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5e41c2c6b0>
+E           sheet_name = 'Headcount by Location', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E                   pivot = workbook[sheet_name]._pivots[0]
+E                   row_field = _get_field_name_by_index(pivot, pivot.rowFields)
+E                   if "Department" in sheet_name:
+E                       assert row_field and ("dept" in row_field.lower() or "department" in row_field.lower()), \
+E                           f"Row field should be DEPT_NAME, got '{row_field}'"
+E                   elif "Location" in sheet_name:
+E           >           assert row_field and "location" in row_field.lower(), f"Row field should be LOCATION, got '{row_field}'"
+E           E           AssertionError: Row field should be LOCATION, got 'None'
+E           E           assert (None)
+E           
+E           /tests/test_outputs.py:64: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Total Compensation by Title-sum-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5e41c0a4b0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5e41c2c6b0>
+E           sheet_name = 'Total Compensation by Title', expected_agg = 'sum'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E                   pivot = workbook[sheet_name]._pivots[0]
+E                   row_field = _get_field_name_by_index(pivot, pivot.rowFields)
+E                   if "Department" in sheet_name:
+E                       assert row_field and ("dept" in row_field.lower() or "department" in row_field.lower()), \
+E                           f"Row field should be DEPT_NAME, got '{row_field}'"
+E                   elif "Location" in sheet_name:
+E                       assert row_field and "location" in row_field.lower(), f"Row field should be LOCATION, got '{row_field}'"
+E                   elif "Title" in sheet_name:
+E           >           assert row_field and ("title" in row_field.lower() or "job" in row_field.lower()), \
+E                           f"Row field should be job_title, got '{row_field}'"
+E           E           AssertionError: Row field should be job_title, got 'None'
+E           E           assert (None)
+E           
+E           /tests/test_outputs.py:66: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Department Location Matrix-average-job_title] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5e41c0a540>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5e41c2c6b0>
+E           sheet_name = 'Department Location Matrix', expected_agg = 'average'
+E           col_field = 'job_title'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E                   pivot = workbook[sheet_name]._pivots[0]
+E                   row_field = _get_field_name_by_index(pivot, pivot.rowFields)
+E                   if "Department" in sheet_name:
+E           >           assert row_field and ("dept" in row_field.lower() or "department" in row_field.lower()), \
+E           E           AssertionError: Row field should be DEPT_NAME, got 'None'
+E           E           assert (None)
+E           
+E           /tests/test_outputs.py:61: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_col_field[Department Location Matrix-average-job_title] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5e41c0aea0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5e41c2c6b0>
+E           sheet_name = 'Department Location Matrix', expected_agg = 'average'
+E           col_field = 'job_title'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_col_field(self, workbook, sheet_name, expected_agg, col_field):
+E                   if not col_field:
+E                       pytest.skip(f"'{sheet_name}' is not a matrix pivot")
+E                   pivot = workbook[sheet_name]._pivots[0]
+E                   actual_col = _get_field_name_by_index(pivot, pivot.colFields)
+E           >       assert actual_col and ("title" in actual_col.lower() or "job" in actual_col.lower()), \
+E                       f"Column field should be job_title, got '{actual_col}'"
+E           E       AssertionError: Column field should be job_title, got 'None'
+E           E       assert (None)
+E           
+E           /tests/test_outputs.py:81: AssertionError
+E           _____________ TestDataTransformations.test_pivot_cache_has_fields ______________
+E           
+E           self = <test_outputs.TestDataTransformations object at 0x7f5e41c0bfb0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5e41c2c6b0>
+E           
+E               def test_pivot_cache_has_fields(self, workbook):
+E                   pivot = workbook["Avg Salary by Department"]._pivots[0]
+E           >       assert len(pivot.cache.cacheFields) > 0
+E           E       AssertionError: assert 0 > 0
+E           E        +  where 0 = len([])
+E           E        +    where [] = <openpyxl.pivot.cache.CacheDefinition object>\nParameters:\ninvalid=None, saveData=None, refreshOnLoad=None, optimizeMem...rchies=[], kpis=[], tupleCache=None, calculatedItems=[], calculatedMembers=[], dimensions=[], measureGroups=[], maps=[].cacheFields
+E           E        +      where <openpyxl.pivot.cache.CacheDefinition object>\nParameters:\ninvalid=None, saveData=None, refreshOnLoad=None, optimizeMem...rchies=[], kpis=[], tupleCache=None, calculatedItems=[], calculatedMembers=[], dimensions=[], measureGroups=[], maps=[] = <openpyxl.pivot.table.TableDefinition object>\nParameters:\nname='PivotSalaryByDept', cacheId=1, dataOnRows=False, dataP...rmats=[], pivotHierarchies=[], pivotTableStyleInfo=None, filters=[], rowHierarchiesUsage=None, colHierarchiesUsage=None.cache
+E           
+E           /tests/test_outputs.py:198: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Avg Salary by Department-average-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Headcount by Location-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Total Compensation by Title-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Department Location Matrix-average-job_title]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_col_field[Department Location Matrix-average-job_title]
+E           FAILED ../tests/test_outputs.py::TestDataTransformations::test_pivot_cache_has_fields
+E           6 failed, 23 passed, 3 skipped in 0.36s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.52s ===============================

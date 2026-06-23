@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.2222222222222222,
+  "summary": "The agent successfully analyzed logistics data and generated reports, but the task failed verification. The trace reveals the agent used ad-hoc Python scripts instead of the existing pipeline-performance-analysis skill, and made a critical tool-name hygiene error (space before 'Bash'). The agent also invented field names not matching the established schema (e.g., 'delivery_times' vs 'build_duration'). This patch updates the existing pipeline-performance-analysis skill to be more generic (supporting any multi-metric Excel analysis, not just pipelines), adds clearer guidance on schema compliance, and strengthens the tool-name-hygiene skill with the specific failure pattern observed.",
+  "upsert_paths": [
+    "pipeline-performance-analysis/SKILL.md",
+    "pipeline-performance-analysis/references/output_schema.md",
+    "tool-name-hygiene/SKILL.md"
+  ],
+  "delete_paths": []
+}

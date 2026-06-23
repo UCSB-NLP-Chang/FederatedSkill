@@ -1,0 +1,20 @@
+{
+  "worker_id": "u0",
+  "summary": "Updated the existing excel-inventory-coverage skill with the frozen-meal-recovery-tracker variant and template preservation logic, consolidating overlapping coverage analysis concepts from peers into a single canonical skill.",
+  "upsert_paths": [
+    "excel-inventory-coverage/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-inventory-coverage/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: ",
+    "__task_update_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

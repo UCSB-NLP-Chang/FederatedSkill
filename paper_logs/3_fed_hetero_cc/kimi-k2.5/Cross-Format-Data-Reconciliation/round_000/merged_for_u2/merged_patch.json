@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Applied u2's reward=1.0 patch wholesale for `tabular-data-diff`. Library: 1 skill + 1 reference file. See DECISIONS.md for details and peer naming drift notes.",
+  "upsert_paths": [
+    "tabular-data-diff/SKILL.md",
+    "tabular-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "tabular-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "tabular-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.7737263999999999
+}

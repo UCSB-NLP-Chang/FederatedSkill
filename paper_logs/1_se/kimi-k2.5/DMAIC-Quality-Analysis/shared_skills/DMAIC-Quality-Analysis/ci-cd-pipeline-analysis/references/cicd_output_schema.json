@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CI/CD Pipeline Analysis Output",
+  "description": "Schema for CI/CD pipeline performance analysis",
+  "type": "object",
+  "required": [
+    "build_duration",
+    "bug_rate",
+    "deployment_failures",
+    "variability_ranking",
+    "highest_variability_process",
+    "highest_risk_statement",
+    "extended_analysis",
+    "improvement_plan"
+  ],
+  "properties": {
+    "build_duration": {
+      "type": "object",
+      "required": ["mean", "sample_std", "cv", "trend"],
+      "properties": {
+        "mean": { "type": "number" },
+        "sample_std": { "type": "number", "minimum": 0 },
+        "cv": { "type": "number", "minimum": 0 },
+        "trend": {
+          "type": "object",
+          "required": ["slope", "t_stat", "stability"],
+          "properties": {
+            "slope": { "type": "number" },
+            "t_stat": { "type": "number" },
+            "stability": { "type": "string", "enum": ["Stable", "Unstable"] }
+          }
+        }
+      }
+    },
+    "bug_rate": {
+      "type": "object",
+      "required": [
+        "uses_varying_denominators", "target_rate_pct", "overall_rate_pct",
+        "sample_std", "cv", "wilson_95_ci_pct", "capability_vs_target", "trend"
+      ],
+      "properties": {
+        "uses_varying_denominators": { "type": "boolean" },
+        "target_rate_pct": { "type": "number" },
+        "overall_rate_pct": { "type": "number", "minimum": 0 },
+        "sample_std": { "type": "number", "minimum": 0 },
+        "cv": { "type": "number", "minimum": 0 },
+        "wilson_95_ci_pct": {
+          "type": "object",
+          "required": ["lower", "upper"],
+          "properties": {
+            "lower": { "type": "number", "minimum": 0 },
+            "upper": { "type": "number", "minimum": 0 }
+          }
+        },
+        "capability_vs_target": { "type": "string", "enum": ["Capable", "Not Capable"] },
+        "trend": {
+          "type": "object",
+          "required": ["slope", "t_stat", "stability"],
+          "properties": {
+            "slope": { "type": "number" },
+            "t_stat": { "type": "number" },
+            "stability": { "type": "string", "enum": ["Stable", "Unstable"] }
+          }
+        }
+      }
+    },
+    "deployment_failures": {
+      "type": "object",
+      "required": ["mean", "sample_std", "cv", "trend"],
+      "properties": {
+        "mean": { "type": "number" },
+        "sample_std": { "type": "number", "minimum": 0 },
+        "cv": { "type": "number", "minimum": 0 },
+        "trend": {
+          "type": "object",
+          "required": ["slope", "t_stat", "stability"],
+          "properties": {
+            "slope": { "type": "number" },
+            "t_stat": { "type": "number" },
+            "stability": { "type": "string", "enum": ["Stable", "Unstable"] }
+          }
+        }
+      }
+    },
+    "variability_ranking": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["process", "cv"],
+        "properties": {
+          "process": { "type": "string" },
+          "cv": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+    "highest_variability_process": { "type": "string" },
+    "highest_risk_statement": { "type": "string", "pattern": ".*is the highest-risk stage\\.$" },
+    "extended_analysis": {
+      "type": "object",
+      "required": ["summary", "key_findings"],
+      "properties": {
+        "summary": { "type": "string" },
+        "key_findings": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "improvement_plan": {
+      "type": "object",
+      "required": [
+        "process", "methodology", "root_cause_approach",
+        "incident_response_plan", "technical_debt_assessment",
+        "prioritized_actions", "momentum_milestones"
+      ],
+      "properties": {
+        "process": { "type": "string" },
+        "methodology": { "type": "string" },
+        "root_cause_approach": { "type": "string" },
+        "incident_response_plan": { "type": "string" },
+        "technical_debt_assessment": { "type": "string" },
+        "prioritized_actions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 4
+        },
+        "momentum_milestones": {
+          "type": "object",
+          "required": ["30_day", "60_day", "90_day"],
+          "properties": {
+            "30_day": { "type": "string" },
+            "60_day": { "type": "string" },
+            "90_day": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

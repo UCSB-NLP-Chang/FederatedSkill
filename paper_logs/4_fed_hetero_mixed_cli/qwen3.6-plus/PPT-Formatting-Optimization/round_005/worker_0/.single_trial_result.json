@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "incident-briefing-caption-cleanu__brw9RhJ",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/round_005/worker_0/incident-briefing-caption-cleanu__brw9RhJ",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/round_005/worker_0/incident-briefing-caption-cleanu__brw9RhJ",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "R7 merge complete. Applied u0's verified SKILL.md + domain-examples.md (reward=1.0), added u2's sparse-amendments.md reference. u1 infra-failed (max_tokens). See DECISIONS.md.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md",
+    "expense-claims-validation/references/sparse-amendments.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "expense-claims-validation/references/sparse-amendments.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "expense-claims-validation/SKILL.md"
+  ],
+  "cost_usd": 3.0850530000000007
+}

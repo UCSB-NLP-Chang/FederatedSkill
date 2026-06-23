@@ -1,0 +1,37 @@
+{
+    "id": "215c6811-0216-4e90-95f6-ee11cf42fcc5",
+    "started_at": "2026-05-10T07:53:48.674069",
+    "finished_at": "2026-05-10T09:31:19.250805",
+    "n_total_trials": 9,
+    "stats": {
+        "n_trials": 9,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Medical-Data-Standardization": {
+                "n_trials": 9,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "electrolyte-rounding-harmonizati__q5krFy3",
+                            "hepatic-panel-harmonization__v3vREPw",
+                            "thyroid-monitoring-harmonization__SFrtLYh",
+                            "cardio-panel-template-harmonizat__tUHsYKL",
+                            "oncology-followup-dedup-harmoniz__UfxWk7J",
+                            "icu-metabolic-harmonization__mswQaJx",
+                            "respiratory-panel-json-harmoniza__TEeMGE2",
+                            "transplant-panel-alignment-harmo__jEMCvtw",
+                            "neonatal-sepsis-harmonization__swnXT2r"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

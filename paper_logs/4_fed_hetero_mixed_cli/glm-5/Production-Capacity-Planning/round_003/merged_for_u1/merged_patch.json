@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "MERGE COMPLETE. Applied u1's excel-python-processing patch and enhanced workload-capacity-planning with u0's layout inspection code while preserving validated Step-Down Logic. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-python-processing/SKILL.md",
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-python-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.5086609999999998
+}

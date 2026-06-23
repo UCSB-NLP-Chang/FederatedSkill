@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Adds a reusable skill for Excel workbook manipulation with openpyxl, focusing on formula injection, formatting preservation, and verification workflows based on the weighted-cloud-reliability-calc task.",
+  "upsert_paths": [
+    "excel-formula-manipulation/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,37 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Round 8. Added process-capability-analysis skill with u1's procedural style + u2's Cp/Cpk script. Library now has 3 skills. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "process-capability-analysis/SKILL.md",
+    "process-capability-analysis/references/report_schema.md",
+    "process-capability-analysis/scripts/calculate_capability.py",
+    "process-capability-analysis/scripts/wilson_ci.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "process-capability-analysis/references/report_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ],
+    "process-capability-analysis/scripts/wilson_ci.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ],
+    "process-capability-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ],
+    "process-capability-analysis/scripts/calculate_capability.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.25
+    ]
+  },
+  "conflicts": [
+    "process-capability-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.827407
+}

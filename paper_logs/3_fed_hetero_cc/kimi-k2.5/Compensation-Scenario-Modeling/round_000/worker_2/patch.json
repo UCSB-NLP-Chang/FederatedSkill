@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.14285714285714285,
+  "summary": "The agent built a complex Excel compensation model using openpyxl, demonstrating advanced techniques for formula-first design, named ranges, multi-year projections, and tiered calculations. Although the final file was created, the task failed verification (test_output.py::test_legacy_pytest_suite failed). This skill captures the reusable workflow for building sophisticated financial models in Excel with Python, including the critical pattern of using wb.define_name() for named ranges (not wb.defined_names dict API), validation strategies, and the anti-pattern of requiring formula strings without '=' prefix in openpyxl.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md",
+    "excel-financial-modeling/references/large-model-patterns.md",
+    "excel-financial-modeling/scripts/verify_formulas.py"
+  ],
+  "delete_paths": []
+}

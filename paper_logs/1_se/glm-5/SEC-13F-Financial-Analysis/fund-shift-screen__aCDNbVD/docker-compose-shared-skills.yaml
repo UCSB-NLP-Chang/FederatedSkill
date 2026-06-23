@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/shared_skills/SEC-13F-Financial-Analysis:/root/.config/agent/skills

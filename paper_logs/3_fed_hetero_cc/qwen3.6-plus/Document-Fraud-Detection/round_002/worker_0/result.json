@@ -1,0 +1,29 @@
+{
+    "id": "a28bdb37-9950-4bcb-aa66-c05f0d664e7f",
+    "started_at": "2026-05-15T02:35:03.961057",
+    "finished_at": "2026-05-15T02:37:48.774130",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "clinic-shift-claim-review__DvmAsQS"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

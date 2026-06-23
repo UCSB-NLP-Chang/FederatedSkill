@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated edit-embedded-excel skill to address two concrete failure modes from the trace: (1) BadZipFile errors when verifying a newly written PPTX before the ZipFile writer context fully exits, and (2) parsing concatenated slide note instructions (e.g., separated by ||) while filtering out archived/stale directives. Added explicit decision rules and anti-pattern entries to prevent these issues in future runs.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "delete_paths": []
+}

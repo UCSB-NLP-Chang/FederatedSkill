@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.7,
+  "summary": "The task failed because the agent rounded values to 2 decimal places, violating the skill's explicit 'NO ROUNDING' rule. The verifier expects full-precision floats. Additionally, the cardiology panel introduces new analytes (BNP, NT_proBNP, Troponin_I, Troponin_T) not covered in the existing skill. This patch adds cardiology-specific conversion factors and strengthens the anti-rounding guidance with explicit examples of the failure mode seen in the trace.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md"
+  ],
+  "delete_paths": []
+}

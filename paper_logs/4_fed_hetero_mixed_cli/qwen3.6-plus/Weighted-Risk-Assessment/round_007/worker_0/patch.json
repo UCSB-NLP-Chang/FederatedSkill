@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Fix critical test discovery bug where find_tests.py matches skill scripts as false positives, and strengthen SKILL.md guidance for handling exit code 4 (no tests found) blocking condition. The agent in this trace found false positives from skill directories, then gave up on test discovery and submitted without running tests, causing verifier failure.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/scripts/find_tests.py"
+  ],
+  "delete_paths": []
+}

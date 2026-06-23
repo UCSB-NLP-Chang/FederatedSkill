@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779084469.2787843,
+            "stop": 1779084469.5982037
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.29940163530409336,
+                "start": 1779084469.2862341,
+                "stop": 1779084469.5980954,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: F                                                                        [100%]\nE           =================================== FAILURES ===================================\nE           _________________________________ test_outputs _________________________________\nE           \nE               def test_outputs():\nE                   \"\"\"Test that the construction measurement extraction outputs are correct.\"\"\"\nE               \nE                   OUTPUT_FILE = \"/app/workspace/construction_summary.xlsx\"\nE                   EXPECTED_FILE = os.path.join(os.path.dirname(__file__), \"construction_oracle.xlsx\")\nE               \nE                   # Requirement: output file exists\nE                   assert os.path.exists(OUTPUT_FILE), \"construction_summary.xlsx not found at /app/workspace\"\nE               \nE                   # Requirement: two sheets named \"details\" and \"summary\"\nE                   actual_sheets = _get_sheetnames(OUTPUT_FILE)\nE                   assert actual_sheets == [\"details\", \"summary\"], (\nE                       f\"Requirement failed: workbook must contain exactly two sheets named 'details' and 'summary'.\\n\"\nE                       f\"Actual sheets: {actual_sheets}\"\nE                   )\nE               \nE                   # Test details sheet\nE                   details_rows = _read_sheet_as_string_rows(OUTPUT_FILE, \"details\")\nE                   expected_details = _read_sheet_as_string_rows(EXPECTED_FILE, \"details\")\nE               \nE                   # Requirement: correct header for details\nE                   expected_header = [\"filename\", \"project_code\", \"item_description\", \"quantity\", \"unit_price\"]\nE                   actual_header = details_rows[0] if details_rows else []\nE                   assert actual_header == expected_header, (\nE                       f\"Requirement failed: details header/schema mismatch.\\n\"\nE                       f\"Actual header:   {actual_header}\\n\"\nE                       f\"Expected header: {expected_header}\"\nE                   )\nE               \nE                   # Test summary sheet\nE                   summary_rows = _read_sheet_as_string_rows(OUTPUT_FILE, \"summary\")\nE                   expected_summary = _read_sheet_as_string_rows(EXPECTED_FILE, \"summary\")\nE               \nE                   # Requirement: correct header for summary\nE                   expected_summary_header = [\"project_code\", \"date\", \"total_amount\"]\nE                   actual_summary_header = summary_rows[0] if summary_rows else []\nE                   assert actual_summary_header == expected_summary_header, (\nE                       f\"Requirement failed: summary header/schema mismatch.\\n\"\nE                       f\"Actual header:   {actual_summary_header}\\n\"\nE                       f\"Expected header: {expected_summary_header}\"\nE                   )\nE               \nE                   # Requirement: summary rows ordered by project_code\nE                   summary_data = summary_rows[1:]\nE                   summary_data = [r for r in summary_data if len(r) >= 1 and r[0].strip() != \"\"]\nE                   project_codes = [r[0] for r in summary_data]\nE                   assert project_codes == sorted(project_codes), (\nE                       f\"Requirement failed: summary rows are not ordered by project_code.\\n\"\nE                       f\"Actual order:   {project_codes}\\n\"\nE                       f\"Sorted order:   {sorted(project_codes)}\"\nE                   )\nE               \nE                   # Requirement: match with oracle for both sheets (with numeric tolerance)\nE                   ok, msg = rows_match(details_rows, expected_details)\nE                   assert ok, f\"Details oracle mismatch: {msg}\"\nE               \nE                   ok, msg = rows_match(summary_rows, expected_summary)\nE           >       assert ok, f\"Summary oracle mismatch: {msg}\"\nE           E       AssertionError: Summary oracle mismatch: Row 1 col 1: text mismatch '2024-10-10' vs '2024-01-01'\nE           E       assert False\nE           \nE           /tests/test_outputs.py:115: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_outputs - AssertionError: Summary oracl...\nE           1 failed in 0.14s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

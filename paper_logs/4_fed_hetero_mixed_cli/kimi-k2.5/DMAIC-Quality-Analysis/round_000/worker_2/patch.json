@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.3333333333333333,
+  "summary": "Creates a reusable skill for DMAIC Analyze phase statistical analysis. The trace shows a complex Six Sigma workflow requiring business-day filtering, ANOVA, I-MR control charts, regression, and capability analysis. The verifier failure suggests strict schema requirements, so the skill emphasizes validation steps and correct statistical formulas (sample vs population std dev, moving range calculations).",
+  "upsert_paths": [
+    "dmaic-analyze/SKILL.md",
+    "dmaic-analyze/references/output_schema.md",
+    "dmaic-analyze/scripts/spc_calculations.py"
+  ],
+  "delete_paths": []
+}

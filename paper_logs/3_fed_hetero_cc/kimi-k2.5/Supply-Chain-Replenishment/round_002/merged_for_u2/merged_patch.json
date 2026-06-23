@@ -1,0 +1,35 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's supply-demand-gap-analysis wholesale (reward=1.0), added u0's script (fixed rounding bug) as helper, folded u1's datetime patterns into reference. Library: 1 skill, 3 references, 1 script. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "supply-demand-gap-analysis/SKILL.md",
+    "supply-demand-gap-analysis/references/calculation-formulas.md",
+    "supply-demand-gap-analysis/references/excel-datetime-handling.md",
+    "supply-demand-gap-analysis/scripts/calculate_coverage.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "supply-demand-gap-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "supply-demand-gap-analysis/scripts/calculate_coverage.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "supply-demand-gap-analysis/references/excel-datetime-handling.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "supply-demand-gap-analysis/references/calculation-formulas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.5279739
+}

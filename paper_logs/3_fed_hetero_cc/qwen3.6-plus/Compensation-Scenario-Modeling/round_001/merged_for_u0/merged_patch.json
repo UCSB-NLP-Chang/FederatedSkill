@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged u0's test-driven extraction + u2's Y/Y dynamic row tracking. Rejected u1's numpy import (reward=0.0). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.14285714285714285
+    ]
+  },
+  "conflicts": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "cost_usd": 2.2614030000000005
+}

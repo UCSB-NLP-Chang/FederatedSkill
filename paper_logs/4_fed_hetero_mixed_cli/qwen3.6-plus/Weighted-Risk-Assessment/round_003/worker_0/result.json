@@ -1,0 +1,29 @@
+{
+    "id": "c392872c-2b1f-418d-83fc-8a4c714c949e",
+    "started_at": "2026-05-18T06:49:05.834507",
+    "finished_at": "2026-05-18T06:53:14.354706",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-port-throughput-calc__SRbWtkD"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's patch to excel-queue-simulation (target's own reward=1.0 work). Rejected u2's queue-recovery-planning as duplicate workflow. Library now has 2 complementary skills. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-queue-simulation/SKILL.md",
+    "excel-queue-simulation/scripts/verify_outputs.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-queue-simulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-queue-simulation/scripts/verify_outputs.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-queue-simulation/SKILL.md",
+    "excel-queue-simulation/scripts/verify_outputs.py"
+  ],
+  "cost_usd": 2.369262
+}

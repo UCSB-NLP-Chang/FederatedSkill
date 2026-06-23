@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Update rebate-rollforward skill to cover JSON snapshot processing variant seen in atlas_refund_reserve_template_merge task. Adds: (1) JSON snapshot filtering by approved+row_kind, (2) version-based deduplication, (3) template clearing pattern, (4) accrued/credited field mapping, (5) CSV debug tip to avoid manual comma counting.",
+  "upsert_paths": [
+    "rebate-rollforward/SKILL.md"
+  ],
+  "delete_paths": []
+}

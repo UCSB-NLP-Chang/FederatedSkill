@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Added alias mapping pattern and priority-based deduplication to the existing economic-time-series-correlation skill. These patterns emerged from the trace where series names varied across sources and multiple records existed per (series, period) with different priority levels. Also clarified that current-year updates can be quarterly or monthly.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/series-catalog-pattern.md"
+  ],
+  "delete_paths": []
+}

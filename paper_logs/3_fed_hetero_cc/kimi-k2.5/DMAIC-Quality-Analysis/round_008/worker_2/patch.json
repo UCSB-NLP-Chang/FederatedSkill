@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.25,
+  "summary": "The task failed validation despite correct statistical analysis. The agent used ad-hoc Python scripts instead of the reusable pipeline-performance-analysis skill. Key learnings: (1) Agents should use existing skills rather than re-implementing from scratch, (2) Process capability analysis requires specific metrics (Cp/Cpk for continuous data, Pp/Ppk) that differ from general performance analysis, (3) The existing skill needs enhancement for capability indices and target-compliance checking. Creating a dedicated process-capability-analysis skill that extends pipeline-performance-analysis with Six Sigma capability metrics (Cp, Cpk, Pp, Ppk) and target comparison patterns.",
+  "upsert_paths": [
+    "process-capability-analysis/SKILL.md",
+    "process-capability-analysis/scripts/calculate_capability.py"
+  ],
+  "delete_paths": []
+}

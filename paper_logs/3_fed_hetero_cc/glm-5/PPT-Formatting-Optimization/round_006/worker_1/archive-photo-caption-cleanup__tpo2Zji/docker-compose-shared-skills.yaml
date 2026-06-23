@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization:/root/.config/agent/skills

@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_syncpack_28v56__9mGf5cz",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-hwpx-healthcare-glm-M3-hetero/Healthcare-Cost-Benefit-Analysis/round_002/worker_2/harbor_syncpack_28v56__9mGf5cz",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-hwpx-healthcare-glm-M3-hetero/Healthcare-Cost-Benefit-Analysis/round_002/worker_2/harbor_syncpack_28v56__9mGf5cz",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

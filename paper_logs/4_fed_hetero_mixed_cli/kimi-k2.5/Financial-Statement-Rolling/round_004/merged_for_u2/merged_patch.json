@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5 on kimi-cli). Applied u1's SKILL.md improvements (row-type detection, decision table) with wrong project-cost section removed. Added u0's project-cost-rollforward skill for B5 variant. Enhanced verify_workbook.py with summary column and ending balance formula checks. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/scripts/verify_workbook.py",
+    "project-cost-rollforward/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "project-cost-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "financial-rollforward-workbook/scripts/verify_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:project-cost-rollforward/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 4.405170000000001
+}

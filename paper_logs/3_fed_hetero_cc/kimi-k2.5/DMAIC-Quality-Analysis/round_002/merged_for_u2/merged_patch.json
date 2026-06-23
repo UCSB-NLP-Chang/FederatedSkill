@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Created minimal gated SKILL.md (~45 lines) with validation checkpoint; added validate_schema.py for structural enforcement; removed all computation context per task_memory step-2 recommendation. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/scripts/validate_schema.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/scripts/validate_schema.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.6478220000000001
+}

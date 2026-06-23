@@ -1,0 +1,326 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FFFF                                                                    [100%]
+E           =================================== FAILURES ===================================
+E           ___________ test_sheet_layout_and_rules[Current Capacity and Cells] ____________
+E           
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f2237229b20>
+E           due_map = {datetime.date(2018, 1, 22): (1065, 855), datetime.date(2018, 2, 1): (855, 555), datetime.date(2018, 2, 15): (900, 900), datetime.date(2018, 3, 1): (900, 575), ...}
+E           sheet_name = 'Current Capacity and Cells'
+E           
+E               @pytest.mark.parametrize("sheet_name", SHEET_NAMES)
+E               def test_sheet_layout_and_rules(workbook, due_map, sheet_name):
+E                   ws = workbook[sheet_name]
+E               
+E                   assert ws.max_row == LAST_ROW, f"{sheet_name}: expected exactly {LAST_ROW} rows."
+E               
+E                   assert ws["C2"].value == "Crew Cab Running Boards"
+E                   assert ws["F2"].value == "Extended Cab Running Boards"
+E                   assert ws["I2"].value == "Grill Guard"
+E               
+E                   expected_headers = [
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Actual Var to PO",
+E                       "Total Prod",
+E                       "Notes",
+E                   ]
+E                   actual_headers = [ws.cell(3, col).value for col in range(3, 12)]
+E                   assert set(actual_headers) == set(expected_headers), f"{sheet_name}: header mismatch in C3:K3."
+E               
+E                   first_date = as_date(ws.cell(FIRST_ROW, 2).value)
+E                   assert first_date == START_DATE, f"{sheet_name}: B4 must be {START_DATE}."
+E               
+E                   total_gg = 0
+E                   gg_days = 0
+E                   gg_before_feb1 = 0
+E                   gg_on_or_after_feb1 = 0
+E                   first_extended_date = None
+E                   high_output_days = 0
+E                   crew_backlog = 0
+E                   ext_backlog = 0
+E               
+E                   for row in range(FIRST_ROW, LAST_ROW + 1):
+E                       d = START_DATE + timedelta(days=row - FIRST_ROW)
+E               
+E                       if row > FIRST_ROW:
+E                           b_value = ws.cell(row, 2).value
+E                           literal = as_date(b_value)
+E                           if literal is not None:
+E                               assert literal == d, f"{sheet_name}: B{row} has incorrect date."
+E                           else:
+E                               formula = normalize_formula(b_value)
+E                               assert formula is not None, f"{sheet_name}: B{row} must be date or formula."
+E                               assert f"B{row - 1}" in formula and "+1" in formula, (
+E                                   f"{sheet_name}: B{row} must advance date by 1 day."
+E                               )
+E               
+E                       crew_plan = parse_nonnegative_int(ws.cell(row, 3).value, f"{sheet_name}!C{row}")
+E                       crew_due = parse_nonnegative_int(ws.cell(row, 4).value, f"{sheet_name}!D{row}")
+E                       ext_plan = parse_nonnegative_int(ws.cell(row, 6).value, f"{sheet_name}!F{row}")
+E                       ext_due = parse_nonnegative_int(ws.cell(row, 7).value, f"{sheet_name}!G{row}")
+E                       gg_plan = parse_nonnegative_int(ws.cell(row, 9).value, f"{sheet_name}!I{row}")
+E               
+E                       assert_formula_contains(ws.cell(row, 5).value, [f"D{row}", f"C{row}"], f"{sheet_name}!E{row}")
+E                       assert_formula_contains(ws.cell(row, 8).value, [f"G{row}", f"F{row}"], f"{sheet_name}!H{row}")
+E           >           assert_formula_contains(
+E                           ws.cell(row, 10).value,
+E                           [f"C{row}", f"F{row}", f"I{row}"],
+E                           f"{sheet_name}!J{row}",
+E                       )
+E           
+E           /tests/test_outputs.py:194: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           value = '=I4', tokens = ['C4', 'F4', 'I4']
+E           cell_ref = 'Current Capacity and Cells!J4'
+E           
+E               def assert_formula_contains(value, tokens, cell_ref):
+E                   formula = normalize_formula(value)
+E                   assert formula is not None, f"{cell_ref} must be a formula."
+E                   for token in tokens:
+E           >           assert token in formula, f"{cell_ref} formula is missing token '{token}'. Got: {value}"
+E           E           AssertionError: Current Capacity and Cells!J4 formula is missing token 'C4'. Got: =I4
+E           E           assert 'C4' in '=I4'
+E           
+E           /tests/test_outputs.py:39: AssertionError
+E           ______________ test_sheet_layout_and_rules[Relocated Grill Guard] ______________
+E           
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f2237229b20>
+E           due_map = {datetime.date(2018, 1, 22): (1065, 855), datetime.date(2018, 2, 1): (855, 555), datetime.date(2018, 2, 15): (900, 900), datetime.date(2018, 3, 1): (900, 575), ...}
+E           sheet_name = 'Relocated Grill Guard'
+E           
+E               @pytest.mark.parametrize("sheet_name", SHEET_NAMES)
+E               def test_sheet_layout_and_rules(workbook, due_map, sheet_name):
+E                   ws = workbook[sheet_name]
+E               
+E                   assert ws.max_row == LAST_ROW, f"{sheet_name}: expected exactly {LAST_ROW} rows."
+E               
+E                   assert ws["C2"].value == "Crew Cab Running Boards"
+E                   assert ws["F2"].value == "Extended Cab Running Boards"
+E                   assert ws["I2"].value == "Grill Guard"
+E               
+E                   expected_headers = [
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Actual Var to PO",
+E                       "Total Prod",
+E                       "Notes",
+E                   ]
+E                   actual_headers = [ws.cell(3, col).value for col in range(3, 12)]
+E                   assert set(actual_headers) == set(expected_headers), f"{sheet_name}: header mismatch in C3:K3."
+E               
+E                   first_date = as_date(ws.cell(FIRST_ROW, 2).value)
+E                   assert first_date == START_DATE, f"{sheet_name}: B4 must be {START_DATE}."
+E               
+E                   total_gg = 0
+E                   gg_days = 0
+E                   gg_before_feb1 = 0
+E                   gg_on_or_after_feb1 = 0
+E                   first_extended_date = None
+E                   high_output_days = 0
+E                   crew_backlog = 0
+E                   ext_backlog = 0
+E               
+E                   for row in range(FIRST_ROW, LAST_ROW + 1):
+E                       d = START_DATE + timedelta(days=row - FIRST_ROW)
+E               
+E                       if row > FIRST_ROW:
+E                           b_value = ws.cell(row, 2).value
+E                           literal = as_date(b_value)
+E                           if literal is not None:
+E                               assert literal == d, f"{sheet_name}: B{row} has incorrect date."
+E                           else:
+E                               formula = normalize_formula(b_value)
+E                               assert formula is not None, f"{sheet_name}: B{row} must be date or formula."
+E                               assert f"B{row - 1}" in formula and "+1" in formula, (
+E                                   f"{sheet_name}: B{row} must advance date by 1 day."
+E                               )
+E               
+E                       crew_plan = parse_nonnegative_int(ws.cell(row, 3).value, f"{sheet_name}!C{row}")
+E                       crew_due = parse_nonnegative_int(ws.cell(row, 4).value, f"{sheet_name}!D{row}")
+E                       ext_plan = parse_nonnegative_int(ws.cell(row, 6).value, f"{sheet_name}!F{row}")
+E                       ext_due = parse_nonnegative_int(ws.cell(row, 7).value, f"{sheet_name}!G{row}")
+E                       gg_plan = parse_nonnegative_int(ws.cell(row, 9).value, f"{sheet_name}!I{row}")
+E               
+E                       assert_formula_contains(ws.cell(row, 5).value, [f"D{row}", f"C{row}"], f"{sheet_name}!E{row}")
+E                       assert_formula_contains(ws.cell(row, 8).value, [f"G{row}", f"F{row}"], f"{sheet_name}!H{row}")
+E           >           assert_formula_contains(
+E                           ws.cell(row, 10).value,
+E                           [f"C{row}", f"F{row}", f"I{row}"],
+E                           f"{sheet_name}!J{row}",
+E                       )
+E           
+E           /tests/test_outputs.py:194: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           value = '=I4', tokens = ['C4', 'F4', 'I4']
+E           cell_ref = 'Relocated Grill Guard!J4'
+E           
+E               def assert_formula_contains(value, tokens, cell_ref):
+E                   formula = normalize_formula(value)
+E                   assert formula is not None, f"{cell_ref} must be a formula."
+E                   for token in tokens:
+E           >           assert token in formula, f"{cell_ref} formula is missing token '{token}'. Got: {value}"
+E           E           AssertionError: Relocated Grill Guard!J4 formula is missing token 'C4'. Got: =I4
+E           E           assert 'C4' in '=I4'
+E           
+E           /tests/test_outputs.py:39: AssertionError
+E           _________ test_sheet_layout_and_rules[10 hr Shift Relocate Grill Guar] _________
+E           
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f2237229b20>
+E           due_map = {datetime.date(2018, 1, 22): (1065, 855), datetime.date(2018, 2, 1): (855, 555), datetime.date(2018, 2, 15): (900, 900), datetime.date(2018, 3, 1): (900, 575), ...}
+E           sheet_name = '10 hr Shift Relocate Grill Guar'
+E           
+E               @pytest.mark.parametrize("sheet_name", SHEET_NAMES)
+E               def test_sheet_layout_and_rules(workbook, due_map, sheet_name):
+E                   ws = workbook[sheet_name]
+E               
+E                   assert ws.max_row == LAST_ROW, f"{sheet_name}: expected exactly {LAST_ROW} rows."
+E               
+E                   assert ws["C2"].value == "Crew Cab Running Boards"
+E                   assert ws["F2"].value == "Extended Cab Running Boards"
+E                   assert ws["I2"].value == "Grill Guard"
+E               
+E                   expected_headers = [
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Actual Var to PO",
+E                       "Total Prod",
+E                       "Notes",
+E                   ]
+E                   actual_headers = [ws.cell(3, col).value for col in range(3, 12)]
+E                   assert set(actual_headers) == set(expected_headers), f"{sheet_name}: header mismatch in C3:K3."
+E               
+E                   first_date = as_date(ws.cell(FIRST_ROW, 2).value)
+E                   assert first_date == START_DATE, f"{sheet_name}: B4 must be {START_DATE}."
+E               
+E                   total_gg = 0
+E                   gg_days = 0
+E                   gg_before_feb1 = 0
+E                   gg_on_or_after_feb1 = 0
+E                   first_extended_date = None
+E                   high_output_days = 0
+E                   crew_backlog = 0
+E                   ext_backlog = 0
+E               
+E                   for row in range(FIRST_ROW, LAST_ROW + 1):
+E                       d = START_DATE + timedelta(days=row - FIRST_ROW)
+E               
+E                       if row > FIRST_ROW:
+E                           b_value = ws.cell(row, 2).value
+E                           literal = as_date(b_value)
+E                           if literal is not None:
+E                               assert literal == d, f"{sheet_name}: B{row} has incorrect date."
+E                           else:
+E                               formula = normalize_formula(b_value)
+E                               assert formula is not None, f"{sheet_name}: B{row} must be date or formula."
+E                               assert f"B{row - 1}" in formula and "+1" in formula, (
+E                                   f"{sheet_name}: B{row} must advance date by 1 day."
+E                               )
+E               
+E                       crew_plan = parse_nonnegative_int(ws.cell(row, 3).value, f"{sheet_name}!C{row}")
+E                       crew_due = parse_nonnegative_int(ws.cell(row, 4).value, f"{sheet_name}!D{row}")
+E                       ext_plan = parse_nonnegative_int(ws.cell(row, 6).value, f"{sheet_name}!F{row}")
+E                       ext_due = parse_nonnegative_int(ws.cell(row, 7).value, f"{sheet_name}!G{row}")
+E                       gg_plan = parse_nonnegative_int(ws.cell(row, 9).value, f"{sheet_name}!I{row}")
+E               
+E                       assert_formula_contains(ws.cell(row, 5).value, [f"D{row}", f"C{row}"], f"{sheet_name}!E{row}")
+E                       assert_formula_contains(ws.cell(row, 8).value, [f"G{row}", f"F{row}"], f"{sheet_name}!H{row}")
+E           >           assert_formula_contains(
+E                           ws.cell(row, 10).value,
+E                           [f"C{row}", f"F{row}", f"I{row}"],
+E                           f"{sheet_name}!J{row}",
+E                       )
+E           
+E           /tests/test_outputs.py:194: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           value = '=I4', tokens = ['C4', 'F4', 'I4']
+E           cell_ref = '10 hr Shift Relocate Grill Guar!J4'
+E           
+E               def assert_formula_contains(value, tokens, cell_ref):
+E                   formula = normalize_formula(value)
+E                   assert formula is not None, f"{cell_ref} must be a formula."
+E                   for token in tokens:
+E           >           assert token in formula, f"{cell_ref} formula is missing token '{token}'. Got: {value}"
+E           E           AssertionError: 10 hr Shift Relocate Grill Guar!J4 formula is missing token 'C4'. Got: =I4
+E           E           assert 'C4' in '=I4'
+E           
+E           /tests/test_outputs.py:39: AssertionError
+E           ________________ test_summary_structure_and_required_statements ________________
+E           
+E           summary_text = '# Running Board Recovery Plan Summary\n\n## Scenario 1\n\n### Actions:\n- Continue current production capacity with C...signed to Running Board production\n- Zero Grill Guard output for entire horizon (100 days)\n\n### May PO On-Time: Yes'
+E           
+E               def test_summary_structure_and_required_statements(summary_text):
+E                   sec1 = extract_section(summary_text, 1)
+E                   sec2 = extract_section(summary_text, 2)
+E                   sec3 = extract_section(summary_text, 3)
+E               
+E                   required_labels = [
+E                       "Actions:",
+E                       "Crew Cab Impact:",
+E                       "Extended Cab Impact:",
+E                       "Grill Guard Impact:",
+E                       "May PO On-Time:",
+E                   ]
+E               
+E                   for idx, section in enumerate([sec1, sec2, sec3], start=1):
+E                       for label in required_labels:
+E           >               assert re.search(rf"^\s*{re.escape(label)}", section, flags=re.IGNORECASE | re.MULTILINE), (
+E                               f"Scenario {idx} is missing required field '{label}'."
+E                           )
+E           E               AssertionError: Scenario 1 is missing required field 'Actions:'.
+E           E               assert None
+E           E                +  where None = <function search at 0x7f2237f09f80>('^\\s*Actions:', '\n\n### Actions:\n- Continue current production capacity with Crew Cab at 120 units/day before Feb 5 and 135 units/da...ss working days\n- Competes with Running Board production for shared cell resources\n\n### May PO On-Time: No\n\n---\n', flags=(re.IGNORECASE | re.MULTILINE))
+E           E                +    where <function search at 0x7f2237f09f80> = re.search
+E           E                +    and   re.IGNORECASE = re.IGNORECASE
+E           E                +    and   re.MULTILINE = re.MULTILINE
+E           
+E           /tests/test_outputs.py:310: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_sheet_layout_and_rules[Current Capacity and Cells]
+E           FAILED ../tests/test_outputs.py::test_sheet_layout_and_rules[Relocated Grill Guard]
+E           FAILED ../tests/test_outputs.py::test_sheet_layout_and_rules[10 hr Shift Relocate Grill Guar]
+E           FAILED ../tests/test_outputs.py::test_summary_structure_and_required_statements
+E           4 failed, 1 passed in 0.20s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.41s ===============================

@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's verified patch (reward=1.0) with CSV input handling, python3 requirement, debug transition weeks tip, and ship block variant. Fixed table errors (Std=148\u2192168, Std=130\u2192140 for ship block). Rejected u2's content (reward=0.0). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 0.7252175999999999
+}

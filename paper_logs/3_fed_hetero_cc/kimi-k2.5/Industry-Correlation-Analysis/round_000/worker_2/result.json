@@ -1,0 +1,29 @@
+{
+    "id": "f64d3350-2df6-4f0b-83b6-f0a249cc5918",
+    "started_at": "2026-05-25T23:51:52.538850",
+    "finished_at": "2026-05-25T23:56:48.099404",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-service-hospitality-correla__2RXy46u"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

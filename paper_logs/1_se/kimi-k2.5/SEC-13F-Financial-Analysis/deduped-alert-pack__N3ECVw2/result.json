@@ -1,0 +1,100 @@
+{
+    "id": "f1d33d87-6ef3-4028-acfb-6238da1faabd",
+    "task_name": "deduped-alert-pack",
+    "trial_name": "deduped-alert-pack__N3ECVw2",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5-r1m-SEC-13F-Financial-Analysis/deduped-alert-pack__N3ECVw2",
+    "task_id": {
+        "path": "test_tasks/SEC-13F-Financial-Analysis/deduped-alert-pack"
+    },
+    "source": "SEC-13F-Financial-Analysis",
+    "task_checksum": "9ebd26c076b0223986c2b357a47e917295d2b872750464d5ddef0ef39e641d4f",
+    "config": {
+        "task": {
+            "path": "test_tasks/SEC-13F-Financial-Analysis/deduped-alert-pack",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "SEC-13F-Financial-Analysis"
+        },
+        "trial_name": "deduped-alert-pack__N3ECVw2",
+        "trials_dir": "jobs/iter-baseline-kimi-k2.5-r1m-SEC-13F-Financial-Analysis",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "kimi-k2.5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://api.moonshot.ai/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "0b55dcd8-5baf-4ffc-9b71-a7c8c6d7dbb1"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.150",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 662464,
+        "n_cache_tokens": 632832,
+        "n_output_tokens": 8131,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-26T00:36:34.045705Z",
+    "finished_at": "2026-05-26T00:41:42.209781Z",
+    "environment_setup": {
+        "started_at": "2026-05-26T00:36:34.283126Z",
+        "finished_at": "2026-05-26T00:36:35.723130Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-26T00:36:35.723150Z",
+        "finished_at": "2026-05-26T00:36:36.252096Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-26T00:36:36.252160Z",
+        "finished_at": "2026-05-26T00:41:28.173576Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-26T00:41:28.182054Z",
+        "finished_at": "2026-05-26T00:41:29.571537Z"
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's validated patch wholesale (crosswalk pattern + clinic shift domain example). Rejected u1's divergent skill name to maintain cross-worker consensus. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.9878540000000002
+}

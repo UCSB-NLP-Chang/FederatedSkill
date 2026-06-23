@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete \u2014 synthesized pivot-report/SKILL.md from u0+u1+u2 patches (all reward=0). See DECISIONS.md.",
+  "upsert_paths": [
+    "pivot-report/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.2325620000000002
+}

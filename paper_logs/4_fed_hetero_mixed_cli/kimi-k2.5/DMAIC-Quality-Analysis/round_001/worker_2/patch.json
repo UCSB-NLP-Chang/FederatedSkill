@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.3333333333333333,
+  "summary": "Updates the dmaic-analyze skill to prevent schema compliance failures. The agent failed verification by using ad-hoc inline Python instead of the provided script, resulting in incorrect JSON key names (primary_window vs primary_analysis_window), missing record_count inside filter objects, and omitted statistical fields (f_statistic, r_squared, n_observations, std_dev). Strengthens guidance to use the bundled script and adds explicit schema validation checkpoints.",
+  "upsert_paths": [
+    "dmaic-analyze/SKILL.md",
+    "dmaic-analyze/references/output_schema.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "0fbc503d-eb9e-4eb7-8325-20b0b592419f",
+    "started_at": "2026-05-18T02:18:36.071529",
+    "finished_at": "2026-05-18T02:23:26.545936",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "transplant-panel-alignment-harmo__kAWcbfe"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "id": "7f479186-10ba-4008-ac07-2122272c6eb8",
+    "started_at": "2026-05-15T01:09:53.211275",
+    "finished_at": "2026-05-15T01:14:52.914772",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Sales-Pivot-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "budget-reconciliation-pivot__GLEyKUW"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

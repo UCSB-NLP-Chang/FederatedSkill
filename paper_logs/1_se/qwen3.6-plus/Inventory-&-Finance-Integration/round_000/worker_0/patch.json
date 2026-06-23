@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Adds a reusable skill for Excel-based inventory planning and shipment calculation. Captures environment setup for PEP 668, openpyxl best practices, formula handling, date normalization, core calculation workflow, and troubleshooting for legacy verifier failures.",
+  "upsert_paths": [
+    "excel-inventory-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

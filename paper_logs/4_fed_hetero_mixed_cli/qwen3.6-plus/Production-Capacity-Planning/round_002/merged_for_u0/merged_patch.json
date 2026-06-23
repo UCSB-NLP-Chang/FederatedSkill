@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's own verified patches wholesale (reward=1.0) \u2014 generalized period handling in SKILL.md and parameterized assertions in validation-checklist.md. Rejected peer complexity additions per task_memory's \"stable, do not over-engineer\" guidance. See DECISIONS.md.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "workload-capacity-planning/references/validation-checklist.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "cost_usd": 1.131108
+}

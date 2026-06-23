@@ -1,0 +1,29 @@
+{
+    "id": "007ac435-c05a-4707-a001-1baa021b12ed",
+    "started_at": "2026-05-23T22:08:13.716020",
+    "finished_at": "2026-05-23T22:11:05.328012",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-service-hospitality-correla__mfeo834"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

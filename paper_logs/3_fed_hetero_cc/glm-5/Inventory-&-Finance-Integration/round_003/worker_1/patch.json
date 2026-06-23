@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The trace shows a task involving Excel rollforward schedules with cross-sheet formula references and control row calculations. The existing excel-inventory-analysis skill covers gap analysis but not rollforward/accounting reconciliation patterns. Adding rollforward-specific guidance to excel-workbook-manipulation skill for multi-sheet workbooks with formula links and control totals.",
+  "upsert_paths": [
+    "excel-workbook-manipulation/SKILL.md"
+  ],
+  "delete_paths": []
+}

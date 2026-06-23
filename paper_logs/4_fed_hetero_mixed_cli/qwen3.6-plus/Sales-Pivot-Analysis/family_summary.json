@@ -1,0 +1,238 @@
+{
+  "family_name": "Sales-Pivot-Analysis",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 11436.483634471893,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.0,
+    "max": 0.0,
+    "min": 0.0,
+    "n_passed": 0
+  },
+  "merger_cost_total_usd": 33.185826,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "product-sales-pivot"
+        ],
+        [
+          "u1",
+          "product-sales-pivot"
+        ],
+        [
+          "u2",
+          "product-sales-pivot"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 5.881101000000001,
+      "elapsed_sec": 1173.8962857723236
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "student-performance-pivot"
+        ],
+        [
+          "u1",
+          "student-performance-pivot"
+        ],
+        [
+          "u2",
+          "student-performance-pivot"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 5.062338,
+      "elapsed_sec": 1126.0227422714233
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "library-circulation-pivot"
+        ],
+        [
+          "u1",
+          "library-circulation-pivot"
+        ],
+        [
+          "u2",
+          "library-circulation-pivot"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 6.336444,
+      "elapsed_sec": 910.1092326641083
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "inventory-multi-warehouse-pivot"
+        ],
+        [
+          "u1",
+          "inventory-multi-warehouse-pivot"
+        ],
+        [
+          "u2",
+          "inventory-multi-warehouse-pivot"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 7.139493000000001,
+      "elapsed_sec": 971.5567619800568
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "quality-control-pivot"
+        ],
+        [
+          "u1",
+          "quality-control-pivot"
+        ],
+        [
+          "u2",
+          "quality-control-pivot"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 8.766449999999999,
+      "elapsed_sec": 1227.2291977405548
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "employee-compensation-pivot"
+        ],
+        [
+          "u1",
+          "employee-compensation-pivot"
+        ],
+        [
+          "u2",
+          "employee-compensation-pivot"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 954.4454216957092
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "event-registration-pivot"
+        ],
+        [
+          "u1",
+          "event-registration-pivot"
+        ],
+        [
+          "u2",
+          "event-registration-pivot"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 2595.010170698166
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "budget-reconciliation-pivot"
+        ],
+        [
+          "u1",
+          "budget-reconciliation-pivot"
+        ],
+        [
+          "u2",
+          "budget-reconciliation-pivot"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 2478.2122161388397
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Sales-Pivot-Analysis/worker_skills/u0/Sales-Pivot-Analysis",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Sales-Pivot-Analysis/worker_skills/u2/Sales-Pivot-Analysis"
+  }
+}

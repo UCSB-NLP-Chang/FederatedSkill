@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "weighted-port-throughput-calc__dXDN6u3",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Weighted-Ri<REDACTED>",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Weighted-Ri<REDACTED>",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

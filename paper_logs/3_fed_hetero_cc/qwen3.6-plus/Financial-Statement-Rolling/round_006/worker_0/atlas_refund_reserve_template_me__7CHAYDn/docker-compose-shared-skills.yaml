@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling:/root/.config/agent/skills

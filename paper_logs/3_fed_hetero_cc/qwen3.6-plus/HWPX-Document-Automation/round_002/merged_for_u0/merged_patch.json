@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's pre-processing workflow + Korean transformations reference; merged u1's zipfile-first code examples; rejected u2's skill rename to prevent naming fragmentation. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-filling/references/korean-data-transformations.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "hwpx-template-filling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-filling/SKILL.md"
+  ],
+  "cost_usd": 0.39583170000000006
+}

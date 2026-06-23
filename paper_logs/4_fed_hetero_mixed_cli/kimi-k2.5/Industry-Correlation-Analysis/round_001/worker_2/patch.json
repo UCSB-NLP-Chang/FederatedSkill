@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Added a reusable Python script for parsing year markers from economic statistical tables (trailing dots, quarterly markers like '2025:I', continuation Roman numerals 'II', 'III'). This eliminates the need for future agents to rediscover the parsing logic for annualizing partial quarterly data.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/scripts/parse_year_markers.py"
+  ],
+  "delete_paths": []
+}

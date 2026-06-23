@@ -1,0 +1,30 @@
+{
+  "round_idx": 0,
+  "assignments": [
+    [
+      "u0",
+      "snack_dc_august_load_plan"
+    ],
+    [
+      "u1",
+      "snack_dc_august_load_plan"
+    ],
+    [
+      "u2",
+      "snack_dc_august_load_plan"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 898.1852378845215
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Created 1 umbrella skill `pptx-xml-editing` covering B1 (text/formatting) and B2 (add slides) with inline EMU constants, 4-step sync procedure, and mandatory validation gate. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/xml-structure.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/references/xml-structure.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.7777777777777778
+    ]
+  },
+  "conflicts": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "cost_usd": 1.47738
+}

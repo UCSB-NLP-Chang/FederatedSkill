@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R3. Added commission_asset_variant.md reference file and updated SKILL.md with pre-coding Variance verification step (addresses u1's R3 failure mode), explicit Variance WRONG examples showing O12-N12, and commission asset variant coverage. See DECISIONS.md for reasoning.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/commission_asset_variant.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "deferred-revenue-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "deferred-revenue-rollforward/references/commission_asset_variant.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/commission_asset_variant.md"
+  ],
+  "cost_usd": 3.4437066
+}

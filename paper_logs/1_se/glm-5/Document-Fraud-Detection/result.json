@@ -1,0 +1,38 @@
+{
+    "id": "6decbc63-8f35-4028-9fb0-4f3681a47c6f",
+    "started_at": "2026-05-10T02:37:20.356289",
+    "finished_at": "2026-05-10T03:03:13.934465",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Document-Fraud-Detection": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.875
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "travel-expense-screening__3LBtBgk",
+                            "speaker-honorarium-review__cdzfZhk",
+                            "clinic-shift-claim-review__xjKiY4H",
+                            "field-service-workorder-audit__Nq3NoyG",
+                            "fleet-maintenance-chargeback-aud__SqjoT2g",
+                            "research-stipend-reconciliation__D2Wt6xE",
+                            "warehouse-coldchain-charge-revie__ZX6xnig"
+                        ],
+                        "0.0": [
+                            "clinical-trial-participant-relea__dc6MY6e"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "snack_dc_august_load_plan__6vFMprb",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Supply-Chain-Replenishment/round_000/worker_2/snack_dc_august_load_plan__6vFMprb",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Supply-Chain-Replenishment/round_000/worker_2/snack_dc_august_load_plan__6vFMprb",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

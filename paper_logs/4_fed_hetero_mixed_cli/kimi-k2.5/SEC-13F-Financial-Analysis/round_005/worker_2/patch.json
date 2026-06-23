@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "The trial failed due to false positive manager matches (Sycomore matched as Scion, Voyager Global matched as Tiger Global) caused by permissive word-overlap matching on generic terms like 'Global', and the agent wrote custom code instead of using provided scripts. Updates add 'global', 'asset', 'wealth', 'financial' to stop words, explicitly warn against the observed false matches, emphasize script usage for cross-quarter tasks, and add a specific workflow for multi-query reconciliation tasks.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/matching_strategies.md",
+    "sec-13f-analysis/references/output-schemas.md"
+  ],
+  "delete_paths": []
+}

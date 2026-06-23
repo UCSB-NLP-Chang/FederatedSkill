@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's SKILL.md (XML-centric style) + integrated u0's buAutoNum duplicate removal + u1's verify_pptx.py fix. Library now has 3 references + 2 scripts. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/auto-numbered-bullets.md",
+    "pptx-manipulation/scripts/verify_pptx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/references/auto-numbered-bullets.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/scripts/verify_pptx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "cost_usd": 2.9326847999999996
+}

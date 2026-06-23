@@ -1,0 +1,29 @@
+{
+    "id": "945d9984-1aeb-4cc6-92ba-6a28ffe2fef0",
+    "started_at": "2026-05-18T06:33:50.627156",
+    "finished_at": "2026-05-18T06:36:39.235227",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-campus-energy-balance-c__emqQPTR"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

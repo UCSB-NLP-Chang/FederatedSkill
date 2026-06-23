@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a new skill for modifying embedded Excel workbooks inside PowerPoint files, capturing the reliable zipfile+openpyxl workflow, anti-patterns (avoid python-pptx for OLE), and verification steps observed in the trace.",
+  "upsert_paths": [
+    "edit-pptx-embedded-excel/SKILL.md"
+  ],
+  "delete_paths": []
+}

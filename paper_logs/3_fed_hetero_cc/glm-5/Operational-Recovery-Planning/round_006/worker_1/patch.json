@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.4,
+  "summary": "The trace shows an agent whose self-verification passed but the external verifier failed. This is a known anti-pattern already partially documented in production-planning, but the guidance needs strengthening with explicit verification steps and a more rigorous checklist. Adding a verification protocol section and updating the anti-patterns to emphasize this failure mode.",
+  "upsert_paths": [
+    "production-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

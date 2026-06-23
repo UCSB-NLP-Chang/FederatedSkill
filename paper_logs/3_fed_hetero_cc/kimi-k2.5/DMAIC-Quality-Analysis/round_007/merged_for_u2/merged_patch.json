@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE \u2014 R7 merge complete. Applied u2's generalized pipeline-performance-analysis (covers B3 logistics) and tool-name-hygiene improvements. Rejected u0/u1 new skills per umbrella-first rule. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pipeline-performance-analysis/SKILL.md",
+    "pipeline-performance-analysis/references/output_schema.md",
+    "tool-name-hygiene/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pipeline-performance-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.2222222222222222
+    ],
+    "pipeline-performance-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.2222222222222222
+    ],
+    "tool-name-hygiene/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.2222222222222222
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.046986
+}

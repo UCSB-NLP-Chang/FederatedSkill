@@ -1,0 +1,29 @@
+{
+    "id": "f14b7601-1461-4e5a-9c9d-65e8b7910a0f",
+    "started_at": "2026-05-26T00:23:39.321225",
+    "finished_at": "2026-05-26T00:28:02.009976",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Operational-Recovery-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_gdpval_36__r9SpgRQ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

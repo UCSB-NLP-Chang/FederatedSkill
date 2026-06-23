@@ -1,0 +1,37 @@
+{
+    "id": "c70c0f08-5b61-4112-be75-8980d43fa13f",
+    "started_at": "2026-04-27T03:20:17.553750",
+    "finished_at": "2026-04-27T04:12:38.605936",
+    "n_total_trials": 9,
+    "stats": {
+        "n_trials": 9,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__DMAIC-Quality-Analysis": {
+                "n_trials": 9,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_soc_alert_analyze_01__pazpKJy",
+                            "harbor_hospital_lab_analyze_02__Lh2b3XQ",
+                            "harbor_field_service_analyze_03__t79EAoA",
+                            "harbor_university_it_analyze_04__bkPAavD",
+                            "harbor_gdpval_35__PUMZbLH",
+                            "harbor_hospital_safety_01__WvPLx6m",
+                            "harbor_devops_pipeline_02__6y6iuYe",
+                            "harbor_logistics_chain_03__JkSYyEk",
+                            "harbor_gdpval_37__JXbPApR"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

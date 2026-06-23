@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Adds a reusable skill for programmatic Excel manipulation using openpyxl, capturing path resolution pitfalls, formula injection patterns, structure preservation, and verification steps observed in the campus-budget-at-risk-calc trace.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/scripts/openpyxl_safe_ops.py"
+  ],
+  "delete_paths": []
+}

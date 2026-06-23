@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.3333333333333333,
+  "summary": "The agent wrote custom computation code instead of using the provided compute_spc.py script, producing JSON with multiple schema mismatches (wrong key names, wrong value types) that caused verifier failure. This patch adds a schema validation script to catch mismatches before submission, strengthens the anti-pattern warnings with concrete wrong-key examples from this failure, and adds a Common Mismatches reference section.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/schema.md",
+    "statistical-process-analysis/scripts/validate_schema.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.6666666666666666,
+  "summary": "The task involved cleaning up PowerPoint captions with specific formatting requirements. The agent succeeded but used a brittle approach with multiple verification scripts that had to be iterated. Key lessons: python-pptx requires paragraph-level font access (not shape-level), position/sizing uses EMUs converted to inches, and some shapes throw NotImplementedError on shape_type. The skill captures the working pattern for formatting text boxes, identifies platform captions vs UI elements by text length and position, and provides reusable verification.",
+  "upsert_paths": [
+    "powerpoint-formatting/SKILL.md",
+    "powerpoint-formatting/scripts/verify_formatting.py"
+  ],
+  "delete_paths": []
+}

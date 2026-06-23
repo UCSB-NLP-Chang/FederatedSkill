@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1 target patch wholesale (reward=1.0). Key R4 patterns integrated: nested JSON flattening, amendment decision filter, lifecycle status field. Umbrella naming `cross-document-validation` retained per validated prior-round evidence. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md",
+    "cross-document-validation/references/domain-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-document-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cross-document-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "cost_usd": 1.9534559999999999
+}

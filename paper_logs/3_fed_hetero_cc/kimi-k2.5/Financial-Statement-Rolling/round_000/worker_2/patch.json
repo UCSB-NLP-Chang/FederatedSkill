@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "Creates a reusable skill for building deferred revenue rollforward workbooks in Excel. Captures the CSV/JSON ingestion pattern, the specific control row formula structure (Period Totals, Ending Balance, Variance, GL Balance), and cross-sheet linking required for deferred revenue reconciliation tasks.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/scripts/build_rollforward.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Created unified `pptx-manipulation` skill synthesizing all three R4 patches. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/emu-conversions.md",
+    "pptx-manipulation/references/pptx-xml-notes.md",
+    "pptx-manipulation/scripts/verify_pptx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/references/emu-conversions.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ],
+    "pptx-manipulation/scripts/verify_pptx.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "pptx-manipulation/references/pptx-xml-notes.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:pptx-manipulation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 1.6823489999999999
+}

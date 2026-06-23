@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "Generalize production-capacity-planning skill to handle returns center throughput calculations (32hrs/day capacity model) and fix brittle row-index assumptions that caused KeyError failures when week data was misidentified.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/calculation-details.md",
+    "production-capacity-planning/scripts/calculate_catchup.py"
+  ],
+  "delete_paths": []
+}

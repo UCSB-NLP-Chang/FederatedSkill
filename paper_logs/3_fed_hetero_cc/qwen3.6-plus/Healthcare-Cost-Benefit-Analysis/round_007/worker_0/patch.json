@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.6,
+  "summary": "Adds vaxcrate-dispatch-analysis skill for 6-day vs 12-day vaccination crate dispatch economics. Includes deterministic script handling suspension/archive filtering, revision-based clinic overrides, cycle-tagged billing resolution, and 360-day dispatch frequency. Fixes anti-patterns seen in trace (inline Python, incorrect crate cost scaling, 365-day assumption).",
+  "upsert_paths": [
+    "vaxcrate-dispatch-analysis/SKILL.md",
+    "vaxcrate-dispatch-analysis/scripts/compute_vaxcrate.py"
+  ],
+  "delete_paths": []
+}

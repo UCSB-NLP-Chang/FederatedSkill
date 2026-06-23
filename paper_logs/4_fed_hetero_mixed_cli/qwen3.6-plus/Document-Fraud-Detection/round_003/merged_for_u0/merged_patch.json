@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete \u2014 R3. Applied u0's own reward=1.0 patch wholesale (SKILL.md + domain-examples.md). Rejected u1's outlier skill (cross-document-validation) to maintain naming consensus. Library: 1 umbrella skill expense-claims-validation covering B1 (claim validation) and B2 (work order audit with aliases/status/revisions). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "cost_usd": 3.113997
+}

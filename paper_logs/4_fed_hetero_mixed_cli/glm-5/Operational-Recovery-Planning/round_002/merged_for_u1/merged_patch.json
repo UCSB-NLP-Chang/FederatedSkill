@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Round 2. Applied u2's verified production-capacity-planning skill (reward=1.0) with modifications: added Output precision section, Known invariants section, removed rounding from helper script. Library now has 1 verified skill for B1 workflow. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/calculation-details.md",
+    "production-capacity-planning/scripts/calculate_catchup.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-capacity-planning/scripts/calculate_catchup.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "production-capacity-planning/references/calculation-details.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.4820565
+}

@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Synthesized unified SKILL.md combining u0's buAutoNum XML pattern, u1's external-test verification emphasis, and u2's multi-shape replacement pattern. Added bullets-numbering.md reference from u2. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/bullets-numbering.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/references/bullets-numbering.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.6666666666666666
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md",
+    "__skill_md_invalid__:pptx-manipulation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.971806
+}

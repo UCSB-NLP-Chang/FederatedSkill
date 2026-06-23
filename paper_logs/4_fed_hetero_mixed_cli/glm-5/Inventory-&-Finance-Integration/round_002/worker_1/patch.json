@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The existing excel-inventory-calculations skill successfully handled this maintenance parts resupply task. Adding a known invariants section for the maintenance-parts variant to document the specific sheet structure, metadata layout, and calculation nuances encountered (inclusive day counting, earliest delivery date handling, and resupply filtering criteria).",
+  "upsert_paths": [
+    "excel-inventory-calculations/SKILL.md"
+  ],
+  "delete_paths": []
+}

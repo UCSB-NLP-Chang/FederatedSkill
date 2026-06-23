@@ -1,0 +1,30 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u0's reward=1.0 inventory-metrics-calculation skill wholesale, renamed from tool-anchored excel-inventory-calculations. Added u2's code-patterns.md reference. Kept financial-reconciliation and python-package-installation unchanged. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "inventory-metrics-calculation/SKILL.md",
+    "inventory-metrics-calculation/references/code-patterns.md"
+  ],
+  "delete_paths": [
+    "excel-inventory-calculations/SKILL.md"
+  ],
+  "provenance": {
+    "inventory-metrics-calculation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "inventory-metrics-calculation/references/code-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-inventory-calculations/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.7989110000000001
+}

@@ -1,0 +1,25 @@
+{
+  "merger_mode": "unshared",
+  "n_pending_patches_merged": 3,
+  "per_worker": {
+    "u0": {
+      "n_upsert": 4,
+      "n_delete": 0,
+      "n_conflicts": 0,
+      "cost_usd": 3.1708080000000005
+    },
+    "u1": {
+      "n_upsert": 4,
+      "n_delete": 0,
+      "n_conflicts": 2,
+      "cost_usd": 4.509684
+    },
+    "u2": {
+      "n_upsert": 6,
+      "n_delete": 0,
+      "n_conflicts": 0,
+      "cost_usd": 6.521445000000001
+    }
+  },
+  "merger_cost_usd": 14.201937000000001
+}

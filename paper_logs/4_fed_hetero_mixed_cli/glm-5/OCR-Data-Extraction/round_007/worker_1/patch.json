@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace reveals a critical keyword specificity issue in OCR amount extraction: using short substrings like 'DIT' as keywords causes false matches (matching 'CREDIT' text). The fix was to use only complete, specific keywords. This lesson should be added to the existing ocr-data-extraction skill to prevent future agents from making the same mistake.",
+  "upsert_paths": [
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": []
+}

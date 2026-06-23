@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) on Operational-Recovery-Planning R6. Applied u1's verified SKILL.md patch (reward=0.8) with integrations from u0 (shift-day category constraint) and u2 (domain mapping + hardcoded row anti-pattern). Absorbed u2's variant-patterns.md for Harvest/Ag domain coverage. Library: 1 skill, 2 references, 1 script. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ],
+    "production-capacity-planning/references/constraint-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ],
+    "production-capacity-planning/references/variant-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md"
+  ],
+  "cost_usd": 0.7836552000000002
+}

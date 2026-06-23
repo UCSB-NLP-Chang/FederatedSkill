@@ -1,0 +1,66 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ...F....F                                                                [100%]
+E           =================================== FAILURES ===================================
+E           ____________________ TestSheetStructure.test_summary_title _____________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f80af171b20>
+E           
+E               def test_summary_title(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['Summary']
+E           >       assert ws['B1'].value is not None, "Summary B1 should contain organization name"
+E           E       AssertionError: Summary B1 should contain organization name
+E           E       assert None is not None
+E           E        +  where None = <Cell 'Summary'.B1>.value
+E           
+E           /tests/test_outputs.py:26: AssertionError
+E           _______________ TestSheetStructure.test_yoy_service_progression ________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f80ae8060f0>
+E           
+E               def test_yoy_service_progression(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws1 = wb['EE Calcs (Current)']
+E                   ws2 = wb['EE Calcs (Yr+1)']
+E                   for r in range(4, 70):
+E                       v1 = ws1.cell(row=r, column=6).value
+E                       v2 = ws2.cell(row=r, column=6).value
+E                       if v1 is not None and v2 is not None:
+E           >               assert v2 == v1 + 1, f"Yr+1 service should be +1"
+E                                        ^^^^^^
+E           E               TypeError: can only concatenate str (not "int") to str
+E           
+E           /tests/test_outputs.py:66: TypeError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_summary_title - Ass...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_yoy_service_progression
+E           2 failed, 7 passed in 0.55s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.80s ===============================

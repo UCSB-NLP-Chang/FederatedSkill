@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE. R7 merge complete: Aggressive condensation applied to u2's SKILL.md (284\u2192137 lines, 52% reduction) due to family-wide max_tokens emergency. No patches generated this round. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.2328730000000006
+}

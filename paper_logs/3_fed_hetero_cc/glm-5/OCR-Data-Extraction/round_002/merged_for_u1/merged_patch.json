@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) \u2014 Round 2.\n\nApplied u1's own validated SKILL.md and patterns.md patches wholesale (reward=1.0). Both cover B2 travel-claims task with date disambiguation logic, roster merge patterns, and claim code extraction.\n\nRejected u2's extract_travel_claims.py script due to precision violation (formats amounts as fixed 2-decimal strings) contradicting library's core \"Output precision\" rule.\n\nLibrary now has 1 umbrella skill + 1 patterns reference + 2 helper scripts. All wo...",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "image-data-extraction/references/patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md"
+  ],
+  "cost_usd": 0.5059136999999999
+}

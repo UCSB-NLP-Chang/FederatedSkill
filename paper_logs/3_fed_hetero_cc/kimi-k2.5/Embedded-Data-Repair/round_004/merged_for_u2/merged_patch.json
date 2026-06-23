@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R4 Embedded-Data-Repair. Synthesized key elements from all three patches (reward=0.75 each): diagnostic-first workflow (u1), alias resolution (u0), verifier compatibility section (u2). Applied u1's --auto enhancement to fix_cached_values.py and u2's cached_value_fixing.md reference. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/references/cached_value_fixing.md",
+    "edit-embedded-excel/scripts/fix_cached_values.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/scripts/fix_cached_values.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.75
+    ],
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.75
+    ],
+    "edit-embedded-excel/references/cached_value_fixing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.75
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "cost_usd": 0.6443784
+}

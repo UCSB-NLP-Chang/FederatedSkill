@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.3333333333333333,
+  "summary": "Adds a reusable skill for statistical process control and time-series analysis. Bundles a deterministic Python script to compute ANOVA, I-MR charts, regression, t-tests, and Cpk from CSV data, preventing manual arithmetic errors and ensuring consistent JSON output format for verifiers.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/spc_formulas.md",
+    "statistical-process-analysis/scripts/compute_spc.py"
+  ],
+  "delete_paths": []
+}

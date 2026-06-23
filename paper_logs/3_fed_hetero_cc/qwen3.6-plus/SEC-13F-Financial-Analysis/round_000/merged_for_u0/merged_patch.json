@@ -1,0 +1,35 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 Consolidated u0+u1+u2 patches into `sec-13f-fund-analysis` umbrella skill. Combined u0's stock classification patterns, u1's threshold validation, u2's output schema. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md",
+    "sec-13f-fund-analysis/scripts/classify_holdings.py",
+    "sec-13f-fund-analysis/scripts/match_manager.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/scripts/classify_holdings.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.42857142857142855
+    ],
+    "sec-13f-fund-analysis/scripts/match_manager.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-fund-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.42857142857142855
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.39085500000000006
+}

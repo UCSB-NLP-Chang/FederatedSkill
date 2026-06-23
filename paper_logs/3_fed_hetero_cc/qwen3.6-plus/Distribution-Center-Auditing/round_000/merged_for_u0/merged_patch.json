@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete \u2014 applied u0's spreadsheet-audit-reporting (reward=1.0) with None-vs-\"None\" anti-pattern added from u1. See DECISIONS.md.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "spreadsheet-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.1873014
+}

@@ -1,0 +1,353 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FF.F                                                                    [100%]
+E           =================================== FAILURES ===================================
+E           ___________ test_sheet_layout_and_rules[Current Capacity and Zones] ____________
+E           
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fabb6365a60>
+E           due_map = {datetime.date(2018, 1, 22): (1065, 855), datetime.date(2018, 2, 1): (855, 555), datetime.date(2018, 2, 15): (900, 900), datetime.date(2018, 3, 1): (900, 575), ...}
+E           sheet_name = 'Current Capacity and Zones'
+E           
+E               @pytest.mark.parametrize("sheet_name", SHEET_NAMES)
+E               def test_sheet_layout_and_rules(workbook, due_map, sheet_name):
+E                   ws = workbook[sheet_name]
+E               
+E                   assert ws.max_row == LAST_ROW, f"{sheet_name}: expected exactly {LAST_ROW} rows."
+E               
+E                   assert ws["C2"].value == "Priority Express Orders"
+E                   assert ws["F2"].value == "Standard Freight Orders"
+E                   assert ws["I2"].value == "Bulk Pallet Loads"
+E               
+E                   expected_headers = [
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Actual Var to PO",
+E                       "Total Prod",
+E                       "Notes",
+E                   ]
+E                   actual_headers = [ws.cell(3, col).value for col in range(3, 12)]
+E                   assert set(actual_headers) == set(expected_headers), f"{sheet_name}: header mismatch in C3:K3."
+E               
+E                   first_date = as_date(ws.cell(FIRST_ROW, 2).value)
+E                   assert first_date == START_DATE, f"{sheet_name}: B4 must be {START_DATE}."
+E               
+E                   total_c = 0
+E                   c_days = 0
+E                   c_before_feb1 = 0
+E                   c_on_or_after_feb1 = 0
+E                   first_b_date = None
+E                   high_output_days = 0
+E                   a_backlog = 0
+E                   b_backlog = 0
+E               
+E                   for row in range(FIRST_ROW, LAST_ROW + 1):
+E                       d = START_DATE + timedelta(days=row - FIRST_ROW)
+E               
+E                       if row > FIRST_ROW:
+E                           b_value = ws.cell(row, 2).value
+E                           literal = as_date(b_value)
+E                           if literal is not None:
+E                               assert literal == d, f"{sheet_name}: B{row} has incorrect date."
+E                           else:
+E                               formula = normalize_formula(b_value)
+E                               assert formula is not None, f"{sheet_name}: B{row} must be date or formula."
+E                               assert f"B{row - 1}" in formula and "+1" in formula, (
+E                                   f"{sheet_name}: B{row} must advance date by 1 day."
+E                               )
+E               
+E                       a_plan = parse_nonnegative_int(ws.cell(row, 3).value, f"{sheet_name}!C{row}")
+E                       a_due = parse_nonnegative_int(ws.cell(row, 4).value, f"{sheet_name}!D{row}")
+E                       b_plan = parse_nonnegative_int(ws.cell(row, 6).value, f"{sheet_name}!F{row}")
+E                       b_due = parse_nonnegative_int(ws.cell(row, 7).value, f"{sheet_name}!G{row}")
+E                       c_plan = parse_nonnegative_int(ws.cell(row, 9).value, f"{sheet_name}!I{row}")
+E               
+E                       assert_formula_contains(ws.cell(row, 5).value, [f"D{row}", f"C{row}"], f"{sheet_name}!E{row}")
+E                       assert_formula_contains(ws.cell(row, 8).value, [f"G{row}", f"F{row}"], f"{sheet_name}!H{row}")
+E                       assert_formula_contains(
+E                           ws.cell(row, 10).value,
+E                           [f"C{row}", f"F{row}", f"I{row}"],
+E                           f"{sheet_name}!J{row}",
+E                       )
+E                       if row > FIRST_ROW:
+E                           assert_formula_contains(ws.cell(row, 5).value, [f"E{row - 1}"], f"{sheet_name}!E{row}")
+E                           assert_formula_contains(ws.cell(row, 8).value, [f"H{row - 1}"], f"{sheet_name}!H{row}")
+E               
+E                       expected_a_due, expected_b_due = due_map.get(d, (0, 0))
+E                       assert a_due == expected_a_due, (
+E                           f"{sheet_name}: wrong Express due on {d}. Expected {expected_a_due}, got {a_due}."
+E                       )
+E                       assert b_due == expected_b_due, (
+E                           f"{sheet_name}: wrong Standard due on {d}. Expected {expected_b_due}, got {b_due}."
+E                       )
+E               
+E                       if d.weekday() >= 5 or d in HOLIDAYS:
+E                           assert a_plan == 0, f"{sheet_name}: Express production must be 0 on non-working day {d}."
+E                           assert b_plan == 0, f"{sheet_name}: Standard production must be 0 on non-working day {d}."
+E                           assert c_plan == 0, f"{sheet_name}: Bulk Pallet production must be 0 on non-working day {d}."
+E               
+E                       if sheet_name in ("Current Capacity and Zones", "Relocated Bulk Storage"):
+E                           if d < date(2018, 2, 5):
+E                               assert a_plan <= 120, f"{sheet_name}: Express output exceeds 120 on {d}."
+E                               assert b_plan <= 120, f"{sheet_name}: Standard output exceeds 120 on {d}."
+E                           else:
+E                               assert a_plan <= 135, f"{sheet_name}: Express output exceeds 135 on {d}."
+E                               assert b_plan <= 135, f"{sheet_name}: Standard output exceeds 135 on {d}."
+E                       else:
+E                           if a_plan > 135 or b_plan > 135:
+E                               high_output_days += 1
+E                               assert d >= date(2018, 2, 1), f"{sheet_name}: 10-hour output used before 2018-02-01."
+E                               assert d.weekday() < 5 and d not in HOLIDAYS, (
+E                                   f"{sheet_name}: high-output day must be a working day ({d})."
+E                               )
+E                               assert a_plan <= 170, f"{sheet_name}: Express output exceeds 170 on {d}."
+E                               assert b_plan <= 170, f"{sheet_name}: Standard output exceeds 170 on {d}."
+E                           else:
+E                               if d < date(2018, 2, 5):
+E                                   assert a_plan <= 120, f"{sheet_name}: Express output exceeds 120 on {d}."
+E                                   assert b_plan <= 120, f"{sheet_name}: Standard output exceeds 120 on {d}."
+E                               else:
+E                                   assert a_plan <= 135, f"{sheet_name}: Express output exceeds 135 on {d}."
+E                                   assert b_plan <= 135, f"{sheet_name}: Standard output exceeds 135 on {d}."
+E               
+E                       if b_plan > 0 and first_b_date is None:
+E                           first_b_date = d
+E               
+E                       total_c += c_plan
+E                       if c_plan > 0:
+E                           c_days += 1
+E                       if d < date(2018, 2, 1):
+E                           c_before_feb1 += c_plan
+E                       else:
+E                           c_on_or_after_feb1 += c_plan
+E               
+E                       a_backlog += a_due - a_plan
+E                       b_backlog += b_due - b_plan
+E               
+E                   if sheet_name == "Current Capacity and Zones":
+E                       assert total_c >= 1200, f"{sheet_name}: total Bulk Pallet Loads output must be >= 1200."
+E                       assert c_days >= 10, f"{sheet_name}: expected Bulk Pallet Loads to run on at least 10 days."
+E                       assert first_b_date is not None and first_b_date >= date(2018, 3, 1), (
+E                           f"{sheet_name}: Standard Freight Orders production starts too early."
+E                       )
+E           >           assert a_backlog > 0 and b_backlog > 0, (
+E                           f"{sheet_name}: expected both Express and Standard backlogs to remain > 0 by May 1."
+E                       )
+E           E           AssertionError: Current Capacity and Zones: expected both Express and Standard backlogs to remain > 0 by May 1.
+E           E           assert (-3780 > 0)
+E           
+E           /tests/test_outputs.py:260: AssertionError
+E           _____________ test_sheet_layout_and_rules[Relocated Bulk Storage] ______________
+E           
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fabb6365a60>
+E           due_map = {datetime.date(2018, 1, 22): (1065, 855), datetime.date(2018, 2, 1): (855, 555), datetime.date(2018, 2, 15): (900, 900), datetime.date(2018, 3, 1): (900, 575), ...}
+E           sheet_name = 'Relocated Bulk Storage'
+E           
+E               @pytest.mark.parametrize("sheet_name", SHEET_NAMES)
+E               def test_sheet_layout_and_rules(workbook, due_map, sheet_name):
+E                   ws = workbook[sheet_name]
+E               
+E                   assert ws.max_row == LAST_ROW, f"{sheet_name}: expected exactly {LAST_ROW} rows."
+E               
+E                   assert ws["C2"].value == "Priority Express Orders"
+E                   assert ws["F2"].value == "Standard Freight Orders"
+E                   assert ws["I2"].value == "Bulk Pallet Loads"
+E               
+E                   expected_headers = [
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Actual Var to PO",
+E                       "Total Prod",
+E                       "Notes",
+E                   ]
+E                   actual_headers = [ws.cell(3, col).value for col in range(3, 12)]
+E                   assert set(actual_headers) == set(expected_headers), f"{sheet_name}: header mismatch in C3:K3."
+E               
+E                   first_date = as_date(ws.cell(FIRST_ROW, 2).value)
+E                   assert first_date == START_DATE, f"{sheet_name}: B4 must be {START_DATE}."
+E               
+E                   total_c = 0
+E                   c_days = 0
+E                   c_before_feb1 = 0
+E                   c_on_or_after_feb1 = 0
+E                   first_b_date = None
+E                   high_output_days = 0
+E                   a_backlog = 0
+E                   b_backlog = 0
+E               
+E                   for row in range(FIRST_ROW, LAST_ROW + 1):
+E                       d = START_DATE + timedelta(days=row - FIRST_ROW)
+E               
+E                       if row > FIRST_ROW:
+E                           b_value = ws.cell(row, 2).value
+E                           literal = as_date(b_value)
+E                           if literal is not None:
+E                               assert literal == d, f"{sheet_name}: B{row} has incorrect date."
+E                           else:
+E                               formula = normalize_formula(b_value)
+E                               assert formula is not None, f"{sheet_name}: B{row} must be date or formula."
+E                               assert f"B{row - 1}" in formula and "+1" in formula, (
+E                                   f"{sheet_name}: B{row} must advance date by 1 day."
+E                               )
+E               
+E                       a_plan = parse_nonnegative_int(ws.cell(row, 3).value, f"{sheet_name}!C{row}")
+E                       a_due = parse_nonnegative_int(ws.cell(row, 4).value, f"{sheet_name}!D{row}")
+E                       b_plan = parse_nonnegative_int(ws.cell(row, 6).value, f"{sheet_name}!F{row}")
+E                       b_due = parse_nonnegative_int(ws.cell(row, 7).value, f"{sheet_name}!G{row}")
+E                       c_plan = parse_nonnegative_int(ws.cell(row, 9).value, f"{sheet_name}!I{row}")
+E               
+E                       assert_formula_contains(ws.cell(row, 5).value, [f"D{row}", f"C{row}"], f"{sheet_name}!E{row}")
+E                       assert_formula_contains(ws.cell(row, 8).value, [f"G{row}", f"F{row}"], f"{sheet_name}!H{row}")
+E                       assert_formula_contains(
+E                           ws.cell(row, 10).value,
+E                           [f"C{row}", f"F{row}", f"I{row}"],
+E                           f"{sheet_name}!J{row}",
+E                       )
+E                       if row > FIRST_ROW:
+E                           assert_formula_contains(ws.cell(row, 5).value, [f"E{row - 1}"], f"{sheet_name}!E{row}")
+E                           assert_formula_contains(ws.cell(row, 8).value, [f"H{row - 1}"], f"{sheet_name}!H{row}")
+E               
+E                       expected_a_due, expected_b_due = due_map.get(d, (0, 0))
+E                       assert a_due == expected_a_due, (
+E                           f"{sheet_name}: wrong Express due on {d}. Expected {expected_a_due}, got {a_due}."
+E                       )
+E                       assert b_due == expected_b_due, (
+E                           f"{sheet_name}: wrong Standard due on {d}. Expected {expected_b_due}, got {b_due}."
+E                       )
+E               
+E                       if d.weekday() >= 5 or d in HOLIDAYS:
+E                           assert a_plan == 0, f"{sheet_name}: Express production must be 0 on non-working day {d}."
+E                           assert b_plan == 0, f"{sheet_name}: Standard production must be 0 on non-working day {d}."
+E                           assert c_plan == 0, f"{sheet_name}: Bulk Pallet production must be 0 on non-working day {d}."
+E               
+E                       if sheet_name in ("Current Capacity and Zones", "Relocated Bulk Storage"):
+E                           if d < date(2018, 2, 5):
+E                               assert a_plan <= 120, f"{sheet_name}: Express output exceeds 120 on {d}."
+E                               assert b_plan <= 120, f"{sheet_name}: Standard output exceeds 120 on {d}."
+E                           else:
+E                               assert a_plan <= 135, f"{sheet_name}: Express output exceeds 135 on {d}."
+E                               assert b_plan <= 135, f"{sheet_name}: Standard output exceeds 135 on {d}."
+E                       else:
+E                           if a_plan > 135 or b_plan > 135:
+E                               high_output_days += 1
+E                               assert d >= date(2018, 2, 1), f"{sheet_name}: 10-hour output used before 2018-02-01."
+E                               assert d.weekday() < 5 and d not in HOLIDAYS, (
+E                                   f"{sheet_name}: high-output day must be a working day ({d})."
+E                               )
+E                               assert a_plan <= 170, f"{sheet_name}: Express output exceeds 170 on {d}."
+E                               assert b_plan <= 170, f"{sheet_name}: Standard output exceeds 170 on {d}."
+E                           else:
+E                               if d < date(2018, 2, 5):
+E                                   assert a_plan <= 120, f"{sheet_name}: Express output exceeds 120 on {d}."
+E                                   assert b_plan <= 120, f"{sheet_name}: Standard output exceeds 120 on {d}."
+E                               else:
+E                                   assert a_plan <= 135, f"{sheet_name}: Express output exceeds 135 on {d}."
+E                                   assert b_plan <= 135, f"{sheet_name}: Standard output exceeds 135 on {d}."
+E               
+E                       if b_plan > 0 and first_b_date is None:
+E                           first_b_date = d
+E               
+E                       total_c += c_plan
+E                       if c_plan > 0:
+E                           c_days += 1
+E                       if d < date(2018, 2, 1):
+E                           c_before_feb1 += c_plan
+E                       else:
+E                           c_on_or_after_feb1 += c_plan
+E               
+E                       a_backlog += a_due - a_plan
+E                       b_backlog += b_due - b_plan
+E               
+E                   if sheet_name == "Current Capacity and Zones":
+E                       assert total_c >= 1200, f"{sheet_name}: total Bulk Pallet Loads output must be >= 1200."
+E                       assert c_days >= 10, f"{sheet_name}: expected Bulk Pallet Loads to run on at least 10 days."
+E                       assert first_b_date is not None and first_b_date >= date(2018, 3, 1), (
+E                           f"{sheet_name}: Standard Freight Orders production starts too early."
+E                       )
+E                       assert a_backlog > 0 and b_backlog > 0, (
+E                           f"{sheet_name}: expected both Express and Standard backlogs to remain > 0 by May 1."
+E                       )
+E               
+E                   if sheet_name == "Relocated Bulk Storage":
+E                       assert c_before_feb1 >= 100, f"{sheet_name}: must produce at least 100 Bulk Pallet Loads units pre-relocation."
+E                       assert c_on_or_after_feb1 == 0, f"{sheet_name}: Bulk Pallet Loads output must be 0 on/after 2018-02-01."
+E                       assert first_b_date is not None and first_b_date >= date(2018, 2, 20), (
+E                           f"{sheet_name}: Standard Freight Orders production starts too early."
+E                       )
+E           >           assert a_backlog <= 0 and b_backlog > 0, (
+E                           f"{sheet_name}: expected Express backlog cleared and Standard backlog remaining by May 1."
+E                       )
+E           E           AssertionError: Relocated Bulk Storage: expected Express backlog cleared and Standard backlog remaining by May 1.
+E           E           assert (-3780 <= 0 and -2715 > 0)
+E           
+E           /tests/test_outputs.py:270: AssertionError
+E           ________________ test_summary_structure_and_required_statements ________________
+E           
+E           summary_text = '# Fulfillment Recovery Plan Summary\n\n## Overview\n\nThis recovery plan analyzes three operational scenarios for the...des the necessary capacity to clear both Priority Express and Standard Freight backlogs within the planning horizon.\n'
+E           
+E               def test_summary_structure_and_required_statements(summary_text):
+E                   sec1 = extract_section(summary_text, 1)
+E                   sec2 = extract_section(summary_text, 2)
+E                   sec3 = extract_section(summary_text, 3)
+E               
+E                   required_labels = [
+E                       "Actions:",
+E                       "Priority Express Orders Impact:",
+E                       "Standard Freight Orders Impact:",
+E                       "Bulk Pallet Loads Impact:",
+E                       "May PO On-Time:",
+E                   ]
+E               
+E                   for idx, section in enumerate([sec1, sec2, sec3], start=1):
+E                       for label in required_labels:
+E           >               assert re.search(rf"^\s*{re.escape(label)}", section, flags=re.IGNORECASE | re.MULTILINE), (
+E                               f"Scenario {idx} is missing required field '{label}'."
+E                           )
+E           E               AssertionError: Scenario 1 is missing required field 'Actions:'.
+E           E               assert None
+E           E                +  where None = <function search at 0x7fabb706df80>('^\\s*Actions:', '\n\n**Current Capacity and Zones**\n\nThis scenario maintains the existing warehouse layout and operational capacity ...nt. Bulk production is distributed evenly across all working days in the planning horizon.\n\n**May PO On-Time:** No\n', flags=(re.IGNORECASE | re.MULTILINE))
+E           E                +    where <function search at 0x7fabb706df80> = re.search
+E           E                +    and   re.IGNORECASE = re.IGNORECASE
+E           E                +    and   re.MULTILINE = re.MULTILINE
+E           
+E           /tests/test_outputs.py:309: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_sheet_layout_and_rules[Current Capacity and Zones]
+E           FAILED ../tests/test_outputs.py::test_sheet_layout_and_rules[Relocated Bulk Storage]
+E           FAILED ../tests/test_outputs.py::test_summary_structure_and_required_statements
+E           3 failed, 2 passed in 0.17s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.38s ===============================

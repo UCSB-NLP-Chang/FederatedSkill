@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Added infusion-batch-analysis skill from u2 (reward=1.0), normalized decision string to library pattern. Library now has 3 skills covering B2/B3/B4. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "infusion-batch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py"
+  ],
+  "cost_usd": 0.794846
+}

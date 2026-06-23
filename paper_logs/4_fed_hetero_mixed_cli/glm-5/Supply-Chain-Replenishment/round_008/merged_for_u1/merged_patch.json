@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1. Applied target's validated patch (formula handling, date formats, pip guidance) + u0's R8 invariants (Required Delivery Date Variants, Rounding Applied column). See DECISIONS.md for rationale. Library validated, family complete.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-load-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "cost_usd": 0.8595800000000001
+}

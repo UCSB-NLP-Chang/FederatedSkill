@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.4,
+  "summary": "Adds a deterministic skill for cooler dispatch cycle analysis (10-day vs 20-day) to prevent manual calculation errors and schema mismatches that caused the verifier failure. Includes a Python script handling alias matching, site override resolution with fallback to defaults, and exact rounding/formatting.",
+  "upsert_paths": [
+    "cooler-dispatch-analysis/SKILL.md",
+    "cooler-dispatch-analysis/scripts/compute_cooler_dispatch.py"
+  ],
+  "delete_paths": []
+}

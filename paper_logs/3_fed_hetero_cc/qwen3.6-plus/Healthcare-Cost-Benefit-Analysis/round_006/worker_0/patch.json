@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.6,
+  "summary": "Adds a new skill for reagent kit policy analysis, capturing the exact workflow for comparing small vs bulk kit economics. Addresses the verifier failure caused by rounding numeric outputs in JSON by bundling a deterministic script that preserves raw floats, handles revision/versioned billing resolution, and enforces constant reagent cost logic.",
+  "upsert_paths": [
+    "reagent-kit-analysis/SKILL.md",
+    "reagent-kit-analysis/scripts/compute_reagent_kit.py"
+  ],
+  "delete_paths": []
+}

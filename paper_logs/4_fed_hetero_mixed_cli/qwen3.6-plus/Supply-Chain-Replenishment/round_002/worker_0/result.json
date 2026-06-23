@@ -1,0 +1,29 @@
+{
+    "id": "2c073c30-f6b2-4548-93e9-e723a2830152",
+    "started_at": "2026-05-23T22:55:26.821905",
+    "finished_at": "2026-05-23T22:57:32.965645",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "bakery_weekly_commit_gap__YbMiCwu"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

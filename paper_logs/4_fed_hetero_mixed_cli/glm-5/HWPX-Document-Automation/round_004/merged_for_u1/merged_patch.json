@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's SKILL.md (reward=1.0) with transformation patterns table + verification checklist, and absorbed u2's preprocessing reference file. Library: 1 skill (hwpx-template-fill) + 1 reference file. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/references/value-preprocessing.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "hwpx-template-fill/references/value-preprocessing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-fill/SKILL.md"
+  ],
+  "cost_usd": 1.9021230000000002
+}

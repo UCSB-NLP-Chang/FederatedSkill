@@ -1,0 +1,104 @@
+{
+    "id": "0ac9d2a6-fc44-45ac-bd48-b4943f1db7c6",
+    "task_name": "01-cloud-service-portfolio-diff",
+    "trial_name": "01-cloud-service-portfolio-diff__C5quGNn",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_000/worker_0/01-cloud-service-portfolio-diff__C5quGNn",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Cross-Format-Data-Reconciliation/01-cloud-service-portfolio-diff"
+    },
+    "source": "Cross-Format-Data-Reconciliation",
+    "task_checksum": "f6ff665c7ba6ffd4a8dd2afc3a38622977d5190b879c4632b790745d3b168926",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Cross-Format-Data-Reconciliation/01-cloud-service-portfolio-diff",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Cross-Format-Data-Reconciliation"
+        },
+        "trial_name": "01-cloud-service-portfolio-diff__C5quGNn",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_000/worker_0",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/worker_skills/u0"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "fe0be52f-f027-4b2a-905e-1fae2f66c46d"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 126578,
+        "n_cache_tokens": 82860,
+        "n_output_tokens": 2499,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-16T20:00:52.856907Z",
+    "finished_at": "2026-05-16T20:02:45.025795Z",
+    "environment_setup": {
+        "started_at": "2026-05-16T20:00:52.857987Z",
+        "finished_at": "2026-05-16T20:01:03.880953Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-16T20:01:03.881015Z",
+        "finished_at": "2026-05-16T20:01:05.631305Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-16T20:01:05.631404Z",
+        "finished_at": "2026-05-16T20:02:30.074148Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-16T20:02:30.077800Z",
+        "finished_at": "2026-05-16T20:02:32.276799Z"
+    }
+}

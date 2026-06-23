@@ -1,0 +1,12 @@
+{
+  "worker_id": "u0",
+  "summary": "R4 merge complete for u0 (qwen3.6-plus). Kept baseline unchanged \u2014 u0 achieved reward=1.0 in R3, R4 patches regressed to 0.889. No changes applied. See DECISIONS.md.",
+  "upsert_paths": [],
+  "delete_paths": [],
+  "provenance": {},
+  "conflicts": [
+    "pptx-xml-editing/SKILL.md",
+    "__task_update_failed__:RuntimeError:claude container timed out after 300s"
+  ],
+  "cost_usd": 3.185172
+}

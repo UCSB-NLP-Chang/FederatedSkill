@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5), Round 0. Applied target's reward=1.0 patch wholesale (expense-claims-validation skill with script and reference), merged u1's Excel-reading anti-pattern into SKILL.md. Library now has 1 umbrella skill for document fraud detection. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/fuzzy-matching-guide.md",
+    "expense-claims-validation/scripts/validate_claims.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/fuzzy-matching-guide.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "expense-claims-validation/scripts/validate_claims.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.7632350000000003
+}

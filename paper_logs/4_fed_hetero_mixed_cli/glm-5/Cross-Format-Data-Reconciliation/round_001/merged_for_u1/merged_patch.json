@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u2's comprehensive SKILL.md and compute_diff.py wholesale (reward=1.0). Kept dataset-diff naming (majority: u1+u2). Replaced complex diff_datasets.py with simpler compute_diff.py. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/scripts/compute_diff.py"
+  ],
+  "delete_paths": [
+    "dataset-diff/scripts/diff_datasets.py"
+  ],
+  "provenance": {
+    "dataset-diff/scripts/diff_datasets.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dataset-diff/scripts/compute_diff.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md"
+  ],
+  "cost_usd": 1.833339
+}

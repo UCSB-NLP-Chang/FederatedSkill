@@ -1,0 +1,29 @@
+{
+    "id": "205db267-20c4-47bd-8202-2d3f94477593",
+    "started_at": "2026-05-18T00:26:53.007641",
+    "finished_at": "2026-05-18T00:28:52.151903",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "03-retail-supply-category-diff__L5wmBox"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

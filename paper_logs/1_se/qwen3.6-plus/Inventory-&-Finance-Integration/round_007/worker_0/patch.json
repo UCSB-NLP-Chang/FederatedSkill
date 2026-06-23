@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated excel-inventory-planning skill to cover stochastic safety buffer calculations and fuel/refill planning variants observed in the trace. Added explicit formulas for Z-score buffers, adjusted shortfall, and critical refill dates, plus zero-burn guards. This prevents future agents from reinventing stochastic inventory math or mishandling zero-rate entities.",
+  "upsert_paths": [
+    "excel-inventory-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

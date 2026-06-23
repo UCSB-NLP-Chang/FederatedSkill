@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The agent successfully completed a utility bill extraction task, but the existing image-data-extraction skill lacked specific guidance for utility/bill documents. The trace revealed key challenges: (1) date format ambiguity requiring smart DD/MM vs MM/DD disambiguation, (2) multi-line keyword patterns where labels like 'TOTAL' and 'DUE' appear on separate lines, (3) specific bill keywords ('PAY THIS AMOUNT', 'CURRENT CHARGES') distinct from invoice patterns, and (4) template workbook preservation requirements. Adding utility-bill-specific patterns and workflow guidance to the existing skill will help future agents handle similar document types without rediscovering these patterns.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/utility-bill-patterns.md"
+  ],
+  "delete_paths": []
+}

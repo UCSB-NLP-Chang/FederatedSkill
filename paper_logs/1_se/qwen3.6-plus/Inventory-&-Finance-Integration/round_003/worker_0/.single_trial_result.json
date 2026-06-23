@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "new_task_9_datacenter_capacity_r__qLbrYnb",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-%26-Finance-Integration/round_003/worker_0/new_task_9_datacenter_capacity_r__qLbrYnb",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/round_003/worker_0/new_task_9_datacenter_capacity_r__qLbrYnb",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

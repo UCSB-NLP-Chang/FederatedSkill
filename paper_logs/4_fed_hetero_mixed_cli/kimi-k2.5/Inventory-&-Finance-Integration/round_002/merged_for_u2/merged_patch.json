@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2. Extended existing umbrella `excel-openpyxl-processing` with domain-specific calculation workflow from u1's verified patch (reward=1.0), keeping u2's proven venv approach. Added domain mapping, core workflow steps, boolean flags, and maintenance-parts invariants. Gap closed. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-openpyxl-processing/SKILL.md",
+    "excel-openpyxl-processing/references/code-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-openpyxl-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-openpyxl-processing/references/code-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.014428
+}

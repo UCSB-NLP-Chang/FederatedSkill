@@ -1,0 +1,12 @@
+{
+  "worker_id": "u1",
+  "reward": 0.25,
+  "summary": "The trace reveals a new capability pattern (process capability analysis with Wilson CI, CV ranking, monitoring plans) that differs from existing logistics/pipeline skills. The agent failed due to attempting scipy installation in an externally-managed environment and not having a reusable script. Creating a new skill with pure-numpy implementation prevents this failure mode.",
+  "upsert_paths": [
+    "process-capability-analysis/SKILL.md",
+    "process-capability-analysis/references/report_schema.md",
+    "process-capability-analysis/scripts/process_capability.py",
+    "process-capability-analysis/scripts/wilson_ci.py"
+  ],
+  "delete_paths": []
+}

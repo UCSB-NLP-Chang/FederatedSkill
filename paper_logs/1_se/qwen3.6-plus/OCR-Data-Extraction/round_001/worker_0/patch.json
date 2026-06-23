@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Adds a new skill for e-commerce order extraction that addresses the failure mode of skipping images and leaving duplicate rows blank. Includes a verification script to catch row count mismatches and null values before submission.",
+  "upsert_paths": [
+    "order-data-extraction/SKILL.md",
+    "order-data-extraction/scripts/verify_output.py"
+  ],
+  "delete_paths": []
+}

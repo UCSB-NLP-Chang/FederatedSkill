@@ -1,0 +1,55 @@
+--- a/excel-formula-population/SKILL.md
++++ b/excel-formula-population/SKILL.md
+@@ -15,11 +15,13 @@
+    - Prefer `INDEX/MATCH` over `VLOOKUP`.
+    - Use `SUMPRODUCT` for weighted calculations.
+    - **CRITICAL**: `openpyxl` strips spaces after commas and normalizes syntax. Write formulas *without* spaces after commas to match strict verifier string expectations.
+-4. **Write & Save**: Assign formulas to target cells. **Save directly to the required output path.** Do not modify the source file and copy it.
+-5. **Verify**:
++4. **Pre-Save Validation (MANDATORY)**:
++   - Run `scripts/check_unqualified.py <path> <sheet>` to automatically detect unqualified references. **Do not proceed if it fails.**
++   - Manually verify that all percentile calculations use `PERCENTILE(range,k)`, not `QUARTILE`.
++   - Run `scripts/verify_formulas.py <path> <sheet> <ranges>` to dump exact strings for final diff.
++5. **Write & Save**: Assign formulas to target cells. **Save directly to the required output path.** Do not modify the source file and copy it.
++6. **Final Verification**:
+    - Reload the saved workbook.
+-   - Run `scripts/verify_formulas.py` to dump exact formula strings.
+-   - **Unqualified Reference Scan**: Run a quick Python check on dumped formulas. Any cell coordinate not preceded by `SheetName!` will cause a strict string-match failure. Fix immediately.
+    - **String Match First**: Diff dumped strings against expected patterns. Check for: missing `$` locks, extra `$` locks, or `QUARTILE` vs `PERCENTILE` syntax.
+    - **Statistics Range Check**: Explicitly verify that `MIN`, `MAX`, `MEDIAN`, `AVERAGE`, `PERCENTILE`, and `QUARTILE` reference multi-cell ranges (e.g., `H35:H40`), not single cells.
+    - Count total formulas to match task expectations.
+
+--- /dev/null
++++ b/excel-formula-population/scripts/check_unqualified.py
+@@ -0,0 +1,31 @@
++#!/usr/bin/env python3
++"""Scan Excel formulas for unqualified cell references and fail if found."""
++import sys
++import re
++import openpyxl
++
++def check_unqualified(path, sheet_name):
++    wb = openpyxl.load_workbook(path, data_only=False)
++    ws = wb[sheet_name]
++    # Matches cell refs like A1, B$2, $C3, $D$4 that are NOT preceded by SheetName!
++    pattern = re.compile(r'(?<![A-Za-z0-9_!])(\$?[A-Z]+\$?\d+)(?![A-Za-z0-9_!])')
++    issues = []
++    for row in ws.iter_rows():
++        for cell in row:
++            if cell.value and isinstance(cell.value, str) and cell.value.startswith('='):
++                matches = pattern.findall(cell.value)
++                if matches:
++                    issues.append(f"{cell.coordinate}: {cell.value} -> Unqualified refs: {matches}")
++    if issues:
++        print("FAIL: Unqualified references detected. Fix immediately:")
++        for issue in issues:
++            print(f"  {issue}")
++        sys.exit(1)
++    else:
++        print("PASS: All references are fully qualified.")
++
++if __name__ == "__main__":
++    if len(sys.argv) != 3:
++        print("Usage: python check_unqualified.py <path> <sheet_name>")
++        sys.exit(1)
++    check_unqualified(sys.argv[1], sys.argv[2])

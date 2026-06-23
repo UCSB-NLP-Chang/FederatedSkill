@@ -1,0 +1,32 @@
+{
+  "worker_id": "u2",
+  "summary": "Round 0 merge complete for u2 (kimi-k2.5). Built initial library with 1 umbrella skill `deferred-revenue-rollforward` based on target's correct formula pattern, enhanced with explicit anti-patterns and task_memory findings. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/rollforward_anatomy.md",
+    "deferred-revenue-rollforward/scripts/build_rollforward.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "deferred-revenue-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "deferred-revenue-rollforward/scripts/build_rollforward.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "deferred-revenue-rollforward/references/rollforward_anatomy.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/scripts/build_rollforward.py"
+  ],
+  "cost_usd": 2.2083222
+}

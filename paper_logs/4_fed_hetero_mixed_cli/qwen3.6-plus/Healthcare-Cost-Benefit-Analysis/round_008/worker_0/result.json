@@ -1,0 +1,29 @@
+{
+    "id": "58ea822c-f8fd-4bce-b84f-c647f8195218",
+    "started_at": "2026-05-24T06:47:04.671864",
+    "finished_at": "2026-05-24T06:51:06.892145",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Healthcare-Cost-Benefit-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_diagpanel_14v28__t3Susht"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

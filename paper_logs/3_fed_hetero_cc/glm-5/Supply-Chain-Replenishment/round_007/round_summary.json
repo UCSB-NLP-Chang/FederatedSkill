@@ -1,0 +1,30 @@
+{
+  "round_idx": 7,
+  "assignments": [
+    [
+      "u0",
+      "household_route_tracker_refresh"
+    ],
+    [
+      "u1",
+      "household_route_tracker_refresh"
+    ],
+    [
+      "u2",
+      "household_route_tracker_refresh"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1508.3387973308563
+}

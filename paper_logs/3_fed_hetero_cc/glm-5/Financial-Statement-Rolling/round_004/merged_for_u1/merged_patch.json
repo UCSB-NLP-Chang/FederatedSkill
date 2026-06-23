@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged project-cost-rollforward variant support into the existing deferred-revenue-rollforward skill, consolidating u0's nested JSON/deduplication details and u2's variant reference & formula warnings into a single canonical skill directory to avoid duplication and maximize utility.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/project_cost_variant.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "deferred-revenue-rollforward/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.0
+    ],
+    "deferred-revenue-rollforward/references/project_cost_variant.md": [
+      "upsert",
+      "llm_merge:top=u2",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

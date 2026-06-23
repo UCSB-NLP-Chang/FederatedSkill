@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.6,
+  "summary": "The task followed the existing skill workflow correctly but failed verification for unclear reasons. Adding trailer detention audit as a documented variant with its specific computed column patterns, plus a troubleshooting note about Python virtual environments in managed systems.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md",
+    "spreadsheet-audit-reporting/references/computed-column-examples.md"
+  ],
+  "delete_paths": []
+}

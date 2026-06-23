@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.4,
+  "summary": "The agent failed the verifier despite passing self-validation on a multi-scenario production planning task. The existing production-planning skill was too specific to a 2-product server provisioning example. Updated the skill to generalize column schemas for N products, add merged header guidance, handle regional holidays, support cumulative formulas with initial values, and emphasize external verifier cross-checking over self-validation.",
+  "upsert_paths": [
+    "production-planning/SKILL.md",
+    "production-planning/references/scenario_templates.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "8f553436-6176-4677-8ba3-659eaa79fa94",
+    "started_at": "2026-05-22T00:38:44.033571",
+    "finished_at": "2026-05-22T00:41:13.113973",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__HWPX-Document-Automation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "hwpx-supplier-contact-sheet__tvAx6mZ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

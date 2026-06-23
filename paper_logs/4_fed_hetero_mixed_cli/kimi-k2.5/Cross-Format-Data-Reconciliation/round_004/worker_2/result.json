@@ -1,0 +1,29 @@
+{
+    "id": "00e96b3d-1791-48e9-b261-a70e67010428",
+    "started_at": "2026-05-18T00:57:31.383528",
+    "finished_at": "2026-05-18T00:59:26.466493",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "05-datacenter-hardware-registry__GdTBw6n"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

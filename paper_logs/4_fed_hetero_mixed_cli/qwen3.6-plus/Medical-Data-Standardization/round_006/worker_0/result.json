@@ -1,0 +1,29 @@
+{
+    "id": "bd1f3b07-cdf1-4019-8ebc-83031bd6bd3c",
+    "started_at": "2026-05-18T02:03:24.203066",
+    "finished_at": "2026-05-18T02:05:32.861865",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "respiratory-panel-json-harmoniza__WTBVoxC"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

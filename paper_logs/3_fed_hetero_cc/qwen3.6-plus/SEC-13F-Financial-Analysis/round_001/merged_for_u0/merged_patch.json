@@ -1,0 +1,37 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R1. Synthesized SKILL.md with STOP-checkpoint for threshold/classification enforcement, added class_breakdown.py script for B2 tasks, added toc-patterns.md reference, enhanced normalization-rules.md with semantic sanity-check. See DECISIONS.md for full changelog.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md",
+    "sec-13f-fund-analysis/references/toc-patterns.md",
+    "sec-13f-fund-analysis/scripts/class_breakdown.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/references/toc-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-fund-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-fund-analysis/scripts/class_breakdown.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.5563005
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated ocr-structured-data to handle robust multi-line keyword matching (filtering blank lines), explicit amount keyword priority with distractor avoidance, and Excel template preservation workflow. Captures lessons from utility bill extraction where blank-line splits caused initial failures.",
+  "upsert_paths": [
+    "ocr-structured-data/SKILL.md"
+  ],
+  "delete_paths": []
+}

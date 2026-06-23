@@ -1,0 +1,30 @@
+{
+  "round_idx": 7,
+  "assignments": [
+    [
+      "u0",
+      "08_construction_union_model"
+    ],
+    [
+      "u1",
+      "08_construction_union_model"
+    ],
+    [
+      "u2",
+      "08_construction_union_model"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 0.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1801.7793672084808
+}

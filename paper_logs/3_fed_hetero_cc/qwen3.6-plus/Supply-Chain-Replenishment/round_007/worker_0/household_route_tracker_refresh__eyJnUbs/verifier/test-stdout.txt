@@ -1,0 +1,42 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_script_checks FAILED                [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_legacy_script_checks ___________________________
+
+    def test_legacy_script_checks() -> None:
+        local_script = Path(__file__).with_name("test_outputs.py")
+        harness_script = Path("/tests/test_outputs.py")
+        script = harness_script if harness_script.exists() else local_script
+    
+        result = subprocess.run(
+            [sys.executable, str(script)],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: 
+E           Traceback (most recent call last):
+E             File "/tests/test_outputs.py", line 247, in <module>
+E               main()
+E             File "/tests/test_outputs.py", line 242, in main
+E               compare(expected, actual)
+E             File "/tests/test_outputs.py", line 209, in compare
+E               assert_approx(av, ev, 1e-4, f'detail {key} {field}')
+E             File "/tests/test_outputs.py", line 68, in assert_approx
+E               assert abs(a - expected) <= tolerance, f'{msg}: actual={a}, expected={expected}'
+E                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AssertionError: detail ('R-300', 'HH-EPS') Delivered_Days_On_Hand: actual=15.71, expected=15.7143
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_script_checks - AssertionError: 
+============================== 1 failed in 0.16s ===============================

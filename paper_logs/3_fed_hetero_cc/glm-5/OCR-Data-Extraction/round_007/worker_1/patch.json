@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent failed by formatting amounts as strings with 2 decimal places instead of raw floats, violating existing skill guidance. This patch adds case-settlement-packets as a new sub-task variant with document type filtering, case-based aggregation, and reinforces the critical anti-pattern about never formatting numeric values as strings.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/case-settlement-patterns.md"
+  ],
+  "delete_paths": []
+}

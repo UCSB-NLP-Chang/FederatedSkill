@@ -1,0 +1,42 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Renamed skill to supply-chain-coverage-analysis (peer alignment), extended with B5 variant in Known Invariants, added CLI script refresh_route_tracker.py adapted from u2's function-based script. See DECISIONS.md.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md",
+    "supply-chain-coverage-analysis/scripts/build_replenishment.py",
+    "supply-chain-coverage-analysis/scripts/refresh_route_tracker.py"
+  ],
+  "delete_paths": [
+    "excel-inventory-coverage/SKILL.md",
+    "excel-inventory-coverage/scripts/build_replenishment.py"
+  ],
+  "provenance": {
+    "excel-inventory-coverage/scripts/build_replenishment.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-inventory-coverage/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "supply-chain-coverage-analysis/scripts/build_replenishment.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "supply-chain-coverage-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "supply-chain-coverage-analysis/scripts/refresh_route_tracker.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.401059
+}

@@ -1,0 +1,33 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 Applied u0's validated queue-capacity-planning patch (reward=1.0) wholesale. Fixed critical baseline issue: removed `round(end_queue, 2)` violating Output Precision rule. Added Manufacturing domain config and configurable headers/summary_template. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "queue-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "queue-capacity-planning/references/simulation_rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "queue-capacity-planning/scripts/queue_simulator.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "cost_usd": 0.632746
+}

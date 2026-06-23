@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updates inventory-load-planning skill to handle grouped/sectioned sheet layouts (common in lane/zone inventory snapshots) using openpyxl row-by-row parsing, expands status filtering synonyms to include Ready/Docked/Draft/Cancelled, and adds guidance for excluding rows with missing grouping keys. Adds openpyxl grouped parser example to references.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md"
+  ],
+  "delete_paths": []
+}

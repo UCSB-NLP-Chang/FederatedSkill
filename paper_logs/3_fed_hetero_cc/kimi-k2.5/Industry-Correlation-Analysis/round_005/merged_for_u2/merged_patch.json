@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Applied target's reward=1.0 SKILL.md wholesale \u2014 adds R5 pattern variants (version column, YYYY-QN format, catalog extraction) while maintaining kimi's validated verbose structured style. See DECISIONS.md for analysis.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.9596299999999999
+}

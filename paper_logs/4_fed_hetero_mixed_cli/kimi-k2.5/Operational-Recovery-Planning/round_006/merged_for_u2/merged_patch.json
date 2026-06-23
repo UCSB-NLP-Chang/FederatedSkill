@@ -1,0 +1,32 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R6 on Operational-Recovery-Planning. Merged u0's shift-day category fix, u1's verification gate, and u2's Harvest/Ag mapping into 131-line SKILL.md (token-limit compliant). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ],
+    "production-capacity-planning/references/constraint-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ],
+    "production-capacity-planning/references/variant-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md"
+  ],
+  "cost_usd": 0.7801458
+}

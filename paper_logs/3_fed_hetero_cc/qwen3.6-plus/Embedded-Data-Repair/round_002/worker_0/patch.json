@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated edit-embedded-excel skill to include slide note extraction workflow and reinforce the read-all-then-write-new repackaging pattern after observing a ZipFile.delete failure in the trace. Minor wording improvements for clarity and robustness.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "delete_paths": []
+}

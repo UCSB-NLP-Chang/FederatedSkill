@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R8. Applied u1's reward=1.0 structure with \"Critical First Step\" at top (addresses persistent prompt-skipping gap), added JSON handling from u0, corrected chemical invariants to verified values OT=10*(days-4) per task_memory. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 0.44858790000000004
+}

@@ -1,0 +1,21 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Synthesized rebate-rollforward/SKILL.md from all three worker patches (u0+u1+u2) to address three distinct failure modes: (1) u2's STOP decision block for pattern confusion, (2) u1's WRONG/RIGHT verification table for Ending Balance formulas, (3) u0's SUM formula column letter anti-pattern. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "rebate-rollforward/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "rebate-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "rebate-rollforward/SKILL.md",
+    "__skill_md_invalid__:project-cost-rollforward/SKILL.md: bad YAML (ScannerError)",
+    "__skill_md_invalid__:rebate-rollforward/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 4.05333
+}

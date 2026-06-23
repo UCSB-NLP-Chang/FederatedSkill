@@ -1,0 +1,109 @@
+{
+    "id": "f98ddf7a-97ca-4f1e-9b57-49acffa7bc6e",
+    "task_name": "task_family_invoice_images",
+    "trial_name": "task_family_invoice_images__5Cm24Yn",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/round_003/worker_2/task_family_invoice_images__5Cm24Yn",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/OCR-Data-Extraction/task_family_invoice_images"
+    },
+    "source": "OCR-Data-Extraction",
+    "task_checksum": "a3a76976116c16fa49eed331a2cff9e27eb6fc296882e5460f2f5ea88add72e4",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/OCR-Data-Extraction/task_family_invoice_images",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "OCR-Data-Extraction"
+        },
+        "trial_name": "task_family_invoice_images__5Cm24Yn",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/round_003/worker_2",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallKimiCli",
+            "model_name": "openai/kimi-k2.5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_key": "$LKEAP_KEY",
+                "base_url": "https://api.lkeap.cloud.tencent.com/plan/v3"
+            },
+            "env": {
+                "OPENAI_API_KEY": "<REDACTED>",
+                "OPENAI_BASE_URL": "https://api.lkeap.cloud.tencent.com/plan/v3"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u2"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "90393f37-7579-4aa9-97f6-df94202a794b"
+    },
+    "agent_info": {
+        "name": "kimi-cli",
+        "version": "\u001b[4m>>>> Executing external compose provider \"/usr/libexec/docker/cli-plugins/docker-compose\". Please see podman-compose(1) for how to disable this message. <<<<\n\n\u001b[0mkimi, version 1.39.0",
+        "model_info": {
+            "name": "kimi-k2.5",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 185909,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 5769,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-18T05:21:44.400755Z",
+    "finished_at": "2026-05-18T05:25:11.434466Z",
+    "environment_setup": {
+        "started_at": "2026-05-18T05:21:44.402293Z",
+        "finished_at": "2026-05-18T05:21:47.974518Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-18T05:21:47.974560Z",
+        "finished_at": "2026-05-18T05:21:48.650244Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-18T05:21:48.650326Z",
+        "finished_at": "2026-05-18T05:24:58.074765Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-18T05:24:58.103085Z",
+        "finished_at": "2026-05-18T05:24:59.540596Z"
+    }
+}

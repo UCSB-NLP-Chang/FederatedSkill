@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated order-data-extraction skill to generalize reference/roster merging, add multi-line value extraction patterns, and improve the verification script. Captures lessons from travel claim extraction task regarding handling unmatched records, split label/value lines, and robust schema validation.",
+  "upsert_paths": [
+    "order-data-extraction/SKILL.md",
+    "order-data-extraction/scripts/verify_output.py"
+  ],
+  "delete_paths": []
+}

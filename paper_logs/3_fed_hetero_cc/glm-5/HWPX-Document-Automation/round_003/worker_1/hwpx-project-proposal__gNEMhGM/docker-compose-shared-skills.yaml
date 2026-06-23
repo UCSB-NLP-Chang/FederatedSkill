@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation:/root/.config/agent/skills

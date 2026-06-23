@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_logistics_chain_03__9vxyEwB",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/DMAIC-Quality-Analysis/round_007/worker_0/harbor_logistics_chain_03__9vxyEwB",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/DMAIC-Quality-Analysis/round_007/worker_0/harbor_logistics_chain_03__9vxyEwB",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

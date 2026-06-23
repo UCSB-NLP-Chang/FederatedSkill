@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Synthesized u2's pre-flight checklist structure with u0's broad test discovery commands and u1's pre-completion checklist. Added mandatory gate enforcement for pytest and spec contradiction decision rules. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/grading-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.9
+    ],
+    "excel-workbook-modeling/references/grading-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/grading-patterns.md"
+  ],
+  "cost_usd": 2.9931419999999997
+}

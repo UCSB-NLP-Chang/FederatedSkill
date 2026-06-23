@@ -1,0 +1,27 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Absorbed u2's `archive-photo-caption-cleanup` skill (correct Archive Sheet pattern). Updated `pptx-manipulation` with run-level formatting emphasis from u0 and mixed caption states handling from u1. Library now has 2 skills. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "archive-photo-caption-cleanup/SKILL.md",
+    "pptx-manipulation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "archive-photo-caption-cleanup/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.7777777777777778
+    ],
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.7777777777777778
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md",
+    "__skill_md_invalid__:pptx-manipulation/SKILL.md: bad YAML (ScannerError)",
+    "__skill_md_invalid__:archive-photo-caption-cleanup/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 4.714100999999999
+}

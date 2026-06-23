@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.75,
+  "summary": "The trace reveals a pattern where multiple embedded workbooks exist (Archive vs Live) and the agent must identify the correct target. The existing skill covers most patterns but lacks guidance on: (1) handling multiple embeddings with similar names, (2) reading external metadata files that specify which embedding is active, and (3) explicit verification that the correct workbook was selected. Adding these patterns will help future agents avoid modifying the wrong workbook.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": []
+}

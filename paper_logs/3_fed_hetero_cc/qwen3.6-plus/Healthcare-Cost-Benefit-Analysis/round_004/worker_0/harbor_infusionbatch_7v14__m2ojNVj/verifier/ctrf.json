@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779069830.1104164,
+            "stop": 1779069830.304282
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.17448760196566582,
+                "start": 1779069830.1176448,
+                "stop": 1779069830.3041723,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ....F                                                                    [100%]\nE           =================================== FAILURES ===================================\nE           __________________________ test_summary_requirements ___________________________\nE           \nE               def test_summary_requirements():\nE                   data = load_output()\nE                   text = OUTPUT_SUMMARY.read_text(encoding='utf-8')\nE                   lines = [line for line in text.splitlines() if line.strip()]\nE                   assert 4 <= len(lines) <= 8\nE                   decision = data['recommendation']['decision']\nE                   normalized = decision.replace('_', ' ').lower()\nE                   assert (decision in text) or (normalized in text.lower()), f\"Decision '{decision}' (or '{normalized}') not found in summary\"\nE                   for value in (data['totals']['total_annual_margin_7_day_usd'], data['totals']['total_annual_margin_14_day_usd'], data['totals']['absolute_total_margin_difference_usd']):\nE           >           assert f'{value:,.2f}' in text\nE           E           AssertionError: assert '-455,619.31' in '# Infusion Batch Analysis: 7-Day vs 14-Day Delivery\\n\\n- **Total 7-day annual margin:** -$455,619.31\\n- **Total 14-da...el improves annual margin by $11,581.70 across 6 in-scope therapies, which falls below the $15,000 switch threshold.\\n'\nE           \nE           /tests/test_outputs.py:165: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_summary_requirements - AssertionError: ...\nE           1 failed, 4 passed in 0.03s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

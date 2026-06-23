@@ -1,0 +1,29 @@
+{
+    "id": "7aa13e4e-59b8-48e0-93b0-8e6560f7e002",
+    "started_at": "2026-05-17T20:23:04.731572",
+    "finished_at": "2026-05-17T20:24:50.772863",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "speaker-honorarium-review__ZVdSq3F"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

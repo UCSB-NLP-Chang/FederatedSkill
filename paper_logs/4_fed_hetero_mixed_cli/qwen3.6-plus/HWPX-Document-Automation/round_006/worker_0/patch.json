@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Extended hwpx-template-fill skill to cover direct text replacement (non-placeholder) scenarios, which are common when updating existing HWPX documents. Added a robust script for exact string mapping that safely handles <hp:run> splitting and automatic linesegarray removal, plus updated SKILL.md with decision rules and anti-patterns for this workflow.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/scripts/update_hwpx_direct.py"
+  ],
+  "delete_paths": []
+}

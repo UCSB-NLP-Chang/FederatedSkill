@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's verified SKILL.md (reward=1.0) - comprehensive structure with Core Concepts, Deterministic Policy pseudo-code, and Pitfalls table proven for kimi-k2.5. Added Period vs Week terminology and expanded capacity rules addressing peer failures. Kept baseline scripts/references unchanged. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 0.45789179999999996
+}

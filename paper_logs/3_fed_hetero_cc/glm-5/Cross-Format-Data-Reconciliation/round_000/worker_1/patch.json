@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "Creates a data-reconciliation skill to help future agents compare datasets from heterogeneous sources (PDF, Excel, CSV, JSON). Captures lessons from this task: binary Excel requires pandas/openpyxl (not Read tool), numpy types need custom JSON encoder, and structured diff output format.",
+  "upsert_paths": [
+    "data-reconciliation/SKILL.md",
+    "data-reconciliation/scripts/diff_datasets.py"
+  ],
+  "delete_paths": []
+}

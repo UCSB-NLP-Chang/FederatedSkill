@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's SKILL.md (regex-style for glm-5) + integrated u0's lxml qn() pattern and dimension persistence pitfall. Applied u1's pptx-xml-schema.md reference update (startAt auto-numbering docs). Rejected u2's contributions (reward=0.667, false-positive verification flagged in task_memory). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/pptx-xml-schema.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/references/pptx-xml-schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "cost_usd": 1.6041906000000004
+}

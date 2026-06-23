@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "R0 merge complete for u1. Applied target's own reward=1.0 patch wholesale (hwpx-document-processing). See DECISIONS.md.",
+  "upsert_paths": [
+    "hwpx-document-processing/SKILL.md",
+    "hwpx-document-processing/scripts/hwpx_fill_template.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-document-processing/scripts/hwpx_fill_template.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "hwpx-document-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.9389120000000002
+}

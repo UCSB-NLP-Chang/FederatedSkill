@@ -1,0 +1,37 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.0.3"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779081230946,
+            "stop": 1779081231609
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 656,
+                "start": 1779081230953,
+                "stop": 1779081231609,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .....F........                                                           [100%]\nE           =================================== FAILURES ===================================\nE           ______________________ TestOutput.test_ranges[Uric_Acid] _______________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7fd98a870830>, col = 'Uric_Acid'\nE           \nE               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)\nE               def test_ranges(self, col):\nE                   lo = REFERENCE[col]['min']\nE                   hi = REFERENCE[col]['max']\nE           >       assert all(in_range(v, lo, hi) for v in self.df[col])\nE           E       assert False\nE           E        +  where False = all(<generator object TestOutput.test_ranges.<locals>.<genexpr> at 0x7fd933d7bb50>)\nE           \nE           /tests/test_outputs.py:42: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Uric_Acid] - assert ...\nE           1 failed, 13 passed in 0.35s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "id": "46bb3f51-b07b-4a94-9355-b96e4c2d1a7d",
+    "task_name": "harbor_promo_register_audit",
+    "trial_name": "harbor_promo_register_audit__xQ63kRX",
+    "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Distribution-Center-Auditing/harbor_promo_register_audit__xQ63kRX",
+    "task_id": {
+        "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Distribution-Center-Auditing/harbor_promo_register_audit"
+    },
+    "source": "Distribution-Center-Auditing",
+    "task_checksum": "c8cc65a831352faecc95c3f8c90d80d0d42bb74250dc2b3a5fb36c6edbd11633",
+    "config": {
+        "task": {
+            "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Distribution-Center-Auditing/harbor_promo_register_audit",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Distribution-Center-Auditing"
+        },
+        "trial_name": "harbor_promo_register_audit__xQ63kRX",
+        "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Distribution-Center-Auditing",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "qwen3.6-plus",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "804416f4-b896-4d9a-857d-b75c16433755"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-10T10:45:19.405049Z",
+    "finished_at": "2026-05-10T10:48:41.645085Z",
+    "environment_setup": {
+        "started_at": "2026-05-10T10:45:19.405890Z",
+        "finished_at": "2026-05-10T10:45:20.324095Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-10T10:45:20.324106Z",
+        "finished_at": "2026-05-10T10:45:20.586729Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-10T10:45:20.586778Z",
+        "finished_at": "2026-05-10T10:48:30.385437Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-10T10:48:30.385970Z",
+        "finished_at": "2026-05-10T10:48:31.119498Z"
+    }
+}

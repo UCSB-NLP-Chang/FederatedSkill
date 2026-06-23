@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.4.1
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ...F..........                                                           [100%]
+E           =================================== FAILURES ===================================
+E           ____________________________ TestOutput.test_format ____________________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa936f63290>
+E           
+E               def test_format(self):
+E                   pat = re.compile(r'^-?\d+\.\d{2}$')
+E                   for c in EXPECTED_COLUMNS:
+E                       for v in self.df[c]:
+E           >               assert pat.match(str(v))
+E           E               AssertionError: assert None
+E           E                +  where None = <built-in method match of re.Pattern object at 0x7fa98e2ea460>('9.9')
+E           E                +    where <built-in method match of re.Pattern object at 0x7fa98e2ea460> = re.compile('^-?\\d+\\.\\d{2}$').match
+E           E                +    and   '9.9' = str('9.9')
+E           
+E           /tests/test_outputs.py:28: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestOutput::test_format - AssertionError: as...
+E           1 failed, 13 passed in 0.29s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.59s ===============================

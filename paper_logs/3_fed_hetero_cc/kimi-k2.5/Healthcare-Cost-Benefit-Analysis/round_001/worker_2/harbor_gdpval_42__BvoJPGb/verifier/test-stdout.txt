@@ -1,0 +1,109 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ...FF.F                                                                  [100%]
+E           =================================== FAILURES ===================================
+E           _______________________ test_per_medication_calculations _______________________
+E           
+E               def test_per_medication_calculations():
+E                   data = load_output()
+E                   actual = {row["medication"]: row for row in data["medications"]}
+E                   expected = expected_metrics()
+E               
+E                   required_fields = [
+E                       "medication",
+E                       "price_per_1000_tablets_usd",
+E                       "vial_size_drams",
+E                       "vial_price_usd",
+E                       "reimbursement_per_fill_300_patients_usd",
+E                       "annual_drug_cost_90_day_usd",
+E                       "annual_drug_cost_100_day_usd",
+E                       "annual_supply_cost_90_day_usd",
+E                       "annual_supply_cost_100_day_usd",
+E                       "annual_reimbursement_90_day_usd",
+E                       "annual_reimbursement_100_day_usd",
+E                       "annual_revenue_90_day_usd",
+E                       "annual_revenue_100_day_usd",
+E                       "annual_revenue_difference_100_minus_90_usd",
+E                   ]
+E               
+E                   for med, exp in expected.items():
+E                       assert med in actual, f"Missing medication in output: {med}"
+E                       row = actual[med]
+E               
+E                       for field in required_fields:
+E                           assert field in row, f"{med}: missing field {field}"
+E               
+E                       assert row["vial_size_drams"] == exp["vial_size_drams"]
+E               
+E                       numeric_fields = [f for f in required_fields if f not in ("medication", "vial_size_drams")]
+E                       for field in numeric_fields:
+E           >               assert close(row[field], exp[field]), (
+E                               f"{med} {field} mismatch: actual={row[field]} expected={exp[field]}"
+E                           )
+E           E               AssertionError: Losartan 50mg annual_drug_cost_90_day_usd mismatch: actual=2048.4 expected=2049.84
+E           E               assert False
+E           E                +  where False = close(2048.4, 2049.84)
+E           
+E           /tests/test_outputs.py:168: AssertionError
+E           _______________________ test_totals_consistent_with_rows _______________________
+E           
+E               def test_totals_consistent_with_rows():
+E                   data = load_output()
+E                   meds = data["medications"]
+E                   totals = data["totals"]
+E               
+E                   sum_90 = round2(sum(m["annual_revenue_90_day_usd"] for m in meds))
+E                   sum_100 = round2(sum(m["annual_revenue_100_day_usd"] for m in meds))
+E                   sum_diff = round2(sum(m["annual_revenue_difference_100_minus_90_usd"] for m in meds))
+E                   abs_diff = round2(abs(sum_diff))
+E               
+E           >       assert close(totals["total_annual_revenue_90_day_usd"], sum_90)
+E           E       assert False
+E           E        +  where False = close(71268.32, 72768.32)
+E           
+E           /tests/test_outputs.py:183: AssertionError
+E           ______________________ test_summary_contains_key_outputs _______________________
+E           
+E               def test_summary_contains_key_outputs():
+E                   data = load_output()
+E                   summary = SUMMARY_PATH.read_text(encoding="utf-8")
+E                   lines = [line for line in summary.strip().splitlines() if line.strip()]
+E               
+E                   assert 4 <= len(lines) <= 8, "Summary must be 4 to 8 non-empty lines"
+E           >       assert "Decision:" in summary
+E           E       AssertionError: assert 'Decision:' in '## Refill Policy Analysis Summary\n\n- **Total 90-day annual revenue**: $71,268.32\n- **Total 100-day annual revenue*...erates higher revenue due to an additional fill per year per patient, despite slightly higher drug and supply costs.\n'
+E           
+E           /tests/test_outputs.py:209: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_per_medication_calculations - Assertion...
+E           FAILED ../tests/test_outputs.py::test_totals_consistent_with_rows - assert False
+E           FAILED ../tests/test_outputs.py::test_summary_contains_key_outputs - Assertio...
+E           3 failed, 4 passed in 0.04s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.21s ===============================

@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.6,
+  "summary": "Created new diagpanel-dispatch-analysis skill for diagnostic panel dispatch cycle economics (14-day vs 28-day). Captures the distinct workflow: service_clusters\u2192panels manifest, analysis_mode filtering, holdout exclusion, contract terms with effective_week selection, network adjustment payments, per-run shipper costs (not per-lab), and 364-day year for exact integer runs. Includes bundled compute script to prevent brittle inline Python.",
+  "upsert_paths": [
+    "diagpanel-dispatch-analysis/SKILL.md",
+    "diagpanel-dispatch-analysis/references/variant-mappings.md",
+    "diagpanel-dispatch-analysis/scripts/compute_diagpanel.py"
+  ],
+  "delete_paths": []
+}

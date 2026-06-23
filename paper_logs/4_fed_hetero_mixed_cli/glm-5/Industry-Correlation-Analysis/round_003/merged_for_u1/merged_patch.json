@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Round 3 merge complete. Applied target's comprehensive SKILL.md + excel-year-parsing.md wholesale; merged u0's `lamb` vs `lam` anti-pattern into anti-patterns section. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-correlation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "economic-time-series-correlation/references/excel-year-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-correlation/SKILL.md"
+  ],
+  "cost_usd": 0.461668
+}

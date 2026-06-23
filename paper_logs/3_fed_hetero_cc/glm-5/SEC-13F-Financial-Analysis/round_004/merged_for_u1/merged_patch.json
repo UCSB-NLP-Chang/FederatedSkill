@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Synthesized u0's B5 workflow + baseline B4 into umbrella skill with correct B4/B5 numbering. Removed qwen-specific STOP-checkpoint (glm-5 validated without it). u2's separate skill rejected (reward=0.5, wrong architecture). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.7362543
+}

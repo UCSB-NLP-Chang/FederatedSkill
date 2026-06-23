@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "employee-compensation-pivot__Tf3yeiK",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/round_005/worker_1/employee-compensation-pivot__Tf3yeiK",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/round_005/worker_1/employee-compensation-pivot__Tf3yeiK",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

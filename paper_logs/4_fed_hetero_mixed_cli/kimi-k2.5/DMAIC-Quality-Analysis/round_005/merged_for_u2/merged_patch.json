@@ -1,0 +1,41 @@
+{
+  "worker_id": "u2",
+  "summary": "R5 merge complete for u2: Added healthcare-quality-analysis skill (B2), fixed u2's rounding violations in script, applied u1's scipy pre-check to DMAIC. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "healthcare-quality-analysis/SKILL.md",
+    "healthcare-quality-analysis/assets/brief_template.md",
+    "healthcare-quality-analysis/references/output_schema.md",
+    "healthcare-quality-analysis/scripts/compute_healthcare_metrics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.375
+    ],
+    "healthcare-quality-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.375
+    ],
+    "healthcare-quality-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.375
+    ],
+    "healthcare-quality-analysis/scripts/compute_healthcare_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "healthcare-quality-analysis/assets/brief_template.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.375
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 5.063325000000001
+}

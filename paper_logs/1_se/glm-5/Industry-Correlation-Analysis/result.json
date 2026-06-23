@@ -1,0 +1,36 @@
+{
+    "id": "8385f62f-d141-4428-94fa-379bf9828bf2",
+    "started_at": "2026-04-26T19:07:29.885393",
+    "finished_at": "2026-04-26T19:39:54.029749",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Industry-Correlation-Analysis": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-service-hospitality-correla__NMqihhE",
+                            "econ-equipment-software-correlat__hefutCC",
+                            "econ-broadcasting-advertising-co__ERWKez7",
+                            "econ-housing-materials-correlati__sFVLEMW",
+                            "econ-utilities-telecom-correlati__rvocuLD",
+                            "econ-logistics-warehousing-corre__YnHeAnx",
+                            "econ-wholesale-packaging-correla__HN4nDYr",
+                            "econ-coldchain-lastmile-correlat__MAzBoLt"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

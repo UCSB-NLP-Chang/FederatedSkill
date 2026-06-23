@@ -1,0 +1,29 @@
+{
+    "id": "378a6302-71c0-4025-97cb-80b6bb1d1f77",
+    "started_at": "2026-05-19T16:15:37.326363",
+    "finished_at": "2026-05-19T16:18:51.569509",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__SEC-13F-Financial-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "existing-brief-refresh__5HdG7NQ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

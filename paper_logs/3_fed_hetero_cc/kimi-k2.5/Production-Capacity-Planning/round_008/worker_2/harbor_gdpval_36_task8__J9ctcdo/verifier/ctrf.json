@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779433075.9368036,
+            "stop": 1779433076.2434638
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.28722161427140236,
+                "start": 1779433075.942807,
+                "stop": 1779433076.243355,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: F.                                                                       [100%]\nE           =================================== FAILURES ===================================\nE           __________________________ test_plan_math_and_policy ___________________________\nE           \nE               def test_plan_math_and_policy():\nE                   ref_demands = load_reference_demands()\nE                   rows = load_plan_rows()\nE               \nE                   expected_phases = list(range(PHASE_START, PHASE_END + 1))\nE                   actual_phases = [r[0] for r in rows]\nE                   assert actual_phases == expected_phases, \"Phases must be continuous from 10 to 58 with no gaps\"\nE               \nE                   calc_start = INITIAL_PHASE10_TOTAL - ref_demands[PHASE_START]\nE                   prev_end = None\nE                   for idx, (phase, days, demand, capacity, start_past_due, end_backlog_buffer, overtime) in enumerate(rows):\nE                       assert days in {4, 5, 6}, f\"Phase {phase}: days must be one of 4/5/6\"\nE               \nE                       # Demand must match reference data (first valid occurrence deduplicated).\nE                       assert abs(demand - ref_demands[phase]) <= 0.01, (\nE                           f\"Phase {phase}: demand {demand} does not match reference {ref_demands[phase]}\"\nE                       )\nE               \nE                       # Phase 10 initial condition.\nE                       if phase == PHASE_START:\nE           >               assert abs(start_past_due + demand - INITIAL_PHASE10_TOTAL) <= 0.01, (\nE                               \"Phase 10 must satisfy Start of Phase Past Due + Scheduled Demand = 1453.06\"\nE                           )\nE           E               AssertionError: Phase 10 must satisfy Start of Phase Past Due + Scheduled Demand = 1453.06\nE           E               assert 253.05999999999995 <= 0.01\nE           E                +  where 253.05999999999995 = abs(((1453.06 + 253.06) - 1453.06))\nE           \nE           /tests/test_outputs.py:116: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_plan_math_and_policy - AssertionError: ...\nE           1 failed, 1 passed in 0.11s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

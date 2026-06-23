@@ -1,0 +1,29 @@
+{
+    "id": "97aebecb-7915-4ff1-a057-cd4a2283ad11",
+    "started_at": "2026-05-23T23:28:56.030446",
+    "finished_at": "2026-05-23T23:32:56.670404",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "clinic_branch_transfer_gap__xWAXveV"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

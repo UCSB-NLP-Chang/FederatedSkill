@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "DONE \u2014 R3 merge for u1 complete. See DECISIONS.md for details. Added financial-reconciliation skill for B2 gap (synthesized from u0+u1 patches + rollforward formula constraints). Kept existing B1 skill unchanged.",
+  "upsert_paths": [
+    "financial-reconciliation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.763133
+}

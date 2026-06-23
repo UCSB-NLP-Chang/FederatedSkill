@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Adds a new skill for construction measurement form extraction. The trace shows the agent failed by hardcoding values instead of using OCR, and initially mis-aggregated the summary sheet. This skill enforces OCR automation, provides a robust multi-pass extraction workflow, defines the exact two-sheet Excel structure (details + summary), and includes aggregation logic to select the latest form per project rather than summing totals.",
+  "upsert_paths": [
+    "construction-measurement-extraction/SKILL.md",
+    "construction-measurement-extraction/references/patterns.md",
+    "construction-measurement-extraction/scripts/extract_construction_data.py"
+  ],
+  "delete_paths": []
+}

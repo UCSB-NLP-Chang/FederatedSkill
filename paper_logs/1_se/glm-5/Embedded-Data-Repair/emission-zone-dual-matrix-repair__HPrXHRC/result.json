@@ -1,0 +1,103 @@
+{
+  "id": "64f18638-c50d-430d-a3c8-4dab5c83979d",
+  "task_name": "emission-zone-dual-matrix-repair",
+  "trial_name": "emission-zone-dual-matrix-repair__HPrXHRC",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Embedded-Data-Repair/emission-zone-dual-matrix-repair__HPrXHRC",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Embedded-Data-Repair/emission-zone-dual-matrix-repair"
+  },
+  "source": "Embedded-Data-Repair",
+  "task_checksum": "4bdca2ccdc4cdd78ac19420ac050a11c44103a9ca8fc7e719d97850bb3681ab6",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Embedded-Data-Repair/emission-zone-dual-matrix-repair",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Embedded-Data-Repair"
+    },
+    "trial_name": "emission-zone-dual-matrix-repair__HPrXHRC",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Embedded-Data-Repair",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "81bd32fb-3884-442b-b2f5-45eee25f20ae"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 406981,
+    "n_cache_tokens": 367292,
+    "n_output_tokens": 12496,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-04-26T23:57:12.479975Z",
+  "finished_at": "2026-04-26T23:59:52.796777Z",
+  "environment_setup": {
+    "started_at": "2026-04-26T23:57:12.482904Z",
+    "finished_at": "2026-04-26T23:57:13.527411Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-04-26T23:57:13.527428Z",
+    "finished_at": "2026-04-26T23:57:13.766950Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-04-26T23:57:13.767013Z",
+    "finished_at": "2026-04-26T23:59:41.512656Z"
+  },
+  "verifier": {
+    "started_at": "2026-04-26T23:59:41.513006Z",
+    "finished_at": "2026-04-26T23:59:42.271789Z"
+  }
+}

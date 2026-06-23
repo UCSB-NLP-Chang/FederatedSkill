@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.8888888888888888,
+  "summary": "Enhanced the pptx-xml-editing skill with specific anti-patterns and validation steps discovered during slide addition. The trace revealed critical gaps when cloning slides: forgetting to write the new slide XML to output, leaving orphaned placeholder shapes, and auto-numbering starting at wrong values. Updated SKILL.md with a dedicated slide cloning section, bullet numbering clarification, and expanded troubleshooting. Also updated references/pptx-structure.md with detailed buAutoNum schema and clone cleanup checklist.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/pptx-structure.md"
+  ],
+  "delete_paths": []
+}

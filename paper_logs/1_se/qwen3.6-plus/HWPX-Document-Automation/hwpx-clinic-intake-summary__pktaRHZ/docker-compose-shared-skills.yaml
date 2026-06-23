@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__HWPX-Document-Automation/shared_skills/HWPX-Document-Automation:/root/.config/agent/skills

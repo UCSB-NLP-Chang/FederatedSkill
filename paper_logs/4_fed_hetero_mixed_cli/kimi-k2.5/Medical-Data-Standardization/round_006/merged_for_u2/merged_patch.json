@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u0's umbrella extension (r=0.909) to clinical-lab-harmonization with JSON handling, blood gas conversions, and widened Mg range. Rejected u2's new skill (violates umbrella architecture). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.9090909090909091
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.5519
+}

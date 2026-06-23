@@ -1,0 +1,29 @@
+{
+    "id": "3e49b273-85f1-4fea-ae83-6f07b132a89d",
+    "started_at": "2026-05-24T05:39:07.558368",
+    "finished_at": "2026-05-24T05:41:29.665058",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Healthcare-Cost-Benefit-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_infusionbatch_7v14__CgagDfH"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

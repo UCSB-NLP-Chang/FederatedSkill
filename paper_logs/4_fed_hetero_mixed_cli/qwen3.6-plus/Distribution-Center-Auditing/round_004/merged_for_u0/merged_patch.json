@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "R4 merge complete: kept u0's validated baseline, selectively merged u1's pandas NaN troubleshooting and u2's timesheet-policy-audit invariant. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-audit-reporting/SKILL.md"
+  ],
+  "cost_usd": 2.993475
+}

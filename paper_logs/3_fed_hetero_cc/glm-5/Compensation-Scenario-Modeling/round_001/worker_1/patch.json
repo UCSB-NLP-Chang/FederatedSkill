@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "Added troubleshooting guidance for ModuleNotFoundError when importing openpyxl.utils.dataframe, which fails due to missing numpy dependency. This is a common pitfall when agents try to use DataFrame helpers that aren't needed for most Excel tasks.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": []
+}

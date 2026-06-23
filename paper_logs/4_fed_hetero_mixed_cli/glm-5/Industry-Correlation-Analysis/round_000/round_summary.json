@@ -1,0 +1,30 @@
+{
+  "round_idx": 0,
+  "assignments": [
+    [
+      "u0",
+      "econ-service-hospitality-correlation"
+    ],
+    [
+      "u1",
+      "econ-service-hospitality-correlation"
+    ],
+    [
+      "u2",
+      "econ-service-hospitality-correlation"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 711.5122084617615
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace reveals additional patterns for economic time series correlation: panel/long-format data with multiple series in one dataframe, monthly-to-annual conversion for partial years, and release status filtering (final vs preliminary). These are common in BEA/Census releases and should be added to the existing skill.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md"
+  ],
+  "delete_paths": []
+}

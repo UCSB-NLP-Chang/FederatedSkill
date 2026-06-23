@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "08-university-course-catalog-dif__Ca7FnjE",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Cross-Format-Data-Reconciliation/round_007/worker_0/08-university-course-catalog-dif__Ca7FnjE",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Cross-Format-Data-Reconciliation/round_007/worker_0/08-university-course-catalog-dif__Ca7FnjE",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

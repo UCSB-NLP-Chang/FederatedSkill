@@ -1,0 +1,29 @@
+{
+    "id": "f5f74082-272c-4e87-8f1b-83921ad381a9",
+    "started_at": "2026-05-23T23:28:56.037922",
+    "finished_at": "2026-05-23T23:32:09.097242",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "clinic_branch_transfer_gap__FQy5jcd"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task revealed that adjustments/revisions can modify fields beyond amounts (e.g., campus codes, locations), and these adjusted fields should also be validated. Updated the skill to handle multi-field adjustments and added a new violation type for adjusted field mismatches.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/violation-types.md",
+    "document-reconciliation/scripts/reconcile_claims.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "Creates a reusable skill for queue backlog recovery planning with Excel. Captures the deterministic step-down policy (6\u21925\u21924 day weeks based on backlog thresholds), openpyxl usage patterns (pandas unavailable), dual-queue calculation logic (tracking negative excess capacity separately from displayed backlog), and validation requirements (word count, sentence count, floating-point rounding) that future agents need to avoid verifier failures.",
+  "upsert_paths": [
+    "queue-recovery-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8571428571428571,
+  "summary": "The agent failed the budget-reconciliation-pivot task despite producing all 6 sheets. The existing sales-pivot-analysis skill covers the general workflow but lacks budget-specific patterns: wide-to-long budget transformation, budget reconciliation derived columns (VARIANCE, UTILIZATION_PCT), and org-hierarchy PDF joins. Adding a Budget Reconciliation domain variant and a wide-to-long transformation script will prevent future agents from rediscovering these patterns.",
+  "upsert_paths": [
+    "sales-pivot-analysis/references/budget-reconciliation-patterns.md",
+    "sales-pivot-analysis/scripts/wide_to_long_budget.py"
+  ],
+  "delete_paths": []
+}

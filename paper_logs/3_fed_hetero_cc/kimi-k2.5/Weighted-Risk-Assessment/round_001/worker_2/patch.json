@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.6666666666666666,
+  "summary": "Update excel-formula-template skill to include weighted-hospital-bedflow-calc variant, fix reference locking in weighted aggregate examples, and mandate validation script execution. The trial failed verification likely due to missing row-absolute references in SUMPRODUCT ranges and/or unverified operand order in net flow calculations.",
+  "upsert_paths": [
+    "excel-formula-template/SKILL.md",
+    "excel-formula-template/scripts/validate_formulas.py"
+  ],
+  "delete_paths": []
+}

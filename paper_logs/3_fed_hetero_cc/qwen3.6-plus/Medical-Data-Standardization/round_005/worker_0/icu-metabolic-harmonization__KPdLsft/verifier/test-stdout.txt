@@ -1,0 +1,118 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.4.1
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ..........F......F.F.....F........F....                                  [100%]
+E           =================================== FAILURES ===================================
+E           _______________________ TestOutput.test_ranges[Calcium] ________________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f82995d7b00>, col = 'Calcium'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('Calcium', ['2.83', '2.67'])
+E           E       assert not ['2.83', '2.67']
+E           
+E           /tests/test_outputs.py:100: AssertionError
+E           _________________ TestOutput.test_ranges[Beta_Hydroxybutyrate] _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f82995d72f0>
+E           col = 'Beta_Hydroxybutyrate'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('Beta_Hydroxybutyrate', ['105.17', '42.77', '78.42'])
+E           E       assert not ['105.17', '42.77', '78.42']
+E           
+E           /tests/test_outputs.py:100: AssertionError
+E           ____________________ TestOutput.test_ranges[pCO2_Arterial] _____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f829a29f140>, col = 'pCO2_Arterial'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('pCO2_Arterial', ['10.02'])
+E           E       assert not ['10.02']
+E           
+E           /tests/test_outputs.py:100: AssertionError
+E           ___________________ TestOutput.test_anchor_values[Lactate-1] ___________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f82996011c0>, row_idx = 1
+E           col = 'Lactate'
+E           
+E               @pytest.mark.parametrize('row_idx', ANCHOR_ROW_INDEXES)
+E               @pytest.mark.parametrize('col', ANCHOR_COLUMNS)
+E               def test_anchor_values(self, row_idx, col):
+E                   actual = float(self.df.iloc[row_idx][col])
+E                   expected = float(self.expected.iloc[row_idx][col])
+E           >       assert abs(actual - expected) <= max(0.01, abs(expected) * 0.001), (row_idx, col, actual, expected)
+E           E       AssertionError: (1, 'Lactate', 17.01, 1.89)
+E           E       assert 15.120000000000001 <= 0.01
+E           E        +  where 15.120000000000001 = abs((17.01 - 1.89))
+E           E        +  and   0.01 = max(0.01, (1.89 * 0.001))
+E           E        +    where 1.89 = abs(1.89)
+E           
+E           /tests/test_outputs.py:110: AssertionError
+E           _____________________ TestOutput.test_anchor_values[BUN-1] _____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f82996018e0>, row_idx = 1
+E           col = 'BUN'
+E           
+E               @pytest.mark.parametrize('row_idx', ANCHOR_ROW_INDEXES)
+E               @pytest.mark.parametrize('col', ANCHOR_COLUMNS)
+E               def test_anchor_values(self, row_idx, col):
+E                   actual = float(self.df.iloc[row_idx][col])
+E                   expected = float(self.expected.iloc[row_idx][col])
+E           >       assert abs(actual - expected) <= max(0.01, abs(expected) * 0.001), (row_idx, col, actual, expected)
+E           E       AssertionError: (1, 'BUN', 134.44, 48.02)
+E           E       assert 86.41999999999999 <= 0.04802000000000001
+E           E        +  where 86.41999999999999 = abs((134.44 - 48.02))
+E           E        +  and   0.04802000000000001 = max(0.01, (48.02 * 0.001))
+E           E        +    where 48.02 = abs(48.02)
+E           
+E           /tests/test_outputs.py:110: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Calcium] - Assertion...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Beta_Hydroxybutyrate]
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[pCO2_Arterial] - Ass...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_values[Lactate-1] - ...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_values[BUN-1] - Asse...
+E           5 failed, 34 passed in 0.82s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 1.17s ===============================

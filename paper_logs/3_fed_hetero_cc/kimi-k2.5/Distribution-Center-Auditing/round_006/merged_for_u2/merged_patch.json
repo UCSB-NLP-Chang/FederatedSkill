@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "R6 merge complete for u2 (kimi-k2.5). Applied u0's reward=1.0 patch with B7 invariant + added back critical patterns (python-docx, Column Name Whitespace) per memory.md warnings. Final SKILL.md: 165 lines under limit. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "spreadsheet-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.34009259999999997
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.14285714285714285,
+  "summary": "The agent fell into a common openpyxl API trap: trying to iterate named ranges via `wb.defined_names.definedName` instead of iterating `wb.defined_names` directly. The existing skill already shows the correct pattern but doesn't explicitly warn against this specific mistake. Adding it to the 'Wrong' examples will help future agents avoid this error. Also fixing verify_formulas.py to print useful named range info instead of object representations.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/scripts/verify_formulas.py"
+  ],
+  "delete_paths": []
+}

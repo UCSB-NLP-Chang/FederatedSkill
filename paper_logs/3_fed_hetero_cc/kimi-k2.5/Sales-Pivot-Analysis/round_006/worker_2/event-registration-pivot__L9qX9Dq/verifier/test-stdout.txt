@@ -1,0 +1,236 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.4, pluggy-1.6.0 -- /opt/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.6
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: FFFFFFFFFFFFssFs..................F                                      [100%]
+E           =================================== FAILURES ===================================
+E           ___ TestPivotTableConfiguration.test_pivot_exists[Revenue by Track-sum-None] ___
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec79e8890>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Revenue by Track', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Revenue by Track'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:56: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Attendance by Venue-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5f1c390320>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Attendance by Venue', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Attendance by Venue'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:56: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Track RegType Matrix-sum-reg_type] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec9b8b3e0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Track RegType Matrix', expected_agg = 'sum'
+E           col_field = 'reg_type'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Track RegType Matrix'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:56: AssertionError
+E           __ TestPivotTableConfiguration.test_pivot_exists[Events by Track-count-None] ___
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5f1c371b20>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Events by Track', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Events by Track'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:56: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Revenue by Track-sum-None] __
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec9bb9610>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Revenue by Track', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:60: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Attendance by Venue-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec71fe720>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Attendance by Venue', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:60: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Track RegType Matrix-sum-reg_type] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec71fe870>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Track RegType Matrix', expected_agg = 'sum'
+E           col_field = 'reg_type'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:60: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Events by Track-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec71fe900>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Events by Track', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:60: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Revenue by Track-sum-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec71fea20>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Revenue by Track', expected_agg = 'sum', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:69: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Attendance by Venue-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec71feb70>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Attendance by Venue', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:69: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Track RegType Matrix-sum-reg_type] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec71fecc0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Track RegType Matrix', expected_agg = 'sum'
+E           col_field = 'reg_type'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:69: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Events by Track-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec71fed50>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Events by Track', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:69: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_col_field[Track RegType Matrix-sum-reg_type] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f5ec71ff1d0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           sheet_name = 'Track RegType Matrix', expected_agg = 'sum'
+E           col_field = 'reg_type'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_col_field(self, workbook, sheet_name, expected_agg, col_field):
+E                   if not col_field:
+E                       pytest.skip(f"'{sheet_name}' is not a matrix pivot")
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:77: IndexError
+E           _____________ TestDataTransformations.test_pivot_cache_has_fields ______________
+E           
+E           self = <test_outputs.TestDataTransformations object at 0x7f5ec6b248c0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f5ec6b249e0>
+E           
+E               def test_pivot_cache_has_fields(self, workbook):
+E           >       pivot = workbook["Revenue by Track"]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:182: IndexError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Revenue by Track-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Attendance by Venue-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Track RegType Matrix-sum-reg_type]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Events by Track-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Revenue by Track-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Attendance by Venue-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Track RegType Matrix-sum-reg_type]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Events by Track-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Revenue by Track-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Attendance by Venue-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Track RegType Matrix-sum-reg_type]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Events by Track-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_col_field[Track RegType Matrix-sum-reg_type]
+E           FAILED ../tests/test_outputs.py::TestDataTransformations::test_pivot_cache_has_fields
+E           14 failed, 18 passed, 3 skipped in 0.47s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: FF...
+============================== 1 failed in 0.68s ===============================

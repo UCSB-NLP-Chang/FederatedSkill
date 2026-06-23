@@ -1,0 +1,46 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.4.1
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .....F.....                                                              [100%]
+E           =================================== FAILURES ===================================
+E           ____________________ TestOutput.test_ranges[pCO2_Arterial] _____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f68cb0333e0>, c = 'pCO2_Arterial'
+E           
+E               @pytest.mark.parametrize('c', EXPECTED_COLUMNS)
+E               def test_ranges(self, c):
+E           >       assert all(ok(v, REFERENCE[c]['min'], REFERENCE[c]['max']) for v in self.df[c])
+E           E       assert False
+E           E        +  where False = all(<generator object TestOutput.test_ranges.<locals>.<genexpr> at 0x7f68cb5afb50>)
+E           
+E           /tests/test_outputs.py:31: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[pCO2_Arterial] - ass...
+E           1 failed, 10 passed in 0.35s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.65s ===============================

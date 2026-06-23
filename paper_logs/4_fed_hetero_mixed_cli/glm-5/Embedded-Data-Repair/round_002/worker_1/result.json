@@ -1,0 +1,29 @@
+{
+    "id": "8c6d98c8-e0cf-406d-911a-8fdf595da3c4",
+    "started_at": "2026-05-17T20:38:16.995519",
+    "finished_at": "2026-05-17T20:40:30.805954",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Embedded-Data-Repair": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "warehouse-slot-factor-refresh__b5jWbgC"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

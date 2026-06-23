@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace shows a common pattern: the Read tool cannot handle binary .xlsx files, requiring Python with openpyxl instead. This skill captures the reusable workflow for reading, processing, and writing Excel workbooks, including the anti-pattern of attempting to read binary Excel with the Read tool.",
+  "upsert_paths": [
+    "excel-processing/SKILL.md"
+  ],
+  "delete_paths": []
+}

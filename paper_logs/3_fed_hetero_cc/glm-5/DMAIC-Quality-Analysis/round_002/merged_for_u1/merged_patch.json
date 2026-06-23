@@ -1,0 +1,37 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged u1's SKILL.md (validation script step, common mismatches table) + u2's field_service_example.md and \"NO EXCEPTIONS\" language. Added validate_schema.py as structural enforcement gate. All three workers had reward=0.333; synthesized best elements per task_memory structural enforcement recommendation. See DECISIONS.md.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/field_service_example.md",
+    "statistical-process-analysis/references/schema.md",
+    "statistical-process-analysis/scripts/validate_schema.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/references/schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/references/field_service_example.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/scripts/validate_schema.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.6819219999999993
+}

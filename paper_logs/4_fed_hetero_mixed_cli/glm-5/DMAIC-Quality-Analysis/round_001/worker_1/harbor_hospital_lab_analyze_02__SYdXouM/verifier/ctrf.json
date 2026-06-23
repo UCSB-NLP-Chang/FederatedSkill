@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779078072.0354228,
+            "stop": 1779078073.1852353
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 1.1288487706333399,
+                "start": 1779078072.0420465,
+                "stop": 1779078073.1851187,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .FF                                                                      [100%]\nE           =================================== FAILURES ===================================\nE           ________________________ test_json_structure_and_values ________________________\nE           \nE               def test_json_structure_and_values():\nE                   expected = _expected_metrics()\nE                   payload = json.loads(OUT_JSON.read_text(encoding=\"utf-8\"))\nE               \nE                   for key in [\nE                       \"source_file\",\nE                       \"filters\",\nE                       \"record_counts\",\nE                       \"charter_metrics\",\nE                       \"anova_by_weekday\",\nE                       \"imr_summary\",\nE                       \"regression_day_index\",\nE                       \"ttest_vs_target\",\nE                       \"capability_against_lsl\",\nE                   ]:\nE                       assert key in payload, f\"Missing top-level key: {key}\"\nE               \nE           >       assert payload[\"source_file\"] == \"lab_panel_data.csv\"\nE           E       AssertionError: assert '/root/lab_panel_data.csv' == 'lab_panel_data.csv'\nE           E         \nE           E         - lab_panel_data.csv\nE           E         + /root/lab_panel_data.csv\nE           E         ? ++++++\nE           \nE           /tests/test_outputs.py:135: AssertionError\nE           _____________________ test_markdown_structure_and_content ______________________\nE           \nE               def test_markdown_structure_and_content():\nE                   text = OUT_MD.read_text(encoding=\"utf-8\")\nE               \nE                   required_headers = [\nE                       f\"# {BRIEF_TITLE}\",\nE                       \"## Project Charter\",\nE                       \"## Statistical Analysis\",\nE                       \"## A3 Summary\",\nE                       \"## Timeline and Next Steps\",\nE                   ]\nE                   for h in required_headers:\nE                       assert h in text, f\"Missing header: {h}\"\nE               \nE                   required_subsections = [\nE                       \"### One-Way ANOVA\",\nE                       \"### I-MR Control Chart\",\nE                       \"### Linear Regression (CompletedPanels ~ day_index)\",\nE                       \"### One-Sample t-Test vs 810\",\nE                       \"### Process Capability\",\nE                   ]\nE                   for s in required_subsections:\nE                       assert s in text, f\"Missing subsection: {s}\"\nE               \nE                   hit_count = sum(1 for i in IMPACTS if i in text)\nE           >       assert hit_count >= 2, \"Need at least two required operational impacts in markdown\"\nE           E       AssertionError: Need at least two required operational impacts in markdown\nE           E       assert 0 >= 2\nE           \nE           /tests/test_outputs.py:212: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_json_structure_and_values - AssertionEr...\nE           FAILED ../tests/test_outputs.py::test_markdown_structure_and_content - Assert...\nE           2 failed, 1 passed in 0.73s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

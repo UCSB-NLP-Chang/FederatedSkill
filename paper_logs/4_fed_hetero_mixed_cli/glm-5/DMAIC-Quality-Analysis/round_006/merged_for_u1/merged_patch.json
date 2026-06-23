@@ -1,0 +1,38 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Added devops-pipeline-analysis (B3) with fixed script removing hardcoded project_codename. Library now has 3 skills (dmaic-statistical-analysis, healthcare-quality-analysis, devops-pipeline-analysis). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "devops-pipeline-analysis/SKILL.md",
+    "devops-pipeline-analysis/assets/brief_template.md",
+    "devops-pipeline-analysis/references/output_schema.md",
+    "devops-pipeline-analysis/scripts/compute_pipeline_metrics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "devops-pipeline-analysis/assets/brief_template.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ],
+    "devops-pipeline-analysis/scripts/compute_pipeline_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ],
+    "devops-pipeline-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ],
+    "devops-pipeline-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:dmaic-statistical-analysis/SKILL.md: bad YAML (ScannerError)",
+    "__skill_md_invalid__:devops-pipeline-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 4.509684
+}

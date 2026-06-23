@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Round 0 merge complete. Applied u0's reward=1.0 patch wholesale, renamed skill to `expense-record-validation` for broader scope, added Output precision and Known invariants sections. Library now has 1 skill with 1 helper script (69 lines). See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "expense-record-validation/SKILL.md",
+    "expense-record-validation/scripts/audit_helper.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-record-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "expense-record-validation/scripts/audit_helper.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.4248885
+}

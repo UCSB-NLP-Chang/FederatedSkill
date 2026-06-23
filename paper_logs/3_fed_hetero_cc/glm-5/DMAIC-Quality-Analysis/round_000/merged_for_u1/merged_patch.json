@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Round 0 merge complete for u1 (glm-5). Created `statistical-process-analysis` skill with scipy-only compute_spc.py script (fixed u0's z=1.96 CI, manual ANOVA/regression; integrated u1's anti-pattern guidance; removed all rounding). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/spc_formulas.md",
+    "statistical-process-analysis/scripts/compute_spc.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/scripts/compute_spc.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/references/spc_formulas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.3185152
+}

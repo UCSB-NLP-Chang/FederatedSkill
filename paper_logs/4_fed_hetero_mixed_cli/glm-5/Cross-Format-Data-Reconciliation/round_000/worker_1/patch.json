@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Creates a dataset-diff skill for comparing two versions of structured data (PDF, Excel, CSV, JSON) to detect added, removed, and modified records with field-level changes. This generalizes the portfolio comparison pattern from the trace into a reusable workflow with a standard diff output format.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/diff_schema.md",
+    "dataset-diff/scripts/diff_datasets.py"
+  ],
+  "delete_paths": []
+}

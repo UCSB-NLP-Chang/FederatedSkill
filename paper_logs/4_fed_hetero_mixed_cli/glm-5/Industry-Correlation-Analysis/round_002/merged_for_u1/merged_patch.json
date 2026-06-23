@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's excel-year-parsing.md (comprehensive), u0's parse_year_markers.py (cleaner regex), and u2's SKILL.md (troubleshooting table) with dangling reference fix. See DECISIONS.md for full reasoning.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md",
+    "economic-time-series-correlation/scripts/parse_year_markers.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-correlation/scripts/parse_year_markers.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "economic-time-series-correlation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "economic-time-series-correlation/references/excel-year-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-correlation/references/excel-year-parsing.md",
+    "economic-time-series-correlation/scripts/parse_year_markers.py"
+  ],
+  "cost_usd": 0.6219449999999999
+}

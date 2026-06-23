@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "Adds skill for building financial roll-forward workbooks in Excel using openpyxl, capturing the roll-forward formula patterns (Beginning + Additions - Releases = Ending), cross-sheet linking, and GL reconciliation validation observed in the deferred revenue task.",
+  "upsert_paths": [
+    "excel-financial-rollforwards/SKILL.md"
+  ],
+  "delete_paths": []
+}

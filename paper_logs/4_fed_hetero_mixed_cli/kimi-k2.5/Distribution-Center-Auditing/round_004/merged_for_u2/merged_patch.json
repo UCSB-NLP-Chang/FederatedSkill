@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Applied target's timesheet-policy-audit invariant + u1's pandas troubleshooting note. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-audit-reporting/SKILL.md"
+  ],
+  "cost_usd": 3.356184
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Added guidance on using the diff_datasets script as a module for custom workflows, and a tip about the load_pdf_from_base64 helper function. The task succeeded using the existing skill patterns, but the update makes programmatic usage more discoverable for future agents who need custom output formats.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md"
+  ],
+  "delete_paths": []
+}

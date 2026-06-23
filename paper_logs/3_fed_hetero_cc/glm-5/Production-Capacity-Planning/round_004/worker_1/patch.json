@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds guidance for handling duplicate phases/periods in input Excel data, a scenario encountered in this task where phases 10, 18, and 28 each appeared twice with different demand values requiring aggregation. Also adds 20 hrs/day as a common hourly rate variant.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": []
+}

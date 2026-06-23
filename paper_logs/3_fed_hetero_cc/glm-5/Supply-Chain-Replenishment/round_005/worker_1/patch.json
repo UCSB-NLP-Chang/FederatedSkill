@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Extended the existing supply-chain-coverage-analysis skill to document a new variant (recovery-log-template-based) that handles deduplication by revision number, stage-based filtering, and template sheet preservation. This variant appeared in the frozen_meal_tracker_refresh task and differs from existing variants in its deduplication logic and output approach.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md",
+    "supply-chain-coverage-analysis/references/calculation-formulas.md"
+  ],
+  "delete_paths": []
+}

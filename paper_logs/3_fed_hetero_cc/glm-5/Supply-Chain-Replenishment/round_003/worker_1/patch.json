@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Extended the existing supply-chain-coverage-analysis skill to cover the lane-snapshot-arrival-board variant (produce lane restock). Added guidance for grouped/hierarchical data parsing, composite Lane+SKU keys, and different status column names/values (Load Status: Ready/Docked vs Booking State: Firm/Locked).",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md",
+    "supply-chain-coverage-analysis/references/calculation-formulas.md"
+  ],
+  "delete_paths": []
+}

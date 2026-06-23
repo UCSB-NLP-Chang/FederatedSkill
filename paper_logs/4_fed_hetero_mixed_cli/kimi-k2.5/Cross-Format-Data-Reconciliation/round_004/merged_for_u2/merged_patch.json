@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5 on kimi-cli). SKILL.md: merged u2's Pre-Output Verification Checklist (addresses output key naming gap) + u0's PDF row validation regex and anti-patterns. domain_mapping.md: combined u1+u2 hardware/server terminology + u2's decision rule section. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "cost_usd": 4.534281
+}

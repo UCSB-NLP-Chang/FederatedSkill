@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's validated patches with flexible duplicate handling wording from u0 per task_memory recommendation. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/references/excel-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "cost_usd": 0.5854473
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The trace shows a successful PDF-to-Excel dataset diff for university funding data. The existing skill guided the agent correctly. Adding a complete working example to references/ will help future agents complete similar archive-to-current comparisons faster without writing extraction boilerplate from scratch.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/pdf_excel_workflow.md"
+  ],
+  "delete_paths": []
+}

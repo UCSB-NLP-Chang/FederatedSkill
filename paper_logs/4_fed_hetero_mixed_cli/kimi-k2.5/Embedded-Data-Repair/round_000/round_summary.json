@@ -1,0 +1,30 @@
+{
+  "round_idx": 0,
+  "assignments": [
+    [
+      "u0",
+      "fx-spot-matrix-refresh"
+    ],
+    [
+      "u1",
+      "fx-spot-matrix-refresh"
+    ],
+    [
+      "u2",
+      "fx-spot-matrix-refresh"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 788.083886384964
+}

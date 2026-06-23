@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5789473684210527,
+  "summary": "Creates a reusable skill for harmonizing clinical laboratory CSV data. Captures the brittle parsing logic needed for scientific notation and European decimal commas, the range-based unit detection strategy, and critical anti-patterns observed in the failed trace (regex false positives, CRLF line endings, ambiguous conversion directions). Provides a template script for deterministic conversion and validation checklist to prevent common verifier failures.",
+  "upsert_paths": [
+    "clinical-lab-csv-harmonization/SKILL.md",
+    "clinical-lab-csv-harmonization/references/common-conversions.md",
+    "clinical-lab-csv-harmonization/scripts/harmonize_lab_data.py"
+  ],
+  "delete_paths": []
+}

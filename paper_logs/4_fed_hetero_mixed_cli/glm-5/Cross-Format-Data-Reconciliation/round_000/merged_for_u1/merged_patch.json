@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's `dataset-diff` patch wholesale (reward=1.0). Library now has 1 skill with SKILL.md, helper script, and schema reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/diff_schema.md",
+    "dataset-diff/scripts/diff_datasets.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/diff_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "dataset-diff/scripts/diff_datasets.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.593951
+}

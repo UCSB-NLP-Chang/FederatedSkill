@@ -1,0 +1,173 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FFFFFF.F                                                                [100%]
+E           =================================== FAILURES ===================================
+E           ____________________________ test_process1_metrics _____________________________
+E           
+E           outputs = ({'action_plan': {'checklist': ['Audit current order entry processes', 'Document standard operating procedures', 'Trai...n\n**Report Generated:** 2025-05-18  \n**Analyst:** Supply Chain Analytics Team  \n**Classification:** Internal Use\n')
+E           expected_metrics = {'damage_rates': {'capability_vs_target': 'Capable', 'ci_high': 1.3975042953677002, 'ci_low': 1.0780609891525128, 'cv'...y'}, {'cv': 0.26578340491053964, 'process': 'damage_rates'}, {'cv': 0.11790007338125179, 'process': 'delivery_times'}]}
+E           
+E               def test_process1_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   p1 = report["delivery_times"]
+E                   exp = expected_metrics["delivery_times"]
+E               
+E                   assert p1["n"] == exp["n"]
+E           >       assert_close(p1["mean_hrs"], exp["mean"], tol=1e-3)
+E                                ^^^^^^^^^^^^^^
+E           E       KeyError: 'mean_hrs'
+E           
+E           /tests/test_outputs.py:172: KeyError
+E           ____________________________ test_process2_metrics _____________________________
+E           
+E           outputs = ({'action_plan': {'checklist': ['Audit current order entry processes', 'Document standard operating procedures', 'Trai...n\n**Report Generated:** 2025-05-18  \n**Analyst:** Supply Chain Analytics Team  \n**Classification:** Internal Use\n')
+E           expected_metrics = {'damage_rates': {'capability_vs_target': 'Capable', 'ci_high': 1.3975042953677002, 'ci_low': 1.0780609891525128, 'cv'...y'}, {'cv': 0.26578340491053964, 'process': 'damage_rates'}, {'cv': 0.11790007338125179, 'process': 'delivery_times'}]}
+E           
+E               def test_process2_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   p2 = report["damage_rates"]
+E                   exp = expected_metrics["damage_rates"]
+E               
+E           >       assert p2["points"] == exp["points"]
+E                          ^^^^^^^^^^^^
+E           E       KeyError: 'points'
+E           
+E           /tests/test_outputs.py:187: KeyError
+E           ____________________________ test_process3_metrics _____________________________
+E           
+E           outputs = ({'action_plan': {'checklist': ['Audit current order entry processes', 'Document standard operating procedures', 'Trai...n\n**Report Generated:** 2025-05-18  \n**Analyst:** Supply Chain Analytics Team  \n**Classification:** Internal Use\n')
+E           expected_metrics = {'damage_rates': {'capability_vs_target': 'Capable', 'ci_high': 1.3975042953677002, 'ci_low': 1.0780609891525128, 'cv'...y'}, {'cv': 0.26578340491053964, 'process': 'damage_rates'}, {'cv': 0.11790007338125179, 'process': 'delivery_times'}]}
+E           
+E               def test_process3_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   p3 = report["order_accuracy"]
+E                   exp = expected_metrics["order_accuracy"]
+E               
+E           >       assert p3["rows"] == exp["rows"]
+E                          ^^^^^^^^^^
+E           E       KeyError: 'rows'
+E           
+E           /tests/test_outputs.py:209: KeyError
+E           __________________ test_variability_ranking_and_highest_risk ___________________
+E           
+E           outputs = ({'action_plan': {'checklist': ['Audit current order entry processes', 'Document standard operating procedures', 'Trai...n\n**Report Generated:** 2025-05-18  \n**Analyst:** Supply Chain Analytics Team  \n**Classification:** Internal Use\n')
+E           expected_metrics = {'damage_rates': {'capability_vs_target': 'Capable', 'ci_high': 1.3975042953677002, 'ci_low': 1.0780609891525128, 'cv'...y'}, {'cv': 0.26578340491053964, 'process': 'damage_rates'}, {'cv': 0.11790007338125179, 'process': 'delivery_times'}]}
+E           
+E               def test_variability_ranking_and_highest_risk(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   ranking = report["variability_ranking"]
+E                   expected_ranking = expected_metrics["ranking"]
+E               
+E                   assert len(ranking) == 3
+E           >       assert [r["process"] for r in ranking] == [r["process"] for r in expected_ranking]
+E           E       AssertionError: assert ['Order Accur...livery Times'] == ['order_accur...livery_times']
+E           E         
+E           E         At index 0 diff: 'Order Accuracy' != 'order_accuracy'
+E           E         Use -v to get more diff
+E           
+E           /tests/test_outputs.py:225: AssertionError
+E           ______________________ test_extended_analysis_consistency ______________________
+E           
+E           outputs = ({'action_plan': {'checklist': ['Audit current order entry processes', 'Document standard operating procedures', 'Trai...n\n**Report Generated:** 2025-05-18  \n**Analyst:** Supply Chain Analytics Team  \n**Classification:** Internal Use\n')
+E           
+E               def test_extended_analysis_consistency(outputs):
+E                   report, _ = outputs
+E                   ext = report["extended_analysis"]
+E                   highest = report["highest_variability_process"]
+E               
+E           >       assert ext["process"] == highest
+E                          ^^^^^^^^^^^^^^
+E           E       KeyError: 'process'
+E           
+E           /tests/test_outputs.py:240: KeyError
+E           _______________________ test_variance_diagnostic_schema ________________________
+E           
+E           outputs = ({'action_plan': {'checklist': ['Audit current order entry processes', 'Document standard operating procedures', 'Trai...n\n**Report Generated:** 2025-05-18  \n**Analyst:** Supply Chain Analytics Team  \n**Classification:** Internal Use\n')
+E           
+E               def test_variance_diagnostic_schema(outputs):
+E                   report, _ = outputs
+E                   vd = report["variance_diagnostic"]
+E               
+E                   required_keys = [
+E                       "process_analyzed",
+E                       "amplification_detected",
+E                       "severity",
+E                       "pattern_type",
+E                       "origin_layer",
+E                       "recommended_intervention",
+E                   ]
+E                   for key in required_keys:
+E                       assert key in vd, f"Missing variance_diagnostic key: {key}"
+E               
+E                   assert isinstance(vd["amplification_detected"], bool)
+E           >       assert vd["severity"] in {"none", "low", "moderate", "high", "critical"}
+E           E       AssertionError: assert 'Moderate' in {'critical', 'high', 'low', 'moderate', 'none'}
+E           
+E           /tests/test_outputs.py:265: AssertionError
+E           ___________________ test_markdown_sections_and_required_text ___________________
+E           
+E           outputs = ({'action_plan': {'checklist': ['Audit current order entry processes', 'Document standard operating procedures', 'Trai...n\n**Report Generated:** 2025-05-18  \n**Analyst:** Supply Chain Analytics Team  \n**Classification:** Internal Use\n')
+E           
+E               def test_markdown_sections_and_required_text(outputs):
+E                   _, markdown = outputs
+E               
+E                   required_headings = [
+E                       "Summary of Findings",
+E                       "Most Significant Risks",
+E                       "Prioritized Corrective Actions",
+E                   ]
+E               
+E                   for heading in required_headings:
+E                       pattern = rf"^#+\s+{re.escape(heading)}\s*$"
+E                       assert re.search(pattern, markdown, flags=re.MULTILINE), f"Missing markdown heading: {heading}"
+E               
+E                   assert "Order Accuracy is the highest-risk process." in markdown
+E               
+E                   assert re.search(r"^#+\s+Variance Diagnostic\s*$", markdown, flags=re.MULTILINE), "Missing heading: Variance Diagnostic"
+E                   assert re.search(r"^#+\s+Action Plan\s*$", markdown, flags=re.MULTILINE), "Missing heading: Action Plan"
+E               
+E                   assert re.search(r"project codename\s*:", markdown, flags=re.IGNORECASE)
+E           >       assert re.search(r"30-day milestone", markdown, flags=re.IGNORECASE)
+E           E       AssertionError: assert None
+E           E        +  where None = <function search at 0x7f8ba36f1f80>('30-day milestone', '# Logistics Reliability Performance & Risk Assessment\n\n**Prepared for:** Meridian Global Logistics  \n**Analysis Pe...\n\n**Report Generated:** 2025-05-18  \n**Analyst:** Supply Chain Analytics Team  \n**Classification:** Internal Use\n', flags=re.IGNORECASE)
+E           E        +    where <function search at 0x7f8ba36f1f80> = re.search
+E           E        +    and   re.IGNORECASE = re.IGNORECASE
+E           
+E           /tests/test_outputs.py:297: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_process1_metrics - KeyError: 'mean_hrs'
+E           FAILED ../tests/test_outputs.py::test_process2_metrics - KeyError: 'points'
+E           FAILED ../tests/test_outputs.py::test_process3_metrics - KeyError: 'rows'
+E           FAILED ../tests/test_outputs.py::test_variability_ranking_and_highest_risk - ...
+E           FAILED ../tests/test_outputs.py::test_extended_analysis_consistency - KeyErro...
+E           FAILED ../tests/test_outputs.py::test_variance_diagnostic_schema - AssertionE...
+E           FAILED ../tests/test_outputs.py::test_markdown_sections_and_required_text - A...
+E           7 failed, 2 passed in 0.40s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.74s ===============================

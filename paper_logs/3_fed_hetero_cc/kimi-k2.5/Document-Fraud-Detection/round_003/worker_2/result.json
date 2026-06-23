@@ -1,0 +1,29 @@
+{
+    "id": "c92d7257-91fa-4dd6-8c4b-1699347d69d4",
+    "started_at": "2026-05-15T02:55:45.590602",
+    "finished_at": "2026-05-15T02:59:53.799184",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "field-service-workorder-audit__JwRJk7A"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

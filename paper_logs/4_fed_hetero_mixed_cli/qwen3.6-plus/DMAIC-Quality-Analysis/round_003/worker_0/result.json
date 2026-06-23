@@ -1,0 +1,29 @@
+{
+    "id": "61ec6fc0-deed-47ed-956f-f53e2ffc8ffa",
+    "started_at": "2026-05-18T00:49:10.497819",
+    "finished_at": "2026-05-18T00:51:59.617648",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__DMAIC-Quality-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_university_it_analyze_04__FkkMPoN"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated ocr-data-extraction skill to cover duplicate detection, reference file validation, and OCR strategy selection. Added decision rules for when to use simple vs multi-strategy OCR, and patterns for handling duplicate keys across image batches. Added references/dedup_validation_patterns.md with reusable code patterns for deduplication and reference validation.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/dedup_validation_patterns.md"
+  ],
+  "delete_paths": []
+}

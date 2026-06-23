@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) on Cross-Format-Data-Reconciliation R3. Applied target's reward=1.0 patch + CLI key customization; added archive\u2192current invariant from u1. See DECISIONS.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/scripts/cross_format_diff.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/scripts/cross_format_diff.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "cost_usd": 1.5189149999999998
+}

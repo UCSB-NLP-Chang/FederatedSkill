@@ -1,0 +1,35 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Added u0's sec-13f-alert-processing (reward=1.0), adopted u1's normalization-rules improvements, added u2's validate_match.py script. Kept 2-skill architecture (fund-analysis + issuer-rollup) per memory.md guidance and u2 alignment. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-alert-processing/SKILL.md",
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md",
+    "sec-13f-fund-analysis/scripts/validate_match.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/scripts/validate_match.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "sec-13f-fund-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "sec-13f-alert-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.6895173
+}

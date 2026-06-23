@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R6. Applied target's reward=1.0 patch wholesale: extended SKILL.md with snapshot handling and cold-chain patterns, added amendment-handling.md reference. Rejected u1's failed patch (reward=0.5). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "multi-source-reconciliation/SKILL.md",
+    "multi-source-reconciliation/references/amendment-handling.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "multi-source-reconciliation/references/amendment-handling.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "multi-source-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.7042299000000001
+}

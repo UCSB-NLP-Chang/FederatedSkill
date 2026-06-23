@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The existing production-capacity-planning skill is too specific to the 30hr/day MIG weld variant. This task revealed a returns center variant with 32hr/day capacity, multi-row demand summation, formula-based initial conditions, and queue-clearing step-down logic. Updated SKILL.md to add parameter discovery decision rules and anti-patterns for variant detection. Added variant-patterns.md reference documenting the returns center pattern as a reusable example.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "delete_paths": []
+}

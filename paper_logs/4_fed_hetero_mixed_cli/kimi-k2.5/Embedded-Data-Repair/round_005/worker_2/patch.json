@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The trial validated the existing edit-embedded-office-xml skill patterns for embedded Excel repair. Key lessons: (1) Slide text may contain 'DRAFT/superseded' vs 'FINAL/approved' corrections that need differentiation alongside existing archived/live keywords. (2) Buffer dilution matrices follow the same structural patterns as conversion matrices (row=source concentration, column=destination, diagonal=1, reciprocal formulas). (3) Package installation failures (externally-managed-environment) should immediately trigger XML fallback. Updated the skill to include these keywords, document the buffer-dilution variant, and enhance the helper script to target arbitrary worksheet paths since the hardcoded sheet1.xml failed to match the actual sheet2.xml target in this trace.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py"
+  ],
+  "delete_paths": []
+}

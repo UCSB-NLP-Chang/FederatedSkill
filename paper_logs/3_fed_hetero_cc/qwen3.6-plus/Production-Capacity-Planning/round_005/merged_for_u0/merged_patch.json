@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's SKILL.md wholesale (reward=1.0, HVAC verified correct). Rejected u1/u2 patches: u1 has wrong HVAC (30 hrs/day), u2 has wrong HVAC (OT=0) and reward=0.33. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 0.9296904000000001
+}

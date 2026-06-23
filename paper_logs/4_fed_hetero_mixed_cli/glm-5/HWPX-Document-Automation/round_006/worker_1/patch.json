@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace reveals a gap in the existing skill: HWPX documents may not always use {{placeholder}} syntax. Real-world updates often require pattern-based replacement (finding text by prefix/context), table cell handling, and CSV data integration. Adding guidance for these scenarios makes the skill more complete.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/references/advanced-replacement.md"
+  ],
+  "delete_paths": []
+}

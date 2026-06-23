@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a new reusable skill for comparing arbitrary pharmacy refill cycles (e.g., 90-day vs 100-day) based on wholesale, supply, and reimbursement CSVs. The skill generalizes the inline Python approach seen in the trace into a parameterized, deterministic script that handles joins, computes annual revenue/margin, applies threshold-based decision rules, and outputs verifier-ready JSON and Markdown without rounding.",
+  "upsert_paths": [
+    "refill-cycle-analysis/SKILL.md",
+    "refill-cycle-analysis/scripts/compute_refill_cycle.py"
+  ],
+  "delete_paths": []
+}

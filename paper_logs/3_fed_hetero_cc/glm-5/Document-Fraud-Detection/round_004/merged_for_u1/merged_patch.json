@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1 (target) verified patch wholesale: SKILL.md + violation-types.md + reconcile_claims.py. All three workers propose same workflow at different names; adding peers would fragment library. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/violation-types.md",
+    "document-reconciliation/scripts/reconcile_claims.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "document-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "document-reconciliation/references/violation-types.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "document-reconciliation/scripts/reconcile_claims.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.3887646
+}

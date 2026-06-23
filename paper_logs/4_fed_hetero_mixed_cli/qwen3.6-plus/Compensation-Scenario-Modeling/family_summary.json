@@ -1,0 +1,238 @@
+{
+  "family_name": "Compensation-Scenario-Modeling",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 13477.436596870422,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.0,
+    "max": 0.0,
+    "min": 0.0,
+    "n_passed": 0
+  },
+  "merger_cost_total_usd": 86.870658,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "01_orchestra_foundation_model"
+        ],
+        [
+          "u1",
+          "01_orchestra_foundation_model"
+        ],
+        [
+          "u2",
+          "01_orchestra_foundation_model"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 7,
+      "merger_cost_usd": 6.451884,
+      "elapsed_sec": 567.8738000392914
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "02_orchestra_archive_refresh_model"
+        ],
+        [
+          "u1",
+          "02_orchestra_archive_refresh_model"
+        ],
+        [
+          "u2",
+          "02_orchestra_archive_refresh_model"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 9,
+      "merger_cost_usd": 12.230535,
+      "elapsed_sec": 1992.6698083877563
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "03_university_faculty_model"
+        ],
+        [
+          "u1",
+          "03_university_faculty_model"
+        ],
+        [
+          "u2",
+          "03_university_faculty_model"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 9.344193,
+      "elapsed_sec": 1383.6084368228912
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "04_university_termload_refresh_model"
+        ],
+        [
+          "u1",
+          "04_university_termload_refresh_model"
+        ],
+        [
+          "u2",
+          "04_university_termload_refresh_model"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 11.757642,
+      "elapsed_sec": 1570.2700028419495
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "05_property_management_model"
+        ],
+        [
+          "u1",
+          "05_property_management_model"
+        ],
+        [
+          "u2",
+          "05_property_management_model"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 10.258818,
+      "elapsed_sec": 1181.7585978507996
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "06_property_portfolio_refresh_model"
+        ],
+        [
+          "u1",
+          "06_property_portfolio_refresh_model"
+        ],
+        [
+          "u2",
+          "06_property_portfolio_refresh_model"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 13.917045,
+      "elapsed_sec": 1668.9719290733337
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "07_airline_crew_model"
+        ],
+        [
+          "u1",
+          "07_airline_crew_model"
+        ],
+        [
+          "u2",
+          "07_airline_crew_model"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 13.557435000000002,
+      "elapsed_sec": 2186.4095737934113
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "08_construction_union_model"
+        ],
+        [
+          "u1",
+          "08_construction_union_model"
+        ],
+        [
+          "u2",
+          "08_construction_union_model"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 9.353106,
+      "elapsed_sec": 2925.8730289936066
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u0/Compensation-Scenario-Modeling",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u2/Compensation-Scenario-Modeling"
+  }
+}

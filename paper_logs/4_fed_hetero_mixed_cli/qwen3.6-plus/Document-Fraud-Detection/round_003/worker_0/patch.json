@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated expense-claims-validation skill to handle explicit alias tables, reference status validation (e.g., active/closed work orders), and revision-aware amount resolution. Added field service work order audit domain example. These patterns were critical in the trace and generalize to any claim validation involving multi-sheet directories, status-gated references, or amendment logs.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": []
+}

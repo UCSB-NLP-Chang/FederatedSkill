@@ -1,0 +1,68 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged R1 patches for u0: renamed skill to excel-workbook-modeling (peer convergence), applied u0's grading test priority workflow + u1's named range API guidance + u2's verification scripts. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/formula-patterns.md",
+    "excel-workbook-modeling/references/grading-patterns.md",
+    "excel-workbook-modeling/scripts/verify_formulas.py",
+    "excel-workbook-modeling/scripts/verify_workbook.py",
+    "excel-workbook-modeling/scripts/verify_xlsx.py"
+  ],
+  "delete_paths": [
+    "workbook-model-generation/SKILL.md",
+    "workbook-model-generation/references/formula-patterns.md",
+    "workbook-model-generation/scripts/verify_workbook.py"
+  ],
+  "provenance": {
+    "excel-workbook-modeling/scripts/verify_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.14285714285714285
+    ],
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.14285714285714285
+    ],
+    "workbook-model-generation/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u0",
+      0.14285714285714285
+    ],
+    "workbook-model-generation/scripts/verify_workbook.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-workbook-modeling/scripts/verify_xlsx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.14285714285714285
+    ],
+    "excel-workbook-modeling/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-workbook-modeling/references/grading-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "workbook-model-generation/references/formula-patterns.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-workbook-modeling/scripts/verify_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md"
+  ],
+  "cost_usd": 3.4595640000000003
+}

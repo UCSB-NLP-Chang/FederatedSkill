@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace shows a successful freshness/expiry-aware inventory analysis that extends the existing excel-inventory-analysis skill with a new domain pattern: subtracting expiring inventory from current stock before calculating coverage. This is a reusable pattern for perishable goods, time-limited inventory, and freshness-constrained supply chains.",
+  "upsert_paths": [
+    "excel-inventory-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

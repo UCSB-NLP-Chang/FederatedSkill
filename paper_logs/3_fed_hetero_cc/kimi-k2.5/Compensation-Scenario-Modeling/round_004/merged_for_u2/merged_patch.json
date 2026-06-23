@@ -1,0 +1,20 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Merged u2's test-first emphasis with u1's named range API fix. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5555555555555556
+    ]
+  },
+  "conflicts": [
+    "excel-financial-modeling/SKILL.md",
+    "__skill_md_invalid__:excel-financial-modeling/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 1.9918109999999998
+}

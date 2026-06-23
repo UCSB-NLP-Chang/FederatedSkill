@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "",
+  "upsert_paths": [
+    "order-data-extraction/SKILL.md",
+    "order-data-extraction/scripts/verify_output.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "order-data-extraction/SKILL.md": [
+      "upsert",
+      "u0",
+      1.0
+    ],
+    "order-data-extraction/scripts/verify_output.py": [
+      "upsert",
+      "u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.0
+}

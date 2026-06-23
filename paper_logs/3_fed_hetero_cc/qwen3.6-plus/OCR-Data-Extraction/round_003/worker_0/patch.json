@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated image-data-extraction skill to cover invoice extraction invariant, added keyword-priority total extraction patterns, date-line prioritization guidance, and python3 environment note. Prevents future agents from writing custom scripts when the existing skill can be adapted, and captures the DD/MM vs MM/DD fallback logic that caused the initial failure.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md"
+  ],
+  "delete_paths": []
+}

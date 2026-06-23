@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Created new production-planning skill (merged u2's technical detail + u1's early verification strategy) to close B3 gap. Library now has 3 skills: excel-manipulation, queue-capacity-planning, production-planning. See DECISIONS.md for full details.",
+  "upsert_paths": [
+    "production-planning/SKILL.md",
+    "production-planning/references/scenario_templates.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-planning/references/scenario_templates.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "production-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.2
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.7266400000000001
+}

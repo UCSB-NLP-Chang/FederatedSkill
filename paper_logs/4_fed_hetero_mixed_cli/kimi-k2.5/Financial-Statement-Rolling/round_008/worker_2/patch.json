@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "Add prepaid expense amortization invariants to financial-rollforward-workbook skill. The trace reveals the agent confused running balance vs SUM patterns for prepaid expenses. Since prepaid expense data comes with pre-calculated ending balances per period, it uses the SUM pattern (like deferred revenue), not the running balance chain (like project costs). Added specific column layout, control row formulas, and anti-patterns for prepaid expense schedules.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "delete_paths": []
+}

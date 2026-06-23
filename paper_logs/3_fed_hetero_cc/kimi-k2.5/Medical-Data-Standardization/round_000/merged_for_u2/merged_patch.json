@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Created 1 umbrella skill `clinical-lab-harmonization` from u1's best-performing patch (reward=0.74). Deliberately excluded target u2's own patch (reward=0.58) due to suspected threshold/script bugs. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/references/conversion-factors.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.941292
+}

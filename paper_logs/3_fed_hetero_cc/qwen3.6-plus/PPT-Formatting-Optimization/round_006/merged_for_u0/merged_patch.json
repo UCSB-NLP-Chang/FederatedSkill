@@ -1,0 +1,20 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R6. Extended pptx-manipulation with Archive Sheet pattern (ONE shape, multiple paragraphs) from u2. Did NOT add u2's narrow archive-photo-caption-cleanup skill. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.7777777777777778
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md",
+    "__skill_md_invalid__:pptx-manipulation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 3.0705749999999994
+}

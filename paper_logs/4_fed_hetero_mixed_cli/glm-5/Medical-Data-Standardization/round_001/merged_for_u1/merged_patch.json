@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5, claude-code) on Medical-Data-Standardization, Round 1. Applied u1's hepatic extension patch, fixed precision contradiction (adopted u2's clear `round(value, 2)` then `f\"{value:.2f}\"` rule), added Known invariants section, added Ammonia to script and SKILL.md. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/unit-conversions.md",
+    "clinical-lab-harmonization/scripts/harmonize_lab_csv.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/references/unit-conversions.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "clinical-lab-harmonization/scripts/harmonize_lab_csv.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "cost_usd": 7.280043000000001
+}

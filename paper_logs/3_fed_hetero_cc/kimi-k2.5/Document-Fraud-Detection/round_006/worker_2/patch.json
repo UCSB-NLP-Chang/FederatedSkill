@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The warehouse-coldchain-charge-review task validated cold chain shipping charge requests against carrier registry, shipment authorizations, and snapshot history. It involved PDF extraction from charge packets, Excel multi-sheet reading (carriers + aliases), CSV processing for authorizations with state filtering (approved only), snapshot revision handling (highest approved snapshot for amount), and carrier-shipment ownership validation. The multi-source-reconciliation skill already covers this pattern comprehensively - this task is essentially a direct application with carrier/shipment terminology instead of employee/trip or provider/order. The key novel elements are: (1) snapshot-based revision handling where empty amounts are skipped, (2) 'draft' state filtering in both authorizations and snapshots, (3) carrier-shipment ownership validation (like Entity-Reference Mismatch), (4) temperature_band as an additional carrier attribute. Rather than create a duplicate skill, I'll extend the existing multi-source-reconciliation skill with a new known invariant for this pattern and add a reference doc covering snapshot/revision handling patterns.",
+  "upsert_paths": [
+    "multi-source-reconciliation/SKILL.md",
+    "multi-source-reconciliation/references/amendment-handling.md"
+  ],
+  "delete_paths": []
+}

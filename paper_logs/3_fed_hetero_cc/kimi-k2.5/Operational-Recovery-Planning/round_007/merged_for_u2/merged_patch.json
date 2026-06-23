@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Synthesized u0+u1+u2 patches into production-planning SKILL.md: u0's `date` vs `datetime` type fix, u1's sheet name 31-char truncation handling, u2's automotive domain mapping + column header alignment. Extended agricultural_examples.md with automotive patterns. See DECISIONS.md for full details.",
+  "upsert_paths": [
+    "production-planning/SKILL.md",
+    "production-planning/references/agricultural_examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-planning/references/agricultural_examples.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "production-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.2
+    ]
+  },
+  "conflicts": [
+    "production-planning/SKILL.md"
+  ],
+  "cost_usd": 1.178816
+}

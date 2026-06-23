@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero",
+  "family_name": "PPT-Formatting-Optimization",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "museum-exhibit-caption-cleanup",
+      "wildlife-field-guide-caption-cleanup",
+      "coastal-trail-caption-cleanup",
+      "property-portfolio-caption-cleanup",
+      "transit-platform-caption-cleanup",
+      "incident-briefing-caption-cleanup",
+      "archive-photo-caption-cleanup",
+      "storm-damage-caption-cleanup"
+    ],
+    "u1": [
+      "museum-exhibit-caption-cleanup",
+      "wildlife-field-guide-caption-cleanup",
+      "coastal-trail-caption-cleanup",
+      "property-portfolio-caption-cleanup",
+      "transit-platform-caption-cleanup",
+      "incident-briefing-caption-cleanup",
+      "archive-photo-caption-cleanup",
+      "storm-damage-caption-cleanup"
+    ],
+    "u2": [
+      "museum-exhibit-caption-cleanup",
+      "wildlife-field-guide-caption-cleanup",
+      "coastal-trail-caption-cleanup",
+      "property-portfolio-caption-cleanup",
+      "transit-platform-caption-cleanup",
+      "incident-briefing-caption-cleanup",
+      "archive-photo-caption-cleanup",
+      "storm-damage-caption-cleanup"
+    ]
+  }
+}

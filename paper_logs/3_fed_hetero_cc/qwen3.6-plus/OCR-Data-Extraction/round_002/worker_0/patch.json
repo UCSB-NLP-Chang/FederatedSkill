@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated image-data-extraction skill to cover roster/reference CSV merging, clarify openpyxl None vs empty cell behavior, add travel-claims invariants, and improve ambiguous date parsing guidance based on the travel claim merge task trace.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md"
+  ],
+  "delete_paths": []
+}

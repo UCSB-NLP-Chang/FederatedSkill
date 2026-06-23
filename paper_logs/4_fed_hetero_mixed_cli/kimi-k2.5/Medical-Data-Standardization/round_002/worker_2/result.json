@@ -1,0 +1,29 @@
+{
+    "id": "0ad18940-d874-4228-8f43-96f50f628b91",
+    "started_at": "2026-05-18T00:16:48.747267",
+    "finished_at": "2026-05-18T00:23:33.474674",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "thyroid-monitoring-harmonization__HyHy8A6"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

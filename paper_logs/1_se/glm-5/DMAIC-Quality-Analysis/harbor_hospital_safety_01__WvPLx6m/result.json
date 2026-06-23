@@ -1,0 +1,103 @@
+{
+  "id": "a281aada-3698-4930-99b1-f43398d2ffb4",
+  "task_name": "harbor_hospital_safety_01",
+  "trial_name": "harbor_hospital_safety_01__WvPLx6m",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__DMAIC-Quality-Analysis/harbor_hospital_safety_01__WvPLx6m",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/DMAIC-Quality-Analysis/harbor_hospital_safety_01"
+  },
+  "source": "DMAIC-Quality-Analysis",
+  "task_checksum": "51ea068420bd596aceb8ca2fd8ffb7a812ebeb8a2eca46a35d78e5a4a6f2463f",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/DMAIC-Quality-Analysis/harbor_hospital_safety_01",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "DMAIC-Quality-Analysis"
+    },
+    "trial_name": "harbor_hospital_safety_01__WvPLx6m",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__DMAIC-Quality-Analysis",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "c70c0f08-5b61-4112-be75-8980d43fa13f"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 253411,
+    "n_cache_tokens": 191323,
+    "n_output_tokens": 11062,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-04-27T10:50:16.901582Z",
+  "finished_at": "2026-04-27T10:53:30.103548Z",
+  "environment_setup": {
+    "started_at": "2026-04-27T10:50:16.903528Z",
+    "finished_at": "2026-04-27T10:50:17.971024Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-04-27T10:50:17.971037Z",
+    "finished_at": "2026-04-27T10:50:18.205918Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-04-27T10:50:18.205971Z",
+    "finished_at": "2026-04-27T10:53:18.273472Z"
+  },
+  "verifier": {
+    "started_at": "2026-04-27T10:53:18.273947Z",
+    "finished_at": "2026-04-27T10:53:19.538002Z"
+  }
+}

@@ -1,0 +1,104 @@
+{
+    "id": "6e32e3b9-602b-4fc9-9be2-1248546fe47f",
+    "task_name": "econ-broadcasting-advertising-correlation",
+    "trial_name": "econ-broadcasting-advertising-co__X388exZ",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/round_002/worker_1/econ-broadcasting-advertising-co__X388exZ",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Industry-Correlation-Analysis/econ-broadcasting-advertising-correlation"
+    },
+    "source": "Industry-Correlation-Analysis",
+    "task_checksum": "9e72bca53e58a4b315f4fd177680082aa6e24433aa3d2b3fbf9c5569068e088a",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Industry-Correlation-Analysis/econ-broadcasting-advertising-correlation",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Industry-Correlation-Analysis"
+        },
+        "trial_name": "econ-broadcasting-advertising-co__X388exZ",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/round_002/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 4.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "e99ddde8-c8f7-4298-bb10-2024293fa4df"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.150",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 216154,
+        "n_cache_tokens": 183040,
+        "n_output_tokens": 4012,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-24T02:34:15.581784Z",
+    "finished_at": "2026-05-24T02:36:42.362407Z",
+    "environment_setup": {
+        "started_at": "2026-05-24T02:34:15.583054Z",
+        "finished_at": "2026-05-24T02:34:19.671281Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-24T02:34:19.671335Z",
+        "finished_at": "2026-05-24T02:34:23.292171Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-24T02:34:23.292264Z",
+        "finished_at": "2026-05-24T02:36:28.088943Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-24T02:36:28.094903Z",
+        "finished_at": "2026-05-24T02:36:29.487670Z"
+    }
+}

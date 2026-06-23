@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "The task failed because the agent applied the financial rollforward SUM pattern to a contract liability task that required the running balance pattern (like rebates). The trace reveals the agent correctly handled complex data processing (nested JSON, revision deduplication, CSV routing/patches, template clearing) but categorized the formula pattern wrong. Added explicit decision rules to distinguish SUM-based (financial) vs running-balance (rebate/project/contract) rollforwards, included contract liability as a rebate-rollforward use case, and documented the complete nested JSON + CSV patch workflow that was rediscovered in the trace.",
+  "upsert_paths": [
+    "rebate-rollforward/SKILL.md"
+  ],
+  "delete_paths": []
+}

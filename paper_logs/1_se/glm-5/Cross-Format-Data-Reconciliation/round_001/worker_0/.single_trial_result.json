@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "02-hospital-capacity-portfolio-d__yu3mhK4",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_001/worker_0/02-hospital-capacity-portfolio-d__yu3mhK4",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_001/worker_0/02-hospital-capacity-portfolio-d__yu3mhK4",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

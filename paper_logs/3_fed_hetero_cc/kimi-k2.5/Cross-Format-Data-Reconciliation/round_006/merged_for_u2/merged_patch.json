@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "R6 merge complete for u2/kimi-k2.5: selectively absorbed u0's flat-vs-nested change schema decision rule and container key variants into SKILL.md, absorbed u1's multi-page PDF extraction pattern into references. Kept kimi's CLI-based style. See DECISIONS.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.2576716000000006
+}

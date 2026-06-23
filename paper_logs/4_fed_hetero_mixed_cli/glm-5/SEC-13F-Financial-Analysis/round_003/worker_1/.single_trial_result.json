@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "issuer-ownership-rollup__tGfYHQM",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/SEC-13F-Financial-Analysis/round_003/worker_1/issuer-ownership-rollup__tGfYHQM",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/SEC-13F-Financial-Analysis/round_003/worker_1/issuer-ownership-rollup__tGfYHQM",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

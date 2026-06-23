@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Extended clinical-lab-harmonization skill to cover neonatal sepsis panels. Added CRP (C-Reactive Protein) conversion factor (\u00f710 for mg/L\u2192mg/dL) to the main conversion table and added a new 'neonatal-sepsis-panel' subsection under Known invariants with neonatal-specific ranges and handling notes for CRP, bilirubin, and the specimen_id identifier.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": []
+}

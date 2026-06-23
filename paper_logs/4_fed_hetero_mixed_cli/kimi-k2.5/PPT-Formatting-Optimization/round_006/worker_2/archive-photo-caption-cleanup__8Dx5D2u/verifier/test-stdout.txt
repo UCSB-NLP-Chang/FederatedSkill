@@ -1,0 +1,82 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ...F.....                                                                [100%]
+E           =================================== FAILURES ===================================
+E           ____________________ test_cleaned_captions_are_repositioned ____________________
+E           
+E               def test_cleaned_captions_are_repositioned() -> None:
+E                   alias_pairs = load_alias_pairs()
+E                   with zipfile.ZipFile(OUTPUT_PPTX, "r") as zipf:
+E                       slide_names = iter_slide_names(zipf)
+E                       slide_width, slide_height = get_slide_dimensions(zipf)
+E                       for slide_cfg in CONFIG["slides"]:
+E                           expected = normalize_text(alias_pairs.get(normalize_text(str(slide_cfg["caption_raw"])), str(slide_cfg["caption_clean"])))
+E                           slide = load_slide(zipf, slide_names, int(slide_cfg["slide_number"]))
+E                           paragraph = find_paragraphs(slide, expected)[0]
+E           >               assert_caption_position(slide, paragraph, slide_cfg, slide_width, slide_height)
+E           
+E           /tests/test_outputs.py:222: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           slide = <Element '{http://schemas.openxmlformats.org/presentationml/2006/main}sld' at 0x7f062e6deed0>
+E           paragraph = <Element '{http://schemas.openxmlformats.org/drawingml/2006/main}p' at 0x7f062eb4ca40>
+E           slide_cfg = {'caption_clean': 'River Market Crowd (Cabinet Card)', 'caption_raw': 'Cabinet Card - River Market Crowd', 'preserve_texts': ['Shelf note: Sleeve rehousing queued'], 'slide_number': 2}
+E           slide_width = 12192000, slide_height = 6858000
+E           
+E               def assert_caption_position(slide: ET.Element, paragraph: ET.Element, slide_cfg: dict[str, object], slide_width: int, slide_height: int) -> None:
+E                   parent_map = build_parent_map(slide)
+E                   shape = find_parent_shape(paragraph, parent_map)
+E                   assert shape is not None, "Caption shape is missing"
+E               
+E                   if slide_cfg.get("container_mode") == "group":
+E                       container = find_parent_group(shape, parent_map)
+E                       assert container is not None, "Caption group container is missing"
+E                       xfrm = container.find("p:grpSpPr/a:xfrm", NS)
+E                   else:
+E                       xfrm = shape.find("p:spPr/a:xfrm", NS)
+E                   assert xfrm is not None, "Caption transform is missing"
+E               
+E                   off = xfrm.find("a:off", NS)
+E                   ext = xfrm.find("a:ext", NS)
+E                   assert off is not None and ext is not None, "Caption offset/extent is missing"
+E                   container_x = int(off.get("x"))
+E                   container_y = int(off.get("y"))
+E                   container_w = int(ext.get("cx"))
+E                   container_h = int(ext.get("cy"))
+E           >       assert container_w >= int(slide_width * 0.9), "Caption container should be widened for a single-line label"
+E           E       AssertionError: Caption container should be widened for a single-line label
+E           E       assert 2769320 >= 10972800
+E           E        +  where 10972800 = int((12192000 * 0.9))
+E           
+E           /tests/test_outputs.py:130: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_cleaned_captions_are_repositioned - Ass...
+E           1 failed, 8 passed in 0.11s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.29s ===============================

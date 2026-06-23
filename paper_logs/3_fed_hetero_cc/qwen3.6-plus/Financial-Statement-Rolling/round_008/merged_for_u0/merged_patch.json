@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's SKILL.md (prepaid-amortization variant + GL column N guidance), added u2's formula-templates.md reference, extended quick_validate.py with Summary GL link check. Rejected u1's patch (documents WRONG formulas). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/references/formula-templates.md",
+    "financial-rollforward-workbook/scripts/quick_validate.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-rollforward-workbook/references/formula-templates.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "financial-rollforward-workbook/scripts/quick_validate.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "cost_usd": 4.639164
+}

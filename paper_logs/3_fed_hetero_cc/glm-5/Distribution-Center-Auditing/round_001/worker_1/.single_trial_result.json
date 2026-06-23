@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_trailer_detention_audit__K94vyjW",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/round_001/worker_1/harbor_trailer_detention_audit__K94vyjW",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/round_001/worker_1/harbor_trailer_detention_audit__K94vyjW",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

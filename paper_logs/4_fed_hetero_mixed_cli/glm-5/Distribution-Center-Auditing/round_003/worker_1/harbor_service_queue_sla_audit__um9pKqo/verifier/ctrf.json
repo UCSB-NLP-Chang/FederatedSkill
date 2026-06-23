@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779079262.5820076,
+            "stop": 1779079263.0943134
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.4946942087262869,
+                "start": 1779079262.5879154,
+                "stop": 1779079263.0942042,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ...F.                                                                    [100%]\nE           =================================== FAILURES ===================================\nE           _____________________ test_summary_sheet_matches_expected ______________________\nE           \nE           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7f362daf4da0>\nE           source_and_rules = ([{'Analyst': 'Mina', 'Escalation Code': 'ESC-01', 'Open Age Hours': 2, 'Owner': 'Alex', ...}, {'Analyst': 'Mina', 'Es....0}, 'P3': {'escalation_required': False, 'max_hours': 16.0}, 'P4': {'escalation_required': False, 'max_hours': 24.0}})\nE           \nE               def test_summary_sheet_matches_expected(output_wb, source_and_rules):\nE                   rows, rules = source_and_rules\nE                   ws = output_wb['Summary']\nE                   headers = [ws.cell(1, c).value for c in range(1, 6)]\nE           >       assert headers == SUMMARY_HEADERS\nE           E       AssertionError: assert ['Queue', 'Re...Total Errors'] == ['Queue', 'Re...Total Errors']\nE           E         \nE           E         At index 2 diff: 'SLA Breach' != 'SLA Breaches'\nE           E         Use -v to get more diff\nE           \nE           /tests/test_outputs.py:139: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_summary_sheet_matches_expected - Assert...\nE           1 failed, 4 passed in 0.25s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

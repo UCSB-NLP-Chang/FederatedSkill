@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds multi-line keyword handling patterns to the existing ocr-data-extraction skill. The trace shows OCR frequently splits compound keywords (e.g., 'TOTAL\\n\\nDUE: 120.75') or separates keywords from values with blank lines. The agent had to debug and fix this mid-task. This update captures the reusable pattern so future agents handle it immediately.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": []
+}

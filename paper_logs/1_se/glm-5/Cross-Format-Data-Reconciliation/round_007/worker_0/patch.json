@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The agent successfully completed a PDF vs Excel dataset comparison but wrote custom code instead of using the existing dataset-diff skill. The skill already had all needed functionality (load_pdf_from_base64, load_excel, diff_datasets). Updating the description to explicitly mention PDF vs Excel comparisons to improve discoverability for this common reconciliation pattern.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md"
+  ],
+  "delete_paths": []
+}

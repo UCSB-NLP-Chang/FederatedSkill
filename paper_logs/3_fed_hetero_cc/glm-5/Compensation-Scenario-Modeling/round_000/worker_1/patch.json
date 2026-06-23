@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.14285714285714285,
+  "summary": "The agent failed a pytest suite while building an Excel compensation model. The trace shows the agent successfully read source data and created a workbook, but the test_output.py::test_legacy_pytest_suite failed. This skill captures reusable patterns for Excel financial model construction with formula-based calculations, validation steps to catch test failures early, and common pitfalls when building spreadsheet models programmatically.",
+  "upsert_paths": [
+    "excel-financial-models/SKILL.md"
+  ],
+  "delete_paths": []
+}

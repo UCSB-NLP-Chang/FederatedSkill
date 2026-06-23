@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated expense-record-validation/SKILL.md to explicitly cover crosswalk/mapping table resolution and authorization/ownership checks observed in clinic-shift-claim-review. Clarified that audit_helper.py is a structural template requiring column adaptation and domain-specific loop modifications. Added clinic-shift-claim-review to known invariants.",
+  "upsert_paths": [
+    "expense-record-validation/SKILL.md"
+  ],
+  "delete_paths": []
+}

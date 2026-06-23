@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "Adds commission-asset-rollforward specific guidance, anti-pattern for formulas in non-monetary columns, and stronger verification emphasis to prevent the circular reference failures seen in this trace.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "delete_paths": []
+}

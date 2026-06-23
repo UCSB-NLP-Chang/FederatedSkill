@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779077774.2761927,
+            "stop": 1779077774.7080407
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.41505177691578865,
+                "start": 1779077774.2827976,
+                "stop": 1779077774.7079248,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .FF..                                                                    [100%]\nE           =================================== FAILURES ===================================\nE           ______________________ test_rawdata_copies_source_exactly ______________________\nE           \nE           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7f8376045dc0>\nE           source_rows = [{'Actual Hold Hours': 4, 'Allowed Hold Hours': 4, 'Carrier': 'CarrierA', 'Dispatcher': 'Diaz', ...}, {'Actual Hold Ho...'Chen', ...}, {'Actual Hold Hours': 3, 'Allowed Hold Hours': 2, 'Carrier': 'CarrierC', 'Dispatcher': 'Chen', ...}, ...]\nE           \nE               def test_rawdata_copies_source_exactly(output_wb, source_rows):\nE                   ws = output_wb['RawData']\nE                   headers = [ws.cell(1, c).value for c in range(1, 9)]\nE                   assert headers == BASE_HEADERS\nE                   actual = []\nE                   for r in range(2, ws.max_row + 1):\nE                       vals = [ws.cell(r, c).value for c in range(1, 9)]\nE                       if all(v is None for v in vals):\nE                           continue\nE                       actual.append(vals)\nE                   expected = [[row[h] for h in BASE_HEADERS] for row in source_rows]\nE           >       assert actual == expected\nE           E       AssertionError: assert [['LD-001', '...D', ...], ...] == [['LD-001', '...D', ...], ...]\nE           E         \nE           E         At index 2 diff: ['LD-003', 'CarrierB', 5, 5, 'NO', None, 'Y2', 'Mills'] != ['LD-003', 'CarrierB', 5, 5, 'NO', 'N/A', 'Y2', 'Mills']\nE           E         Use -v to get more diff\nE           \nE           /tests/test_outputs.py:106: AssertionError\nE           __________________________ test_formatted_data_logic ___________________________\nE           \nE           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7f8376045dc0>\nE           source_rows = [{'Actual Hold Hours': 4, 'Allowed Hold Hours': 4, 'Carrier': 'CarrierA', 'Dispatcher': 'Diaz', ...}, {'Actual Hold Ho...'Chen', ...}, {'Actual Hold Hours': 3, 'Allowed Hold Hours': 2, 'Carrier': 'CarrierC', 'Dispatcher': 'Chen', ...}, ...]\nE           \nE               def test_formatted_data_logic(output_wb, source_rows):\nE                   ws = output_wb['Formatted Data']\nE                   headers = [ws.cell(1, c).value for c in range(1, 13)]\nE                   assert headers == FORMATTED_HEADERS\nE                   for i, row in enumerate(source_rows, start=2):\nE                       out = [ws.cell(i, c).value for c in range(1, 13)]\nE           >           assert out[:8] == [row[h] for h in BASE_HEADERS]\nE           E           AssertionError: assert ['LD-003', 'C...O', None, ...] == ['LD-003', 'C...', 'N/A', ...]\nE           E             \nE           E             At index 5 diff: None != 'N/A'\nE           E             Use -v to get more diff\nE           \nE           /tests/test_outputs.py:115: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_rawdata_copies_source_exactly - Asserti...\nE           FAILED ../tests/test_outputs.py::test_formatted_data_logic - AssertionError: ...\nE           2 failed, 3 passed in 0.19s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

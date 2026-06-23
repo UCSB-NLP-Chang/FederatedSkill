@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) Round 5. Applied u0's SKILL.md (dynamic row computation), added u1's verification script, integrated u2's data_only guidance. B2 gap persists for all workers; decisions in DECISIONS.md.",
+  "upsert_paths": [
+    "excel-workbook-construction/SKILL.md",
+    "excel-workbook-construction/scripts/verify_rollforward.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-construction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "excel-workbook-construction/scripts/verify_rollforward.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.077877
+}

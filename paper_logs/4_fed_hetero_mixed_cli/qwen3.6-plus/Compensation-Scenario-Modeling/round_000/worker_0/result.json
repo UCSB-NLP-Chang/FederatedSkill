@@ -1,0 +1,29 @@
+{
+    "id": "e7f64e87-4cc3-4d44-b0fa-62a4d86b67ac",
+    "started_at": "2026-05-18T00:03:15.852069",
+    "finished_at": "2026-05-18T00:03:15.856456",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "01_orchestra_foundation_model__LkcriXZ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

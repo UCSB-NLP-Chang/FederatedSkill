@@ -1,0 +1,33 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's financial-rollforward-workbook SKILL.md (correct SUM pattern for prepaid expenses with ending_balance fields), u1's rebate-rollforward SKILL.md and verify_workbook.py (STOP section on column O bug, verification script). Rejected u0's prepaid-expense-amortization skill (wrong pattern, 4-skill cap). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "rebate-rollforward/SKILL.md",
+    "rebate-rollforward/scripts/verify_workbook.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "rebate-rollforward/scripts/verify_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "rebate-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "financial-rollforward-workbook/SKILL.md",
+    "__skill_md_invalid__:project-cost-rollforward/SKILL.md: bad YAML (ScannerError)",
+    "__skill_md_invalid__:rebate-rollforward/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 4.268199000000001
+}

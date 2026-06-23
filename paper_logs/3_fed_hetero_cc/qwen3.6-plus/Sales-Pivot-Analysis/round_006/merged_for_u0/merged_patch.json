@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's SKILL.md (comprehensive enforcement mechanisms) + u2's event-registration-patterns.md reference. Library validated. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md",
+    "sales-pivot-analysis/references/event-registration-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.9473684210526315
+    ],
+    "sales-pivot-analysis/references/event-registration-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.9473684210526315
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.41612699999999997
+}

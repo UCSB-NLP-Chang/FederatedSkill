@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The agent failed because it applied rollforward formulas (=B+C-D) to control rows, creating circular references that the verify script would have caught. The existing financial-rollforward-workbook skill already warns about this, but the agent either didn't read it or the warning wasn't prominent enough for this variant. This patch adds a commission-asset-rollforward sub-task section with explicit formula patterns, strengthens the circular reference checkpoint, and adds a decision rule for when to use rollforward vs SUM on control rows.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "delete_paths": []
+}

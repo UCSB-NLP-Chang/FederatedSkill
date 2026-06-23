@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent created a media rights rollforward workbook that passed self-verification but failed the verifier's test_legacy_node_checks. This indicates structural or formula reference mismatches that self-verification didn't catch. Updating financial-reconciliation skill to add this sub-task variant and reinforce guidance about control row positions, summary column references, and what the legacy node checks typically validate.",
+  "upsert_paths": [
+    "financial-reconciliation/SKILL.md"
+  ],
+  "delete_paths": []
+}

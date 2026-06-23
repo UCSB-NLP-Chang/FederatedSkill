@@ -1,0 +1,100 @@
+{
+    "id": "60b310f8-131a-439e-b275-a1e605625533",
+    "task_name": "issuer-ownership-rollup",
+    "trial_name": "issuer-ownership-rollup__U5R2Vqe",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5-r1m-SEC-13F-Financial-Analysis/issuer-ownership-rollup__U5R2Vqe",
+    "task_id": {
+        "path": "test_tasks/SEC-13F-Financial-Analysis/issuer-ownership-rollup"
+    },
+    "source": "SEC-13F-Financial-Analysis",
+    "task_checksum": "38115127419a4ab4606355db0a271294d56e75f5c80058233eeaf1fdfe7f2e1b",
+    "config": {
+        "task": {
+            "path": "test_tasks/SEC-13F-Financial-Analysis/issuer-ownership-rollup",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "SEC-13F-Financial-Analysis"
+        },
+        "trial_name": "issuer-ownership-rollup__U5R2Vqe",
+        "trials_dir": "jobs/iter-baseline-kimi-k2.5-r1m-SEC-13F-Financial-Analysis",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "kimi-k2.5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://api.moonshot.ai/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "0b55dcd8-5baf-4ffc-9b71-a7c8c6d7dbb1"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.150",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 236985,
+        "n_cache_tokens": 228608,
+        "n_output_tokens": 2137,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-26T00:53:38.688643Z",
+    "finished_at": "2026-05-26T00:55:04.355966Z",
+    "environment_setup": {
+        "started_at": "2026-05-26T00:53:38.905854Z",
+        "finished_at": "2026-05-26T00:53:40.405175Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-26T00:53:40.405188Z",
+        "finished_at": "2026-05-26T00:53:40.902024Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-26T00:53:40.902088Z",
+        "finished_at": "2026-05-26T00:54:50.896532Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-26T00:54:50.904735Z",
+        "finished_at": "2026-05-26T00:54:52.477166Z"
+    }
+}

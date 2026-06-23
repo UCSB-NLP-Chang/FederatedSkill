@@ -1,0 +1,29 @@
+{
+    "id": "e3b2c903-8ce8-495b-9b0b-c3c930e7de19",
+    "started_at": "2026-05-23T22:34:12.562020",
+    "finished_at": "2026-05-23T22:37:37.209878",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-broadcasting-advertising-co__SAQ49gs"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

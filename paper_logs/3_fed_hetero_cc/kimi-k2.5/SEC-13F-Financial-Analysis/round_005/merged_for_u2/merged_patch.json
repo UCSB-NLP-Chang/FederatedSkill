@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied synthesized SKILL.md with schema lookup table for kimi's R5 schema confusion, absorbed u1's B3-Single/B3-Partial/B6 schema variants, kept shell-first workflow. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-fund-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md"
+  ],
+  "cost_usd": 0.7849635000000001
+}

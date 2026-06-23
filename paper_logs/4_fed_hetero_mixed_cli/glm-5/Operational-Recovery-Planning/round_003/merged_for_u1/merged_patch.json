@@ -1,0 +1,38 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R3. Applied target's verified SKILL.md + variants.md wholesale (reward=1.0), enriched with u0's header verification workflow and formulas. Extended script with capacity-per-day option. Rejected u2's patch (reward=0.5). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/variants.md",
+    "production-capacity-planning/scripts/calculate_catchup.py"
+  ],
+  "delete_paths": [
+    "production-capacity-planning/references/calculation-details.md"
+  ],
+  "provenance": {
+    "production-capacity-planning/references/variants.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "production-capacity-planning/scripts/calculate_catchup.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "production-capacity-planning/references/calculation-details.md": [
+      "delete",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "production-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 1.2451743000000004
+}

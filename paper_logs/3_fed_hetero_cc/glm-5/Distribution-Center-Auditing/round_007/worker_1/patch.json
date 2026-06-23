@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8333333333333334,
+  "summary": "Added harbor-cycle-count-variance-audit as a new known invariant to the existing spreadsheet-audit-reporting skill. This pattern involves multi-file join with composite keys, event type filtering (FINAL only), null count handling, variance threshold calculation, and conditional approval checks. The pattern is similar to harbor-outbound-manifest-audit but with variance-specific logic.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": []
+}

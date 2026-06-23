@@ -1,0 +1,84 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .......FFF                                                               [100%]
+E           =================================== FAILURES ===================================
+E           _________________ TestSheetStructure.test_quarterly_totals_row _________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f9f63948830>
+E           
+E               def test_quarterly_totals_row(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['EE Calcs (Current)']
+E                   # Row 79 should have quarterly totals
+E                   # Check H79 (first data column)
+E                   h79 = ws.cell(row=79, column=8).value
+E           >       assert h79 is not None, "Row 79 (quarterly totals) should exist in EE Calcs"
+E           E       AssertionError: Row 79 (quarterly totals) should exist in EE Calcs
+E           E       assert None is not None
+E           
+E           /tests/test_outputs.py:53: AssertionError
+E           ___________________ TestSheetStructure.test_roster_migrated ____________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f9f637ea360>
+E           
+E               def test_roster_migrated(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['Roster']
+E                   # Should have at least 75 faculty entries
+E                   count = sum(1 for r in ws.iter_rows(min_row=5, max_row=200, min_col=2, max_col=2) if r[0].value is not None)
+E           >       assert count >= 75, f"Expected >=75 roster entries, got {count}"
+E           E       AssertionError: Expected >=75 roster entries, got 0
+E           E       assert 0 >= 75
+E           
+E           /tests/test_outputs.py:60: AssertionError
+E           ___________ TestSheetStructure.test_ee_calcs_yoy_service_progression ___________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f9f62e87d70>
+E           
+E               def test_ee_calcs_yoy_service_progression(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws1 = wb['EE Calcs (Current)']
+E                   ws2 = wb['EE Calcs (Yr+1)']
+E                   # Yrs of service should be +1 in Yr+1
+E                   for r in range(4, 79):
+E                       v1 = ws1.cell(row=r, column=5).value
+E                       v2 = ws2.cell(row=r, column=5).value
+E                       if v1 is not None and v2 is not None:
+E           >               assert v2 == v1 + 1, f"Row {r}: Yr+1 service should be +1 (got {v1}->{v2})"
+E                                        ^^^^^^
+E           E               TypeError: can only concatenate str (not "int") to str
+E           
+E           /tests/test_outputs.py:71: TypeError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_quarterly_totals_row
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_roster_migrated - A...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_ee_calcs_yoy_service_progression
+E           3 failed, 7 passed in 0.72s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.98s ===============================

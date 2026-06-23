@@ -1,0 +1,29 @@
+{
+    "id": "c529ded7-ddc1-4b4b-8bed-21e8fd7bbfa2",
+    "started_at": "2026-05-13T23:28:15.441304",
+    "finished_at": "2026-05-13T23:34:39.477850",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "northstar_warranty_reserve_conso__Yo5CjMk"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

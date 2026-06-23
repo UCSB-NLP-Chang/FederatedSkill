@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5), Round 2. Synthesized sales-pivot-analysis SKILL.md from u0+u1 patches: added openpyxl pivot anti-pattern, Step 0 checklist for exact names, validate output step, library circulation domain, and pivot column naming guidance. All rewards were 0.0; no validated patch to apply wholesale. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.0527894
+}

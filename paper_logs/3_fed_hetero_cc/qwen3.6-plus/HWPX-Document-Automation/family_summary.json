@@ -1,0 +1,238 @@
+{
+  "family_name": "HWPX-Document-Automation",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 5896.477843046188,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.8333333333333334,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 20
+  },
+  "merger_cost_total_usd": 13.6123812,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "hwpx-supplier-contact-sheet"
+        ],
+        [
+          "u1",
+          "hwpx-supplier-contact-sheet"
+        ],
+        [
+          "u2",
+          "hwpx-supplier-contact-sheet"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 1.0352442,
+      "elapsed_sec": 568.5245196819305
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "hwpx-event-announcement"
+        ],
+        [
+          "u1",
+          "hwpx-event-announcement"
+        ],
+        [
+          "u2",
+          "hwpx-event-announcement"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 5,
+      "merger_cost_usd": 1.0121985,
+      "elapsed_sec": 512.1581614017487
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "hwpx-clinic-intake-summary"
+        ],
+        [
+          "u1",
+          "hwpx-clinic-intake-summary"
+        ],
+        [
+          "u2",
+          "hwpx-clinic-intake-summary"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 1.4363901,
+      "elapsed_sec": 561.097234249115
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "hwpx-project-proposal"
+        ],
+        [
+          "u1",
+          "hwpx-project-proposal"
+        ],
+        [
+          "u2",
+          "hwpx-project-proposal"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 1.5898409999999998,
+      "elapsed_sec": 641.8569102287292
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "hwpx-training-feedback"
+        ],
+        [
+          "u1",
+          "hwpx-training-feedback"
+        ],
+        [
+          "u2",
+          "hwpx-training-feedback"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 1.4701308000000002,
+      "elapsed_sec": 762.1170315742493
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "hwpx-safety-audit-brief"
+        ],
+        [
+          "u1",
+          "hwpx-safety-audit-brief"
+        ],
+        [
+          "u2",
+          "hwpx-safety-audit-brief"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 2.8083299999999998,
+      "elapsed_sec": 1129.9552676677704
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "hwpx-renewal-playbook-update"
+        ],
+        [
+          "u1",
+          "hwpx-renewal-playbook-update"
+        ],
+        [
+          "u2",
+          "hwpx-renewal-playbook-update"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 2.6380788,
+      "elapsed_sec": 1050.2244551181793
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "hwpx-inventory-report"
+        ],
+        [
+          "u1",
+          "hwpx-inventory-report"
+        ],
+        [
+          "u2",
+          "hwpx-inventory-report"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 1.6221678000000002,
+      "elapsed_sec": 670.4754798412323
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u0/HWPX-Document-Automation",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u1/HWPX-Document-Automation",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/worker_skills/u2/HWPX-Document-Automation"
+  }
+}

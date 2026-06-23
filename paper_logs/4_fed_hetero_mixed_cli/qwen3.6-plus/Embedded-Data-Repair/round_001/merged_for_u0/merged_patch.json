@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged u0+u1 patches: SKILL.md with \"Calculation precision\" section, helper script with formula-safety + repr() enforcement, reference with precision-loss pattern. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/references/openxml-structures.md",
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "edit-embedded-office-xml/references/openxml-structures.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "cost_usd": 3.869334
+}

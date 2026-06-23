@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Creates a skill for editing embedded Excel workbooks inside PowerPoint files, capturing the working pattern from the trace: using Python zipfile to navigate PPTX structure, locating embedded XLSX, modifying cell values while preserving formulas, and rebuilding the archive.",
+  "upsert_paths": [
+    "pptx-embedded-excel/SKILL.md",
+    "pptx-embedded-excel/scripts/update_cell.py"
+  ],
+  "delete_paths": []
+}

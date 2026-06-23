@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u0's placeholder context awareness (SKILL.md) and u1's budget/month span patterns (korean-data-transformations.md). Rejected u2's hwpx-editing naming divergence. Library: 1 skill + 4 files. See DECISIONS.md.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-filling/references/korean-data-transformations.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "hwpx-template-filling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.40875510000000004
+}

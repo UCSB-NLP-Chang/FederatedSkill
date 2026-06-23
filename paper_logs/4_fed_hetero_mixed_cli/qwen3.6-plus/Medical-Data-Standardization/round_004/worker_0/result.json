@@ -1,0 +1,29 @@
+{
+    "id": "e1f9e4bd-105e-45d2-ba93-fed471cd436f",
+    "started_at": "2026-05-18T01:11:09.484150",
+    "finished_at": "2026-05-18T01:16:33.864588",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "oncology-followup-dedup-harmoniz__4BQimHi"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

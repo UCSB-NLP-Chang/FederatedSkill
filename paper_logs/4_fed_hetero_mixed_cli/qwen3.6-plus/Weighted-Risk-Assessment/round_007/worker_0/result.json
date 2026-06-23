@@ -1,0 +1,29 @@
+{
+    "id": "c9730c7d-5a5a-43fe-bf68-6a97045050a4",
+    "started_at": "2026-05-18T09:18:08.743040",
+    "finished_at": "2026-05-18T09:22:32.895593",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "hospital-capacity-at-risk-calc__nuBsYBp"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

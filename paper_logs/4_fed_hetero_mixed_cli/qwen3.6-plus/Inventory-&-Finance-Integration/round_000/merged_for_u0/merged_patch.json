@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus/qwen-code). Applied 2 skills: inventory-metrics-calculation (from u0's validated patch, renamed for domain-orientation) and python-package-installation (from u1's utility patch). Rejected u2's overlapping openpyxl skill per target-preference principle. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "inventory-metrics-calculation/SKILL.md",
+    "python-package-installation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-metrics-calculation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "python-package-installation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.940227
+}

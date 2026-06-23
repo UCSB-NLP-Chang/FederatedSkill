@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R6: Applied target's validated patch (reward=1.0) covering both placeholder-based and direct value replacement workflows. Enhanced with u0's split-run regex bridging pattern. Kept broader `hwpx-editing` name validated by R6 B3 success. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "hwpx-editing/SKILL.md",
+    "hwpx-editing/references/direct-value-replacement.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "hwpx-editing/references/direct-value-replacement.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-filling/SKILL.md",
+    "__skill_md_invalid__:hwpx-editing/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 1.0184004
+}

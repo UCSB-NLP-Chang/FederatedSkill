@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u1's validated B3 content (compare_quarters.py + SKILL.md) with qwen-specific STOP-checkpoint enforcement. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/scripts/compare_quarters.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "sec-13f-fund-analysis/scripts/compare_quarters.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.5853042
+}

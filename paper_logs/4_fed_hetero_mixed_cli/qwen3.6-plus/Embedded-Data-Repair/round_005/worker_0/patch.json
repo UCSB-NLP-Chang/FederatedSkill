@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The trace confirms the existing edit-embedded-office-xml skill covers the core workflow well. The agent succeeded after two ZIP-handling failures: (1) in-place modification of the same PPTX file caused 'Truncated file header', and (2) a context-manager scope issue closed the source zip prematurely. The existing skill already warns against dict-based ZIP reconstruction and provides the correct ZipInfo-preserving pattern. I'm adding an explicit anti-pattern for in-place ZIP modification and tightening the repack guidance to prevent these specific failure modes.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": []
+}

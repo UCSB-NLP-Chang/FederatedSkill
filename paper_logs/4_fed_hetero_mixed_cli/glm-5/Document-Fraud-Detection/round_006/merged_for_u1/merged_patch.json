@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Absorbed u0's R6 patterns (out-of-scope page filtering, pdftotext fallback, empty/null amendment handling) into `cross-document-validation/SKILL.md`. Kept umbrella name per memory.md guidance \u2014 objectively better-scoped for this family. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-document-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.3408489999999995
+}

@@ -1,0 +1,29 @@
+{
+    "id": "f3087bc1-3cec-4288-9497-4d7ee3b33579",
+    "started_at": "2026-05-18T03:03:21.709680",
+    "finished_at": "2026-05-18T03:13:57.760297",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__DMAIC-Quality-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_gdpval_37__VVwJe9r"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

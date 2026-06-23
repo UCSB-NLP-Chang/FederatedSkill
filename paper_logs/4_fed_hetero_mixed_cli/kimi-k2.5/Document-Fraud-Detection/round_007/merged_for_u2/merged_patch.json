@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's comprehensive SKILL.md (252 lines, kimi-optimized), u0's domain-examples.md with Clinical Trial section (+89 lines), and u2's sparse-amendments.md reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md",
+    "expense-claims-validation/references/sparse-amendments.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "expense-claims-validation/references/sparse-amendments.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "expense-claims-validation/SKILL.md"
+  ],
+  "cost_usd": 3.4978589999999996
+}

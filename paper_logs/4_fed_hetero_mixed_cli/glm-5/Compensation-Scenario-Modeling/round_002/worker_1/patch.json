@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8,
+  "summary": "The trace shows a critical failure pattern: the agent ran extensive custom verification scripts but never ran the actual grading test (`pytest test_output.py -v`), then declared success while the verifier failed. The existing skill already warns about this, but the guidance needs to be more prominent and actionable. This patch strengthens the verification workflow by making the grading test requirement more visible and adding a pre-completion checklist.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/grading-patterns.md"
+  ],
+  "delete_paths": []
+}

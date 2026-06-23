@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "hwpx-renewal-playbook-update__REzCjxC",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/HWPX-Document-Automation/round_006/worker_2/hwpx-renewal-playbook-update__REzCjxC",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/HWPX-Document-Automation/round_006/worker_2/hwpx-renewal-playbook-update__REzCjxC",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

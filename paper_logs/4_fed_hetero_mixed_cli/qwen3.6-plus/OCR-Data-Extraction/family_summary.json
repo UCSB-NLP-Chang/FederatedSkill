@@ -1,0 +1,238 @@
+{
+  "family_name": "OCR-Data-Extraction",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 12017.55796790123,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.6666666666666666,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 16
+  },
+  "merger_cost_total_usd": 80.70494699999999,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "task_family_pharmacy_labels"
+        ],
+        [
+          "u1",
+          "task_family_pharmacy_labels"
+        ],
+        [
+          "u2",
+          "task_family_pharmacy_labels"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 5,
+      "merger_cost_usd": 6.262035,
+      "elapsed_sec": 986.0260787010193
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "task_family_ecommerce_orders"
+        ],
+        [
+          "u1",
+          "task_family_ecommerce_orders"
+        ],
+        [
+          "u2",
+          "task_family_ecommerce_orders"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 9.329660999999998,
+      "elapsed_sec": 932.4630846977234
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "task_family_travel_claim_merge"
+        ],
+        [
+          "u1",
+          "task_family_travel_claim_merge"
+        ],
+        [
+          "u2",
+          "task_family_travel_claim_merge"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 5,
+      "merger_cost_usd": 10.437669,
+      "elapsed_sec": 985.733743429184
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "task_family_invoice_images"
+        ],
+        [
+          "u1",
+          "task_family_invoice_images"
+        ],
+        [
+          "u2",
+          "task_family_invoice_images"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 15.293508,
+      "elapsed_sec": 1249.702140569687
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "task_family_utility_bills_template_update"
+        ],
+        [
+          "u1",
+          "task_family_utility_bills_template_update"
+        ],
+        [
+          "u2",
+          "task_family_utility_bills_template_update"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 9.061430999999999,
+      "elapsed_sec": 1052.7151234149933
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "task_family_construction_measurement"
+        ],
+        [
+          "u1",
+          "task_family_construction_measurement"
+        ],
+        [
+          "u2",
+          "task_family_construction_measurement"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 11.627913,
+      "elapsed_sec": 1762.4380357265472
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "task_family_nested_fuel_packets"
+        ],
+        [
+          "u1",
+          "task_family_nested_fuel_packets"
+        ],
+        [
+          "u2",
+          "task_family_nested_fuel_packets"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 9.562056000000002,
+      "elapsed_sec": 2280.2871899604797
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "task_family_case_settlement_packets"
+        ],
+        [
+          "u1",
+          "task_family_case_settlement_packets"
+        ],
+        [
+          "u2",
+          "task_family_case_settlement_packets"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 9.130673999999999,
+      "elapsed_sec": 2768.1911973953247
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u1/OCR-Data-Extraction",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u2/OCR-Data-Extraction"
+  }
+}

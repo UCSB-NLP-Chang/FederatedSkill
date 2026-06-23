@@ -1,0 +1,51 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .F                                                                       [100%]
+E           =================================== FAILURES ===================================
+E           _______________________ test_output_matches_ground_truth _______________________
+E           
+E               def test_output_matches_ground_truth():
+E                   actual = load_json(OUTPUT_PATH)
+E                   expected = load_json(GROUND_TRUTH_PATH)
+E               
+E                   assert isinstance(actual, list), 'Output must be a JSON array.'
+E                   assert [row[PAGE_KEY] for row in actual] == sorted(row[PAGE_KEY] for row in actual), 'Rows must be sorted by page number ascending.'
+E                   for row in actual:
+E                       assert set(row.keys()) == set(REQUIRED_KEYS), f'Unexpected keys in row: {row}'
+E                   ok, msg = json_close(actual, expected)
+E           >       assert ok, msg
+E           E       AssertionError: At index 0: At key 'request_page_number': Numeric mismatch: 3 vs 4 (tol=0.01)
+E           E       assert False
+E           
+E           /tests/test_outputs.py:59: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_output_matches_ground_truth - Assertion...
+E           1 failed, 1 passed in 0.02s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.24s ===============================

@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5/claude-code). Applied target's SKILL.md (period generalization + step-down logic section) and u2's validation-checklist.md (parameterized assertions). All workers covered with reward=1.0; no gaps remain. See DECISIONS.md.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "workload-capacity-planning/references/validation-checklist.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "cost_usd": 1.2570240000000001
+}

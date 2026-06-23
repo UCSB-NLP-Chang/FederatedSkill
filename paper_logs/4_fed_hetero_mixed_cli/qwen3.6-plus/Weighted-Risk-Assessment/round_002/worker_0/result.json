@@ -1,0 +1,29 @@
+{
+    "id": "f959d205-b12c-4d70-885c-2c0531e27be3",
+    "started_at": "2026-05-18T06:33:50.619908",
+    "finished_at": "2026-05-18T06:36:12.938075",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-campus-energy-balance-c__CVBtNJq"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

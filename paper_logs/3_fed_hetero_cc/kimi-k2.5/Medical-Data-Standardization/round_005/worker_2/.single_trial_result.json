@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "icu-metabolic-harmonization__89sXWBY",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/round_005/worker_2/icu-metabolic-harmonization__89sXWBY",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/round_005/worker_2/icu-metabolic-harmonization__89sXWBY",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

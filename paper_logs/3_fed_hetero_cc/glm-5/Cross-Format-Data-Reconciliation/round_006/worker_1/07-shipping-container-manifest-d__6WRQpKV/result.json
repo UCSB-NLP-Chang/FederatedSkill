@@ -1,0 +1,104 @@
+{
+    "id": "c882b155-639f-4f66-b931-43d50f00d228",
+    "task_name": "07-shipping-container-manifest-diff",
+    "trial_name": "07-shipping-container-manifest-d__6WRQpKV",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/round_006/worker_1/07-shipping-container-manifest-d__6WRQpKV",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Cross-Format-Data-Reconciliation/07-shipping-container-manifest-diff"
+    },
+    "source": "Cross-Format-Data-Reconciliation",
+    "task_checksum": "523c24dc67d03a41ee955481055b200657ccc266a64695c592e8ff146f52e72c",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Cross-Format-Data-Reconciliation/07-shipping-container-manifest-diff",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Cross-Format-Data-Reconciliation"
+        },
+        "trial_name": "07-shipping-container-manifest-d__6WRQpKV",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/round_006/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://tokenhub.tencentmaas.com/plan/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "1b575612-5cd6-40fe-8771-f672c58f4ffe"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 259331,
+        "n_cache_tokens": 86464,
+        "n_output_tokens": 2783,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-14T04:21:19.977780Z",
+    "finished_at": "2026-05-14T04:23:22.287985Z",
+    "environment_setup": {
+        "started_at": "2026-05-14T04:21:19.978539Z",
+        "finished_at": "2026-05-14T04:21:22.984722Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-14T04:21:22.984757Z",
+        "finished_at": "2026-05-14T04:21:23.585586Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-14T04:21:23.585680Z",
+        "finished_at": "2026-05-14T04:23:08.636483Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-14T04:23:08.643437Z",
+        "finished_at": "2026-05-14T04:23:10.145439Z"
+    }
+}

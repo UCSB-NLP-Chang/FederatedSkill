@@ -1,0 +1,38 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Round 1. Synthesized SKILL.md removing fallback formulas (which enabled custom code bypass), applied u1's p-value clamping script fix, added u2's schema.md reference. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/schema.md",
+    "statistical-process-analysis/scripts/compute_spc.py"
+  ],
+  "delete_paths": [
+    "statistical-process-analysis/references/spc_formulas.md"
+  ],
+  "provenance": {
+    "statistical-process-analysis/references/schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/scripts/compute_spc.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/references/spc_formulas.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.5855222000000002
+}

@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u2's marker file gate (`touch .pytest_passed`) as the strongest structural enforcement for glm-5's execution gap. Added u0's pre-coding test inspection section. Updated inventory domain invariants. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "run-pytest-verification/SKILL.md",
+    "sales-pivot-report/SKILL.md",
+    "sales-pivot-report/references/common-issues.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "run-pytest-verification/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "sales-pivot-report/references/common-issues.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "cost_usd": 2.9810309999999998
+}

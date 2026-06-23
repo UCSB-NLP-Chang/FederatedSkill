@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's ID validation patch + u0's orthogonal improvements (safe_equal in workflow, PDF text fallback, verifier key-matching). Both reward=1.0. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "cost_usd": 2.4123414
+}

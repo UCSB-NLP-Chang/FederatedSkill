@@ -1,0 +1,13 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The agent successfully processed a multi-alert task involving deduplication, issuer rollup queries, and fund change analysis. Key learnings: (1) The semantic sanity-check for fund matching is critical - 'tiger global' matching to 'Voyager Global Management LP' was correctly rejected despite low Levenshtein distance because 'tiger' was absent from the matched name. (2) Missing baseline handling for B3-Single schema requires outputting largest_buy_cusip as the largest current position with largest_sell_cusip as empty string. (3) The existing skills handled the core 13F analysis well, but there's a gap in multi-alert processing workflows. Creating a new skill for alert pack processing that handles deduplication, alert type filtering, and result aggregation would help future agents with similar batch processing tasks.",
+  "upsert_paths": [
+    "alert-pack-processor/SKILL.md",
+    "alert-pack-processor/references/alert-schemas.md",
+    "alert-pack-processor/references/dedup-rules.md",
+    "alert-pack-processor/scripts/dedupe_alerts.py",
+    "alert-pack-processor/scripts/validate_match.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "1f767ed5-1f51-4af3-b054-f9c0daf7afd3",
+    "started_at": "2026-05-17T23:07:08.462774",
+    "finished_at": "2026-05-17T23:09:56.721287",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "transplant-panel-alignment-harmo__pewRDHr"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "The agent failed because it wrote formulas without first checking if the verifier uses data_only=True. While the existing skill documented this check, it wasn't prominent enough to prevent the agent from skipping it. This update restructures the skill to make the pre-flight check mandatory and impossible to miss, adds clearer decision rules for when to use external calculation vs openpyxl alone, and strengthens the troubleshooting for the specific 'formulas look correct but verifier fails' scenario.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/verifier-interaction.md"
+  ],
+  "delete_paths": []
+}

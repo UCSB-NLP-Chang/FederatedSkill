@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The task was successfully completed using the existing inventory-metrics-calculation skill. The agent adapted it to a freshness/expiration domain (meal kits with expiring boxes and shelf-life constraints). The existing skill already covers the core calculation workflow, but lacked explicit guidance on the freshness/expiration variant. This update adds that variant to the known invariants section, documents the expiration adjustment step, and clarifies the Shelf_Life sheet pattern so future agents recognize this as a standard variant rather than a new capability.",
+  "upsert_paths": [
+    "inventory-metrics-calculation/SKILL.md"
+  ],
+  "delete_paths": []
+}

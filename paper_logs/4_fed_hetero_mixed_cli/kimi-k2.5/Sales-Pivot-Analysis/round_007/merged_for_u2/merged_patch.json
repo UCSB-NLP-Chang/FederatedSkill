@@ -1,0 +1,27 @@
+{
+  "worker_id": "u2",
+  "summary": "",
+  "upsert_paths": [
+    "run-pytest-verification/SKILL.md",
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "u0",
+      0.9047619047619048
+    ],
+    "run-pytest-verification/SKILL.md": [
+      "upsert",
+      "u1",
+      0.8571428571428571
+    ]
+  },
+  "conflicts": [
+    "__llm_call_failed__:NotFoundError:litellm.NotFoundError: OpenAIException - The model `qwen3.6-plus` does not exist or you do not have access to it.",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: ",
+    "__task_update_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

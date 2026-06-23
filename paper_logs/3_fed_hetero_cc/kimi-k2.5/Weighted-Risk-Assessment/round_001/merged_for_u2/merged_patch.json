@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) on Weighted-Risk-Assessment R1. Synthesized u2+u0 patches into excel-formula-template SKILL.md (entity-count verification + row-absolute `$` guidance). Added formula-patterns.md reference file. Enhanced validate_formulas.py with reference locking check. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "excel-formula-template/SKILL.md",
+    "excel-formula-template/references/formula-patterns.md",
+    "excel-formula-template/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-template/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-template/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.6666666666666666
+    ],
+    "excel-formula-template/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.6666666666666666
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.9404478999999992
+}

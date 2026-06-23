@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "R7 merge complete for u1. Applied u1's own patch wholesale (reward=0.8, highest in family) to SKILL.md and pytest-failures.md. Changes address R7 failure mode: search script false negative. Added explicit fallbacks (pytest --collect-first), more search locations, and warning about find_and_run_tests.py blind spots. Rejected u0's patch (reward=0.5) due to lower reward and untested structural changes. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/pytest-failures.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ],
+    "excel-workbook-modeling/references/pytest-failures.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md",
+    "__skill_md_invalid__:excel-workbook-modeling/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.7017700000000002
+}

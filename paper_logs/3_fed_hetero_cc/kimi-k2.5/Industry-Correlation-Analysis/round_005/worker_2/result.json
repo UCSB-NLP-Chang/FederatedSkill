@@ -1,0 +1,29 @@
+{
+    "id": "b803f0ee-8001-4610-a582-683b366ffc17",
+    "started_at": "2026-05-26T01:35:02.916927",
+    "finished_at": "2026-05-26T01:38:40.709464",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-logistics-warehousing-corre__axgJ6SE"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent failed on inclusive date counting (calculated 25 days instead of 26 for Nov 5-30). The existing skill already documents this rule in the maintenance-parts sub-task section, but it needs to be elevated to a universal rule. Adding meal kit freshness as an explicit domain variant with the expiring inventory calculation pattern.",
+  "upsert_paths": [
+    "excel-inventory-calculations/SKILL.md"
+  ],
+  "delete_paths": []
+}

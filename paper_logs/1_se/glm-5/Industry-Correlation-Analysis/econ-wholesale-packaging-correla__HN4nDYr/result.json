@@ -1,0 +1,103 @@
+{
+  "id": "fceb289e-6519-4b74-a9ac-51b365281a6b",
+  "task_name": "econ-wholesale-packaging-correlation",
+  "trial_name": "econ-wholesale-packaging-correla__HN4nDYr",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/econ-wholesale-packaging-correla__HN4nDYr",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Industry-Correlation-Analysis/econ-wholesale-packaging-correlation"
+  },
+  "source": "Industry-Correlation-Analysis",
+  "task_checksum": "9e057f0a956b5e06417a6e8b678a26a0c75efbb4b8fe27e5f67edfc8d3f80998",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Industry-Correlation-Analysis/econ-wholesale-packaging-correlation",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Industry-Correlation-Analysis"
+    },
+    "trial_name": "econ-wholesale-packaging-correla__HN4nDYr",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "8385f62f-d141-4428-94fa-379bf9828bf2"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 294798,
+    "n_cache_tokens": 226913,
+    "n_output_tokens": 9173,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-04-27T02:30:27.280223Z",
+  "finished_at": "2026-04-27T02:32:58.135177Z",
+  "environment_setup": {
+    "started_at": "2026-04-27T02:30:27.282882Z",
+    "finished_at": "2026-04-27T02:30:28.297575Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-04-27T02:30:28.297586Z",
+    "finished_at": "2026-04-27T02:30:28.535734Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-04-27T02:30:28.535782Z",
+    "finished_at": "2026-04-27T02:32:47.120627Z"
+  },
+  "verifier": {
+    "started_at": "2026-04-27T02:32:47.120975Z",
+    "finished_at": "2026-04-27T02:32:47.601450Z"
+  }
+}

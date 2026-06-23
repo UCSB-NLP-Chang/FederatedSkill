@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "Creates reusable skill for programmatic Excel formula generation using openpyxl. Captures the workflow pattern of building multi-step calculation chains (lookup formulas \u2192 derived calculations \u2192 statistics \u2192 weighted aggregations) with proper relative/absolute reference handling. Includes verification techniques and anti-patterns from the trace.",
+  "upsert_paths": [
+    "excel-formula-automation/SKILL.md",
+    "excel-formula-automation/references/formula-patterns.md"
+  ],
+  "delete_paths": []
+}

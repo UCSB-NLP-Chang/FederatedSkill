@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Synthesized B2 skill from u0+u1+u2 patches (all reward=0.0). Applied u0's verification script, combined column/row mapping with u1's known invariants and u2's dynamic column calculation. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-financial-reconciliation/SKILL.md",
+    "excel-financial-reconciliation/scripts/verify_rollforward.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "excel-financial-reconciliation/scripts/verify_rollforward.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.015471
+}

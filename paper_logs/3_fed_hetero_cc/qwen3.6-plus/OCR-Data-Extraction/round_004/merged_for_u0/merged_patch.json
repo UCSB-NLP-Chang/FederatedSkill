@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's SKILL.md (target's verified version) and u2's utility-bill-patterns.md (correct output precision). Added utility-bill-patterns.md reference for B4 template workbook handling. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/utility-bill-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/references/utility-bill-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/utility-bill-patterns.md"
+  ],
+  "cost_usd": 0.7070583
+}

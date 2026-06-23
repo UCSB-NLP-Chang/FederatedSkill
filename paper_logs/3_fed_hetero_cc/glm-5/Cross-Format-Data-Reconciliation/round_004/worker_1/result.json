@@ -1,0 +1,29 @@
+{
+    "id": "a5382412-55b1-4069-83e4-6aa8f0806012",
+    "started_at": "2026-05-13T23:50:03.162998",
+    "finished_at": "2026-05-13T23:52:17.065092",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "05-datacenter-hardware-registry__foBEwXF"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

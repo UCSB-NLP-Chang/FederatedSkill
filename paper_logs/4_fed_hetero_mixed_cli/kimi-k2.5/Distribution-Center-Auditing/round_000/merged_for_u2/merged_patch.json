@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u0's reward=1.0 patch wholesale (excel-audit-reporting) with Output precision and Known invariants sections added. Target u2's reward=0.8 patch rejected due to NaN/None verification failure. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "excel-audit-reporting/scripts/generate_audit.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-audit-reporting/scripts/generate_audit.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-audit-reporting/SKILL.md"
+  ],
+  "cost_usd": 3.053937
+}

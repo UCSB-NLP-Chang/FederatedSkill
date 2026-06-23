@@ -1,0 +1,48 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Closed B3 gap by adding production-planning skill (renamed from u2's tool-anchored `production-planning-excel`). Renamed excel-data-processing \u2192 excel-processing for peer alignment. Library now has 3 skills. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-processing/SKILL.md",
+    "excel-processing/scripts/verify_excel.py",
+    "production-planning/SKILL.md",
+    "production-planning/references/scenario_templates.md"
+  ],
+  "delete_paths": [
+    "excel-data-processing/SKILL.md",
+    "excel-data-processing/scripts/verify_excel.py"
+  ],
+  "provenance": {
+    "excel-data-processing/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-data-processing/scripts/verify_excel.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "production-planning/references/scenario_templates.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "production-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.2
+    ],
+    "excel-processing/scripts/verify_excel.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.8894240000000001
+}

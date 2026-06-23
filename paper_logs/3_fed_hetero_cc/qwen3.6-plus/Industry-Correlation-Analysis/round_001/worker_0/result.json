@@ -1,0 +1,29 @@
+{
+    "id": "e39809d5-190e-45de-9e28-b72df9187246",
+    "started_at": "2026-05-26T00:09:19.751512",
+    "finished_at": "2026-05-26T00:12:07.117251",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-equipment-software-correlat__CEaK8mY"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

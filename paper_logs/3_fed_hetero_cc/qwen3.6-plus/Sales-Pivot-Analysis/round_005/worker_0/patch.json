@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8823529411764706,
+  "summary": "Adds a new skill for creating Excel pivot tables with openpyxl, capturing critical API quirks (RowColField uses 'x' not 'field', shared PivotCache required) and a verification workflow to prevent KeyError/TypeError failures seen in the trace.",
+  "upsert_paths": [
+    "excel-pivot-tables/SKILL.md",
+    "excel-pivot-tables/scripts/create_pivot_workbook.py"
+  ],
+  "delete_paths": []
+}

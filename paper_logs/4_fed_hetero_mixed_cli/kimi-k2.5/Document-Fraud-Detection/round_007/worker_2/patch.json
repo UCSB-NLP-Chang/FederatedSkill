@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Clinical trial validation revealed three reusable patterns not fully covered: (1) packet-based deduplication keeping highest revision per packet reference, (2) sparse amendment/version tables where empty/null values must NOT override base values, and (3) deeply nested JSON (3+ levels) requiring explicit flattening. These augment the existing expense-claims-validation skill for research payment domains.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/sparse-amendments.md"
+  ],
+  "delete_paths": []
+}

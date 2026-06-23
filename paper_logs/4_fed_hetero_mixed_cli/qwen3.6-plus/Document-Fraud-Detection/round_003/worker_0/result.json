@@ -1,0 +1,29 @@
+{
+    "id": "a440a8ac-b8ee-4100-9428-0fe8ed711af5",
+    "started_at": "2026-05-17T20:49:53.837793",
+    "finished_at": "2026-05-17T20:53:24.563191",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "field-service-workorder-audit__v2judoH"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Synthesized SKILL.md from u2+u0+u1 (script enforcement, pre-flight checklist, I-MR stability check); applied u0's output_schema.md with forbidden fields. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/references/output_schema.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "dmaic-statistical-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "dmaic-statistical-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.6947050000000004
+}

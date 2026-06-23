@@ -1,0 +1,104 @@
+{
+    "id": "ebd7b381-b384-45c0-a334-92c80287fc54",
+    "task_name": "peregrine_rebate_template_update",
+    "trial_name": "peregrine_rebate_template_update__oNufvyj",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Financial-Statement-Rolling/round_005/worker_1/peregrine_rebate_template_update__oNufvyj",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Financial-Statement-Rolling/peregrine_rebate_template_update"
+    },
+    "source": "Financial-Statement-Rolling",
+    "task_checksum": "6804f9873ea3ffe9b4915cc4945466465a3bee48e5ca239748a6e01b56c2c587",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Financial-Statement-Rolling/peregrine_rebate_template_update",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Financial-Statement-Rolling"
+        },
+        "trial_name": "peregrine_rebate_template_update__oNufvyj",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Financial-Statement-Rolling/round_005/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Financial-Statement-Rolling/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "11a1c2c5-6354-45bd-a68d-ccb64e1fa797"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 416563,
+        "n_cache_tokens": 348483,
+        "n_output_tokens": 19265,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-18T01:32:41.257135Z",
+    "finished_at": "2026-05-18T01:39:33.698908Z",
+    "environment_setup": {
+        "started_at": "2026-05-18T01:32:41.258126Z",
+        "finished_at": "2026-05-18T01:32:43.701903Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-18T01:32:43.701947Z",
+        "finished_at": "2026-05-18T01:32:44.458615Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-18T01:32:44.458718Z",
+        "finished_at": "2026-05-18T01:39:20.013317Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-18T01:39:20.019404Z",
+        "finished_at": "2026-05-18T01:39:21.662403Z"
+    }
+}

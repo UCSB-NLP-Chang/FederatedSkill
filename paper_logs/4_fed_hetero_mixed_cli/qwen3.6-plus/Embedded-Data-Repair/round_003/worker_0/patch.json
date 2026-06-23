@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The trace shows a successful run using the existing edit-embedded-office-xml skill. The agent correctly handled multi-sheet workbooks (modifying only 'Live Pack Matrix', leaving 'Readme' untouched), extracted correction values from slide XML <a:t> tags, preserved reciprocal formulas, and verified changes. I'm updating the existing skill to codify the multi-sheet modification pattern, add a reusable verification checklist, and clarify the conversion matrix label-intersection workflow that proved effective.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": []
+}

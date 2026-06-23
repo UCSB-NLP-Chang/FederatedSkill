@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779772404.2119415,
+            "stop": 1779772404.271782
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_script_checks",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.04070298746228218,
+                "start": 1779772404.2176912,
+                "stop": 1779772404.2716613,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_script_checks() -> None:\n        local_script = Path(__file__).with_name(\"test_outputs.py\")\n        harness_script = Path(\"/tests/test_outputs.py\")\n        script = harness_script if harness_script.exists() else local_script\n    \n        result = subprocess.run(\n            [sys.executable, str(script)],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: \nE           test_answer_exists (__main__.TestUtilitiesTelecomCorrelation.test_answer_exists) ... ok\nE           test_answer_format (__main__.TestUtilitiesTelecomCorrelation.test_answer_format) ... ok\nE           test_answer_value (__main__.TestUtilitiesTelecomCorrelation.test_answer_value) ... FAIL\nE           \nE           ======================================================================\nE           FAIL: test_answer_value (__main__.TestUtilitiesTelecomCorrelation.test_answer_value)\nE           ----------------------------------------------------------------------\nE           Traceback (most recent call last):\nE             File \"/tests/test_outputs.py\", line 36, in test_answer_value\nE               self.assertAlmostEqual(value, EXPECTED, delta=0.001)\nE           AssertionError: 0.99918 != 0.98727 within 0.001 delta (0.011909999999999976 difference)\nE           \nE           ----------------------------------------------------------------------\nE           Ran 3 tests in 0.001s\nE           \nE           FAILED (failures=1)\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

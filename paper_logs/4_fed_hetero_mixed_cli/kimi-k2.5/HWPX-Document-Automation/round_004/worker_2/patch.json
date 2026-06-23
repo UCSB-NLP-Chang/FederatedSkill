@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Added reusable preprocessing patterns reference for HWPX template filling. The trace showed successful completion but required task-specific value transformations (stripping units like '\uba85', reformatting ratings like '4.5/5.0' to Korean format, appending text). These patterns are now documented for reuse.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/references/value-preprocessing.md"
+  ],
+  "delete_paths": []
+}

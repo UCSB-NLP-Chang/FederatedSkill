@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The existing cross-document-validation skill covers this task well, but the trace reveals a new pattern: crosswalk/intermediate mapping tables between external reference codes and internal authorization codes. Adding this pattern and a clinic-shift-claim domain example will help future agents handle similar multi-table lookups.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md",
+    "cross-document-validation/references/domain-examples.md"
+  ],
+  "delete_paths": []
+}

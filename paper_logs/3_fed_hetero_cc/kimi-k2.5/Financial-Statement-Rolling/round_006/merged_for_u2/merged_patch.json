@@ -1,0 +1,35 @@
+{
+  "worker_id": "u2",
+  "summary": "R6 merge complete for u2 (kimi-k2.5). Library now has 2 skills: financial-rollforward-workbook (B1 scratch) + template-based-rollforward (B2 template). Key change: added validation script for structural enforcement of Variance formula bug (prose documentation failed for 6 rounds). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/scripts/validate_rollforward.py",
+    "template-based-rollforward/SKILL.md",
+    "template-based-rollforward/scripts/verify_template_rollforward.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-rollforward-workbook/scripts/validate_rollforward.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "template-based-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "template-based-rollforward/scripts/verify_template_rollforward.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 4.149426
+}

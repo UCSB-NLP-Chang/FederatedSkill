@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Used u2's SKILL.md as base (highest reward 0.889), merged u0's ElementTree anti-patterns (r:r:id double-prefix, string templates), rejected u1's 5-step sync (caused regression 0.88\u21920.78). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/pptx-structure.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.8888888888888888
+    ],
+    "pptx-xml-editing/references/pptx-structure.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/pptx-structure.md"
+  ],
+  "cost_usd": 2.397231
+}

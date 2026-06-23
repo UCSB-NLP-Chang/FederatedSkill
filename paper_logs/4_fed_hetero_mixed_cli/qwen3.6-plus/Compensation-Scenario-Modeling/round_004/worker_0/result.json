@@ -1,0 +1,29 @@
+{
+    "id": "6f43911a-66e0-4257-9105-fed1d6718b3a",
+    "started_at": "2026-05-18T01:35:10.220652",
+    "finished_at": "2026-05-18T01:42:58.278618",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "05_property_management_model__jgeFg6o"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

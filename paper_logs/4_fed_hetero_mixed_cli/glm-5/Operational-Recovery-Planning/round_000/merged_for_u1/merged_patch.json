@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied 2 validated skills wholesale: u1's `excel-python-operations` (general Excel I/O) + u0's `excel-queue-simulation` (queue simulation with verify_outputs.py). Rejected u2's `queue-recovery-planning` (reward=0.5, broken). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-python-operations/SKILL.md",
+    "excel-queue-simulation/SKILL.md",
+    "excel-queue-simulation/scripts/verify_outputs.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-queue-simulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-queue-simulation/scripts/verify_outputs.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-python-operations/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.7219399999999998
+}

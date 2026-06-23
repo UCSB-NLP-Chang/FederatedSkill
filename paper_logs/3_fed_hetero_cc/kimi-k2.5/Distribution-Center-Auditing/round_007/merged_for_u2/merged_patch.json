@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "R7 merge complete for u2 (kimi-k2.5). Applied target's patch structure + Word Brief guidance from u0. Added B8 invariant with cycle count variance patterns to SKILL.md (184 lines) + reference file. Preserved critical anti-patterns (python-docx, Column Name Whitespace) per memory.md warnings. B8 remains gap across all workers (reward=0.833) \u2014 verifier expectation not captured. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md",
+    "spreadsheet-audit-reporting/references/computed-column-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "spreadsheet-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8333333333333334
+    ],
+    "spreadsheet-audit-reporting/references/computed-column-examples.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "cost_usd": 0.7126211999999998
+}

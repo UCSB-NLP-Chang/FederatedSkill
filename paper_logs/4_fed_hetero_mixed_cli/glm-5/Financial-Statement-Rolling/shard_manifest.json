@@ -1,0 +1,63 @@
+{
+  "run_id": "fed-cloudskill-v5_9-mixed-cli-M3-hetero",
+  "family_name": "Financial-Statement-Rolling",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallQwenCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallKimiCli",
+      "agent_model": "openai/kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "lattice_deferred_revenue_rollforward",
+      "cedar_accrual_rollforward",
+      "northstar_warranty_reserve_consolidation",
+      "solstice_commission_asset_alignment",
+      "orchid_project_cost_rollforward",
+      "peregrine_rebate_template_update",
+      "atlas_refund_reserve_template_merge",
+      "meridian_contract_liability_orchestration",
+      "harbor_gdpval_20"
+    ],
+    "u1": [
+      "lattice_deferred_revenue_rollforward",
+      "cedar_accrual_rollforward",
+      "northstar_warranty_reserve_consolidation",
+      "solstice_commission_asset_alignment",
+      "orchid_project_cost_rollforward",
+      "peregrine_rebate_template_update",
+      "atlas_refund_reserve_template_merge",
+      "meridian_contract_liability_orchestration",
+      "harbor_gdpval_20"
+    ],
+    "u2": [
+      "lattice_deferred_revenue_rollforward",
+      "cedar_accrual_rollforward",
+      "northstar_warranty_reserve_consolidation",
+      "solstice_commission_asset_alignment",
+      "orchid_project_cost_rollforward",
+      "peregrine_rebate_template_update",
+      "atlas_refund_reserve_template_merge",
+      "meridian_contract_liability_orchestration",
+      "harbor_gdpval_20"
+    ]
+  }
+}

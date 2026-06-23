@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "DONE \u2014 R6 merge complete for u1 (glm-5): Applied target's reward=1.0 patch extending excel-audit-reporting with template preservation, event log reconciliation, sorted summary rule, and manifest-scan-audit invariant. Rejected peer patches that would fragment naming. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "excel-audit-reporting/references/event-log-reconciliation.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "excel-audit-reporting/references/event-log-reconciliation.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.9743319999999995
+}

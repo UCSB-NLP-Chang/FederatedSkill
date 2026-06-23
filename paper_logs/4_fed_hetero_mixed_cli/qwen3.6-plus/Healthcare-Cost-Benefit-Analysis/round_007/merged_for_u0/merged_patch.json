@@ -1,0 +1,51 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete: Applied u2's validated vaxcrate-dispatch-analysis (reward=1.0), renamed reagent-kit-analysis \u2192 harbor-reagentkit-analysis for peer alignment. Library now at 6 skills (above cap); consolidation needed next round. See DECISIONS.md for full details.",
+  "upsert_paths": [
+    "harbor-reagentkit-analysis/SKILL.md",
+    "harbor-reagentkit-analysis/scripts/compute_reagentkit.py",
+    "vaxcrate-dispatch-analysis/SKILL.md",
+    "vaxcrate-dispatch-analysis/scripts/compute_vaxcrate.py"
+  ],
+  "delete_paths": [
+    "reagent-kit-analysis/SKILL.md",
+    "reagent-kit-analysis/scripts/compute_reagentkit.py"
+  ],
+  "provenance": {
+    "reagent-kit-analysis/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "harbor-reagentkit-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "harbor-reagentkit-analysis/scripts/compute_reagentkit.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "reagent-kit-analysis/scripts/compute_reagentkit.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "vaxcrate-dispatch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "vaxcrate-dispatch-analysis/scripts/compute_vaxcrate.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "vaxcrate-dispatch-analysis/SKILL.md",
+    "vaxcrate-dispatch-analysis/scripts/compute_vaxcrate.py"
+  ],
+  "cost_usd": 1.005689
+}

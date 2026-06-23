@@ -1,0 +1,38 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus on qwen-code). Applied u0's SKILL.md (reward=1.0), u0's dedup_validation_patterns.md, u1's regex_patterns.md, and u1's extract_to_excel.py. Library now has 1 skill with 6 files. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/dedup_validation_patterns.md",
+    "ocr-data-extraction/references/regex_patterns.md",
+    "ocr-data-extraction/scripts/extract_to_excel.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/dedup_validation_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "ocr-data-extraction/scripts/extract_to_excel.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "ocr-data-extraction/references/regex_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/regex_patterns.md"
+  ],
+  "cost_usd": 4.316990999999999
+}

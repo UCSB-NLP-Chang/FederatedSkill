@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R5 Medical-Data-Standardization. Extended clinical-lab-harmonization with ICU analytes, added ICU reference file and harmonizer script. Fixed pCO2 threshold to <15. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/icu-metabolic-panel.md",
+    "clinical-lab-harmonization/scripts/icu_metabolic_harmonizer.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.9487179487179487
+    ],
+    "clinical-lab-harmonization/scripts/icu_metabolic_harmonizer.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.9487179487179487
+    ],
+    "clinical-lab-harmonization/references/icu-metabolic-panel.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.9487179487179487
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 7.530585
+}

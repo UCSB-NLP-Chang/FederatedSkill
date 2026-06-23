@@ -1,0 +1,27 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) on PPT-Formatting-Optimization R7.\n\nApplied target's patch wholesale (empty paragraph handling, zone badge distinction), integrated u0's safe color inspection and verify_pptx.py script, and absorbed u2's \"Updating Existing Index Slides\" guidance (R7 failure mode: newline in single paragraph).\n\nLibrary: 1 umbrella skill (pptx-manipulation), 2 scripts, 3 references. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/scripts/verify_pptx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.7777777777777778
+    ],
+    "pptx-manipulation/scripts/verify_pptx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.7777777777777778
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md",
+    "__skill_md_invalid__:pptx-manipulation/SKILL.md: 503 lines exceeds 500 cap",
+    "__skill_md_invalid__:pptx-manipulation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.36772
+}

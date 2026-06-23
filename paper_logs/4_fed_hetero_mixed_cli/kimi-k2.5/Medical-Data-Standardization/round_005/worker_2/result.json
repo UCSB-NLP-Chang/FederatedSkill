@@ -1,0 +1,29 @@
+{
+    "id": "138acd3c-b9fa-4126-ba1e-dd196c8710ee",
+    "started_at": "2026-05-18T01:30:45.341586",
+    "finished_at": "2026-05-18T01:42:26.440762",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "icu-metabolic-harmonization__nPtFXrR"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

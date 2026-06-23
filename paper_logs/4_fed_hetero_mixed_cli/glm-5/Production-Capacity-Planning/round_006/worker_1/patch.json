@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace shows the agent successfully completed a capacity planning simulation but made multiple iterations to fix summary sentence count (4 sentences when limit was 3). The existing skill covers this scenario well, but the sentence count constraint should be more prominent in the main workflow since it caused repeated failures. Adding explicit sentence-counting guidance to SKILL.md will help future agents avoid this common mistake.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

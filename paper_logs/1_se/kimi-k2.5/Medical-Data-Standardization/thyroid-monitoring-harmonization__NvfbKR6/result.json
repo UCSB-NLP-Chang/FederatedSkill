@@ -1,0 +1,103 @@
+{
+  "id": "e6d78c46-68d9-4fbd-94bf-b90c88b6560c",
+  "task_name": "thyroid-monitoring-harmonization",
+  "trial_name": "thyroid-monitoring-harmonization__NvfbKR6",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Medical-Data-Standardization/thyroid-monitoring-harmonization__NvfbKR6",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Medical-Data-Standardization/thyroid-monitoring-harmonization"
+  },
+  "source": "Medical-Data-Standardization",
+  "task_checksum": "924f8306f93a3cc7a25be2d69e8335de503eb78d04587595efc8f332c065b843",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Medical-Data-Standardization/thyroid-monitoring-harmonization",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Medical-Data-Standardization"
+    },
+    "trial_name": "thyroid-monitoring-harmonization__NvfbKR6",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Medical-Data-Standardization",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "kimi-k2.5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "5c25a944-7536-418c-9d92-ee672fb2c07b"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 1039849,
+    "n_cache_tokens": 835460,
+    "n_output_tokens": 23289,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-13T05:49:25.577411Z",
+  "finished_at": "2026-05-13T06:13:42.061834Z",
+  "environment_setup": {
+    "started_at": "2026-05-13T05:49:25.579711Z",
+    "finished_at": "2026-05-13T05:49:26.444774Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-13T05:49:26.444785Z",
+    "finished_at": "2026-05-13T05:49:26.695403Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-13T05:49:26.695453Z",
+    "finished_at": "2026-05-13T06:13:30.192529Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-13T06:13:30.192758Z",
+    "finished_at": "2026-05-13T06:13:31.573364Z"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Reinforces existing cross-format-data-diff skill with explicit guidance on flat vs nested change record schemas and adds 'missing_containers'/'changed_containers' to known key variants based on successful trace execution. Clarifies decision rules for output structure to prevent verifier mismatches.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": []
+}

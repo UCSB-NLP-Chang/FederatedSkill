@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "petcare_midmonth_pallet_gap__oZbSnoM",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/round_001/worker_1/petcare_midmonth_pallet_gap__oZbSnoM",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/round_001/worker_1/petcare_midmonth_pallet_gap__oZbSnoM",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

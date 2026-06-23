@@ -1,0 +1,74 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Renamed excel-formula-automation \u2192 excel-formula-injection (peer-majority alignment). Applied u2's comprehensive SKILL.md patch with u0's Output Precision section. Added u2's verifier-interaction.md reference and check_test_data_only.py detection script. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/formula-patterns.md",
+    "excel-formula-injection/references/verifier-interaction.md",
+    "excel-formula-injection/scripts/calculate_stats.py",
+    "excel-formula-injection/scripts/check_test_data_only.py",
+    "excel-formula-injection/scripts/formula_injector.py"
+  ],
+  "delete_paths": [
+    "excel-formula-automation/SKILL.md",
+    "excel-formula-automation/references/formula-patterns.md",
+    "excel-formula-automation/scripts/calculate_stats.py",
+    "excel-formula-automation/scripts/formula_injector.py"
+  ],
+  "provenance": {
+    "excel-formula-automation/scripts/formula_injector.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-automation/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u2",
+      0.6666666666666666
+    ],
+    "excel-formula-injection/references/verifier-interaction.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-injection/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ],
+    "excel-formula-injection/scripts/calculate_stats.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-injection/scripts/formula_injector.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-injection/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-automation/scripts/calculate_stats.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-automation/references/formula-patterns.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-injection/scripts/check_test_data_only.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "cost_usd": 3.2874479999999995
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.9473684210526315,
+  "summary": "Added B1-EventRegistration domain variant to the existing sales-pivot-analysis skill. The trace shows a task that fits the existing multi-source pivot report pattern but with event registration specifics: combining online+walk-in sources with column renaming, joining to event catalog, and creating revenue/attendance/matrix pivot sheets. The agent hardcoded PDF data (anti-pattern already documented) which likely caused verifier failure. Added the new domain variant with its specific join key, derived columns, and pivot sheet patterns.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

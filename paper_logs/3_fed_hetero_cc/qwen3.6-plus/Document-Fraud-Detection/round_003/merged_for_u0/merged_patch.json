@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 Applied u0's verified SKILL.md patch wholesale (reward=1.0), extending expense-record-validation with field-service-workorder-audit variant. Kept existing 69-line audit_helper.py script (within qwen threshold). Rejected u1's 210-line script and u2's failed patch (reward=0.5). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "expense-record-validation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-record-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.8791289999999999
+}

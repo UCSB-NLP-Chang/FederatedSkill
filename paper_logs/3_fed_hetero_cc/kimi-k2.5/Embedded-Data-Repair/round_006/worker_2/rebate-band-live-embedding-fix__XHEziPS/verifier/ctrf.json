@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779492885.860611,
+            "stop": 1779492886.2065654
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.32508584298193455,
+                "start": 1779492885.86966,
+                "stop": 1779492886.2064555,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ...F                                                                     [100%]\nE           =================================== FAILURES ===================================\nE           ______________ test_other_values_and_archive_embeddings_unchanged ______________\nE           \nE               def test_other_values_and_archive_embeddings_unchanged():\nE                   input_wb, input_path = workbook_from_embedding(INPUT_FILE, TARGET_EMBEDDING, data_only=True)\nE                   output_wb, output_path = workbook_from_embedding(RESULT_FILE, TARGET_EMBEDDING, data_only=True)\nE                   try:\nE                       input_ws = input_wb[SHEET_NAME]\nE                       output_ws = output_wb[SHEET_NAME]\nE                       direct_coord, inverse_coord = find_pair(output_ws, FROM_TOKEN, TO_TOKEN)\nE                       input_values = all_matrix_values(input_ws)\nE                       output_values = all_matrix_values(output_ws)\nE                       for coord, input_value in input_values.items():\nE                           if coord in {direct_coord, inverse_coord}:\nE                               continue\nE           >               assert_same(input_value, output_values[coord], coord)\nE           \nE           /tests/test_outputs.py:165: \nE           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nE           \nE           lhs = None, rhs = 0.9009, coord = (4, 4)\nE           \nE               def assert_same(lhs, rhs, coord):\nE                   if isinstance(lhs, (int, float)) and isinstance(rhs, (int, float)):\nE                       assert abs(lhs - rhs) < 1e-6, f'Unexpected change at {coord}: {lhs} -> {rhs}'\nE                   else:\nE                       lhs_s = str(lhs).strip() if lhs is not None else None\nE                       rhs_s = str(rhs).strip() if rhs is not None else None\nE           >           assert lhs_s == rhs_s, f'Unexpected change at {coord}: {lhs} -> {rhs}'\nE           E           AssertionError: Unexpected change at (4, 4): None -> 0.9009\nE           E           assert None == '0.9009'\nE           \nE           /tests/test_outputs.py:78: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_other_values_and_archive_embeddings_unchanged\nE           1 failed, 3 passed in 0.12s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

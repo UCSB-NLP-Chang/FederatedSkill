@@ -1,0 +1,239 @@
+{
+  "family_name": "Operational-Recovery-Planning",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 7555.4314868450165,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.3333333333333333,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 8
+  },
+  "merger_cost_total_usd": 9.5203746,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "new_task_1_soc_alert_recovery"
+        ],
+        [
+          "u1",
+          "new_task_1_soc_alert_recovery"
+        ],
+        [
+          "u2",
+          "new_task_1_soc_alert_recovery"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 0,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 879.1065001487732
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "new_task_2_radiology_reading_backlog"
+        ],
+        [
+          "u1",
+          "new_task_2_radiology_reading_backlog"
+        ],
+        [
+          "u2",
+          "new_task_2_radiology_reading_backlog"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 0,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 1221.201280593872
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_36"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_36"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_36"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 0,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 1094.1004791259766
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "new_task_3_returns_center_throughput"
+        ],
+        [
+          "u1",
+          "new_task_3_returns_center_throughput"
+        ],
+        [
+          "u2",
+          "new_task_3_returns_center_throughput"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 0,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 998.45521235466
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "harbor_dc_recovery_01"
+        ],
+        [
+          "u1",
+          "harbor_dc_recovery_01"
+        ],
+        [
+          "u2",
+          "harbor_dc_recovery_01"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 11,
+      "merger_cost_usd": 2.0117312999999997,
+      "elapsed_sec": 1556.8096516132355
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "harbor_wh_recovery_02"
+        ],
+        [
+          "u1",
+          "harbor_wh_recovery_02"
+        ],
+        [
+          "u2",
+          "harbor_wh_recovery_02"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 1.9431468,
+      "elapsed_sec": 1793.7136299610138
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "harbor_ag_recovery_03"
+        ],
+        [
+          "u1",
+          "harbor_ag_recovery_03"
+        ],
+        [
+          "u2",
+          "harbor_ag_recovery_03"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 2.3570406000000004,
+      "elapsed_sec": 1853.2736546993256
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_41"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_41"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_41"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 3.2084559000000006,
+      "elapsed_sec": 2351.5395379066467
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-3missing-M3-hetero/Operational-Recovery-Planning/worker_skills/u0/Operational-Recovery-Planning",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-3missing-M3-hetero/Operational-Recovery-Planning/worker_skills/u1/Operational-Recovery-Planning",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-3missing-M3-hetero/Operational-Recovery-Planning/worker_skills/u2/Operational-Recovery-Planning"
+  },
+  "_bailed_under_old_strict_policy": true
+}

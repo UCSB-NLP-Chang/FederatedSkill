@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Extended cross-document-validation skill with patterns from field service work order audit: multi-sheet Excel handling (aliases), work order status validation (active/closed), and revision chain resolution for approved amounts. Added new domain example for field service audits.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md",
+    "cross-document-validation/references/domain-examples.md"
+  ],
+  "delete_paths": []
+}

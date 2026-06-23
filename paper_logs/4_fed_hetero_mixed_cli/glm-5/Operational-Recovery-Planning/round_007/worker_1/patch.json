@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8,
+  "summary": "The trace shows a successful application of the production-capacity-planning skill to a new domain variant (Running Board Recovery). The agent correctly used existing patterns but the task failed due to an external API error, not skill gaps. Adding the Running Board variant to references/variant-patterns.md will help future agents recognize this domain mapping more quickly.",
+  "upsert_paths": [
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "82b5b298-6396-4de1-882a-a847d129b875",
+    "started_at": "2026-05-18T01:30:08.346818",
+    "finished_at": "2026-05-18T01:37:23.051857",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Operational-Recovery-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "new_task_2_radiology_reading_bac__xu2MPi9"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

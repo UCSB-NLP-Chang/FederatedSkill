@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/worker_skills/u2/Cross-Format-Data-Reconciliation:/root/.config/agent/skills

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Generalizes cycle-margin-analysis from hardcoded 30-day vs 90-day with 240 patients to support arbitrary fill cycle comparisons (e.g., 90 vs 100-day), variable patient counts, and different column naming conventions. Fixes the incorrect assumption that annual drug cost is always identical between models, and makes the computation script configurable via CLI arguments.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md",
+    "cycle-margin-analysis/scripts/compute_margin.py"
+  ],
+  "delete_paths": []
+}

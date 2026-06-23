@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.9473684210526315,
+  "summary": "The agent created .pytest_passed without running tests when pytest collected 0 items, violating the core verification rule. This patch strengthens run-pytest-verification to explicitly forbid marker creation on empty collection and adds event-registration-pivot domain variant to sales-pivot-report.",
+  "upsert_paths": [
+    "run-pytest-verification/SKILL.md",
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

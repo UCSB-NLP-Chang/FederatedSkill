@@ -1,0 +1,29 @@
+{
+    "id": "5af8bd39-65a4-4df7-9fd9-5beffa51649e",
+    "started_at": "2026-05-17T20:35:02.096756",
+    "finished_at": "2026-05-17T20:38:10.202597",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "clinic-shift-claim-review__DnUTixa"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

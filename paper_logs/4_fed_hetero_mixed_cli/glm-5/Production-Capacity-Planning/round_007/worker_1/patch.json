@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Added CSV input handling to the workload-capacity-planning skill. The existing skill focused exclusively on Excel files, but this task used a CSV with horizontal layout (weeks as columns). Added CSV-specific parsing patterns to the horizontal-data-parsing reference and a brief note in the main skill about CSV as an input format.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/horizontal-data-parsing.md"
+  ],
+  "delete_paths": []
+}

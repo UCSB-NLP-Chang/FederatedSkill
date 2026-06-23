@@ -1,0 +1,29 @@
+{
+    "id": "84908387-d8d0-4c2c-8617-9250208bc24e",
+    "started_at": "2026-05-17T20:50:10.272403",
+    "finished_at": "2026-05-17T20:57:20.101575",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "solstice_commission_asset_alignm__xUDPuBN"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

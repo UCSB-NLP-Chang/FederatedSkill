@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task succeeded using the existing dataset-diff skill. Adding hardware/server domain terminology to domain_mapping.md provides another concrete example for future agents working with infrastructure or asset registries.",
+  "upsert_paths": [
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,77 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FF..                                                                    [100%]
+E           =================================== FAILURES ===================================
+E           ______________________ test_rawdata_copies_source_exactly ______________________
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7f8376045dc0>
+E           source_rows = [{'Actual Hold Hours': 4, 'Allowed Hold Hours': 4, 'Carrier': 'CarrierA', 'Dispatcher': 'Diaz', ...}, {'Actual Hold Ho...'Chen', ...}, {'Actual Hold Hours': 3, 'Allowed Hold Hours': 2, 'Carrier': 'CarrierC', 'Dispatcher': 'Chen', ...}, ...]
+E           
+E               def test_rawdata_copies_source_exactly(output_wb, source_rows):
+E                   ws = output_wb['RawData']
+E                   headers = [ws.cell(1, c).value for c in range(1, 9)]
+E                   assert headers == BASE_HEADERS
+E                   actual = []
+E                   for r in range(2, ws.max_row + 1):
+E                       vals = [ws.cell(r, c).value for c in range(1, 9)]
+E                       if all(v is None for v in vals):
+E                           continue
+E                       actual.append(vals)
+E                   expected = [[row[h] for h in BASE_HEADERS] for row in source_rows]
+E           >       assert actual == expected
+E           E       AssertionError: assert [['LD-001', '...D', ...], ...] == [['LD-001', '...D', ...], ...]
+E           E         
+E           E         At index 2 diff: ['LD-003', 'CarrierB', 5, 5, 'NO', None, 'Y2', 'Mills'] != ['LD-003', 'CarrierB', 5, 5, 'NO', 'N/A', 'Y2', 'Mills']
+E           E         Use -v to get more diff
+E           
+E           /tests/test_outputs.py:106: AssertionError
+E           __________________________ test_formatted_data_logic ___________________________
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7f8376045dc0>
+E           source_rows = [{'Actual Hold Hours': 4, 'Allowed Hold Hours': 4, 'Carrier': 'CarrierA', 'Dispatcher': 'Diaz', ...}, {'Actual Hold Ho...'Chen', ...}, {'Actual Hold Hours': 3, 'Allowed Hold Hours': 2, 'Carrier': 'CarrierC', 'Dispatcher': 'Chen', ...}, ...]
+E           
+E               def test_formatted_data_logic(output_wb, source_rows):
+E                   ws = output_wb['Formatted Data']
+E                   headers = [ws.cell(1, c).value for c in range(1, 13)]
+E                   assert headers == FORMATTED_HEADERS
+E                   for i, row in enumerate(source_rows, start=2):
+E                       out = [ws.cell(i, c).value for c in range(1, 13)]
+E           >           assert out[:8] == [row[h] for h in BASE_HEADERS]
+E           E           AssertionError: assert ['LD-003', 'C...O', None, ...] == ['LD-003', 'C...', 'N/A', ...]
+E           E             
+E           E             At index 5 diff: None != 'N/A'
+E           E             Use -v to get more diff
+E           
+E           /tests/test_outputs.py:115: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_rawdata_copies_source_exactly - Asserti...
+E           FAILED ../tests/test_outputs.py::test_formatted_data_logic - AssertionError: ...
+E           2 failed, 3 passed in 0.19s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.43s ===============================

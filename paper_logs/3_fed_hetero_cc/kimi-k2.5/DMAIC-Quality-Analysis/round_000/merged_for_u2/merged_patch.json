@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Round 0 merge complete for u2 (kimi-k2.5). Created 1 umbrella skill (statistical-process-analysis) with fixed scipy-based script. Key: concise SKILL.md (~30 lines) to avoid max_tokens truncation; script uses f_oneway/ttest_1samp/linregress/t.interval instead of manual computation. See DECISIONS.md.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/scripts/compute_spc.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/scripts/compute_spc.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.4259657000000001
+}

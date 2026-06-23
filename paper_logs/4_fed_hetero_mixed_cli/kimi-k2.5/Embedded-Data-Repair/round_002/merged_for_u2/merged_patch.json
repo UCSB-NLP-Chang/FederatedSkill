@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged u2's SKILL.md with peer invariants (conversion-matrix pattern unified), applied u2's openxml-structures.md. All workers reward=1.0, consensus skill name. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/references/openxml-structures.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "edit-embedded-office-xml/references/openxml-structures.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/references/openxml-structures.md"
+  ],
+  "cost_usd": 4.064292
+}

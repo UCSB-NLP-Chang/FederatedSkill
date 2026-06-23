@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE \u2014 Created umbrella skill `sales-pivot-analysis` for u2 (kimi-k2.5) from u2's base patch, enhanced with STOP-checkpoints, semantic pivot matching, and domain variants. Rejected u0 (openpyxl anti-pattern), partial u1 (round() violation). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md",
+    "sales-pivot-analysis/scripts/extract_pdf_tables.py",
+    "sales-pivot-analysis/scripts/generate_report.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sales-pivot-analysis/scripts/extract_pdf_tables.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sales-pivot-analysis/scripts/generate_report.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.6162699
+}

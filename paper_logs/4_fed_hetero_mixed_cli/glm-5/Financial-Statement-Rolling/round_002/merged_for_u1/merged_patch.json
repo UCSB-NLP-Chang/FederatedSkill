@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "Synthesized SKILL.md from u0+u1+u2 patches (all reward=0.0). Key changes: added \"Two Types of Rows\" table, Python code snippet for row-type check, filtering step, and summary column alignment guidance. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "cost_usd": 3.7093710000000004
+}

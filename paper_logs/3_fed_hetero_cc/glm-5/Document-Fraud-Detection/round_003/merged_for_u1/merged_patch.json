@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "DONE.txt \u2014 Applied u1's verified patch wholesale (reward=1.0) adding alias handling, status validation, and revision resolution patterns. Kept document-reconciliation naming (no peer majority, target has consistent reward=1.0). Rejected u2's failed 0.5 patch. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/violation-types.md",
+    "document-reconciliation/scripts/reconcile_claims.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "document-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "document-reconciliation/references/violation-types.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "document-reconciliation/scripts/reconcile_claims.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.3864912
+}

@@ -1,0 +1,29 @@
+{
+    "id": "32b38b94-3d7d-4d5d-91b4-10bb65c885dd",
+    "started_at": "2026-05-18T00:45:56.322435",
+    "finished_at": "2026-05-18T00:56:26.907367",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "03_university_faculty_model__p5KxfBh"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "id": "18679be8-66f9-4fde-b253-887c6c789ce5",
+    "started_at": "2026-05-13T23:00:33.784076",
+    "finished_at": "2026-05-13T23:04:03.655146",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Sales-Pivot-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "student-performance-pivot__A3F2Qoq"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

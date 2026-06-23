@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Weighted-Ri<REDACTED>:/root/.config/agent/skills

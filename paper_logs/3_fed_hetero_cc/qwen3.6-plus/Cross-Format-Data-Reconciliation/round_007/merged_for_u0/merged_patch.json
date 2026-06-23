@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged worker u0's patch to add in-memory single-script pattern guidance and combined diff template, fixing intermediate file errors seen in traces, while preserving all existing high-quality reference patterns.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: ",
+    "__task_update_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

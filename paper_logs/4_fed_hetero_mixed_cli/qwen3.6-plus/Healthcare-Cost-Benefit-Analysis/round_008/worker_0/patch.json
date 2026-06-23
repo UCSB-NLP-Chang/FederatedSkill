@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.6,
+  "summary": "Creates a new skill for harbor diagnostic panel cycle analysis (14-day vs 28-day). The trace shows the agent succeeded computationally but failed the verifier, likely due to using Decimal rounding instead of passing raw floats. This skill captures the unique data resolution rules (holdouts, network adjustments, week-based effective dates, rev/approval fields) and enforces the no-rounding precision rule that caused the failure.",
+  "upsert_paths": [
+    "harbor-diagpanel-analysis/SKILL.md",
+    "harbor-diagpanel-analysis/scripts/compute_diagpanel.py"
+  ],
+  "delete_paths": []
+}

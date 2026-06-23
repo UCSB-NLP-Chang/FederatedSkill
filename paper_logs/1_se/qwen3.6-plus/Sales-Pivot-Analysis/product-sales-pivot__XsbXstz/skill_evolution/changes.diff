@@ -1,0 +1,107 @@
+--- /dev/null
++++ b/excel-pivot-report/SKILL.md
+@@ -0,0 +1,44 @@
++---
++name: excel-pivot-report
++description: Generate multi-sheet Excel pivot reports from raw transactional data and reference catalogs. Use when tasks require data cleaning, ID reconciliation, metric computation (revenue/profit/margin), and structured pivot summaries across multiple sheets.
++---
++
++# Excel Pivot Report Generation
++
++## When to Use
++- Input: Raw transactional data (Excel/CSV) + reference catalog (PDF/Excel/CSV).
++- Output: Multi-sheet Excel workbook with cleaned source data and pivot summaries.
++- Triggers: "Create sales report", "pivot data by category/region", "reconcile transactions against catalog", "compute revenue and margin".
++
++## Core Workflow
++1. **Inspect Sources**: Check headers, data types, missing values, and exact duplicates. Use `pandas` for quick profiling.
++2. **Load & Clean**:
++   - Read transactional data and catalog.
++   - Strip whitespace, normalize case for string keys.
++   - Cast numeric columns explicitly (`pd.to_numeric(..., errors='coerce')`).
++3. **Reconcile & Validate**:
++   - Merge/join on `PRODUCT_ID` (or equivalent key).
++   - Flag unmatched IDs, missing prices, or non-positive quantities.
++   - Drop or impute based on task rules. Record reconciliation actions.
++4. **Compute Metrics**:
++   - `REVENUE = QUANTITY * UNIT_PRICE`
++   - `PROFIT = REVENUE - (QUANTITY * UNIT_COST)`
++   - `MARGIN_PCT = PROFIT / REVENUE` (handle division by zero).
++5. **Generate Pivots**: Use `df.groupby()` or `pd.pivot_table()` for required aggregations.
++6. **Write Output**: Use `pandas.ExcelWriter` (engine=`openpyxl`) to create sheets. Verify row counts and sheet names before saving.
++
++## Critical Anti-Patterns & Fixes
++- ❌ `pandas.StringIO` → ✅ `from io import StringIO`
++- ❌ `ws.cell(row=r, column=c, value)` with positional args after keywords → ✅ `ws.cell(row=r, column=c).value = val`
++- ❌ Assuming Excel columns are numeric → ✅ Always cast after loading.
++- ❌ Writing pivots before verifying reconciliation counts → ✅ Print drop/keep stats first.
++- ❌ Mixing `openpyxl` row-by-row writes for large datasets → ✅ Use `pandas` for bulk writes, `openpyxl` only for final formatting.
++
++## Validation Checklist
++- [ ] Source row count matches expected (or explain drops).
++- [ ] All pivot sums match source totals.
++- [ ] Sheet names exactly match requirements.
++- [ ] No `NaN` in required output columns.
++
++## Scripts & References
++- Run `scripts/pivot_report_template.py` as a starting point for robust data loading, reconciliation, and Excel writing. Adapt column names to the specific task.
+--- /dev/null
++++ b/excel-pivot-report/scripts/pivot_report_template.py
+@@ -0,0 +1,57 @@
++#!/usr/bin/env python3
++"""
++Robust template for multi-sheet Excel pivot reports.
++Adapt column names, file paths, and reconciliation rules per task.
++"""
++import pandas as pd
++import openpyxl
++from openpyxl.utils import get_column_letter
++import sys
++
++def run_report(transactions_path, catalog_path, output_path):
++    # 1. Load
++    df = pd.read_excel(transactions_path)
++    catalog = pd.read_excel(catalog_path) # Adjust if PDF/CSV
++    
++    # 2. Clean & Cast
++    df["PRODUCT_ID"] = df["PRODUCT_ID"].astype(str).str.strip()
++    catalog["PRODUCT_ID"] = catalog["PRODUCT_ID"].astype(str).str.strip()
++    for col in ["QUANTITY", "UNIT_PRICE", "UNIT_COST"]:
++        if col in df.columns:
++            df[col] = pd.to_numeric(df[col], errors="coerce")
++            
++    # 3. Reconcile
++    initial_rows = len(df)
++    df = df[df["QUANTITY"] > 0]
++    print(f"Dropped {initial_rows - len(df)} non-positive quantity rows.")
++    
++    df = df.merge(catalog, on="PRODUCT_ID", how="left", suffixes=("", "_cat"))
++    unmatched = df[df["UNIT_PRICE"].isna()]
++    print(f"Unmatched PRODUCT_IDs: {len(unmatched)}")
++    # Decide: drop, fill from catalog, or flag
++    df = df.dropna(subset=["UNIT_PRICE"])
++    
++    # 4. Compute
++    df["REVENUE"] = df["QUANTITY"] * df["UNIT_PRICE"]
++    df["PROFIT"] = df["REVENUE"] - (df["QUANTITY"] * df["UNIT_COST"])
++    df["MARGIN_PCT"] = (df["PROFIT"] / df["REVENUE"].replace(0, pd.NA)).round(4)
++    
++    # 5. Write
++    with pd.ExcelWriter(output_path, engine="openpyxl") as writer:
++        df.to_excel(writer, sheet_name="SourceData", index=False)
++        
++        # Example pivots
++        rev_cat = df.groupby("CATEGORY")["REVENUE"].sum().reset_index()
++        rev_cat.to_excel(writer, sheet_name="Revenue by Category", index=False)
++        
++        units_reg = df.groupby("REGION")["QUANTITY"].sum().reset_index()
++        units_reg.to_excel(writer, sheet_name="Units by Region", index=False)
++        
++    print(f"Report saved to {output_path}")
++
++if __name__ == "__main__":
++    # Usage: python3 pivot_report_template.py <transactions.xlsx> <catalog.xlsx> <output.xlsx>
++    if len(sys.argv) == 4:
++        run_report(sys.argv[1], sys.argv[2], sys.argv[3])
++    else:
++        print("Usage: python3 pivot_report_template.py <transactions> <catalog> <output>")

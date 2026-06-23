@@ -1,0 +1,156 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FFFFF.F                                                                 [100%]
+E           =================================== FAILURES ===================================
+E           ____________________________ test_process1_metrics _____________________________
+E           
+E           outputs = ({'bug_rate': {'capability_vs_target': 'Capable', 'cv': 0.3951, 'mean_proportion': 0.0272, 'overall_rate_percent': 2.6...90:** Full deployment automation with SLO adherence, CV reduced by 25%, stable trend confirmed across all pipelines\n')
+E           expected_metrics = {'bug_rate': {'capability_vs_target': 'Capable', 'ci_high': 2.8140275104371537, 'ci_low': 2.534402379584398, 'cv': 0.3...lures'}, {'cv': 0.39511484471211994, 'process': 'bug_rate'}, {'cv': 0.08530961009398809, 'process': 'build_duration'}]}
+E           
+E               def test_process1_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   p1 = report["build_duration"]
+E                   exp = expected_metrics["build_duration"]
+E               
+E           >       assert p1["n"] == exp["n"]
+E                          ^^^^^^^
+E           E       KeyError: 'n'
+E           
+E           /tests/test_outputs.py:170: KeyError
+E           ____________________________ test_process2_metrics _____________________________
+E           
+E           outputs = ({'bug_rate': {'capability_vs_target': 'Capable', 'cv': 0.3951, 'mean_proportion': 0.0272, 'overall_rate_percent': 2.6...90:** Full deployment automation with SLO adherence, CV reduced by 25%, stable trend confirmed across all pipelines\n')
+E           expected_metrics = {'bug_rate': {'capability_vs_target': 'Capable', 'ci_high': 2.8140275104371537, 'ci_low': 2.534402379584398, 'cv': 0.3...lures'}, {'cv': 0.39511484471211994, 'process': 'bug_rate'}, {'cv': 0.08530961009398809, 'process': 'build_duration'}]}
+E           
+E               def test_process2_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   p2 = report["bug_rate"]
+E                   exp = expected_metrics["bug_rate"]
+E               
+E           >       assert p2["points"] == exp["points"]
+E                          ^^^^^^^^^^^^
+E           E       KeyError: 'points'
+E           
+E           /tests/test_outputs.py:186: KeyError
+E           ____________________________ test_process3_metrics _____________________________
+E           
+E           outputs = ({'bug_rate': {'capability_vs_target': 'Capable', 'cv': 0.3951, 'mean_proportion': 0.0272, 'overall_rate_percent': 2.6...90:** Full deployment automation with SLO adherence, CV reduced by 25%, stable trend confirmed across all pipelines\n')
+E           expected_metrics = {'bug_rate': {'capability_vs_target': 'Capable', 'ci_high': 2.8140275104371537, 'ci_low': 2.534402379584398, 'cv': 0.3...lures'}, {'cv': 0.39511484471211994, 'process': 'bug_rate'}, {'cv': 0.08530961009398809, 'process': 'build_duration'}]}
+E           
+E               def test_process3_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   p3 = report["deployment_failures"]
+E                   exp = expected_metrics["deployment_failures"]
+E               
+E           >       assert p3["rows"] == exp["rows"]
+E                          ^^^^^^^^^^
+E           E       KeyError: 'rows'
+E           
+E           /tests/test_outputs.py:208: KeyError
+E           __________________ test_variability_ranking_and_highest_risk ___________________
+E           
+E           outputs = ({'bug_rate': {'capability_vs_target': 'Capable', 'cv': 0.3951, 'mean_proportion': 0.0272, 'overall_rate_percent': 2.6...90:** Full deployment automation with SLO adherence, CV reduced by 25%, stable trend confirmed across all pipelines\n')
+E           expected_metrics = {'bug_rate': {'capability_vs_target': 'Capable', 'ci_high': 2.8140275104371537, 'ci_low': 2.534402379584398, 'cv': 0.3...lures'}, {'cv': 0.39511484471211994, 'process': 'bug_rate'}, {'cv': 0.08530961009398809, 'process': 'build_duration'}]}
+E           
+E               def test_variability_ranking_and_highest_risk(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   ranking = report["variability_ranking"]
+E                   expected_ranking = expected_metrics["ranking"]
+E               
+E                   assert len(ranking) == 3
+E           >       assert [r["process"] for r in ranking] == [r["process"] for r in expected_ranking]
+E           E       AssertionError: assert ['Deployment ...ild Duration'] == ['deployment_...ild_duration']
+E           E         
+E           E         At index 0 diff: 'Deployment Failures' != 'deployment_failures'
+E           E         Use -v to get more diff
+E           
+E           /tests/test_outputs.py:224: AssertionError
+E           ______________________ test_extended_analysis_consistency ______________________
+E           
+E           outputs = ({'bug_rate': {'capability_vs_target': 'Capable', 'cv': 0.3951, 'mean_proportion': 0.0272, 'overall_rate_percent': 2.6...90:** Full deployment automation with SLO adherence, CV reduced by 25%, stable trend confirmed across all pipelines\n')
+E           
+E               def test_extended_analysis_consistency(outputs):
+E                   report, _ = outputs
+E                   ext = report["extended_analysis"]
+E                   highest = report["highest_variability_process"]
+E               
+E           >       assert ext["process"] == highest
+E                          ^^^^^^^^^^^^^^
+E           E       KeyError: 'process'
+E           
+E           /tests/test_outputs.py:239: KeyError
+E           ___________________ test_markdown_sections_and_required_text ___________________
+E           
+E           outputs = ({'bug_rate': {'capability_vs_target': 'Capable', 'cv': 0.3951, 'mean_proportion': 0.0272, 'overall_rate_percent': 2.6...90:** Full deployment automation with SLO adherence, CV reduced by 25%, stable trend confirmed across all pipelines\n')
+E           
+E               def test_markdown_sections_and_required_text(outputs):
+E                   _, markdown = outputs
+E               
+E                   required_headings = [
+E                       "Summary of Findings",
+E                       "Most Significant Risks",
+E                       "Prioritized Corrective Actions",
+E                   ]
+E               
+E                   for heading in required_headings:
+E                       pattern = rf"^#+\s+{re.escape(heading)}\s*$"
+E                       assert re.search(pattern, markdown, flags=re.MULTILINE), f"Missing markdown heading: {heading}"
+E               
+E                   assert "Deployment Failures is the highest-risk stage." in markdown
+E               
+E                   improvement_headings = [
+E                       "Improvement Plan",
+E                       "Process Under Review",
+E                       "Methodology",
+E                       "Root Cause Approach",
+E                       "Incident Response Plan",
+E                       "Technical Debt Assessment",
+E                   ]
+E                   for heading in improvement_headings:
+E                       pattern = rf"^#+\s+{re.escape(heading)}\s*$"
+E                       assert re.search(pattern, markdown, flags=re.MULTILINE), f"Missing markdown heading: {heading}"
+E               
+E                   assert re.search(r"project codename\s*:", markdown, flags=re.IGNORECASE)
+E           >       assert re.search(r"30-day milestone", markdown, flags=re.IGNORECASE)
+E           E       AssertionError: assert None
+E           E        +  where None = <function search at 0x7fe9ed73df80>('30-day milestone', '# Pipeline Performance Brief\n\n## Summary of Findings\n\nThis analysis covers three critical pipeline stages over a ... 90:** Full deployment automation with SLO adherence, CV reduced by 25%, stable trend confirmed across all pipelines\n', flags=re.IGNORECASE)
+E           E        +    where <function search at 0x7fe9ed73df80> = re.search
+E           E        +    and   re.IGNORECASE = re.IGNORECASE
+E           
+E           /tests/test_outputs.py:301: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_process1_metrics - KeyError: 'n'
+E           FAILED ../tests/test_outputs.py::test_process2_metrics - KeyError: 'points'
+E           FAILED ../tests/test_outputs.py::test_process3_metrics - KeyError: 'rows'
+E           FAILED ../tests/test_outputs.py::test_variability_ranking_and_highest_risk - ...
+E           FAILED ../tests/test_outputs.py::test_extended_analysis_consistency - KeyErro...
+E           FAILED ../tests/test_outputs.py::test_markdown_sections_and_required_text - A...
+E           6 failed, 2 passed in 0.46s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.81s ===============================

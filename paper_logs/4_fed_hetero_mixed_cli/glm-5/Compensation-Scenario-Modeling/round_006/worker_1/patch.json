@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.6666666666666666,
+  "summary": "The agent failed because it couldn't find test_output.py, proceeded with custom verification instead, and declared success prematurely. The existing skill already warns against this but the guidance wasn't strong enough. This patch strengthens the escalation requirement when test discovery fails and adds more exhaustive search patterns.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/pytest-failures.md"
+  ],
+  "delete_paths": []
+}

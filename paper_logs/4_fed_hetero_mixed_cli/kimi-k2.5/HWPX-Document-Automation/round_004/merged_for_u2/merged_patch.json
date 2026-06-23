@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "R4 merge complete. Applied u2's wholesale patch (SKILL.md + references/value-preprocessing.md). See DECISIONS.md.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/references/value-preprocessing.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "hwpx-template-fill/references/value-preprocessing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-fill/SKILL.md"
+  ],
+  "cost_usd": 1.58202
+}

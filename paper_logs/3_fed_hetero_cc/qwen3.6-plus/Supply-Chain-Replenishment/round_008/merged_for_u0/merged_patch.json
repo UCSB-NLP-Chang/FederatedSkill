@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R8: Applied u0's SKILL.md + B6 script, rejected u1's code-heavy style despite reward=1.0 (style mismatch per memory). B6 gap closed with Known Invariants (Ratio sheet, data_only=True, Rounding_Applied, Earliest_Scheduled_Inbound_Date). See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md",
+    "supply-chain-coverage-analysis/scripts/build_legacy_coverage.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "supply-chain-coverage-analysis/scripts/build_legacy_coverage.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "supply-chain-coverage-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "supply-chain-coverage-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.6477757
+}

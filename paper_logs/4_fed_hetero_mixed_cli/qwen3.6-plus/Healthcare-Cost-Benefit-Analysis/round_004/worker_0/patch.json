@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a new skill for infusion batch cycle analysis (7-day vs 14-day), capturing the specific data resolution rules (JSON catalog filtering, alias matching, highest-approved-revision patient overrides) and providing a deterministic Python script to avoid manual calculation errors seen in the trace.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py"
+  ],
+  "delete_paths": []
+}

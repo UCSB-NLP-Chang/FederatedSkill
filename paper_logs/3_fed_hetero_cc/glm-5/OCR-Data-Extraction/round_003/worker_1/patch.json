@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Added invoice-extraction sub-task variant and total amount extraction pattern with priority/exclusion keywords. The agent successfully used keyword prioritization (GRAND TOTAL > TOTAL DUE > AMOUNT DUE > TOTAL > AMOUNT) with exclusion filtering (SUBTOTAL, TAX, etc.) to correctly extract totals from multi-line invoice OCR output.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md"
+  ],
+  "delete_paths": []
+}

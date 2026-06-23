@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Applied target's SKILL.md + verify_xlsx.py as base, integrated u0's grading test alignment (pytest mandate, grading-patterns.md reference) and u1's verify_formulas.py. Rejected u0's rename to maintain naming consensus. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/grading-patterns.md",
+    "excel-workbook-modeling/scripts/verify_formulas.py",
+    "excel-workbook-modeling/scripts/verify_xlsx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.14285714285714285
+    ],
+    "excel-workbook-modeling/references/grading-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-workbook-modeling/scripts/verify_xlsx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.14285714285714285
+    ],
+    "excel-workbook-modeling/scripts/verify_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.14285714285714285
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md"
+  ],
+  "cost_usd": 3.83028
+}

@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The trace reveals a project cost rollforward variant with nested JSON data structure, deduplication by row_id, CSV overrides, and a critical variance formula bug (=O14-N14 instead of =N{gl_row}-N{ending_row}). The existing deferred-revenue-rollforward skill doesn't cover these patterns. I'm adding a new project-cost-rollforward skill and updating the existing SKILL.md to reference it.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "project-cost-rollforward/SKILL.md",
+    "project-cost-rollforward/references/project_cost_variant.md"
+  ],
+  "delete_paths": []
+}

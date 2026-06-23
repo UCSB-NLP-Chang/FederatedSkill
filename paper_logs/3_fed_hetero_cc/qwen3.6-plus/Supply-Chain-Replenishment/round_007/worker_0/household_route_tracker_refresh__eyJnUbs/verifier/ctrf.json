@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778719839.5638852,
+            "stop": 1778719839.7093573
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_script_checks",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.12668358907103539,
+                "start": 1778719839.5698721,
+                "stop": 1778719839.7092423,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_script_checks() -> None:\n        local_script = Path(__file__).with_name(\"test_outputs.py\")\n        harness_script = Path(\"/tests/test_outputs.py\")\n        script = harness_script if harness_script.exists() else local_script\n    \n        result = subprocess.run(\n            [sys.executable, str(script)],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: \nE           Traceback (most recent call last):\nE             File \"/tests/test_outputs.py\", line 247, in <module>\nE               main()\nE             File \"/tests/test_outputs.py\", line 242, in main\nE               compare(expected, actual)\nE             File \"/tests/test_outputs.py\", line 209, in compare\nE               assert_approx(av, ev, 1e-4, f'detail {key} {field}')\nE             File \"/tests/test_outputs.py\", line 68, in assert_approx\nE               assert abs(a - expected) <= tolerance, f'{msg}: actual={a}, expected={expected}'\nE                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE           AssertionError: detail ('R-300', 'HH-EPS') Delivered_Days_On_Hand: actual=15.71, expected=15.7143\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

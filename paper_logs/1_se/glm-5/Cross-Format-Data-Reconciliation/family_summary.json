@@ -1,0 +1,156 @@
+{
+  "family_name": "Cross-Format-Data-Reconciliation",
+  "n_workers": 1,
+  "n_rounds": 8,
+  "elapsed_sec": 1670.004830121994,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 8,
+    "mean": 0.875,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 7
+  },
+  "merger_cost_total_usd": 0.0,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "01-cloud-service-portfolio-diff"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 172.25685024261475
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "02-hospital-capacity-portfolio-diff"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 131.21774578094482
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "03-retail-supply-category-diff"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 121.95660257339478
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "04-university-program-funding-diff"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 165.20029878616333
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "05-datacenter-hardware-registry-diff"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 310.60472869873047
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "06-hospital-medication-reconciliation"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 260.0372531414032
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "07-shipping-container-manifest-diff"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 187.5377106666565
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "08-university-course-catalog-diff"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 321.19259452819824
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/worker_skills/u0/Cross-Format-Data-Reconciliation"
+  }
+}

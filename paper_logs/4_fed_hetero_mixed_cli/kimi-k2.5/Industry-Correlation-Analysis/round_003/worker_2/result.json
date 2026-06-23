@@ -1,0 +1,29 @@
+{
+    "id": "da77f2d2-e70a-4db5-8434-a2edd624d432",
+    "started_at": "2026-05-23T22:47:32.649019",
+    "finished_at": "2026-05-23T22:49:06.756472",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-housing-materials-correlati__Nag4dWU"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Updated verify_plan.py to use openpyxl instead of pandas for better portability, since pandas may not be available in all environments. Added a common capacity rules variant to the template comments.",
+  "upsert_paths": [
+    "excel-capacity-planning/scripts/capacity_planner_template.py",
+    "excel-capacity-planning/scripts/verify_plan.py"
+  ],
+  "delete_paths": []
+}

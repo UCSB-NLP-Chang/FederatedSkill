@@ -1,0 +1,29 @@
+{
+    "id": "15682b60-a9a3-4e6a-a1b4-279201eb9bef",
+    "started_at": "2026-05-17T20:27:41.039009",
+    "finished_at": "2026-05-17T20:38:48.693934",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "hepatic-panel-harmonization__ouyph2v"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -236,6 +236,24 @@ done
 
 Per-pipeline tunable env vars: `SKILLFL_AGENT_429_RETRIES` (default 20), `SKILLFL_AGENT_429_BASE_SLEEP` (30), `SKILLFL_AGENT_429_MAX_SLEEP` (600) — control how aggressively the runner retries claude-code 429-exhaustion failures before bailing the family.
 
+### Paper logs
+
+`paper_logs/` ships the exact run dirs the paper's Tables 1 and 2 cite — one canonical run per `(setting, model, family)` cell, with no candidates / no cherry-pick alternatives. Use these to verify the numbers reported in the paper or to inspect the final library each cell produced.
+
+```
+paper_logs/
+├── 1_se/<model>/<family>/                  # Table 1 SE-min column   (60 cells = 20 families × 3 models, each cell = a single-worker iter run)
+├── 3_fed_hetero_cc/<model>/<family>/       # Table 1 SkF-best column (per-model slice of the same 3-worker fed run per family)
+└── 4_fed_hetero_mixed_cli/<model>/<family>/  # Table 2 SkF-best column
+```
+
+Each `<setting>/<model>/<family>/` contains, depending on layout:
+
+- **SE iter** (single-worker, `1_se/`): `family_summary.json`, `shared_skills/<family>/` (final library), `skill_patch_history.jsonl`, per-trial `result.json` + `verifier/ctrf.json`.
+- **Federation** (`3_fed_hetero_cc/`, `4_fed_hetero_mixed_cli/`): per-worker slice — `worker_skills/u<widx>/<family>/`, `cloud_skill_merge_sandboxes/round_NNN/u<widx>/`, and per-round `worker_<widx>/` (patch.json + per-trial result.json + verifier). Shared family/round-level summaries (`family_summary.json`, `round_summary.json`) are duplicated per-model dir for convenience.
+
+`agent/` subtrees (claude-code conversation traces) are intentionally NOT included — they're large (~160 KB per trial × 8 trials × 9 rounds × 3 workers per cell) and are not needed to reproduce the reward/library-size numbers. The `result.json` and `verifier/ctrf.json` in each trial dir are the canonical source for per-trial rewards.
+
 ## Repository layout
 
 ```
@@ -256,6 +274,10 @@ federate_skill/                              # this repo (~500 KB)
 │   ├── run_2_fed_3glm_cc.sh
 │   ├── run_3_fed_hetero_cc.sh
 │   └── run_4_fed_hetero_mixed_cli.sh
+├── paper_logs/                             # canonical per-cell logs cited by paper Tables 1 + 2
+│   ├── 1_se/<model>/<family>/              # Table 1 SE-min column (single-worker iter runs)
+│   ├── 3_fed_hetero_cc/<model>/<family>/   # Table 1 SkF-best column (per-model slice of fed run)
+│   └── 4_fed_hetero_mixed_cli/<model>/<family>/  # Table 2 SkF-best column
 └── skillfl/                                # the federation adapter (this paper's code)
     ├── harbor_runner.py                    # UserSpec dataclass
     └── skillflow_adapter/

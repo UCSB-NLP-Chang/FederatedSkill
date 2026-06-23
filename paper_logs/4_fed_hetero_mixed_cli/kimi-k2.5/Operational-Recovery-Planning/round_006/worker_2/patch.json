@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.8,
+  "summary": "The trace shows a B2-style daily production recovery task (harbor_ag_recovery_03) using Harvest/Ag domain terms (Wheat/Canola/Flax) instead of the Harbor DC terms (Web/DB/Network) documented in the skill. The agent wrote custom verification logic with hardcoded row ranges (4-104) that caused assertion errors, and struggled with self-verification that passed while external tests failed. The skill needs: (1) recognition that B2 applies to Harvest/Ag variants with equivalent category mappings, (2) an anti-pattern against hardcoded row ranges in verification code, and (3) a reference entry for the Harvest domain patterns.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "delete_paths": []
+}

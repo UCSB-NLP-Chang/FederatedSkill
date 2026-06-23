@@ -1,0 +1,29 @@
+{
+    "id": "f0b3fd0b-8bb1-454d-bec4-3bb1d97c87d2",
+    "started_at": "2026-05-18T00:12:43.674010",
+    "finished_at": "2026-05-18T00:30:07.217573",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "02_orchestra_archive_refresh_mod__b5A5ewZ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Consolidated u1's comprehensive B1-B5 variant SKILL.md into supply-chain-coverage-analysis, absorbing route/dispatch logic and dropping the redundant route-dispatch-tracker directory.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "supply-chain-coverage-analysis/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

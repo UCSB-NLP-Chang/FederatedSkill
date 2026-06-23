@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The trace reveals a multi-file join audit variant (harbor outbound manifest) that requires preserving a template workbook's Overview sheet unchanged. The existing multi-file-join-audit skill covers the core join/filter/aggregate pattern but lacks guidance on template preservation and the default-sheet removal gotcha. This patch adds the template-preservation workflow, the default-sheet removal rule, and a new sub-task invariant for outbound manifest audits.",
+  "upsert_paths": [
+    "multi-file-join-audit/SKILL.md",
+    "multi-file-join-audit/references/template-preservation.md"
+  ],
+  "delete_paths": []
+}

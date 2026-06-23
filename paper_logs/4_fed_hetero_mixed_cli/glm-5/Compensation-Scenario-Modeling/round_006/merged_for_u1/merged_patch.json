@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Applied u1's own SKILL.md and pytest-failures.md updates (same model/CLI fit), absorbed u0's assumption-parsing.md reference (new content). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/assumption-parsing.md",
+    "excel-workbook-modeling/references/pytest-failures.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ],
+    "excel-workbook-modeling/references/pytest-failures.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.6666666666666666
+    ],
+    "excel-workbook-modeling/references/assumption-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md",
+    "__skill_md_invalid__:excel-workbook-modeling/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.8290119999999996
+}

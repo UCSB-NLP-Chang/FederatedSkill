@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.4,
+  "summary": "Adds a new skill for mailer-fill cycle margin analysis to handle tasks with compound costs, mailer formats, base payments, and service fees. Includes a deterministic script to prevent the inline calculation and decision logic errors that caused the verifier failure in the trace. Captures correct formulas, anti-patterns, and verification steps.",
+  "upsert_paths": [
+    "mailer-fill-analysis/SKILL.md",
+    "mailer-fill-analysis/scripts/compute_mailer_margin.py"
+  ],
+  "delete_paths": []
+}

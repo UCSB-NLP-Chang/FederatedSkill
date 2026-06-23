@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Synthesized SKILL.md from all three failed patches: combined u0's mandatory verification enforcement, u1's data-rows-vs-control-rows conceptual distinction, and u2's summary-sheet linking guidance. See DECISIONS.md for detailed reasoning.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "cost_usd": 3.2705819999999997
+}

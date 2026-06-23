@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Library established with 1 umbrella skill `edit-embedded-excel` (PPTX+DOCX coverage). Applied u2's comprehensive SKILL.md as base, enhanced with u0's python-pptx anti-pattern, included u2's helper script and cell types reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/references/openpyxl_cell_types.md",
+    "edit-embedded-excel/scripts/update_embedded_excel.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/scripts/update_embedded_excel.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "edit-embedded-excel/references/openpyxl_cell_types.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.37252680000000005
+}

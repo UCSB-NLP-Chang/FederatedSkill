@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for auditing travel expense claims across PDFs, employee directories, and approval lists. Captures the exact extraction workflow, fuzzy name-matching strategy, priority-ordered validation rules, and anti-patterns observed in the successful trace to prevent brittle exact-match assumptions and ensure consistent discrepancy reporting.",
+  "upsert_paths": [
+    "travel-expense-screening/SKILL.md"
+  ],
+  "delete_paths": []
+}

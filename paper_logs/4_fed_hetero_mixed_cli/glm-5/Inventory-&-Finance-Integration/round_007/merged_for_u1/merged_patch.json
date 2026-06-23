@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's validated SKILL.md and code-patterns.md; elevated inclusive date counting rule to Core Workflow (fixing R6 persistent gap). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "inventory-metrics-calculation/SKILL.md",
+    "inventory-metrics-calculation/references/code-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-metrics-calculation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "inventory-metrics-calculation/references/code-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "inventory-metrics-calculation/SKILL.md"
+  ],
+  "cost_usd": 2.979633
+}

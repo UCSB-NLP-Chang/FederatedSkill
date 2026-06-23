@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Applied u1's behavioral fixes + u0's date formatting + u2's B2 invariants. Library now has hwpx-template-filling umbrella with 5 reference files including new safety-audit-patterns.md. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/korean-data-transformations.md",
+    "hwpx-template-filling/references/safety-audit-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-filling/references/korean-data-transformations.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.75
+    ],
+    "hwpx-template-filling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.75
+    ],
+    "hwpx-template-filling/references/safety-audit-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "cost_usd": 0.7701644999999999
+}

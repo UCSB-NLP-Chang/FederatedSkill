@@ -1,0 +1,29 @@
+{
+    "id": "0a8df04c-801f-49c8-87ef-2d34b542c101",
+    "started_at": "2026-05-18T01:41:16.460790",
+    "finished_at": "2026-05-18T01:45:51.196992",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__PPT-Formatting-Optimization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "wildlife-field-guide-caption-cle__zW6ZwLj"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "id": "91bddb37-4d5c-4d1a-b20f-877a417a549a",
+    "task_name": "task_family_pharmacy_labels",
+    "trial_name": "task_family_pharmacy_labels__uXu4iGp",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/OCR-Data-Extraction/round_000/worker_2/task_family_pharmacy_labels__uXu4iGp",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/OCR-Data-Extraction/task_family_pharmacy_labels"
+    },
+    "source": "OCR-Data-Extraction",
+    "task_checksum": "8e95c64ded8dda26a6b542fd34513dfa56a6d7e6d5b1af33f61618395f0fb129",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/OCR-Data-Extraction/task_family_pharmacy_labels",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "OCR-Data-Extraction"
+        },
+        "trial_name": "task_family_pharmacy_labels__uXu4iGp",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/OCR-Data-Extraction/round_000/worker_2",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "kimi-k2.5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/OCR-Data-Extraction/worker_skills/u2"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "2aae545c-7fca-4ca4-948d-18fc7587fd2d"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 125527,
+        "n_cache_tokens": 97714,
+        "n_output_tokens": 4355,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-13T16:48:33.246455Z",
+    "finished_at": "2026-05-13T16:51:44.771364Z",
+    "environment_setup": {
+        "started_at": "2026-05-13T16:48:33.247728Z",
+        "finished_at": "2026-05-13T16:48:46.702167Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-13T16:48:46.702200Z",
+        "finished_at": "2026-05-13T16:48:56.971778Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-13T16:48:56.971871Z",
+        "finished_at": "2026-05-13T16:51:31.510532Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-13T16:51:31.514502Z",
+        "finished_at": "2026-05-13T16:51:32.975852Z"
+    }
+}

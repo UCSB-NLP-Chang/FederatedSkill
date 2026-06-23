@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Round 2. Applied synthesized SKILL.md combining u1's precision fix + u0's B3 workflow. Added roster_matching_patterns.md, updated dedup_validation_patterns.md. Rejected u2's new skill (extend before add). See DECISIONS.md.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/dedup_validation_patterns.md",
+    "ocr-data-extraction/references/roster_matching_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/dedup_validation_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "ocr-data-extraction/references/roster_matching_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "ocr-data-extraction/SKILL.md"
+  ],
+  "cost_usd": 4.143065999999999
+}

@@ -1,0 +1,29 @@
+{
+    "id": "8e4f4623-e810-4fde-be89-a3bc8f0621cb",
+    "started_at": "2026-05-18T06:21:33.800774",
+    "finished_at": "2026-05-18T06:23:10.303017",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Sales-Pivot-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "inventory-multi-warehouse-pivot__fPa82zX"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ...F..F..F                                                               [100%]
+E           =================================== FAILURES ===================================
+E           ____________________ TestSheetStructure.test_summary_title _____________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f5b2d06f8c0>
+E           
+E               def test_summary_title(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['Summary']
+E                   assert ws['B1'].value is not None, "Summary B1 should contain organization name"
+E           >       assert ws['C5'].value == 48.00, f"Expected C5=48.00, got {ws['C5'].value}"
+E           E       AssertionError: Expected C5=48.00, got None
+E           E       assert None == 48.0
+E           E        +  where None = <Cell 'Summary'.C5>.value
+E           
+E           /tests/test_outputs.py:27: AssertionError
+E           _______________ TestSheetStructure.test_quarterly_totals_row_94 ________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f5b2d1b3740>
+E           
+E               def test_quarterly_totals_row_94(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['EE Calcs (Current)']
+E                   h94 = ws.cell(row=94, column=8).value
+E           >       assert h94 is not None, "Row 94 (quarterly totals) should exist in EE Calcs"
+E           E       AssertionError: Row 94 (quarterly totals) should exist in EE Calcs
+E           E       assert None is not None
+E           
+E           /tests/test_outputs.py:47: AssertionError
+E           _______________ TestSheetStructure.test_yoy_service_progression ________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f5b2d1c6d20>
+E           
+E               def test_yoy_service_progression(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws1 = wb['EE Calcs (Current)']
+E                   ws2 = wb['EE Calcs (Yr+1)']
+E                   for r in range(4, 95):
+E                       v1 = ws1.cell(row=r, column=6).value
+E                       v2 = ws2.cell(row=r, column=6).value
+E                       if v1 is not None and v2 is not None:
+E           >               assert v2 == v1 + 1, f"Yr+1 service should be +1"
+E           E               AssertionError: Yr+1 service should be +1
+E           E               assert 48286.78 == (46872.8 + 1)
+E           
+E           /tests/test_outputs.py:72: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_summary_title - Ass...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_quarterly_totals_row_94
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_yoy_service_progression
+E           3 failed, 7 passed in 0.35s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.59s ===============================

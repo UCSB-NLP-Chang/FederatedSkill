@@ -1,0 +1,104 @@
+{
+    "id": "4fc7aa3e-9fce-4325-a63c-bb013253f940",
+    "task_name": "cedar_accrual_rollforward",
+    "trial_name": "cedar_accrual_rollforward__CCa8Run",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/round_001/worker_1/cedar_accrual_rollforward__CCa8Run",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Financial-Statement-Rolling/cedar_accrual_rollforward"
+    },
+    "source": "Financial-Statement-Rolling",
+    "task_checksum": "a4b200a6dbfe7610af528beb8f4af0cf28cf823e4b855f47a36845006920cad8",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Financial-Statement-Rolling/cedar_accrual_rollforward",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Financial-Statement-Rolling"
+        },
+        "trial_name": "cedar_accrual_rollforward__CCa8Run",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/round_001/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://tokenhub.tencentmaas.com/plan/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "2635b60d-4ba2-4cab-8eca-1dfa21e4f2b2"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 269110,
+        "n_cache_tokens": 65856,
+        "n_output_tokens": 7459,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-14T03:02:42.847729Z",
+    "finished_at": "2026-05-14T03:05:59.855948Z",
+    "environment_setup": {
+        "started_at": "2026-05-14T03:02:42.848564Z",
+        "finished_at": "2026-05-14T03:02:45.393963Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-14T03:02:45.394007Z",
+        "finished_at": "2026-05-14T03:02:45.951982Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-14T03:02:45.952074Z",
+        "finished_at": "2026-05-14T03:05:44.543338Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-14T03:05:44.549961Z",
+        "finished_at": "2026-05-14T03:05:47.855629Z"
+    }
+}

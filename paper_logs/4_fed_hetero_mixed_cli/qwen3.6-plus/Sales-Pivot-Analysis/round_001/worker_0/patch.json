@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The agent claimed success after manual verification but failed the actual test suite (test_output.py::test_legacy_pytest_suite). The existing pivot-report skill mentions running tests but buries it in anti-patterns and a checklist. This update makes test execution a mandatory workflow step, adds explicit decision rules about not declaring success until tests pass, and provides a troubleshooting workflow for when tests fail.",
+  "upsert_paths": [
+    "pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

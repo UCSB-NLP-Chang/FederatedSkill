@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Round 7 merge complete. Absorbed u2's inventory/warehouse report pattern into hwpx-template-filling umbrella; rejected u2's divergent `hwpx-editing` skill naming (u0+u1 majority use `hwpx-template-filling`). Library stable at 1 umbrella skill + 4 references. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-filling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.36786270000000004
+}

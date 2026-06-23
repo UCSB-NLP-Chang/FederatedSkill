@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R6. Applied u0's verified SKILL.md (correct dye invariants, multi-sheet pattern, sentence-counting pitfall) plus u1's Pattern 6. Rejected u2 (reward=0.5, wrong invariants). u1's own patch had wrong dye documentation despite task success. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/references/excel-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "cost_usd": 0.7641311999999999
+}

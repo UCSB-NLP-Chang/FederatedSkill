@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent completed a library-circulation-pivot task but failed to run the mandatory pytest verification step, leading to test failures. This update adds the library-circulation-pivot task pattern to the known invariants section and strengthens the description to clarify this skill applies to any multi-source pivot report, not just sales data.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

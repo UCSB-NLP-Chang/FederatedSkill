@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a new skill for economic time series analysis, capturing robust patterns for deflating nominal data, cleaning malformed year indices, correctly importing the statsmodels HP filter, and computing correlations on cyclical components. Includes a reusable Python helper script to avoid common parsing and import pitfalls observed in the trace.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md",
+    "economic-time-series-analysis/scripts/hp_correlation.py"
+  ],
+  "delete_paths": []
+}

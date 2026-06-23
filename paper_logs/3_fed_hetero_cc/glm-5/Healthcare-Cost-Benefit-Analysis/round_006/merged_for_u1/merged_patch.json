@@ -1,0 +1,34 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Applied u2's validated reagent-kit-analysis patch (reward=1.0) to close B5 gap. See DECISIONS.md for details. Library now has 3 skills covering B1-B5.",
+  "upsert_paths": [
+    "reagent-kit-analysis/SKILL.md",
+    "reagent-kit-analysis/references/variant-mappings.md",
+    "reagent-kit-analysis/scripts/compute_reagent_kit.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "reagent-kit-analysis/references/variant-mappings.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "reagent-kit-analysis/scripts/compute_reagent_kit.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "reagent-kit-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "reagent-kit-analysis/SKILL.md",
+    "reagent-kit-analysis/scripts/compute_reagent_kit.py",
+    "__skill_md_invalid__:infusion-batch-analysis/SKILL.md: bad YAML (ScannerError)",
+    "__skill_md_invalid__:reagent-kit-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.4044850000000006
+}

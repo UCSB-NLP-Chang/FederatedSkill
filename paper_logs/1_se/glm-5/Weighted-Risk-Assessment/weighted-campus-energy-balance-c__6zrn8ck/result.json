@@ -1,0 +1,103 @@
+{
+  "id": "527e9c52-17b9-43ff-b7d3-bf0c50ff4397",
+  "task_name": "weighted-campus-energy-balance-calc",
+  "trial_name": "weighted-campus-energy-balance-c__6zrn8ck",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Weighted-Ri<REDACTED>",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Weighted-Ri<REDACTED>"
+  },
+  "source": "Weighted-Risk-Assessment",
+  "task_checksum": "f2dc3dbb285c63f2507bdcfb989bea119c9471de4600a90991902cf2855b6847",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Weighted-Ri<REDACTED>",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Weighted-Risk-Assessment"
+    },
+    "trial_name": "weighted-campus-energy-balance-c__6zrn8ck",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Weighted-Risk-Assessment",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "f51ca40f-1091-4133-8673-e1e22a95157d"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 310928,
+    "n_cache_tokens": 324969,
+    "n_output_tokens": 12463,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-04-27T18:22:50.370807Z",
+  "finished_at": "2026-04-27T18:25:26.156799Z",
+  "environment_setup": {
+    "started_at": "2026-04-27T18:22:50.372376Z",
+    "finished_at": "2026-04-27T18:22:51.323773Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-04-27T18:22:51.323787Z",
+    "finished_at": "2026-04-27T18:22:51.560995Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-04-27T18:22:51.561056Z",
+    "finished_at": "2026-04-27T18:25:14.789410Z"
+  },
+  "verifier": {
+    "started_at": "2026-04-27T18:25:14.789899Z",
+    "finished_at": "2026-04-27T18:25:15.680079Z"
+  }
+}

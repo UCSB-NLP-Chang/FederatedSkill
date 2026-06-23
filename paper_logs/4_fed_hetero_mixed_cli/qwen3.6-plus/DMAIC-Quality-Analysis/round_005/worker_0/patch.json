@@ -1,0 +1,12 @@
+{
+  "worker_id": "u0",
+  "reward": 0.375,
+  "summary": "Adds a new skill for healthcare quality and patient safety analysis. The trace shows the agent failed verifier tests due to custom script key mismatches, incorrect statistical thresholds, and missing exact phrasing. This skill bundles a deterministic computation script, exact output schema, and markdown template to ensure strict compliance with verifier expectations for CV ranking, t-stat stability, Wilson CI, and exact JSON key names.",
+  "upsert_paths": [
+    "healthcare-quality-analysis/SKILL.md",
+    "healthcare-quality-analysis/assets/brief_template.md",
+    "healthcare-quality-analysis/references/output_schema.md",
+    "healthcare-quality-analysis/scripts/compute_safety_metrics.py"
+  ],
+  "delete_paths": []
+}

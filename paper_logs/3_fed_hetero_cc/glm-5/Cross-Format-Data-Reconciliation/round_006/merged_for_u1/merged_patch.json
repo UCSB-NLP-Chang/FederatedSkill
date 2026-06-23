@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "R6 merge complete for u1. Applied u0's SKILL.md (flat/nested schema rule + container key variants) and u1's extraction_patterns.md (multi-page PDF example). See DECISIONS.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.971202
+}

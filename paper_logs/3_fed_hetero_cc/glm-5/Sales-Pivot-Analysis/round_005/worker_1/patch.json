@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8823529411764706,
+  "summary": "The agent created an Excel report with pivot tables but tests failed, suggesting output format or content mismatch. This skill captures the reusable pattern for Excel pivot report generation with verification steps to catch format issues early.",
+  "upsert_paths": [
+    "excel-pivot-reports/SKILL.md",
+    "excel-pivot-reports/scripts/create_pivot_report.py"
+  ],
+  "delete_paths": []
+}

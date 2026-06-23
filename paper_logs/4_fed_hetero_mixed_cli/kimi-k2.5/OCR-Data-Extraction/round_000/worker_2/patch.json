@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Creates a skill for extracting structured data (dates, prices, codes) from product labels and documents using multi-strategy OCR. Captures the successful pattern of trying multiple Tesseract PSM modes (6, 11, 4) combined with image preprocessing variants (sharpen, threshold) to handle low-quality or varied layouts. Includes regex patterns for common pharmacy/retail label formats and validation rules for ISO date normalization.",
+  "upsert_paths": [
+    "ocr-structured-extraction/SKILL.md",
+    "ocr-structured-extraction/references/regex_patterns.md"
+  ],
+  "delete_paths": []
+}

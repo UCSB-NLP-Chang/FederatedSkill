@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "manager-pair-issuer-grid__Fk3CRwY",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-cc-rest10-rerun-glm-M3-hetero/SEC-13F-Financial-Analysis/round_004/worker_1/manager-pair-issuer-grid__Fk3CRwY",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-cc-rest10-rerun-glm-M3-hetero/SEC-13F-Financial-Analysis/round_004/worker_1/manager-pair-issuer-grid__Fk3CRwY",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

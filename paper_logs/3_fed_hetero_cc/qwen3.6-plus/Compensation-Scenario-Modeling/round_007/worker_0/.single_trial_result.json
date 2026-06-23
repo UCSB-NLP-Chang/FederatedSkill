@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "08_construction_union_model__x7GJJ2m",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/round_007/worker_0/08_construction_union_model__x7GJJ2m",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/round_007/worker_0/08_construction_union_model__x7GJJ2m",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

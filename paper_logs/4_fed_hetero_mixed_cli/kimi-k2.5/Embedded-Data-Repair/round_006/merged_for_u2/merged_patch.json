@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Extended edit-embedded-office-xml/SKILL.md with B2 multi-workbook metadata handling pattern synthesized from u0 + u1 (both at reward=0.75). Added config file decision rule, multi-workbook selection known invariant, filename assumption anti-pattern, and openpyxl strict verifier fallback. Kept SKILL.md at 146 lines to avoid kimi-k2.5 truncation risk. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.75
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "cost_usd": 4.327802999999999
+}

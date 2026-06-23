@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.7777777777777778,
+  "summary": "Update pptx-xml-editing skill with critical anti-patterns discovered during the trace: never read/write the same ZIP file (causes BadZipFile corruption), proper endParaRPr placement inside last a:p element, and guidance on handling pre-existing ns2/ns3 prefixes without re-registering them.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "delete_paths": []
+}

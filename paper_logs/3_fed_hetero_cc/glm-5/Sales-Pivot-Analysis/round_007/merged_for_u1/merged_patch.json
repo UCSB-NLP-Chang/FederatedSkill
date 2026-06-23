@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Consolidated budget reconciliation patterns from u0 and u2 into the existing sales-pivot-analysis skill as a new domain variant (u1), keeping the reusable wide-to-long script and reference patterns while dropping the duplicate separate skill directory.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md",
+    "sales-pivot-analysis/references/budget-reconciliation-patterns.md",
+    "sales-pivot-analysis/scripts/wide_to_long_budget.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      0.9047619047619048
+    ],
+    "sales-pivot-analysis/scripts/wide_to_long_budget.py": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.8571428571428571
+    ],
+    "sales-pivot-analysis/references/budget-reconciliation-patterns.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.8571428571428571
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R5 Medical-Data-Standardization.\n\nExtended clinical-lab-harmonization umbrella with ICU metabolic panel coverage (multi-file join, BUN \u00d72.8, blood gases no-convert). Rejected u0's narrow icu-metabolic-harmonization skill (umbrella-first) and u1's reference file (kimi-cli doesn't follow file refs). Condensed to ~150 lines to avoid kimi max_tokens truncation. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.9230769230769231
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.1417620000000004
+}

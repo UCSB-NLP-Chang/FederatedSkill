@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.55,
+  "summary": "Updated clinical-lab-harmonization skill to cover cardiology panels (BNP, NT-proBNP, Troponin I/T) and explicitly reinforce the 'no rounding/fixed-decimal formatting' rule, which caused the verifier failure in the trace. Added cardiology-specific thresholds, conversion factors, and anti-patterns to prevent unit direction errors and template-matching formatting traps.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The existing workload-capacity-planning skill already covers this task type well. Adding minor improvements: (1) generalize terminology to include 'period' alongside 'week', (2) generalize capacity values to show they're configurable, (3) add explicit step-down logic pattern for catch-up scenarios where backlog must be cleared before reducing days worked.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

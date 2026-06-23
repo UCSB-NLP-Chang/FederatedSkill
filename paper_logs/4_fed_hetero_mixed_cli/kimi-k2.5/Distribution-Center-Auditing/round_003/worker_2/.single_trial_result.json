@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_service_queue_sla_audit__bRivQuJ",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Distribution-Center-Auditing/round_003/worker_2/harbor_service_queue_sla_audit__bRivQuJ",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Distribution-Center-Auditing/round_003/worker_2/harbor_service_queue_sla_audit__bRivQuJ",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

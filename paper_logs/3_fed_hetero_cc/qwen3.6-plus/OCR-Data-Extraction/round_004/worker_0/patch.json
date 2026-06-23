@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds multi-line keyword handling for OCR (when compound keywords like 'TOTAL DUE' split across lines) and template workbook preservation patterns. These caused 4/14 bills to fail initially in the trace. Also adds utility-bill invariants to the existing image-data-extraction skill.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/utility-bill-patterns.md"
+  ],
+  "delete_paths": []
+}

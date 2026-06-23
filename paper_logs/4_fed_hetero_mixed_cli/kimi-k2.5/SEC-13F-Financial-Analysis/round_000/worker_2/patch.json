@@ -1,0 +1,13 @@
+{
+  "worker_id": "u2",
+  "reward": 0.42857142857142855,
+  "summary": "Creates a reusable skill for SEC 13F filing analysis. The trace shows a fund snapshot extraction task where the agent had to fuzzy-match manager names (finding Headlands Technologies for Renaissance Technologies query), classify stock-like vs non-stock holdings, and aggregate AUM data. The skill bundles the normalization/matching logic, stock classification rules, and data extraction workflow to prevent re-discovery of the Levenshtein matching and TSV parsing patterns. The verifier failed, so the skill includes explicit validation steps and troubleshooting for common data mismatches.",
+  "upsert_paths": [
+    "sec-13f-snapshot/SKILL.md",
+    "sec-13f-snapshot/references/data-format.md",
+    "sec-13f-snapshot/references/stock-classification.md",
+    "sec-13f-snapshot/scripts/extract_snapshot.py",
+    "sec-13f-snapshot/scripts/match_manager.py"
+  ],
+  "delete_paths": []
+}

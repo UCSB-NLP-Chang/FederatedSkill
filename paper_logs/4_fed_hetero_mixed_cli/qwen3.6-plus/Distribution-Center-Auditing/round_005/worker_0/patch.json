@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.4,
+  "summary": "Adds a new skill for returns disposition audits that involve multi-file Excel joins, alias normalization, and event status filtering. The existing excel-audit-reporting skill covers single-file multi-sheet audits; this new skill handles the distinct pattern of joining separate Excel files (Plan + Event Log + Alias Map), normalizing values via case-insensitive alias lookups, filtering events by status (e.g., COMPLETED only), and computing missing/mismatch flags. Includes a reusable script template and reference for multi-file join patterns.",
+  "upsert_paths": [
+    "returns-disposition-audit/SKILL.md",
+    "returns-disposition-audit/references/multi-file-join-pattern.md",
+    "returns-disposition-audit/scripts/generate_returns_audit.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds PEP 668 troubleshooting guidance and clarifies when to write custom code vs use the helper script, based on the agent's successful workaround for externally-managed environments and the need to customize output schema.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": []
+}

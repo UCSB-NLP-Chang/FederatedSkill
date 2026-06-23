@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.6666666666666666,
+  "summary": "Adds a new skill for neonatal/pediatric panel harmonization, which differs from adult clinical panels by frequently targeting SI units (\u03bcmol/L, mmol/L, 10\u2079/L, g/L, kPa) instead of US conventional units. Captures threshold-based detection rules, full-precision output requirements, and anti-patterns observed in the failed trace (scientific notation in CSV, header mismatches, incorrect lactate thresholds, and rounding).",
+  "upsert_paths": [
+    "neonatal-panel-harmonization/SKILL.md",
+    "neonatal-panel-harmonization/references/neonatal-ranges.md"
+  ],
+  "delete_paths": []
+}

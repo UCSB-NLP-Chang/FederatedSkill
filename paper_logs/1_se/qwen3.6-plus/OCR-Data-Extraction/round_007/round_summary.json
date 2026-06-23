@@ -1,0 +1,18 @@
+{
+  "round_idx": 7,
+  "assignments": [
+    [
+      "u0",
+      "task_family_case_settlement_packets"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0
+  },
+  "exceptions": {
+    "u0": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 665.8775269985199
+}

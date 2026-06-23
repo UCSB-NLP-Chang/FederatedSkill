@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE. Merged u0's multi-line keyword handling and u1's utility bill patterns into u2's library. Kept u2's table-driven SKILL.md structure (fits kimi-cli) while adding key insights from peers. Reference files updated wholesale. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md",
+    "ocr-data-extraction/references/regex_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/regex_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "ocr-data-extraction/references/parsing_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.969333
+}

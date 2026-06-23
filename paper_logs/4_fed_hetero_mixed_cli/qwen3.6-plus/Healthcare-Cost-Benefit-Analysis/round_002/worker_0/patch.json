@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for SyncPack cycle analysis, capturing the exact financial formulas, constants, output schema, and a deterministic Python script to prevent calculation errors and schema mismatches in future runs.",
+  "upsert_paths": [
+    "syncpack-cycle-analysis/SKILL.md",
+    "syncpack-cycle-analysis/scripts/compute_syncpack.py"
+  ],
+  "delete_paths": []
+}

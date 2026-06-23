@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Added reusable preprocessing patterns for mapping arrays to numbered placeholders (e.g., \uc870\uce581, \uc870\uce582), conditional status enrichment (risk tiers with severity notes), and compact date formatting (YYYY.MM.DD) based on the safety audit brief task. Updated SKILL.md to list array mapping as a common preprocessing need.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/references/value-preprocessing.md"
+  ],
+  "delete_paths": []
+}

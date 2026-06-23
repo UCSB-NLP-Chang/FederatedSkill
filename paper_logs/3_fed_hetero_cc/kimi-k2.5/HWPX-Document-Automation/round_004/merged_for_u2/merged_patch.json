@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "R4 complete \u2014 applied u2's patch to hwpx-editing/SKILL.md (+63 lines inline Value Transformation Patterns). Kept broader umbrella name per validated evidence. No reference files added (inline style preferred for kimi). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "hwpx-editing/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "cost_usd": 0.38545830000000003
+}

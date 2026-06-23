@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Added anti-pattern warning about attempting to read binary Excel files with the Read tool, which wastes a tool call. The trace showed the agent trying Read on .xlsx before correctly using openpyxl. This is a common mistake that should be documented to prevent future wasted attempts.",
+  "upsert_paths": [
+    "excel-python-processing/SKILL.md"
+  ],
+  "delete_paths": []
+}

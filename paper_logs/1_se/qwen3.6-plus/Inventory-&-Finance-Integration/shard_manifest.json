@@ -1,0 +1,28 @@
+{
+  "run_id": "fed-permerge-self-qwen-only-M1-tokenplan-hetero",
+  "family_name": "Inventory-&-Finance-Integration",
+  "n_workers": 1,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "RewardWeightedFileMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "qwen3.6-plus"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "harbor_gdpval_21",
+      "new_task_9_hospital_staffing_resilience",
+      "new_task_10_maintenance_calcfields_restock",
+      "new_task_9_datacenter_capacity_rollforward",
+      "new_task_10_transit_subsidy_rollforward",
+      "new_task_11_media_rights_rollforward",
+      "new_task_12_mealkit_freshness_replenishment",
+      "new_task_11_datacenter_stochastic_refills"
+    ]
+  }
+}

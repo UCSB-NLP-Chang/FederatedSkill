@@ -1,0 +1,38 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE. Merged u2's SKILL.md and regex_patterns.md (reward=1.0 each), added u0's dedup_validation_patterns.md and u1's extract_to_excel.py as independent contributions. Library now has 1 umbrella skill with 2 reference files + 1 script. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/dedup_validation_patterns.md",
+    "ocr-data-extraction/references/regex_patterns.md",
+    "ocr-data-extraction/scripts/extract_to_excel.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/dedup_validation_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "ocr-data-extraction/scripts/extract_to_excel.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "ocr-data-extraction/references/regex_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/regex_patterns.md"
+  ],
+  "cost_usd": 2.301972
+}

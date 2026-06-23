@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.7777777777777778,
+  "summary": "Updated powerpoint-automation/SKILL.md with lessons from the trace: added safe text frame replacement pattern to prevent empty paragraphs, emphasized deduplication before list generation, warned against relying on auto-generated/localized shape names, and added layout selection best practices.",
+  "upsert_paths": [
+    "powerpoint-automation/SKILL.md"
+  ],
+  "delete_paths": []
+}

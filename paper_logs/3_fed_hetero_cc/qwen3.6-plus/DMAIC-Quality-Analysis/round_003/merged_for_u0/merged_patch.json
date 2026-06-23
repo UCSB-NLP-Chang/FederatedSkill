@@ -1,0 +1,37 @@
+{
+  "worker_id": "u0",
+  "summary": "R3 merge complete for u0 (qwen3.6-plus). Synthesized u2's gated workflow SKILL.md (structural enforcement) + u0's schema.md trace mismatches + u2's output-templates.md and verify_deliverables.py. Key change: replaced prose-warning approach (failed 4 rounds) with minimal gated workflow that removes statistical detail from SKILL.md to prevent custom code. See DECISIONS.md.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/output-templates.md",
+    "statistical-process-analysis/references/schema.md",
+    "statistical-process-analysis/scripts/verify_deliverables.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/references/output-templates.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/references/schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/scripts/verify_deliverables.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.1239244
+}

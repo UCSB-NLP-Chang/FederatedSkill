@@ -1,0 +1,29 @@
+{
+    "id": "9a344b8c-10a0-4099-87a5-c5d6217b1595",
+    "started_at": "2026-05-13T15:26:02.937648",
+    "finished_at": "2026-05-13T15:29:17.584062",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "task_family_construction_measure__Tb7HAZc"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

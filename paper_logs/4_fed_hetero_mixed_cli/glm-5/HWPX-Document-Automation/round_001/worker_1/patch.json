@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Updated the HWPX fill template script to use a more precise approach: track which paragraphs contain placeholders before replacement, then remove linesegarray only from those modified paragraphs (not all paragraphs). This prevents unnecessary layout cache removal from unmodified paragraphs.",
+  "upsert_paths": [
+    "hwpx-document-processing/scripts/hwpx_fill_template.py"
+  ],
+  "delete_paths": []
+}

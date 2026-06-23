@@ -1,0 +1,20 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged R6 patches for u1: synthesized u2's Archive Sheet fix (ONE shape pattern), u1's mixed caption states handling, and u0's safe slide iteration into pptx-manipulation umbrella. Kept paragraph.font for glm-5 per memory.md evidence. Added B2 invariants for Archive Sheet structure. See DECISIONS.md.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.7777777777777778
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md",
+    "__skill_md_invalid__:pptx-manipulation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 3.6028649999999995
+}

@@ -1,0 +1,32 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE \u2014 Round 1 merge complete for u2 (kimi-k2.5). Applied target's verified queue-capacity-planning patches (SKILL.md, simulation_rules.md) with domain adaptation for SOC + Radiology. Added u1's script comments, rejected u1's rounding bug. Rejected u0's failed radiology-backlog-planning (reward=0.0). Library: 2 skills (excel-data-processing, queue-capacity-planning). See DECISIONS.md.",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "queue-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "queue-capacity-planning/references/simulation_rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "queue-capacity-planning/scripts/queue_simulator.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md"
+  ],
+  "cost_usd": 0.6518469999999998
+}

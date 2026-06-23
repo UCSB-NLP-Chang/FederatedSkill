@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's validated SKILL.md (dock status filtering, output variants, legacy verification) + u2's formulas.md (dock status code, Delivered DOH). Rejected u0's broken patch. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-load-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "inventory-load-planning/references/formulas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "cost_usd": 0.4602069999999999
+}

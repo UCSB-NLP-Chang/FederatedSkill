@@ -1,0 +1,39 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged u0's reward=1.0 patch for hwpx-template-fill (SKILL.md + script with str() fix), renamed from hwpx-document-processing to align with peer-majority naming. See DECISIONS.md.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/scripts/fill_hwpx.py"
+  ],
+  "delete_paths": [
+    "hwpx-document-processing/SKILL.md",
+    "hwpx-document-processing/scripts/hwpx_fill_template.py"
+  ],
+  "provenance": {
+    "hwpx-document-processing/scripts/hwpx_fill_template.py": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      0.6666666666666666
+    ],
+    "hwpx-template-fill/scripts/fill_hwpx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "hwpx-document-processing/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      0.6666666666666666
+    ],
+    "hwpx-template-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/scripts/fill_hwpx.py"
+  ],
+  "cost_usd": 4.693482
+}

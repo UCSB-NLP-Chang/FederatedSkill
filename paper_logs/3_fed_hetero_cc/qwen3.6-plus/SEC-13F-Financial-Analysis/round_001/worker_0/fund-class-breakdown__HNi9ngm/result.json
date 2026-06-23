@@ -1,0 +1,104 @@
+{
+    "id": "c64e95b2-587a-49a9-958e-180ca622d15e",
+    "task_name": "fund-class-breakdown",
+    "trial_name": "fund-class-breakdown__HNi9ngm",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-cc-rest10-rerun-glm-M3-hetero/SEC-13F-Financial-Analysis/round_001/worker_0/fund-class-breakdown__HNi9ngm",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/SEC-13F-Financial-Analysis/fund-class-breakdown"
+    },
+    "source": "SEC-13F-Financial-Analysis",
+    "task_checksum": "d1c025c1b6b12142eab909029a786ca8f92f6ca1a5b81fd16e958a2057eacf47",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/SEC-13F-Financial-Analysis/fund-class-breakdown",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "SEC-13F-Financial-Analysis"
+        },
+        "trial_name": "fund-class-breakdown__HNi9ngm",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-cc-rest10-rerun-glm-M3-hetero/SEC-13F-Financial-Analysis/round_001/worker_0",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.5,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "qwen3.6-plus",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-cc-rest10-rerun-glm-M3-hetero/SEC-13F-Financial-Analysis/worker_skills/u0"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "8daa0b27-96f8-491e-86b4-bcda03442d49"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 1007706,
+        "n_cache_tokens": 957571,
+        "n_output_tokens": 11359,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-19T18:36:48.660820Z",
+    "finished_at": "2026-05-19T18:42:11.995419Z",
+    "environment_setup": {
+        "started_at": "2026-05-19T18:36:48.663712Z",
+        "finished_at": "2026-05-19T18:36:51.455982Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-19T18:36:51.456022Z",
+        "finished_at": "2026-05-19T18:36:52.177162Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-19T18:36:52.177255Z",
+        "finished_at": "2026-05-19T18:41:58.471096Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-19T18:41:58.482975Z",
+        "finished_at": "2026-05-19T18:41:59.912765Z"
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.3333333333333333,
+  "summary": "The agent produced JSON output with incorrect field names (primary_window vs primary_analysis_window, start/end vs start_date/end_date) and extra fields not in schema (points, moving_ranges arrays). The existing template script produces correct output, but the agent wrote custom code instead. Adding explicit schema compliance guidance and stronger directive to use the template script.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/references/output_schema.md"
+  ],
+  "delete_paths": []
+}

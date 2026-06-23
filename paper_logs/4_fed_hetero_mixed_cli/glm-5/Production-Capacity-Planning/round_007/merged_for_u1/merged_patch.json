@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5, claude-code) R7.\n\nApplied u1's reward=1.0 patch wholesale: added CSV input handling to SKILL.md (description + Step 0 + decision rules + anti-patterns) and horizontal-data-parsing.md (CSV parsing patterns). All 3 workers independently added equivalent CSV support \u2014 consensus pattern absorbed.\n\nSee DECISIONS.md for per-path rationale.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/horizontal-data-parsing.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/references/horizontal-data-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/horizontal-data-parsing.md"
+  ],
+  "cost_usd": 2.285397
+}

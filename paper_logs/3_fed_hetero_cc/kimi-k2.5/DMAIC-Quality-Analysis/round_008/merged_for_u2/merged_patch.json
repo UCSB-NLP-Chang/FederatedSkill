@@ -1,0 +1,56 @@
+{
+  "worker_id": "u2",
+  "summary": "MERGE COMPLETE. See DECISIONS.md for details.\n\nSummary: 3-skill library for kimi-k2.5:\n- pipeline-performance-analysis (kept, consensus skill)\n- logistics-reliability-analysis (added from peers, closes B3 gap)\n- process-capability-analysis (synthesized u1+u2, NEW B4 task)\n- tool-name-hygiene (removed, ineffective)\n\nKey: Stripped process-capability-analysis SKILL.md to pure procedure with STOP-checkpoint for kimi's enforcement needs.",
+  "upsert_paths": [
+    "logistics-reliability-analysis/SKILL.md",
+    "logistics-reliability-analysis/scripts/analyze_logistics.py",
+    "process-capability-analysis/SKILL.md",
+    "process-capability-analysis/references/report_schema.md",
+    "process-capability-analysis/scripts/calculate_capability.py",
+    "process-capability-analysis/scripts/wilson_ci.py"
+  ],
+  "delete_paths": [
+    "tool-name-hygiene/SKILL.md"
+  ],
+  "provenance": {
+    "process-capability-analysis/scripts/wilson_ci.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ],
+    "tool-name-hygiene/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "process-capability-analysis/references/report_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ],
+    "logistics-reliability-analysis/scripts/analyze_logistics.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "process-capability-analysis/scripts/calculate_capability.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.25
+    ],
+    "process-capability-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ],
+    "logistics-reliability-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "process-capability-analysis/SKILL.md"
+  ],
+  "cost_usd": 3.832392
+}

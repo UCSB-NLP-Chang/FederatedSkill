@@ -1,0 +1,53 @@
+--- a/excel-formula-population/SKILL.md
++++ b/excel-formula-population/SKILL.md
+@@ -13,12 +13,13 @@
+    - Use relative references for row/column iteration.
+    - Prefer `INDEX/MATCH` over `VLOOKUP` for cross-sheet, multi-dimensional lookups.
+    - Use `SUMPRODUCT` for weighted calculations.
+-4. **Write & Save**: Assign formulas to target cells. Save to the specified output path. Do not overwrite existing formulas unless explicitly required.
++4. **Write & Save**: Assign formulas to target cells. **Save directly to the required output path.** Do not modify the source file and copy it, as this can break path-dependent verifiers.
+ 5. **Verify**:
+    - Reload the saved workbook.
+    - Extract all formula strings from target cells.
+    - Cross-check a sample against raw data values to ensure correct references.
+    - Count total formulas to match task expectations.
++   - If a strict verifier fails, run `scripts/verify_formulas.py` to dump exact formula strings and diff against expected outputs.
+ 
+ ## Key Formula Patterns
+ - **2D Lookup**: `=INDEX(Data!$H$21:$L$38, MATCH(Task!D12, Data!$D$21:$D$38, 0), MATCH(Task!H$10, Data!$H$20:$L$20, 0))`
+@@ -30,7 +31,8 @@
+ - **Missing Headers**: `MATCH` fails if lookup headers are absent. Always verify and inject missing headers into the source sheet before writing formulas.
+ - **Reference Drift**: Ensure `$` locks are applied correctly. Test one formula manually before bulk-writing.
+ - **Formatting Loss**: `openpyxl` preserves formatting by default, but avoid recreating the workbook from scratch. Load, modify, and save.
+-- **Strict Verifiers**: Some tests compare formula strings exactly. Avoid extra spaces, use US locale commas, and verify exact string matches if the verifier fails despite correct logic.
+-- **Pre-existing Formulas**: Count and preserve them. Do not overwrite cells in legacy columns unless instructed.
++- **Strict Verifiers**: Some tests compare formula strings exactly. Avoid extra spaces, use US locale commas, and verify exact string matches if the verifier fails despite correct logic. Run `scripts/verify_formulas.py` to dump and compare exact strings.
++- **Pre-existing Formulas**: Count and preserve them. Do not overwrite cells in legacy columns unless instructed. Account for them when verifying total formula counts.
++- **Path Handling**: Always save directly to the output path. Copying after saving can cause timestamp/path mismatches in verifiers.
+ 
+-See `references/formula-patterns.md` for detailed syntax and variant examples.+See `references/formula-patterns.md` for detailed syntax and variant examples.
+
+--- /dev/null
++++ b/excel-formula-population/scripts/verify_formulas.py
+@@ -0,0 +1,21 @@
++#!/usr/bin/env python3
++"""Dump Excel formula strings from specified ranges for exact verifier comparison."""
++import sys
++import openpyxl
++
++if __name__ == "__main__":
++    if len(sys.argv) < 4:
++        print("Usage: python verify_formulas.py <path> <sheet> <range1> [range2 ...]")
++        sys.exit(1)
++    path, sheet = sys.argv[1], sys.argv[2]
++    ranges = sys.argv[3:]
++    
++    wb = openpyxl.load_workbook(path, data_only=False)
++    ws = wb[sheet]
++    
++    for r in ranges:
++        print(f"--- {r} ---")
++        for row in ws[r]:
++            for cell in row:
++                if cell.value and str(cell.value).startswith('='):
++                    print(f"{cell.coordinate}: {cell.value}")

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged for u2 (kimi-k2.5). Structural rewrite of SKILL.md to 44-line pure procedure (per task_memory hypothesis: prose enforcement exhausted after 5 rounds). Added Excel-to-CSV Step 0, absorbed u1's verify_deliverables.py p-value fix. See DECISIONS.md.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/scripts/verify_deliverables.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/scripts/verify_deliverables.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.1889239999999999
+}

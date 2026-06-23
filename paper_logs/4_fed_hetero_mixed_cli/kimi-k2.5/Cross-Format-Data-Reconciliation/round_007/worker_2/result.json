@@ -1,0 +1,29 @@
+{
+    "id": "751e5bdb-e6f2-49ba-8ea1-637746339e14",
+    "started_at": "2026-05-18T01:30:15.622065",
+    "finished_at": "2026-05-18T01:32:48.702088",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "08-university-course-catalog-dif__Jo6qgVX"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

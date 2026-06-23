@@ -1,0 +1,37 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.0.3"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779078109160,
+            "stop": 1779078110126
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 959,
+                "start": 1779078109167,
+                "stop": 1779078110126,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .............FF.......F.FF                                               [100%]\nE           =================================== FAILURES ===================================\nE           _______________________ TestOutput.test_ranges[Calcium] ________________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7f31f91e3770>, col = 'Calcium'\nE           \nE               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)\nE               def test_ranges(self, col):\nE                   lo = REFERENCE[col]['min']\nE                   hi = REFERENCE[col]['max']\nE                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]\nE           >       assert not bad, (col, bad[:5])\nE           E       AssertionError: ('Calcium', ['1.46'])\nE           E       assert not ['1.46']\nE           \nE           /tests/test_outputs.py:103: AssertionError\nE           ___________________ TestOutput.test_ranges[Ionized_Calcium] ____________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7f31f91e3740>\nE           col = 'Ionized_Calcium'\nE           \nE               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)\nE               def test_ranges(self, col):\nE                   lo = REFERENCE[col]['min']\nE                   hi = REFERENCE[col]['max']\nE                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]\nE           >       assert not bad, (col, bad[:5])\nE           E       AssertionError: ('Ionized_Calcium', ['6.15', '6.70', '6.34'])\nE           E       assert not ['6.15', '6.70', '6.34']\nE           \nE           /tests/test_outputs.py:103: AssertionError\nE           ____________________ TestOutput.test_full_row_by_row_match _____________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7f31f920cb00>\nE           \nE               def test_full_row_by_row_match(self):\nE                   for i in range(len(self.df)):\nE                       for col in EXPECTED_COLUMNS:\nE                           actual = float(self.df.iloc[i][col])\nE                           expected = float(self.expected.iloc[i][col])\nE           >               assert abs(actual - expected) <= max(0.01, abs(expected) * 0.001), (i, col, actual, expected)\nE           E               AssertionError: (0, 'PTH', 193.72, 1827.59)\nE           E               assert 1633.87 <= 1.82759\nE           E                +  where 1633.87 = abs((193.72 - 1827.59))\nE           E                +  and   1.82759 = max(0.01, (1827.59 * 0.001))\nE           E                +    where 1827.59 = abs(1827.59)\nE           \nE           /tests/test_outputs.py:113: AssertionError\nE           ___________________ TestOutput.test_anchor_samples[sample1] ____________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7f31f920d0d0>\nE           sample = {'col': 'PTH', 'row': 2, 'value': 45.0}\nE           \nE               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)\nE               def test_anchor_samples(self, sample):\nE                   actual = float(self.df.iloc[sample['row']][sample['col']])\nE           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)\nE           E       AssertionError: ({'col': 'PTH', 'row': 2, 'value': 45.0}, 150.19)\nE           E       assert 105.19 <= 0.01\nE           E        +  where 105.19 = abs((150.19 - 45.0))\nE           \nE           /tests/test_outputs.py:118: AssertionError\nE           ___________________ TestOutput.test_anchor_samples[sample2] ____________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7f31f920d1c0>\nE           sample = {'col': 'Vitamin_D_25OH', 'row': 5, 'value': 32.0}\nE           \nE               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)\nE               def test_anchor_samples(self, sample):\nE                   actual = float(self.df.iloc[sample['row']][sample['col']])\nE           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)\nE           E       AssertionError: ({'col': 'Vitamin_D_25OH', 'row': 5, 'value': 32.0}, 83.53)\nE           E       assert 51.53 <= 0.01\nE           E        +  where 51.53 = abs((83.53 - 32.0))\nE           \nE           /tests/test_outputs.py:118: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Calcium] - Assertion...\nE           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Ionized_Calcium] - A...\nE           FAILED ../tests/test_outputs.py::TestOutput::test_full_row_by_row_match - Ass...\nE           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample1] - A...\nE           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample2] - A...\nE           5 failed, 21 passed in 0.65s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

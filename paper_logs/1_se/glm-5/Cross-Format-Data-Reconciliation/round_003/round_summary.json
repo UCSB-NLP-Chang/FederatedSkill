@@ -1,0 +1,18 @@
+{
+  "round_idx": 3,
+  "assignments": [
+    [
+      "u0",
+      "04-university-program-funding-diff"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0
+  },
+  "exceptions": {
+    "u0": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 165.20029878616333
+}

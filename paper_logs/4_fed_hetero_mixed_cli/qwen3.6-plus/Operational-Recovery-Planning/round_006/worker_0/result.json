@@ -1,0 +1,29 @@
+{
+    "id": "7f08c8cd-1fc5-4dd2-921e-88be8fd004f1",
+    "started_at": "2026-05-19T03:20:31.629924",
+    "finished_at": "2026-05-19T03:26:35.819425",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Operational-Recovery-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_ag_recovery_03__bmMn6r2"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

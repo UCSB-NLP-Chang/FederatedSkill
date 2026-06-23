@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The trace shows the agent successfully filled an HWPX template but had to write inline Python for data pre-processing (Korean age calculation, phone normalization) before using the template-filling logic. The existing skill covers the core HWPX mechanics but lacks guidance on common data transformations required before filling. This update adds a pre-processing step to the workflow and a reference document with reusable Korean-specific transformation patterns (\ub9cc \ub098\uc774 age calculation, phone normalization) so future agents know to transform data before calling fill_hwpx.py.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "delete_paths": []
+}

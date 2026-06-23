@@ -1,0 +1,29 @@
+{
+    "id": "d1d53ef5-4338-4524-8ab2-e0e4c60c760f",
+    "started_at": "2026-05-13T23:10:18.397242",
+    "finished_at": "2026-05-13T23:12:36.828977",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "03-retail-supply-category-diff__9UGu5Bj"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

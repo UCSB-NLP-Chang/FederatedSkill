@@ -1,0 +1,20 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Merged R7 failure patterns (assumption key lookup, hour calculations) from u0/u1 patches into baseline's checkpoint-heavy structure optimized for kimi-k2.5. See DECISIONS.md for detailed reasoning.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.7
+    ]
+  },
+  "conflicts": [
+    "excel-financial-modeling/SKILL.md",
+    "__skill_md_invalid__:excel-financial-modeling/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 3.248844
+}

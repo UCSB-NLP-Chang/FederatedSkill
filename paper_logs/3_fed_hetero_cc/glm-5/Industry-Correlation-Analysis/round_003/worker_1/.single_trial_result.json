@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "econ-housing-materials-correlati__BGFEYxX",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-3fam-dashscope-rerun-M3-hetero/Industry-Correlation-Analysis/round_003/worker_1/econ-housing-materials-correlati__BGFEYxX",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-3fam-dashscope-rerun-M3-hetero/Industry-Correlation-Analysis/round_003/worker_1/econ-housing-materials-correlati__BGFEYxX",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

@@ -1,0 +1,39 @@
+{
+    "id": "a450e2c4-416c-47a2-a50a-a265cdf2a841",
+    "started_at": "2026-04-27T09:19:23.328325",
+    "finished_at": "2026-04-27T10:07:25.377261",
+    "n_total_trials": 9,
+    "stats": {
+        "n_trials": 9,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Production-Capacity-Planning": {
+                "n_trials": 9,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.3333333333333333
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_gdpval_36_task1__s8mBv2x",
+                            "harbor_gdpval_36__Q3JS8Af",
+                            "harbor_gdpval_36_task2__HsUaCct",
+                            "harbor_gdpval_36_task3__ULfrXZS",
+                            "harbor_gdpval_36_task4__pycJYMd",
+                            "harbor_gdpval_36_task7__j9CwY7j"
+                        ],
+                        "1.0": [
+                            "harbor_gdpval_36_task5__rRxJcep",
+                            "harbor_gdpval_36_task6__xGGni5N",
+                            "harbor_gdpval_36_task8__kr4CxYU"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

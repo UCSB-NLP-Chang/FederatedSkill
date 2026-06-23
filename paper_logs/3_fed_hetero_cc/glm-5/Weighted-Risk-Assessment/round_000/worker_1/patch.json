@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The agent filled an Excel workbook with formulas but the verifier test failed, indicating the formulas or their logic were likely incorrect despite the agent's self-verification. This skill captures the reusable workflow for filling Excel templates with formulas, common pitfalls (off-by-one references, wrong operation order, lack of computed-value validation), and a verification script to catch errors before submission.",
+  "upsert_paths": [
+    "excel-formula-fill/SKILL.md",
+    "excel-formula-fill/references/formula-patterns.md",
+    "excel-formula-fill/scripts/validate_formulas.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "c2374730-99ee-4576-8922-49060e330c25",
+    "started_at": "2026-05-14T19:47:19.979702",
+    "finished_at": "2026-05-14T19:49:58.776594",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_gdpval_20__5QCi6V5"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "id": "ff6fb4fd-96be-4fcd-938a-91cc30a5ebe9",
+    "task_name": "catalyst-balance-matrix-sync",
+    "trial_name": "catalyst-balance-matrix-sync__TDZirvs",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5-r1m-Embedded-Data-Repair/catalyst-balance-matrix-sync__TDZirvs",
+    "task_id": {
+        "path": "test_tasks/Embedded-Data-Repair/catalyst-balance-matrix-sync"
+    },
+    "source": "Embedded-Data-Repair",
+    "task_checksum": "eb2573071fac16f9b77e0f3cd16024af161e25de9c0f9f45dd4cb05d221c5852",
+    "config": {
+        "task": {
+            "path": "test_tasks/Embedded-Data-Repair/catalyst-balance-matrix-sync",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Embedded-Data-Repair"
+        },
+        "trial_name": "catalyst-balance-matrix-sync__TDZirvs",
+        "trials_dir": "jobs/iter-baseline-kimi-k2.5-r1m-Embedded-Data-Repair",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "kimi-k2.5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://api.moonshot.ai/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "8b894e35-2674-4fa8-b666-62c275896ace"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.150",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 464086,
+        "n_cache_tokens": 447488,
+        "n_output_tokens": 5914,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-26T00:31:35.811685Z",
+    "finished_at": "2026-05-26T00:35:04.906698Z",
+    "environment_setup": {
+        "started_at": "2026-05-26T00:31:35.812860Z",
+        "finished_at": "2026-05-26T00:31:37.343486Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-26T00:31:37.343502Z",
+        "finished_at": "2026-05-26T00:31:38.049209Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-26T00:31:38.049274Z",
+        "finished_at": "2026-05-26T00:34:50.380898Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-26T00:34:50.389389Z",
+        "finished_at": "2026-05-26T00:34:52.688354Z"
+    }
+}

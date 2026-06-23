@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R6: Applied u1's inline B1-EventRegistration patch + u0's pivot headers/total row enforcement mechanisms. See DECISIONS.md for detailed reasoning.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.9473684210526315
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.8686644000000001
+}

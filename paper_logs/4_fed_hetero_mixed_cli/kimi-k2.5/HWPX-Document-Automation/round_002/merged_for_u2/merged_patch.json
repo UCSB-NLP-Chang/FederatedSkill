@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Updated hwpx-template-fill/SKILL.md with preprocessing guidance and ZIP metadata preservation from u0/u1 patches; kept target's comprehensive structure for kimi-cli. See DECISIONS.md.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.9748700000000001
+}

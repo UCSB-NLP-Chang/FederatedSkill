@@ -1,0 +1,395 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: FFFFFF                                                                   [100%]
+E           =================================== FAILURES ===================================
+E           ________________________ test_file_and_sheet_structure _________________________
+E           
+E               def test_file_and_sheet_structure():
+E           >       assert EXCEL_FILE.exists(), f"Missing output workbook: {EXCEL_FILE}"
+E           E       AssertionError: Missing output workbook: /root/output/result.xlsx
+E           E       assert False
+E           E        +  where False = exists()
+E           E        +    where exists = PosixPath('/root/output/result.xlsx').exists
+E           
+E           /tests/test_outputs.py:130: AssertionError
+E           ______________________________ test_lookup_blocks ______________________________
+E           
+E               def test_lookup_blocks():
+E           >       wb = workbook()
+E                        ^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:139: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:65: in workbook
+E               path = _get_reliable_workbook_path() if data_only else EXCEL_FILE
+E                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /tests/test_outputs.py:49: in _get_reliable_workbook_path
+E               if _has_cached_values(EXCEL_FILE):
+E                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /tests/test_outputs.py:22: in _has_cached_values
+E               wb = load_workbook(path, data_only=True)
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:344: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/output/result.xlsx', mode = 'r'
+E           compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/output/result.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           ________________________ test_derived_values_and_stats _________________________
+E           
+E               def test_derived_values_and_stats():
+E           >       wb = workbook()
+E                        ^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:148: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:65: in workbook
+E               path = _get_reliable_workbook_path() if data_only else EXCEL_FILE
+E                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /tests/test_outputs.py:49: in _get_reliable_workbook_path
+E               if _has_cached_values(EXCEL_FILE):
+E                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /tests/test_outputs.py:22: in _has_cached_values
+E               wb = load_workbook(path, data_only=True)
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:344: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/output/result.xlsx', mode = 'r'
+E           compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/output/result.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           ___________________ test_formulas_present_in_editable_ranges ___________________
+E           
+E               def test_formulas_present_in_editable_ranges():
+E           >       wb = workbook(data_only=False)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:164: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:66: in workbook
+E               return load_workbook(path, data_only=data_only)
+E                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:344: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/output/result.xlsx', mode = 'r'
+E           compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/output/result.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           ______________________ test_template_formatting_preserved ______________________
+E           
+E               def test_template_formatting_preserved():
+E           >       wb = workbook(data_only=False)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:182: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:66: in workbook
+E               return load_workbook(path, data_only=data_only)
+E                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:344: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/lib/python3/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/output/result.xlsx', mode = 'r'
+E           compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/output/result.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           ________________________ test_no_excel_errors_or_macros ________________________
+E           
+E               def test_no_excel_errors_or_macros():
+E                   errors = []
+E                   csv_values = load_csv()
+E                   for ref, value_ in csv_values.items():
+E                       if isinstance(value_, str) and any(token in value_ for token in ["#VALUE!", "#DIV/0!", "#REF!", "#NAME?", "#NULL!", "#NUM!", "#N/A"]):
+E                           errors.append(f"{ref}: {value_}")
+E           >       with zipfile.ZipFile(EXCEL_FILE, "r") as archive:
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:198: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/output/result.xlsx', mode = 'r'
+E           compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/output/result.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_file_and_sheet_structure - AssertionErr...
+E           FAILED ../tests/test_outputs.py::test_lookup_blocks - FileNotFoundError: [Err...
+E           FAILED ../tests/test_outputs.py::test_derived_values_and_stats - FileNotFound...
+E           FAILED ../tests/test_outputs.py::test_formulas_present_in_editable_ranges - F...
+E           FAILED ../tests/test_outputs.py::test_template_formatting_preserved - FileNot...
+E           FAILED ../tests/test_outputs.py::test_no_excel_errors_or_macros - FileNotFoun...
+E           6 failed in 0.31s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: FF...
+============================== 1 failed in 0.51s ===============================

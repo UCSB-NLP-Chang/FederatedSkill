@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent created a deferred revenue workbook but failed tests due to formula errors (circular references in row 11, incorrect GL Balance placement). This skill captures the correct rollforward structure, formula patterns, and validation steps for building deferred revenue workbooks.",
+  "upsert_paths": [
+    "deferred-revenue-workbook/SKILL.md",
+    "deferred-revenue-workbook/scripts/build_rollforward.py"
+  ],
+  "delete_paths": []
+}

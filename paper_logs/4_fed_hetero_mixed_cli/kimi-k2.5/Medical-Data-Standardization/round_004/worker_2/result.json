@@ -1,0 +1,29 @@
+{
+    "id": "1da4f2f1-e9f7-4d5f-bc53-341b8f1573ee",
+    "started_at": "2026-05-18T01:11:09.488930",
+    "finished_at": "2026-05-18T01:14:03.806325",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "oncology-followup-dedup-harmoniz__NajdnJk"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

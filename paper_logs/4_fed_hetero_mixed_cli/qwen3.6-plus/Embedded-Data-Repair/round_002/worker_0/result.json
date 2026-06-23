@@ -1,0 +1,29 @@
+{
+    "id": "61bb839b-f15d-4b5a-be9b-a65940a1741e",
+    "started_at": "2026-05-17T20:38:16.986040",
+    "finished_at": "2026-05-17T20:40:39.962681",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Embedded-Data-Repair": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "warehouse-slot-factor-refresh__rbjPrsd"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

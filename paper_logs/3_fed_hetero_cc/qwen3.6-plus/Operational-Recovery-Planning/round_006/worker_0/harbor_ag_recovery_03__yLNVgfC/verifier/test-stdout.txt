@@ -1,0 +1,65 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ....F                                                                    [100%]
+E           =================================== FAILURES ===================================
+E           ________________ test_summary_structure_and_required_statements ________________
+E           
+E           summary_text = '# Harvest Recovery Plan Summary\n\n**Planning Period:** January 22, 2018 -- May 1, 2018 (100 calendar days)\n**Refere...Canola May PO | Late | Late | On-Time |\n| Key Change | Status quo | Relocate flax early | 10-hr shifts + relocate |\n'
+E           
+E               def test_summary_structure_and_required_statements(summary_text):
+E                   sec1 = extract_section(summary_text, 1)
+E                   sec2 = extract_section(summary_text, 2)
+E                   sec3 = extract_section(summary_text, 3)
+E               
+E                   required_labels = [
+E                       "Actions:",
+E                       "Wheat Bin Loads Impact:",
+E                       "Canola Bin Loads Impact:",
+E                       "Flax Processing Impact:",
+E                       "May PO On-Time:",
+E                   ]
+E               
+E                   for idx, section in enumerate([sec1, sec2, sec3], start=1):
+E                       for label in required_labels:
+E           >               assert re.search(rf"^\s*{re.escape(label)}", section, flags=re.IGNORECASE | re.MULTILINE), (
+E                               f"Scenario {idx} is missing required field '{label}'."
+E                           )
+E           E               AssertionError: Scenario 1 is missing required field 'Actions:'.
+E           E               assert None
+E           E                +  where None = <function search at 0x7f1820fd9f80>('^\\s*Actions:', '\n\n**Sheet:** Current Equipment and Bins\n\n**Actions:**\n- Operate within existing equipment and bin infrastructure...lax production distributed evenly across all working days to avoid capacity spikes.\n\n**May PO On-Time: No**\n\n---\n', flags=(re.IGNORECASE | re.MULTILINE))
+E           E                +    where <function search at 0x7f1820fd9f80> = re.search
+E           E                +    and   re.IGNORECASE = re.IGNORECASE
+E           E                +    and   re.MULTILINE = re.MULTILINE
+E           
+E           /tests/test_outputs.py:309: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_summary_structure_and_required_statements
+E           1 failed, 4 passed in 0.15s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.36s ===============================

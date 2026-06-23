@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.3333333333333333,
+  "summary": "Adds a deterministic statistical process analysis skill to prevent precision loss (p-value 0.0), enforce correct business-day filtering, and standardize Six Sigma metric calculations (ANOVA, I-MR, regression, t-test, Cpk) for tollgate briefs.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/formulas.md",
+    "statistical-process-analysis/scripts/compute_metrics.py"
+  ],
+  "delete_paths": []
+}

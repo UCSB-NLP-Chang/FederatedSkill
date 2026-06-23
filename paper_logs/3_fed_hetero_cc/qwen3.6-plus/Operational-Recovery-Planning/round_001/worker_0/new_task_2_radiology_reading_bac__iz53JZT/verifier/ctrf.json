@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779768579.3709524,
+            "stop": 1779768579.7796354
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.39090616442263126,
+                "start": 1779768579.3768768,
+                "stop": 1779768579.7795103,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: FF                                                                       [100%]\nE           =================================== FAILURES ===================================\nE           __________________________ test_plan_math_and_policy ___________________________\nE           \nE               def test_plan_math_and_policy():\nE                   ref = load_reference_demands(CONFIG)\nE                   rows = load_plan_rows(CONFIG)\nE                   expected_weeks = list(range(CONFIG['week_start'], CONFIG['week_end'] + 1))\nE                   actual_weeks = [r[0] for r in rows]\nE                   assert actual_weeks == expected_weeks, 'Weeks must be continuous and ordered.'\nE                   calc_start = round(CONFIG['initial_total'] - ref[CONFIG['week_start']], 2)\nE                   prev_end = None\nE                   seen = set()\nE                   for week, days, demand, capacity, start_queue, end_queue, overtime in rows:\nE                       seen.add(days)\nE                       assert days in {4, 5, 6}, f\"Week {week}: invalid days {days}\"\nE                       assert abs(demand - ref[week]) <= 0.01, f\"Week {week}: demand mismatch\"\nE                       if week == CONFIG['week_start']:\nE                           assert abs(start_queue + demand - CONFIG['initial_total']) <= 0.01\nE                       if prev_end is not None:\nE                           assert abs(calc_start - prev_end) <= 0.01\nE                       assert abs(start_queue - max(0.0, calc_start)) <= 0.01\nE                       assert abs(capacity - CONFIG['rate_per_day'] * days) <= 0.01\nE                       expected_end = round(calc_start + demand - capacity, 2)\nE           >           assert abs(end_queue - expected_end) <= 0.01\nE           E           assert 96.25 <= 0.01\nE           E            +  where 96.25 = abs((408.8 - 312.55))\nE           \nE           /tests/test_outputs.py:126: AssertionError\nE           ______________________________ test_summary_file _______________________________\nE           \nE               def test_summary_file():\nE                   summary_file = Path(CONFIG['output_summary'])\nE                   assert summary_file.exists(), f\"Summary file missing: {summary_file}\"\nE                   rows = load_plan_rows(CONFIG)\nE                   fw5 = next((w for w, d, *_ in rows if d == 5), None)\nE                   fw4 = next((w for w, d, *_ in rows if d == 4), None)\nE                   w5 = str(fw5) if fw5 is not None else 'N/A'\nE                   w4 = str(fw4) if fw4 is not None else 'N/A'\nE               \nE                   content = summary_file.read_text(encoding='utf-8').strip()\nE                   lines = content.splitlines()\nE                   assert abs(len(lines) - 3) <= 1, 'Summary must contain approximately 3 lines (2-4).'\nE               \nE                   m5 = re.fullmatch(r'First_Week_5_Days:\\s*(\\d+|N/A)', lines[0].strip())\nE                   m4 = re.fullmatch(r'First_Week_4_Days:\\s*(\\d+|N/A)', lines[1].strip())\nE                   assert m5, 'Line 1 must match First_Week_5_Days: <week-or-N/A>'\nE                   assert m4, 'Line 2 must match First_Week_4_Days: <week-or-N/A>'\nE                   assert m5.group(1) == w5\nE                   assert m4.group(1) == w4\nE               \nE           >       assert lines[2].startswith('Summary: ')\nE           E       AssertionError: assert False\nE           E        +  where False = <built-in method startswith of str object at 0x7f77db59ef70>('Summary: ')\nE           E        +    where <built-in method startswith of str object at 0x7f77db59ef70> = 'Project PulseLift stabilizes backlog by Week 15, reaching 4-day staffing at Week 19. Milestone achieved through aggressive surge deployment transitioning to steady-state capacity.'.startswith\nE           \nE           /tests/test_outputs.py:155: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_plan_math_and_policy - assert 96.25 <= ...\nE           FAILED ../tests/test_outputs.py::test_summary_file - AssertionError: assert F...\nE           2 failed in 0.18s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

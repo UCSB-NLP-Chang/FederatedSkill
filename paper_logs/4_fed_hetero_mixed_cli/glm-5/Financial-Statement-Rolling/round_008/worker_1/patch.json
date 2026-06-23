@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent created a prepaid expense amortization workbook but made a critical formula error: the Ending Balance row's column O formula referenced its own row (=D48+G48+J48+M48) instead of the Period Totals row (=D47+G47+J47+M47). This is the #1 bug in running-balance rollforwards. The rebate-rollforward skill already warns about this but not explicitly enough for column O, and the agent didn't run verification. Updates: (1) add prepaid expense amortization as a variant, (2) add a STOP section for the column O bug, (3) create a verification script that catches this specific error pattern.",
+  "upsert_paths": [
+    "rebate-rollforward/SKILL.md",
+    "rebate-rollforward/scripts/verify_workbook.py"
+  ],
+  "delete_paths": []
+}

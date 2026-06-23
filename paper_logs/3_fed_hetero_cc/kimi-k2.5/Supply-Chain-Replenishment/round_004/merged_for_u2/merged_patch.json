@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Extended supply-chain-coverage-analysis umbrella to cover B3 (branch-stock-transfer-schedule) variant via u1's patch (reward=1.0), added u2's branch script as B3 helper, restored Helper Resources section for kimi. 1 skill, 2 refs, 3 scripts. See DECISIONS.md.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md",
+    "supply-chain-coverage-analysis/references/calculation-formulas.md",
+    "supply-chain-coverage-analysis/scripts/calculate_branch_coverage.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "supply-chain-coverage-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "supply-chain-coverage-analysis/references/calculation-formulas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "supply-chain-coverage-analysis/scripts/calculate_branch_coverage.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.7807178999999999
+}

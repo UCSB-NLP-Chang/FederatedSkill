@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.3333333333333333,
+  "summary": "The agent ignored the existing compute_spc.py script and wrote custom code that produced invalid p-values (exactly 0.0), which the skill explicitly flags as computation errors. This patch strengthens the skill by: (1) making script usage more prominent and imperative, (2) adding explicit p-value validation with correction guidance, and (3) updating the script to detect and correct p-values that are exactly 0.0 or 1.0.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/scripts/compute_spc.py"
+  ],
+  "delete_paths": []
+}

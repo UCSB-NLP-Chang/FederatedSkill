@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Extended excel-openpyxl-processing skill with coverage/runway calculation patterns, reference sheet handling, and safe division utilities commonly needed in staffing and inventory analysis tasks.",
+  "upsert_paths": [
+    "excel-openpyxl-processing/references/code-patterns.md"
+  ],
+  "delete_paths": []
+}

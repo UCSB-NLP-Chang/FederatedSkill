@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "This fleet-maintenance-chargeback-audit task revealed several gaps in the existing multi-source-reconciliation skill: (1) No explicit handling for lifecycle/state checks on reference records (the JSON had 'lifecycle': 'approved' vs 'closed' fields that need validation), (2) Amendment/revision handling was mentioned but not clearly tied to the pattern of CSV amendments that override base amounts, (3) The existing skill doesn't document hierarchical JSON structures (depots containing orders), (4) Missing explicit guidance on the priority order when multiple amendments exist for the same order. The skill update adds lifecycle state validation, clarifies amendment handling with explicit priority rules, documents hierarchical JSON traversal, and adds fleet-maintenance-specific violation types.",
+  "upsert_paths": [
+    "multi-source-reconciliation/SKILL.md"
+  ],
+  "delete_paths": []
+}

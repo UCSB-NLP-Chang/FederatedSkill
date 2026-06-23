@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "R5 merge complete for u0. Extended infusion-batch-analysis to cover B4 cooler dispatch via reference files; rejected u0's new skill (reward=0.4, precision bug). Library: 2 skills (cycle-margin-analysis + infusion-batch-analysis). See DECISIONS.md.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/references/calculation-examples.md",
+    "infusion-batch-analysis/references/invariants.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "infusion-batch-analysis/references/calculation-examples.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "infusion-batch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "infusion-batch-analysis/references/invariants.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:infusion-batch-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 5.241681
+}

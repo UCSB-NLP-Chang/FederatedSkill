@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.6666666666666666,
+  "summary": "Strengthened decision rules to prioritize XML/script editing over openpyxl for embedded workbooks to prevent structural verifier failures. Added explicit invariant and workflow for single-sheet dual-matrix tasks with alias resolution. Enhanced troubleshooting for openpyxl-induced structural drift.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": []
+}

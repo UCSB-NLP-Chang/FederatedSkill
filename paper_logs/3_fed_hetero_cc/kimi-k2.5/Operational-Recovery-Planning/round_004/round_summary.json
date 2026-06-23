@@ -1,0 +1,30 @@
+{
+  "round_idx": 4,
+  "assignments": [
+    [
+      "u0",
+      "harbor_dc_recovery_01"
+    ],
+    [
+      "u1",
+      "harbor_dc_recovery_01"
+    ],
+    [
+      "u2",
+      "harbor_dc_recovery_01"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 0.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": "PermissionError: [Errno 13] Permission denied: '/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-3fam-dashscope-rerun-M3-hetero/Operational-Recovery-Planning/round_004/worker_0/harbor_dc_recovery_01__6T7EpB4/agent/trajectory.json'",
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1575.0062251091003
+}

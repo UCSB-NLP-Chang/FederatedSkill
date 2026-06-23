@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for filling HWPX templates. HWPX files are ZIP archives containing XML. The skill captures the reliable Python-based workflow for extracting, replacing `{{...}}` placeholders from JSON, removing stale `hp:linesegarray` layout caches that cause rendering overlap, and repackaging. Includes a ready-to-run script and clear anti-patterns to avoid CLI tool failures.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/scripts/fill_hwpx.py"
+  ],
+  "delete_paths": []
+}

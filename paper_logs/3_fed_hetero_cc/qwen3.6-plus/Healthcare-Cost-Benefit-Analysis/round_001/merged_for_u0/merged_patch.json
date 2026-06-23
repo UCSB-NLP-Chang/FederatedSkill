@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u1's generalized cycle-margin-analysis patch (reward=1.0). Rejected u0's new refill-cycle-analysis skill (fragmentation) and u2's failed patch (reward=0.571). Library: 1 skill. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md",
+    "cycle-margin-analysis/scripts/compute_margin.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cycle-margin-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cycle-margin-analysis/scripts/compute_margin.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cycle-margin-analysis/SKILL.md",
+    "cycle-margin-analysis/scripts/compute_margin.py"
+  ],
+  "cost_usd": 2.8893210000000003
+}

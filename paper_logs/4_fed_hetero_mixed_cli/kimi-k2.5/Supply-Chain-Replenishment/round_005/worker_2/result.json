@@ -1,0 +1,29 @@
+{
+    "id": "2868cee2-5170-4afc-b02e-0f10436eb87d",
+    "started_at": "2026-05-23T23:44:35.444296",
+    "finished_at": "2026-05-23T23:47:28.293607",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "frozen_meal_tracker_refresh__z7R3BfM"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

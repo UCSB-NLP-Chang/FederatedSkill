@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The agent failed because it skipped mandatory verification steps and had a formula error with mixed absolute/relative references in the weighted mean calculation. The patch adds explicit workflow enforcement, a common formula error pattern for weighted means, and strengthens the verification requirements.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/formula-patterns.md"
+  ],
+  "delete_paths": []
+}

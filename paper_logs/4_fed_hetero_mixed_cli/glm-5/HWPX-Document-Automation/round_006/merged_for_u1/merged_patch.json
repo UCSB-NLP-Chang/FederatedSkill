@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "DONE \u2014 Round 6 merge for u1 (glm-5/claude-code). Merged u0's update_hwpx_direct.py script + u1's advanced-replacement.md reference into unified SKILL.md. 5 files in library (SKILL.md, 2 scripts, 2 references). See DECISIONS.md.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/references/advanced-replacement.md",
+    "hwpx-template-fill/scripts/update_hwpx_direct.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-fill/references/advanced-replacement.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "hwpx-template-fill/scripts/update_hwpx_direct.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "hwpx-template-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-fill/SKILL.md"
+  ],
+  "cost_usd": 2.811777
+}

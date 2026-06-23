@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "summary": "R6 merge complete for u2 (kimi-k2.5). No library changes \u2014 all patches empty due to max_tokens truncation, all workers passed with existing skills. B1 covered, family stable. See DECISIONS.md.",
+  "upsert_paths": [],
+  "delete_paths": [],
+  "provenance": {},
+  "conflicts": [],
+  "cost_usd": 0.415901
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The existing excel-capacity-planning skill already covers this task type well. Adding minor updates: (1) new capacity rule variant for dye production tasks with non-standard OT formula, (2) explicit summary format requirements for catch-up plans, (3) note about week ranges that don't start at 1.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": []
+}

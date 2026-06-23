@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R3. Applied u2's SKILL.md (deliverable guidance + Step 4 verify checkpoint) and verify_deliverables.py script. Skipped reference files (output-templates.md, schema.md) due to kimi's token budget constraint. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/scripts/verify_deliverables.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/scripts/verify_deliverables.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.7423556000000002
+}

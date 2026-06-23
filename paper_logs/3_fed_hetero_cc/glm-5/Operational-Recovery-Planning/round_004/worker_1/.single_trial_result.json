@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_dc_recovery_01__TdRUrqB",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-3fam-dashscope-rerun-M3-hetero/Operational-Recovery-Planning/round_004/worker_1/harbor_dc_recovery_01__TdRUrqB",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-3fam-dashscope-rerun-M3-hetero/Operational-Recovery-Planning/round_004/worker_1/harbor_dc_recovery_01__TdRUrqB",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

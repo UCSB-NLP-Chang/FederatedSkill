@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5, claude-code). Applied u1's own regex_patterns.md patch, merged u2's date disambiguation code, and extended SKILL.md with invoice total priority and date disambiguation guidance while preserving baseline narrative style validated for glm-5. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/regex_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/regex_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/regex_patterns.md"
+  ],
+  "cost_usd": 6.963413999999999
+}

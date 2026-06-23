@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.7777777777777778,
+  "summary": "Added guidance for handling mixed caption states (already-standardized vs needs-standardization) and improved Archive Sheet creation workflow with proper auto-numbering verification. The existing skill covered most patterns well but lacked explicit handling for partial pre-standardization scenarios.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "delete_paths": []
+}

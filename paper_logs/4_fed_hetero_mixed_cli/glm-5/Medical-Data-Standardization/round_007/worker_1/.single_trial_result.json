@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "transplant-panel-alignment-harmo__C5dx8uh",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/round_007/worker_1/transplant-panel-alignment-harmo__C5dx8uh",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/round_007/worker_1/transplant-panel-alignment-harmo__C5dx8uh",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

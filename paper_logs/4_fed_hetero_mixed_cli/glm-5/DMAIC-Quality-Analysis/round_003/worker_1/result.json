@@ -1,0 +1,29 @@
+{
+    "id": "6bce202b-7279-4c64-a688-f32eb8f6f9f3",
+    "started_at": "2026-05-18T00:49:10.507303",
+    "finished_at": "2026-05-18T00:55:21.385836",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__DMAIC-Quality-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_university_it_analyze_04__zm3EDsV"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

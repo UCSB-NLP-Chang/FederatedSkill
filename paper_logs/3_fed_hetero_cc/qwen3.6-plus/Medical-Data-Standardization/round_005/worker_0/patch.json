@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8717948717948718,
+  "summary": "Adds icu-metabolic-harmonization skill to handle ICU-specific analytes (BUN, Lactate, pCO2, pH, Beta_Hydroxybutyrate, Osmolality, Anion_Gap) using range-based SI detection. Explicitly prevents the .2f rounding anti-pattern that caused verifier failure in the trace, and codifies multi-file join + NaN drop workflow.",
+  "upsert_paths": [
+    "icu-metabolic-harmonization/SKILL.md",
+    "icu-metabolic-harmonization/references/icu-ranges.md"
+  ],
+  "delete_paths": []
+}

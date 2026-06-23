@@ -1,0 +1,20 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5, claude-code) Round 6. Applied u1's OCR artifact normalization patch (SKILL.md + dedup_validation_patterns.md with normalize_id_for_dedup function). Kept baseline parsing_patterns.md; rejected u0's numbered-step SKILL.md restructure (wrong style for glm-5). Library remains 1 umbrella skill with 5 reference files. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/references/dedup_validation_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/dedup_validation_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "ocr-data-extraction/SKILL.md",
+    "__task_update_failed__:RuntimeError:claude container timed out after 300s"
+  ],
+  "cost_usd": 3.2345580000000003
+}

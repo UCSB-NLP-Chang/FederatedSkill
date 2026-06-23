@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's patches wholesale: SKILL.md (172 lines) extends baseline with B6 patterns + python-docx anti-pattern; reference (515 lines) adds Disposition Alias Normalization and Missing Final Event patterns. See DECISIONS.md for reasoning.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md",
+    "spreadsheet-audit-reporting/references/computed-column-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "spreadsheet-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ],
+    "spreadsheet-audit-reporting/references/computed-column-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.4
+    ]
+  },
+  "conflicts": [
+    "spreadsheet-audit-reporting/SKILL.md",
+    "spreadsheet-audit-reporting/references/computed-column-examples.md"
+  ],
+  "cost_usd": 0.5612328
+}

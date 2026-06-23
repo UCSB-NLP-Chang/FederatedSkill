@@ -1,0 +1,29 @@
+{
+    "id": "27f15850-7afe-47d6-81f3-1b5280f381ca",
+    "started_at": "2026-05-23T23:10:13.536286",
+    "finished_at": "2026-05-23T23:13:23.786405",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "produce_lane_restock_gap__r9P6zto"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

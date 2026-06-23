@@ -1,0 +1,35 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) on Embedded-Data-Repair R0.\n\nLibrary: 1 umbrella skill `edit-embedded-excel` covering PPTX+DOCX embedded Excel editing.\n- Applied u2's reward=1.0 patch as base (same model+CLI, covers broader scope)\n- Enhanced with u0's python-pptx anti-pattern and u1's zipfile-only fallback script\n- 1 reference file for openpyxl cell types, 2 helper scripts\n\nSee DECISIONS.md for detailed reasoning.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/references/openpyxl_cell_types.md",
+    "edit-embedded-excel/scripts/update_cell_zipfile.py",
+    "edit-embedded-excel/scripts/update_embedded_excel.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/scripts/update_cell_zipfile.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "edit-embedded-excel/scripts/update_embedded_excel.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "edit-embedded-excel/references/openpyxl_cell_types.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.36612720000000004
+}

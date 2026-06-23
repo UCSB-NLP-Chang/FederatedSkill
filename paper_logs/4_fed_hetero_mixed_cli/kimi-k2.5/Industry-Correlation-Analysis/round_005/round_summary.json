@@ -1,0 +1,30 @@
+{
+  "round_idx": 5,
+  "assignments": [
+    [
+      "u0",
+      "econ-logistics-warehousing-correlation"
+    ],
+    [
+      "u1",
+      "econ-logistics-warehousing-correlation"
+    ],
+    [
+      "u2",
+      "econ-logistics-warehousing-correlation"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 951.4701867103577
+}

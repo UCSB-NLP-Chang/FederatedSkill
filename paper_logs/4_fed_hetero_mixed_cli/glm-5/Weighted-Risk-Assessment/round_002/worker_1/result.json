@@ -1,0 +1,29 @@
+{
+    "id": "ba387dd6-5383-4446-8be7-75e78990df8e",
+    "started_at": "2026-05-18T06:33:50.629285",
+    "finished_at": "2026-05-18T06:37:44.822721",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-campus-energy-balance-c__zU7NyBV"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

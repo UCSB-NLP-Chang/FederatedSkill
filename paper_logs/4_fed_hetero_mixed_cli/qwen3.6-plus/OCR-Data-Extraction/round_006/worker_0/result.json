@@ -1,0 +1,29 @@
+{
+    "id": "ab3e4e16-d847-4e91-9fb4-e4c9b96badfb",
+    "started_at": "2026-05-18T02:29:26.209882",
+    "finished_at": "2026-05-18T02:33:25.284435",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "task_family_nested_fuel_packets__8uAajck"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

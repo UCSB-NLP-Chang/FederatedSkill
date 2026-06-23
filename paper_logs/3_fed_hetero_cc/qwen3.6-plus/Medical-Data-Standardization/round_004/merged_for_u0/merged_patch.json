@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "R4 merge complete. Applied u0's lab-dedup-harmonization (reward=1.0) wholesale; kept clinical-lab-harmonization baseline (rejected u1/u2's 0.929 patches with threshold errors). Library: 2 skills (threshold-based + range-based alternative). See DECISIONS.md.",
+  "upsert_paths": [
+    "lab-dedup-harmonization/SKILL.md",
+    "lab-dedup-harmonization/references/oncology-ranges.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "lab-dedup-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "lab-dedup-harmonization/references/oncology-ranges.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/oncology-factors.md"
+  ],
+  "cost_usd": 1.872771
+}

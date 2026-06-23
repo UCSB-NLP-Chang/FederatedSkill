@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Consolidated u1+u2+u0 proposals into one umbrella skill excel-formula-automation with explicit reference locking enforcement per task_memory.md #1 gap. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-automation/SKILL.md",
+    "excel-formula-automation/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-automation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-automation/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-formula-automation/SKILL.md"
+  ],
+  "cost_usd": 2.614548
+}

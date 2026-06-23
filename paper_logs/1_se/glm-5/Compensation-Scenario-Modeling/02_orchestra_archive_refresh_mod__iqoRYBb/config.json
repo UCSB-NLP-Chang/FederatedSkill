@@ -1,0 +1,54 @@
+{
+    "task": {
+        "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Compensation-Scenario-Modeling/02_orchestra_archive_refresh_model",
+        "git_url": null,
+        "git_commit_id": null,
+        "overwrite": false,
+        "download_dir": null,
+        "source": "Compensation-Scenario-Modeling"
+    },
+    "trial_name": "02_orchestra_archive_refresh_mod__iqoRYBb",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Compensation-Scenario-Modeling",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+        "name": null,
+        "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+        "model_name": "glm-5",
+        "override_timeout_sec": null,
+        "override_setup_timeout_sec": null,
+        "max_timeout_sec": null,
+        "kwargs": {},
+        "env": {
+            "ANTHROPIC_API_KEY": "<REDACTED>",
+            "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+        "force_build": false,
+        "delete": false,
+        "override_cpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_gpus": null,
+        "suppress_override_warnings": false,
+        "mounts_json": null,
+        "env": {},
+        "kwargs": {
+            "project_template_dir": null,
+            "copy_task_skills": false
+        }
+    },
+    "verifier": {
+        "override_timeout_sec": null,
+        "max_timeout_sec": null,
+        "disable": false
+    },
+    "artifacts": [],
+    "job_id": "b09d782e-6b2c-4a29-a428-7ba49e38774c"
+}

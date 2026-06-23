@@ -1,0 +1,37 @@
+{
+    "id": "d49d86a1-4487-4a47-89f8-657d51e25733",
+    "started_at": "2026-05-12T22:35:32.126794",
+    "finished_at": "2026-05-13T00:18:23.606775",
+    "n_total_trials": 9,
+    "stats": {
+        "n_trials": 9,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Financial-Statement-Rolling": {
+                "n_trials": 9,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "lattice_deferred_revenue_rollfor__4PiH8nW",
+                            "cedar_accrual_rollforward__kBNvbL8",
+                            "northstar_warranty_reserve_conso__rpSGnXF",
+                            "solstice_commission_asset_alignm__EtyoMGT",
+                            "orchid_project_cost_rollforward__K6CHJeo",
+                            "peregrine_rebate_template_update__rRBfY5f",
+                            "atlas_refund_reserve_template_me__SpgTKoF",
+                            "meridian_contract_liability_orch__viaZFxs",
+                            "harbor_gdpval_20__YAzJvaT"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

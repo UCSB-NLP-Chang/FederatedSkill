@@ -1,0 +1,30 @@
+{
+  "round_idx": 5,
+  "assignments": [
+    [
+      "u0",
+      "task_family_construction_measurement"
+    ],
+    [
+      "u1",
+      "task_family_construction_measurement"
+    ],
+    [
+      "u2",
+      "task_family_construction_measurement"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 1.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1762.4380357265472
+}

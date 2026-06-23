@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8823529411764706,
+  "summary": "The agent failed to run pytest verification before declaring completion, violating the mandatory verification workflow. Adding employee-compensation-pivot domain to the existing skill and strengthening the verification gate instructions to prevent this failure mode.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

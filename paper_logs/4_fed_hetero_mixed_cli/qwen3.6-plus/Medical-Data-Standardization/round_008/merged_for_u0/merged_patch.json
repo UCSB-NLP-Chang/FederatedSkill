@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "MERGE COMPLETE \u2014 Applied u2's verified R8=1.0 patch (neonatal sepsis with simple factors \u00d718.0, \u00f788.4, CRP \u00f710). u0's own R8=0.833 patch was rejected as it caused regression via precise factors and bidirectional inference complexity. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "cost_usd": 1.196169
+}

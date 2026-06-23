@@ -1,0 +1,29 @@
+{
+    "id": "e9152931-6711-4af8-8070-6971870ef783",
+    "started_at": "2026-05-17T21:11:16.509464",
+    "finished_at": "2026-05-17T21:18:15.255676",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "orchid_project_cost_rollforward__tgCQGYq"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "worker_id": "u0",
+  "reward": 0.2222222222222222,
+  "summary": "Adds a new skill for logistics reliability analysis based on the failed harbor_logistics_chain_03 task. Captures the exact statistical workflow (pooled rates, Wilson CI, CV ranking, t-stat stability), domain-specific column mapping, strict JSON schema requirements, and validation steps that the agent missed or implemented brittily. Prevents future verifier failures by enforcing exact key matching and providing reusable scripts.",
+  "upsert_paths": [
+    "logistics-reliability-analysis/SKILL.md",
+    "logistics-reliability-analysis/references/report_schema.md",
+    "logistics-reliability-analysis/scripts/analyze_logistics.py",
+    "logistics-reliability-analysis/scripts/validate_logistics.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,38 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Renamed skill to cross-format-data-diff (peer alignment), applied u2's numpy serialization patch + integrated peer refinements (PEP 668, PDF base64, output precision). See DECISIONS.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": [
+    "tabular-data-diff/SKILL.md",
+    "tabular-data-diff/references/extraction_patterns.md"
+  ],
+  "provenance": {
+    "tabular-data-diff/references/extraction_patterns.md": [
+      "delete",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "tabular-data-diff/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "cost_usd": 0.9644381999999999
+}

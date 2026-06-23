@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.4,
+  "summary": "Adds a skill for generating and verifying constrained multi-scenario Excel workbooks, capturing lessons on openpyxl date handling, shift-window constraint isolation, and cumulative PO verification.",
+  "upsert_paths": [
+    "constrained-excel-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

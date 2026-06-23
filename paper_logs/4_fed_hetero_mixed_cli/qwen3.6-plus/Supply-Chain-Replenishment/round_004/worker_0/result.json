@@ -1,0 +1,29 @@
+{
+    "id": "faa82887-dfb8-40bc-b0b7-1288edba6fb8",
+    "started_at": "2026-05-23T23:28:56.008556",
+    "finished_at": "2026-05-23T23:32:38.501644",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "clinic_branch_transfer_gap__Y5V6JEE"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

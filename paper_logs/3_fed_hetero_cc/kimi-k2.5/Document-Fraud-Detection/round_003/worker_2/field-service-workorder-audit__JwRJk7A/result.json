@@ -1,0 +1,104 @@
+{
+    "id": "0f495e5d-0e8f-4548-a2af-88f9b3d7b4a8",
+    "task_name": "field-service-workorder-audit",
+    "trial_name": "field-service-workorder-audit__JwRJk7A",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/round_003/worker_2/field-service-workorder-audit__JwRJk7A",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/field-service-workorder-audit"
+    },
+    "source": "Document-Fraud-Detection",
+    "task_checksum": "bda0a9cab93c767587c2f0e6cd39056ffaa32bc37c1c9076332fcc2975b1326b",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/field-service-workorder-audit",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Document-Fraud-Detection"
+        },
+        "trial_name": "field-service-workorder-audit__JwRJk7A",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/round_003/worker_2",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "kimi-k2.5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "c92d7257-91fa-4dd6-8c4b-1699347d69d4"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 177144,
+        "n_cache_tokens": 145986,
+        "n_output_tokens": 5401,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-15T06:55:48.492669Z",
+    "finished_at": "2026-05-15T06:59:53.795835Z",
+    "environment_setup": {
+        "started_at": "2026-05-15T06:55:48.493372Z",
+        "finished_at": "2026-05-15T06:55:50.784919Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-15T06:55:50.784978Z",
+        "finished_at": "2026-05-15T06:55:51.673073Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-15T06:55:51.673163Z",
+        "finished_at": "2026-05-15T06:59:40.755938Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-15T06:59:40.761260Z",
+        "finished_at": "2026-05-15T06:59:42.063799Z"
+    }
+}

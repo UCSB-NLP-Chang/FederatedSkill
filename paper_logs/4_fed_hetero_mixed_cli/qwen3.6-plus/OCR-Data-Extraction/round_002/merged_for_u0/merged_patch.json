@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "R2 merge complete for u0. Applied u0's validated patch (reward=1.0) wholesale \u2014 extended umbrella skill with B3 roster-matching workflow and openpyxl row-writing anti-pattern. Rejected u1 (reward=0.0, precision violation) and u2's new skill approach (umbrella-first for qwen). Library: 1 skill, 4 references, 2 scripts. See DECISIONS.md.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/roster_matching_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/roster_matching_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "ocr-data-extraction/SKILL.md"
+  ],
+  "cost_usd": 3.2845679999999997
+}

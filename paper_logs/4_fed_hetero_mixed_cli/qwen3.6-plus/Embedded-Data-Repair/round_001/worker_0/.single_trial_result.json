@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "fx-cross-rate-inverse-fix__ALeixh9",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/round_001/worker_0/fx-cross-rate-inverse-fix__ALeixh9",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/round_001/worker_0/fx-cross-rate-inverse-fix__ALeixh9",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

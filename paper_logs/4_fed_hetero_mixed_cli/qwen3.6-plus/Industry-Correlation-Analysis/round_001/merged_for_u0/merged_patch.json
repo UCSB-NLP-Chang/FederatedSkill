@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus). Applied target's critical bug fix for HP filter return order, added u2's parse_year_markers.py utility, and absorbed u1's scipy.signal anti-pattern. Library stable with 1 skill, 2 scripts, 1 reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/scripts/hp_correlation.py",
+    "economic-time-series-correlation/scripts/parse_year_markers.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-correlation/scripts/parse_year_markers.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "economic-time-series-correlation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "economic-time-series-correlation/scripts/hp_correlation.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-correlation/SKILL.md"
+  ],
+  "cost_usd": 0.6588069999999999
+}

@@ -1,0 +1,30 @@
+{
+  "round_idx": 5,
+  "assignments": [
+    [
+      "u0",
+      "harbor_wh_recovery_02"
+    ],
+    [
+      "u1",
+      "harbor_wh_recovery_02"
+    ],
+    [
+      "u2",
+      "harbor_wh_recovery_02"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 0.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1793.7136299610138
+}

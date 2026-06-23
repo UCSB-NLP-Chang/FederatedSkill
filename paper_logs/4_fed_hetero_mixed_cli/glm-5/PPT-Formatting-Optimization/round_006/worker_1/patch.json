@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8888888888888888,
+  "summary": "Adds CSV edge case handling (empty rows, draft rows, comments) and strengthens validation guidance based on patterns from the trace where the agent's validation showed contradictory output but claimed success.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/csv-text-standardization.md"
+  ],
+  "delete_paths": []
+}

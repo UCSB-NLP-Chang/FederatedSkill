@@ -1,0 +1,29 @@
+{
+    "id": "4372945e-4845-4017-a955-c116c370c75d",
+    "started_at": "2026-05-18T05:57:58.298538",
+    "finished_at": "2026-05-18T06:00:30.107600",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-cloud-reliability-calc__bwFectp"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

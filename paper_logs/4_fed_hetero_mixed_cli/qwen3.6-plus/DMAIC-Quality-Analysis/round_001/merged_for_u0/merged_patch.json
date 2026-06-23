@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus on qwen-code). Applied u0's SKILL.md (schema compliance checklist), u1's output_schema.md (comprehensive field guidance), and fixed compute_metrics.py to produce schema-compliant JSON (points as integer, corrected record_counts field names). Root cause: script output mismatched verifier schema. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/references/output_schema.md",
+    "dmaic-statistical-analysis/scripts/compute_metrics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "dmaic-statistical-analysis/scripts/compute_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-statistical-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "dmaic-statistical-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.8933260000000005
+}

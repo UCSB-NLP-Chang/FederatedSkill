@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for spreadsheet audit reporting, capturing the openpyxl/python-docx workflow, the critical anti-pattern of openpyxl's default sheet, and a verification checklist to prevent common output mismatches.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": []
+}

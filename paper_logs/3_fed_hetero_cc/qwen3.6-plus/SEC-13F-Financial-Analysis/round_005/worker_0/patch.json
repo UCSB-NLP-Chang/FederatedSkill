@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "The agent failed the cross-quarter reconciliation task primarily due to improper manager matching (matched 'tiger global' to 'Voyager Global Management LP' in Q2, which is semantically wrong) and over-reliance on inline Python verification instead of using the provided scripts. The existing sec-13f-fund-analysis skill already documents the distance threshold and script usage rules, but the agent ignored them. This patch strengthens the enforcement language, adds a clear decision tree for match acceptance/rejection, and clarifies when inline verification is appropriate vs. when scripts must be used.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md"
+  ],
+  "delete_paths": []
+}

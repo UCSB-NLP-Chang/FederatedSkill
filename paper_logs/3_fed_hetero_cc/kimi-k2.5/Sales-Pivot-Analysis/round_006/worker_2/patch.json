@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.9473684210526315,
+  "summary": "The task failed because the agent hardcoded PDF table data instead of extracting it programmatically, leading to data integrity issues. The agent also initially attempted to use openpyxl's pivot API (which is forbidden per existing skill), then overcorrected by hardcoding data. The existing sales-pivot-analysis skill already covers most of this capability, but needs strengthening on: (1) programmatic PDF extraction as a mandatory step, not optional, (2) multi-source data alignment patterns, (3) explicit warnings against hardcoding lookup data. This update tightens the anti-patterns and adds a dedicated reference for event/registration data alignment patterns.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md",
+    "sales-pivot-analysis/references/event-registration-patterns.md"
+  ],
+  "delete_paths": []
+}

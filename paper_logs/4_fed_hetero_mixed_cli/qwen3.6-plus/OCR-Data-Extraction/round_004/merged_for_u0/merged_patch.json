@@ -1,0 +1,29 @@
+{
+  "worker_id": "u0",
+  "summary": "R4 merge complete: Applied u0's multi-line keyword handling (SKILL.md + parsing_patterns.md) and u1's utility bill patterns (regex_patterns.md). 3 independent contributions merged, 0 conflicts. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md",
+    "ocr-data-extraction/references/regex_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/regex_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "ocr-data-extraction/references/parsing_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.7838120000000002
+}

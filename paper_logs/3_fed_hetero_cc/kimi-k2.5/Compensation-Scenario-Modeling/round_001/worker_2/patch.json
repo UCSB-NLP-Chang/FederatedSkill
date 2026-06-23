@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.14285714285714285,
+  "summary": "The agent successfully built a complex financial model but had to fix Y/Y growth formulas after initial verification revealed miscalculations. The key lessons: (1) multi-year Summary sheet formulas need careful row tracking to compare correct totals year-over-year, (2) the hardcoded row-offset approach (row - 8) was brittle and wrong, (3) storing prior_year_total_row dynamically is the robust pattern. Also identified: agent initially used wrong NamedRange API (wb.define_name exists but agent used DefinedName + wb.defined_names.add). The existing excel-financial-modeling skill already covers this domain but needs strengthening in multi-year Summary construction patterns.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": []
+}

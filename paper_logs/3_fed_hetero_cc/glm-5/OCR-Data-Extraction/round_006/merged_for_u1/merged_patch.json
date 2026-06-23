@@ -1,0 +1,38 @@
+{
+  "worker_id": "u1",
+  "summary": "R6 merge complete for u1 (glm-5). Applied u1's validated B6 patch (reward=1.0) wholesale \u2014 SKILL.md + batched-extraction-patterns.md reference. Renamed construction-measurement-patterns.md to construction-patterns.md (align with patch references and peer majority u0). B5 gap persists \u2014 SKILL.md has correct aggregation logic but execution failed in R5. See DECISIONS.md for detailed decisions.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/batched-extraction-patterns.md",
+    "image-data-extraction/references/construction-patterns.md"
+  ],
+  "delete_paths": [
+    "image-data-extraction/references/construction-measurement-patterns.md"
+  ],
+  "provenance": {
+    "image-data-extraction/references/construction-measurement-patterns.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "image-data-extraction/references/construction-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "image-data-extraction/references/batched-extraction-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md"
+  ],
+  "cost_usd": 0.8677641
+}

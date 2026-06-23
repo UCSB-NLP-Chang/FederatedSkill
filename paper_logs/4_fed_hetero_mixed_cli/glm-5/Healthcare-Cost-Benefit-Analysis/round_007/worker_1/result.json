@@ -1,0 +1,29 @@
+{
+    "id": "94e3850b-1119-450c-8286-fdc12f9fd250",
+    "started_at": "2026-05-24T06:30:06.457935",
+    "finished_at": "2026-05-24T06:35:25.382406",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Healthcare-Cost-Benefit-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_vaxcrate_6v12__gpTq2nU"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

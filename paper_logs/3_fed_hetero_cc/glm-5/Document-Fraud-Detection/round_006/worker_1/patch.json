@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The trace reveals ambiguity in multi-source validation when both authorizations and snapshots exist. The agent made incorrect decisions about which source to use for validation values and misapplied status checks. This patch clarifies the precedence rules, adds explicit multi-source validation workflow, and corrects the status validation logic.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/violation-types.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The task is a variant of the existing excel-inventory-analysis domain with one new pattern: shelf-life/expiration adjustment to usable inventory before gap analysis. Updated the existing skill to cover this pre-processing step, added freshness/meal-kit terminology variants, and documented the extended output column pattern (Delivered DOH, Remaining Demand) seen in the trace.",
+  "upsert_paths": [
+    "excel-inventory-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

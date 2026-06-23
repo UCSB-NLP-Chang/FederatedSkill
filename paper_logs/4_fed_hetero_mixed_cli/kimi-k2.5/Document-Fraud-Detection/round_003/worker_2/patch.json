@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Extended the expense-claims-validation skill to cover field service work order audits. Added patterns for: (1) multi-sheet Excel files containing name aliases/variants, (2) approval status validation (active vs closed), and (3) amendment/revision tables that override approved amounts. Updated domain mapping and examples to include field service contractor validation.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": []
+}

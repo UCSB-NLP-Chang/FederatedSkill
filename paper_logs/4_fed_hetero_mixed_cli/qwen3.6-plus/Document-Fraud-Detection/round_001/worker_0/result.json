@@ -1,0 +1,29 @@
+{
+    "id": "fb8c2de2-473a-4847-acb7-8ef7e66f1f70",
+    "started_at": "2026-05-17T20:23:04.735068",
+    "finished_at": "2026-05-17T20:24:45.976598",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "speaker-honorarium-review__5tRNaKZ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

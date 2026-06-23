@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R1. Applied target's tool selection rules + u1's PEP 668/custom-code guidance + u2's convert_for_json() helper. Consolidated naming to majority `cross-format-data-diff`. See DECISIONS.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "cost_usd": 1.3172202
+}

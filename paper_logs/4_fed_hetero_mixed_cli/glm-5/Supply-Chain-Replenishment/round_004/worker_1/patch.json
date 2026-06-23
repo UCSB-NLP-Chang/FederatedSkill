@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The clinic_branch_transfer_gap task is a variant of inventory load planning with branch-based grouping and transfer deduplication. Adding this variant to the existing skill captures the deduplication rule (prefer Confirmed over Tentative when same Transfer ID appears multiple times) and branch/transfer terminology mappings.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md"
+  ],
+  "delete_paths": []
+}

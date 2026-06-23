@@ -1,0 +1,30 @@
+{
+  "round_idx": 0,
+  "assignments": [
+    [
+      "u0",
+      "hwpx-supplier-contact-sheet"
+    ],
+    [
+      "u1",
+      "hwpx-supplier-contact-sheet"
+    ],
+    [
+      "u2",
+      "hwpx-supplier-contact-sheet"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 568.5245196819305
+}

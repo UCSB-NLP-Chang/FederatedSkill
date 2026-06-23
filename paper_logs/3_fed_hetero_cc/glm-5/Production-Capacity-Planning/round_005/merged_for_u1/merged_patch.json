@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's validated SKILL.md and excel-patterns.md (reward=1.0), corrected HVAC Known Invariants to use u0's verified 35 hrs/day values (u1 wrongly said 30 hrs/day), rejected u2's wrong capacity-variants.md (OT=0 error). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/references/excel-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 0.7183068000000001
+}

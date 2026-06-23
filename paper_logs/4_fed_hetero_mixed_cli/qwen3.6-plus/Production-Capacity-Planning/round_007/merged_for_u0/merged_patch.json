@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "R7 merge complete. Applied u0's SKILL.md (preserves qwen-critical STOP blocks) + merged peer CSV patterns into horizontal-data-parsing.md. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/horizontal-data-parsing.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/references/horizontal-data-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/horizontal-data-parsing.md"
+  ],
+  "cost_usd": 1.486026
+}

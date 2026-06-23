@@ -1,0 +1,12 @@
+{
+  "worker_id": "u2",
+  "reward": 0.8888888888888888,
+  "summary": "The task failed verification despite successful XML manipulation. The root cause was likely missing registration of the new slide in [Content_Types].xml - a critical OPC (Open Packaging Convention) requirement when adding new parts to a PPTX. The agent also bypassed the provided utility scripts. Updating the skill to document the mandatory 5th step of updating [Content_Types].xml when adding slides, and enhancing verification scripts to catch this omission.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/adding-slides.md",
+    "pptx-manipulation/scripts/extract_pptx.py",
+    "pptx-manipulation/scripts/verify_pptx.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Adds a skill for filling HWPX (Hancom Office) templates by replacing {{placeholders}} with data values. Encodes the critical requirement to remove <hp:linesegarray> layout cache elements when modifying text to prevent overlapping characters, and provides a robust Python script since CLI ZIP tools may be unavailable.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/scripts/fill_hwpx.py"
+  ],
+  "delete_paths": []
+}

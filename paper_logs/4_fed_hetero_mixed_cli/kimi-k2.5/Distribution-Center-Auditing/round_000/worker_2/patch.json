@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.8,
+  "summary": "Creates a reusable skill for generating multi-worksheet Excel audit reports with calculated error columns and companion Word summaries. Captures the workflow of reading source data, adding calculated audit flags (like Qty Variance and Cold Chain errors), creating summary aggregations, and producing executive briefs. Includes critical anti-pattern guidance on NaN vs string 'None' handling that caused verification confusion in the trace, and Python environment setup patterns.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "excel-audit-reporting/references/nan-none-handling.md",
+    "excel-audit-reporting/scripts/generate_audit_report.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.2,
+  "summary": "Adds skill for generating Excel workbooks with strict numerical constraints and date-based distribution logic. Captures lessons from handling PEP 668 package installation, iterative constraint satisfaction for exact totals, and validation of formula vs. constant columns. Prevents future failures when creating production planning or capacity recovery spreadsheets.",
+  "upsert_paths": [
+    "excel-constraint-generation/SKILL.md",
+    "excel-constraint-generation/references/production-planning-patterns.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "task_family_travel_claim_merge__RC4487X",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/round_002/worker_0/task_family_travel_claim_merge__RC4487X",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/round_002/worker_0/task_family_travel_claim_merge__RC4487X",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

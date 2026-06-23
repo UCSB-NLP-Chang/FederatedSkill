@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.75,
+  "summary": "Updated edit-embedded-office-xml/SKILL.md to incorporate two high-signal patterns from the trace: (1) explicit handling of config files (e.g., live_embedding.json) to identify target embeddings among multiple candidates, and (2) a fallback rule to use the deterministic XML script when openpyxl alters workbook structure and triggers strict verifier failures. Added these as critical decision rules and anti-patterns to prevent future agents from guessing targets or relying on openpyxl when structural parity is required.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Updated economic-time-series-correlation skill to handle space-separated quarterly markers (e.g., '2025 Q1' followed by continuation rows 'Q2', 'Q3'). The trace revealed a ValueError when parsing 'Q2' as int, which the existing Roman-numeral-only continuation handler didn't catch. Extended the year marker parser to recognize Q-prefixed continuation rows and updated documentation to describe this pattern.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md",
+    "economic-time-series-correlation/scripts/parse_year_markers.py"
+  ],
+  "delete_paths": []
+}

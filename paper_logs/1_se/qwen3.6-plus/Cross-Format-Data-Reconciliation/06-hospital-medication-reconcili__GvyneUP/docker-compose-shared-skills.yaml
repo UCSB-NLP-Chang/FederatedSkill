@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Cross-Format-Data-Reconciliation/shared_skills/Cross-Format-Data-Reconciliation:/root/.config/agent/skills

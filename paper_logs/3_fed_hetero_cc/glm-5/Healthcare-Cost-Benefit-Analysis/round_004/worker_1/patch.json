@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.4,
+  "summary": "The trace reveals a distinct home infusion delivery batching analysis pattern that differs fundamentally from the existing cycle-margin-analysis skill: per-therapy patient counts from revision-controlled overrides, dose-mg-per-day drug costing, per-patient delivery payments, alias-based entity matching, and different decision logic. The agent failed, likely due to wrong patient count selection (not using highest approved revision) and possibly inverted decision logic. This patch creates a new skill capturing the correct workflow and updates the existing skill to cross-reference it.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md",
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/references/invariants.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.3333333333333333,
+  "summary": "Agent failed by not running pytest despite skill's absolute gate requirement. Adding property management compensation patterns to the existing reference since this model type (occupancy incentives, property bonuses, multi-year named ranges) is not documented. The pytest requirement is already prominent in SKILL.md; the failure was agent non-compliance, not missing documentation.",
+  "upsert_paths": [
+    "excel-workbook-modeling/references/compensation-patterns.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete \u2014 applied baseline + u1's Summary column verification fix (C69\u2192J69). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.7777777777777778
+    ]
+  },
+  "conflicts": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "cost_usd": 3.4812
+}

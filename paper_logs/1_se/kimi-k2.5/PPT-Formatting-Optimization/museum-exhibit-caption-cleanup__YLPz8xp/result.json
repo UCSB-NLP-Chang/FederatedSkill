@@ -1,0 +1,103 @@
+{
+  "id": "57bcdc63-f6e7-43e8-a825-aa52554d507a",
+  "task_name": "museum-exhibit-caption-cleanup",
+  "trial_name": "museum-exhibit-caption-cleanup__YLPz8xp",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__PPT-Formatting-Optimization/museum-exhibit-caption-cleanup__YLPz8xp",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/PPT-Formatting-Optimization/museum-exhibit-caption-cleanup"
+  },
+  "source": "PPT-Formatting-Optimization",
+  "task_checksum": "c36707b6ad8cb1aae9ce5dc75da80d89904c645e6fc3dfb62a0091b167f48409",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/PPT-Formatting-Optimization/museum-exhibit-caption-cleanup",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "PPT-Formatting-Optimization"
+    },
+    "trial_name": "museum-exhibit-caption-cleanup__YLPz8xp",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__PPT-Formatting-Optimization",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "kimi-k2.5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://api.lkeap.cloud.tencent.com/plan/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "8844af78-18ce-4bce-b7b6-a8ea451de735"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 846651,
+    "n_cache_tokens": 0,
+    "n_output_tokens": 11804,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-15T06:48:45.246307Z",
+  "finished_at": "2026-05-15T07:00:24.119997Z",
+  "environment_setup": {
+    "started_at": "2026-05-15T06:48:45.248739Z",
+    "finished_at": "2026-05-15T06:48:46.108036Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-15T06:48:46.108072Z",
+    "finished_at": "2026-05-15T06:48:46.359502Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-15T06:48:46.359598Z",
+    "finished_at": "2026-05-15T07:00:12.954899Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-15T07:00:12.955271Z",
+    "finished_at": "2026-05-15T07:00:13.603646Z"
+  }
+}

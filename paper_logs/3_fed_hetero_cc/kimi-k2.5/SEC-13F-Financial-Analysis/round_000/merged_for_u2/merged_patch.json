@@ -1,0 +1,35 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged round 0 for u2 (kimi-k2.5): created one umbrella skill `sec-13f-fund-analysis` synthesizing all three workers' patches. Combined u0's SEC abbreviation stock classification, u1's threshold validation, u2's SKILL.md structure + normalization reference. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md",
+    "sec-13f-fund-analysis/scripts/classify_holdings.py",
+    "sec-13f-fund-analysis/scripts/match_fund.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/scripts/classify_holdings.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.42857142857142855
+    ],
+    "sec-13f-fund-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.42857142857142855
+    ],
+    "sec-13f-fund-analysis/scripts/match_fund.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.42857142857142855
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.38355959999999995
+}

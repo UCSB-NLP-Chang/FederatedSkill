@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's verified `image-data-extraction` skill with Output precision and Known invariants sections; added u2's patterns reference (fixed rounding guidance). See DECISIONS.md.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md",
+    "image-data-extraction/scripts/create_excel.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/scripts/create_excel.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/references/patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.4601511000000001
+}

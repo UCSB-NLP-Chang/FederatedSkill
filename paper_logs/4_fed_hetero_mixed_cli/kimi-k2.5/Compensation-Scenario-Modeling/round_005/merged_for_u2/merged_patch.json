@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Applied u2's SKILL.md wholesale (+= trap, pytest discovery escalation), u2's formula-patterns.md, u1's compensation-patterns.md (property management), u0's pytest-failures.md (formula named range mismatch). Added u0's suffix/prefix concatenation bug to SKILL.md anti-patterns. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/compensation-patterns.md",
+    "excel-workbook-modeling/references/formula-patterns.md",
+    "excel-workbook-modeling/references/pytest-failures.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/references/compensation-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ],
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.4444444444444444
+    ],
+    "excel-workbook-modeling/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.4444444444444444
+    ],
+    "excel-workbook-modeling/references/pytest-failures.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md"
+  ],
+  "cost_usd": 5.910228
+}

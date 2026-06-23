@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Adds a reusable skill for generating structured Excel workbooks with formulas, control rows, and cross-sheet links from CSV/JSON data using openpyxl. Captures dynamic row indexing, formula construction rules, verification steps, and anti-patterns observed during the deferred revenue rollforward task.",
+  "upsert_paths": [
+    "excel-workbook-generation/SKILL.md",
+    "excel-workbook-generation/scripts/verify_workbook.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "f7e7d467-5576-4c73-b2bf-8dda2e84e604",
+    "started_at": "2026-05-18T05:57:58.309612",
+    "finished_at": "2026-05-18T06:05:05.793229",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-cloud-reliability-calc__sacZ3xD"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

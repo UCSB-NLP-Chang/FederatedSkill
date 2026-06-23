@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Update template-formula-fill skill to address failure in weighted-campus-energy-balance-calc: (1) document QUARTILE.INC as valid alternative to PERCENTILE.INC for quartile statistics, (2) strengthen entity count verification as a mandatory gate before formula writing, (3) add explicit manual spot-check workflow with concrete example, (4) clarify that verifier may expect specific function names and agents should check task instructions for exact function requirements.",
+  "upsert_paths": [
+    "template-formula-fill/SKILL.md",
+    "template-formula-fill/references/formula-patterns.md"
+  ],
+  "delete_paths": []
+}

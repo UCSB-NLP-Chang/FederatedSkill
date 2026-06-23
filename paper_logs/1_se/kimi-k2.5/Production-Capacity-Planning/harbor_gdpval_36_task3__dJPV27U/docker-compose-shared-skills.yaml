@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Production-Capacity-Planning/shared_skills/Production-Capacity-Planning:/root/.config/agent/skills

@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "",
+  "upsert_paths": [
+    "excel-report-aggregation/SKILL.md",
+    "excel-report-aggregation/scripts/verify_multi_sheet.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-report-aggregation/SKILL.md": [
+      "upsert",
+      "u0",
+      0.0
+    ],
+    "excel-report-aggregation/scripts/verify_multi_sheet.py": [
+      "upsert",
+      "u0",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.0
+}

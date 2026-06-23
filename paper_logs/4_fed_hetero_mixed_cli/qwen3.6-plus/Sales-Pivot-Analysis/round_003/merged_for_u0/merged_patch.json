@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus). Combined u0's pre-coding test inspection with u2's marker file gate for strongest structural enforcement. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pytest-verification/SKILL.md",
+    "sales-pivot-report/SKILL.md",
+    "sales-pivot-report/references/common-issues.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-report/references/common-issues.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "pytest-verification/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "cost_usd": 1.7988510000000002
+}

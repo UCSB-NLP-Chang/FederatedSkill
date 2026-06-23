@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Added invoice total keyword prioritization logic and resolved numeric formatting contradiction. Future agents will correctly extract GRAND TOTAL/TOTAL DUE over SUBTOTAL/TAX, and know when to preserve raw floats vs apply fixed-decimal formatting.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": []
+}

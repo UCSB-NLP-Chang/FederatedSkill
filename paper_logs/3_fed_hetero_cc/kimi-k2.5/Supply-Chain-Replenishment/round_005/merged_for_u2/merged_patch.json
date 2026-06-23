@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Consolidated the new recovery-log-template-based variant into the existing supply-chain-coverage-analysis skill, integrating revision-based deduplication, template preservation workflows, and calculation formulas from u1's patch while discarding near-duplicate standalone skills.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md",
+    "supply-chain-coverage-analysis/references/calculation-formulas.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "supply-chain-coverage-analysis/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      1.0
+    ],
+    "supply-chain-coverage-analysis/references/calculation-formulas.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: ",
+    "__task_update_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

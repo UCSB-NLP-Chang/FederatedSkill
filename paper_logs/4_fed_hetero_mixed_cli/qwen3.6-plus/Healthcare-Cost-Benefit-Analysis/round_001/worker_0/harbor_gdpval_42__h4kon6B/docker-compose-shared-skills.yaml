@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis:/root/.config/agent/skills

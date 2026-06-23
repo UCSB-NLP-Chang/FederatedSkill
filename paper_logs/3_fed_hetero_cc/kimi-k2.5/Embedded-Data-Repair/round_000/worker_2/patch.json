@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "This trace demonstrates editing embedded Excel workbooks inside PowerPoint (.pptx) files. The agent successfully used openpyxl to modify cell values while preserving formulas, then repackaged the Excel back into the PPTX using zipfile. Key lessons: (1) PPTX files are ZIP archives with embedded Excel at ppt/embeddings/, (2) openpyxl requires --break-system-packages in restricted environments, (3) always verify whether target cells are formulas vs values before editing, (4) preserve formula cells that auto-calculate from edited values. This skill captures the reusable workflow for embedded Excel editing in Office documents.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/references/openpyxl_cell_types.md",
+    "edit-embedded-excel/scripts/update_embedded_excel.py"
+  ],
+  "delete_paths": []
+}

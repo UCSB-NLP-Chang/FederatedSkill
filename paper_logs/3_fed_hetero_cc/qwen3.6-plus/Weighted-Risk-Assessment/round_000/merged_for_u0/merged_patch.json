@@ -1,0 +1,29 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R0. Created 1 umbrella skill `template-formula-fill` synthesizing u0+u1+u2 patches (all reward=0.5). Added critical pitfalls (operand order, off-by-one), output precision guidance, and known invariants. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "template-formula-fill/SKILL.md",
+    "template-formula-fill/references/formula-patterns.md",
+    "template-formula-fill/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "template-formula-fill/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "template-formula-fill/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "template-formula-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.2378402000000002
+}

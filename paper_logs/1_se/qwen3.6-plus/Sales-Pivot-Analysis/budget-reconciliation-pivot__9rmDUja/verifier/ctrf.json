@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1777033278.488503,
+            "stop": 1777033279.0873141
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 585.6912939998438,
+                "start": 1777033278.4946506,
+                "stop": 1777033279.0872333,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ................sss.s..F..................                               [100%]\nE           =================================== FAILURES ===================================\nE           _______ TestSourceDataSheet.test_has_required_column[TEAM_NAME-<lambda>] _______\nE           \nE           self = <test_outputs.TestSourceDataSheet object at 0x7f86ded44080>\nE           headers = ['tx_id', 'team_code', 'expense_category', 'amount', 'fiscal_quarter', 'dept_name', ...]\nE           desc = 'TEAM_NAME', match_fn = <function <lambda> at 0x7f870a7bce00>\nE           \nE               @pytest.mark.parametrize(\"desc,match_fn\", REQUIRED_COLUMNS)\nE               def test_has_required_column(self, headers, desc, match_fn):\nE           >       assert any(match_fn(h) for h in headers), f\"Missing {desc} column. Found: {headers}\"\nE           E       AssertionError: Missing TEAM_NAME column. Found: ['tx_id', 'team_code', 'expense_category', 'amount', 'fiscal_quarter', 'dept_name', 'division', 'fiscal_quarter', 'budget_amount', 'variance', 'utilization_pct']\nE           E       assert False\nE           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f86ded41fc0>)\nE           \nE           /tests/test_outputs.py:110: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[TEAM_NAME-<lambda>]\nE           1 failed, 37 passed, 4 skipped in 0.44s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

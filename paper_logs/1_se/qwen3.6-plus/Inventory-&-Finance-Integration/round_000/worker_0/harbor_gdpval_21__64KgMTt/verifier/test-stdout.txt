@@ -1,0 +1,62 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_node_checks FAILED                  [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_node_checks ____________________________
+
+    def test_legacy_node_checks() -> None:
+        local_script = Path(__file__).with_name("test_outputs.js")
+        harness_script = Path("/tests/test_outputs.js")
+        script = harness_script if harness_script.exists() else local_script
+    
+        env = os.environ.copy()
+        if not env.get("NODE_PATH"):
+            local_node_modules = script.parents[1] / "node_modules"
+            if local_node_modules.exists():
+                env["NODE_PATH"] = str(local_node_modules)
+    
+        result = subprocess.run(
+            ["node", str(script)],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=env,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: 
+E           node:internal/assert/utils:77
+E               throw err;
+E               ^
+E           
+E           AssertionError [ERR_ASSERTION]: Current_DOH mismatch for PRD-001 (actual=2.82, expected=2.8201)
+E               at assertApprox (/tests/test_outputs.js:87:3)
+E               at main (/tests/test_outputs.js:359:7)
+E               at Object.<anonymous> (/tests/test_outputs.js:494:1)
+E               at Module._compile (node:internal/modules/cjs/loader:1705:14)
+E               at Object..js (node:internal/modules/cjs/loader:1838:10)
+E               at Module.load (node:internal/modules/cjs/loader:1441:32)
+E               at Function._load (node:internal/modules/cjs/loader:1263:12)
+E               at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+E               at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+E               at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5) {
+E             generatedMessage: false,
+E             code: 'ERR_ASSERTION',
+E             actual: false,
+E             expected: true,
+E             operator: '==',
+E             diff: 'simple'
+E           }
+E           
+E           Node.js v22.22.2
+
+/tests/test_output.py:27: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_node_checks - AssertionError: 
+============================== 1 failed in 0.22s ===============================

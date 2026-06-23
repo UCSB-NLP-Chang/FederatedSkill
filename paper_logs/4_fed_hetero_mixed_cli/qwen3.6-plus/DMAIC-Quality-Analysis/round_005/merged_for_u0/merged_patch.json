@@ -1,0 +1,41 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Integrated u1's scipy pre-check into DMAIC skill; created new healthcare-quality-analysis skill with corrected script (no rounding, t-stat stability threshold, explicit schema). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "healthcare-quality-analysis/SKILL.md",
+    "healthcare-quality-analysis/assets/brief_template.md",
+    "healthcare-quality-analysis/references/output_schema.md",
+    "healthcare-quality-analysis/scripts/compute_healthcare_metrics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.375
+    ],
+    "healthcare-quality-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.375
+    ],
+    "healthcare-quality-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.375
+    ],
+    "healthcare-quality-analysis/scripts/compute_healthcare_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "healthcare-quality-analysis/assets/brief_template.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.375
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 4.694445
+}

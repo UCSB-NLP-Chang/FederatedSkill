@@ -1,0 +1,29 @@
+{
+    "id": "fba19cb8-2c91-41e8-8df3-4ee29935d1d6",
+    "started_at": "2026-05-14T18:42:03.549365",
+    "finished_at": "2026-05-14T18:45:58.784605",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__PPT-Formatting-Optimization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "transit-platform-caption-cleanup__QT2NV6X"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

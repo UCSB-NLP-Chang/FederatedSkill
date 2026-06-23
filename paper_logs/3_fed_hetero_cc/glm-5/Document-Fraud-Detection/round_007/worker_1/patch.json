@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task revealed a new pattern: input records (PDF pages) with their own revision system requiring deduplication before validation. The existing skill covers reference data revisions but not input record revisions. Adding guidance for packet-based deduplication and clinical trial domain variant.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/amendment-handling.md"
+  ],
+  "delete_paths": []
+}

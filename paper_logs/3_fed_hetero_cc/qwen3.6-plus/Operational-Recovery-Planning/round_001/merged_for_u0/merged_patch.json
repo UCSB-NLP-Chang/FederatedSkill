@@ -1,0 +1,32 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) in round 1. Applied u1/u2 queue-capacity-planning patches (reward=1.0), rejected u0's radiology-backlog-planning (reward=0.0). Added STOP-checkpoint to SKILL.md to prevent qwen from writing custom code instead of adapting existing skill. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "queue-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "queue-capacity-planning/references/simulation_rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "queue-capacity-planning/scripts/queue_simulator.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md"
+  ],
+  "cost_usd": 0.6946390000000002
+}

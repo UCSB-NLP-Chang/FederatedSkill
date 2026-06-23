@@ -1,0 +1,29 @@
+{
+    "id": "4bdfe4b5-6889-4416-ac43-a4d5ac35b135",
+    "started_at": "2026-05-15T01:59:21.879602",
+    "finished_at": "2026-05-15T02:03:08.205720",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "travel-expense-screening__pEQ58Cm"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

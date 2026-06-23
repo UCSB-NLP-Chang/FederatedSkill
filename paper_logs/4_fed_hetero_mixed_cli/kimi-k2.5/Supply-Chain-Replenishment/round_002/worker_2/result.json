@@ -1,0 +1,29 @@
+{
+    "id": "9e3a978e-e1c3-4e1a-ac14-331bc71e6727",
+    "started_at": "2026-05-23T22:55:26.824417",
+    "finished_at": "2026-05-23T22:57:11.501377",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "bakery_weekly_commit_gap__uJskV6N"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

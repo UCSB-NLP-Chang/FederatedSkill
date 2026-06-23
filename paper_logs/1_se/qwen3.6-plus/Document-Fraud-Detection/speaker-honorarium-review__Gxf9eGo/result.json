@@ -1,0 +1,102 @@
+{
+    "id": "3ec422f3-32eb-4d7f-b362-2f76b59ab78f",
+    "task_name": "speaker-honorarium-review",
+    "trial_name": "speaker-honorarium-review__Gxf9eGo",
+    "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__Document-Fraud-Detection/speaker-honorarium-review__Gxf9eGo",
+    "task_id": {
+        "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/speaker-honorarium-review"
+    },
+    "source": "Document-Fraud-Detection",
+    "task_checksum": "9a913e6ec13e8b9064a861f75affe4d06e63ccbc1c0ed8c860d632c5cbb0e6a1",
+    "config": {
+        "task": {
+            "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/speaker-honorarium-review",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Document-Fraud-Detection"
+        },
+        "trial_name": "speaker-honorarium-review__Gxf9eGo",
+        "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__Document-Fraud-Detection",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "qwen3.6-plus",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "4d8cb1dc-2614-4753-9468-37d5dfe86ca7"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-11T01:18:49.016893Z",
+    "finished_at": "2026-05-11T01:20:21.039992Z",
+    "environment_setup": {
+        "started_at": "2026-05-11T01:18:49.018868Z",
+        "finished_at": "2026-05-11T01:18:49.919590Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-11T01:18:49.919605Z",
+        "finished_at": "2026-05-11T01:18:50.161482Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-11T01:18:50.161533Z",
+        "finished_at": "2026-05-11T01:20:09.927931Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-11T01:20:09.928223Z",
+        "finished_at": "2026-05-11T01:20:10.535457Z"
+    }
+}

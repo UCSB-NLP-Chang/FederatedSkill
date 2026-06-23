@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent built a deferred revenue rollforward workbook with openpyxl but the verifier test failed. The most likely causes are incorrect rollforward formula logic (Ending Balance row referencing its own empty cells instead of prior period ending balances), wrong Variance formula direction, and possibly incorrect file naming or summary sheet structure. This skill captures the correct rollforward pattern, common formula pitfalls, and verification workflow so future agents avoid the same mistakes.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/rollforward_anatomy.md",
+    "deferred-revenue-rollforward/scripts/build_rollforward.py"
+  ],
+  "delete_paths": []
+}

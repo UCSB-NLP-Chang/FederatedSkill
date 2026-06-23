@@ -1,0 +1,103 @@
+{
+  "id": "11975d09-97ff-4f0c-8d83-657af41949d9",
+  "task_name": "03_university_faculty_model",
+  "trial_name": "03_university_faculty_model__HKGK9EV",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Compensation-Scenario-Modeling/03_university_faculty_model__HKGK9EV",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Compensation-Scenario-Modeling/03_university_faculty_model"
+  },
+  "source": "Compensation-Scenario-Modeling",
+  "task_checksum": "a65317273bc53d72a48a9dc5911fb67b58a0c265693d188602b675c0eded8e5d",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Compensation-Scenario-Modeling/03_university_faculty_model",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Compensation-Scenario-Modeling"
+    },
+    "trial_name": "03_university_faculty_model__HKGK9EV",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Compensation-Scenario-Modeling",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "kimi-k2.5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://api.lkeap.cloud.tencent.com/plan/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "e21bca4b-8138-4c96-9422-c97d0ad89af8"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 1231522,
+    "n_cache_tokens": 0,
+    "n_output_tokens": 26690,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-15T06:39:32.719192Z",
+  "finished_at": "2026-05-15T07:06:20.132164Z",
+  "environment_setup": {
+    "started_at": "2026-05-15T06:39:32.720834Z",
+    "finished_at": "2026-05-15T06:39:33.593933Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-15T06:39:33.593944Z",
+    "finished_at": "2026-05-15T06:39:33.837667Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-15T06:39:33.837712Z",
+    "finished_at": "2026-05-15T07:06:08.448725Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-15T07:06:08.448961Z",
+    "finished_at": "2026-05-15T07:06:09.559906Z"
+  }
+}

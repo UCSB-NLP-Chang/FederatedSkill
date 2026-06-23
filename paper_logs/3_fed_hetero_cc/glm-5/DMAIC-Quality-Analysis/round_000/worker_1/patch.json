@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.3333333333333333,
+  "summary": "The agent implemented statistical calculations from scratch instead of using scipy.stats, producing invalid results (ANOVA p-value=1.0, t-test p-value=0.0). The verifier failed because these outputs are mathematically incorrect. This skill captures the anti-pattern and provides correct implementation guidance for future statistical analysis tasks.",
+  "upsert_paths": [
+    "statistical-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

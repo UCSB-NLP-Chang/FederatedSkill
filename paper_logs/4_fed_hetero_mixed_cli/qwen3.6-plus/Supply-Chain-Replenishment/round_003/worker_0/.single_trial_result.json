@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "produce_lane_restock_gap__r9P6zto",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/round_003/worker_0/produce_lane_restock_gap__r9P6zto",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/round_003/worker_0/produce_lane_restock_gap__r9P6zto",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

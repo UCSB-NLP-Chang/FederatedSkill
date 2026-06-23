@@ -1,0 +1,29 @@
+{
+    "id": "3b84b36f-e63e-460f-bddb-80438778bb5e",
+    "started_at": "2026-05-18T02:43:03.950219",
+    "finished_at": "2026-05-18T02:50:26.611081",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "neonatal-sepsis-harmonization__QaySwL5"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

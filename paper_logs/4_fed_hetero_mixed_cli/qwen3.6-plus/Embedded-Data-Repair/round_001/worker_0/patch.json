@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8,
+  "summary": "Updated the existing edit-embedded-office-xml skill to enforce full-precision numeric handling (preventing verifier failures from pre-rounding), improved the helper script to safely preserve formulas and handle missing <v> tags, and added explicit decision rules for precision mismatches and formula protection.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Created 1 skill `clinical-lab-data-harmonization` (synthesized from u1 thresholds + u2 name + numbered format for qwen3.6-plus). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-data-harmonization/SKILL.md",
+    "clinical-lab-data-harmonization/references/conversion-factors.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-data-harmonization/references/conversion-factors.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "clinical-lab-data-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5789473684210527
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.487843
+}

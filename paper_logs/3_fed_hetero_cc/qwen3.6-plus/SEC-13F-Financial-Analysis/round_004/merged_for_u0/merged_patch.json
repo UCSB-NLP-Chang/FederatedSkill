@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's B5 workflow patch with naming correction (B4\u2192B5), added awk anti-pattern from u2 failure. Rejected u2's broken new skill. Library: 2 skills, validated. See DECISIONS.md.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.6054534
+}

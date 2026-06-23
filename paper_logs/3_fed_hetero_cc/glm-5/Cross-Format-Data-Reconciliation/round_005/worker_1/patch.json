@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task succeeded cleanly using existing skill guidance. Minor update to add the medication reconciliation key-name variant (deleted_medications/modified_medications) to the known invariants section, so future agents recognize this naming pattern without rediscovery.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": []
+}

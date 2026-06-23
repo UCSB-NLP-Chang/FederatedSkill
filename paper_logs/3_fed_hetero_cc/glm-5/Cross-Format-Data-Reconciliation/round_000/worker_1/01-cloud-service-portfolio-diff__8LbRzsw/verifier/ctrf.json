@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778726428.758587,
+            "stop": 1778726428.981293
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.1991358119994402,
+                "start": 1778726428.7669399,
+                "stop": 1778726428.9811819,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .F.F                                                                     [100%]\nE           =================================== FAILURES ===================================\nE           ______________________ test_deleted_ids_sorted_and_exact _______________________\nE           \nE               def test_deleted_ids_sorted_and_exact():\nE                   data = load_output()\nE                   assert data[DELETED_KEY] == sorted(data[DELETED_KEY])\nE           >       assert set(data[DELETED_KEY]) == set(EXPECTED[DELETED_KEY]), \"Deleted IDs must match\"\nE           E       AssertionError: Deleted IDs must match\nE           E       assert {'CSV0006', '...9', 'CSV0010'} == {'CSV0006', 'CSV0009'}\nE           E         \nE           E         Extra items in the left set:\nE           E         'CSV0010'\nE           E         Use -v to get more diff\nE           \nE           /tests/test_outputs.py:94: AssertionError\nE           ______________________ test_modified_entries_exact_match _______________________\nE           \nE               def test_modified_entries_exact_match():\nE                   data = load_output()\nE                   ok, msg = diff_close(data[MODIFIED_KEY], EXPECTED[MODIFIED_KEY])\nE           >       assert ok, msg\nE           E       AssertionError: Length mismatch: 27 vs 4\nE           E       assert False\nE           \nE           /tests/test_outputs.py:109: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_deleted_ids_sorted_and_exact - Assertio...\nE           FAILED ../tests/test_outputs.py::test_modified_entries_exact_match - Assertio...\nE           2 failed, 2 passed in 0.03s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

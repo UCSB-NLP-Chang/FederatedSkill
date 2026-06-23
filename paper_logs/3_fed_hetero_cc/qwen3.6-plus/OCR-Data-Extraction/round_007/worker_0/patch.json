@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Adds OCR fragmentation handling (keywords split with punctuation/brackets across lines), case settlement extraction patterns (events + net_summary sheets, admin page filtering, reference-based deduplication), and reinforces the raw-float anti-pattern that likely caused the verifier failure. Updates existing image-data-extraction skill rather than creating a duplicate.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/case-settlement-patterns.md"
+  ],
+  "delete_paths": []
+}

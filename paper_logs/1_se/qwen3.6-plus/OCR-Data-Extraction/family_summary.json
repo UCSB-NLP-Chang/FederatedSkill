@@ -1,0 +1,156 @@
+{
+  "family_name": "OCR-Data-Extraction",
+  "n_workers": 1,
+  "n_rounds": 8,
+  "elapsed_sec": 2720.1476833820343,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 8,
+    "mean": 0.5,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 4
+  },
+  "merger_cost_total_usd": 0.0,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "task_family_pharmacy_labels"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 254.23902344703674
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "task_family_ecommerce_orders"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 263.41534185409546
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "task_family_travel_claim_merge"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 457.42414927482605
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "task_family_invoice_images"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 224.5240650177002
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "task_family_utility_bills_template_update"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 344.5064046382904
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "task_family_construction_measurement"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 271.8630442619324
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "task_family_nested_fuel_packets"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 238.29707789421082
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "task_family_case_settlement_packets"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 665.8775269985199
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/OCR-Data-Extraction/worker_skills/u0/OCR-Data-Extraction"
+  }
+}

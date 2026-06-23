@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R2. Applied target's shift screening workflow + scripts, absorbed u0's compare_quarters.py as alternative. B3 gap remains (all workers reward=0.5). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/output-schemas.md",
+    "sec-13f-analysis/scripts/compare_quarters.py",
+    "sec-13f-analysis/scripts/shift_screen.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-analysis/scripts/compare_quarters.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-analysis/references/output-schemas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "sec-13f-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-analysis/scripts/shift_screen.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-analysis/SKILL.md"
+  ],
+  "cost_usd": 3.5464919999999998
+}

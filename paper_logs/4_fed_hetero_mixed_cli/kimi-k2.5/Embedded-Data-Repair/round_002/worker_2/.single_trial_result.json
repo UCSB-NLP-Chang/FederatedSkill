@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "warehouse-slot-factor-refresh__PQWDnYB",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/round_002/worker_2/warehouse-slot-factor-refresh__PQWDnYB",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/round_002/worker_2/warehouse-slot-factor-refresh__PQWDnYB",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

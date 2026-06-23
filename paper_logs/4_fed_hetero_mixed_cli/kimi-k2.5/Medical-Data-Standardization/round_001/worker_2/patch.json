@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "The existing clinical-csv-harmonization skill lacked conversion factors and ranges for hepatic panel analytes (Bilirubin, Albumin, Hemoglobin, Ammonia). This update extends the conversion table and adds hepatic-panel-specific invariants to prevent future failures on liver function datasets.",
+  "upsert_paths": [
+    "clinical-csv-harmonization/SKILL.md"
+  ],
+  "delete_paths": []
+}

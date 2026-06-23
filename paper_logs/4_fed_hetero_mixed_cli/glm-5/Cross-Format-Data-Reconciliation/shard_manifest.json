@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-mixed-cli-M3-hetero",
+  "family_name": "Cross-Format-Data-Reconciliation",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallQwenCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallKimiCli",
+      "agent_model": "openai/kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "01-cloud-service-portfolio-diff",
+      "02-hospital-capacity-portfolio-diff",
+      "03-retail-supply-category-diff",
+      "04-university-program-funding-diff",
+      "05-datacenter-hardware-registry-diff",
+      "06-hospital-medication-reconciliation",
+      "07-shipping-container-manifest-diff",
+      "08-university-course-catalog-diff"
+    ],
+    "u1": [
+      "01-cloud-service-portfolio-diff",
+      "02-hospital-capacity-portfolio-diff",
+      "03-retail-supply-category-diff",
+      "04-university-program-funding-diff",
+      "05-datacenter-hardware-registry-diff",
+      "06-hospital-medication-reconciliation",
+      "07-shipping-container-manifest-diff",
+      "08-university-course-catalog-diff"
+    ],
+    "u2": [
+      "01-cloud-service-portfolio-diff",
+      "02-hospital-capacity-portfolio-diff",
+      "03-retail-supply-category-diff",
+      "04-university-program-funding-diff",
+      "05-datacenter-hardware-registry-diff",
+      "06-hospital-medication-reconciliation",
+      "07-shipping-container-manifest-diff",
+      "08-university-course-catalog-diff"
+    ]
+  }
+}

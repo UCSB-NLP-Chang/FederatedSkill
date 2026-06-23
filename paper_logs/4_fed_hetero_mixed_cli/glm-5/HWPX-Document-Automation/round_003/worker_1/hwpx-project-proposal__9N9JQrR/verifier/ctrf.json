@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779065137.6568913,
+            "stop": 1779065137.8529868
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.17485735192894936,
+                "start": 1779065137.6666882,
+                "stop": 1779065137.8528628,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ..F                                                                      [100%]\nE           =================================== FAILURES ===================================\nE           ______________ test_modified_paragraphs_do_not_keep_layout_cache _______________\nE           \nE               def test_modified_paragraphs_do_not_keep_layout_cache():\nE                   data = json.loads(DATA_FILE.read_text(encoding=\"utf-8\"))\nE                   fragments = []\nE                   for key, value in data.items():\nE                       if key == \"\uc608\uc0b0\":\nE                           fragments.append(value.replace(\",\", \"\"))\nE                       elif key == \"\ub2e8\uacc41\":\nE                           fragments.append(f\"{value} (3\uac1c\uc6d4)\")\nE                       elif key == \"\ub2e8\uacc42\":\nE                           fragments.append(f\"{value} (3\uac1c\uc6d4)\")\nE                       elif key == \"\ub2e8\uacc43\":\nE                           fragments.append(f\"{value} (1\uac1c\uc6d4)\")\nE                       else:\nE                           fragments.append(value)\nE                   for section_name in (\"section0.xml\", \"section1.xml\"):\nE                       section_xml = load_section(OUTPUT_FILE, section_name)\nE                       for paragraph, text in paragraph_texts(section_xml):\nE                           if any(fragment in text for fragment in fragments):\nE           >                   assert paragraph.find(\"hp:linesegarray\", NS) is None\nE           E                   AssertionError: assert <Element '{http://www.hancom.co.kr/hwpml/2010/HWPML}linesegarray' at 0x7f317caf31a0> is None\nE           E                    +  where <Element '{http://www.hancom.co.kr/hwpml/2010/HWPML}linesegarray' at 0x7f317caf31a0> = <built-in method find of xml.etree.ElementTree.Element object at 0x7f317caf30b0>('hp:linesegarray', {'hp': 'http://www.hancom.co.kr/hwpml/2010/HWPML'})\nE           E                    +    where <built-in method find of xml.etree.ElementTree.Element object at 0x7f317caf30b0> = <Element '{http://www.hancom.co.kr/hwpml/2010/HWPML}p' at 0x7f317caf30b0>.find\nE           \nE           /tests/test_outputs.py:65: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_modified_paragraphs_do_not_keep_layout_cache\nE           1 failed, 2 passed in 0.02s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

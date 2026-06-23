@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/shared_skills/PPT-Formatting-Optimization:/root/.config/agent/skills

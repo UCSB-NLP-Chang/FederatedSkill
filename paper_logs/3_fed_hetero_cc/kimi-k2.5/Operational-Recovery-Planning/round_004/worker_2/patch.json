@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.2,
+  "summary": "The agent failed verification on a complex multi-scenario production planning task involving server provisioning recovery. The task required creating an Excel workbook with 3 sheets, each modeling different operational scenarios with specific constraints (date ranges, capacity limits, PO due dates, weekend/holiday handling, formula-based cumulative calculations). The agent made several brittle choices: using pandas for complex Excel formula writing (which doesn't preserve formulas), creating date formulas that pandas couldn't evaluate, manual column index mapping that led to length mismatches, and ad-hoc verification that didn't catch structural issues. The skill captures the reusable pattern for multi-scenario production planning with Excel, emphasizing: (1) use openpyxl directly for formula preservation, (2) pre-define schema/mappings in configuration, (3) validate structure before and after creation, (4) handle date/calendar logic explicitly, (5) separate scenario configuration from execution logic.",
+  "upsert_paths": [
+    "production-planning-excel/SKILL.md",
+    "production-planning-excel/references/scenario_templates.md"
+  ],
+  "delete_paths": []
+}

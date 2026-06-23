@@ -1,0 +1,29 @@
+{
+    "id": "abade368-16aa-44b9-b3de-ef42dfc6fec4",
+    "started_at": "2026-05-17T20:12:15.056132",
+    "finished_at": "2026-05-17T20:13:44.805653",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Embedded-Data-Repair": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "fx-spot-matrix-refresh__xhaHUCc"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

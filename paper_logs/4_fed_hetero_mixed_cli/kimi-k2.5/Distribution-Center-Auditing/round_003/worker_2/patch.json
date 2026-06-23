@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Enhanced excel-audit-reporting skill to handle multi-sheet workbooks with reference data lookups (e.g., SLA Rules), added pattern for filtering summary to error-only rows, and updated script template to support priority-tier lookups and service desk audit scenarios.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "excel-audit-reporting/scripts/generate_audit.py"
+  ],
+  "delete_paths": []
+}

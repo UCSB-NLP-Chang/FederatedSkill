@@ -1,0 +1,37 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Created pipeline-performance-analysis skill with pure numbered procedure, explicit key-renaming guard, and hard-stop validation gate. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pipeline-performance-analysis/SKILL.md",
+    "pipeline-performance-analysis/references/report_schema.md",
+    "pipeline-performance-analysis/scripts/pipeline_stats.py",
+    "pipeline-performance-analysis/scripts/wilson_ci.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pipeline-performance-analysis/references/report_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.25
+    ],
+    "pipeline-performance-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.25
+    ],
+    "pipeline-performance-analysis/scripts/pipeline_stats.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ],
+    "pipeline-performance-analysis/scripts/wilson_ci.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ]
+  },
+  "conflicts": [
+    "pipeline-performance-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.706753
+}

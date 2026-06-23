@@ -1,0 +1,30 @@
+{
+  "round_idx": 1,
+  "assignments": [
+    [
+      "u0",
+      "harbor_hospital_lab_analyze_02"
+    ],
+    [
+      "u1",
+      "harbor_hospital_lab_analyze_02"
+    ],
+    [
+      "u2",
+      "harbor_hospital_lab_analyze_02"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 0.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1179.1202476024628
+}

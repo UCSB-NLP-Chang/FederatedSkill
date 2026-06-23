@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated queue-capacity-planning skill to explicitly cover returns center throughput ramp-down tasks, preventing future agents from writing custom simulation code from scratch. Added domain-specific parameters, headers, and a note on handling multi-row demand inputs.",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md"
+  ],
+  "delete_paths": []
+}

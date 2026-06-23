@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated economic-time-series-analysis/SKILL.md to explicitly warn about hpfilter return order (cycle, trend) and add a mandatory cycle sum validation step (abs(sum(cycle)) < 1e-6) to catch trend/cycle unpacking errors before correlation. Also clarified quarterly marker parsing examples.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

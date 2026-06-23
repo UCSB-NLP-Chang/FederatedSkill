@@ -1,0 +1,104 @@
+{
+    "id": "b2e4f6d4-9820-4831-a402-be734fe05008",
+    "task_name": "bakery_weekly_commit_gap",
+    "trial_name": "bakery_weekly_commit_gap__YbMiCwu",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/round_002/worker_0/bakery_weekly_commit_gap__YbMiCwu",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Supply-Chain-Replenishment/bakery_weekly_commit_gap"
+    },
+    "source": "Supply-Chain-Replenishment",
+    "task_checksum": "d4dee25fe268d8b28407778f87b291debb791cc149566943f84b0770f8605eb9",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Supply-Chain-Replenishment/bakery_weekly_commit_gap",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Supply-Chain-Replenishment"
+        },
+        "trial_name": "bakery_weekly_commit_gap__YbMiCwu",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/round_002/worker_0",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 4.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallQwenCode",
+            "model_name": "qwen3.6-plus",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "OPENAI_API_KEY": "<REDACTED>",
+                "OPENAI_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1",
+                "OPENAI_MODEL": "qwen3.6-plus"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u0"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "2c073c30-f6b2-4548-93e9-e723a2830152"
+    },
+    "agent_info": {
+        "name": "qwen-coder",
+        "version": "\u001b[4m>>>> Executing external compose provider \"/usr/libexec/docker/cli-plugins/docker-compose\". Please see podman-compose(1) for how to disable this message. <<<<\n\n\u001b[0m0.16.1",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 182204,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 4628,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-24T02:55:29.849313Z",
+    "finished_at": "2026-05-24T02:57:32.962259Z",
+    "environment_setup": {
+        "started_at": "2026-05-24T02:55:29.849903Z",
+        "finished_at": "2026-05-24T02:55:32.897801Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-24T02:55:32.897848Z",
+        "finished_at": "2026-05-24T02:55:35.073794Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-24T02:55:35.073893Z",
+        "finished_at": "2026-05-24T02:57:19.836885Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-24T02:57:19.840276Z",
+        "finished_at": "2026-05-24T02:57:21.136481Z"
+    }
+}

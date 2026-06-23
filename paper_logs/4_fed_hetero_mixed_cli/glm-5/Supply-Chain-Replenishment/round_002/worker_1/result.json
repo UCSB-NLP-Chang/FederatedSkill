@@ -1,0 +1,29 @@
+{
+    "id": "de4863b2-9fe5-43e0-8442-6d22db491962",
+    "started_at": "2026-05-23T22:55:26.845221",
+    "finished_at": "2026-05-23T22:57:36.541532",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "bakery_weekly_commit_gap__2b2E9Tw"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "round_idx": 4,
+  "assignments": [
+    [
+      "u0",
+      "05_property_management_model"
+    ],
+    [
+      "u1",
+      "05_property_management_model"
+    ],
+    [
+      "u2",
+      "05_property_management_model"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 0.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1181.7585978507996
+}

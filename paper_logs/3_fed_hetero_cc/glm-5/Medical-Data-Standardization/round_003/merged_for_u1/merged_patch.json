@@ -1,0 +1,38 @@
+{
+  "worker_id": "u1",
+  "summary": "R3 merge complete for u1 (glm-5). Adopted u2's correct cardiology factors (BNP \u00d70.143, NT_proBNP NO CONVERSION, Troponin <0.05/<0.1), fixed Total_T3 threshold to <3.0 with 64.94 factor, added cardiovascular-factors.md reference. See DECISIONS.md.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/cardiovascular-factors.md",
+    "clinical-lab-harmonization/references/conversion-factors.md",
+    "clinical-lab-harmonization/references/thyroid-factors.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/references/conversion-factors.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.7
+    ],
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.7
+    ],
+    "clinical-lab-harmonization/references/cardiovascular-factors.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "clinical-lab-harmonization/references/thyroid-factors.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md"
+  ],
+  "cost_usd": 4.586853
+}

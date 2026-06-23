@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "The trace shows the agent initially failed to parse Excel data (got zero demand values) before recovering via inspection script. The agent also used `python` instead of `python3` and tried `read_file` on a binary .xlsx. The existing workload-capacity-planning skill already covers most of these anti-patterns, but the trace reveals two gaps: (1) no explicit guidance to verify parsed data is non-empty before running simulation, and (2) the summary text had swapped week numbers (reported 24 then 23, but simulation showed 23 then 24), suggesting a consistency check between tracked variables and summary output is needed. I'm updating the existing skill to add these validation steps and clarify the first-occurrence tracking logic.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "3ae6a57d-05e9-4f51-9262-a12e3fbad8f9",
+    "started_at": "2026-05-18T02:55:54.731254",
+    "finished_at": "2026-05-18T02:58:28.008086",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__PPT-Formatting-Optimization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "property-portfolio-caption-clean__PbSu6ck"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

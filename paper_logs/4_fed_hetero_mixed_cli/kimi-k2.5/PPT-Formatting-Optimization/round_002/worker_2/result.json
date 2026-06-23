@@ -1,0 +1,29 @@
+{
+    "id": "23d33e83-114c-4c05-bc6b-1ff6b81dc3fc",
+    "started_at": "2026-05-18T02:11:39.811444",
+    "finished_at": "2026-05-18T02:39:13.938757",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__PPT-Formatting-Optimization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "coastal-trail-caption-cleanup__dhDP8nd"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

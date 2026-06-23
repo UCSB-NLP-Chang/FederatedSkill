@@ -1,0 +1,29 @@
+{
+    "id": "3e8bbdb2-6567-4654-b017-3550a142591f",
+    "started_at": "2026-05-18T01:30:15.598744",
+    "finished_at": "2026-05-18T01:31:36.413996",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "08-university-course-catalog-dif__Ca7FnjE"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

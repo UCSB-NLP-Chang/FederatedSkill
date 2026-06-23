@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8,
+  "summary": "The agent successfully applied the embedded Excel edit pattern but the test failed. Adding guidance for FX/cross-rate matrix patterns (inverse calculations) and precision consistency when updating values that feed into ROUND formulas. These are common in financial spreadsheets and the trace shows the agent used excessive precision (1.156737998843262) when the matrix used 4 decimal places (1.1498), which may cause test failures.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/references/openpyxl_cell_types.md"
+  ],
+  "delete_paths": []
+}

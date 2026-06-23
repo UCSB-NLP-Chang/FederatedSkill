@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Reinforces existing cross-format-data-diff skill with explicit verifier key-matching guidance and a PDF text-extraction fallback, directly validated by the successful trace where the agent bypassed the helper script for custom keys and used regex on PDF text.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "research-stipend-reconciliation__Hq8qeDM",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Document-Fraud-Detection/round_005/worker_2/research-stipend-reconciliation__Hq8qeDM",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Document-Fraud-Detection/round_005/worker_2/research-stipend-reconciliation__Hq8qeDM",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

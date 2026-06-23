@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent reported success but the verifier failed, indicating output didn't match spec exactly. This patch strengthens the existing skill with: (1) multi-source consolidation workflow, (2) SKU normalization patterns for inventory tasks, (3) explicit pre-completion verification step to catch spec mismatches before declaring success, and (4) stronger pivot column name validation.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

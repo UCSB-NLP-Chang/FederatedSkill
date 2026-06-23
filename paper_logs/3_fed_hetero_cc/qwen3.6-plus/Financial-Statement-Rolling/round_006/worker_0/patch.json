@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The trace reveals a template-merge workflow distinct from the existing skeleton-based rollforward builder. The agent built from scratch instead of using the existing skill, encountered override handling bugs, and passed self-verification but failed the actual test suite. This new skill captures the template-merge pattern: loading an existing Excel template, normalizing JSON/CSV data (filtering, deduplication, overrides, insertions), populating detail sheets while preserving template structure, and building summary cross-sheet links. It also adds critical validation guidance about running the actual test suite rather than relying on self-verification.",
+  "upsert_paths": [
+    "template-merge-workbook/SKILL.md"
+  ],
+  "delete_paths": []
+}

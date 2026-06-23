@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's reward=1.0 patch renamed to `excel-audit-reporting` (peer-majority), absorbed u2's NaN/None reference doc. 1 skill, 1 reference file. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "excel-audit-reporting/references/nan-none-handling.md",
+    "excel-audit-reporting/scripts/create_audit_report.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-audit-reporting/references/nan-none-handling.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.8
+    ],
+    "excel-audit-reporting/scripts/create_audit_report.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-audit-reporting/SKILL.md"
+  ],
+  "cost_usd": 2.0667210000000003
+}

@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Merged u0+u1 patches to address B2 gap (multi-workbook + metadata handling). Result: 140-line SKILL.md with (1) config file decision rule, (2) numbered workflow step for multi-workbook identification, (3) embedded-excel-multi-workbook-selection sub-task section, (4) filename assumption anti-pattern, (5) openpyxl fallback anti-pattern. See DECISIONS.md for detailed reasoning.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.75
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "cost_usd": 2.6786849999999998
+}

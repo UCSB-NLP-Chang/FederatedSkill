@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The existing skill worked correctly for this task. Minor improvements: (1) add a concrete example showing output key mismatch to make the 'when to write custom code' decision clearer, (2) emphasize that PDF extraction returns all values as strings requiring explicit type conversion for numeric comparisons.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": []
+}

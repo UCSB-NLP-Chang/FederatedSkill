@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u2's verified `oncocooler-dispatch-analysis` (reward=1.0) to close B5 gap. Library now has 4 skills: syncpack-cycle-analysis, mailer-policy-analysis, infusion-batch-analysis, oncocooler-dispatch-analysis. Rejected u0's divergent `cooler-dispatch-analysis` naming. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "oncocooler-dispatch-analysis/SKILL.md",
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "oncocooler-dispatch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "oncocooler-dispatch-analysis/SKILL.md",
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py"
+  ],
+  "cost_usd": 0.7414069999999999
+}

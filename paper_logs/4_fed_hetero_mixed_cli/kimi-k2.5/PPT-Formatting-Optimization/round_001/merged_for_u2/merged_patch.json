@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Synthesized SKILL.md from u0 (BadZipFile/endParaRPr fixes), u1 (verification checklist), u2 (helper script). Kept u2's pptx_helpers.py. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/pptx-structure.md",
+    "pptx-xml-editing/scripts/pptx_helpers.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/scripts/pptx_helpers.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.7777777777777778
+    ],
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ],
+    "pptx-xml-editing/references/pptx-structure.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "cost_usd": 1.9193909999999998
+}

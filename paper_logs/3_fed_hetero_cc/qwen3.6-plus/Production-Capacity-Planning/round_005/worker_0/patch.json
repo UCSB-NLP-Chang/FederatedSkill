@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Update excel-capacity-planning skill to include the 35 hrs/day capacity variant observed in HVAC scheduling tasks, add HVAC/ductwork to trigger phrases, and reinforce programmatic enforcement of summary length constraints based on successful trace execution.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,30 @@
+{
+  "round_idx": 4,
+  "assignments": [
+    [
+      "u0",
+      "harbor_gdpval_36_task3"
+    ],
+    [
+      "u1",
+      "harbor_gdpval_36_task3"
+    ],
+    [
+      "u2",
+      "harbor_gdpval_36_task3"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 0.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1313.2828741073608
+}

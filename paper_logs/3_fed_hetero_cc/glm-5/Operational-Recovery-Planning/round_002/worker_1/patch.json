@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The trace shows a manufacturing/welding capacity planning scenario that follows the same step-down staffing pattern as the existing queue-capacity-planning skill but with different parameters and input layout. The verifier failed, suggesting potential issues with column header matching, initial backlog derivation, or transition logic. This patch extends the existing skill to cover the manufacturing scenario, adds guidance for horizontal data layouts where weeks are columns, and documents the new column headers and parameters.",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": []
+}

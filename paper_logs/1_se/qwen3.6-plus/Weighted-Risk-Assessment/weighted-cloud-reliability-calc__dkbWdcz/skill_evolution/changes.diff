@@ -1,0 +1,73 @@
+--- /dev/null
++++ b/excel-formula-population/SKILL.md
+@@ -0,0 +1,36 @@
++---
++name: excel-formula-population
++description: Populate Excel workbooks with complex formulas (lookups, statistics, weighted calculations) using openpyxl. Use when a task requires filling highlighted or empty cells with dynamic formulas that reference other sheets, preserving existing structure and formatting.
++---
++
++# Excel Formula Population
++
++## Workflow
++1. **Inspect Structure**: Load workbook with `openpyxl`. Map sheet names, dimensions, headers, existing formulas, and target ranges. Identify row/column keys for lookups.
++2. **Identify Dependencies**: Check if source data sheets have required headers. If missing (e.g., year headers for `MATCH`), inject them programmatically before writing formulas.
++3. **Construct Formulas**:
++   - Use absolute references (`$A$1`) for fixed ranges and keys.
++   - Use relative references for row/column iteration.
++   - Prefer `INDEX/MATCH` over `VLOOKUP` for cross-sheet, multi-dimensional lookups.
++   - Use `SUMPRODUCT` for weighted calculations.
++4. **Write & Save**: Assign formulas to target cells. Save to the specified output path. Do not overwrite existing formulas unless explicitly required.
++5. **Verify**:
++   - Reload the saved workbook.
++   - Extract all formula strings from target cells.
++   - Cross-check a sample against raw data values to ensure correct references.
++   - Count total formulas to match task expectations.
++
++## Key Formula Patterns
++- **2D Lookup**: `=INDEX(Data!$H$21:$L$38, MATCH(Task!D12, Data!$D$21:$D$38, 0), MATCH(Task!H$10, Data!$H$20:$L$20, 0))`
++- **Derived Metric**: `=(H12-H19)/H26*100`
++- **Statistics**: `MIN`, `MAX`, `MEDIAN`, `AVERAGE`, `PERCENTILE(range, k)`
++- **Weighted Mean**: `=SUMPRODUCT(H$35:H$40, H$26:H$31) / SUM(H$26:H$31)`
++
++## Anti-Patterns & Troubleshooting
++- **Missing Headers**: `MATCH` fails if lookup headers are absent. Always verify and inject missing headers into the source sheet before writing formulas.
++- **Reference Drift**: Ensure `$` locks are applied correctly. Test one formula manually before bulk-writing.
++- **Formatting Loss**: `openpyxl` preserves formatting by default, but avoid recreating the workbook from scratch. Load, modify, and save.
++- **Strict Verifiers**: Some tests compare formula strings exactly. Avoid extra spaces, use US locale commas, and verify exact string matches if the verifier fails despite correct logic.
++- **Pre-existing Formulas**: Count and preserve them. Do not overwrite cells in legacy columns unless instructed.
++
++See `references/formula-patterns.md` for detailed syntax and variant examples.
+--- /dev/null
++++ b/excel-formula-population/references/formula-patterns.md
+@@ -0,0 +1,31 @@
++# Excel Formula Patterns
++
++## INDEX/MATCH Cross-Sheet Lookup
++Use when mapping a 2D grid (rows keyed by one column, columns keyed by a header row).
++```excel
++=INDEX(SourceSheet!$DataRange, MATCH(RowKeyCell, SourceSheet!$RowKeyRange, 0), MATCH(ColKeyCell, SourceSheet!$ColKeyRange, 0))
++```
++- Lock the data range and key ranges with `$`.
++- Leave the key cells relative so they adjust when copied.
++
++## Weighted Mean
++```excel
++=SUMPRODUCT(ValueRange, WeightRange) / SUM(WeightRange)
++```
++- Lock ranges with `$` if applying across multiple columns.
++
++## Percentile & Statistics
++- `PERCENTILE(range, 0.25)` for Q1, `0.75` for Q3.
++- `MEDIAN(range)`, `AVERAGE(range)`, `MIN(range)`, `MAX(range)`.
++
++## openpyxl Implementation Tips
++```python
++import openpyxl
++wb = openpyxl.load_workbook('input.xlsx')
++ws = wb['Task']
++ws['H12'] = '=INDEX(Data!$H$21:$L$38, MATCH(Task!D12, Data!$D$21:$D$38, 0), MATCH(Task!H$10, Data!$H$20:$L$20, 0))'
++wb.save('output.xlsx')
++```
++- Always use `data_only=False` (default) when writing formulas.
++- Verify with `data_only=True` only after Excel has calculated the file, or use manual value checks.
++- `openpyxl` expects US locale syntax (commas for argument separators, periods for decimals).

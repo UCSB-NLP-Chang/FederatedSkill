@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Created inventory-load-planning skill from u1's validated patch, enhanced with u2's parsing guidance, added formulas.md reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md",
+    "inventory-load-planning/scripts/load_plan_calculator.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-load-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "inventory-load-planning/references/formulas.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "inventory-load-planning/scripts/load_plan_calculator.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/scripts/load_plan_calculator.py"
+  ],
+  "cost_usd": 0.564572
+}

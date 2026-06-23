@@ -1,0 +1,29 @@
+{
+    "id": "80b01949-6802-4d20-adf3-e4f04e3ba9ff",
+    "started_at": "2026-05-18T03:14:34.429320",
+    "finished_at": "2026-05-18T03:27:17.095318",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__PPT-Formatting-Optimization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "transit-platform-caption-cleanup__ggjhggM"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged three worker patches to generalize the production-planning skill for multi-product scenarios, strengthen warnings against date formulas and pandas for formula-heavy files, add regional holiday handling, consolidate verifier cross-checking guidance, and unify scenario templates with merged header patterns and on-time status calculations.",
+  "upsert_paths": [
+    "production-planning/SKILL.md",
+    "production-planning/references/scenario_templates.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-planning/references/scenario_templates.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      0.6
+    ],
+    "production-planning/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      0.6
+    ]
+  },
+  "conflicts": [
+    "production-planning/SKILL.md",
+    "production-planning/references/scenario_templates.md",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

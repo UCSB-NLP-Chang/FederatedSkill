@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "R5 merge complete for u2. Integrated u0's R5 refinements (revision dedup, template handling, out-of-horizon earlier delivery) into u2's kimi-cli-friendly style (preserved shell heredoc, numbered steps). See DECISIONS.md for detailed merge rationale.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-load-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "inventory-load-planning/references/formulas.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.7850190000000001
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task was a successful application of the existing excel-capacity-planning skill. Minor enhancements: add HVAC capacity variant to the rules table, add OT formula pattern, and strengthen verification guidance with concrete patterns from the trace.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": []
+}

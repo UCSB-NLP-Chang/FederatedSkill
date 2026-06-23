@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Extended infusion-batch-analysis to cover B4 (cooler dispatch) as a variant via reference file. Rejected u0's failed onco-cooler-dispatch-analysis skill (reward=0.4). Library remains at 2 skills, aligned with peers. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/references/cooler-dispatch-invariants.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "infusion-batch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "infusion-batch-analysis/references/cooler-dispatch-invariants.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:infusion-batch-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 4.166334
+}

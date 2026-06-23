@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.3333333333333333,
+  "summary": "Strengthened statistical-process-analysis skill to explicitly prevent custom script generation, which caused verifier failure due to exact schema mismatches (e.g., date_range vs primary_date_range, points array vs int, p_value=0.0). Added trace-derived mismatch table to schema reference and prominent enforcement block to SKILL.md.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/schema.md"
+  ],
+  "delete_paths": []
+}

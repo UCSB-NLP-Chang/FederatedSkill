@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "The agent failed the cardiovascular panel task due to several critical issues: (1) using incorrect BNP conversion factor (0.289 instead of correct ~0.143 for pmol/L\u2192pg/mL), (2) applying an NT-proBNP conversion that should not have been applied (values were already in pg/mL), (3) failing to detect that Troponin I value 16392 was clearly already in ng/mL (not \u03bcg/L), (4) incorrect Magnesium conversion logic, and (5) the verifier expects full precision but the agent rounded to 2 decimals. The existing clinical-lab-harmonization skill focuses on metabolic/thyroid panels and lacks cardiology biomarker expertise. This update adds cardiology panel coverage to the existing skill with correct conversion factors, proper SI/US thresholds, and emphasizes the NO ROUNDING rule which the agent violated.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/cardiovascular-factors.md"
+  ],
+  "delete_paths": []
+}

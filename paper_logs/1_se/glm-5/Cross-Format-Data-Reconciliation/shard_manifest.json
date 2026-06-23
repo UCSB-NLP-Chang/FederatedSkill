@@ -1,0 +1,28 @@
+{
+  "run_id": "fed-permerge-self-glm-pdf5-M1-tokenplan-hetero",
+  "family_name": "Cross-Format-Data-Reconciliation",
+  "n_workers": 1,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "RewardWeightedFileMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "01-cloud-service-portfolio-diff",
+      "02-hospital-capacity-portfolio-diff",
+      "03-retail-supply-category-diff",
+      "04-university-program-funding-diff",
+      "05-datacenter-hardware-registry-diff",
+      "06-hospital-medication-reconciliation",
+      "07-shipping-container-manifest-diff",
+      "08-university-course-catalog-diff"
+    ]
+  }
+}

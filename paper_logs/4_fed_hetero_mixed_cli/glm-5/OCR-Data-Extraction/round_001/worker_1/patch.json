@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds duplicate detection and reference file validation patterns to the existing OCR extraction skill, plus order/invoice ID regex patterns. These patterns emerged from an e-commerce order extraction task where duplicate orders needed null fields and order IDs needed validation against a known list.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/regex_patterns.md",
+    "ocr-data-extraction/scripts/extract_to_excel.py"
+  ],
+  "delete_paths": []
+}

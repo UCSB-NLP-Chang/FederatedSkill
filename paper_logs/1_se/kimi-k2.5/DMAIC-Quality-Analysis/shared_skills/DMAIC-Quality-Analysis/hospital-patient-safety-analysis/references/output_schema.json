@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Patient Safety Analysis Output",
+  "description": "Schema for hospital patient safety analysis",
+  "type": "object",
+  "required": [
+    "wait_times",
+    "medication_errors",
+    "readmission_rates",
+    "variability_ranking",
+    "highest_variability_process",
+    "highest_risk_statement",
+    "extended_analysis",
+    "monitoring_plan"
+  ],
+  "properties": {
+    "wait_times": {
+      "type": "object",
+      "required": ["mean", "sample_std", "cv", "trend_slope", "t_statistic", "stability"],
+      "properties": {
+        "mean": { "type": "number" },
+        "sample_std": { "type": "number", "minimum": 0 },
+        "cv": { "type": "number", "minimum": 0 },
+        "trend_slope": { "type": "number" },
+        "t_statistic": { "type": "number" },
+        "stability": { "type": "string", "enum": ["Stable", "Unstable"] }
+      }
+    },
+    "medication_errors": {
+      "type": "object",
+      "required": [
+        "total_prescriptions", "total_errors", "overall_rate_percent",
+        "wilson_95_ci_lower", "wilson_95_ci_upper",
+        "proportions_mean", "proportions_cv",
+        "trend_slope", "t_statistic", "stability",
+        "uses_varying_denominators", "target_rate_pct", "capability_vs_target"
+      ],
+      "properties": {
+        "total_prescriptions": { "type": "integer", "minimum": 0 },
+        "total_errors": { "type": "integer", "minimum": 0 },
+        "overall_rate_percent": { "type": "number", "minimum": 0 },
+        "wilson_95_ci_lower": { "type": "number", "minimum": 0 },
+        "wilson_95_ci_upper": { "type": "number", "minimum": 0 },
+        "proportions_mean": { "type": "number" },
+        "proportions_cv": { "type": "number", "minimum": 0 },
+        "trend_slope": { "type": "number" },
+        "t_statistic": { "type": "number" },
+        "stability": { "type": "string", "enum": ["Stable", "Unstable"] },
+        "uses_varying_denominators": { "type": "boolean" },
+        "target_rate_pct": { "type": "number" },
+        "capability_vs_target": { "type": "string", "enum": ["Capable", "Not Capable"] }
+      }
+    },
+    "readmission_rates": {
+      "type": "object",
+      "required": ["mean", "sample_std", "cv", "trend_slope", "t_statistic", "stability"],
+      "properties": {
+        "mean": { "type": "number" },
+        "sample_std": { "type": "number", "minimum": 0 },
+        "cv": { "type": "number", "minimum": 0 },
+        "trend_slope": { "type": "number" },
+        "t_statistic": { "type": "number" },
+        "stability": { "type": "string", "enum": ["Stable", "Unstable"] }
+      }
+    },
+    "variability_ranking": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["process", "cv"],
+        "properties": {
+          "process": { "type": "string" },
+          "cv": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+    "highest_variability_process": { "type": "string" },
+    "highest_risk_statement": { "type": "string" },
+    "extended_analysis": {
+      "type": "object",
+      "required": ["summary", "key_findings"],
+      "properties": {
+        "summary": { "type": "string" },
+        "key_findings": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "monitoring_plan": {
+      "type": "object",
+      "required": [
+        "process_to_be_monitored", "inputs", "outputs",
+        "key_performance_indicators", "frequency_of_monitoring",
+        "observation_format", "roles", "reporting_format",
+        "corrective_action_process", "benchmarks",
+        "prioritized_actions", "checklist"
+      ],
+      "properties": {
+        "process_to_be_monitored": { "type": "string" },
+        "inputs": { "type": "array", "items": { "type": "string" } },
+        "outputs": { "type": "array", "items": { "type": "string" } },
+        "key_performance_indicators": { "type": "array", "items": { "type": "string" } },
+        "frequency_of_monitoring": { "type": "string" },
+        "observation_format": { "type": "string" },
+        "roles": { "type": "object" },
+        "reporting_format": { "type": "string" },
+        "corrective_action_process": { "type": "string" },
+        "benchmarks": { "type": "array", "items": { "type": "string" } },
+        "prioritized_actions": { "type": "array", "items": { "type": "string" } },
+        "checklist": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

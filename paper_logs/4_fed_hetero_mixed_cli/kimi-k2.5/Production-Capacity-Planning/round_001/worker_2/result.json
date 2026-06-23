@@ -1,0 +1,29 @@
+{
+    "id": "fe2c8501-1d0d-4853-a33c-fd14bd00c52a",
+    "started_at": "2026-05-18T03:35:30.304095",
+    "finished_at": "2026-05-18T03:39:05.332032",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Production-Capacity-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_gdpval_36__59edAAy"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Round 2. Applied target's verified patch wholesale (reward=1.0) adding crosswalk/indirection handling. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/violation-types.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "document-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "document-reconciliation/references/violation-types.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.30290100000000003
+}

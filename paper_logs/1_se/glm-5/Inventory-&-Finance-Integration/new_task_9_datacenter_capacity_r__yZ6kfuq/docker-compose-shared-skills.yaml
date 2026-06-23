@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Inventory-&-Finance-Integration/shared_skills/Inventory-&-Finance-Integration:/root/.config/agent/skills

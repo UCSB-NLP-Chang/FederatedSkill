@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "R4 merge complete for u2. Applied target's own verified patches wholesale (reward=1.0): SKILL.md with Detect Format workflow step, comprehensive status_flag variants, Combine Historical+Update step; reference file refactored for concise wide-format coverage. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-correlation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "economic-time-series-correlation/references/excel-year-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md"
+  ],
+  "cost_usd": 0.773232
+}

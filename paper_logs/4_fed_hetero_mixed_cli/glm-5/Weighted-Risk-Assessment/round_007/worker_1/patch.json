@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The agent failed because it did not run the skill's mandatory scripts (find_tests.py, verify_before_submit.py) and claimed success without finding or running tests. The test file test_output.py existed but wasn't found because the agent used manual grep/find commands instead of the skill's comprehensive discovery script. This patch strengthens the mandatory nature of running the scripts, adds a prominent checklist, and documents this specific failure pattern.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/finding-tests.md"
+  ],
+  "delete_paths": []
+}

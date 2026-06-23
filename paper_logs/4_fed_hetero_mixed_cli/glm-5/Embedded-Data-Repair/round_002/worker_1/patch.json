@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds conversion matrix pattern to known invariants and clarifies the anti-pattern about correction value sources. The trace shows successful execution following the existing workflow, with the new pattern of identifying cells by row/column labels in a conversion matrix structure.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": []
+}

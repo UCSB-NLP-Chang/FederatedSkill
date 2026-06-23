@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adding three new Korean data transformation patterns (digit extraction, satisfaction score reformatting, text appending) to the existing reference document. These patterns were used successfully in the task and are reusable for similar Korean document processing workflows.",
+  "upsert_paths": [
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "delete_paths": []
+}

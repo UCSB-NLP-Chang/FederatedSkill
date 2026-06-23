@@ -1,0 +1,29 @@
+{
+    "id": "81b7383d-7adc-4639-a862-80fc6c03b417",
+    "started_at": "2026-05-18T01:42:31.080726",
+    "finished_at": "2026-05-18T01:47:19.132402",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "task_family_utility_bills_templa__DZBzkLj"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R5. Applied u0's shorter SKILL.md (169 lines) to address max_tokens truncation. Added constraint-patterns.md reference for shift-day/date-cutoff patterns. Merged validate_workbook.py (u0's new functions + baseline CLI). Rejected u1's new skill to maintain umbrella architecture. See DECISIONS.md.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md",
+    "production-capacity-planning/scripts/validate_workbook.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ],
+    "production-capacity-planning/references/constraint-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ],
+    "production-capacity-planning/scripts/validate_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.7667142
+}

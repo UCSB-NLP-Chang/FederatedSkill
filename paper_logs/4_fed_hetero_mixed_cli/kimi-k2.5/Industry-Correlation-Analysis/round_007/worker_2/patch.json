@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Added the 'selector file' pattern for merging multi-source current-year updates. When current-year data comes in separate files (e.g., updates_a.csv, updates_b.csv) with a selector specifying which source/version to use per period, the skill now documents how to merge based on selector preferences rather than averaging all sources blindly. Also added validation for handling missing/blank values in partial-year data.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/series-catalog-pattern.md"
+  ],
+  "delete_paths": []
+}

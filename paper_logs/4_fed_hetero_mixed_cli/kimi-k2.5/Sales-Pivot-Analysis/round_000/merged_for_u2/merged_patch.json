@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Synthesized consolidated umbrella skill `sales-pivot-report` from all three R0 patches (u0: MultiIndex fix, u1: test-suite requirement + helper script, u2: PivotChart/whitespace anti-patterns). All patches had reward=0.0; no validated version exists. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md",
+    "sales-pivot-report/references/common-issues.md",
+    "sales-pivot-report/scripts/build_pivot_report.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-report/references/common-issues.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sales-pivot-report/scripts/build_pivot_report.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.2073130000000005
+}

@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778811205.6108496,
+            "stop": 1778811205.7843003
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_node_checks",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.1546722836792469,
+                "start": 1778811205.6166143,
+                "stop": 1778811205.7841825,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_node_checks() -> None:\n        local_script = Path(__file__).with_name(\"test_outputs.js\")\n        harness_script = Path(\"/tests/test_outputs.js\")\n        script = harness_script if harness_script.exists() else local_script\n    \n        env = os.environ.copy()\n        if not env.get(\"NODE_PATH\"):\n            local_node_modules = script.parents[1] / \"node_modules\"\n            if local_node_modules.exists():\n                env[\"NODE_PATH\"] = str(local_node_modules)\n    \n        result = subprocess.run(\n            [\"node\", str(script)],\n            capture_output=True,\n            text=True,\n            check=False,\n            env=env,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: PASS: Output workbook exists\nE           PASS: Sheet names and order are correct\nE           \nE           FAIL: Film Rights #2710!A1 must be Aurora Stream\n\n/tests/test_output.py:27: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

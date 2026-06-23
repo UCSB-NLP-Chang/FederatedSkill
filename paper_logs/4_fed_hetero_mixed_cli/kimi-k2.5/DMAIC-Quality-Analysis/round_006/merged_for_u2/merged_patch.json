@@ -1,0 +1,47 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Added devops-pipeline-analysis skill (B3), fixed healthcare-quality-analysis stability threshold. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "devops-pipeline-analysis/SKILL.md",
+    "devops-pipeline-analysis/assets/brief_template.md",
+    "devops-pipeline-analysis/references/output_schema.md",
+    "devops-pipeline-analysis/scripts/compute_pipeline_metrics.py",
+    "healthcare-quality-analysis/SKILL.md",
+    "healthcare-quality-analysis/scripts/compute_healthcare_metrics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "devops-pipeline-analysis/scripts/compute_pipeline_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ],
+    "devops-pipeline-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ],
+    "healthcare-quality-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "devops-pipeline-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ],
+    "devops-pipeline-analysis/assets/brief_template.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.125
+    ],
+    "healthcare-quality-analysis/scripts/compute_healthcare_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 6.521445000000001
+}

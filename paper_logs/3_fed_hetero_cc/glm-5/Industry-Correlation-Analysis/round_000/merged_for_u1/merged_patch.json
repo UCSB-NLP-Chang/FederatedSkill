@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "DONE. Library has 1 skill: economic-time-series-analysis (applied u1's validated patch, renamed for broader scope). See DECISIONS.md for merge reasoning.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.45413799999999993
+}

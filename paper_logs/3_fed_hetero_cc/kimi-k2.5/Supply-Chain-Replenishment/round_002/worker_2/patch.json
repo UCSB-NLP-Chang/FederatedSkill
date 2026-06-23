@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The agent successfully completed a supply chain planning task involving Excel workbook analysis and transformation. The core reusable capability is supply/demand gap analysis with date-aware booking filtering and pallet-level planning calculations. No major failures occurred, but the trace reveals important patterns for handling dirty data (null SKUs, invalid dates, tentative/hold states), calculating Days On Hand, projecting out-of-stock dates, and generating action lists for procurement.",
+  "upsert_paths": [
+    "supply-demand-gap-analysis/SKILL.md",
+    "supply-demand-gap-analysis/references/calculation-formulas.md"
+  ],
+  "delete_paths": []
+}

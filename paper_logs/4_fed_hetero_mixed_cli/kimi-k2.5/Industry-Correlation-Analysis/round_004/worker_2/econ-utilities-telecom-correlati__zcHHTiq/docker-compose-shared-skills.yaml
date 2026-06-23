@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis:/root/.config/agent/skills

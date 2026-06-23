@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "R6 merge complete for u2 (kimi-k2.5). Synthesized mandatory checkpoint code blocks from task_memory guidance; used u2's concise structure as base; integrated Summary cross-sheet validation from u0/u1; fixed legacy API `.add()` vs `.append()`. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.7777777777777778
+    ]
+  },
+  "conflicts": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "cost_usd": 3.400221
+}

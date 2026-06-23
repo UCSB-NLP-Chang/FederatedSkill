@@ -1,0 +1,238 @@
+{
+  "family_name": "SEC-13F-Financial-Analysis",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 7873.771467924118,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.375,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 9
+  },
+  "merger_cost_total_usd": 14.7687075,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "fund-snapshot-canonical"
+        ],
+        [
+          "u1",
+          "fund-snapshot-canonical"
+        ],
+        [
+          "u2",
+          "fund-snapshot-canonical"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 9,
+      "merger_cost_usd": 1.1484872999999998,
+      "elapsed_sec": 829.9028215408325
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "fund-class-breakdown"
+        ],
+        [
+          "u1",
+          "fund-class-breakdown"
+        ],
+        [
+          "u2",
+          "fund-class-breakdown"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 10,
+      "merger_cost_usd": 1.8249902999999998,
+      "elapsed_sec": 874.7401697635651
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "fund-shift-screen"
+        ],
+        [
+          "u1",
+          "fund-shift-screen"
+        ],
+        [
+          "u2",
+          "fund-shift-screen"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 1.6084695,
+      "elapsed_sec": 1020.1869130134583
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "issuer-ownership-rollup"
+        ],
+        [
+          "u1",
+          "issuer-ownership-rollup"
+        ],
+        [
+          "u2",
+          "issuer-ownership-rollup"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 5,
+      "merger_cost_usd": 1.4749833,
+      "elapsed_sec": 784.8552267551422
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "manager-pair-issuer-grid"
+        ],
+        [
+          "u1",
+          "manager-pair-issuer-grid"
+        ],
+        [
+          "u2",
+          "manager-pair-issuer-grid"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 2.1149583,
+      "elapsed_sec": 884.9130702018738
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "cross-quarter-reconciliation"
+        ],
+        [
+          "u1",
+          "cross-quarter-reconciliation"
+        ],
+        [
+          "u2",
+          "cross-quarter-reconciliation"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 1.9060056000000003,
+      "elapsed_sec": 1405.2041056156158
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "deduped-alert-pack"
+        ],
+        [
+          "u1",
+          "deduped-alert-pack"
+        ],
+        [
+          "u2",
+          "deduped-alert-pack"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 8,
+      "merger_cost_usd": 2.211681,
+      "elapsed_sec": 961.6872861385345
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "existing-brief-refresh"
+        ],
+        [
+          "u1",
+          "existing-brief-refresh"
+        ],
+        [
+          "u2",
+          "existing-brief-refresh"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 2.4791322,
+      "elapsed_sec": 1112.2066643238068
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-cc-rest10-rerun-glm-M3-hetero/SEC-13F-Financial-Analysis/worker_skills/u0/SEC-13F-Financial-Analysis",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-cc-rest10-rerun-glm-M3-hetero/SEC-13F-Financial-Analysis/worker_skills/u1/SEC-13F-Financial-Analysis",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-cc-rest10-rerun-glm-M3-hetero/SEC-13F-Financial-Analysis/worker_skills/u2/SEC-13F-Financial-Analysis"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete \u2014 extended expense-claims-validation/SKILL.md with B4 patterns (out-of-scope filtering, null override handling, pdftotext fallback) while preserving kimi-optimized comprehensive structure. See DECISIONS.md for reasoning.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.964861
+}

@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778732128.2864604,
+            "stop": 1778732128.5772326
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.2685848493129015,
+                "start": 1778732128.295671,
+                "stop": 1778732128.5771215,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ...F.....                                                                [100%]\nE           =================================== FAILURES ===================================\nE           ____________________ test_cleaned_captions_are_repositioned ____________________\nE           \nE               def test_cleaned_captions_are_repositioned() -> None:\nE                   with zipfile.ZipFile(OUTPUT_PPTX, \"r\") as zipf:\nE                       slide_names = iter_slide_names(zipf)\nE                       slide_width, slide_height = get_slide_dimensions(zipf)\nE                       for slide_cfg in CONFIG[\"slides\"]:\nE                           slide = load_slide(zipf, slide_names, slide_cfg[\"slide_number\"])\nE                           paragraph = find_paragraphs(slide, slide_cfg[\"caption_clean\"])[0]\nE           >               assert_caption_position(slide, paragraph, slide_width, slide_height)\nE           \nE           /tests/test_outputs.py:171: \nE           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nE           \nE           slide = <Element '{http://schemas.openxmlformats.org/presentationml/2006/main}sld' at 0x7f9707def100>\nE           paragraph = <Element '{http://schemas.openxmlformats.org/drawingml/2006/main}p' at 0x7f9708090860>\nE           slide_width = 12192000, slide_height = 6858000\nE           \nE               def assert_caption_position(slide: ET.Element, paragraph: ET.Element, slide_width: int, slide_height: int) -> None:\nE                   shape = find_parent_shape(paragraph, build_parent_map(slide))\nE                   assert shape is not None, \"Caption shape is missing\"\nE                   xfrm = shape.find(\"p:spPr/a:xfrm\", NS)\nE                   assert xfrm is not None, \"Caption transform is missing\"\nE                   off = xfrm.find(\"a:off\", NS)\nE                   ext = xfrm.find(\"a:ext\", NS)\nE                   assert off is not None and ext is not None, \"Caption shape offset/extent is missing\"\nE                   shape_x = int(off.get(\"x\"))\nE                   shape_y = int(off.get(\"y\"))\nE                   shape_w = int(ext.get(\"cx\"))\nE                   shape_h = int(ext.get(\"cy\"))\nE           >       assert shape_w >= int(slide_width * 0.9), \"Caption box should be widened for a single-line label\"\nE           E       AssertionError: Caption box should be widened for a single-line label\nE           E       assert 3683000 >= 10972800\nE           E        +  where 10972800 = int((12192000 * 0.9))\nE           \nE           /tests/test_outputs.py:112: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_cleaned_captions_are_repositioned - Ass...\nE           1 failed, 8 passed in 0.10s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

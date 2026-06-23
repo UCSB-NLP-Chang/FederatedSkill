@@ -1,0 +1,265 @@
+{
+  "family_name": "Medical-Data-Standardization",
+  "n_workers": 3,
+  "n_rounds": 9,
+  "elapsed_sec": 13805.2932741642,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 27,
+    "mean": 0.14814814814814814,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 4
+  },
+  "merger_cost_total_usd": 73.547247,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "electrolyte-rounding-harmonization"
+        ],
+        [
+          "u1",
+          "electrolyte-rounding-harmonization"
+        ],
+        [
+          "u2",
+          "electrolyte-rounding-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 6.043173,
+      "elapsed_sec": 1173.5155313014984
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "hepatic-panel-harmonization"
+        ],
+        [
+          "u1",
+          "hepatic-panel-harmonization"
+        ],
+        [
+          "u2",
+          "hepatic-panel-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 10.898949000000002,
+      "elapsed_sec": 2275.1439554691315
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "thyroid-monitoring-harmonization"
+        ],
+        [
+          "u1",
+          "thyroid-monitoring-harmonization"
+        ],
+        [
+          "u2",
+          "thyroid-monitoring-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 12.601199999999999,
+      "elapsed_sec": 1815.4669706821442
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "cardio-panel-template-harmonization"
+        ],
+        [
+          "u1",
+          "cardio-panel-template-harmonization"
+        ],
+        [
+          "u2",
+          "cardio-panel-template-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 6.946655999999999,
+      "elapsed_sec": 1445.2551307678223
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "oncology-followup-dedup-harmonization"
+        ],
+        [
+          "u1",
+          "oncology-followup-dedup-harmonization"
+        ],
+        [
+          "u2",
+          "oncology-followup-dedup-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 5.317431,
+      "elapsed_sec": 1175.8635404109955
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "icu-metabolic-harmonization"
+        ],
+        [
+          "u1",
+          "icu-metabolic-harmonization"
+        ],
+        [
+          "u2",
+          "icu-metabolic-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 13.695702,
+      "elapsed_sec": 1958.8788723945618
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "respiratory-panel-json-harmonization"
+        ],
+        [
+          "u1",
+          "respiratory-panel-json-harmonization"
+        ],
+        [
+          "u2",
+          "respiratory-panel-json-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 5.726805000000001,
+      "elapsed_sec": 911.8517639636993
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "transplant-panel-alignment-harmonization"
+        ],
+        [
+          "u1",
+          "transplant-panel-alignment-harmonization"
+        ],
+        [
+          "u2",
+          "transplant-panel-alignment-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 5.216559,
+      "elapsed_sec": 1467.887123823166
+    },
+    {
+      "round_idx": 8,
+      "assignments": [
+        [
+          "u0",
+          "neonatal-sepsis-harmonization"
+        ],
+        [
+          "u1",
+          "neonatal-sepsis-harmonization"
+        ],
+        [
+          "u2",
+          "neonatal-sepsis-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 7.100772000000001,
+      "elapsed_sec": 1581.4286811351776
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/worker_skills/u0/Medical-Data-Standardization",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/worker_skills/u1/Medical-Data-Standardization",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/worker_skills/u2/Medical-Data-Standardization"
+  }
+}

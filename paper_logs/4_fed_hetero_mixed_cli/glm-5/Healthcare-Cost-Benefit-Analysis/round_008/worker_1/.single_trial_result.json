@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_diagpanel_14v28__kYGHHzQ",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/round_008/worker_1/harbor_diagpanel_14v28__kYGHHzQ",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/round_008/worker_1/harbor_diagpanel_14v28__kYGHHzQ",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

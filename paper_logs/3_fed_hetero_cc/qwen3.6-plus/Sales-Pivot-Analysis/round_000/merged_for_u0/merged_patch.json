@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "R0 merge complete for u0: created 1 umbrella skill `excel-data-integration-reporting` synthesized from u2 (base pipeline) + u0 (merge suffixes) + u1 (PDF type conversion), with Output precision and Known invariants sections added for qwen3.6-plus. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-data-integration-reporting/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-data-integration-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.1788272000000002
+}

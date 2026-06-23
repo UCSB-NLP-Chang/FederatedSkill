@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1/Supply-Chain-Replenishment:/root/.config/agent/skills

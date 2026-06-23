@@ -1,0 +1,38 @@
+{
+  "worker_id": "u0",
+  "summary": "R0 merge complete. Synthesized library from all three workers (all reward=0.0): used u1's SKILL.md as base (best structure + correct formula logic), added u0's verify_workbook.py utility, converged to peer-majority name `deferred-revenue-rollforward`. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/rollforward_anatomy.md",
+    "deferred-revenue-rollforward/scripts/build_rollforward.py",
+    "deferred-revenue-rollforward/scripts/verify_workbook.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "deferred-revenue-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "deferred-revenue-rollforward/scripts/build_rollforward.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "deferred-revenue-rollforward/references/rollforward_anatomy.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "deferred-revenue-rollforward/scripts/verify_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/scripts/build_rollforward.py"
+  ],
+  "cost_usd": 0.9686697
+}

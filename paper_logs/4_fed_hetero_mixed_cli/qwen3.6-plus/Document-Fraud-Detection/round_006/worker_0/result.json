@@ -1,0 +1,29 @@
+{
+    "id": "551758cb-76ae-4b8b-a9eb-9333b30dd299",
+    "started_at": "2026-05-17T21:48:34.884385",
+    "finished_at": "2026-05-17T21:52:59.064552",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "warehouse-coldchain-charge-revie__bbEsEsu"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

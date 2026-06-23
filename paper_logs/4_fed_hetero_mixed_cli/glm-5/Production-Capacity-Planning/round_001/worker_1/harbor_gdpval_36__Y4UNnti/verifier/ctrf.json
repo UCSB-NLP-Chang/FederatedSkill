@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779089965.3426387,
+            "stop": 1779089965.672668
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.3061624839901924,
+                "start": 1779089965.352573,
+                "stop": 1779089965.6725512,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: F.                                                                       [100%]\nE           =================================== FAILURES ===================================\nE           __________________________ test_plan_math_and_policy ___________________________\nE           \nE               def test_plan_math_and_policy():\nE                   ref_demands = load_reference_demands()\nE                   rows = load_plan_rows()\nE               \nE                   expected_weeks = list(range(WEEK_START, WEEK_END + 1))\nE                   actual_weeks = [r[0] for r in rows]\nE                   assert actual_weeks == expected_weeks, \"Weeks must be continuous from 4 to 52 with no gaps\"\nE               \nE                   calc_start = INITIAL_WEEK4_TOTAL - ref_demands[WEEK_START]\nE                   prev_end = None\nE                   for idx, (week, days, demand, capacity, start_past_due, end_backlog_buffer, overtime) in enumerate(rows):\nE                       assert days in {4, 5, 6}, f\"Week {week}: days must be one of 4/5/6\"\nE               \nE                       # Demand must match source data.\nE                       assert abs(demand - ref_demands[week]) <= 0.01, (\nE                           f\"Week {week}: demand {demand} does not match reference {ref_demands[week]}\"\nE                       )\nE               \nE                       # Week 4 initial condition.\nE                       if week == WEEK_START:\nE                           assert abs(start_past_due + demand - INITIAL_WEEK4_TOTAL) <= 0.01, (\nE                               \"Week 4 must satisfy Start of Week Past Due + Scheduled Demand = 438.81\"\nE                           )\nE               \nE                       # Carryover consistency.\nE                       if prev_end is not None:\nE                           assert abs(calc_start - prev_end) <= 0.01, f\"Week {week}: calc carryover mismatch\"\nE               \nE                       # Start of week past due should be max(0, signed start).\nE                       assert abs(start_past_due - max(0.0, calc_start)) <= 0.01, (\nE                           f\"Week {week}: Start of Week Past Due should equal max(0, prior end)\"\nE                       )\nE               \nE                       # Capacity and backlog equations.\nE                       assert abs(capacity - RATE_PER_DAY * days) <= 0.01, f\"Week {week}: capacity formula mismatch\"\nE                       expected_end = calc_start + demand - capacity\nE           >           assert abs(end_backlog_buffer - expected_end) <= 0.01, f\"Week {week}: end backlog formula mismatch\"\nE           E           AssertionError: Week 6: end backlog formula mismatch\nE           E           assert 0.010000000000047748 <= 0.01\nE           E            +  where 0.010000000000047748 = abs((202.2 - 202.21000000000004))\nE           \nE           /tests/test_outputs.py:137: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_plan_math_and_policy - AssertionError: ...\nE           1 failed, 1 passed in 0.12s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

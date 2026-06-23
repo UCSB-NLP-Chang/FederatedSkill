@@ -1,0 +1,29 @@
+{
+    "id": "ba378b5e-6e27-4283-9046-2ea5e3af7bf9",
+    "started_at": "2026-05-18T02:11:39.819107",
+    "finished_at": "2026-05-18T02:20:06.070318",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__PPT-Formatting-Optimization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "coastal-trail-caption-cleanup__HHJFvfE"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

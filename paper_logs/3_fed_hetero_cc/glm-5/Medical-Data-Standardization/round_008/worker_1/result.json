@@ -1,0 +1,29 @@
+{
+    "id": "44fd79ad-cb44-4404-9b48-c0a528f5eca4",
+    "started_at": "2026-05-17T23:21:56.614824",
+    "finished_at": "2026-05-17T23:38:14.219964",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "neonatal-sepsis-harmonization__4DrNwSa"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

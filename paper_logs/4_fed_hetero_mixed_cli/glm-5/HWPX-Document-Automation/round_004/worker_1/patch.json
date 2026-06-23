@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds common data transformation patterns and explicit linesegarray verification guidance to help future agents preprocess data correctly and catch malformed XML output early.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md"
+  ],
+  "delete_paths": []
+}

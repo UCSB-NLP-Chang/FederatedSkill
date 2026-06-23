@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's reward=1.0 patch wholesale to extend excel-inventory-coverage with B3 variant (multi-file handling, deduplication, composite key). Kept target's name despite peer-majority consensus due to consistent reward=1.0 evidence across R2-R4. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "excel-inventory-coverage/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-inventory-coverage/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.42752640000000003
+}

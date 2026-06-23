@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete \u2014 applied u2's reward=1.0 CSV handling patches (SKILL.md + horizontal-data-parsing.md). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/horizontal-data-parsing.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/references/horizontal-data-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/horizontal-data-parsing.md"
+  ],
+  "cost_usd": 1.2775290000000001
+}

@@ -1,0 +1,32 @@
+{
+  "worker_id": "u0",
+  "summary": "R6 merge complete for u0 (qwen3.6-plus). Applied u0's SKILL.md (concise style) and parsing_patterns.md (blank-line handling); absorbed u1's dedup_validation_patterns.md (normalize_id_for_dedup() for OCR artifacts). Rejected u1's verbose SKILL.md style; no u2 patches. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/dedup_validation_patterns.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/dedup_validation_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "ocr-data-extraction/references/parsing_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "ocr-data-extraction/SKILL.md",
+    "__task_update_failed__:RuntimeError:claude container timed out after 300s"
+  ],
+  "cost_usd": 3.1441590000000006
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8888888888888888,
+  "summary": "The agent manipulated PPTX files by directly editing XML inside the ZIP archive, but the verifier failed despite the agent claiming success. This skill captures the reusable patterns for PPTX manipulation via XML editing, including common pitfalls and verification steps that should have caught the failure.",
+  "upsert_paths": [
+    "pptx-xml-manipulation/SKILL.md",
+    "pptx-xml-manipulation/references/pptx-xml-structure.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8,
+  "summary": "The trace shows a critical failure mode: agent self-verification passed but actual tests failed. This is the 'verified wrong properties' anti-pattern already documented but not emphasized enough. Adding explicit guidance to read test files when available and map requirements to verifications systematically.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md"
+  ],
+  "delete_paths": []
+}

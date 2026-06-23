@@ -1,0 +1,103 @@
+{
+  "id": "cb75a4cf-ae50-4627-ba85-783e02a68746",
+  "task_name": "coastal-trail-caption-cleanup",
+  "trial_name": "coastal-trail-caption-cleanup__yhuHwNA",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization/coastal-trail-caption-cleanup__yhuHwNA",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/PPT-Formatting-Optimization/coastal-trail-caption-cleanup"
+  },
+  "source": "PPT-Formatting-Optimization",
+  "task_checksum": "673f4210b709b806f3da74bbb29f857b55ddfd571091948ca1675d8a057ce69a",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/PPT-Formatting-Optimization/coastal-trail-caption-cleanup",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "PPT-Formatting-Optimization"
+    },
+    "trial_name": "coastal-trail-caption-cleanup__yhuHwNA",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__PPT-Formatting-Optimization",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "dc5b3e33-4bbf-4a28-b323-7b6651d851ae"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 416014,
+    "n_cache_tokens": 674100,
+    "n_output_tokens": 19978,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-11T03:57:29.213840Z",
+  "finished_at": "2026-05-11T04:04:00.767262Z",
+  "environment_setup": {
+    "started_at": "2026-05-11T03:57:29.217246Z",
+    "finished_at": "2026-05-11T03:57:30.100026Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-11T03:57:30.100039Z",
+    "finished_at": "2026-05-11T03:57:30.352528Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-11T03:57:30.352601Z",
+    "finished_at": "2026-05-11T04:03:49.583394Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-11T04:03:49.584007Z",
+    "finished_at": "2026-05-11T04:03:50.264048Z"
+  }
+}

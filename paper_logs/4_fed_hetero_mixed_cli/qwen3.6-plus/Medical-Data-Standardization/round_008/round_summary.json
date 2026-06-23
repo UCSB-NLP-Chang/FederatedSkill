@@ -1,0 +1,30 @@
+{
+  "round_idx": 8,
+  "assignments": [
+    [
+      "u0",
+      "neonatal-sepsis-harmonization"
+    ],
+    [
+      "u1",
+      "neonatal-sepsis-harmonization"
+    ],
+    [
+      "u2",
+      "neonatal-sepsis-harmonization"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 0.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1581.4286811351776
+}

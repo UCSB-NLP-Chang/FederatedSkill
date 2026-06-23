@@ -1,0 +1,29 @@
+{
+    "id": "caea3d31-1435-4569-a28f-cfec188647e7",
+    "started_at": "2026-05-18T01:15:29.234117",
+    "finished_at": "2026-05-18T01:17:22.964916",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Operational-Recovery-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "new_task_1_soc_alert_recovery__8quxd5s"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

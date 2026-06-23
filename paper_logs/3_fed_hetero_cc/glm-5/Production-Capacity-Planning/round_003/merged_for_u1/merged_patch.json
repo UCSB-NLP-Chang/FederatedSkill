@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R3. Synthesized u0+u2 SKILL.md (summary constraint + environment/capacity/backlog patterns) + applied u1's script portability fixes (openpyxl). Library stable at 1 umbrella skill. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py",
+    "excel-capacity-planning/scripts/verify_plan.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/scripts/verify_plan.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "excel-capacity-planning/scripts/capacity_planner_template.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 0.4417152
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.6,
+  "summary": "The trace shows a new diagnostic panel batch analysis task (harbor_diagpanel_14v28) that follows the same pattern as existing infusion-batch-analysis and reagent-kit-analysis skills but with distinct characteristics: panel entities, effective_week billing selection, network_tier adjustments, holdouts JSON filtering, and shipper_class costs. Creating a new skill captures these reusable patterns for future similar tasks.",
+  "upsert_paths": [
+    "diagpanel-batch-analysis/SKILL.md",
+    "diagpanel-batch-analysis/references/invariants.md"
+  ],
+  "delete_paths": []
+}

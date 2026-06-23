@@ -1,0 +1,29 @@
+{
+    "id": "65e47a62-3791-4cee-bb9d-abcb899f2171",
+    "started_at": "2026-05-18T06:37:45.353908",
+    "finished_at": "2026-05-18T06:42:47.617960",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Sales-Pivot-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "quality-control-pivot__eLRrbvo"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

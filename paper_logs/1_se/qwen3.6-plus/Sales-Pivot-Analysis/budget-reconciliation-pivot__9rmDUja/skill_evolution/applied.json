@@ -1,0 +1,8 @@
+{
+  "deleted": [],
+  "upserted": [
+    "excel-pivot-report/SKILL.md",
+    "excel-pivot-report/scripts/openpyxl_pivot_builder.py"
+  ],
+  "errors": []
+}

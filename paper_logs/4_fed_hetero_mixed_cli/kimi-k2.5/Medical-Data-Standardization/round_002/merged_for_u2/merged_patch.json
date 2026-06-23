@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged u2's thyroid panel patch with Free_T3 factor fix from u0. Added Phosphorus, PTH, Vitamin_D_25OH chemistry analytes. Kept u2's unique quoted comma-decimal handling for kimi-cli. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8076923076923077
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "cost_usd": 4.118718
+}

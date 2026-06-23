@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "R4 merge complete. Applied u0's validated SKILL.md (PDF row validation, openpyxl clarification) and u1's domain_mapping.md (hardware/servers terminology). Rejected u2's verbose SKILL.md expansion (reward=0.5, doesn't transfer to qwen-code). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "cost_usd": 3.6191280000000003
+}

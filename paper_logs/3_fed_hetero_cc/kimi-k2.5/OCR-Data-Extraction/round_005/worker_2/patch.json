@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "The task was construction measurement form extraction from images - a specific variant of tabular OCR data extraction with structured output to multi-sheet Excel. The agent succeeded in extraction but failed the verifier (test_output.py::test_legacy_pytest_suite). Key lessons: 1) Multi-item per image extraction requires line-by-line parsing with item-type prioritization, 2) Quantity vs price disambiguation needs careful handling (e.g., 'C30' vs '50' quantities), 3) Multi-sheet Excel output with both detail and summary views is a common pattern for measurement/billing tasks, 4) Summary sheets need aggregation logic (latest date per project, total amounts). The existing image-data-extraction skill covers similar ground but this task reveals gaps in handling: structured forms with repeating line items, quantity/price disambiguation, and multi-sheet output with aggregation. Adding a construction-specific reference document and updating the main skill to cover tabular form patterns.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/tabular-form-patterns.md"
+  ],
+  "delete_paths": []
+}

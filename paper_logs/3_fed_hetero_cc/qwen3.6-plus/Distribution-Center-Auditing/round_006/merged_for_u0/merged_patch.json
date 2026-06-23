@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's reward=1.0 patch adding B7 invariant and timestamp anti-pattern. See DECISIONS.md.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "spreadsheet-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.17218139999999998
+}

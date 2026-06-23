@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Add ship block capacity variant (28 hrs/day) to the existing excel-capacity-planning skill. The task succeeded using existing patterns, but the 28 hrs/day rate with OT=10*(days-4) is a new variant worth documenting for future ship block planning tasks.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

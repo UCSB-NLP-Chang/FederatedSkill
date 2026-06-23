@@ -1,0 +1,29 @@
+{
+    "id": "d52c19dd-ba45-444c-97ac-b9a688aefd9d",
+    "started_at": "2026-05-18T03:09:27.343710",
+    "finished_at": "2026-05-18T03:11:38.322581",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Production-Capacity-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_gdpval_36_task1__mTgdiZS"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

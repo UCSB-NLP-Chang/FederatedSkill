@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Enhanced existing image-data-extraction skill with utility bill handling patterns, multi-line OCR keyword handling, and updated amount extraction priority. The trace showed OCR splitting keywords across lines (e.g., 'TOTAL\\nDUE') which broke initial extraction, requiring a fix to normalize whitespace before pattern matching.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/invoice-patterns.md"
+  ],
+  "delete_paths": []
+}

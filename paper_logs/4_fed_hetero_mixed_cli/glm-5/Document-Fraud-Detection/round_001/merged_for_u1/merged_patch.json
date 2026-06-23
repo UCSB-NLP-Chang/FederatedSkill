@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's validated patch wholesale, added required Output precision and Known invariants sections, absorbed u2's domain-examples.md as orthogonal reference. Kept target's umbrella naming (cross-document-validation) over peers' narrower name. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md",
+    "cross-document-validation/references/domain-examples.md",
+    "cross-document-validation/references/fuzzy-matching-guide.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-document-validation/references/fuzzy-matching-guide.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cross-document-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cross-document-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "expense-claims-validation/SKILL.md"
+  ],
+  "cost_usd": 2.669004
+}

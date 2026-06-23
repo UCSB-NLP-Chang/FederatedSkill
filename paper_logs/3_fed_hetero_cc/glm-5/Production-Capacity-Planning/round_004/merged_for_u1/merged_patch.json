@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "R4 merge complete. Applied u1's validated SKILL.md and excel-patterns.md patches wholesale (duplicate handling, PCB assembly invariants, terminology matching). See DECISIONS.md for full reasoning.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/references/excel-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "cost_usd": 0.48653700000000005
+}

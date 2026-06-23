@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/shared_skills/Embedded-Data-Repair:/root/.config/agent/skills

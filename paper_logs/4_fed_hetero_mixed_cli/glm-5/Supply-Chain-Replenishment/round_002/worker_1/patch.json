@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Updated inventory-load-planning skill to include additional confirmed status values ('Firm', 'Locked') discovered in the trace, added data quality filtering rules for missing SKUs and invalid dates, and documented common column name variations for booking status and arrival date fields.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md"
+  ],
+  "delete_paths": []
+}

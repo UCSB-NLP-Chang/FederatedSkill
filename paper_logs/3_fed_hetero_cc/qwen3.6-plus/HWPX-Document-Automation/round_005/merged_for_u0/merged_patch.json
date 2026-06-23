@@ -1,0 +1,38 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. DECISIONS.md documents 3 path decisions (SKILL.md merge, korean-data-transformations.md merge, new safety-audit-patterns.md). Key outcomes: (1) kept peer-majority skill name hwpx-template-filling, rejected u2's divergent hwpx-editing naming while absorbing its safety audit content; (2) merged u0/u1/u2 contributions for B2 safety audit brief coverage: date formatting, severity annotation, numbered placeholder mapping, fabrication anti-patterns; (3) all 3 conflict hotspots resol...",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/korean-data-transformations.md",
+    "hwpx-template-filling/references/safety-audit-patterns.md",
+    "hwpx-template-filling/scripts/.gitkeep"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-filling/references/safety-audit-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "hwpx-template-filling/references/korean-data-transformations.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.75
+    ],
+    "hwpx-template-filling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.75
+    ],
+    "hwpx-template-filling/scripts/.gitkeep": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "cost_usd": 0.7999842000000001
+}

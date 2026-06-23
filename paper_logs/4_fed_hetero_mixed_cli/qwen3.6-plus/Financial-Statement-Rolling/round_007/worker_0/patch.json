@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Update rebate-rollforward skill with critical anti-patterns discovered in trace: (1) openpyxl SUM formula construction bug where column letter is omitted from range end (e.g., =SUM(B6:8) instead of =SUM(B6:B8)), (2) emphasis on running verify_workbook.py before claiming success, (3) reminder to use csv.DictReader for bridge CSV parsing rather than manual comma counting. These caused the agent's first attempt to produce malformed formulas and delayed verification.",
+  "upsert_paths": [
+    "rebate-rollforward/SKILL.md"
+  ],
+  "delete_paths": []
+}

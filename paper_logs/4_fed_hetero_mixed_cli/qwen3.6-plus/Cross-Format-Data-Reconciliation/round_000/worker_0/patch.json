@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for comparing tabular datasets across different file formats (PDF, Excel, CSV). Includes a deterministic Python script to compute added, retired, and field-level changes, preventing manual comparison errors and type-mismatch false positives.",
+  "upsert_paths": [
+    "tabular-diff-comparison/SKILL.md",
+    "tabular-diff-comparison/scripts/compute_diff.py"
+  ],
+  "delete_paths": []
+}

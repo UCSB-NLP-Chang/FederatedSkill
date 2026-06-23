@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's reward=1.0 patch wholesale (SKILL.md + compute_diff.py with domain-key flags + new domain_mapping.md reference). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md",
+    "dataset-diff/scripts/compute_diff.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "dataset-diff/scripts/compute_diff.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md"
+  ],
+  "cost_usd": 2.6249100000000003
+}

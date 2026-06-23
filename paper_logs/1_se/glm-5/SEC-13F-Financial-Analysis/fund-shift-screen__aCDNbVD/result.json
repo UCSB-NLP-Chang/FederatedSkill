@@ -1,0 +1,103 @@
+{
+  "id": "74dd43cd-096a-4b4d-9917-9f300ccca2a3",
+  "task_name": "fund-shift-screen",
+  "trial_name": "fund-shift-screen__aCDNbVD",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis/fund-shift-screen__aCDNbVD",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/SEC-13F-Financial-Analysis/fund-shift-screen"
+  },
+  "source": "SEC-13F-Financial-Analysis",
+  "task_checksum": "13019e66f26dbda612fb84e04bab36aefd217427a48541b752230ccad106c7e3",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/SEC-13F-Financial-Analysis/fund-shift-screen",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "SEC-13F-Financial-Analysis"
+    },
+    "trial_name": "fund-shift-screen__aCDNbVD",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__SEC-13F-Financial-Analysis",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "08e52540-f2b7-46ff-b13b-6d93ecccbdaa"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 723079,
+    "n_cache_tokens": 1343587,
+    "n_output_tokens": 13539,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-04-27T17:16:38.162649Z",
+  "finished_at": "2026-04-27T17:20:27.697135Z",
+  "environment_setup": {
+    "started_at": "2026-04-27T17:16:38.171715Z",
+    "finished_at": "2026-04-27T17:16:39.191064Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-04-27T17:16:39.191076Z",
+    "finished_at": "2026-04-27T17:16:39.455127Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-04-27T17:16:39.455190Z",
+    "finished_at": "2026-04-27T17:20:16.534954Z"
+  },
+  "verifier": {
+    "started_at": "2026-04-27T17:20:16.535402Z",
+    "finished_at": "2026-04-27T17:20:17.122047Z"
+  }
+}

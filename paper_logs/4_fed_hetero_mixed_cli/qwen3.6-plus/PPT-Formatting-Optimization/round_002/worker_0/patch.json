@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.7777777777777778,
+  "summary": "Update pptx-xml-editing skill with critical lessons from trace: (1) ElementTree produces r:r:id double-prefix bug when setting relationship IDs, (2) ElementTree causes duplicate xmlns attributes when creating new slide XML, (3) String templates are more reliable than ElementTree for new slide creation. Added anti-patterns, troubleshooting entries, and a complete string template reference.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/pptx-structure.md"
+  ],
+  "delete_paths": []
+}

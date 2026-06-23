@@ -1,0 +1,29 @@
+{
+    "id": "86f4af09-df3a-4ac9-a7bd-5d50f3580798",
+    "started_at": "2026-05-23T22:20:05.290414",
+    "finished_at": "2026-05-23T22:21:39.899971",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-equipment-software-correlat__sGyCjTK"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

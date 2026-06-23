@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The agent claimed success without running the test suite, despite extensive self-verification. This update strengthens the mandatory test execution guidance with a pre-completion checklist and adds a verification script to detect common failure patterns.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/scripts/verify_before_submit.py"
+  ],
+  "delete_paths": []
+}

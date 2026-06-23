@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Adds a reusable skill for building and verifying deferred revenue rollforward workbooks with openpyxl. Captures layout rules, rollforward formula patterns, cross-sheet linking, and a verification script to prevent common spec-mismatch failures.",
+  "upsert_paths": [
+    "excel-deferred-revenue-rollforward/SKILL.md",
+    "excel-deferred-revenue-rollforward/references/formula_patterns.md",
+    "excel-deferred-revenue-rollforward/scripts/verify_workbook.py"
+  ],
+  "delete_paths": []
+}

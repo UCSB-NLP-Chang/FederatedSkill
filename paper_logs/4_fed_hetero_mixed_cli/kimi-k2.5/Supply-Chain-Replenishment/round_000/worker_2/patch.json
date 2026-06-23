@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Creates a reusable skill for supply chain load planning calculations from Excel source data. Captures the robust parsing pattern for non-standard Excel layouts (metadata rows before headers) and the specific calculation sequence for inventory depletion, palletization, and expedited delivery determination. Includes anti-patterns for the header-pollution error seen in the trace.",
+  "upsert_paths": [
+    "supply-chain-load-planning/SKILL.md",
+    "supply-chain-load-planning/references/formulas.md",
+    "supply-chain-load-planning/scripts/load_calculator.py"
+  ],
+  "delete_paths": []
+}

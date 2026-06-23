@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "R6 merge complete. Merged u1+u2 shipping container terminology into domain_mapping.md (conflict hotspot resolved with `added_containers` naming). Kept SKILL.md unchanged \u2014 target's validated 109-line version works for qwen-code; u2's verbose 192-line version does NOT transfer. See DECISIONS.md.",
+  "upsert_paths": [
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "cost_usd": 1.8475139999999999
+}

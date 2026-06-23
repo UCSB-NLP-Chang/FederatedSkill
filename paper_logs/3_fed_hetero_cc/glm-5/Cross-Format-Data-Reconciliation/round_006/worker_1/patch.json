@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The agent successfully followed existing skill guidance for PDF-to-Excel comparison. The only gap identified was a clearer multi-page PDF table extraction example in references, which is a common real-world pattern not fully demonstrated in the existing extraction_patterns.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": []
+}

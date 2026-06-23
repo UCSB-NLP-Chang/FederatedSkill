@@ -1,0 +1,62 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .F.F                                                                     [100%]
+E           =================================== FAILURES ===================================
+E           ______________________ test_deleted_ids_sorted_and_exact _______________________
+E           
+E               def test_deleted_ids_sorted_and_exact():
+E                   data = load_output()
+E                   assert data[DELETED_KEY] == sorted(data[DELETED_KEY])
+E           >       assert set(data[DELETED_KEY]) == set(EXPECTED[DELETED_KEY]), "Deleted IDs must match"
+E           E       AssertionError: Deleted IDs must match
+E           E       assert {'SVR0007'} == {'SVR0007', '...8', 'SVR0111'}
+E           E         
+E           E         Extra items in the right set:
+E           E         'SVR0111'
+E           E         'SVR0088'
+E           E         'SVR0055'
+E           E         Use -v to get more diff
+E           
+E           /tests/test_outputs.py:96: AssertionError
+E           ______________________ test_modified_entries_exact_match _______________________
+E           
+E               def test_modified_entries_exact_match():
+E                   data = load_output()
+E                   ok, msg = diff_close(data[MODIFIED_KEY], EXPECTED[MODIFIED_KEY])
+E           >       assert ok, msg
+E           E       AssertionError: Length mismatch: 1 vs 4
+E           E       assert False
+E           
+E           /tests/test_outputs.py:111: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_deleted_ids_sorted_and_exact - Assertio...
+E           FAILED ../tests/test_outputs.py::test_modified_entries_exact_match - Assertio...
+E           2 failed, 2 passed in 0.02s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.20s ===============================

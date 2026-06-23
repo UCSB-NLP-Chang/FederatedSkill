@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Round 3. Extended excel-workbook-manipulation with B2 financial reconciliation content (control-row anti-pattern, Harbor column mapping). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-manipulation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 4.299228
+}

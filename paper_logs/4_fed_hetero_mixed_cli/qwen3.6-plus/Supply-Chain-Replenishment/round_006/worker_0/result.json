@@ -1,0 +1,29 @@
+{
+    "id": "d4ce674a-6c82-45ca-b71c-9fe580f71d91",
+    "started_at": "2026-05-24T00:01:14.231204",
+    "finished_at": "2026-05-24T00:05:22.788380",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "beauty_zone_alias_gap__UQo3NuY"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

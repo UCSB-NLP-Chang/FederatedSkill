@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "R7 merge complete for u1. Applied u1's fix_cached_values.py script patch to handle both `<v />` self-closing and `<v></v>` empty element representations. See DECISIONS.md for rationale. Library SKILL.md and cached_value_fixing.md already have edge-case documentation.",
+  "upsert_paths": [
+    "edit-embedded-excel/scripts/fix_cached_values.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/scripts/fix_cached_values.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.6666666666666666
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "cost_usd": 0.41308320000000004
+}

@@ -1,0 +1,238 @@
+{
+  "family_name": "PPT-Formatting-Optimization",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 15102.41337108612,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.041666666666666664,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 1
+  },
+  "merger_cost_total_usd": 74.013,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "museum-exhibit-caption-cleanup"
+        ],
+        [
+          "u1",
+          "museum-exhibit-caption-cleanup"
+        ],
+        [
+          "u2",
+          "museum-exhibit-caption-cleanup"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 5.753286,
+      "elapsed_sec": 1497.0201616287231
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "wildlife-field-guide-caption-cleanup"
+        ],
+        [
+          "u1",
+          "wildlife-field-guide-caption-cleanup"
+        ],
+        [
+          "u2",
+          "wildlife-field-guide-caption-cleanup"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 8.899436999999999,
+      "elapsed_sec": 1823.3529028892517
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "coastal-trail-caption-cleanup"
+        ],
+        [
+          "u1",
+          "coastal-trail-caption-cleanup"
+        ],
+        [
+          "u2",
+          "coastal-trail-caption-cleanup"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 9.811629,
+      "elapsed_sec": 2654.915187597275
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "property-portfolio-caption-cleanup"
+        ],
+        [
+          "u1",
+          "property-portfolio-caption-cleanup"
+        ],
+        [
+          "u2",
+          "property-portfolio-caption-cleanup"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 4.1552999999999995,
+      "elapsed_sec": 1119.720695734024
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "transit-platform-caption-cleanup"
+        ],
+        [
+          "u1",
+          "transit-platform-caption-cleanup"
+        ],
+        [
+          "u2",
+          "transit-platform-caption-cleanup"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 13.887063000000001,
+      "elapsed_sec": 2258.2003865242004
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "incident-briefing-caption-cleanup"
+        ],
+        [
+          "u1",
+          "incident-briefing-caption-cleanup"
+        ],
+        [
+          "u2",
+          "incident-briefing-caption-cleanup"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 13.437180000000001,
+      "elapsed_sec": 1834.81183218956
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "archive-photo-caption-cleanup"
+        ],
+        [
+          "u1",
+          "archive-photo-caption-cleanup"
+        ],
+        [
+          "u2",
+          "archive-photo-caption-cleanup"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 10.291119,
+      "elapsed_sec": 2036.7508461475372
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "storm-damage-caption-cleanup"
+        ],
+        [
+          "u1",
+          "storm-damage-caption-cleanup"
+        ],
+        [
+          "u2",
+          "storm-damage-caption-cleanup"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 7.777986,
+      "elapsed_sec": 1877.639946937561
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/worker_skills/u0/PPT-Formatting-Optimization",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/worker_skills/u1/PPT-Formatting-Optimization",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/worker_skills/u2/PPT-Formatting-Optimization"
+  }
+}

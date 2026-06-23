@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's reward=1.0 patch adding B4 cold-chain patterns (out-of-scope filtering, null amendment handling, pdftotext fallback). No peer patches (u1/u2 max_tokens failure). See DECISIONS.md.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.3754549999999997
+}

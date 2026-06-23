@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Updated financial-reconciliation/SKILL.md to document per-variant column layouts (critical fix for B2 failures where Column O = Total Amortization for media-rights, but one-col-per-month for transit-subsidy). See DECISIONS.md for full reasoning.",
+  "upsert_paths": [
+    "financial-reconciliation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "financial-reconciliation/SKILL.md"
+  ],
+  "cost_usd": 2.218125
+}

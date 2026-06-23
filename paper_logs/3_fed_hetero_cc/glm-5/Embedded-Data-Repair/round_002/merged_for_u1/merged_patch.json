@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Merged validated peer approaches (u0 slide notes + u2 ET-based cached value repair) into SKILL.md; added u1's fix_cached_values.py as helper script. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/scripts/fix_cached_values.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/scripts/fix_cached_values.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.75
+    ],
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "cost_usd": 0.4194594
+}

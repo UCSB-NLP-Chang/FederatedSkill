@@ -1,0 +1,29 @@
+{
+    "id": "4b2cc6fc-2832-4a2f-bed5-4bc374b63523",
+    "started_at": "2026-05-17T22:32:07.146322",
+    "finished_at": "2026-05-17T22:35:10.939524",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_gdpval_21__e4nZmMY"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

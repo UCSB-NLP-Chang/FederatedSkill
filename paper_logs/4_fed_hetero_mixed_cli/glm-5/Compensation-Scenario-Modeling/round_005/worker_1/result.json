@@ -1,0 +1,29 @@
+{
+    "id": "25892a7a-fa6e-4bdd-b17b-248e880e9682",
+    "started_at": "2026-05-18T01:54:51.985686",
+    "finished_at": "2026-05-18T02:00:07.058005",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "06_property_portfolio_refresh_mo__VYLaYoP"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

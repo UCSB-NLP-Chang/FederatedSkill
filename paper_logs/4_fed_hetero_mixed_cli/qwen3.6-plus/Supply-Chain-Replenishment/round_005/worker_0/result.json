@@ -1,0 +1,29 @@
+{
+    "id": "64aa2fb0-4a2c-47be-9a6c-7fc041454845",
+    "started_at": "2026-05-23T23:44:35.420350",
+    "finished_at": "2026-05-23T23:48:42.486318",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "frozen_meal_tracker_refresh__MqqnozC"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

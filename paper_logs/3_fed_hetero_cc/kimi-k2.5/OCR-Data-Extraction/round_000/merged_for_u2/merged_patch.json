@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's patch (reward=1.0) wholesale, renamed skill from `ocr-image-extraction` to `image-data-extraction` for peer alignment. Library: 1 umbrella skill + 1 reference file. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md",
+    "image-data-extraction/scripts/extract_from_images.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/scripts/extract_from_images.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/references/patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.38400809999999996
+}

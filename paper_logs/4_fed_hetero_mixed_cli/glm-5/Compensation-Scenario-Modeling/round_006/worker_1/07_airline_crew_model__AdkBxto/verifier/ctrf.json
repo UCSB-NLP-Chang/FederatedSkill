@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779085776.492225,
+            "stop": 1779085777.3115642
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.8000998236238956,
+                "start": 1779085776.4977462,
+                "stop": 1779085777.3114576,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ...F.F..F                                                                [100%]\nE           =================================== FAILURES ===================================\nE           ____________________ TestSheetStructure.test_summary_title _____________________\nE           \nE           self = <test_outputs.TestSheetStructure object at 0x7f662d70bd40>\nE           \nE               def test_summary_title(self):\nE                   wb = openpyxl.load_workbook(OUTPUT_FILE)\nE                   ws = wb['Summary']\nE           >       assert ws['B1'].value is not None, \"Summary B1 should contain organization name\"\nE           E       AssertionError: Summary B1 should contain organization name\nE           E       assert None is not None\nE           E        +  where None = <Cell 'Summary'.B1>.value\nE           \nE           /tests/test_outputs.py:26: AssertionError\nE           _______________ TestSheetStructure.test_quarterly_totals_row_69 ________________\nE           \nE           self = <test_outputs.TestSheetStructure object at 0x7f662d5cdcd0>\nE           \nE               def test_quarterly_totals_row_69(self):\nE                   wb = openpyxl.load_workbook(OUTPUT_FILE)\nE                   ws = wb['EE Calcs (Current)']\nE                   h69 = ws.cell(row=69, column=8).value\nE           >       assert h69 is not None, \"Row 69 (quarterly totals) should exist in EE Calcs\"\nE           E       AssertionError: Row 69 (quarterly totals) should exist in EE Calcs\nE           E       assert None is not None\nE           \nE           /tests/test_outputs.py:41: AssertionError\nE           _______________ TestSheetStructure.test_yoy_service_progression ________________\nE           \nE           self = <test_outputs.TestSheetStructure object at 0x7f662d71a270>\nE           \nE               def test_yoy_service_progression(self):\nE                   wb = openpyxl.load_workbook(OUTPUT_FILE)\nE                   ws1 = wb['EE Calcs (Current)']\nE                   ws2 = wb['EE Calcs (Yr+1)']\nE                   for r in range(4, 70):\nE                       v1 = ws1.cell(row=r, column=6).value\nE                       v2 = ws2.cell(row=r, column=6).value\nE                       if v1 is not None and v2 is not None:\nE           >               assert v2 == v1 + 1, f\"Yr+1 service should be +1\"\nE                                        ^^^^^^\nE           E               TypeError: can only concatenate str (not \"int\") to str\nE           \nE           /tests/test_outputs.py:66: TypeError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::TestSheetStructure::test_summary_title - Ass...\nE           FAILED ../tests/test_outputs.py::TestSheetStructure::test_quarterly_totals_row_69\nE           FAILED ../tests/test_outputs.py::TestSheetStructure::test_yoy_service_progression\nE           3 failed, 6 passed in 0.57s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

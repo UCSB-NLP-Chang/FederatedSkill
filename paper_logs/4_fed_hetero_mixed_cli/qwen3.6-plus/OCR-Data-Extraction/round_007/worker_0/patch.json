@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The trace revealed critical gaps in the existing ocr-data-extraction skill: (1) keyword matching without word boundaries caused 'CREDIT NOTE' to match 'CREDIT NO' and capture 'TE', (2) split OCR keywords (e.g., 'CRE' ... 'DIT NO' for 'CREDIT NO') were not covered, (3) OCR artifact correction in extracted values needs systematic guidance, and (4) document classification workflows for multi-type document sets need explicit patterns. This patch updates the existing skill with these lessons.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md"
+  ],
+  "delete_paths": []
+}

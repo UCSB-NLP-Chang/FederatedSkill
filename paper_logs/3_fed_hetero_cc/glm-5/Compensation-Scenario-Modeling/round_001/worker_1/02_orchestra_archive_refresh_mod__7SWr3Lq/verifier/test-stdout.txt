@@ -1,0 +1,118 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: EEEEEEE                                                                  [100%]
+E           ==================================== ERRORS ====================================
+E           ______________________ ERROR at setup of test_sheet_names ______________________
+E           
+E               @pytest.fixture(scope="module")
+E               def output_wb():
+E           >       assert OUTPUT_FILE.exists(), f"Missing required output file: {OUTPUT_FILE}"
+E           E       AssertionError: Missing required output file: /root/Festival_Orchestra_Compensation.xlsx
+E           E       assert False
+E           E        +  where False = exists()
+E           E        +    where exists = PosixPath('/root/Festival_Orchestra_Compensation.xlsx').exists
+E           
+E           /tests/test_outputs.py:19: AssertionError
+E           _____________________ ERROR at setup of test_defined_names _____________________
+E           
+E               @pytest.fixture(scope="module")
+E               def output_wb():
+E           >       assert OUTPUT_FILE.exists(), f"Missing required output file: {OUTPUT_FILE}"
+E           E       AssertionError: Missing required output file: /root/Festival_Orchestra_Compensation.xlsx
+E           E       assert False
+E           E        +  where False = exists()
+E           E        +    where exists = PosixPath('/root/Festival_Orchestra_Compensation.xlsx').exists
+E           
+E           /tests/test_outputs.py:19: AssertionError
+E           ____________ ERROR at setup of test_summary_structure_and_formulas _____________
+E           
+E               @pytest.fixture(scope="module")
+E               def output_wb():
+E           >       assert OUTPUT_FILE.exists(), f"Missing required output file: {OUTPUT_FILE}"
+E           E       AssertionError: Missing required output file: /root/Festival_Orchestra_Compensation.xlsx
+E           E       assert False
+E           E        +  where False = exists()
+E           E        +    where exists = PosixPath('/root/Festival_Orchestra_Compensation.xlsx').exists
+E           
+E           /tests/test_outputs.py:19: AssertionError
+E           ___________ ERROR at setup of test_roster_and_assumptions_migration ____________
+E           
+E               @pytest.fixture(scope="module")
+E               def output_wb():
+E           >       assert OUTPUT_FILE.exists(), f"Missing required output file: {OUTPUT_FILE}"
+E           E       AssertionError: Missing required output file: /root/Festival_Orchestra_Compensation.xlsx
+E           E       assert False
+E           E        +  where False = exists()
+E           E        +    where exists = PosixPath('/root/Festival_Orchestra_Compensation.xlsx').exists
+E           
+E           /tests/test_outputs.py:19: AssertionError
+E           ___ ERROR at setup of test_calc_sheet_formulas[EE Calcs (Current)-Yr1-None] ____
+E           
+E               @pytest.fixture(scope="module")
+E               def output_wb():
+E           >       assert OUTPUT_FILE.exists(), f"Missing required output file: {OUTPUT_FILE}"
+E           E       AssertionError: Missing required output file: /root/Festival_Orchestra_Compensation.xlsx
+E           E       assert False
+E           E        +  where False = exists()
+E           E        +    where exists = PosixPath('/root/Festival_Orchestra_Compensation.xlsx').exists
+E           
+E           /tests/test_outputs.py:19: AssertionError
+E           _ ERROR at setup of test_calc_sheet_formulas[EE Calcs (Yr+1)-Yr2-'EE Calcs (Current)'] _
+E           
+E               @pytest.fixture(scope="module")
+E               def output_wb():
+E           >       assert OUTPUT_FILE.exists(), f"Missing required output file: {OUTPUT_FILE}"
+E           E       AssertionError: Missing required output file: /root/Festival_Orchestra_Compensation.xlsx
+E           E       assert False
+E           E        +  where False = exists()
+E           E        +    where exists = PosixPath('/root/Festival_Orchestra_Compensation.xlsx').exists
+E           
+E           /tests/test_outputs.py:19: AssertionError
+E           _ ERROR at setup of test_calc_sheet_formulas[EE Calcs (Yr+2)-Yr3-'EE Calcs (Yr+1)'] _
+E           
+E               @pytest.fixture(scope="module")
+E               def output_wb():
+E           >       assert OUTPUT_FILE.exists(), f"Missing required output file: {OUTPUT_FILE}"
+E           E       AssertionError: Missing required output file: /root/Festival_Orchestra_Compensation.xlsx
+E           E       assert False
+E           E        +  where False = exists()
+E           E        +    where exists = PosixPath('/root/Festival_Orchestra_Compensation.xlsx').exists
+E           
+E           /tests/test_outputs.py:19: AssertionError
+E           =========================== short test summary info ============================
+E           ERROR ../tests/test_outputs.py::test_sheet_names - AssertionError: Missing re...
+E           ERROR ../tests/test_outputs.py::test_defined_names - AssertionError: Missing ...
+E           ERROR ../tests/test_outputs.py::test_summary_structure_and_formulas - Asserti...
+E           ERROR ../tests/test_outputs.py::test_roster_and_assumptions_migration - Asser...
+E           ERROR ../tests/test_outputs.py::test_calc_sheet_formulas[EE Calcs (Current)-Yr1-None]
+E           ERROR ../tests/test_outputs.py::test_calc_sheet_formulas[EE Calcs (Yr+1)-Yr2-'EE Calcs (Current)']
+E           ERROR ../tests/test_outputs.py::test_calc_sheet_formulas[EE Calcs (Yr+2)-Yr3-'EE Calcs (Yr+1)']
+E           7 errors in 0.13s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: EE...
+============================== 1 failed in 0.43s ===============================

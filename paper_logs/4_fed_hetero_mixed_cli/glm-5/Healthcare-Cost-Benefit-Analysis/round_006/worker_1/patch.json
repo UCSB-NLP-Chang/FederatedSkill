@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.6,
+  "summary": "The task 'harbor_reagentkit_bulk' follows the same pattern as existing skills (infusion-batch-analysis, mailer-policy-analysis, etc.) but for reagent kit restocking policy comparison. The agent's manual calculations may have had precision or formula errors. Creating a new skill with a compute script ensures consistent, correct calculations following the established library pattern.",
+  "upsert_paths": [
+    "reagent-kit-policy-analysis/SKILL.md",
+    "reagent-kit-policy-analysis/scripts/compute_reagent_kit.py"
+  ],
+  "delete_paths": []
+}

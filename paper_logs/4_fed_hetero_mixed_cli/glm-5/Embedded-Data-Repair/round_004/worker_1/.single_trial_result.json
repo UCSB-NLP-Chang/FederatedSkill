@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "catalyst-balance-matrix-sync__kSHWSox",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/round_004/worker_1/catalyst-balance-matrix-sync__kSHWSox",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/round_004/worker_1/catalyst-balance-matrix-sync__kSHWSox",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

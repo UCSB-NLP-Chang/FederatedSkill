@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Applied target's reward=1.0 patch, renamed to spreadsheet-audit-reporting for problem-domain naming and peer alignment. Added Output precision and Known invariants sections. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "spreadsheet-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.2545572
+}

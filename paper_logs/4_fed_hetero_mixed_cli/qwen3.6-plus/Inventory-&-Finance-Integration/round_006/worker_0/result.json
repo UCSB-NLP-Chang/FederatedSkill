@@ -1,0 +1,29 @@
+{
+    "id": "e9793606-9d15-481f-836a-e9af7c386e3d",
+    "started_at": "2026-05-18T00:39:11.783844",
+    "finished_at": "2026-05-18T00:41:28.758849",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "new_task_12_mealkit_freshness_re__vRynQwi"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

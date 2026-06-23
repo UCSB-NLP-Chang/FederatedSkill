@@ -1,0 +1,37 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5, claude-code). Applied: u1's named range API fix + u2's enhanced verify_xlsx.py + u0's grading-patterns reference. Rejected u0's duplicate workbook-model-generation skill. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/grading-patterns.md",
+    "excel-workbook-modeling/scripts/verify_formulas.py",
+    "excel-workbook-modeling/scripts/verify_xlsx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.14285714285714285
+    ],
+    "excel-workbook-modeling/references/grading-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-workbook-modeling/scripts/verify_xlsx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.14285714285714285
+    ],
+    "excel-workbook-modeling/scripts/verify_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.14285714285714285
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md"
+  ],
+  "cost_usd": 4.940691
+}

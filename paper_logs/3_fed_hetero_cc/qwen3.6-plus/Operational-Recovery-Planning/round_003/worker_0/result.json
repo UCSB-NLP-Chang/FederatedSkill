@@ -1,0 +1,29 @@
+{
+    "id": "dea5b4a5-ae77-493b-b202-8753e91452c8",
+    "started_at": "2026-05-26T00:48:57.410810",
+    "finished_at": "2026-05-26T00:51:44.388228",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Operational-Recovery-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "new_task_3_returns_center_throug__Xxvtf5s"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

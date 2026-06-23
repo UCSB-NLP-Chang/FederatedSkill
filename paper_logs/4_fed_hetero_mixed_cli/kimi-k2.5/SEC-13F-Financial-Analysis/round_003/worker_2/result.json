@@ -1,0 +1,29 @@
+{
+    "id": "4d2dc65d-9358-4932-abfd-e3865d23dd49",
+    "started_at": "2026-05-18T05:17:31.200381",
+    "finished_at": "2026-05-18T05:28:35.860796",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__SEC-13F-Financial-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "issuer-ownership-rollup__XKjtkyG"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

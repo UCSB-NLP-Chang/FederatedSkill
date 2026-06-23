@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "R3 merge complete: refactored multi-source-reconciliation skill from 155\u219295 lines (prose-heavy style) to test hypothesis that kimi-k2.5 struggles with verbose table-heavy skills; added alias-patterns.md reference; see DECISIONS.md for details.",
+  "upsert_paths": [
+    "multi-source-reconciliation/SKILL.md",
+    "multi-source-reconciliation/references/alias-patterns.md",
+    "multi-source-reconciliation/references/violation-types.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "multi-source-reconciliation/references/alias-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "multi-source-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "multi-source-reconciliation/references/violation-types.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.7223148
+}

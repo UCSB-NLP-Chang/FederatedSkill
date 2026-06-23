@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged u1's verified patch (maintenance-parts invariants) + fixed output precision to standard anti-rounding template. Library: 2 skills. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-inventory-calculations/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-inventory-calculations/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.160636
+}

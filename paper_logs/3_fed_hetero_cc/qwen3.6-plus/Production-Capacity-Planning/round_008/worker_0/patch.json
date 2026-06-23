@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Update excel-capacity-planning skill to handle JSON inputs, strengthen the no-rounding rule (which caused verifier failure in this trace), add 40 hrs/day capacity variant, and include JSON deduplication patterns.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

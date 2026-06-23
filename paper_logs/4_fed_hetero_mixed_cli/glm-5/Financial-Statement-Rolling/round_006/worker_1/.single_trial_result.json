@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "atlas_refund_reserve_template_me__uJxPtKj",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Financial-Statement-Rolling/round_006/worker_1/atlas_refund_reserve_template_me__uJxPtKj",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Financial-Statement-Rolling/round_006/worker_1/atlas_refund_reserve_template_me__uJxPtKj",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

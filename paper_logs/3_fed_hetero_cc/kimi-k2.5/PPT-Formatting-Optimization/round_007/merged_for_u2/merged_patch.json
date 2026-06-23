@@ -1,0 +1,20 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's archive-photo-caption-cleanup patch (addresses index slide update gap); kept baseline pptx-manipulation (no validated replacement). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "archive-photo-caption-cleanup/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "archive-photo-caption-cleanup/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.7777777777777778
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md",
+    "__skill_md_invalid__:pptx-manipulation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.6706480000000004
+}

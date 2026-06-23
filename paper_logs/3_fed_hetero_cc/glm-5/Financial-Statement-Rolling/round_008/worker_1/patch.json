@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "Added prepaid-expense-amortization variant to financial-rollforward-workbook skill, capturing the key structural differences: amortization terminology (Adds/Amortization instead of Accruals/Utilization), control row naming (Month Totals instead of Period Totals), and the correct Variance formula pattern (=O{gl}-N{ending} for column O variance). This prevents future agents from misapplying rebate-reserve patterns to prepaid expense schedules.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "delete_paths": []
+}

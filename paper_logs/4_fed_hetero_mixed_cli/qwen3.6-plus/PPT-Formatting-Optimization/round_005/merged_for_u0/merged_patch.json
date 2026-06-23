@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's patch wholesale (SKILL.md + pptx_helpers.py) \u2014 same model/CLI, concise +42 lines, addresses B3 gap with DOM replacement anti-patterns. Skipped u2's larger patch due to model+CLI mismatch and token budget concerns. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/scripts/pptx_helpers.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/scripts/pptx_helpers.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "cost_usd": 3.158709
+}

@@ -1,0 +1,30 @@
+{
+  "round_idx": 6,
+  "assignments": [
+    [
+      "u0",
+      "econ-wholesale-packaging-correlation"
+    ],
+    [
+      "u1",
+      "econ-wholesale-packaging-correlation"
+    ],
+    [
+      "u2",
+      "econ-wholesale-packaging-correlation"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1327.7614071369171
+}

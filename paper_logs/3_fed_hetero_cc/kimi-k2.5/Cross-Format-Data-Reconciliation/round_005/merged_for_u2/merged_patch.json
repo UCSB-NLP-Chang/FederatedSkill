@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u1's medication key-name variant (`deleted_medications`/`modified_medications`) to known invariants. Kept target's CLI-based structure (validated for kimi-k2.5). See DECISIONS.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.7753938
+}

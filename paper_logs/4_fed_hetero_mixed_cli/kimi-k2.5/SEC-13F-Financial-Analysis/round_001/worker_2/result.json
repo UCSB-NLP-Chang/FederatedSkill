@@ -1,0 +1,29 @@
+{
+    "id": "1c4f8612-591e-4222-ba76-0dc51939b677",
+    "started_at": "2026-05-18T04:12:18.117347",
+    "finished_at": "2026-05-18T04:23:34.344022",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__SEC-13F-Financial-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "fund-class-breakdown__yUVmeXX"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

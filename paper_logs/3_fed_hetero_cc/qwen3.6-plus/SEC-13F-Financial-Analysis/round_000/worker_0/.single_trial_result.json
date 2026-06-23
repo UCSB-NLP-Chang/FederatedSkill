@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "fund-snapshot-canonical__hfN8hzP",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-cc-rest10-rerun-glm-M3-hetero/SEC-13F-Financial-Analysis/round_000/worker_0/fund-snapshot-canonical__hfN8hzP",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-cc-rest10-rerun-glm-M3-hetero/SEC-13F-Financial-Analysis/round_000/worker_0/fund-snapshot-canonical__hfN8hzP",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

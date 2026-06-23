@@ -1,0 +1,29 @@
+{
+    "id": "b4f6e87a-601e-4ed7-a782-0c1e0f73ce59",
+    "started_at": "2026-05-18T08:36:52.275255",
+    "finished_at": "2026-05-18T08:41:11.301985",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "factory-output-at-risk-calc__QNCt4Ji"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

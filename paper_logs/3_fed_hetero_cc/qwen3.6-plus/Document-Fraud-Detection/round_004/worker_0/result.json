@@ -1,0 +1,29 @@
+{
+    "id": "31113003-d411-47f4-ba3c-fd58539a2d22",
+    "started_at": "2026-05-15T03:18:46.661933",
+    "finished_at": "2026-05-15T03:22:45.747569",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "fleet-maintenance-chargeback-aud__oMYucKY"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

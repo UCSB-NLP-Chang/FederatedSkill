@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "emission-zone-dual-matrix-repair__akwsonE",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Embedded-Data-Repair/round_007/worker_0/emission-zone-dual-matrix-repair__akwsonE",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Embedded-Data-Repair/round_007/worker_0/emission-zone-dual-matrix-repair__akwsonE",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

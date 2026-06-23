@@ -1,0 +1,48 @@
+{
+  "worker_id": "u1",
+  "summary": "R5 merge complete for u1 (glm-5). Renamed `daily-production-recovery` to `production-capacity-planning` to align with peer majority (u0/u2). Adopted umbrella structure covering B1+B2 workflows. Merged u1's enhanced verification checklist (addressing self-verification mismatch pattern) with u0's constraint patterns and validation helpers. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md",
+    "production-capacity-planning/scripts/validate_workbook.py"
+  ],
+  "delete_paths": [
+    "daily-production-recovery/SKILL.md",
+    "daily-production-recovery/references/production-planning-patterns.md",
+    "daily-production-recovery/scripts/validate_workbook.py"
+  ],
+  "provenance": {
+    "daily-production-recovery/scripts/validate_workbook.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "production-capacity-planning/scripts/validate_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ],
+    "daily-production-recovery/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      0.4
+    ],
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ],
+    "production-capacity-planning/references/constraint-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ],
+    "daily-production-recovery/references/production-planning-patterns.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.5269779000000001
+}

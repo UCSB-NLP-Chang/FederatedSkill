@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) Round 1. 1 skill (expense-claims-validation), 2 references, 1 script. Applied u2's validated SKILL.md patch, absorbed u0's --break-system-packages and Known invariants, enhanced fuzzy-matching-guide with u1's punctuation normalization. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md",
+    "expense-claims-validation/references/fuzzy-matching-guide.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "expense-claims-validation/references/fuzzy-matching-guide.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "expense-claims-validation/SKILL.md"
+  ],
+  "cost_usd": 3.1827000000000005
+}

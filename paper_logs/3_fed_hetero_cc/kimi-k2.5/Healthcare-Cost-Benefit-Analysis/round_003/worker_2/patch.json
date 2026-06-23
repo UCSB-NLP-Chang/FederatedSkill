@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.6,
+  "summary": "The agent attempted a mailer fill cycle analysis (45-day vs 90-day) but failed verification. The trace reveals a critical new pattern not covered by the existing cycle-margin-analysis skill: mailer-based packaging where cost is joined by `mailer_format` (standard/buffered/secure) rather than by container size. The existing skill assumes a container size join between acquisition and packaging tables, but this task used a format-type lookup. The agent also manually computed results instead of using the bundled script, missing reusable validation logic. This patch updates the cycle-margin-analysis skill to handle the mailer_format join variant and adds explicit guidance on when to use the script vs extend it.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

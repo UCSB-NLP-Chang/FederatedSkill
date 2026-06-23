@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.2,
+  "summary": "Update production-capacity-planning skill with a critical decision rule discovered in this trace: shift-day selection must respect category-specific start dates, not just the scenario threshold date. The agent initially selected shift days starting Feb 1, but Canola doesn't start until Feb 20, causing premature production errors. Also reinforce use of existing validation helpers over custom scripts.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md"
+  ],
+  "delete_paths": []
+}

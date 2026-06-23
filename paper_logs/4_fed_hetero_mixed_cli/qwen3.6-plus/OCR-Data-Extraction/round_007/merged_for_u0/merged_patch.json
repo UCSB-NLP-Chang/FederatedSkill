@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u1's validated keyword specificity fix to parsing_patterns.md, integrated u0's word boundary and split keyword patterns into parsing_patterns.md (preserving qwen's concise SKILL.md style), added two anti-pattern bullets to SKILL.md, and updated B1 known invariants with R7 findings. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/parsing_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 4.126428
+}

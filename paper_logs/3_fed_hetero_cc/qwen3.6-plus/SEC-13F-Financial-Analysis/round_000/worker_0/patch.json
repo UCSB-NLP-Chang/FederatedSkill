@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.42857142857142855,
+  "summary": "Adds a reusable skill for parsing SEC 13F filing data. Captures critical anti-patterns from the failed trace: avoiding Levenshtein-only manager matching (which caused incorrect fund selection), replacing brittle substring-based stock classification with a deterministic keyword-prefix matcher, and clarifying VALUE scaling conventions. Includes a helper script to standardize AUM and top-CUSIP extraction.",
+  "upsert_paths": [
+    "parse-13f-filings/SKILL.md",
+    "parse-13f-filings/scripts/classify_holdings.py"
+  ],
+  "delete_paths": []
+}

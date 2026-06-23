@@ -1,0 +1,238 @@
+{
+  "family_name": "Embedded-Data-Repair",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 8390.000265359879,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.4583333333333333,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 11
+  },
+  "merger_cost_total_usd": 76.939548,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "fx-spot-matrix-refresh"
+        ],
+        [
+          "u1",
+          "fx-spot-matrix-refresh"
+        ],
+        [
+          "u2",
+          "fx-spot-matrix-refresh"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 5.683488,
+      "elapsed_sec": 788.083886384964
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "fx-cross-rate-inverse-fix"
+        ],
+        [
+          "u1",
+          "fx-cross-rate-inverse-fix"
+        ],
+        [
+          "u2",
+          "fx-cross-rate-inverse-fix"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 11.555034,
+      "elapsed_sec": 773.8339965343475
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "warehouse-slot-factor-refresh"
+        ],
+        [
+          "u1",
+          "warehouse-slot-factor-refresh"
+        ],
+        [
+          "u2",
+          "warehouse-slot-factor-refresh"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 10.350609,
+      "elapsed_sec": 948.3051860332489
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "supplier-pack-matrix-refresh"
+        ],
+        [
+          "u1",
+          "supplier-pack-matrix-refresh"
+        ],
+        [
+          "u2",
+          "supplier-pack-matrix-refresh"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 6.738111,
+      "elapsed_sec": 1019.2316908836365
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "catalyst-balance-matrix-sync"
+        ],
+        [
+          "u1",
+          "catalyst-balance-matrix-sync"
+        ],
+        [
+          "u2",
+          "catalyst-balance-matrix-sync"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 12.629508000000001,
+      "elapsed_sec": 1204.8626990318298
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "buffer-dilution-matrix-repair"
+        ],
+        [
+          "u1",
+          "buffer-dilution-matrix-repair"
+        ],
+        [
+          "u2",
+          "buffer-dilution-matrix-repair"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 8.722821,
+      "elapsed_sec": 1110.095227241516
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "rebate-band-live-embedding-fix"
+        ],
+        [
+          "u1",
+          "rebate-band-live-embedding-fix"
+        ],
+        [
+          "u2",
+          "rebate-band-live-embedding-fix"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 9.499068,
+      "elapsed_sec": 1359.1918869018555
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "emission-zone-dual-matrix-repair"
+        ],
+        [
+          "u1",
+          "emission-zone-dual-matrix-repair"
+        ],
+        [
+          "u2",
+          "emission-zone-dual-matrix-repair"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 11.760909,
+      "elapsed_sec": 1186.394129037857
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/worker_skills/u0/Embedded-Data-Repair",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/worker_skills/u1/Embedded-Data-Repair",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/worker_skills/u2/Embedded-Data-Repair"
+  }
+}

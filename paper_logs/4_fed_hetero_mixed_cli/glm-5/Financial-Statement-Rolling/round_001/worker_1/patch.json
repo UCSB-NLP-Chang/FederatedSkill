@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent repeated the exact circular reference anti-pattern documented in the skill, applying rollforward formulas on control rows instead of summing data rows. This patch clarifies the anti-pattern with a multi-period example and adds accrual-specific invariants.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/scripts/verify_workbook.py"
+  ],
+  "delete_paths": []
+}

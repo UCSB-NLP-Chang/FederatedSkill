@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.2,
+  "summary": "The trace shows a multi-scenario production planning task where the agent's self-verification passed but the external verifier failed. This pattern\u2014creating multiple Excel sheets with different capacity assumptions, date-aware calculations, and cumulative tracking\u2014is reusable. Adding a production-planning skill captures this capability and emphasizes early verification against expected output format to prevent self-verification false positives.",
+  "upsert_paths": [
+    "production-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

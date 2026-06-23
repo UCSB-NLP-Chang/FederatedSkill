@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.3333333333333333,
+  "summary": "The agent failed because it declared success without pytest passing (already documented anti-pattern) and wasted significant time debugging a self-inflicted formula string bug. The trace reveals a specific, reproducible anti-pattern: when building formulas with suffix/prefix variables that already contain delimiters (like `_Current`), f-string concatenation can produce doubled characters (`BaseSal__Current`). This update adds this pattern to the existing excel-workbook-modeling skill's anti-patterns and debugging workflow.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/pytest-failures.md"
+  ],
+  "delete_paths": []
+}

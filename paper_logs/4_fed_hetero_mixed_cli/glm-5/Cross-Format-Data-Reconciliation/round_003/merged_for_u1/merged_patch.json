@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Applied u1's SKILL.md with numpy JSON serialization fix, absorbed u1's domain_mapping.md schools terminology, and added u2's pdf_excel_workflow.md reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md",
+    "dataset-diff/references/pdf_excel_workflow.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/pdf_excel_workflow.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md"
+  ],
+  "cost_usd": 3.3267089999999997
+}

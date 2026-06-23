@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Consolidated near-duplicate skills into excel-formula-template, merging multi-series lookup guidance, QUARTILE.INC alternative, mandatory entity count gate, explicit header row verification, and manual spot-check workflow from all workers into a single comprehensive SKILL.md, plus the diagnostic script.",
+  "upsert_paths": [
+    "excel-formula-template/SKILL.md",
+    "excel-formula-template/scripts/diagnose_data_sheet.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-template/scripts/diagnose_data_sheet.py": [
+      "upsert",
+      "llm_merge:top=u2",
+      0.5
+    ],
+    "excel-formula-template/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

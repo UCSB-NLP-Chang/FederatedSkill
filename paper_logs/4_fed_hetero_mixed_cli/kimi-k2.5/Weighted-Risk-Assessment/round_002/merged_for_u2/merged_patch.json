@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5 on kimi-cli) R2. Synthesized script-centric SKILL.md (90 lines, down from 160) that positions `check_test_data_only.py` and `verify_before_submit.py` as mandatory bash command gates. Added u1's verify_before_submit.py for executable enforcement and u2's updated verifier-interaction.md reference. All workers failed R2 with reward=0.5 due to ignored markdown guidance; this approach shifts to script-based blocking. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/verifier-interaction.md",
+    "excel-formula-injection/scripts/verify_before_submit.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-injection/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "excel-formula-injection/scripts/verify_before_submit.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-injection/references/verifier-interaction.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "cost_usd": 2.655306
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R8. Extended clinical-lab-harmonization umbrella with neonatal-panel.md reference for B5 coverage. Added neonatal-sepsis-panel invariants section with bidirectional conversion thresholds (US\u2192SI for neonatal panels). No new skill added (umbrella-first principle). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/neonatal-panel.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "clinical-lab-harmonization/references/neonatal-panel.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "neonatal-panel-harmonization/SKILL.md"
+  ],
+  "cost_usd": 3.5068680000000008
+}

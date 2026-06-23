@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5/kimi-cli). Applied target's own SKILL.md and domain_mapping.md wholesale (reward=1.0, preserves BLOCKING RULE), merged u0's `engine='openpyxl'` addition. Rejected u0/u1 domain_mapping escape hatches per kimi-specific memory patterns. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "cost_usd": 3.2697299999999996
+}

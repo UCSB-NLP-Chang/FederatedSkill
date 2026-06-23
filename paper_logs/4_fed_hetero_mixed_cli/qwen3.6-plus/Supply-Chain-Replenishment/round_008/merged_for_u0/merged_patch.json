@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "R8 merge complete for u0. Applied u0's patch wholesale (preserves R7 validated content, adds R8 conditional Required_Delivery_Date and Rounding_Applied guidance) + integrated u1's orthogonal additions (pip, formula handling, mixed date formats) without accepting u1's risky removals. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-load-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "cost_usd": 0.7971569999999999
+}

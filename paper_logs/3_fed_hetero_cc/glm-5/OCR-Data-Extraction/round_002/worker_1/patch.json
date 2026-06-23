@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Enhanced date disambiguation logic for ambiguous DD/MM vs MM/DD formats, added roster/lookup merge pattern for enriching extracted data with reference CSVs, and added travel-claims sub-task variant.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md"
+  ],
+  "delete_paths": []
+}

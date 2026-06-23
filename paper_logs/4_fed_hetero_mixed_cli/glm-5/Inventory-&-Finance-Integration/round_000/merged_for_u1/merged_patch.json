@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "R0 merge for u1 complete. Applied u0's excel-inventory-calculations (B1 coverage gap) + u1's own python-package-installation. Rejected u2's overlapping excel-openpyxl-processing. Added Output precision section. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-inventory-calculations/SKILL.md",
+    "python-package-installation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-inventory-calculations/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "python-package-installation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.871912
+}

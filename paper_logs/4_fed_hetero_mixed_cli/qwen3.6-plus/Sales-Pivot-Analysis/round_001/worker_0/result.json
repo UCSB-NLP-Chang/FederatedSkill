@@ -1,0 +1,29 @@
+{
+    "id": "dffb3e2e-37b0-451c-bdcc-a2e0d49a5729",
+    "started_at": "2026-05-18T05:47:37.659243",
+    "finished_at": "2026-05-18T05:50:38.955514",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Sales-Pivot-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "student-performance-pivot__pCHLvyz"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

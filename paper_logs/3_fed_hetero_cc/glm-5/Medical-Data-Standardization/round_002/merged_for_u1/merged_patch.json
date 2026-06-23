@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged R2 Medical-Data-Standardization patches for u1. Synthesized u0's STOP-checkpoint structure with u2's correct thyroid thresholds (Free_T4>30, Total_T4>200, Total_T3>50) and (factor, direction) tuple pattern for factors < 1. Added thyroid-factors.md reference file. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md",
+    "clinical-lab-harmonization/references/thyroid-factors.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/references/conversion-factors.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8076923076923077
+    ],
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8076923076923077
+    ],
+    "clinical-lab-harmonization/references/thyroid-factors.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.11538461538461539
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md"
+  ],
+  "cost_usd": 2.5974060000000003
+}

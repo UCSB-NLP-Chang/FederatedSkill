@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Enhanced ocr-data-extraction skill with multi-item extraction patterns, OCR strategy deduplication, quantity extraction pitfalls, and multi-sheet Excel output guidance based on issues encountered in construction measurement form processing.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": []
+}

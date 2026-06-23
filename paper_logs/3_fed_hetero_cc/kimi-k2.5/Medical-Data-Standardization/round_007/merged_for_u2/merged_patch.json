@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Round 7 merge complete. Extended clinical-lab-harmonization umbrella with transplant panel support (multi-file join workflow, transplant-specific analytes). Added harmonize_transplant.py script as executable guardrail against 7-round rounding failures. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/transplant-factors.md",
+    "clinical-lab-harmonization/scripts/harmonize_transplant.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/references/transplant-factors.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.9285714285714286
+    ],
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.9285714285714286
+    ],
+    "clinical-lab-harmonization/scripts/harmonize_transplant.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "cost_usd": 2.9122859999999995
+}

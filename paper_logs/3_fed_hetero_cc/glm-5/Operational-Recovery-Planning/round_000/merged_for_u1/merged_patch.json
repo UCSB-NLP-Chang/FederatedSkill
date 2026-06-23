@@ -1,0 +1,35 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied 2 skills to u1's library: excel-manipulation (target's own reward=1.0) and queue-capacity-planning (from u0). Rejected u2's overlapping excel-data-processing skill. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "excel-manipulation/SKILL.md",
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "queue-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "queue-capacity-planning/references/simulation_rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "queue-capacity-planning/scripts/queue_simulator.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.607553
+}

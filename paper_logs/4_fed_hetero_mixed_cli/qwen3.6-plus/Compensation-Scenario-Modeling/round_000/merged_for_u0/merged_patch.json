@@ -1,0 +1,29 @@
+{
+  "worker_id": "u0",
+  "summary": "MERGE COMPLETE \u2014 R0. Library: 1 umbrella skill `workbook-model-generation` consolidated from u0/u1/u2 patches (all r=0.14). Structure: SKILL.md (8-step numbered procedure for qwen3.6-plus), references/formula-patterns.md (from u2), scripts/verify_workbook.py (combined verification). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "workbook-model-generation/SKILL.md",
+    "workbook-model-generation/references/formula-patterns.md",
+    "workbook-model-generation/scripts/verify_workbook.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workbook-model-generation/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "workbook-model-generation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "workbook-model-generation/scripts/verify_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.199984
+}

@@ -1,0 +1,29 @@
+{
+    "id": "9a732f59-59b5-4376-a1bd-dd9e4d5d682d",
+    "started_at": "2026-05-17T23:38:53.594556",
+    "finished_at": "2026-05-17T23:40:58.542921",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "hepatic-panel-harmonization__iKFouuo"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

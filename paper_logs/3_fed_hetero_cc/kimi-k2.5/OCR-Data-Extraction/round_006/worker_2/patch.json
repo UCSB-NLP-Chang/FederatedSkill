@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "The trace reveals a pattern: nested directory structures where image classification/filtering must happen before extraction. Key lessons: (1) Amount extraction failed when 'TOTAL AMOUNT' and value were on separate lines with blank lines between - the fix was line-window lookahead skipping empty lines; (2) Transaction references had OCR errors (OO vs 00, OOO vs 000) that look like duplicates but aren't; (3) Relative paths must preserve directory structure for batch identification; (4) The existing image-data-extraction skill covers receipts/invoices but lacks specific guidance for nested batch processing and multi-line keyword extraction. The skill update adds nested-batch-directory handling, explicit multi-line extraction patterns, OCR error tolerance for ID deduplication, and path-relative extraction patterns.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md"
+  ],
+  "delete_paths": []
+}

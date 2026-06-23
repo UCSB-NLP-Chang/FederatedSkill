@@ -1,0 +1,83 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: F                                                                        [100%]
+E           =================================== FAILURES ===================================
+E           _________________________________ test_outputs _________________________________
+E           
+E               def test_outputs():
+E                   """Test that the invoice extraction outputs are correct."""
+E               
+E                   OUTPUT_FILE = "/app/workspace/invoice_summary.xlsx"
+E                   EXPECTED_FILE = os.path.join(os.path.dirname(__file__), "invoice_oracle.xlsx")
+E               
+E                   # Requirement: output file exists
+E                   assert os.path.exists(OUTPUT_FILE), "invoice_summary.xlsx not found at /app/workspace"
+E               
+E                   # Requirement: single sheet named "invoices"
+E                   actual_sheets = _get_sheetnames(OUTPUT_FILE)
+E                   assert actual_sheets == ["invoices"], (
+E                       f"Requirement failed: workbook must contain exactly one sheet named 'invoices'.\n"
+E                       f"Actual sheets: {actual_sheets}"
+E                   )
+E               
+E                   # Read both files
+E                   actual_rows = _read_sheet_as_string_rows(OUTPUT_FILE, "invoices")
+E                   expected_rows = _read_sheet_as_string_rows(EXPECTED_FILE, "invoices")
+E               
+E                   # Requirement: correct header
+E                   expected_header = ["filename", "date", "total_amount"]
+E                   actual_header = actual_rows[0] if actual_rows else []
+E                   assert actual_header == expected_header, (
+E                       f"Requirement failed: header/schema mismatch.\n"
+E                       f"Actual header:   {actual_header}\n"
+E                       f"Expected header: {expected_header}"
+E                   )
+E               
+E                   # Requirement: rows ordered by filename
+E                   data_rows = actual_rows[1:]
+E                   data_rows = [r for r in data_rows if len(r) >= 1 and r[0].strip() != ""]
+E                   filenames = [r[0] for r in data_rows]
+E                   assert filenames == sorted(filenames), (
+E                       f"Requirement failed: rows are not ordered by filename.\n"
+E                       f"Actual order:   {filenames}\n"
+E                       f"Sorted order:   {sorted(filenames)}"
+E                   )
+E               
+E                   # Requirement: match with oracle (with numeric tolerance)
+E                   ok, msg = rows_match(actual_rows, expected_rows)
+E           >       assert ok, f"Oracle mismatch: {msg}"
+E           E       AssertionError: Oracle mismatch: Row 1 col 1: text mismatch '2024-03-03' vs '2024-01-01'
+E           E       assert False
+E           
+E           /tests/test_outputs.py:99: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_outputs - AssertionError: Oracle mismat...
+E           1 failed in 0.12s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: F ...
+============================== 1 failed in 0.37s ===============================

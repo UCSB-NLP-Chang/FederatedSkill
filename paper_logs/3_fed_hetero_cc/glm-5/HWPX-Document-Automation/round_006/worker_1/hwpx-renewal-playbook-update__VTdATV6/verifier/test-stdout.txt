@@ -1,0 +1,56 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .F..                                                                     [100%]
+E           =================================== FAILURES ===================================
+E           _____________ test_required_updates_present_and_old_values_removed _____________
+E           
+E               def test_required_updates_present_and_old_values_removed():
+E                   update = json.loads(UPDATE_FILE.read_text(encoding="utf-8"))
+E                   section0_xml = load_section(OUTPUT_FILE, "section0.xml")
+E                   section1_xml = load_section(OUTPUT_FILE, "section1.xml")
+E                   new_window = f'{update["window_start"]} ~ {update["window_end"]}'
+E                   required = [
+E                       update["customer"],
+E                       update["owner_name"],
+E                       new_window,
+E                       update["band"],
+E                       update["escalation_email"],
+E                       update["note"],
+E                       *followup_items(),
+E                   ]
+E                   for value in required:
+E           >           assert value in section0_xml or value in section1_xml
+E           E           assert ('Asteron Commerce' in '<?xml version="1.0" encoding="UTF-8"?>\n<hp:section xmlns:hp="http://www.hancom.co.kr/hwpml/2010/HWPML" id="section0"...ef="0"><hp:run charPrIDRef="0"><hp:t>가격 메모: 가격 검토가 끝날 때까지 할인 문구를 외부에 공유하지 마세요.</hp:t></hp:run></hp:p>\n</hp:section>\n' or 'Asteron Commerce' in '<?xml version="1.0" encoding="UTF-8"?>\n<hp:section xmlns:hp="http://www.hancom.co.kr/hwpml/2010/HWPML" id="section1"...:p id="47" paraPrIDRef="0"><hp:run charPrIDRef="0"><hp:t>기존 히스토리: 2025년 1분기 초안</hp:t></hp:run></hp:p>\n</hp:section>\n')
+E           
+E           /tests/test_outputs.py:48: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_required_updates_present_and_old_values_removed
+E           1 failed, 3 passed in 0.02s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.19s ===============================

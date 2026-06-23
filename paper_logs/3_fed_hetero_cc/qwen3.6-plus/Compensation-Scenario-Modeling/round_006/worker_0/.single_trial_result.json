@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "07_airline_crew_model__cr9a6Ho",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/round_006/worker_0/07_airline_crew_model__cr9a6Ho",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/round_006/worker_0/07_airline_crew_model__cr9a6Ho",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

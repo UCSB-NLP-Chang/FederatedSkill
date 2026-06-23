@@ -1,0 +1,35 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Added new ICU metabolic harmonization skill with script-based precision enforcement. Rejected u1's ICU bloat into clinical-lab-harmonization. Library now has 3 skills: clinical-lab-harmonization (baseline), lab-dedup-harmonization (range-based), icu-metabolic-harmonization (NEW, script-based). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "icu-metabolic-harmonization/SKILL.md",
+    "icu-metabolic-harmonization/references/icu-metabolic-panel.md",
+    "icu-metabolic-harmonization/references/icu-ranges.md",
+    "icu-metabolic-harmonization/scripts/icu_metabolic_harmonizer.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "icu-metabolic-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8717948717948718
+    ],
+    "icu-metabolic-harmonization/references/icu-ranges.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8717948717948718
+    ],
+    "icu-metabolic-harmonization/references/icu-metabolic-panel.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "icu-metabolic-harmonization/scripts/icu_metabolic_harmonizer.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.8149889999999997
+}

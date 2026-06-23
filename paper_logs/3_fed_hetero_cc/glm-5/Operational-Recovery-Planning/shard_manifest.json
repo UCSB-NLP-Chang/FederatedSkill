@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-3fam-dashscope-rerun-M3-hetero",
+  "family_name": "Operational-Recovery-Planning",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "new_task_1_soc_alert_recovery",
+      "new_task_2_radiology_reading_backlog",
+      "harbor_gdpval_36",
+      "new_task_3_returns_center_throughput",
+      "harbor_dc_recovery_01",
+      "harbor_wh_recovery_02",
+      "harbor_ag_recovery_03",
+      "harbor_gdpval_41"
+    ],
+    "u1": [
+      "new_task_1_soc_alert_recovery",
+      "new_task_2_radiology_reading_backlog",
+      "harbor_gdpval_36",
+      "new_task_3_returns_center_throughput",
+      "harbor_dc_recovery_01",
+      "harbor_wh_recovery_02",
+      "harbor_ag_recovery_03",
+      "harbor_gdpval_41"
+    ],
+    "u2": [
+      "new_task_1_soc_alert_recovery",
+      "new_task_2_radiology_reading_backlog",
+      "harbor_gdpval_36",
+      "new_task_3_returns_center_throughput",
+      "harbor_dc_recovery_01",
+      "harbor_wh_recovery_02",
+      "harbor_ag_recovery_03",
+      "harbor_gdpval_41"
+    ]
+  }
+}

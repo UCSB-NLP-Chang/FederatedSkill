@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 Merge complete for u0. Applied u0's markdown customization workflow + brief_template.md to address JSON-correct-but-markdown-failed gap. Rejected u1's analysis_template.py (wrong approach for qwen). Borrowed u2's anti-pattern wording. See DECISIONS.md.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/assets/brief_template.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.6666666666666666
+    ],
+    "dmaic-statistical-analysis/assets/brief_template.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "dmaic-statistical-analysis/SKILL.md"
+  ],
+  "cost_usd": 4.201169999999999
+}

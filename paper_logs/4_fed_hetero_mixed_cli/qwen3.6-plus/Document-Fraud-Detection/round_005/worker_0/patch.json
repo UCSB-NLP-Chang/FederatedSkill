@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated expense-claims-validation skill to incorporate lessons from research stipend reconciliation: added pdftotext as a reliable PDF extraction alternative, generalized amendment handling to support multi-field overrides (e.g., campus/location), added 'archived' to invalid status checks, and introduced a Location/Campus Mismatch validation step. Added a concrete Research Stipend Reconciliation domain example to references.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "coastal-trail-caption-cleanup__u9nHMjN",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/round_002/worker_2/coastal-trail-caption-cleanup__u9nHMjN",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/PPT-Formatting-Optimization/round_002/worker_2/coastal-trail-caption-cleanup__u9nHMjN",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

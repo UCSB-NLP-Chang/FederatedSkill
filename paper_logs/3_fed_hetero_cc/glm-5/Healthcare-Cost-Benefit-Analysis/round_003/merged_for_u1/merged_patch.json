@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Applied u1's reward=1.0 patch wholesale (Pattern A/B/C input handling). Added invariants.md reference from u2's patch. Rejected u0's separate mailer-fill-analysis skill (umbrella-first principle). See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md",
+    "cycle-margin-analysis/references/invariants.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cycle-margin-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cycle-margin-analysis/references/invariants.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "cycle-margin-analysis/SKILL.md"
+  ],
+  "cost_usd": 4.2405420000000005
+}

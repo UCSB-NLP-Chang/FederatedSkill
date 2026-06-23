@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's Quality Control domain invariants + u2's N/A handling guidance; removed Helper Scripts section per task_memory hypothesis. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md",
+    "sales-pivot-report/references/common-issues.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-report/references/common-issues.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.875
+    ],
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.875
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "cost_usd": 2.9651759999999996
+}

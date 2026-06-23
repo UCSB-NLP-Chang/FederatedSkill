@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace shows successful execution of the existing edit-embedded-excel skill for a supplier-pack-matrix-refresh task. The existing skill already covers the key patterns well. This update generalizes the 'Known Invariants' section from task-specific names (fx-cross-rate-matrix, warehouse-slot-factor-refresh) to pattern-based names (reciprocal-rate-matrix) that clearly indicate the structural pattern rather than specific task names, making it easier for future agents to recognize when the pattern applies.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "delete_paths": []
+}

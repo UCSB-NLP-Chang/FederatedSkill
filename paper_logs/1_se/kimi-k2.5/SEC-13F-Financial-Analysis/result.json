@@ -1,0 +1,38 @@
+{
+    "id": "0b55dcd8-5baf-4ffc-9b71-a7c8c6d7dbb1",
+    "started_at": "2026-05-25T20:27:28.499660",
+    "finished_at": "2026-05-25T20:56:33.301199",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__SEC-13F-Financial-Analysis": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.125
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "cross-quarter-reconciliation__GdQyHoE",
+                            "deduped-alert-pack__N3ECVw2",
+                            "existing-brief-refresh__94hsuDF",
+                            "fund-class-breakdown__5ZyudLz",
+                            "fund-shift-screen__oqrXFkP",
+                            "fund-snapshot-canonical__FN8kEth",
+                            "manager-pair-issuer-grid__zrYdSiL"
+                        ],
+                        "1.0": [
+                            "issuer-ownership-rollup__U5R2Vqe"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

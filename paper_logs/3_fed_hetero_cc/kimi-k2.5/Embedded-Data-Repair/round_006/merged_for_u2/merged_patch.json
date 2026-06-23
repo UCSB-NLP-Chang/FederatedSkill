@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R6. Applied u1's validated patch (reward=1.0) wholesale \u2014 316 lines (37 shorter than baseline) to address max_tokens truncation issue. Added manifest handling pattern for multiple embeddings. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "cost_usd": 0.4666014
+}

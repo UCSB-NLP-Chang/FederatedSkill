@@ -1,0 +1,29 @@
+{
+    "id": "189738fc-7af5-43b6-a071-62867deb3ae9",
+    "started_at": "2026-05-17T20:35:02.128404",
+    "finished_at": "2026-05-17T20:38:51.483364",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "clinic-shift-claim-review__ya6qMUe"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

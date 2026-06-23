@@ -1,0 +1,35 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0. Applied target's reward=1.0 patch (renamed to cross-format-diff), added u2's PDF extraction patterns and u1's diff schema as references. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-format-diff/SKILL.md",
+    "cross-format-diff/references/diff-schema.md",
+    "cross-format-diff/references/pdf-extraction.md",
+    "cross-format-diff/scripts/compute_diff.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-diff/scripts/compute_diff.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "cross-format-diff/references/pdf-extraction.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "cross-format-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "cross-format-diff/references/diff-schema.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.348743999999999
+}

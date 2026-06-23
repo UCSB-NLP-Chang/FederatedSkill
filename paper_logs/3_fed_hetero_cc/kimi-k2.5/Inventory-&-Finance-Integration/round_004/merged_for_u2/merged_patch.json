@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) Round 4. Enhanced `excel-financial-reconciliation/SKILL.md` with explicit column/row mapping tables (N=April values, O=Totals/GL; rows 13-16 for control rows), control row formula completeness (ALL columns B-O), and clearer summary-to-detail references. Kept domain-specific skill name over u0/u1's tool-anchored names. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-financial-reconciliation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 4.045119000000001
+}

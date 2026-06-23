@@ -1,0 +1,32 @@
+{
+  "worker_id": "u2",
+  "summary": "R7 merge complete for u2 (kimi-k2.5). Applied u2's capacity-filling anti-pattern + u0's outcome-driven design reference + u1's Running Board variant. SKILL.md at 165 lines (under kimi limit). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/outcome-design-patterns.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "production-capacity-planning/references/outcome-design-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "production-capacity-planning/references/variant-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "cost_usd": 0.9734231999999999
+}

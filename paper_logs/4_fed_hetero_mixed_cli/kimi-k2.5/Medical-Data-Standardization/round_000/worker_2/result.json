@@ -1,0 +1,29 @@
+{
+    "id": "825367f0-e703-4a39-8e1f-c573c30f7ac4",
+    "started_at": "2026-05-17T23:19:20.079082",
+    "finished_at": "2026-05-17T23:22:52.554745",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "electrolyte-rounding-harmonizati__ms2RMjW"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

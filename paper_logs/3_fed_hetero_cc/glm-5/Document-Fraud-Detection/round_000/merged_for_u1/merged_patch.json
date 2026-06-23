@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u2's patch (reward=1.0) as `document-reconciliation` umbrella skill with script and reference, renamed for broader durability. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/violation-types.md",
+    "document-reconciliation/scripts/reconcile_claims.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "document-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "document-reconciliation/references/violation-types.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "document-reconciliation/scripts/reconcile_claims.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.40285469999999995
+}

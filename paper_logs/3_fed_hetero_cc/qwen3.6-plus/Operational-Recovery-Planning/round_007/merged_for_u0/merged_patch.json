@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 Synthesized u0+u1+u2 patches into unified production-planning/SKILL.md addressing all three orthogonal failure modes: (1) date vs datetime type (u0/qwen dismissal), (2) sheet name 31-char truncation (u1), (3) domain adaptation guide for automotive/agricultural (u2). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "production-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.2
+    ]
+  },
+  "conflicts": [
+    "production-planning/SKILL.md"
+  ],
+  "cost_usd": 1.1887159999999999
+}

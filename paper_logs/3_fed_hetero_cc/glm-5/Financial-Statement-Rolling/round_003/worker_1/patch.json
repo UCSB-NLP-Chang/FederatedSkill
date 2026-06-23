@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The trace shows a commission asset rollforward task where the agent failed to run the test suite and made the exact Variance formula mistake the skill warns about (=O12-N12 instead of =N12-N10). Adding commission asset as a new variant to the existing rollforward skill and strengthening the Variance formula guidance with a pre-coding verification step.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/commission_asset_variant.md"
+  ],
+  "delete_paths": []
+}

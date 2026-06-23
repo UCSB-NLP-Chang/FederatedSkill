@@ -1,0 +1,29 @@
+{
+    "id": "db465527-6fa0-44c3-9975-120f8887a021",
+    "started_at": "2026-05-14T18:42:03.760527",
+    "finished_at": "2026-05-14T18:49:23.375206",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "campus-budget-at-risk-calc__SENYvyg"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

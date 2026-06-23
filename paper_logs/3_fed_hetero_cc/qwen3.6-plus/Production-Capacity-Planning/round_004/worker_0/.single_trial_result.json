@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_gdpval_36_task3__KNA5Qrt",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/Production-Capacity-Planning/round_004/worker_0/harbor_gdpval_36_task3__KNA5Qrt",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/Production-Capacity-Planning/round_004/worker_0/harbor_gdpval_36_task3__KNA5Qrt",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

@@ -1,0 +1,53 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Library now has 3 skills: sec-13f-fund-analysis (kept baseline with semantic-check reinforcement), sec-13f-issuer-rollup (unchanged), sec-13f-alert-processing (new B7 skill, renamed from u2's alert-pack-processor to align with peer naming). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-alert-processing/SKILL.md",
+    "sec-13f-alert-processing/references/alert-schemas.md",
+    "sec-13f-alert-processing/references/dedup-rules.md",
+    "sec-13f-alert-processing/scripts/dedupe_alerts.py",
+    "sec-13f-alert-processing/scripts/validate_match.py",
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-alert-processing/scripts/dedupe_alerts.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-alert-processing/scripts/validate_match.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "sec-13f-fund-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "sec-13f-alert-processing/references/alert-schemas.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-alert-processing/references/dedup-rules.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-alert-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.0827771000000002
+}

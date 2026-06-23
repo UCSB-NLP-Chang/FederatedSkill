@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_cycle_count_variance_audi__rCV3SLM",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/round_007/worker_2/harbor_cycle_count_variance_audi__rCV3SLM",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/round_007/worker_2/harbor_cycle_count_variance_audi__rCV3SLM",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

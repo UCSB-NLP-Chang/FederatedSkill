@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The trace reveals a critical failure pattern: the agent wrote lookup formulas that matched on entity codes when the Data sheet has multiple series per entity (6 campuses \u00d7 3 series = 18 rows). The formulas likely matched the wrong rows. Additionally, the statistics and weighted mean formulas lacked row-absolute references. This patch adds guidance for multi-series data structures and strengthens validation requirements.",
+  "upsert_paths": [
+    "excel-formula-fill/SKILL.md",
+    "excel-formula-fill/references/formula-patterns.md"
+  ],
+  "delete_paths": []
+}

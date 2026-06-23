@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Created `clinical-lab-harmonization` skill (1 skill, 1 file). Based on u0's patch with u2's validation enhancements. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.7368421052631579
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.5855240000000002
+}

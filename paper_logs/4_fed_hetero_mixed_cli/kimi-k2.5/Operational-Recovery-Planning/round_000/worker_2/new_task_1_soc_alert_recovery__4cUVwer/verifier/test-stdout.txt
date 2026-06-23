@@ -1,0 +1,56 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: F.                                                                       [100%]
+E           =================================== FAILURES ===================================
+E           __________________________ test_plan_math_and_policy ___________________________
+E           
+E               def test_plan_math_and_policy():
+E                   ref = load_reference_demands(CONFIG)
+E                   rows = load_plan_rows(CONFIG)
+E                   expected_weeks = list(range(CONFIG['week_start'], CONFIG['week_end'] + 1))
+E                   actual_weeks = [r[0] for r in rows]
+E                   assert actual_weeks == expected_weeks, 'Weeks must be continuous and ordered.'
+E                   calc_start = round(CONFIG['initial_total'] - ref[CONFIG['week_start']], 2)
+E                   prev_end = None
+E                   seen = set()
+E                   for week, days, demand, capacity, start_queue, end_queue, overtime in rows:
+E                       seen.add(days)
+E                       assert days in {4, 5, 6}, f"Week {week}: invalid days {days}"
+E                       assert abs(demand - ref[week]) <= 0.01, f"Week {week}: demand mismatch"
+E                       if week == CONFIG['week_start']:
+E           >               assert abs(start_queue + demand - CONFIG['initial_total']) <= 0.01
+E           E               assert 105.39999999999998 <= 0.01
+E           E                +  where 105.39999999999998 = abs(((512.4 + 105.4) - 512.4))
+E           
+E           /tests/test_outputs.py:120: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_plan_math_and_policy - assert 105.39999...
+E           1 failed, 1 passed in 0.14s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: F....
+============================== 1 failed in 0.36s ===============================

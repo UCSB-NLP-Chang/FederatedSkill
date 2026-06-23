@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779066382.3260467,
+            "stop": 1779066382.8527918
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.4243420287966728,
+                "start": 1779066382.4150448,
+                "stop": 1779066382.852677,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ....F                                                                    [100%]\nE           =================================== FAILURES ===================================\nE           __________________________ test_word_summary_content ___________________________\nE           \nE           source_rows = [{'Dock': 'D1', 'Expected Qty': 120, 'Item Code': 'ITM-100', 'Receipt ID': 'RC-001', ...}, {'Dock': 'D1', 'Expected Qt...eipt ID': 'RC-005', ...}, {'Dock': 'D3', 'Expected Qty': 40, 'Item Code': 'ITM-320', 'Receipt ID': 'RC-006', ...}, ...]\nE           \nE               def test_word_summary_content(source_rows):\nE                   assert Path(OUTPUT_DOCX).exists(), f'Missing output docx: {OUTPUT_DOCX}'\nE                   _, expected_totals, item_totals = expected_summary_rows(source_rows)\nE                   doc = Document(OUTPUT_DOCX)\nE                   text = '\\n'.join(p.text for p in doc.paragraphs if p.text.strip()).lower()\nE           >       assert 'qty variance' in text\nE           E       AssertionError: assert 'qty variance' in 'receiving exception brief\\nthis report identifies two critical quality checks in our receiving process: quantity vari...ed temperature monitoring alerts and conduct supplier quality reviews for items with recurring quantity discrepancies.'\nE           \nE           /tests/test_outputs.py:150: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_word_summary_content - AssertionError: ...\nE           1 failed, 4 passed in 0.20s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

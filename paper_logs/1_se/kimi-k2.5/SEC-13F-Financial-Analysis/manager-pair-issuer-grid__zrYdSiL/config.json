@@ -1,0 +1,52 @@
+{
+    "task": {
+        "path": "test_tasks/SEC-13F-Financial-Analysis/manager-pair-issuer-grid",
+        "git_url": null,
+        "git_commit_id": null,
+        "overwrite": false,
+        "download_dir": null,
+        "source": "SEC-13F-Financial-Analysis"
+    },
+    "trial_name": "manager-pair-issuer-grid__zrYdSiL",
+    "trials_dir": "jobs/iter-baseline-kimi-k2.5-r1m-SEC-13F-Financial-Analysis",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+        "name": null,
+        "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+        "model_name": "kimi-k2.5",
+        "override_timeout_sec": null,
+        "override_setup_timeout_sec": null,
+        "max_timeout_sec": null,
+        "kwargs": {},
+        "env": {
+            "ANTHROPIC_API_KEY": "<REDACTED>",
+            "ANTHROPIC_BASE_URL": "https://api.moonshot.ai/anthropic",
+            "ANTHROPIC_MAX_RETRIES": "999"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "import_path": null,
+        "force_build": false,
+        "delete": false,
+        "override_cpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_gpus": null,
+        "suppress_override_warnings": false,
+        "mounts_json": null,
+        "env": {},
+        "kwargs": {}
+    },
+    "verifier": {
+        "override_timeout_sec": null,
+        "max_timeout_sec": null,
+        "disable": false
+    },
+    "artifacts": [],
+    "job_id": "0b55dcd8-5baf-4ffc-9b71-a7c8c6d7dbb1"
+}

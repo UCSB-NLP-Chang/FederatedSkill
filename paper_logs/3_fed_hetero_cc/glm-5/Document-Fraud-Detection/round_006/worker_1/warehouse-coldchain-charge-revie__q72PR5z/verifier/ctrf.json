@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778832659.019184,
+            "stop": 1778832659.2207954
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.18162371590733528,
+                "start": 1778832659.0251124,
+                "stop": 1778832659.220667,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .F                                                                       [100%]\nE           =================================== FAILURES ===================================\nE           _______________________ test_output_matches_ground_truth _______________________\nE           \nE               def test_output_matches_ground_truth():\nE                   actual = load_json(OUTPUT_PATH)\nE                   expected = load_json(GROUND_TRUTH_PATH)\nE               \nE                   assert isinstance(actual, list), 'Output must be a JSON array.'\nE                   assert [row[PAGE_KEY] for row in actual] == sorted(row[PAGE_KEY] for row in actual), 'Rows must be sorted by page number ascending.'\nE                   for row in actual:\nE                       assert set(row.keys()) == set(REQUIRED_KEYS), f'Unexpected keys in row: {row}'\nE                   ok, msg = json_close(actual, expected)\nE           >       assert ok, msg\nE           E       AssertionError: Length mismatch: 4 vs 5\nE           E       assert False\nE           \nE           /tests/test_outputs.py:59: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_output_matches_ground_truth - Assertion...\nE           1 failed, 1 passed in 0.02s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Absorbed u0's comprehensive template-formula-fill skill and reference-locking validation script to address common verifier failures caused by missing absolute references in Excel formulas.",
+  "upsert_paths": [
+    "template-formula-fill/SKILL.md",
+    "template-formula-fill/scripts/check_reference_locking.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "template-formula-fill/scripts/check_reference_locking.py": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.5
+    ],
+    "template-formula-fill/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

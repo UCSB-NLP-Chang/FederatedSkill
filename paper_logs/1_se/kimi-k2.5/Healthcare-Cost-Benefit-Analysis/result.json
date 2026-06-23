@@ -1,0 +1,39 @@
+{
+    "id": "c1143479-ed60-4cb4-a277-5aea85525e9f",
+    "started_at": "2026-05-12T22:35:32.380333",
+    "finished_at": "2026-05-12T23:30:38.498095",
+    "n_total_trials": 9,
+    "stats": {
+        "n_trials": 9,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Healthcare-Cost-Benefit-Analysis": {
+                "n_trials": 9,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.1111111111111111
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_cyclemargin_30v90__mSkXLsY",
+                            "harbor_gdpval_42__5NNjkdj",
+                            "harbor_syncpack_28v56__jkrX7L5",
+                            "harbor_mailerfill_45v90__XAZu8rb",
+                            "harbor_infusionbatch_7v14__GGD8jy5",
+                            "harbor_oncocooler_10v20__counbZg",
+                            "harbor_vaxcrate_6v12__L64iWHD",
+                            "harbor_diagpanel_14v28__VN4LiaG"
+                        ],
+                        "1.0": [
+                            "harbor_reagentkit_bulk__KKcQEb5"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

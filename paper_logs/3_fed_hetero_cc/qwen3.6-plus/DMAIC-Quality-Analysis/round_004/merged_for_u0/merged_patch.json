@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Structural rewrite of SKILL.md (stripped to pure procedure, removed formulas/coefficients) per task_memory finding that prose enforcement exhausted after 5 rounds. Applied u1's schema.md \"DO NOT RENAME KEYS\" section and verify_deliverables.py fix. See DECISIONS.md.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/schema.md",
+    "statistical-process-analysis/scripts/verify_deliverables.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/references/schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/scripts/verify_deliverables.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.6974828000000004
+}

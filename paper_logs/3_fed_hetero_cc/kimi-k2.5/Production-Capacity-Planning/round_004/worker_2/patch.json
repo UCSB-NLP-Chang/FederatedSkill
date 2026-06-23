@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The task succeeded but revealed a gap in the existing skill: handling duplicate phase/week entries in input data. The agent correctly identified and handled duplicate phases (10, 18, 28) by using first occurrence only, but this pattern wasn't documented. Also, the skill lacked explicit guidance on 'Phase' vs 'Week' terminology and the specific capacity rules for this task variant (20 hrs/day, OT=10*(days-4)). Adding these patterns will help future agents handle similar PCB assembly planning tasks without trial and error.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": []
+}

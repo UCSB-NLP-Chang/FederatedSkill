@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Added a reusable 'Custom Output Schema Template' to cross-format-data-diff/SKILL.md. The trace showed the agent successfully writing custom Python to match domain-specific output keys (retired_schools, revised_schools) instead of the helper script's generic keys. This template provides a copy-paste pattern for future agents facing similar verifier requirements, reducing trial-and-error and ensuring consistent diff loop structure.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": []
+}

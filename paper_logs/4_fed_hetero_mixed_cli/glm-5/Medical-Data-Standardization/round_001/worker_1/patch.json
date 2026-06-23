@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The trace reveals the existing clinical-lab-harmonization skill failed on a hepatic panel task due to: (1) missing conversion rules for hepatic analytes (bilirubin, albumin, hemoglobin, etc.), (2) incorrect glucose conversion logic where SI values (mmol/L) are numerically smaller than conventional (mg/dL), and (3) CRLF line endings in output despite explicit guidance. Updates expand analyte coverage, clarify the glucose special case, and strengthen line ending enforcement.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/unit-conversions.md",
+    "clinical-lab-harmonization/scripts/harmonize_lab_csv.py"
+  ],
+  "delete_paths": []
+}

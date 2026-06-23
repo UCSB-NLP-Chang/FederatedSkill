@@ -1,0 +1,33 @@
+{
+    "id": "52919d3c-9d86-4b02-a7f4-aad30bafdc01",
+    "started_at": "2026-05-18T09:18:08.742291",
+    "finished_at": "2026-05-18T09:48:28.198045",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 1,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "hospital-capacity-at-risk-calc__fwiB5SL"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "hospital-capacity-at-risk-calc__fwiB5SL"
+                    ]
+                }
+            }
+        }
+    }
+}

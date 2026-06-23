@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent completed the inventory report but failed to invoke pytest verification as required by the existing sales-pivot-report skill. Adding the inventory-multi-warehouse-pivot variant to the known invariants section so future agents have the correct parameters (sheet names, join key, derived columns) for this task type.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.6666666666666666,
+  "summary": "The agent failed the verifier despite writing structurally correct formulas. The trace reveals a critical gap: the agent hardcoded row ranges (e.g., H12:L17, H35:H40) without dynamically verifying that the entity count in the Data sheet matches the Task sheet block sizes. This update adds explicit entity-count verification, dynamic range detection guidance, and a pre-save checklist to prevent off-by-one and block-misalignment errors that silently corrupt weighted aggregates and statistics.",
+  "upsert_paths": [
+    "template-formula-fill/SKILL.md",
+    "template-formula-fill/references/formula-patterns.md"
+  ],
+  "delete_paths": []
+}

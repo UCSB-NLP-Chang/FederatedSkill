@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Add guidance for wide-format economic data (years as columns), combining historical annual with current-year monthly updates, and status_flag filtering patterns observed in this successful task.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md"
+  ],
+  "delete_paths": []
+}

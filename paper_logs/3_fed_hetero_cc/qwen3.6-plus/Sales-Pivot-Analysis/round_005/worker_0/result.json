@@ -1,0 +1,29 @@
+{
+    "id": "e4c0d17b-0952-4422-83b1-9d4e554822d9",
+    "started_at": "2026-05-15T00:14:57.349434",
+    "finished_at": "2026-05-15T00:29:07.962698",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Sales-Pivot-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "employee-compensation-pivot__X4KAm8Y"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

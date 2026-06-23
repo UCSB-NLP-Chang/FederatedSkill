@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.4,
+  "summary": "Update production-capacity-planning skill with shift-day selection pattern, date-cutoff distribution workflow, and robust date comparison helpers. The trace revealed repeated datetime vs date comparison bugs, variable scoping errors in verification loops, and brittle bulk distribution logic. These updates capture the working patterns for shift-day scenarios (20-24 high-cap days), two-pass date-cutoff distribution, and a canonical date conversion helper to prevent the TypeError failures seen in the trace.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md",
+    "production-capacity-planning/scripts/validate_workbook.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,56 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Round 1.\n\nKey actions:\n- Renamed skill to `economic-time-series-correlation` (peer-majority alignment)\n- Fixed critical HP filter return order bug in SKILL.md and hp_correlation.py\n- Added scipy.signal.hp_filter anti-pattern (u1's unique contribution)\n- Absorbed u0's mean\u22480 validation check and u2's parse_year_markers.py + Known invariants sub-task variants\n\nSee DECISIONS.md for full decision log.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md",
+    "economic-time-series-correlation/scripts/hp_correlation.py",
+    "economic-time-series-correlation/scripts/parse_year_markers.py"
+  ],
+  "delete_paths": [
+    "economic-time-series-analysis/SKILL.md",
+    "economic-time-series-analysis/references/excel-year-parsing.md",
+    "economic-time-series-analysis/scripts/hp_correlation.py"
+  ],
+  "provenance": {
+    "economic-time-series-analysis/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "economic-time-series-analysis/references/excel-year-parsing.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "economic-time-series-correlation/scripts/hp_correlation.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "economic-time-series-correlation/references/excel-year-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "economic-time-series-correlation/scripts/parse_year_markers.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "economic-time-series-correlation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "economic-time-series-analysis/scripts/hp_correlation.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-correlation/SKILL.md"
+  ],
+  "cost_usd": 1.0947770000000001
+}

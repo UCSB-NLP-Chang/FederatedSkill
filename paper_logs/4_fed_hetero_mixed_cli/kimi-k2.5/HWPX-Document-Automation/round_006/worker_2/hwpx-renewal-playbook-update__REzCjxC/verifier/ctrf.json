@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068460.4882529,
+            "stop": 1779068460.6750102
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.16604669392108917,
+                "start": 1779068460.4957287,
+                "stop": 1779068460.6748848,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .F..                                                                     [100%]\nE           =================================== FAILURES ===================================\nE           _____________ test_required_updates_present_and_old_values_removed _____________\nE           \nE               def test_required_updates_present_and_old_values_removed():\nE                   update = json.loads(UPDATE_FILE.read_text(encoding=\"utf-8\"))\nE                   section0_xml = load_section(OUTPUT_FILE, \"section0.xml\")\nE                   section1_xml = load_section(OUTPUT_FILE, \"section1.xml\")\nE                   new_window = f'{update[\"window_start\"]} ~ {update[\"window_end\"]}'\nE                   required = [\nE                       update[\"customer\"],\nE                       update[\"owner_name\"],\nE                       new_window,\nE                       update[\"band\"],\nE                       update[\"escalation_email\"],\nE                       update[\"note\"],\nE                       *followup_items(),\nE                   ]\nE                   for value in required:\nE           >           assert value in section0_xml or value in section1_xml\nE           E           assert ('Asteron Commerce' in '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\\n<hp:section xmlns:hp=\"http://www.hancom.co.kr/hwpml/2010/HWPML\" id=\"section0\"...DRef=\"0\"><hp:run charPrIDRef=\"0\"><hp:t>\uac00\uaca9 \uba54\ubaa8: \uac00\uaca9 \uac80\ud1a0\uac00 \ub05d\ub0a0 \ub54c\uae4c\uc9c0 \ud560\uc778 \ubb38\uad6c\ub97c \uc678\ubd80\uc5d0 \uacf5\uc720\ud558\uc9c0 \ub9c8\uc138\uc694.</hp:t></hp:run></hp:p>\\n</hp:section>' or 'Asteron Commerce' in '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\\n<hp:section xmlns:hp=\"http://www.hancom.co.kr/hwpml/2010/HWPML\" id=\"section1\"...hp:p id=\"47\" paraPrIDRef=\"0\"><hp:run charPrIDRef=\"0\"><hp:t>\uae30\uc874 \ud788\uc2a4\ud1a0\ub9ac: 2025\ub144 1\ubd84\uae30 \ucd08\uc548</hp:t></hp:run></hp:p>\\n</hp:section>')\nE           \nE           /tests/test_outputs.py:48: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_required_updates_present_and_old_values_removed\nE           1 failed, 3 passed in 0.02s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779089854.15048,
+            "stop": 1779089854.4723957
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.3029731009155512,
+                "start": 1779089854.157577,
+                "stop": 1779089854.472288,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: F                                                                        [100%]\nE           =================================== FAILURES ===================================\nE           _________________________________ test_outputs _________________________________\nE           \nE               def test_outputs():\nE                   output_file = '/app/workspace/case_settlement.xlsx'\nE                   expected_file = os.path.join(os.path.dirname(__file__), 'case_settlement_oracle.xlsx')\nE                   assert os.path.exists(output_file), f'Missing output: {output_file}'\nE                   actual_sheets = _sheet_names(output_file)\nE                   assert actual_sheets == ['events', 'net_summary'], f'Unexpected sheets: {actual_sheets}'\nE                   for sheet_name, header, order_index in [('events', ['case_id', 'relative_path', 'document_type', 'document_ref', 'date', 'amount'], 0), ('net_summary', ['case_id', 'purchase_total', 'credit_total', 'net_amount', 'latest_date'], 0)]:\nE                       actual_rows = _read_rows(output_file, sheet_name)\nE                       expected_rows = _read_rows(expected_file, sheet_name)\nE                       assert actual_rows, f'Sheet {sheet_name} is empty'\nE                       assert actual_rows[0] == header, f'Header mismatch in {sheet_name}: {actual_rows[0]}'\nE                       data_rows = [row for row in actual_rows[1:] if row and row[0] != '']\nE                       ordering = [row[order_index] for row in data_rows]\nE                       assert ordering == sorted(ordering), f'Rows not sorted in {sheet_name}: {ordering}'\nE                       ok, msg = rows_match(actual_rows, expected_rows)\nE           >           assert ok, f'Sheet {sheet_name} differs from oracle: {msg}'\nE           E           AssertionError: Sheet events differs from oracle: Row 1 col 3: text mismatch 'CR-A-OO1' vs 'CR-A-001'\nE           E           assert False\nE           \nE           /tests/test_outputs.py:66: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_outputs - AssertionError: Sheet events ...\nE           1 failed in 0.14s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

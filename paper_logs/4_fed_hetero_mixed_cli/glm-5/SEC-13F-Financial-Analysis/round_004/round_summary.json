@@ -1,0 +1,30 @@
+{
+  "round_idx": 4,
+  "assignments": [
+    [
+      "u0",
+      "manager-pair-issuer-grid"
+    ],
+    [
+      "u1",
+      "manager-pair-issuer-grid"
+    ],
+    [
+      "u2",
+      "manager-pair-issuer-grid"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1548.2728898525238
+}

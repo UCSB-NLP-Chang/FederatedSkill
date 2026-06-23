@@ -1,0 +1,42 @@
+{
+  "worker_id": "u1",
+  "summary": "",
+  "upsert_paths": [
+    "logistics-reliability-analysis/SKILL.md",
+    "logistics-reliability-analysis/assets/brief_template.md",
+    "logistics-reliability-analysis/references/output_schema.md",
+    "logistics-reliability-analysis/scripts/compute_logistics_metrics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "logistics-reliability-analysis/SKILL.md": [
+      "upsert",
+      "u0",
+      0.1111111111111111
+    ],
+    "logistics-reliability-analysis/scripts/compute_logistics_metrics.py": [
+      "upsert",
+      "u0",
+      0.1111111111111111
+    ],
+    "logistics-reliability-analysis/references/output_schema.md": [
+      "upsert",
+      "u0",
+      0.1111111111111111
+    ],
+    "logistics-reliability-analysis/assets/brief_template.md": [
+      "upsert",
+      "u0",
+      0.1111111111111111
+    ]
+  },
+  "conflicts": [
+    "logistics-reliability-analysis/SKILL.md",
+    "logistics-reliability-analysis/scripts/compute_logistics_metrics.py",
+    "logistics-reliability-analysis/references/output_schema.md",
+    "logistics-reliability-analysis/assets/brief_template.md",
+    "__llm_call_failed__:NotFoundError:litellm.NotFoundError: OpenAIException - The model `qwen3.6-plus` does not exist or you do not have access to it.",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

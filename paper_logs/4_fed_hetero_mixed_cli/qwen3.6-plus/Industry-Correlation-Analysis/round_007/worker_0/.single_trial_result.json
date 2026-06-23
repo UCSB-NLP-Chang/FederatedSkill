@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "econ-coldchain-lastmile-correlat__gJsSFLY",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/round_007/worker_0/econ-coldchain-lastmile-correlat__gJsSFLY",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/round_007/worker_0/econ-coldchain-lastmile-correlat__gJsSFLY",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

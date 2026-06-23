@@ -1,0 +1,38 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus). Applied target's reward=1.0 patch wholesale, added u2's orthogonal deterministic-policy and excel-layouts references. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/deterministic-policy.md",
+    "excel-capacity-planning/references/excel-layouts.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/references/deterministic-policy.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/scripts/capacity_planner_template.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/references/excel-layouts.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py"
+  ],
+  "cost_usd": 0.4158336000000001
+}

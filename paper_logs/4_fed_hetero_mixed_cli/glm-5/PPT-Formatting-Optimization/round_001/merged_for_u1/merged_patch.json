@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "DONE \u2014 Merged u1's SKILL.md (reward=0.889, highest) with u0's critical anti-patterns (BadZipFile, endParaRPr, ns-prefix, troubleshooting table). Applied u1's reference update (bottom-center positioning). Skipped u2's helper script (cross-model contamination risk). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/pptx-structure.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ],
+    "pptx-xml-editing/references/pptx-structure.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "cost_usd": 3.4333379999999996
+}

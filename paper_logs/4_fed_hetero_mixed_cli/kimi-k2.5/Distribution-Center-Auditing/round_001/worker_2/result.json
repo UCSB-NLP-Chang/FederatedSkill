@@ -1,0 +1,29 @@
+{
+    "id": "e0774228-f6e0-49bf-8980-e66bd7db02c8",
+    "started_at": "2026-05-18T00:13:03.941942",
+    "finished_at": "2026-05-18T00:15:07.570758",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Distribution-Center-Auditing": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_trailer_detention_audit__tJHYxXo"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

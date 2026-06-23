@@ -1,0 +1,29 @@
+{
+    "id": "8257d15e-9c35-4480-a8de-1f6ff2f6a2c7",
+    "started_at": "2026-05-14T20:42:47.142448",
+    "finished_at": "2026-05-14T20:46:02.145912",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_gdpval_21__7mtKqZg"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

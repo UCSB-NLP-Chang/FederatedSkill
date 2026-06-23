@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's reward=1.0 patch adding research-stipend-reconciliation variant + adjustment resolution guidance. Kept target's skill style (numbered workflow, ~59 lines) per memory.md qwen style-fit insights; rejected peer prose/table styles validated for glm-5/kimi but not transferring to qwen. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "expense-record-validation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-record-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.4189161
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Updates excel-capacity-reconciliation to address sheet ordering brittleness, default sheet removal, and dynamic control row calculation observed in the trace. Adds a reusable structural verification script to catch legacy node check failures before submission.",
+  "upsert_paths": [
+    "excel-capacity-reconciliation/SKILL.md",
+    "excel-capacity-reconciliation/scripts/verify_rollforward.py"
+  ],
+  "delete_paths": []
+}

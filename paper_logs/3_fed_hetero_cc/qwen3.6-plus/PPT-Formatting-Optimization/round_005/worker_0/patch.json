@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8888888888888888,
+  "summary": "Added auto-numbered bullet XML manipulation and CSV-based text standardization workflows to pptx-manipulation. These address brittle patterns seen in the trace where python-pptx lacks high-level APIs for list numbering and direct text replacement breaks formatting. Includes verification helpers and explicit anti-patterns for future runs.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,38 @@
+{
+    "id": "f6ccc8ca-d564-4262-863b-688f0e762e81",
+    "started_at": "2026-05-10T13:35:02.431701",
+    "finished_at": "2026-05-10T14:16:49.517242",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Inventory-&-Finance-Integration": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.375
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_gdpval_21__swK8WiG",
+                            "new_task_9_hospital_staffing_res__GzzMfKK",
+                            "new_task_10_maintenance_calcfiel__PmSFRLr"
+                        ],
+                        "0.0": [
+                            "new_task_9_datacenter_capacity_r__yZ6kfuq",
+                            "new_task_10_transit_subsidy_roll__EbAoqV7",
+                            "new_task_11_media_rights_rollfor__nypaAZJ",
+                            "new_task_12_mealkit_freshness_re__da9Gmhp",
+                            "new_task_11_datacenter_stochasti__JYkw4VR"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus). Applied target's queue-capacity-planning wholesale (reward=1.0), consolidated u1/u2's overlapping Excel skills into one umbrella excel-processing. Fixed rounding violation, added precision/invariants sections. 2 skills in library. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "excel-processing/SKILL.md",
+    "excel-processing/scripts/verify_excel.py",
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "queue-capacity-planning/references/simulation_rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-processing/scripts/verify_excel.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "queue-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "queue-capacity-planning/scripts/queue_simulator.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.6852309999999998
+}

@@ -1,0 +1,32 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) on OCR-Data-Extraction R4. Applied u2's SKILL.md (comprehensive, 240 lines), u0's utility-bill-patterns.md (corrected u2's formatting bug), and u1's invoice-patterns.md enhancement. All workers converged on utility-bill patterns. See DECISIONS.md for details on the critical precision bug fix in utility-bill-patterns.md.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/invoice-patterns.md",
+    "image-data-extraction/references/utility-bill-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/references/utility-bill-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "image-data-extraction/references/invoice-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/utility-bill-patterns.md"
+  ],
+  "cost_usd": 0.5289965999999999
+}

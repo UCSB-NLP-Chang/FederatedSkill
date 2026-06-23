@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0 wholesale (reward=1.0). Added engine='openpyxl' recommendation and course catalog terminology. Rejected u1/u2 verbose SKILL.md expansions as they don't fit qwen-code style. See DECISIONS.md.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "cost_usd": 3.1624920000000003
+}

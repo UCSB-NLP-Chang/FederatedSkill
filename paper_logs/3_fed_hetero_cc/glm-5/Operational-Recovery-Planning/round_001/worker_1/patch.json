@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Updated queue-capacity-planning skill to be more generalizable across domains (SOC alerts, radiology readings, etc.). Added explicit parameter adaptation guidance since the trace showed the agent needed different capacity values, thresholds, and column headers than the default SOC scenario. The existing script is now documented as a template that requires parameter modification for different scenarios.",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": []
+}

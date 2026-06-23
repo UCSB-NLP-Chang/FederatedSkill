@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds JSON input format handling to the workload-capacity-planning skill. The trace showed JSON demand data as input, which isn't currently documented alongside Excel and CSV formats. This minimal update ensures future agents recognize JSON as a valid input source and apply the same demand extraction pattern.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

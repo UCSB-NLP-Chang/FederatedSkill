@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "R6 merge complete for u2. Applied target's validated respiratory-panel-harmonization (r=1.0) wholesale; rejected u0 (r=0.82) and u1 (r=0.73) patches that failed. Library: 3 skills. See DECISIONS.md.",
+  "upsert_paths": [
+    "respiratory-panel-harmonization/SKILL.md",
+    "respiratory-panel-harmonization/references/lactate-conversion.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "respiratory-panel-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "respiratory-panel-harmonization/references/lactate-conversion.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.79426
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "The agent failed the weighted-port-throughput-calc task likely due to using deprecated QUARTILE function (without .INC suffix) instead of QUARTILE.INC or PERCENTILE.INC, violating the skill's explicit guidance. The agent also failed to run the mandatory validation script. This patch adds the specific port throughput pattern to Known Invariants, strengthens the function naming warnings to explicitly forbid plain QUARTILE, and updates the validation script to detect and flag deprecated Excel function names.",
+  "upsert_paths": [
+    "excel-formula-template/SKILL.md",
+    "excel-formula-template/scripts/validate_formulas.py"
+  ],
+  "delete_paths": []
+}

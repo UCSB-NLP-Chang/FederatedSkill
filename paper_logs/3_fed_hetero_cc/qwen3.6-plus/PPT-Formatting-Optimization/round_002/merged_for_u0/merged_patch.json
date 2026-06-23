@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R2. Applied target's own SKILL.md (lxml qn() + dimension persistence) and absorbed u1's startAt guidance. Rejected u2 due to false positive verification bugs. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/pptx-xml-schema.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/references/pptx-xml-schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "cost_usd": 1.5088079999999997
+}

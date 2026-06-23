@@ -1,0 +1,39 @@
+{
+  "worker_id": "u0",
+  "summary": "MERGE COMPLETE. Synthesized library from all patches (all r=0.0) fixing glucose trap, removing contradictory rounding, and adding hepatic panel detection. Renamed to peer-majority `clinical-lab-harmonization`. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md"
+  ],
+  "delete_paths": [
+    "clinical-lab-data-harmonization/SKILL.md",
+    "clinical-lab-data-harmonization/references/conversion-factors.md"
+  ],
+  "provenance": {
+    "clinical-lab-harmonization/references/conversion-factors.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "clinical-lab-data-harmonization/references/conversion-factors.md": [
+      "delete",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "clinical-lab-data-harmonization/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md"
+  ],
+  "cost_usd": 2.5756980000000005
+}

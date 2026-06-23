@@ -1,0 +1,127 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ...FFFFFF                                                                [100%]
+E           =================================== FAILURES ===================================
+E           ____________________ TestSheetStructure.test_summary_title _____________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f6a779063c0>
+E           
+E               def test_summary_title(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['Summary']
+E           >       assert ws['B1'].value is not None, "Summary B1 should contain organization name"
+E           E       AssertionError: Summary B1 should contain organization name
+E           E       assert None is not None
+E           E        +  where None = <Cell 'Summary'.B1>.value
+E           
+E           /tests/test_outputs.py:26: AssertionError
+E           __________________ TestSheetStructure.test_ee_calcs_row_count __________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f6a778ff8f0>
+E           
+E               def test_ee_calcs_row_count(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['EE Calcs (Current)']
+E                   # 87 data rows + 1 totals = 88 rows starting at row 4
+E                   data_rows = sum(1 for r in ws.iter_rows(min_row=4, max_row=100, min_col=2, max_col=2) if r[0].value is not None)
+E           >       assert data_rows >= 87, f"Expected >=87 data rows, got {data_rows}"
+E           E       AssertionError: Expected >=87 data rows, got 86
+E           E       assert 86 >= 87
+E           
+E           /tests/test_outputs.py:35: AssertionError
+E           _______________ TestSheetStructure.test_quarterly_totals_row_91 ________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f6a77a426f0>
+E           
+E               def test_quarterly_totals_row_91(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['EE Calcs (Current)']
+E                   h91 = ws.cell(row=91, column=8).value
+E           >       assert h91 is not None, "Row 91 (quarterly totals) should exist in EE Calcs"
+E           E       AssertionError: Row 91 (quarterly totals) should exist in EE Calcs
+E           E       assert None is not None
+E           
+E           /tests/test_outputs.py:41: AssertionError
+E           ______________ TestSheetStructure.test_summary_references_row_91 _______________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f6a77a41790>
+E           
+E               def test_summary_references_row_91(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['Summary']
+E                   # Check that Summary row 33 references row 91 of EE Calcs
+E                   for col in [3, 4, 5]:
+E                       v = ws.cell(row=33, column=col).value
+E           >           assert v is not None and '91' in str(v), \
+E                           f"Summary row 33 should reference EE Calcs row 91, got {v}"
+E           E           AssertionError: Summary row 33 should reference EE Calcs row 91, got ='EE Calcs (Current)'!R89
+E           E           assert ("='EE Calcs (Current)'!R89" is not None and '91' in "='EE Calcs (Current)'!R89")
+E           E            +  where "='EE Calcs (Current)'!R89" = str("='EE Calcs (Current)'!R89")
+E           
+E           /tests/test_outputs.py:49: AssertionError
+E           _____________________ TestSheetStructure.test_roster_count _____________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f6a77a65010>
+E           
+E               def test_roster_count(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['Roster']
+E                   count = sum(1 for r in ws.iter_rows(min_row=5, max_row=200, min_col=2, max_col=2) if r[0].value is not None)
+E           >       assert count >= 87, f"Expected >=87 roster entries, got {count}"
+E           E       AssertionError: Expected >=87 roster entries, got 85
+E           E       assert 85 >= 87
+E           
+E           /tests/test_outputs.py:56: AssertionError
+E           _______________ TestSheetStructure.test_yoy_service_progression ________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f6a778f7ce0>
+E           
+E               def test_yoy_service_progression(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws1 = wb['EE Calcs (Current)']
+E                   ws2 = wb['EE Calcs (Yr+1)']
+E                   for r in range(4, 91):
+E                       v1 = ws1.cell(row=r, column=6).value
+E                       v2 = ws2.cell(row=r, column=6).value
+E                       if v1 is not None and v2 is not None:
+E           >               assert v2 == v1 + 1, f"Yr+1 service should be +1"
+E                                        ^^^^^^
+E           E               TypeError: can only concatenate str (not "int") to str
+E           
+E           /tests/test_outputs.py:66: TypeError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_summary_title - Ass...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_ee_calcs_row_count
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_quarterly_totals_row_91
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_summary_references_row_91
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_roster_count - Asse...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_yoy_service_progression
+E           6 failed, 3 passed in 0.45s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.74s ===============================

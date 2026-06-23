@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.8,
+  "summary": "The agent failed because it relied on custom verification instead of running the actual grading tests (pytest test_output.py). The trace shows the agent checked sheet order, named ranges, and formulas manually but never executed the grading suite, leading to a false sense of completion. The existing skill already documented the correct workflow (read tests first, run pytest last) but the agent missed these steps. This update strengthens the skill with a mandatory pre-flight checklist, explicit warnings about the 'custom verification trap', and a final validation gate that treats pytest as the only arbiter of success.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/grading-patterns.md"
+  ],
+  "delete_paths": []
+}

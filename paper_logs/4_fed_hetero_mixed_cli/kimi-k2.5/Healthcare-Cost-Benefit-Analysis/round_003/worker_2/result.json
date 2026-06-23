@@ -1,0 +1,29 @@
+{
+    "id": "22fad493-bb8d-4c30-b97c-ce2abc3c1a65",
+    "started_at": "2026-05-24T05:22:11.039765",
+    "finished_at": "2026-05-24T05:24:02.694952",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Healthcare-Cost-Benefit-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_mailerfill_45v90__GFuR9oH"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

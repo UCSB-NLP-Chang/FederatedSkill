@@ -1,0 +1,29 @@
+{
+    "id": "6473133c-89cd-451c-af7f-c02e9ca065f7",
+    "started_at": "2026-05-14T21:41:45.523533",
+    "finished_at": "2026-05-14T21:45:36.453306",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "new_task_10_transit_subsidy_roll__4GHquoC"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

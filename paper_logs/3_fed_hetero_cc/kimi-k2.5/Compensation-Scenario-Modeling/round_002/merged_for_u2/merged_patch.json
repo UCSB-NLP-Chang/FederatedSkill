@@ -1,0 +1,20 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) Round 2. Synthesized u2's test-driven workflow (reward=0.9) with u0's hyperlinks/capped-calculations/output-precision (reward=0.9) and u1's binary-file-reading/capital-D API corrections (reward=0.7). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.9
+    ]
+  },
+  "conflicts": [
+    "excel-financial-modeling/SKILL.md",
+    "__skill_md_invalid__:excel-financial-modeling/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.114595
+}

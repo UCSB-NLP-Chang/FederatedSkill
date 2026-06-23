@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "01-cloud-service-portfolio-diff__8LbRzsw",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/round_000/worker_1/01-cloud-service-portfolio-diff__8LbRzsw",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/round_000/worker_1/01-cloud-service-portfolio-diff__8LbRzsw",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

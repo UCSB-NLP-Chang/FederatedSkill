@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero",
+  "family_name": "Sales-Pivot-Analysis",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "product-sales-pivot",
+      "student-performance-pivot",
+      "library-circulation-pivot",
+      "inventory-multi-warehouse-pivot",
+      "quality-control-pivot",
+      "employee-compensation-pivot",
+      "event-registration-pivot",
+      "budget-reconciliation-pivot"
+    ],
+    "u1": [
+      "product-sales-pivot",
+      "student-performance-pivot",
+      "library-circulation-pivot",
+      "inventory-multi-warehouse-pivot",
+      "quality-control-pivot",
+      "employee-compensation-pivot",
+      "event-registration-pivot",
+      "budget-reconciliation-pivot"
+    ],
+    "u2": [
+      "product-sales-pivot",
+      "student-performance-pivot",
+      "library-circulation-pivot",
+      "inventory-multi-warehouse-pivot",
+      "quality-control-pivot",
+      "employee-compensation-pivot",
+      "event-registration-pivot",
+      "budget-reconciliation-pivot"
+    ]
+  }
+}

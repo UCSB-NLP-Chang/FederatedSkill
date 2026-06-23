@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "cross-quarter-reconciliation__rLUhWJb",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/SEC-13F-Financial-Analysis/round_005/worker_1/cross-quarter-reconciliation__rLUhWJb",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/SEC-13F-Financial-Analysis/round_005/worker_1/cross-quarter-reconciliation__rLUhWJb",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

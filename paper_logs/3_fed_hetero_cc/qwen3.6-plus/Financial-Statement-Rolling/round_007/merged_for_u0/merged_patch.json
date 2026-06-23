@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's quick_validate.py enforcement script (critical per task_memory: prose has failed 7 rounds, only scripts work). Fixed Cross-Sheet Summary Links bug (O12\u2192N12). Added contract-liability variant to Known Invariants. Rejected u2's new skill (same workflow, should be reference not skill) and u1's duplicate Template-Based section. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/scripts/quick_validate.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "financial-rollforward-workbook/scripts/quick_validate.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "cost_usd": 5.058617999999999
+}

@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8888888888888888,
+  "summary": "Adds a reusable skill for programmatic PowerPoint manipulation with python-pptx, covering safe inspection, environment setup, formatting, XML injection for auto-numbered bullets, and verification patterns observed in the trace.",
+  "upsert_paths": [
+    "powerpoint-automation/SKILL.md",
+    "powerpoint-automation/references/auto-numbered-bullets.md",
+    "powerpoint-automation/scripts/inspect_pptx.py"
+  ],
+  "delete_paths": []
+}

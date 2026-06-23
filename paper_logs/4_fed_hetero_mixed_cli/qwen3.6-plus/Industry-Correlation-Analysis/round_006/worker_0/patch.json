@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Update the existing economic-time-series-correlation skill to cover three patterns encountered in this task: alias mapping CSVs (series_aliases.csv), priority-based deduplication, and FY-YYYY fiscal year markers. These are common variations in statistical agency data that future agents should handle without rediscovering.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md"
+  ],
+  "delete_paths": []
+}

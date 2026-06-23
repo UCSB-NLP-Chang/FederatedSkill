@@ -1,0 +1,30 @@
+{
+  "round_idx": 6,
+  "assignments": [
+    [
+      "u0",
+      "atlas_refund_reserve_template_merge"
+    ],
+    [
+      "u1",
+      "atlas_refund_reserve_template_merge"
+    ],
+    [
+      "u2",
+      "atlas_refund_reserve_template_merge"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 0.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1109.1525840759277
+}

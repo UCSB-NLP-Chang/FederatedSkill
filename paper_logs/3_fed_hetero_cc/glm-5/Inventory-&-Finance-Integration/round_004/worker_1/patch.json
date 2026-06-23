@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "Updated excel-workbook-manipulation skill to fix rollforward schedule control row patterns - control rows must have formulas across all month columns (beginning balance + adds - amortization = ending balance for each month), not just in totals column. Added explicit anti-pattern for incomplete control row formulas.",
+  "upsert_paths": [
+    "excel-workbook-manipulation/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "6b7600e2-df48-45a1-810d-da83e794aaab",
+    "started_at": "2026-05-26T01:12:21.298250",
+    "finished_at": "2026-05-26T01:13:36.418342",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "econ-utilities-telecom-correlati__gyAKuBx"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

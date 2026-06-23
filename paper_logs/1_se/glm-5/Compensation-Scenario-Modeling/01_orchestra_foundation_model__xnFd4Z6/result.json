@@ -1,0 +1,103 @@
+{
+  "id": "4fd5ef69-fc01-4dd4-8d1c-79ca5c54286e",
+  "task_name": "01_orchestra_foundation_model",
+  "trial_name": "01_orchestra_foundation_model__xnFd4Z6",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Compensation-Scenario-Modeling/01_orchestra_foundation_model__xnFd4Z6",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Compensation-Scenario-Modeling/01_orchestra_foundation_model"
+  },
+  "source": "Compensation-Scenario-Modeling",
+  "task_checksum": "35b10ad031d39a9c9abd9f0b74202304d1cd0053f0a86b5a49ff9af7ec16f847",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Compensation-Scenario-Modeling/01_orchestra_foundation_model",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Compensation-Scenario-Modeling"
+    },
+    "trial_name": "01_orchestra_foundation_model__xnFd4Z6",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Compensation-Scenario-Modeling",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "b09d782e-6b2c-4a29-a428-7ba49e38774c"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 790335,
+    "n_cache_tokens": 347133,
+    "n_output_tokens": 61213,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-04-27T07:55:21.788641Z",
+  "finished_at": "2026-04-27T08:12:45.725920Z",
+  "environment_setup": {
+    "started_at": "2026-04-27T07:55:21.790753Z",
+    "finished_at": "2026-04-27T07:55:22.879890Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-04-27T07:55:22.879926Z",
+    "finished_at": "2026-04-27T07:55:23.150156Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-04-27T07:55:23.150233Z",
+    "finished_at": "2026-04-27T08:12:34.218472Z"
+  },
+  "verifier": {
+    "started_at": "2026-04-27T08:12:34.219082Z",
+    "finished_at": "2026-04-27T08:12:35.117254Z"
+  }
+}

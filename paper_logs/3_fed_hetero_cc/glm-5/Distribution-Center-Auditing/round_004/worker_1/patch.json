@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds known invariant section for harbor-timesheet-policy-audit task variant, documenting role-based threshold lookups, computed column patterns (Break Deficit, Approval Missing), and Employee-Week summary grouping. This extends the existing spreadsheet-audit-reporting skill with another concrete task pattern.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md",
+    "spreadsheet-audit-reporting/references/computed-column-examples.md"
+  ],
+  "delete_paths": []
+}

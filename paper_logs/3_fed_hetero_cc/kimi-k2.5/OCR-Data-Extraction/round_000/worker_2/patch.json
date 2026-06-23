@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The task involved extracting dates and prices from pharmacy shelf label images using OCR, then outputting structured data to Excel. The agent succeeded on first attempt with a robust Python script using pytesseract. Key insights: (1) OCR requires multiple preprocessing strategies (grayscale, contrast enhancement, inversion, PSM modes) since text quality varies; (2) date parsing needs priority-based extraction (EXPIRY > EXPIRES > MFG) with multiple format patterns; (3) price extraction must handle multiple currency formats (RM, $, MYR) and optional suffixes; (4) Excel output with specific column ordering requires explicit handling. Created a reusable OCR-based extraction skill with the working script and reference patterns.",
+  "upsert_paths": [
+    "ocr-image-extraction/SKILL.md",
+    "ocr-image-extraction/references/patterns.md",
+    "ocr-image-extraction/scripts/extract_from_images.py"
+  ],
+  "delete_paths": []
+}

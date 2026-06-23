@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged u0's reward=1.0 `replenishment-gap-analysis` patch as umbrella skill `excel-inventory-coverage` (renamed for broader scope, peer-aligned with u2's name). Enhanced with output precision section, known invariants for B1-B4, and Read-tool-on-binary-xlsx anti-pattern from u1. Rejected u1's separate excel-processing skill (style mismatch, absorbed anti-pattern) and u2's function-based script (CLI script fits qwen better, pallet_size mismatch). See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-inventory-coverage/SKILL.md",
+    "excel-inventory-coverage/scripts/build_replenishment.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-inventory-coverage/scripts/build_replenishment.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-inventory-coverage/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.1504342
+}

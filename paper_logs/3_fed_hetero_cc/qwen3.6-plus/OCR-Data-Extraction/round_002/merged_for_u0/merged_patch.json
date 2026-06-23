@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 R2 merge complete for u0 (qwen3.6-plus).\n\nApplied u0's concise SKILL.md (77 lines, qwen-friendly numbered workflow) + u1's patterns.md (claim codes/amount keywords). Rejected u2's 307-line script \u2014 patterns captured in patterns.md, script too long for qwen.\n\nB2 (travel claims + roster merge) now covered. All workers reward=1.0. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "image-data-extraction/references/patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md"
+  ],
+  "cost_usd": 0.5550384
+}

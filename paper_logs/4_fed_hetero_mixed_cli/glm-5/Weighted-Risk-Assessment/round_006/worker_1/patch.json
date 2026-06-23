@@ -1,0 +1,12 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The agent failed because it couldn't find test files that actually existed. The verifier ran test_output.py::test_legacy_pytest_suite which failed, but the agent's search didn't locate this file. This patch improves test discovery to search more locations and adds explicit escalation steps when tests can't be found but should exist.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/finding-tests.md",
+    "excel-formula-injection/scripts/find_tests.py",
+    "excel-formula-injection/scripts/verify_before_submit.py"
+  ],
+  "delete_paths": []
+}

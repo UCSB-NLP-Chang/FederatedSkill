@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Adds a reusable skill for programmatically populating Excel workbooks with formulas while preserving formatting and layout using openpyxl. Includes a safe injection helper script and troubleshooting guidance for common verifier mismatches on formula strings and computed values.",
+  "upsert_paths": [
+    "excel-formula-population/SKILL.md",
+    "excel-formula-population/scripts/formula_injector.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a new skill for deduplicating longitudinal lab data by case_id/draw_order and harmonizing units using range-based detection. This complements the existing threshold-based clinical-lab-harmonization skill by providing an alternative detection strategy and handling multi-draw row selection, which was not covered previously.",
+  "upsert_paths": [
+    "lab-dedup-harmonization/SKILL.md",
+    "lab-dedup-harmonization/references/oncology-ranges.md"
+  ],
+  "delete_paths": []
+}

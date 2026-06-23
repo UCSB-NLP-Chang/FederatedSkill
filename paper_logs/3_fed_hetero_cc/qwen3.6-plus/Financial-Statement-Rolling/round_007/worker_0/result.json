@@ -1,0 +1,29 @@
+{
+    "id": "738a1b0e-83cc-4c44-9559-dbc1ce52bec8",
+    "started_at": "2026-05-14T19:29:00.685454",
+    "finished_at": "2026-05-14T19:37:17.281771",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "meridian_contract_liability_orch__s4NdV3P"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

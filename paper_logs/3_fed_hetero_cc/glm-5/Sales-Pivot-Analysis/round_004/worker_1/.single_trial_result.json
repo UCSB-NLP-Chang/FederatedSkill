@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "quality-control-pivot__F8z5NWD",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/round_004/worker_1/quality-control-pivot__F8z5NWD",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/round_004/worker_1/quality-control-pivot__F8z5NWD",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

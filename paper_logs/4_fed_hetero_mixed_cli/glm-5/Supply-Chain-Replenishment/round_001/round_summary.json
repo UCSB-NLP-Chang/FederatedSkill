@@ -1,0 +1,30 @@
+{
+  "round_idx": 1,
+  "assignments": [
+    [
+      "u0",
+      "petcare_midmonth_pallet_gap"
+    ],
+    [
+      "u1",
+      "petcare_midmonth_pallet_gap"
+    ],
+    [
+      "u2",
+      "petcare_midmonth_pallet_gap"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 696.4740314483643
+}

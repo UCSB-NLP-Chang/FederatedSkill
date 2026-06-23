@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Captures the solution for Python package installation failures in externally-managed environments (PEP 668), which is a common blocker agents encounter when trying to pip install on modern Debian/Ubuntu systems.",
+  "upsert_paths": [
+    "python-package-installation/SKILL.md"
+  ],
+  "delete_paths": []
+}

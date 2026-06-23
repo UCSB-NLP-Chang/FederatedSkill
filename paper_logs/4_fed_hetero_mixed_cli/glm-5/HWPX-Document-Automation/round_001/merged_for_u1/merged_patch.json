@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "R1 merge complete. Applied u1's script (targeted linesegarray removal) and u0's verification clarification. Kept broader skill name `hwpx-document-processing` per \"Names are scope\" principle. See DECISIONS.md.",
+  "upsert_paths": [
+    "hwpx-document-processing/SKILL.md",
+    "hwpx-document-processing/scripts/hwpx_fill_template.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-document-processing/scripts/hwpx_fill_template.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "hwpx-document-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.07261
+}

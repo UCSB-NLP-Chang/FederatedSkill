@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.14285714285714285,
+  "summary": "Adds a reusable skill for building complex, formula-driven Excel workbooks with openpyxl. Captures lessons on exact string matching for sheet names/labels, strict sheet ordering, cross-sheet formula syntax, named range definition, and early structural verification to prevent test failures like missing row labels or mismatched sheet names.",
+  "upsert_paths": [
+    "openpyxl-workbook-builder/SKILL.md",
+    "openpyxl-workbook-builder/references/verification-patterns.md",
+    "openpyxl-workbook-builder/scripts/verify_workbook.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "Added media-rights-rollforward as a known sub-task variant in financial-reconciliation skill. This documents the sheet naming pattern ( Rights Summary, Film Rights #2710, Music Rights #2720) and account-based detail sheet structure observed in the trace, helping future agents recognize this domain variant immediately.",
+  "upsert_paths": [
+    "financial-reconciliation/SKILL.md"
+  ],
+  "delete_paths": []
+}

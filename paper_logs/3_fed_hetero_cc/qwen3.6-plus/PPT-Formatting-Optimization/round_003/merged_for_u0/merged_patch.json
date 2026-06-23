@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R3. Applied: u0's buAutoNum safe replacement + u2's Text Cleanup Workflow + u1's verify_pptx.py font size display fix. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/auto-numbered-bullets.md",
+    "pptx-manipulation/scripts/verify_pptx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/references/auto-numbered-bullets.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/scripts/verify_pptx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "cost_usd": 2.2702091999999996
+}

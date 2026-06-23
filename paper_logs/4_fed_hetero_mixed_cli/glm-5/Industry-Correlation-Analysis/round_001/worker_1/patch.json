@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Fixed incorrect documentation about HP filter return order (statsmodels returns cycle, trend not trend, cycle) and added anti-pattern warning about scipy.signal.hp_filter which doesn't exist but is a common wrong import attempt.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

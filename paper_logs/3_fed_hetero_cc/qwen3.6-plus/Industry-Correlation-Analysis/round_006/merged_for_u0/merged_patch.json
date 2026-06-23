@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus). Applied target's lean 68-line patch (reward=1.0) capturing alias/priority patterns while maintaining CRITICAL section placement validated for qwen. Rejected verbose peer patches. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.3512029999999997
+}

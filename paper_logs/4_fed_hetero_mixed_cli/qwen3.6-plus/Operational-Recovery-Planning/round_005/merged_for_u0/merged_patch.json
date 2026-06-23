@@ -1,0 +1,29 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's B2 pattern patches (shift-day D3b, date-cutoff D3c, to_date helper) + absorbed u1's 9-step verification gate to address shared self-verification mismatch. Library: 1 umbrella skill. See DECISIONS.md.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md",
+    "production-capacity-planning/scripts/validate_workbook.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ],
+    "production-capacity-planning/references/constraint-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ],
+    "production-capacity-planning/scripts/validate_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.6494546999999999
+}

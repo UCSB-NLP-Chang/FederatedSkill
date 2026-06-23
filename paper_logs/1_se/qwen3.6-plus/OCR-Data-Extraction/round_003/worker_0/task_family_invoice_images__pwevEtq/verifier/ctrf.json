@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778969235.0502775,
+            "stop": 1778969235.3477783
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.27781248837709427,
+                "start": 1778969235.0576346,
+                "stop": 1778969235.3476725,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: F                                                                        [100%]\nE           =================================== FAILURES ===================================\nE           _________________________________ test_outputs _________________________________\nE           \nE               def test_outputs():\nE                   \"\"\"Test that the invoice extraction outputs are correct.\"\"\"\nE               \nE                   OUTPUT_FILE = \"/app/workspace/invoice_summary.xlsx\"\nE                   EXPECTED_FILE = os.path.join(os.path.dirname(__file__), \"invoice_oracle.xlsx\")\nE               \nE                   # Requirement: output file exists\nE                   assert os.path.exists(OUTPUT_FILE), \"invoice_summary.xlsx not found at /app/workspace\"\nE               \nE                   # Requirement: single sheet named \"invoices\"\nE                   actual_sheets = _get_sheetnames(OUTPUT_FILE)\nE                   assert actual_sheets == [\"invoices\"], (\nE                       f\"Requirement failed: workbook must contain exactly one sheet named 'invoices'.\\n\"\nE                       f\"Actual sheets: {actual_sheets}\"\nE                   )\nE               \nE                   # Read both files\nE                   actual_rows = _read_sheet_as_string_rows(OUTPUT_FILE, \"invoices\")\nE                   expected_rows = _read_sheet_as_string_rows(EXPECTED_FILE, \"invoices\")\nE               \nE                   # Requirement: correct header\nE                   expected_header = [\"filename\", \"date\", \"total_amount\"]\nE                   actual_header = actual_rows[0] if actual_rows else []\nE                   assert actual_header == expected_header, (\nE                       f\"Requirement failed: header/schema mismatch.\\n\"\nE                       f\"Actual header:   {actual_header}\\n\"\nE                       f\"Expected header: {expected_header}\"\nE                   )\nE               \nE                   # Requirement: rows ordered by filename\nE                   data_rows = actual_rows[1:]\nE                   data_rows = [r for r in data_rows if len(r) >= 1 and r[0].strip() != \"\"]\nE                   filenames = [r[0] for r in data_rows]\nE                   assert filenames == sorted(filenames), (\nE                       f\"Requirement failed: rows are not ordered by filename.\\n\"\nE                       f\"Actual order:   {filenames}\\n\"\nE                       f\"Sorted order:   {sorted(filenames)}\"\nE                   )\nE               \nE                   # Requirement: match with oracle (with numeric tolerance)\nE                   ok, msg = rows_match(actual_rows, expected_rows)\nE           >       assert ok, f\"Oracle mismatch: {msg}\"\nE           E       AssertionError: Oracle mismatch: Row 1 col 1: text mismatch '2024-03-03' vs '2024-01-01'\nE           E       assert False\nE           \nE           /tests/test_outputs.py:99: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_outputs - AssertionError: Oracle mismat...\nE           1 failed in 0.12s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

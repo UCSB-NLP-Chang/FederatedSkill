@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Adds a new skill for analyzing medication mailer economics (45-day vs 90-day cycles) which uses a different CSV structure than the existing syncpack skill. The new skill handles split payment/service fee files and mailer format lookups, providing a reusable script to avoid manual calculation errors.",
+  "upsert_paths": [
+    "mailer-cycle-analysis/SKILL.md",
+    "mailer-cycle-analysis/scripts/compute_mailer.py"
+  ],
+  "delete_paths": []
+}

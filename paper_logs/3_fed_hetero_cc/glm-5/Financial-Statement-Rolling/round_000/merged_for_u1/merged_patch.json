@@ -1,0 +1,38 @@
+{
+  "worker_id": "u1",
+  "summary": "Round 0 merge complete. Created 1 umbrella skill `deferred-revenue-rollforward` from u1's base (correct formula logic) + u0's verification script. Enhanced SKILL.md with output precision section and known invariants from task_memory.md. All 3 workers failed R0; key corrections: Ending Balance B11=B10 cascade, Variance = GL-Ending direction, #,##0.00 formatting on all monetary cells. See DECISIONS.md.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/rollforward_anatomy.md",
+    "deferred-revenue-rollforward/scripts/build_rollforward.py",
+    "deferred-revenue-rollforward/scripts/verify_workbook.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "deferred-revenue-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "deferred-revenue-rollforward/scripts/build_rollforward.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "deferred-revenue-rollforward/references/rollforward_anatomy.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "deferred-revenue-rollforward/scripts/verify_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/scripts/build_rollforward.py"
+  ],
+  "cost_usd": 2.2752429
+}

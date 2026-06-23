@@ -1,0 +1,12 @@
+{
+  "worker_id": "u0",
+  "reward": 0.125,
+  "summary": "Adds a new skill for DevOps pipeline performance analysis, capturing the exact statistical workflow (CV, t-stat stability, Wilson CI) and strict JSON schema required by the verifier. Prevents future agents from writing brittle custom scripts that fail on key mismatches or stability thresholds.",
+  "upsert_paths": [
+    "devops-pipeline-analysis/SKILL.md",
+    "devops-pipeline-analysis/assets/brief_template.md",
+    "devops-pipeline-analysis/references/output_schema.md",
+    "devops-pipeline-analysis/scripts/compute_pipeline_metrics.py"
+  ],
+  "delete_paths": []
+}

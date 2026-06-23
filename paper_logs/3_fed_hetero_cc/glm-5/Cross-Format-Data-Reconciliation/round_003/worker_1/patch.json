@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace shows successful execution of the cross-format-data-diff skill with custom code for output key customization. Adding the 'retired_schools'/'revised_schools' pattern to known invariants and a note about archive\u2192current comparison semantics.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": []
+}

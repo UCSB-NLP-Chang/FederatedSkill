@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Merged B3 cross-quarter shift screening workflow from u2 (base) + u0 (date format rule) into u1's library. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/output-schemas.md",
+    "sec-13f-analysis/scripts/shift_screen.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-analysis/references/output-schemas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "sec-13f-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-analysis/scripts/shift_screen.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-analysis/SKILL.md"
+  ],
+  "cost_usd": 4.793331
+}

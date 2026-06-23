@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "The task failed despite the agent believing it succeeded. The agent made a critical error: it used HOURS_PER_DAY = 40 (a standard 8-hour day assumption) when the task clearly specified a 40-hour week with 5 days = 200 hrs/week standard capacity. This means the hourly rate is 40, not 8. The agent's capacity calculations were completely wrong (240/200/160 instead of the correct values). The verifier rejected the output but the agent didn't catch this. The skill needs to emphasize: (1) always derive the hourly rate from the capacity table, never assume 8 hrs/day, (2) common patterns include 40 hrs/day (chemical/reactor tasks), 35 hrs/day (HVAC), 28 hrs/day (ship block), 25 hrs/day (standard), 22 hrs/day (glass), 20 hrs/day (PCB), 18 hrs/day (dye), (3) verify capacity totals match the task specification exactly before proceeding, (4) the chemical/reactor task pattern with 40 hrs/day is a distinct variant that must be recognized.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

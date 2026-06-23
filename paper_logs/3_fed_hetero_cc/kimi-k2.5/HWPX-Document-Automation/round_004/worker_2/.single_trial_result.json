@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "hwpx-training-feedback__SJ88bzt",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/round_004/worker_2/hwpx-training-feedback__SJ88bzt",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/round_004/worker_2/hwpx-training-feedback__SJ88bzt",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

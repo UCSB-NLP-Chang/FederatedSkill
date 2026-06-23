@@ -1,0 +1,36 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Consolidated 1 narrow skill into 1 umbrella skill `excel-data-integration` with 2 domain reference files. Integrated u1's type alignment fix and u0's verification checklist. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-data-integration/SKILL.md",
+    "excel-data-integration/references/academic-metrics.md",
+    "excel-data-integration/references/sales-metrics.md"
+  ],
+  "delete_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-data-integration/references/academic-metrics.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-data-integration/references/sales-metrics.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-data-integration/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.2946859999999998
+}

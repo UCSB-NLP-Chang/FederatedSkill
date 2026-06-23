@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's SKILL.md and output_schema.md patches (schema compliance Wrong\u2192Correct tables, stronger anti-patterns). Target+u0 naming consensus retained (`dmaic-statistical-analysis`). See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/references/output_schema.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "dmaic-statistical-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "__skill_md_invalid__:dmaic-statistical-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.297415
+}

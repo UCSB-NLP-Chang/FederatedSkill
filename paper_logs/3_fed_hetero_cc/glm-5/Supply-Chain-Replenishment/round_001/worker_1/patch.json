@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace demonstrates a successful variant of load-plan-generation with status-based inbound filtering. Adding guidance on filtering inbounds by confirmation status (excluding 'Pending') and updating known invariants to cover this layout pattern.",
+  "upsert_paths": [
+    "load-plan-generation/SKILL.md",
+    "load-plan-generation/references/troubleshooting.md"
+  ],
+  "delete_paths": []
+}

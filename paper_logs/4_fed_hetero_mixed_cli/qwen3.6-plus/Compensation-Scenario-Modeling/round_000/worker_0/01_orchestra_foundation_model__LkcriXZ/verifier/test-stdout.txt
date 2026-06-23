@@ -1,0 +1,197 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FFFFFF                                                                  [100%]
+E           =================================== FAILURES ===================================
+E           ______________________________ test_defined_names ______________________________
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7fa22f509eb0>
+E           
+E               def test_defined_names(output_wb):
+E                   expected = {
+E                       "MWS_Yr1": "Summary!$C$5",
+E                       "MWS_Yr2": "Summary!$D$5",
+E                       "MWS_Yr3": "Summary!$E$5",
+E                       "Princ_Yr1": "Summary!$C$7",
+E                       "Princ_Yr2": "Summary!$D$7",
+E                       "Princ_Yr3": "Summary!$E$7",
+E                       "AssocPr_Yr1": "Summary!$C$8",
+E                       "AssocPr_Yr2": "Summary!$D$8",
+E                       "AssocPr_Yr3": "Summary!$E$8",
+E                       "AsstPr_Yr1": "Summary!$C$9",
+E                       "AsstPr_Yr2": "Summary!$D$9",
+E                       "AsstPr_Yr3": "Summary!$E$9",
+E                       "Media_Yr1": "Summary!$C$10",
+E                       "Media_Yr2": "Summary!$D$10",
+E                       "Media_Yr3": "Summary!$E$10",
+E                       "WHLim_Yr1": "Summary!$C$12",
+E                       "WHLim_Yr2": "Summary!$D$12",
+E                       "WHLim_Yr3": "Summary!$E$12",
+E                       "WHto7k_Yr1": "Summary!$C$13",
+E                       "WHto7k_Yr2": "Summary!$D$13",
+E                       "WHto7k_Yr3": "Summary!$E$13",
+E                       "WH7ktoLim_Yr1": "Summary!$C$14",
+E                       "WH7ktoLim_Yr2": "Summary!$D$14",
+E                       "WH7ktoLim_Yr3": "Summary!$E$14",
+E                       "WHoverLim_Yr1": "Summary!$C$15",
+E                       "WHoverLim_Yr2": "Summary!$D$15",
+E                       "WHoverLim_Yr3": "Summary!$E$15",
+E                       "Sr5to9_Yr1": "Summary!$C$17",
+E                       "Sr5to9_Yr2": "Summary!$D$17",
+E                       "Sr5to9_Yr3": "Summary!$E$17",
+E                       "Sr10to14_Yr1": "Summary!$C$18",
+E                       "Sr10to14_Yr2": "Summary!$D$18",
+E                       "Sr10to14_Yr3": "Summary!$E$18",
+E                       "Sr15to19_Yr1": "Summary!$C$19",
+E                       "Sr15to19_Yr2": "Summary!$D$19",
+E                       "Sr15to19_Yr3": "Summary!$E$19",
+E                       "Sr20to24_Yr1": "Summary!$C$20",
+E                       "Sr20to24_Yr2": "Summary!$D$20",
+E                       "Sr20to24_Yr3": "Summary!$E$20",
+E                       "Sr25up_Yr1": "Summary!$C$21",
+E                       "Sr25up_Yr2": "Summary!$D$21",
+E                       "Sr25up_Yr3": "Summary!$E$21",
+E                   }
+E               
+E                   for name, expected_ref in expected.items():
+E                       assert name in output_wb.defined_names, f"Missing defined name: {name}"
+E                       actual = output_wb.defined_names[name].attr_text
+E           >           assert actual == expected_ref, f"Defined name {name} expected {expected_ref}, got {actual}"
+E           E           AssertionError: Defined name MWS_Yr1 expected Summary!$C$5, got 'Assumptions'!$C$6
+E           E           assert "'Assumptions'!$C$6" == 'Summary!$C$5'
+E           E             
+E           E             - Summary!$C$5
+E           E             + 'Assumptions'!$C$6
+E           
+E           /tests/test_outputs.py:90: AssertionError
+E           _____________________ test_summary_structure_and_formulas ______________________
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7fa22f509eb0>
+E           
+E               def test_summary_structure_and_formulas(output_wb):
+E                   ws = output_wb["Summary"]
+E               
+E           >       assert ws["B1"].value == "Renaissance Popular Orchestra - Musician Compensation"
+E           E       AssertionError: assert 'The Renaissa...lar Orchestra' == 'Renaissance ... Compensation'
+E           E         
+E           E         - Renaissance Popular Orchestra - Musician Compensation
+E           E         + The Renaissance Popular Orchestra
+E           
+E           /tests/test_outputs.py:96: AssertionError
+E           ____________________ test_roster_and_assumptions_migration _____________________
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7fa22f509eb0>
+E           source_wb = <openpyxl.workbook.workbook.Workbook object at 0x7fa22e9e8ef0>
+E           
+E               def test_roster_and_assumptions_migration(output_wb, source_wb):
+E                   src_assump = source_wb["Assumptions"]
+E                   out_assump = output_wb["Assumptions"]
+E               
+E                   assert "Renaissance Popular Orchestra" in str(out_assump["B1"].value)
+E           >       assert out_assump["B3"].value == src_assump["B3"].value
+E           E       AssertionError: assert 'Compensation...l Assumptions' == 'Pay Types'
+E           E         
+E           E         - Pay Types
+E           E         + Compensation Model Assumptions
+E           
+E           /tests/test_outputs.py:158: AssertionError
+E           ____________ test_calc_sheet_formulas[EE Calcs (Current)-Yr1-None] _____________
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7fa22f509eb0>
+E           sheet_name = 'EE Calcs (Current)', year_token = 'Yr1', service_ref = None
+E           
+E               @pytest.mark.parametrize(
+E                   "sheet_name,year_token,service_ref",
+E                   [
+E                       ("EE Calcs (Current)", "Yr1", None),
+E                       ("EE Calcs (Yr+1)", "Yr2", "'EE Calcs (Current)'"),
+E                       ("EE Calcs (Yr+2)", "Yr3", "'EE Calcs (Yr+1)'"),
+E                   ],
+E               )
+E               def test_calc_sheet_formulas(output_wb, sheet_name, year_token, service_ref):
+E                   ws = output_wb[sheet_name]
+E               
+E           >       assert ws["A3"].value == "Employee #"
+E           E       AssertionError: assert None == 'Employee #'
+E           E        +  where None = <Cell 'EE Calcs (Current)'.A3>.value
+E           
+E           /tests/test_outputs.py:186: AssertionError
+E           ______ test_calc_sheet_formulas[EE Calcs (Yr+1)-Yr2-'EE Calcs (Current)'] ______
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7fa22f509eb0>
+E           sheet_name = 'EE Calcs (Yr+1)', year_token = 'Yr2'
+E           service_ref = "'EE Calcs (Current)'"
+E           
+E               @pytest.mark.parametrize(
+E                   "sheet_name,year_token,service_ref",
+E                   [
+E                       ("EE Calcs (Current)", "Yr1", None),
+E                       ("EE Calcs (Yr+1)", "Yr2", "'EE Calcs (Current)'"),
+E                       ("EE Calcs (Yr+2)", "Yr3", "'EE Calcs (Yr+1)'"),
+E                   ],
+E               )
+E               def test_calc_sheet_formulas(output_wb, sheet_name, year_token, service_ref):
+E                   ws = output_wb[sheet_name]
+E               
+E           >       assert ws["A3"].value == "Employee #"
+E           E       AssertionError: assert None == 'Employee #'
+E           E        +  where None = <Cell 'EE Calcs (Yr+1)'.A3>.value
+E           
+E           /tests/test_outputs.py:186: AssertionError
+E           _______ test_calc_sheet_formulas[EE Calcs (Yr+2)-Yr3-'EE Calcs (Yr+1)'] ________
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7fa22f509eb0>
+E           sheet_name = 'EE Calcs (Yr+2)', year_token = 'Yr3'
+E           service_ref = "'EE Calcs (Yr+1)'"
+E           
+E               @pytest.mark.parametrize(
+E                   "sheet_name,year_token,service_ref",
+E                   [
+E                       ("EE Calcs (Current)", "Yr1", None),
+E                       ("EE Calcs (Yr+1)", "Yr2", "'EE Calcs (Current)'"),
+E                       ("EE Calcs (Yr+2)", "Yr3", "'EE Calcs (Yr+1)'"),
+E                   ],
+E               )
+E               def test_calc_sheet_formulas(output_wb, sheet_name, year_token, service_ref):
+E                   ws = output_wb[sheet_name]
+E               
+E           >       assert ws["A3"].value == "Employee #"
+E           E       AssertionError: assert None == 'Employee #'
+E           E        +  where None = <Cell 'EE Calcs (Yr+2)'.A3>.value
+E           
+E           /tests/test_outputs.py:186: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_defined_names - AssertionError: Defined...
+E           FAILED ../tests/test_outputs.py::test_summary_structure_and_formulas - Assert...
+E           FAILED ../tests/test_outputs.py::test_roster_and_assumptions_migration - Asse...
+E           FAILED ../tests/test_outputs.py::test_calc_sheet_formulas[EE Calcs (Current)-Yr1-None]
+E           FAILED ../tests/test_outputs.py::test_calc_sheet_formulas[EE Calcs (Yr+1)-Yr2-'EE Calcs (Current)']
+E           FAILED ../tests/test_outputs.py::test_calc_sheet_formulas[EE Calcs (Yr+2)-Yr3-'EE Calcs (Yr+1)']
+E           6 failed, 1 passed in 0.29s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.54s ===============================

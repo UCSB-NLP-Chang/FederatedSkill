@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged R6 patches for u2: absorbed u1's comprehensive SKILL.md (pattern-based replacement, table cells) + u0's zipfile handling and update_hwpx_direct.py script. Library now covers placeholder, direct text, and pattern-based replacement modes. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/references/advanced-replacement.md",
+    "hwpx-template-fill/scripts/update_hwpx_direct.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-fill/references/advanced-replacement.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "hwpx-template-fill/scripts/update_hwpx_direct.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "hwpx-template-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-fill/SKILL.md"
+  ],
+  "cost_usd": 2.815647
+}

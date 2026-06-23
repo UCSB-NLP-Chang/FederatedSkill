@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Enhanced inventory-load-planning skill with patterns from bakery_weekly_commit_gap task: additional column name variations (SKU Ref, Cases on Rack, Avg Daily Pull, Booking State), data quality filters for null SKUs and invalid dates, status value variations (Firm/Locked/Tentative/Hold), shell heredoc pattern to avoid syntax errors, and sheet name variations (Rack Snapshot, Booking Feed).",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md"
+  ],
+  "delete_paths": []
+}

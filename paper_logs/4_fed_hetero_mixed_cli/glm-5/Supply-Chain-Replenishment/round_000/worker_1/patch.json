@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Creates a skill for inventory load planning calculations from Excel source data. Captures the reusable workflow for reading multi-sheet Excel workbooks with mixed metadata/data layouts, calculating days on hand, OOS dates, pallet requirements, and generating detail + summary output sheets.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/scripts/load_plan_calculator.py"
+  ],
+  "delete_paths": []
+}

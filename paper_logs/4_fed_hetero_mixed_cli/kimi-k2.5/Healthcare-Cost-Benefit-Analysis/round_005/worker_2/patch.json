@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Adds a new skill for oncology cooler dispatch analysis (10-day vs 20-day cycles) following the established pattern of the existing financial analysis skills. The skill handles program catalogs with review flags, versioned site overrides with approval states, and payment matching via known_labels/aliases. Includes a deterministic Python script to generate JSON analysis and Markdown summary outputs.",
+  "upsert_paths": [
+    "oncocooler-dispatch-analysis/SKILL.md",
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py"
+  ],
+  "delete_paths": []
+}

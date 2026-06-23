@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's SKILL.md (target's validated work + conversion-matrix variant) and u2's openxml-structures.md (comprehensive reference). Library: 1 skill, stable. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/references/openxml-structures.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "edit-embedded-office-xml/references/openxml-structures.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/references/openxml-structures.md"
+  ],
+  "cost_usd": 2.33154
+}

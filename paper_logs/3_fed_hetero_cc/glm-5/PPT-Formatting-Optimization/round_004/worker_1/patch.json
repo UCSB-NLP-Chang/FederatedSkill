@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.6666666666666666,
+  "summary": "Creates a python-pptx skill capturing common pitfalls discovered in the trace: coordinate type errors when setting positions, handling grouped shapes, and safely accessing font color properties. These are reusable patterns that will help future agents avoid the same failures.",
+  "upsert_paths": [
+    "python-pptx/SKILL.md",
+    "python-pptx/references/emu-conversions.md"
+  ],
+  "delete_paths": []
+}

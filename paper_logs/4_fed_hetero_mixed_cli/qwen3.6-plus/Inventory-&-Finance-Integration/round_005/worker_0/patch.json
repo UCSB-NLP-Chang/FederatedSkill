@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The agent failed test_legacy_node_checks because it built a rights rollforward workbook from scratch instead of using the existing excel-financial-reconciliation skill. The agent placed Apr Ending Balance in column O, but the verifier expects column O to contain Total Amortization. The agent also used a summary formula pattern (B16=B9+B14 as combined ending balance) that doesn't match the required reconciliation identity (GL Balance = Ending Balance + Total Amortization). This patch updates the existing skill to broaden its trigger coverage, explicitly document the column O = Total Amortization invariant, and add a decision rule for test_legacy_node_checks failures.",
+  "upsert_paths": [
+    "excel-financial-reconciliation/SKILL.md"
+  ],
+  "delete_paths": []
+}

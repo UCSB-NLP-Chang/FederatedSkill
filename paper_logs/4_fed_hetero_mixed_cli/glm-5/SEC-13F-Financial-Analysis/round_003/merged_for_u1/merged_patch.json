@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's B4 patch (issuer_rollup.py + SKILL.md), incorporated u0's COVERPAGE column anti-pattern. B3 gap persists (no R3 retest). See DECISIONS.md.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/scripts/issuer_rollup.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-analysis/scripts/issuer_rollup.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "sec-13f-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "sec-13f-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.9780980000000001
+}

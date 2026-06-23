@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "",
+  "upsert_paths": [
+    "excel-inventory-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-inventory-planning/SKILL.md": [
+      "upsert",
+      "u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.0
+}

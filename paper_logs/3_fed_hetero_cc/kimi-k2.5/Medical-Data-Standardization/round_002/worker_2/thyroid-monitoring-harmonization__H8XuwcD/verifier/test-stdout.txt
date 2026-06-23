@@ -1,0 +1,2521 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.4.1
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .F.FFFFFFFFFFFFFFFFFF.FFFF                                               [100%]
+E           =================================== FAILURES ===================================
+E           ________________________ TestOutput.test_columns_exact _________________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88f3198b0>
+E           
+E               def test_columns_exact(self):
+E                   assert self.df is not None
+E           >       assert list(self.df.columns) == EXPECTED_COLUMNS
+E           E       AssertionError: assert ['TSH\tFree_T...\tCreatinine'] == ['TSH', 'Free...nti_TPO', ...]
+E           E         
+E           E         At index 0 diff: 'TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine' != 'TSH'
+E           E         Right contains 15 more items, first extra item: 'Free_T4'
+E           E         Use -v to get more diff
+E           
+E           /tests/test_outputs.py:78: AssertionError
+E           ___________________ TestOutput.test_no_scientific_or_commas ____________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'TSH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'TSH'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb53890>
+E           
+E               def test_no_scientific_or_commas(self):
+E                   for col in EXPECTED_COLUMNS:
+E           >           for v in self.df[col]:
+E                                ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:87: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'TSH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'TSH'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           _________________________ TestOutput.test_two_decimals _________________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'TSH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'TSH'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb53b60>
+E           
+E               def test_two_decimals(self):
+E                   pat = re.compile(r'^-?\d+\.\d{2}$')
+E                   for col in EXPECTED_COLUMNS:
+E           >           for v in self.df[col]:
+E                                ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:95: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'TSH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'TSH'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           _________________________ TestOutput.test_ranges[TSH] __________________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'TSH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'TSH'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88f3194f0>, col = 'TSH'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'TSH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'TSH'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           _______________________ TestOutput.test_ranges[Free_T4] ________________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Free_T4'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Free_T4'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb53c50>, col = 'Free_T4'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Free_T4'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Free_T4'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           _______________________ TestOutput.test_ranges[Free_T3] ________________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Free_T3'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Free_T3'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb53a10>, col = 'Free_T3'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Free_T3'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Free_T3'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           _______________________ TestOutput.test_ranges[Total_T4] _______________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Total_T4'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Total_T4'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb539e0>, col = 'Total_T4'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Total_T4'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Total_T4'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           _______________________ TestOutput.test_ranges[Total_T3] _______________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Total_T3'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Total_T3'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb53ad0>, col = 'Total_T3'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Total_T3'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Total_T3'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           _______________________ TestOutput.test_ranges[Anti_TPO] _______________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Anti_TPO'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Anti_TPO'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb53740>, col = 'Anti_TPO'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Anti_TPO'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Anti_TPO'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ____________________ TestOutput.test_ranges[Thyroglobulin] _____________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Thyroglobulin'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Thyroglobulin'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb53710>, col = 'Thyroglobulin'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Thyroglobulin'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Thyroglobulin'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ________________ TestOutput.test_ranges[Thyroglobulin_Antibody] ________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Thyroglobulin_Antibody'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Thyroglobulin_Antibody'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb53800>
+E           col = 'Thyroglobulin_Antibody'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Thyroglobulin_Antibody'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Thyroglobulin_Antibody'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           _______________________ TestOutput.test_ranges[Calcium] ________________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Calcium'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Calcium'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb53410>, col = 'Calcium'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Calcium'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Calcium'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ___________________ TestOutput.test_ranges[Ionized_Calcium] ____________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Ionized_Calcium'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Ionized_Calcium'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb533e0>
+E           col = 'Ionized_Calcium'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Ionized_Calcium'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Ionized_Calcium'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ______________________ TestOutput.test_ranges[Phosphorus] ______________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Phosphorus'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Phosphorus'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb53350>, col = 'Phosphorus'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Phosphorus'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Phosphorus'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ______________________ TestOutput.test_ranges[Magnesium] _______________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Magnesium'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Magnesium'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88e5c2030>, col = 'Magnesium'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Magnesium'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Magnesium'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           _________________________ TestOutput.test_ranges[PTH] __________________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'PTH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'PTH'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88e6077a0>, col = 'PTH'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'PTH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'PTH'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ____________________ TestOutput.test_ranges[Vitamin_D_25OH] ____________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Vitamin_D_25OH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Vitamin_D_25OH'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa8e3e25b50>
+E           col = 'Vitamin_D_25OH'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Vitamin_D_25OH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Vitamin_D_25OH'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ______________________ TestOutput.test_ranges[Calcitonin] ______________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Calcitonin'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Calcitonin'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa8e3e25910>, col = 'Calcitonin'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Calcitonin'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Calcitonin'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ______________________ TestOutput.test_ranges[Creatinine] ______________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Creatinine'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Creatinine'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cd229c0>, col = 'Creatinine'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E           >       bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E                                     ^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:102: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/frame.py:4102: in __getitem__
+E               indexer = self.columns.get_loc(key)
+E                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Creatinine'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Creatinine'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ____________________ TestOutput.test_full_row_by_row_match _____________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'TSH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'TSH'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb7c830>
+E           
+E               def test_full_row_by_row_match(self):
+E                   for i in range(len(self.df)):
+E                       for col in EXPECTED_COLUMNS:
+E           >               actual = float(self.df.iloc[i][col])
+E                                          ^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:111: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/series.py:1121: in __getitem__
+E               return self._get_value(key)
+E                      ^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/series.py:1237: in _get_value
+E               loc = self.index.get_loc(label)
+E                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'TSH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'TSH'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ___________________ TestOutput.test_anchor_samples[sample0] ____________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Free_T4'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Free_T4'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb7cc20>
+E           sample = {'col': 'Free_T4', 'row': 0, 'value': 1.25}
+E           
+E               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)
+E               def test_anchor_samples(self, sample):
+E           >       actual = float(self.df.iloc[sample['row']][sample['col']])
+E                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:117: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/series.py:1121: in __getitem__
+E               return self._get_value(key)
+E                      ^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/series.py:1237: in _get_value
+E               loc = self.index.get_loc(label)
+E                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Free_T4'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Free_T4'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ___________________ TestOutput.test_anchor_samples[sample1] ____________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'PTH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'PTH'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb7ce30>
+E           sample = {'col': 'PTH', 'row': 2, 'value': 45.0}
+E           
+E               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)
+E               def test_anchor_samples(self, sample):
+E           >       actual = float(self.df.iloc[sample['row']][sample['col']])
+E                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:117: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/series.py:1121: in __getitem__
+E               return self._get_value(key)
+E                      ^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/series.py:1237: in _get_value
+E               loc = self.index.get_loc(label)
+E                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'PTH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'PTH'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           ___________________ TestOutput.test_anchor_samples[sample2] ____________________
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Vitamin_D_25OH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E           >           return self._engine.get_loc(casted_key)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3805: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           index.pyx:167: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           index.pyx:196: in pandas._libs.index.IndexEngine.get_loc
+E               ???
+E           pandas/_libs/hashtable_class_helper.pxi:7081: in pandas._libs.hashtable.PyObjectHashTable.get_item
+E               ???
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           >   ???
+E           E   KeyError: 'Vitamin_D_25OH'
+E           
+E           pandas/_libs/hashtable_class_helper.pxi:7089: KeyError
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           self = <test_outputs.TestOutput object at 0x7fa88cb7cf20>
+E           sample = {'col': 'Vitamin_D_25OH', 'row': 5, 'value': 32.0}
+E           
+E               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)
+E               def test_anchor_samples(self, sample):
+E           >       actual = float(self.df.iloc[sample['row']][sample['col']])
+E                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:117: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/series.py:1121: in __getitem__
+E               return self._get_value(key)
+E                      ^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/series.py:1237: in _get_value
+E               loc = self.index.get_loc(label)
+E                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = Index(['TSH\tFree_T4\tFree_T3\tTotal_T4\tTotal_T3\tAnti_TPO\tThyroglobulin\tThyroglobulin_Antibody\tCalcium\tIonized_Calcium\tPhosphorus\tMagnesium\tPTH\tVitamin_D_25OH\tCalcitonin\tCreatinine'], dtype='object')
+E           key = 'Vitamin_D_25OH'
+E           
+E               def get_loc(self, key):
+E                   """
+E                   Get integer location, slice or boolean mask for requested label.
+E               
+E                   Parameters
+E                   ----------
+E                   key : label
+E               
+E                   Returns
+E                   -------
+E                   int if unique index, slice if monotonic index, else mask
+E               
+E                   Examples
+E                   --------
+E                   >>> unique_index = pd.Index(list('abc'))
+E                   >>> unique_index.get_loc('b')
+E                   1
+E               
+E                   >>> monotonic_index = pd.Index(list('abbc'))
+E                   >>> monotonic_index.get_loc('b')
+E                   slice(1, 3, None)
+E               
+E                   >>> non_monotonic_index = pd.Index(list('abcb'))
+E                   >>> non_monotonic_index.get_loc('b')
+E                   array([False,  True, False,  True])
+E                   """
+E                   casted_key = self._maybe_cast_indexer(key)
+E                   try:
+E                       return self._engine.get_loc(casted_key)
+E                   except KeyError as err:
+E                       if isinstance(casted_key, slice) or (
+E                           isinstance(casted_key, abc.Iterable)
+E                           and any(isinstance(x, slice) for x in casted_key)
+E                       ):
+E                           raise InvalidIndexError(key)
+E           >           raise KeyError(key) from err
+E           E           KeyError: 'Vitamin_D_25OH'
+E           
+E           /usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py:3812: KeyError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestOutput::test_columns_exact - AssertionEr...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_no_scientific_or_commas - K...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_two_decimals - KeyError: 'TSH'
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[TSH] - KeyError: 'TSH'
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Free_T4] - KeyError:...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Free_T3] - KeyError:...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Total_T4] - KeyError...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Total_T3] - KeyError...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Anti_TPO] - KeyError...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Thyroglobulin] - Key...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Thyroglobulin_Antibody]
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Calcium] - KeyError:...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Ionized_Calcium] - K...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Phosphorus] - KeyErr...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Magnesium] - KeyErro...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[PTH] - KeyError: 'PTH'
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Vitamin_D_25OH] - Ke...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Calcitonin] - KeyErr...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Creatinine] - KeyErr...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_full_row_by_row_match - Key...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample0] - K...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample1] - K...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample2] - K...
+E           23 failed, 3 passed in 3.91s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 4.56s ===============================

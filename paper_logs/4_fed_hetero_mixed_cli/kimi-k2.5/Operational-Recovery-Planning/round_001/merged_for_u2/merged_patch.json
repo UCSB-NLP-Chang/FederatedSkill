@@ -1,0 +1,45 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Renamed queue-recovery-planning to excel-queue-simulation (peer convergence), applied u2's validated SKILL.md (generalized for variable weeks/domains), u0's argparse verify_outputs.py, u2's domain-mappings.md reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-queue-simulation/SKILL.md",
+    "excel-queue-simulation/references/domain-mappings.md",
+    "excel-queue-simulation/scripts/verify_outputs.py"
+  ],
+  "delete_paths": [
+    "queue-recovery-planning/SKILL.md",
+    "queue-recovery-planning/scripts/verify_outputs.py"
+  ],
+  "provenance": {
+    "excel-queue-simulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "queue-recovery-planning/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "excel-queue-simulation/references/domain-mappings.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "queue-recovery-planning/scripts/verify_outputs.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-queue-simulation/scripts/verify_outputs.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-queue-simulation/SKILL.md",
+    "excel-queue-simulation/scripts/verify_outputs.py"
+  ],
+  "cost_usd": 3.6420990000000004
+}

@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's MergedCell anti-pattern to excel-workbook-construction, fixed row references from 12-15 to 13-16 (Harbor format), added column mapping N/O table and control row formula completeness pattern. B1 covered, B2 gap remains. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-workbook-construction/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-construction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.5934189999999995
+}

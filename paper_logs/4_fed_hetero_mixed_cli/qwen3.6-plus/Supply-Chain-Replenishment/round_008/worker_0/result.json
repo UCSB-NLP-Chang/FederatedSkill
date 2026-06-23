@@ -1,0 +1,29 @@
+{
+    "id": "44bcbdf6-5827-4df9-b06e-94dd56da01b8",
+    "started_at": "2026-05-24T00:33:53.158141",
+    "finished_at": "2026-05-24T00:37:32.321673",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_gdpval_21__SLaDKtL"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "id": "efbfd584-9cfb-4939-9c1d-ca084da00d25",
+    "started_at": "2026-05-18T00:12:55.940815",
+    "finished_at": "2026-05-18T00:15:22.409405",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "02-hospital-capacity-portfolio-d__TEv2wHe"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

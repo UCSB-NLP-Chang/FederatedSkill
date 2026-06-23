@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Refines the existing dataset-diff skill based on a successful university course catalog comparison. Adds explicit `engine='openpyxl'` recommendation for `.xlsx` files to prevent pandas engine resolution failures, and extends the domain mapping reference to include course/catalog terminology observed in the trace.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": []
+}

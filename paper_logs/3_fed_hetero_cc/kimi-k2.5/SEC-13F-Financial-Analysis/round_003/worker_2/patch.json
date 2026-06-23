@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The trace shows a successful issuer ownership rollup task: resolving 'palantir' to CUSIP 69608A108, aggregating Q3 holdings by ACCESSION_NUMBER, and returning top 5 managers by value. This is a distinct capability from the existing sec-13f-fund-analysis skill (which matches fund queries to holdings). This new skill handles the inverse: given an issuer name/CUSIP, find which managers hold it and aggregate their positions. The agent used grep to find CUSIP, awk for aggregation, and joined with COVERPAGE for manager names. This pattern is reusable for any issuer ownership analysis.",
+  "upsert_paths": [
+    "sec-13f-issuer-rollup/SKILL.md",
+    "sec-13f-issuer-rollup/scripts/issuer_rollup.py"
+  ],
+  "delete_paths": []
+}

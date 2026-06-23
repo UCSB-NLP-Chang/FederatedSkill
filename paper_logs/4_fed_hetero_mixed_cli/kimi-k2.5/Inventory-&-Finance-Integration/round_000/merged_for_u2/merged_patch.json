@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Round 0 merge complete for u2. Applied u2's own patch wholesale (1 skill, 2 files). Skipped u0 (domain logic, different model/CLI) and u1 (PEP 668 overlap). See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-openpyxl-processing/SKILL.md",
+    "excel-openpyxl-processing/references/code-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-openpyxl-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "excel-openpyxl-processing/references/code-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.2842760000000002
+}

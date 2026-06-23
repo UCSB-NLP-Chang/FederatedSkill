@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "",
+  "upsert_paths": [
+    "nested-document-extraction/SKILL.md",
+    "nested-document-extraction/scripts/verify_nested.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "nested-document-extraction/SKILL.md": [
+      "upsert",
+      "u0",
+      0.0
+    ],
+    "nested-document-extraction/scripts/verify_nested.py": [
+      "upsert",
+      "u0",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.0
+}

@@ -1,0 +1,35 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R5. Added returns-disposition-audit skill from u0 for B4 multi-file join capability. Applied u1's refinements to excel-audit-reporting (Critical Rules + Pre-Submission Checklist). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "returns-disposition-audit/SKILL.md",
+    "returns-disposition-audit/references/multi-file-join-pattern.md",
+    "returns-disposition-audit/scripts/generate_returns_audit.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.4
+    ],
+    "returns-disposition-audit/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ],
+    "returns-disposition-audit/references/multi-file-join-pattern.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ],
+    "returns-disposition-audit/scripts/generate_returns_audit.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.7999240000000003
+}

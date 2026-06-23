@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE \u2014 Round 1 merge complete for u2 (kimi-k2.5).\n\nApplied u2's reward=1.0 patch wholesale (generalized to cover expense + honorarium), added required Output precision section. Library: 1 umbrella skill `multi-source-reconciliation` with violation-types.md reference and configurable script. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "multi-source-reconciliation/SKILL.md",
+    "multi-source-reconciliation/references/violation-types.md",
+    "multi-source-reconciliation/scripts/reconcile_claims.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "multi-source-reconciliation/scripts/reconcile_claims.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "multi-source-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "multi-source-reconciliation/references/violation-types.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.9086022000000001
+}

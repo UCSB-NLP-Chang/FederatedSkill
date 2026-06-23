@@ -1,0 +1,29 @@
+{
+    "id": "b03c1a0d-2a09-48a8-ad47-04c456a3404d",
+    "started_at": "2026-05-13T12:48:29.340903",
+    "finished_at": "2026-05-13T12:54:39.333649",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "snack_dc_august_load_plan__dYTy59r"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

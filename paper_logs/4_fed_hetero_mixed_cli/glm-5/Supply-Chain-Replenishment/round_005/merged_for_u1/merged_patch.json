@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u0's reward=1.0 patch wholesale to u1's library, adding R5 refinements (revision-based deduplication, template workbook handling, earlier delivery logic) per task_memory.md directive. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-load-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.520502
+}

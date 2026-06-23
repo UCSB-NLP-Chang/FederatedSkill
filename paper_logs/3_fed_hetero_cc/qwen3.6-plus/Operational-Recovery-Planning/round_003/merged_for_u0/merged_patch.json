@@ -1,0 +1,32 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 Round 3 merge for u0 (qwen3.6-plus) complete.\n\nApplied u1's multi-row demand patches wholesale (SKILL.md, queue_simulator.py with fixed indentation), merged u2's Display clamping rule into simulation_rules.md. All 3 workers passed R3 with consensus on queue-capacity-planning naming. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "queue-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "queue-capacity-planning/references/simulation_rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "queue-capacity-planning/scripts/queue_simulator.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md"
+  ],
+  "cost_usd": 1.1536879999999998
+}

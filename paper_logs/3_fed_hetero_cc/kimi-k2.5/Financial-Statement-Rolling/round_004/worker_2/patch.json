@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "The agent failed the verifier due to incorrect Ending Balance formulas that self-referenced empty cells (e.g., =B11+C11-D11 instead of =B11+C10-D10), despite existing documentation warning against this exact anti-pattern. The task was a capitalized project cost rollforward - a variant similar to commission assets but with specific data handling (revision filtering, CSV overrides, vendor sorting). Adding this as a documented variant with its specific data patterns will help future agents recognize the rollforward pattern applies and avoid the formula trap.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/project_cost_variant.md"
+  ],
+  "delete_paths": []
+}

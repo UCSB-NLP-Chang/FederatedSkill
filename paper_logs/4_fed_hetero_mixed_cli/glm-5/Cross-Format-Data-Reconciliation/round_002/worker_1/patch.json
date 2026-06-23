@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task succeeded using the existing skill's approach. Adding a complete end-to-end workflow example and clarifying when to use the compute_diff.py script to make the skill more actionable for future agents.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md"
+  ],
+  "delete_paths": []
+}

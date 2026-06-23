@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.25,
+  "summary": "Adds a reusable skill for analyzing multi-sheet Excel pipeline data, computing statistical metrics (mean, CV, trend stability, Wilson CI), and generating structured JSON/Markdown reports. Includes a robust Python helper to avoid dependency issues (scipy fallback) and a reference schema to prevent verifier mismatches seen in the trace.",
+  "upsert_paths": [
+    "pipeline-performance-analysis/SKILL.md",
+    "pipeline-performance-analysis/references/report_schema.md",
+    "pipeline-performance-analysis/scripts/compute_pipeline_stats.py"
+  ],
+  "delete_paths": []
+}

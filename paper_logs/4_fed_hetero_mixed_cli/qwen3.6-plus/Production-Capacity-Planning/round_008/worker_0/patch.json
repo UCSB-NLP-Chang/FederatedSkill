@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Extended workload-capacity-planning skill to handle JSON input format, which appeared in this task but was not covered. Added JSON parsing pattern, null-value handling, and clarified that JSON deduplication uses 'first valid non-null' strategy rather than summing (which applies to Excel/CSV). Also reinforced the python3 command rule and summary sentence-count validation that the agent had to fix mid-run.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/horizontal-data-parsing.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "delete_paths": []
+}

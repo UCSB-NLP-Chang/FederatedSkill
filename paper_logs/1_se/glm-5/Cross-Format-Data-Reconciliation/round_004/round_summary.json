@@ -1,0 +1,18 @@
+{
+  "round_idx": 4,
+  "assignments": [
+    [
+      "u0",
+      "05-datacenter-hardware-registry-diff"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0
+  },
+  "exceptions": {
+    "u0": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 310.60472869873047
+}

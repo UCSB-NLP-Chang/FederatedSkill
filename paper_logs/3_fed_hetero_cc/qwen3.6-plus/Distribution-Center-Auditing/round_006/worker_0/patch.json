@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Added harbor-outbound-manifest-audit invariant and timestamp/type-checking anti-pattern to the existing spreadsheet-audit-reporting skill.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": []
+}

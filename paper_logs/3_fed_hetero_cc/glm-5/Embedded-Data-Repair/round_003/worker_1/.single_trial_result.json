@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "supplier-pack-matrix-refresh__i2LezLu",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Embedded-Data-Repair/round_003/worker_1/supplier-pack-matrix-refresh__i2LezLu",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Embedded-Data-Repair/round_003/worker_1/supplier-pack-matrix-refresh__i2LezLu",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

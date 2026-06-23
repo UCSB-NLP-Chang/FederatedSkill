@@ -1,0 +1,51 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ...F.                                                                    [100%]
+E           =================================== FAILURES ===================================
+E           _____________________ test_summary_sheet_matches_expected ______________________
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7f362daf4da0>
+E           source_and_rules = ([{'Analyst': 'Mina', 'Escalation Code': 'ESC-01', 'Open Age Hours': 2, 'Owner': 'Alex', ...}, {'Analyst': 'Mina', 'Es....0}, 'P3': {'escalation_required': False, 'max_hours': 16.0}, 'P4': {'escalation_required': False, 'max_hours': 24.0}})
+E           
+E               def test_summary_sheet_matches_expected(output_wb, source_and_rules):
+E                   rows, rules = source_and_rules
+E                   ws = output_wb['Summary']
+E                   headers = [ws.cell(1, c).value for c in range(1, 6)]
+E           >       assert headers == SUMMARY_HEADERS
+E           E       AssertionError: assert ['Queue', 'Re...Total Errors'] == ['Queue', 'Re...Total Errors']
+E           E         
+E           E         At index 2 diff: 'SLA Breach' != 'SLA Breaches'
+E           E         Use -v to get more diff
+E           
+E           /tests/test_outputs.py:139: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_summary_sheet_matches_expected - Assert...
+E           1 failed, 4 passed in 0.25s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.53s ===============================

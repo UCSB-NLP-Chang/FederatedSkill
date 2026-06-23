@@ -1,0 +1,38 @@
+{
+    "id": "7fca436e-192a-41ca-b35f-ae341cad2e27",
+    "started_at": "2026-05-10T05:02:36.737473",
+    "finished_at": "2026-05-10T06:03:25.281070",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Embedded-Data-Repair": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.5
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "fx-spot-matrix-refresh__nUmrpKe",
+                            "warehouse-slot-factor-refresh__ZPjWAFT",
+                            "supplier-pack-matrix-refresh__LKWYKvn",
+                            "buffer-dilution-matrix-repair__K2T4fwd"
+                        ],
+                        "0.0": [
+                            "fx-cross-rate-inverse-fix__jzzBdhu",
+                            "catalyst-balance-matrix-sync__GLDaKSq",
+                            "rebate-band-live-embedding-fix__Be3JmnE",
+                            "emission-zone-dual-matrix-repair__bGYipWy"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

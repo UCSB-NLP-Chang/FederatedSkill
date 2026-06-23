@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "This patch extracts a new reusable skill for frozen meal/inventory recovery tracking from a successful task run. The trace demonstrates a pattern of reading multiple related Excel workbooks (Template, Stock, Recovery Log), handling revision-based deduplication (keep highest revision per Load ID), filtering by status (Booked/Loaded vs Tentative/Cancelled), calculating coverage metrics with Days On Hand and out-of-stock projections, and writing to specific output sheets. This is distinct from the existing supply-chain-coverage-analysis skill which focuses on rack/lane/branch variants with different data structures. The new skill captures the template-based workbook refresh pattern with Coverage_Detail and Recovery_Loads output sheets.",
+  "upsert_paths": [
+    "inventory-recovery-tracker/SKILL.md",
+    "inventory-recovery-tracker/references/calculation-details.md",
+    "inventory-recovery-tracker/scripts/refresh_recovery_tracker.py"
+  ],
+  "delete_paths": []
+}

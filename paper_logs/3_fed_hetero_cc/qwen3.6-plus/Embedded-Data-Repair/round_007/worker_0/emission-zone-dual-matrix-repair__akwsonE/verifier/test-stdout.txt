@@ -1,0 +1,51 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .F.                                                                      [100%]
+E           =================================== FAILURES ===================================
+E           ____________ test_live_matrix_updated_and_archive_matrix_unchanged _____________
+E           
+E               def test_live_matrix_updated_and_archive_matrix_unchanged():
+E                   input_wb, input_path = workbook_from_pptx(INPUT_FILE, data_only=True)
+E                   output_wb, output_path = workbook_from_pptx(RESULT_FILE, data_only=True)
+E                   try:
+E                       input_ws = input_wb[SHEET_NAME]
+E                       output_ws = output_wb[SHEET_NAME]
+E                       direct_coord, inverse_coord, target_bounds = find_pair(output_ws, TARGET_TITLE, FROM_TOKEN, TO_TOKEN)
+E                       direct_value = output_ws.cell(*direct_coord).value
+E                       inverse_value = output_ws.cell(*inverse_coord).value
+E           >           assert direct_value is not None, f'Direct rate cell is empty (no cached value)'
+E           E           AssertionError: Direct rate cell is empty (no cached value)
+E           E           assert None is not None
+E           
+E           /tests/test_outputs.py:97: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_live_matrix_updated_and_archive_matrix_unchanged
+E           1 failed, 2 passed in 0.12s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.33s ===============================

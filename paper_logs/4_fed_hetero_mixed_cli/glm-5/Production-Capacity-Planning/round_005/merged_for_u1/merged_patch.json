@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. No changes applied \u2014 all workers passed R5 with reward=1.0 and empty patches. Library unchanged from baseline. See DECISIONS.md for details.",
+  "upsert_paths": [],
+  "delete_paths": [],
+  "provenance": {},
+  "conflicts": [],
+  "cost_usd": 1.145646
+}

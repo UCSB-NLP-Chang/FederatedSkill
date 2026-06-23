@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_reagentkit_bulk__qhb7JUT",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-hwpx-healthcare-glm-M3-hetero/Healthcare-Cost-Benefit-Analysis/round_006/worker_2/harbor_reagentkit_bulk__qhb7JUT",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-hwpx-healthcare-glm-M3-hetero/Healthcare-Cost-Benefit-Analysis/round_006/worker_2/harbor_reagentkit_bulk__qhb7JUT",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

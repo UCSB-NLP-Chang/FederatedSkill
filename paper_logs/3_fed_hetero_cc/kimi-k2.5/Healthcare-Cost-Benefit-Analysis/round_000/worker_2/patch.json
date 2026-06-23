@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.6,
+  "summary": "This trace shows a healthcare financial analysis task that failed verification. The agent performed margin calculations between 30-day and 90-day pharmacy fill cycles but the test failed. Key issues: (1) The agent may have made calculation errors in annual costs (packaging costs seem to use canister count incorrectly), (2) No validation step checked output schema compliance, (3) No verification of arithmetic before writing final outputs, (4) The margin difference formula direction (90_minus_30) should be verified against expected test logic. This skill captures reusable healthcare margin analysis patterns, validation workflows, and common calculation pitfalls.",
+  "upsert_paths": [
+    "healthcare-cycle-margin-analysis/SKILL.md",
+    "healthcare-cycle-margin-analysis/references/calculation_verification.md",
+    "healthcare-cycle-margin-analysis/scripts/validate_margin_calc.py"
+  ],
+  "delete_paths": []
+}

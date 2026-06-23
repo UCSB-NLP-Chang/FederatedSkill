@@ -1,0 +1,52 @@
+--- a/excel-formula-population/SKILL.md
++++ b/excel-formula-population/SKILL.md
+@@ -37,4 +37,11 @@
+ - **Pre-existing Formulas**: Count and preserve them. Do not overwrite cells in legacy columns unless instructed. Account for them when verifying total formula counts.
+ - **Path Handling**: Always save directly to the output path. Copying after saving can cause timestamp/path mismatches in verifiers.
+ 
+-See `references/formula-patterns.md` for detailed syntax and variant examples.+## Verifier Failure Fallback
++If the verifier fails despite correct-looking formulas:
++1. Run `scripts/verify_formulas.py` to dump exact stored strings.
++2. Diff against expected strings. Common mismatches: `openpyxl` auto-upcasing (`percentile` → `PERCENTILE`), missing `$` locks, or swapped row/column arguments in `INDEX`.
++3. If string matching is brittle but logic is sound, verify values programmatically in Python and explicitly state logical correctness in your response.
++4. Check for hidden sheet names or merged cells that shift coordinates.
++
++See `references/formula-patterns.md` for detailed syntax, variant examples, and Python value-verification snippets.
+--- a/excel-formula-population/references/formula-patterns.md
++++ b/excel-formula-population/references/formula-patterns.md
+@@ -30,4 +30,35 @@
+ - Always use `data_only=False` (default) when writing formulas.
+ - Verify with `data_only=True` only after Excel has calculated the file, or use manual value checks.
+ - `openpyxl` expects US locale syntax (commas for argument separators, periods for decimals).
+-- `openpyxl` normalizes formulas by removing spaces after commas. Do not rely on exact string matches if you include spaces.+- `openpyxl` normalizes formulas by removing spaces after commas. Do not rely on exact string matches if you include spaces.
++
++## Python Value Verification Snippet
++Since `openpyxl` does not evaluate formulas, use this pattern to verify logical correctness:
++```python
++import openpyxl
++
++wb = openpyxl.load_workbook('input.xlsx', data_only=False)
++data_ws = wb['Data']
++task_ws = wb['Task']
++
++# Example: Verify H12 lookup manually
++row_key = task_ws['D12'].value
++col_key = task_ws['H10'].value
++
++# Find row index in Data sheet
++row_idx = None
++for r in range(21, 39):
++    if data_ws.cell(row=r, column=4).value == row_key:
++        row_idx = r
++        break
++
++# Find col index in Data sheet
++col_idx = None
++for c in range(8, 13):
++    if data_ws.cell(row=4, column=c).value == col_key:
++        col_idx = c
++        break
++
++expected = data_ws.cell(row=row_idx, column=col_idx).value
++print(f"Expected: {expected}")
++```

@@ -1,0 +1,35 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Created consolidated umbrella skill `excel-workbook-modeling` from u0+u1+u2 patches. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/formula-patterns.md",
+    "excel-workbook-modeling/scripts/verify_formulas.py",
+    "excel-workbook-modeling/scripts/verify_xlsx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-workbook-modeling/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-workbook-modeling/scripts/verify_xlsx.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-workbook-modeling/scripts/verify_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.26341
+}

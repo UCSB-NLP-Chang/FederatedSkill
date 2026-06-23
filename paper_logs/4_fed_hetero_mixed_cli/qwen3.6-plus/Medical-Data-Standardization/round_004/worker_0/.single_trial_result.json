@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "oncology-followup-dedup-harmoniz__4BQimHi",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/round_004/worker_0/oncology-followup-dedup-harmoniz__4BQimHi",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/round_004/worker_0/oncology-followup-dedup-harmoniz__4BQimHi",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.9047619047619048,
+  "summary": "Added budget reconciliation domain to sales-pivot-report skill, including join keys, expected sheets, derived metrics, and matrix layout. Reinforced pytest gate and aggregation label warnings specific to budget tasks to prevent manual verification traps.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

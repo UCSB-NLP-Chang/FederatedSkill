@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Applied target's variant-patterns.md wholesale, added u0's outcome-design-patterns.md, selective SKILL.md merge (outcome-driven design, working day counting, verification alignment, Running Board mapping). Kept baseline date formula approach. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/outcome-design-patterns.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "production-capacity-planning/references/outcome-design-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "production-capacity-planning/references/variant-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "cost_usd": 1.5369468000000006
+}

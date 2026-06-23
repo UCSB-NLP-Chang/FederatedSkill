@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Adds a new skill for Excel capacity reconciliation and financial rollforwards, capturing the exact row alignment, cross-sheet formula syntax, control block spacing, and type requirements needed to pass legacy node verifiers.",
+  "upsert_paths": [
+    "excel-capacity-reconciliation/SKILL.md"
+  ],
+  "delete_paths": []
+}

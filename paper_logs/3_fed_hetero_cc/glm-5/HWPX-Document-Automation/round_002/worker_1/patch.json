@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace shows `unzip` command was unavailable (exit code 127), forcing fallback to Python zipfile. The existing skill lists `unzip` first in the workflow, which leads agents down a failing path. This patch reorders the workflow to prioritize Python zipfile (always available) and adds a note about environment constraints.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md"
+  ],
+  "delete_paths": []
+}

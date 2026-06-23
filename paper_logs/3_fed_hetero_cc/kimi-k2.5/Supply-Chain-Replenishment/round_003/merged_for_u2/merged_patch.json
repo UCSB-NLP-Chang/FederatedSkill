@@ -1,0 +1,66 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete: 1 umbrella skill `supply-chain-coverage-analysis` covering both B1/B2 variants. Applied u1's reward=1.0 umbrella SKILL.md wholesale, kept u2's lane script as variant helper, renamed from supply-demand-gap-analysis for peer naming alignment. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md",
+    "supply-chain-coverage-analysis/references/calculation-formulas.md",
+    "supply-chain-coverage-analysis/references/excel-datetime-handling.md",
+    "supply-chain-coverage-analysis/scripts/calculate_coverage.py",
+    "supply-chain-coverage-analysis/scripts/calculate_lane_coverage.py"
+  ],
+  "delete_paths": [
+    "supply-demand-gap-analysis/SKILL.md",
+    "supply-demand-gap-analysis/references/calculation-formulas.md",
+    "supply-demand-gap-analysis/references/excel-datetime-handling.md",
+    "supply-demand-gap-analysis/scripts/calculate_coverage.py"
+  ],
+  "provenance": {
+    "supply-chain-coverage-analysis/references/excel-datetime-handling.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "supply-demand-gap-analysis/scripts/calculate_coverage.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "supply-chain-coverage-analysis/references/calculation-formulas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "supply-chain-coverage-analysis/scripts/calculate_coverage.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "supply-demand-gap-analysis/references/calculation-formulas.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "supply-demand-gap-analysis/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "supply-chain-coverage-analysis/scripts/calculate_lane_coverage.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "supply-chain-coverage-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "supply-demand-gap-analysis/references/excel-datetime-handling.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.5178516000000001
+}

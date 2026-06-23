@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent misapplied rollforward formulas on control rows instead of summing ending balance values from data rows. This update adds explicit guidance distinguishing data rows (where rollforward formulas belong) from control rows (where SUM formulas belong), preventing this specific failure mode.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "delete_paths": []
+}

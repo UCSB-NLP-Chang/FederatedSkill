@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged u0's SKILL.md patch (148 lines) addressing openpyxl structural drift and B3 dual-matrix invariants. Rejected u1's 213-line prose restructure as style mismatch for qwen. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "cost_usd": 2.297565
+}

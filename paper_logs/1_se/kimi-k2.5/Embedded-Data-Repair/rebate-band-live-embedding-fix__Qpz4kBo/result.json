@@ -1,0 +1,100 @@
+{
+    "id": "8fdbfcd4-d7d9-43fc-b20a-19ff63f2359e",
+    "task_name": "rebate-band-live-embedding-fix",
+    "trial_name": "rebate-band-live-embedding-fix__Qpz4kBo",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5-r1m-Embedded-Data-Repair/rebate-band-live-embedding-fix__Qpz4kBo",
+    "task_id": {
+        "path": "test_tasks/Embedded-Data-Repair/rebate-band-live-embedding-fix"
+    },
+    "source": "Embedded-Data-Repair",
+    "task_checksum": "64a581e224d4775778d72035d9333dbd5040d55f9d5c2e91a005ab94adfe4d4f",
+    "config": {
+        "task": {
+            "path": "test_tasks/Embedded-Data-Repair/rebate-band-live-embedding-fix",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Embedded-Data-Repair"
+        },
+        "trial_name": "rebate-band-live-embedding-fix__Qpz4kBo",
+        "trials_dir": "jobs/iter-baseline-kimi-k2.5-r1m-Embedded-Data-Repair",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "kimi-k2.5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://api.moonshot.ai/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "8b894e35-2674-4fa8-b666-62c275896ace"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.150",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 376916,
+        "n_cache_tokens": 365056,
+        "n_output_tokens": 4780,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-26T00:52:05.738451Z",
+    "finished_at": "2026-05-26T00:54:45.428071Z",
+    "environment_setup": {
+        "started_at": "2026-05-26T00:52:05.739524Z",
+        "finished_at": "2026-05-26T00:52:07.207108Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-26T00:52:07.207123Z",
+        "finished_at": "2026-05-26T00:52:07.696527Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-26T00:52:07.696585Z",
+        "finished_at": "2026-05-26T00:54:31.737039Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-26T00:54:31.744626Z",
+        "finished_at": "2026-05-26T00:54:33.285551Z"
+    }
+}

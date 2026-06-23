@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "R7 merge complete: synthesized B8 template-filling workflow from all workers (SCHEMA LOOKUP TABLE + numbered steps + troubleshooting table). Rejected alert-processing skill (umbrella validated for glm-5). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.7254765000000001
+}

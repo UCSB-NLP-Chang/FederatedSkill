@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Add rebate-rollforward skill capturing the CSV patch/override workflow (override existing rows, insert new rows with status=open), which is not covered by existing financial-rollforward-workbook or project-cost-rollforward skills. The formula patterns match project-cost-rollforward (running balance, column O summary links), but the data processing pipeline with action-based patching is distinct and reusable.",
+  "upsert_paths": [
+    "rebate-rollforward/SKILL.md"
+  ],
+  "delete_paths": []
+}

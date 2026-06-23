@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "econ-equipment-software-correlat__V9iaLBn",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-3fam-dashscope-rerun-M3-hetero/Industry-Correlation-Analysis/round_001/worker_1/econ-equipment-software-correlat__V9iaLBn",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-3fam-dashscope-rerun-M3-hetero/Industry-Correlation-Analysis/round_001/worker_1/econ-equipment-software-correlat__V9iaLBn",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

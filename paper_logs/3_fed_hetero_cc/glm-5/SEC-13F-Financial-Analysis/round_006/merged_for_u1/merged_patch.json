@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) on SEC-13F-Financial-Analysis R6.\n\nApplied target's validated patch (reward=1.0) to umbrella skill: added B7 \"Composite Tasks\" section + semantic sanity-check reinforcement with \"tiger global\" rejection example.\n\nLibrary remains at 1 umbrella skill covering B1-B7 (validated architecture for glm-5). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "sec-13f-fund-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.4393866
+}

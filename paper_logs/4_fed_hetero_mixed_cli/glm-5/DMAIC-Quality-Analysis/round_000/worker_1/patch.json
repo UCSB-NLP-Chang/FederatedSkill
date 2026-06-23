@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.3333333333333333,
+  "summary": "The trace shows a critical failure pattern: custom statistical implementations produced wildly incorrect p-values (e.g., 1.99, 2.0, 0.98 when correct values were 0.006, 0.0, 0.022). The agent caught this by inspecting outputs and switched to scipy.stats. This skill captures the lesson: always use scipy.stats for statistical tests and validate p-values are in [0,1] range.",
+  "upsert_paths": [
+    "statistical-analysis-python/SKILL.md"
+  ],
+  "delete_paths": []
+}

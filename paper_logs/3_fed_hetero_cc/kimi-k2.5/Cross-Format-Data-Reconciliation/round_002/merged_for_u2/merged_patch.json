@@ -1,0 +1,32 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's reward=1.0 patch wholesale: SKILL.md + extraction_patterns.md with type-normalization helpers, new cross_format_diff.py script. All workers converged on PDF-Excel type-mismatch fix this round. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md",
+    "cross-format-data-diff/scripts/cross_format_diff.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/scripts/cross_format_diff.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "cost_usd": 1.9300974
+}

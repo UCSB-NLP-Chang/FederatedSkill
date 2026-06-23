@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated spreadsheet-audit-reporting/SKILL.md to capture lessons from harbor_timesheet_policy_audit: added guidance for auxiliary rule sheets, aggregation type mismatch prevention, and inline heredoc string escaping. Added harbor-timesheet-policy-audit invariants.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": []
+}

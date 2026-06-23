@@ -1,0 +1,29 @@
+{
+    "id": "2e4f9951-dd78-4665-b311-82a9e523c4a7",
+    "started_at": "2026-05-18T00:47:04.219928",
+    "finished_at": "2026-05-18T00:53:15.181810",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "cardio-panel-template-harmonizat__QtiuMtd"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

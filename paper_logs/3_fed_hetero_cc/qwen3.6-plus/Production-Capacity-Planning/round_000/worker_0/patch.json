@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for Excel-based capacity and backlog planning. Covers reading binary Excel files with openpyxl, iterative weekly backlog calculation, dynamic capacity/day adjustment, and generating verified Excel/text outputs. Prevents common failures like using text readers on .xlsx and mishandling backlog clearance thresholds.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py"
+  ],
+  "delete_paths": []
+}

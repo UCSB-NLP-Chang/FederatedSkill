@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for modifying embedded Excel workbooks inside PowerPoint/Word files by treating them as ZIP archives and editing the underlying XML. Captures the successful low-level workflow from the trace, provides a robust helper script using xml.etree.ElementTree, and documents critical decision rules, anti-patterns, and verification steps to prevent future brittle attempts.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py"
+  ],
+  "delete_paths": []
+}

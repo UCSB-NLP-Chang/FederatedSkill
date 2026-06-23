@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task revealed a multi-hop reference lookup pattern (shift_ref \u2192 crosswalk \u2192 authorization) not covered by the existing skill. Adding this pattern plus the new violation types (Invalid Reference Code, Entity-Reference Mismatch) makes the skill applicable to healthcare, vendor payments, and other domains with intermediate code mappings.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/violation-types.md"
+  ],
+  "delete_paths": []
+}

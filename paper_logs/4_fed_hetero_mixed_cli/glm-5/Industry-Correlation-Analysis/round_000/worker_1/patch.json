@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Creates a skill for economic time series correlation analysis using Hodrick-Prescott filtering. The trace demonstrates a complete workflow: reading Excel data, converting nominal to real values, log transformation, HP filter detrending, and correlation computation. This pattern is reusable for any business cycle correlation analysis between economic series.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

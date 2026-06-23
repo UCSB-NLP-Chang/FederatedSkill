@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Extended infusion-batch-analysis umbrella to cover B4 (Oncology Cooler Dispatch) as Variant B. Added compute_cooler_dispatch.py script. Rejected u0's onco-cooler-dispatch-analysis patch (reward=0.4) per umbrella-first principle. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/references/invariants.md",
+    "infusion-batch-analysis/scripts/compute_cooler_dispatch.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "infusion-batch-analysis/scripts/compute_cooler_dispatch.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "infusion-batch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "infusion-batch-analysis/references/invariants.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:infusion-batch-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 6.092448000000001
+}

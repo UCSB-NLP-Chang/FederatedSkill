@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "R3 merge for u2 complete. Applied u2's verified patch wholesale (reward=1.0): multi-section HWPX support via glob-based section*.xml discovery. Rejected u1's hwpx-document-processing (reward=0.66) and u0's style-mismatched simplification. See DECISIONS.md.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/scripts/fill_hwpx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-fill/scripts/fill_hwpx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "hwpx-template-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/scripts/fill_hwpx.py"
+  ],
+  "cost_usd": 2.1065340000000004
+}

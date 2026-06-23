@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8333333333333334,
+  "summary": "Add harbor-cycle-count-variance-audit as a new sub-task invariant to the existing spreadsheet-audit-reporting skill. The trace shows this variant uses Facility/Session grouping, Missing Final Count and Approval Gap error flags, and preserves an Overview sheet from template. The verifier failed despite agent self-verification, suggesting the need for explicit invariant documentation to guide future runs.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": []
+}

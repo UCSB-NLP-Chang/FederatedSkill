@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.7777777777777778,
+  "summary": "Added Text Cleanup Workflow pattern and anti-pattern about sampling identifiers after modification. The trace revealed a failure mode where the agent attempted to identify text boxes by original font size after already modifying font sizes in previous iterations, invalidating the identification criteria. Also strengthened the shape.name anti-pattern with the concrete Chinese localization example observed ('\u6587\u672c\u6846 5').",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "delete_paths": []
+}

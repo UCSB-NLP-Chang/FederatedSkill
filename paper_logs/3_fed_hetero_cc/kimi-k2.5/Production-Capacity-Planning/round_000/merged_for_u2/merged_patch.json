@@ -1,0 +1,29 @@
+{
+  "worker_id": "u2",
+  "summary": "R0 merge complete for u2. Built library from scratch: 1 skill `capacity-backlog-planning` (synthesized from u0's validated workflow + u2's validation/pitfalls) with 2 helper scripts. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "capacity-backlog-planning/SKILL.md",
+    "capacity-backlog-planning/scripts/capacity_planner_template.py",
+    "capacity-backlog-planning/scripts/verify_plan.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "capacity-backlog-planning/scripts/capacity_planner_template.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "capacity-backlog-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "capacity-backlog-planning/scripts/verify_plan.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.4027566
+}

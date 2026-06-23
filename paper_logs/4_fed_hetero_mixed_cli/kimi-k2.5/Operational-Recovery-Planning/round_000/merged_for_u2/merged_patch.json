@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Built u2's library from scratch (round 0): 1 skill `queue-recovery-planning` with domain-specific logic from u2's patch (reward=0.5) plus u0's programmatic verification pattern (reward=1.0). Key fixes: added verify_outputs.py step, tightened summary template, added output precision and known invariants sections. Rejected u1's generic excel-python-operations. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "queue-recovery-planning/SKILL.md",
+    "queue-recovery-planning/scripts/verify_outputs.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "queue-recovery-planning/scripts/verify_outputs.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "queue-recovery-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.365071
+}

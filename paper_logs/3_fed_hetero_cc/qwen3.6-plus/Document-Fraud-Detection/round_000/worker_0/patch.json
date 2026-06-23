@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for cross-referencing and auditing multi-format documents (PDF, XLSX, CSV). Captures the successful workflow from the trace: avoiding binary read failures, using pandas for structured data, applying fuzzy name matching with thresholds, sequential validation rules, and deterministic JSON output. Includes a ready-to-run Python helper script.",
+  "upsert_paths": [
+    "expense-audit-screening/SKILL.md",
+    "expense-audit-screening/scripts/audit_helper.py"
+  ],
+  "delete_paths": []
+}

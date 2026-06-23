@@ -1,0 +1,61 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ..F                                                                      [100%]
+E           =================================== FAILURES ===================================
+E           ______________ test_modified_paragraphs_do_not_keep_layout_cache _______________
+E           
+E               def test_modified_paragraphs_do_not_keep_layout_cache():
+E                   data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+E                   fragments = []
+E                   for key, value in data.items():
+E                       if key == "예산":
+E                           fragments.append(value.replace(",", ""))
+E                       elif key == "단계1":
+E                           fragments.append(f"{value} (3개월)")
+E                       elif key == "단계2":
+E                           fragments.append(f"{value} (3개월)")
+E                       elif key == "단계3":
+E                           fragments.append(f"{value} (1개월)")
+E                       else:
+E                           fragments.append(value)
+E                   for section_name in ("section0.xml", "section1.xml"):
+E                       section_xml = load_section(OUTPUT_FILE, section_name)
+E                       for paragraph, text in paragraph_texts(section_xml):
+E                           if any(fragment in text for fragment in fragments):
+E           >                   assert paragraph.find("hp:linesegarray", NS) is None
+E           E                   AssertionError: assert <Element '{http://www.hancom.co.kr/hwpml/2010/HWPML}linesegarray' at 0x7f317caf31a0> is None
+E           E                    +  where <Element '{http://www.hancom.co.kr/hwpml/2010/HWPML}linesegarray' at 0x7f317caf31a0> = <built-in method find of xml.etree.ElementTree.Element object at 0x7f317caf30b0>('hp:linesegarray', {'hp': 'http://www.hancom.co.kr/hwpml/2010/HWPML'})
+E           E                    +    where <built-in method find of xml.etree.ElementTree.Element object at 0x7f317caf30b0> = <Element '{http://www.hancom.co.kr/hwpml/2010/HWPML}p' at 0x7f317caf30b0>.find
+E           
+E           /tests/test_outputs.py:65: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_modified_paragraphs_do_not_keep_layout_cache
+E           1 failed, 2 passed in 0.02s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.19s ===============================

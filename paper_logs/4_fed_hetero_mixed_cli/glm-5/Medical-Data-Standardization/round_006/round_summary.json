@@ -1,0 +1,30 @@
+{
+  "round_idx": 6,
+  "assignments": [
+    [
+      "u0",
+      "respiratory-panel-json-harmonization"
+    ],
+    [
+      "u1",
+      "respiratory-panel-json-harmonization"
+    ],
+    [
+      "u2",
+      "respiratory-panel-json-harmonization"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 0.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 911.8517639636993
+}

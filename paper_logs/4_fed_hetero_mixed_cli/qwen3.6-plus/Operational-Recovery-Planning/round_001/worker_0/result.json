@@ -1,0 +1,29 @@
+{
+    "id": "cebd59e1-d149-4d79-9863-baf553da0ef6",
+    "started_at": "2026-05-18T01:30:08.338636",
+    "finished_at": "2026-05-18T01:32:03.778679",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Operational-Recovery-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "new_task_2_radiology_reading_bac__w8wQYqh"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

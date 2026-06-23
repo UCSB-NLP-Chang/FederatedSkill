@@ -1,0 +1,29 @@
+{
+    "id": "fe0be52f-f027-4b2a-905e-1fae2f66c46d",
+    "started_at": "2026-05-16T16:00:49.715812",
+    "finished_at": "2026-05-16T16:02:45.029257",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "01-cloud-service-portfolio-diff__C5quGNn"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

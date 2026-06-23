@@ -1,0 +1,29 @@
+{
+    "id": "b51a3945-c1f4-42d2-b359-f1173eb004d3",
+    "started_at": "2026-05-14T22:25:39.748880",
+    "finished_at": "2026-05-14T22:30:47.641015",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "new_task_12_mealkit_freshness_re__XunN8du"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

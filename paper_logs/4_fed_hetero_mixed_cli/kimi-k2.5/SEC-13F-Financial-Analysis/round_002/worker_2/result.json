@@ -1,0 +1,29 @@
+{
+    "id": "27d36467-553d-4276-b24e-34c529461b6b",
+    "started_at": "2026-05-18T04:39:53.583178",
+    "finished_at": "2026-05-18T04:44:19.021241",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__SEC-13F-Financial-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "fund-shift-screen__Woxio4b"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

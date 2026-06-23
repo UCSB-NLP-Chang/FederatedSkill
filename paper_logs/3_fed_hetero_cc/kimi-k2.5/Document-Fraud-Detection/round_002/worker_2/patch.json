@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "This patch extends multi-source-reconciliation to handle crosswalk/indirection patterns where external references (like SHIFT-A1) map to internal codes (INT-5101) before authorization lookup. The trace revealed a clinic shift validation task with a 3-layer validation: clinician registry \u2192 shift crosswalk \u2192 shift authorizations. Key lessons: (1) PDF text extraction for multi-page forms requires parsing embedded text or manual transcription when base64 is returned, (2) the Read tool fails on binary Excel files\u2014use Python pandas instead, (3) fuzzy name matching with edit distance \u22641 catches typos like 'Nora Elis'\u2192'Nora Ellis', (4) ownership mismatch checking must compare the matched entity_id against the authorization record's owner_id, not just names, and (5) some tasks require chained lookups (external_code\u2192internal_code\u2192authorization). Added explicit crosswalk pattern documentation and updated scripts template to support this variant.",
+  "upsert_paths": [
+    "multi-source-reconciliation/SKILL.md",
+    "multi-source-reconciliation/references/violation-types.md",
+    "multi-source-reconciliation/scripts/reconcile_claims.py"
+  ],
+  "delete_paths": []
+}

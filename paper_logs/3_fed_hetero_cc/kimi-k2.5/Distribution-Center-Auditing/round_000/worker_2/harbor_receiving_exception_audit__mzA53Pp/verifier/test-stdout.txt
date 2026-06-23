@@ -1,0 +1,48 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ....F                                                                    [100%]
+E           =================================== FAILURES ===================================
+E           __________________________ test_word_summary_content ___________________________
+E           
+E           source_rows = [{'Dock': 'D1', 'Expected Qty': 120, 'Item Code': 'ITM-100', 'Receipt ID': 'RC-001', ...}, {'Dock': 'D1', 'Expected Qt...eipt ID': 'RC-005', ...}, {'Dock': 'D3', 'Expected Qty': 40, 'Item Code': 'ITM-320', 'Receipt ID': 'RC-006', ...}, ...]
+E           
+E               def test_word_summary_content(source_rows):
+E                   assert Path(OUTPUT_DOCX).exists(), f'Missing output docx: {OUTPUT_DOCX}'
+E                   _, expected_totals, item_totals = expected_summary_rows(source_rows)
+E                   doc = Document(OUTPUT_DOCX)
+E                   text = '\n'.join(p.text for p in doc.paragraphs if p.text.strip()).lower()
+E           >       assert 'qty variance' in text
+E           E       AssertionError: assert 'qty variance' in 'receiving exception audit brief\nthis audit identifies two critical receiving exception checks: quantity variance, wh...ity attention should be given to itm-320 and itm-100, which account for the highest frequency of receiving exceptions.'
+E           
+E           /tests/test_outputs.py:150: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_word_summary_content - AssertionError: ...
+E           1 failed, 4 passed in 0.23s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.62s ===============================

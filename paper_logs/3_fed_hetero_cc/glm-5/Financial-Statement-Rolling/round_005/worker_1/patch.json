@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The agent successfully built a multi-sheet Excel workbook with formulas, cross-sheet references, and control rows, but the task failed verification (test_output.py::test_legacy_pytest_suite). This skill captures the reusable workflow for building financial rollforward workbooks with openpyxl, including formula patterns, control row structures, and validation steps that future agents can apply to similar Excel generation tasks.",
+  "upsert_paths": [
+    "excel-rollforward-workbook/SKILL.md",
+    "excel-rollforward-workbook/references/openpyxl-formula-patterns.md",
+    "excel-rollforward-workbook/scripts/validate_rollforward.py"
+  ],
+  "delete_paths": []
+}

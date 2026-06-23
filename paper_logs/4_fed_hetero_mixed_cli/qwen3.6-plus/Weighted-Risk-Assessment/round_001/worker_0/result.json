@@ -1,0 +1,29 @@
+{
+    "id": "665d7343-3890-4f74-9d36-f8ac7d664ee9",
+    "started_at": "2026-05-18T06:17:44.351210",
+    "finished_at": "2026-05-18T06:22:06.259377",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-hospital-bedflow-calc__YtC7aBV"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

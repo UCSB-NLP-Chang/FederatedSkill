@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R1. Applied u1's validated cycle-margin-analysis skill with two edits: (1) clarified margin vs revenue terminology with WRONG/RIGHT block, (2) added Known invariants for field naming. Rejected u0's redundant refill-cycle-analysis skill. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md",
+    "cycle-margin-analysis/scripts/compute_margin.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cycle-margin-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cycle-margin-analysis/scripts/compute_margin.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cycle-margin-analysis/SKILL.md",
+    "cycle-margin-analysis/scripts/compute_margin.py"
+  ],
+  "cost_usd": 3.878496
+}

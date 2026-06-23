@@ -1,0 +1,104 @@
+{
+    "id": "ce1af3c6-ba79-4e3f-8734-5df967e5e3a1",
+    "task_name": "harbor_outbound_manifest_audit",
+    "trial_name": "harbor_outbound_manifest_audit__w2u3xdC",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/round_006/worker_1/harbor_outbound_manifest_audit__w2u3xdC",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Distribution-Center-Auditing/harbor_outbound_manifest_audit"
+    },
+    "source": "Distribution-Center-Auditing",
+    "task_checksum": "315b7fc9f230c290b4251013235e24dd87428b4653a76b618aa953653795930b",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Distribution-Center-Auditing/harbor_outbound_manifest_audit",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Distribution-Center-Auditing"
+        },
+        "trial_name": "harbor_outbound_manifest_audit__w2u3xdC",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/round_006/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 4.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "b0b40fa8-8fa5-4395-8062-e0ed946267a6"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 220894,
+        "n_cache_tokens": 183424,
+        "n_output_tokens": 4192,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-22T23:33:54.989238Z",
+    "finished_at": "2026-05-22T23:36:05.894423Z",
+    "environment_setup": {
+        "started_at": "2026-05-22T23:33:54.989917Z",
+        "finished_at": "2026-05-22T23:33:57.063692Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-22T23:33:57.063734Z",
+        "finished_at": "2026-05-22T23:33:58.435413Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-22T23:33:58.435499Z",
+        "finished_at": "2026-05-22T23:35:51.761218Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-22T23:35:51.766157Z",
+        "finished_at": "2026-05-22T23:35:53.811119Z"
+    }
+}

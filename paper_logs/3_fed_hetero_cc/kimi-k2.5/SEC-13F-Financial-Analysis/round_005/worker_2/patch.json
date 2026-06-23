@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "The agent failed the cross-quarter reconciliation task. The trace shows the agent used empty strings for Tiger Global's missing data instead of null, and the output schema doesn't match what the verifier expects. The existing sec-13f-fund-analysis skill has B3 cross-quarter comparison schema but the agent didn't follow it properly - it used 'largest_buy_cusip'/'largest_sell_cusip' instead of 'top4_increased_cusips'/'top3_decreased_cusips'. Also, Tiger Global not being in Q2 should result in null fields per B3 schema, not empty strings. The skill needs clearer guidance on handling missing fund matches and strict schema adherence.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "16dfe6ae-9f3c-4327-aec0-151da797003a",
+    "started_at": "2026-05-17T20:25:23.145619",
+    "finished_at": "2026-05-17T20:27:08.788240",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Embedded-Data-Repair": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "fx-cross-rate-inverse-fix__ALeixh9"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

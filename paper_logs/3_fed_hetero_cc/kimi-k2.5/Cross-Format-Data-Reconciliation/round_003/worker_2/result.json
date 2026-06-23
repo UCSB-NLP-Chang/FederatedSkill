@@ -1,0 +1,29 @@
+{
+    "id": "8a4e39bf-e84d-443e-ad36-51d77f594586",
+    "started_at": "2026-05-13T23:31:03.444617",
+    "finished_at": "2026-05-13T23:32:32.357033",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "04-university-program-funding-di__6KbvmjA"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Added outbound-manifest-audit skill for logistics audits comparing manifest plans to dock scan logs. Captures the template preservation pattern (keeping Overview sheets unchanged), scan log filtering by status (LOADED), deduplication by latest timestamp, and zone mismatch detection. Complements existing returns-disposition-audit with outbound logistics specific patterns.",
+  "upsert_paths": [
+    "outbound-manifest-audit/SKILL.md",
+    "outbound-manifest-audit/references/template-preservation-pattern.md",
+    "outbound-manifest-audit/scripts/generate_outbound_audit.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "1f02f74c-21b1-4a1b-a853-30e83d222471",
+    "started_at": "2026-05-13T22:58:27.411817",
+    "finished_at": "2026-05-13T23:00:58.429485",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-hospital-bedflow-calc__DyCJCqU"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

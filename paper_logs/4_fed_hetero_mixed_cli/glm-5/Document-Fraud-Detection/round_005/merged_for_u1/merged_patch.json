@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R5. Applied target's reward=1.0 patch wholesale, keeping umbrella naming `cross-document-validation` per R0-R5 evidence. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md",
+    "cross-document-validation/references/domain-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-document-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cross-document-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.205807
+}

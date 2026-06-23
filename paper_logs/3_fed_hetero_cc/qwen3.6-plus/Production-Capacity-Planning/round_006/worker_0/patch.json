@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updates excel-capacity-planning skill with multi-sheet data combination pattern, sentence-counting pitfall for summaries with decimal numbers, and 18 hrs/day capacity variant observed in dye catch-up task.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": []
+}

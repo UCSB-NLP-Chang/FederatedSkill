@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) on R7. See DECISIONS.md for details. Summary: Kept u2's comprehensive SKILL.md (validated by reward=1.0), added Quick Start section and verify_hwpx.py from u1, added regex backreference troubleshooting note from u0. Library now has 3 scripts (fill_hwpx.py, update_hwpx_direct.py, verify_hwpx.py) + 2 references.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/scripts/verify_hwpx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "hwpx-template-fill/scripts/verify_hwpx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-fill/SKILL.md"
+  ],
+  "cost_usd": 2.632632
+}

@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R6 Document-Fraud-Detection. Fixed multi-source precedence gap by integrating into numbered workflow step 5, added snapshot handling step 6, added amendment-handling.md reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/amendment-handling.md",
+    "document-reconciliation/references/violation-types.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "document-reconciliation/references/amendment-handling.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "document-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "document-reconciliation/references/violation-types.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.6119163
+}

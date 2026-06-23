@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's patch wholesale (SKILL.md + normalization-rules.md) to address R5 gaps: B3-Single/Partial schemas for variant output, B4-TopN, B6 Snapshot Check, and missing baseline handling. Rejected u0/u2 STOP-checkpoints (model-specific, glm-5 doesn't need). Umbrella architecture maintained. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-fund-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md"
+  ],
+  "cost_usd": 0.5116392
+}

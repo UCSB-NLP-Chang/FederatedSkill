@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) R7. Absorbed packet deduplication, 3-level nested JSON flattening, and clinical trial invariants from u0/u2 reward=1.0 patches. Kept umbrella name `cross-document-validation` per better-scoped naming rationale. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md",
+    "cross-document-validation/references/domain-examples.md",
+    "cross-document-validation/references/sparse-amendments.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-document-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "cross-document-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "cross-document-validation/references/sparse-amendments.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "expense-claims-validation/SKILL.md"
+  ],
+  "cost_usd": 5.2239900000000015
+}

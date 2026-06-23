@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "R5 merge complete for u2 (kimi-k2.5): Created `excel-formula-automation` umbrella skill with 3 scripts. Applied target's patch structure, enhanced with mandatory Reference Locking Table and blocking validation script (exits 1 on missing $ signs) per task_memory findings. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-automation/SKILL.md",
+    "excel-formula-automation/scripts/excel_formula_utils.py",
+    "excel-formula-automation/scripts/formula_builder.py",
+    "excel-formula-automation/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-automation/scripts/excel_formula_utils.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-automation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-automation/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-automation/scripts/formula_builder.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-formula-automation/SKILL.md"
+  ],
+  "cost_usd": 2.498700000000001
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.3333333333333333,
+  "summary": "The agent failed by writing a custom Python analysis script instead of using the existing statistical-process-analysis skill, producing JSON with incorrect key names (e.g., 'primary_analysis_window' instead of 'primary_date_range') that failed verifier checks. The skill was fully capable of handling this field service DMAIC analysis task. This patch strengthens the skill with explicit anti-pattern warnings against custom code, mandatory JSON validation steps, and a concrete field service example to ensure future agents recognize and use the skill correctly.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/field_service_example.md"
+  ],
+  "delete_paths": []
+}

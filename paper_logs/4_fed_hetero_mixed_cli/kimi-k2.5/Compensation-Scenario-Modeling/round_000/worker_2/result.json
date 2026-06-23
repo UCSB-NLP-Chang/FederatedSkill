@@ -1,0 +1,33 @@
+{
+    "id": "a9fae410-76a7-4625-b68e-5332df0c9fad",
+    "started_at": "2026-05-18T00:03:15.851450",
+    "finished_at": "2026-05-18T00:03:15.855990",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 1,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "01_orchestra_foundation_model__75ghsm7"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "01_orchestra_foundation_model__75ghsm7"
+                    ]
+                }
+            }
+        }
+    }
+}

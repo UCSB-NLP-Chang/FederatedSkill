@@ -1,0 +1,103 @@
+{
+  "id": "8666704e-65d0-4f0c-be50-27c9b27823d8",
+  "task_name": "clinic-shift-claim-review",
+  "trial_name": "clinic-shift-claim-review__xjKiY4H",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__Document-Fraud-Detection/clinic-shift-claim-review__xjKiY4H",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/clinic-shift-claim-review"
+  },
+  "source": "Document-Fraud-Detection",
+  "task_checksum": "24908f57be58a617d266cca827a5863781702d57dfc1cc94a6e6d7bcd3484705",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/clinic-shift-claim-review",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Document-Fraud-Detection"
+    },
+    "trial_name": "clinic-shift-claim-review__xjKiY4H",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__Document-Fraud-Detection",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "6decbc63-8f35-4028-9fb0-4f3681a47c6f"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 297283,
+    "n_cache_tokens": 134656,
+    "n_output_tokens": 6727,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-10T09:42:33.840707Z",
+  "finished_at": "2026-05-10T09:44:47.715989Z",
+  "environment_setup": {
+    "started_at": "2026-05-10T09:42:33.844247Z",
+    "finished_at": "2026-05-10T09:42:34.778153Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-10T09:42:34.778165Z",
+    "finished_at": "2026-05-10T09:42:35.040866Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-10T09:42:35.040929Z",
+    "finished_at": "2026-05-10T09:44:36.612839Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-10T09:44:36.613318Z",
+    "finished_at": "2026-05-10T09:44:37.202318Z"
+  }
+}

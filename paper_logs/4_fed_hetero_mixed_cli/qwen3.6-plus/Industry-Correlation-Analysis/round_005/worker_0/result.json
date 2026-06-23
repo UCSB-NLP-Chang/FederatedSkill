@@ -1,0 +1,29 @@
+{
+    "id": "526042bf-281f-4499-9840-77f8bbdc2e7f",
+    "started_at": "2026-05-23T23:10:12.940625",
+    "finished_at": "2026-05-23T23:12:18.112443",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-logistics-warehousing-corre__DNR4HLS"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

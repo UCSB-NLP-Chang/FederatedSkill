@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "Added library circulation domain support to existing excel-data-integration skill. Created reference document for book loan metrics with date-derived columns (LOAN_DURATION, DECADE, WEEKDAY_BUCKET) and circulation-specific pivot tables. Updated main skill description and known invariants to include library circulation triggers and validation rules.",
+  "upsert_paths": [
+    "excel-data-integration/SKILL.md",
+    "excel-data-integration/references/library-circulation.md"
+  ],
+  "delete_paths": []
+}

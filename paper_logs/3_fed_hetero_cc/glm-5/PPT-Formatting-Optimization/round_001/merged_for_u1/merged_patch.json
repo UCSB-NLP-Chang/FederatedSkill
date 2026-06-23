@@ -1,0 +1,38 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Synthesized u1's regex workflow + u2's Content_Types.xml fix into pptx-manipulation skill. Library: 1 skill (pptx-manipulation), 2 scripts, 2 references. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/adding-slides.md",
+    "pptx-manipulation/scripts/extract_pptx.py",
+    "pptx-manipulation/scripts/verify_pptx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/scripts/extract_pptx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/references/adding-slides.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/scripts/verify_pptx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/scripts/verify_pptx.py"
+  ],
+  "cost_usd": 2.9255658
+}

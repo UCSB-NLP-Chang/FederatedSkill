@@ -1,0 +1,29 @@
+{
+    "id": "aaee8177-5e3e-4dfb-83fb-5c6f8ee1758f",
+    "started_at": "2026-05-23T23:26:04.209715",
+    "finished_at": "2026-05-23T23:28:45.627508",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-wholesale-packaging-correla__M5jyVLL"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

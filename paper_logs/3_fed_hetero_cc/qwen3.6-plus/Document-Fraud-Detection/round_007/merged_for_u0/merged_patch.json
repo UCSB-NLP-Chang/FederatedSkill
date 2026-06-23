@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R7. Applied target's verified patch adding JSON handling, clinical-trial variant, packet deduplication. Peer u1's prose-style same-workflow skill not absorbed (style mismatch per memory.md). See DECISIONS.md.",
+  "upsert_paths": [
+    "expense-record-validation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-record-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.7229004000000002
+}

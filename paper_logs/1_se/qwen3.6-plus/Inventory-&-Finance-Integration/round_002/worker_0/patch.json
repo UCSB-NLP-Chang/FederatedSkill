@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated excel-inventory-planning/SKILL.md to capture critical lessons from the trace: explicit warning against direct date+int arithmetic (caused TypeError), recommendation to use date.fromisoformat() for string dates, clarified boolean flag logic (Rounding_Applied, Earlier_Delivery_Required), and added Maintenance/Parts domain mapping. These changes prevent common brittle failures and speed up future similar tasks.",
+  "upsert_paths": [
+    "excel-inventory-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

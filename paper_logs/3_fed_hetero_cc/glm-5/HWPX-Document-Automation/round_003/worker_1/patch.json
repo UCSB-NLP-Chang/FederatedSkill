@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Added budget/currency normalization and month span calculation patterns to the Korean data transformations reference, based on the task's need to normalize \u20a9450,000,000 to \u20a9450000000 and calculate (3\uac1c\uc6d4), (1\uac1c\uc6d4) spans from date ranges.",
+  "upsert_paths": [
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "delete_paths": []
+}

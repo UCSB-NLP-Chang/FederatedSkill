@@ -1,0 +1,168 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.4.1
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ......FF.....FFFFFFF                                                     [100%]
+E           =================================== FAILURES ===================================
+E           ______________________ TestOutput.test_ranges[Troponin_I] ______________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7ff7ed023f20>, c = 'Troponin_I'
+E           
+E               @pytest.mark.parametrize('c', EXPECTED_COLUMNS)
+E               def test_ranges(self, c):
+E           >       assert all(ok(v, REFERENCE[c]['min'], REFERENCE[c]['max']) for v in self.df[c]), c
+E           E       AssertionError: Troponin_I
+E           E       assert False
+E           E        +  where False = all(<generator object TestOutput.test_ranges.<locals>.<genexpr> at 0x7ff7ed5a3d30>)
+E           
+E           /tests/test_outputs.py:97: AssertionError
+E           ______________________ TestOutput.test_ranges[Troponin_T] ______________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7ff7ed023fb0>, c = 'Troponin_T'
+E           
+E               @pytest.mark.parametrize('c', EXPECTED_COLUMNS)
+E               def test_ranges(self, c):
+E           >       assert all(ok(v, REFERENCE[c]['min'], REFERENCE[c]['max']) for v in self.df[c]), c
+E           E       AssertionError: Troponin_T
+E           E       assert False
+E           E        +  where False = all(<generator object TestOutput.test_ranges.<locals>.<genexpr> at 0x7ff7ed0027a0>)
+E           
+E           /tests/test_outputs.py:97: AssertionError
+E           ____________________ TestOutput.test_full_row_by_row_match _____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7ff7ed87fc50>
+E           
+E               def test_full_row_by_row_match(self):
+E                   for i in range(len(self.df)):
+E                       for col in EXPECTED_COLUMNS:
+E                           actual = float(self.df.iloc[i][col])
+E                           expected = float(self.expected.iloc[i][col])
+E           >               assert abs(actual - expected) <= max(0.01, abs(expected) * 0.001), (i, col, actual, expected)
+E           E               AssertionError: (2, 'Troponin_I', 16392.0, 16.39)
+E           E               assert 16375.61 <= 0.016390000000000002
+E           E                +  where 16375.61 = abs((16392.0 - 16.39))
+E           E                +  and   0.016390000000000002 = max(0.01, (16.39 * 0.001))
+E           E                +    where 16.39 = abs(16.39)
+E           
+E           /tests/test_outputs.py:107: AssertionError
+E           ___________________ TestOutput.test_anchor_samples[sample0] ____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7ff7ef89cdd0>
+E           sample = {'col': 'BNP', 'row': 0, 'value': 124.0}
+E           
+E               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)
+E               def test_anchor_samples(self, sample):
+E                   actual = float(self.df.iloc[sample['row']][sample['col']])
+E           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)
+E           E       AssertionError: ({'col': 'BNP', 'row': 0, 'value': 124.0}, 1694.43)
+E           E       assert 1570.43 <= 0.01
+E           E        +  where 1570.43 = abs((1694.43 - 124.0))
+E           
+E           /tests/test_outputs.py:112: AssertionError
+E           ___________________ TestOutput.test_anchor_samples[sample1] ____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7ff7ed0482f0>
+E           sample = {'col': 'NT_proBNP', 'row': 0, 'value': 450.0}
+E           
+E               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)
+E               def test_anchor_samples(self, sample):
+E                   actual = float(self.df.iloc[sample['row']][sample['col']])
+E           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)
+E           E       AssertionError: ({'col': 'NT_proBNP', 'row': 0, 'value': 450.0}, 25814.65)
+E           E       assert 25364.65 <= 0.01
+E           E        +  where 25364.65 = abs((25814.65 - 450.0))
+E           
+E           /tests/test_outputs.py:112: AssertionError
+E           ___________________ TestOutput.test_anchor_samples[sample2] ____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7ff7ed0485c0>
+E           sample = {'col': 'Troponin_I', 'row': 2, 'value': 0.02}
+E           
+E               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)
+E               def test_anchor_samples(self, sample):
+E                   actual = float(self.df.iloc[sample['row']][sample['col']])
+E           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)
+E           E       AssertionError: ({'col': 'Troponin_I', 'row': 2, 'value': 0.02}, 16392.0)
+E           E       assert 16391.98 <= 0.01
+E           E        +  where 16391.98 = abs((16392.0 - 0.02))
+E           
+E           /tests/test_outputs.py:112: AssertionError
+E           ___________________ TestOutput.test_anchor_samples[sample3] ____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7ff7ed048680>
+E           sample = {'col': 'Troponin_T', 'row': 4, 'value': 0.01}
+E           
+E               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)
+E               def test_anchor_samples(self, sample):
+E                   actual = float(self.df.iloc[sample['row']][sample['col']])
+E           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)
+E           E       AssertionError: ({'col': 'Troponin_T', 'row': 4, 'value': 0.01}, 4.16)
+E           E       assert 4.15 <= 0.01
+E           E        +  where 4.15 = abs((4.16 - 0.01))
+E           
+E           /tests/test_outputs.py:112: AssertionError
+E           ___________________ TestOutput.test_anchor_samples[sample4] ____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7ff7ed048740>
+E           sample = {'col': 'Creatinine', 'row': 2, 'value': 1.08}
+E           
+E               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)
+E               def test_anchor_samples(self, sample):
+E                   actual = float(self.df.iloc[sample['row']][sample['col']])
+E           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)
+E           E       AssertionError: ({'col': 'Creatinine', 'row': 2, 'value': 1.08}, 7.81)
+E           E       assert 6.7299999999999995 <= 0.01
+E           E        +  where 6.7299999999999995 = abs((7.81 - 1.08))
+E           
+E           /tests/test_outputs.py:112: AssertionError
+E           ___________________ TestOutput.test_anchor_samples[sample5] ____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7ff7ed048800>
+E           sample = {'col': 'Magnesium', 'row': 4, 'value': 1.95}
+E           
+E               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)
+E               def test_anchor_samples(self, sample):
+E                   actual = float(self.df.iloc[sample['row']][sample['col']])
+E           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)
+E           E       AssertionError: ({'col': 'Magnesium', 'row': 4, 'value': 1.95}, 7.23)
+E           E       assert 5.28 <= 0.01
+E           E        +  where 5.28 = abs((7.23 - 1.95))
+E           
+E           /tests/test_outputs.py:112: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Troponin_I] - Assert...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Troponin_T] - Assert...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_full_row_by_row_match - Ass...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample0] - A...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample1] - A...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample2] - A...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample3] - A...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample4] - A...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample5] - A...
+E           9 failed, 11 passed in 0.50s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.79s ===============================

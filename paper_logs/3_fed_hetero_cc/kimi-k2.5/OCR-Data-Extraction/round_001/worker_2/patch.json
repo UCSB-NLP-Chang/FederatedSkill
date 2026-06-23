@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The task involved extracting structured data from order images with specific requirements: validating order IDs against a known list, handling duplicates (first occurrence kept, subsequent marked empty), and outputting to Excel with precise formatting. The agent succeeded by implementing OCR with Tesseract, but there are reusable patterns to capture: (1) the duplicate detection logic with explicit empty-cell marking, (2) validation against external reference data, (3) the importance of preserving row structure even for duplicates rather than filtering them out, and (4) writing None values as empty cells in Excel. The existing image-data-extraction skill covers OCR basics well, but lacks guidance on deduplication strategies, external validation, and handling duplicates in output formats. I'll extend the existing skill with a new 'Deduplication Patterns' section and add specific guidance on preserving row structure with empty markers.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md"
+  ],
+  "delete_paths": []
+}

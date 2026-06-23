@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "The agent failed the verifier despite writing structurally correct formulas because it omitted row-absolute references ($) in statistics ranges (e.g., H35:H40 instead of H$35:H$40) and column-absolute references in INDEX/MATCH row keys (D12 instead of $D12). The existing SKILL.md already warns about this, but the agent ignored it. This update strengthens the skill by: (1) adding a pre-save reference-locking validation script that catches missing $ signs, (2) making the reference-locking rules more prominent with explicit 'must-have' examples, (3) adding a decision rule to run the validation script before saving, and (4) clarifying the exact $ patterns required for each formula layer.",
+  "upsert_paths": [
+    "template-formula-fill/SKILL.md",
+    "template-formula-fill/scripts/check_reference_locking.py"
+  ],
+  "delete_paths": []
+}

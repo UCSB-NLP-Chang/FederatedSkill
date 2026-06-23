@@ -1,0 +1,30 @@
+{
+  "round_idx": 0,
+  "assignments": [
+    [
+      "u0",
+      "new_task_1_soc_alert_recovery"
+    ],
+    [
+      "u1",
+      "new_task_1_soc_alert_recovery"
+    ],
+    [
+      "u2",
+      "new_task_1_soc_alert_recovery"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 921.2530624866486
+}

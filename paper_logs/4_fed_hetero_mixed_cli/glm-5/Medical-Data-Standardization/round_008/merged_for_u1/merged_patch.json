@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "R8 merge complete for u1. Applied u2's reward=1.0 SKILL.md wholesale (neonatal sepsis support with CRP \u00f710, simple factors \u00d718.0/\u00f788.4). Rejected u1's near-miss patch (CRP inconsistency) and u0's regression patch (precise factors + bidirectional inference). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "cost_usd": 3.676164000000001
+}

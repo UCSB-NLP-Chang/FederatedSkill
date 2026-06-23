@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) Round 7. Applied u0's multi-file-join-audit patch (B6 cycle count variance audit invariants + copy module anti-pattern). Rejected u1's excel-audit-reporting patch (wrong skill for B6). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "multi-file-join-audit/SKILL.md",
+    "multi-file-join-audit/references/variance-approval-gap.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "multi-file-join-audit/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8333333333333334
+    ],
+    "multi-file-join-audit/references/variance-approval-gap.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8333333333333334
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.1387210000000003
+}

@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) on Cross-Format-Data-Reconciliation R1.\n\nApplied u1's SKILL.md (reward=1.0) as base + u0's Tool Selection Rules section. Kept `cross-format-data-diff` name (2/3 consensus over u2's `tabular-data-diff`). Rejected u2's new skill \u2014 same workflow, would cause naming confusion. Library: 1 skill, no duplicates. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "cost_usd": 1.089582
+}

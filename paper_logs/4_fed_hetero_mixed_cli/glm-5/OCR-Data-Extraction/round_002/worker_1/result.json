@@ -1,0 +1,29 @@
+{
+    "id": "4ec67229-a239-4b49-8ed9-ed070f062e95",
+    "started_at": "2026-05-18T01:05:15.631420",
+    "finished_at": "2026-05-18T01:08:28.132549",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "task_family_travel_claim_merge__MMyXqhM"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

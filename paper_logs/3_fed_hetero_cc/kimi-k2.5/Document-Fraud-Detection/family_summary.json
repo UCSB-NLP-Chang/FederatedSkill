@@ -1,0 +1,238 @@
+{
+  "family_name": "Document-Fraud-Detection",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 11052.663589477539,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.875,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 21
+  },
+  "merger_cost_total_usd": 13.4575638,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "travel-expense-screening"
+        ],
+        [
+          "u1",
+          "travel-expense-screening"
+        ],
+        [
+          "u2",
+          "travel-expense-screening"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 8,
+      "merger_cost_usd": 1.2857229,
+      "elapsed_sec": 1031.0461876392365
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "speaker-honorarium-review"
+        ],
+        [
+          "u1",
+          "speaker-honorarium-review"
+        ],
+        [
+          "u2",
+          "speaker-honorarium-review"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 5,
+      "merger_cost_usd": 2.4133362,
+      "elapsed_sec": 1111.0449810028076
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "clinic-shift-claim-review"
+        ],
+        [
+          "u1",
+          "clinic-shift-claim-review"
+        ],
+        [
+          "u2",
+          "clinic-shift-claim-review"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 1.6605762000000002,
+      "elapsed_sec": 1241.6352937221527
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "field-service-workorder-audit"
+        ],
+        [
+          "u1",
+          "field-service-workorder-audit"
+        ],
+        [
+          "u2",
+          "field-service-workorder-audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 7,
+      "merger_cost_usd": 1.987935,
+      "elapsed_sec": 1381.0734524726868
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "fleet-maintenance-chargeback-audit"
+        ],
+        [
+          "u1",
+          "fleet-maintenance-chargeback-audit"
+        ],
+        [
+          "u2",
+          "fleet-maintenance-chargeback-audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 5,
+      "merger_cost_usd": 1.235697,
+      "elapsed_sec": 1589.3490808010101
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "research-stipend-reconciliation"
+        ],
+        [
+          "u1",
+          "research-stipend-reconciliation"
+        ],
+        [
+          "u2",
+          "research-stipend-reconciliation"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 7,
+      "merger_cost_usd": 1.6669134,
+      "elapsed_sec": 1401.8837645053864
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "warehouse-coldchain-charge-review"
+        ],
+        [
+          "u1",
+          "warehouse-coldchain-charge-review"
+        ],
+        [
+          "u2",
+          "warehouse-coldchain-charge-review"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 1.9962300000000002,
+      "elapsed_sec": 1237.5758595466614
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "clinical-trial-participant-release-audit"
+        ],
+        [
+          "u1",
+          "clinical-trial-participant-release-audit"
+        ],
+        [
+          "u2",
+          "clinical-trial-participant-release-audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 1.2111531000000002,
+      "elapsed_sec": 2059.0477302074432
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u0/Document-Fraud-Detection",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u1/Document-Fraud-Detection",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/worker_skills/u2/Document-Fraud-Detection"
+  }
+}

@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/shared_skills/Sales-Pivot-Analysis:/root/.config/agent/skills

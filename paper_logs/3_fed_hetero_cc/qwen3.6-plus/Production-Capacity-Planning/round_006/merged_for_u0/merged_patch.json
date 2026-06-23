@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete: applied u0's verified patch wholesale (SKILL.md + excel-patterns.md with multi-sheet pattern, sentence-counting pitfall, dye invariants). Rejected u1/u2 due to wrong dye values (u1) and reward=0.5 (u2). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/references/excel-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "cost_usd": 0.5318733
+}

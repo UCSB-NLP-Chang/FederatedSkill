@@ -1,0 +1,29 @@
+{
+    "id": "954ca2e4-b1d3-4342-94f3-0c435c114c47",
+    "started_at": "2026-05-17T21:28:07.583010",
+    "finished_at": "2026-05-17T21:30:54.519283",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "research-stipend-reconciliation__BDpgTPa"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

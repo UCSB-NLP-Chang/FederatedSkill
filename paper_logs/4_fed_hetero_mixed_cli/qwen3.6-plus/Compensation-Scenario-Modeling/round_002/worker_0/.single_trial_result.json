@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "03_university_faculty_model__p5KxfBh",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Compensation-Scenario-Modeling/round_002/worker_0/03_university_faculty_model__p5KxfBh",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Compensation-Scenario-Modeling/round_002/worker_0/03_university_faculty_model__p5KxfBh",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

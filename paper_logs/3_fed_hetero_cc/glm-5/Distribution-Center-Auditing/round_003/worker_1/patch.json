@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds lookup table pattern and SLA-specific computed column examples to the existing spreadsheet-audit-reporting skill. The trace shows a new variant (harbor-service-queue-sla-audit) that joins ticket data with an SLA_Rules lookup sheet to compute breaches and missing escalations. This pattern is reusable for any audit involving reference thresholds or conditional null checks.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md",
+    "spreadsheet-audit-reporting/references/computed-column-examples.md"
+  ],
+  "delete_paths": []
+}

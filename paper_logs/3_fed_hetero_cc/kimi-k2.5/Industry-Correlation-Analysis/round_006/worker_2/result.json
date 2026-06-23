@@ -1,0 +1,29 @@
+{
+    "id": "160f3017-c638-4c80-b5fd-1014b4d11e30",
+    "started_at": "2026-05-26T02:01:24.757371",
+    "finished_at": "2026-05-26T02:04:08.281005",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-wholesale-packaging-correla__35qxnCh"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

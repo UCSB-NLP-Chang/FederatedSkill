@@ -1,0 +1,29 @@
+{
+    "id": "656ac411-8826-45bb-8557-10f6d636ee63",
+    "started_at": "2026-05-23T23:10:12.940742",
+    "finished_at": "2026-05-23T23:11:30.155957",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-logistics-warehousing-corre__9Y5i3sg"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

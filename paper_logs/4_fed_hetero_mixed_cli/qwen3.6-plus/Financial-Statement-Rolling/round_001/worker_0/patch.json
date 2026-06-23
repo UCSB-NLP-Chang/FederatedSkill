@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Updated financial-rollforward-workbook skill with lessons from accrual rollforward task: added alternative ending balance formula pattern (=B+C-D vs SUM), GL Balance formula variant, SUM range construction anti-pattern, sheet ordering best practice, and updated verification script to handle additional control row labels.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/scripts/verify_workbook.py"
+  ],
+  "delete_paths": []
+}

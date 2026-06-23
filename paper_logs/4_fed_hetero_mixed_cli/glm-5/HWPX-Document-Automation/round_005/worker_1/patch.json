@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Fixes a bug in the linesegarray removal regex in fill_hwpx.py where the pattern could match opening tags separately from their content, leaving orphaned closing tags. Also adds a common date reformatting pattern to value-preprocessing.md based on the trace showing YYYY-MM-DD to YYYY.MM.DD transformation.",
+  "upsert_paths": [
+    "hwpx-template-fill/references/value-preprocessing.md",
+    "hwpx-template-fill/scripts/fill_hwpx.py"
+  ],
+  "delete_paths": []
+}

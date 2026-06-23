@@ -1,0 +1,29 @@
+{
+    "id": "c10702a8-d1a2-49fe-826e-ad17fa1ca9d0",
+    "started_at": "2026-05-18T00:12:55.930291",
+    "finished_at": "2026-05-18T00:15:01.504190",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "02-hospital-capacity-portfolio-d__mqERTdR"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

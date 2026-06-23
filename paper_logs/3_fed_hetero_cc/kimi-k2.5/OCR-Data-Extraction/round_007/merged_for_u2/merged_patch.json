@@ -1,0 +1,12 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Library unchanged \u2014 u2 covered for B7 (reward=1.0) with existing library. No target patch (max_tokens truncation), peers failed (reward=0.0). See DECISIONS.md for details.",
+  "upsert_paths": [],
+  "delete_paths": [],
+  "provenance": {},
+  "conflicts": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/case-settlement-patterns.md"
+  ],
+  "cost_usd": 0.5975667
+}

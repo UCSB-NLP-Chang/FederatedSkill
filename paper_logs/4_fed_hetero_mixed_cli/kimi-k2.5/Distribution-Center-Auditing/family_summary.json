@@ -1,0 +1,238 @@
+{
+  "family_name": "Distribution-Center-Auditing",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 7975.895272254944,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.625,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 15
+  },
+  "merger_cost_total_usd": 74.933283,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "harbor_receiving_exception_audit"
+        ],
+        [
+          "u1",
+          "harbor_receiving_exception_audit"
+        ],
+        [
+          "u2",
+          "harbor_receiving_exception_audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 6.66924,
+      "elapsed_sec": 588.1847648620605
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "harbor_trailer_detention_audit"
+        ],
+        [
+          "u1",
+          "harbor_trailer_detention_audit"
+        ],
+        [
+          "u2",
+          "harbor_trailer_detention_audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 7.785381000000001,
+      "elapsed_sec": 706.1177685260773
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "harbor_promo_register_audit"
+        ],
+        [
+          "u1",
+          "harbor_promo_register_audit"
+        ],
+        [
+          "u2",
+          "harbor_promo_register_audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 8.17077,
+      "elapsed_sec": 853.2536063194275
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "harbor_service_queue_sla_audit"
+        ],
+        [
+          "u1",
+          "harbor_service_queue_sla_audit"
+        ],
+        [
+          "u2",
+          "harbor_service_queue_sla_audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 7.029990000000001,
+      "elapsed_sec": 844.6004564762115
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "harbor_timesheet_policy_audit"
+        ],
+        [
+          "u1",
+          "harbor_timesheet_policy_audit"
+        ],
+        [
+          "u2",
+          "harbor_timesheet_policy_audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 10.459095000000001,
+      "elapsed_sec": 778.3502471446991
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "harbor_returns_disposition_audit"
+        ],
+        [
+          "u1",
+          "harbor_returns_disposition_audit"
+        ],
+        [
+          "u2",
+          "harbor_returns_disposition_audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 7,
+      "merger_cost_usd": 11.518446,
+      "elapsed_sec": 1283.895679473877
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "harbor_outbound_manifest_audit"
+        ],
+        [
+          "u1",
+          "harbor_outbound_manifest_audit"
+        ],
+        [
+          "u2",
+          "harbor_outbound_manifest_audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 11,
+      "merger_cost_usd": 12.361692,
+      "elapsed_sec": 1376.5270338058472
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "harbor_cycle_count_variance_audit"
+        ],
+        [
+          "u1",
+          "harbor_cycle_count_variance_audit"
+        ],
+        [
+          "u2",
+          "harbor_cycle_count_variance_audit"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 10.938669,
+      "elapsed_sec": 1544.964287519455
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Distribution-Center-Auditing/worker_skills/u0/Distribution-Center-Auditing",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Distribution-Center-Auditing/worker_skills/u1/Distribution-Center-Auditing",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Distribution-Center-Auditing/worker_skills/u2/Distribution-Center-Auditing"
+  }
+}

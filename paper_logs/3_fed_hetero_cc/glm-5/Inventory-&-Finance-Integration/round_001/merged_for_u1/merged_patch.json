@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Round 1. Applied u1's verified SKILL.md (reward=1.0) + absorbed u2's critical additions (tool name anti-pattern, output precision, domain table, edge cases). Enhanced helper script from u2. Kept `excel-inventory-analysis` name (peer-majority). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-inventory-analysis/SKILL.md",
+    "excel-inventory-analysis/scripts/setup_and_load.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-inventory-analysis/scripts/setup_and_load.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "excel-inventory-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-inventory-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.525298
+}

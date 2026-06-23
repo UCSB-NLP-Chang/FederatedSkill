@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Added assumption-parsing.md reference (u0), updated pytest-failures.md with discovery section (u1), created pytest_gate.py structural gate script. Kept verbose SKILL.md style for kimi-cli fit. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/assumption-parsing.md",
+    "excel-workbook-modeling/references/pytest-failures.md",
+    "excel-workbook-modeling/scripts/pytest_gate.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ],
+    "excel-workbook-modeling/scripts/pytest_gate.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-workbook-modeling/references/pytest-failures.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.6666666666666666
+    ],
+    "excel-workbook-modeling/references/assumption-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md"
+  ],
+  "cost_usd": 4.841190000000001
+}

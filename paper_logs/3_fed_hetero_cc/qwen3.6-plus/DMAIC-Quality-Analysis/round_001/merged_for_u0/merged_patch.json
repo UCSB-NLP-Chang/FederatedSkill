@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "R1 merge for u0 (qwen3.6-plus): Synthesized u2's SKILL.md (schema verification + troubleshooting) + u1's script (p-value clamping) + u2's schema.md reference + enhanced known invariants. All workers failed R1 with same root cause (script bypass); see DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/schema.md",
+    "statistical-process-analysis/scripts/compute_spc.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "statistical-process-analysis/references/schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/scripts/compute_spc.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.2765746000000004
+}

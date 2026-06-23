@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "R5 merge complete for u1. Additive updates only: u0's in-place ZIP anti-pattern, u2's buffer-dilution-matrix-repair sub-task and helper script --sheet argument. Target's prose style preserved. See DECISIONS.md.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "cost_usd": 2.919909
+}

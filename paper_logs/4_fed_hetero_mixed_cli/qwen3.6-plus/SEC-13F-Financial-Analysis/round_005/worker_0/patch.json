@@ -1,0 +1,7 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "LLM call failed: Model openai/qwen3.6-plus hit max_tokens limit. Response was truncated. Consider increasing max_tokens if possible.. Current patch max_tokens=8192; if this is an output truncation, try increasing --patch-max-tokens.",
+  "upsert_paths": [],
+  "delete_paths": []
+}

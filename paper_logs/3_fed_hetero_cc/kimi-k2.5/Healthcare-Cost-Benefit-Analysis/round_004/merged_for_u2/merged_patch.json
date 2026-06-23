@@ -1,0 +1,44 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Created infusion-batch-analysis skill with u2's correct script and synthesized SKILL.md (u2 base + u1 decision logic + STOP checkpoint for kimi's script-bypass pattern). Updated cycle-margin-analysis with cross-reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md",
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/references/calculation-examples.md",
+    "infusion-batch-analysis/references/invariants.md",
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cycle-margin-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.4
+    ],
+    "infusion-batch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "infusion-batch-analysis/references/invariants.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.4
+    ],
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.4
+    ],
+    "infusion-batch-analysis/references/calculation-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.4
+    ]
+  },
+  "conflicts": [
+    "infusion-batch-analysis/SKILL.md",
+    "__skill_md_invalid__:infusion-batch-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 4.39851
+}

@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's excel-workbook-construction skill for B2 gap (all workers failed R3 with reward=0.0). Added u2's Harbor format reference. B1 covered by existing excel-inventory-analysis. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-construction/SKILL.md",
+    "excel-workbook-construction/references/harbor-format.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-construction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "excel-workbook-construction/references/harbor-format.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.463005
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for supply chain replenishment gap analysis. Captures the exact filtering, deduplication, date validation, alias mapping, and coverage math required to process mixed delivery feeds against stock snapshots. Includes a deterministic helper script to prevent brittle re-implementation.",
+  "upsert_paths": [
+    "replenishment-gap-analysis/SKILL.md",
+    "replenishment-gap-analysis/scripts/build_replenishment.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for Excel-based queue simulation and policy-driven planning. Captures the critical distinction between signed calculation state and reporting state, provides a deterministic weekly loop pattern, and includes a verification script to enforce strict output formatting constraints (line counts, word limits, Excel structure).",
+  "upsert_paths": [
+    "excel-queue-simulation/SKILL.md",
+    "excel-queue-simulation/scripts/verify_outputs.py"
+  ],
+  "delete_paths": []
+}

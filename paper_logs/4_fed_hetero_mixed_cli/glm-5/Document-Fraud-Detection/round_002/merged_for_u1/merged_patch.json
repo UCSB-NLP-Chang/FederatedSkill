@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "Round 2 merge complete for u1. Applied target's verified patch (reward=1.0) to cross-document-validation \u2014 added crosswalk table pattern and clinic shift claims domain. Rejected u0's narrow expense-claims-validation skill to preserve umbrella architecture. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md",
+    "cross-document-validation/references/domain-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-document-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cross-document-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.325418
+}

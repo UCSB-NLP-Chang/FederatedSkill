@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 R7 merge complete. DECISIONS.md summarizes: SKILL.md rewritten (Output precision moved to TOP with WRONG/RIGHT examples for qwen's persistent float-formatting failure mode), case-settlement-patterns.md added. Both u0/u1 patches rejected (reward=0.0, raw float violation), patterns synthesized from patches and validated by u2's R7 success.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/case-settlement-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/references/case-settlement-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/case-settlement-patterns.md"
+  ],
+  "cost_usd": 0.6524735999999999
+}

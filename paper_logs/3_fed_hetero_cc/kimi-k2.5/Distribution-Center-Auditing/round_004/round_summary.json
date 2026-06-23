@@ -1,0 +1,30 @@
+{
+  "round_idx": 4,
+  "assignments": [
+    [
+      "u0",
+      "harbor_timesheet_policy_audit"
+    ],
+    [
+      "u1",
+      "harbor_timesheet_policy_audit"
+    ],
+    [
+      "u2",
+      "harbor_timesheet_policy_audit"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1039.4399137496948
+}

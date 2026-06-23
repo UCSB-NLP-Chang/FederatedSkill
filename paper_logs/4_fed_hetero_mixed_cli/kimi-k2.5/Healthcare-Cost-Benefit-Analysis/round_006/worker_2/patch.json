@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Adds a new skill for reagent kit bulk policy analysis following the established pattern in the library. This skill compares small-kit (24 runs/year) vs bulk-kit (12 runs/year) reagent restocking economics using an assay manifest JSON, carrier cost CSV, billing CSV with effective-month versioning, and lab override CSV with approval revisions. The trace demonstrated successful resolution of billing aliases and override logic, which are captured as explicit data resolution rules.",
+  "upsert_paths": [
+    "harbor-reagentkit-analysis/SKILL.md",
+    "harbor-reagentkit-analysis/scripts/compute_reagentkit.py"
+  ],
+  "delete_paths": []
+}

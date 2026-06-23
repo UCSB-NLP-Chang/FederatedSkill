@@ -1,0 +1,29 @@
+{
+    "id": "019bb2c2-8204-4eac-b0c5-6281728d9013",
+    "started_at": "2026-05-18T07:10:12.110532",
+    "finished_at": "2026-05-18T07:12:47.963963",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "api-sla-at-risk-calc__HkgWqsr"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

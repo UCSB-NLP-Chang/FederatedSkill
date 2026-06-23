@@ -1,0 +1,29 @@
+{
+    "id": "ec1a024b-86dd-44dc-bca8-a0b3fdbefaf7",
+    "started_at": "2026-05-22T00:56:44.709859",
+    "finished_at": "2026-05-22T00:58:01.347950",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__HWPX-Document-Automation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "hwpx-clinic-intake-summary__Jx9wf7U"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

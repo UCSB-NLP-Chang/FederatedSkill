@@ -1,0 +1,174 @@
+--- a/excel-pivot-report/SKILL.md
++++ b/excel-pivot-report/SKILL.md
+@@ -1,34 +1,38 @@
+ ---
+ name: excel-pivot-report
+-description: Generate multi-sheet Excel pivot reports from raw transactional/academic data and reference catalogs (PDF/Excel/CSV). Use when tasks require data cleaning, ID reconciliation, metric computation, and structured pivot summaries across multiple sheets.
++description: Generate multi-sheet Excel pivot reports from raw transactional/academic/inventory data and reference catalogs (PDF/Excel/CSV). Use when tasks require multi-source consolidation, ID reconciliation, metric computation, cross-tab matrices, and structured pivot summaries across multiple sheets.
+ ---
+ 
+ # Excel Pivot Report Generation
+ 
+ ## When to Use
+-- Input: Raw data (Excel/CSV) + reference catalog/roster (PDF/Excel/CSV).
+-- Output: Multi-sheet Excel workbook with cleaned source data and pivot summaries.
+-- Triggers: "Create sales/student report", "pivot data by category/region/department", "reconcile against catalog/roster", "compute revenue/margin/weighted scores".
++- Input: Multiple raw data files (Excel/CSV) + reference catalog/roster (PDF/Excel/CSV).
++- Output: Multi-sheet Excel workbook with cleaned source data, derived metrics, and pivot/cross-tab summaries.
++- Triggers: "Create sales/student/inventory report", "pivot data by category/region/department", "reconcile against catalog/roster", "compute revenue/margin/weighted scores/value tiers", "cross-tab matrix by two dimensions".
+ 
+ ## Core Workflow
+ 1. **Inspect & Parse Sources**:
+    - Profile headers, dtypes, missing values, duplicates.
+    - **PDF Catalogs/Rosters**: Use `pdfplumber` or `tabula-py` to extract tables. `pd.read_excel` will fail on PDFs.
++   - **Multi-Source Consolidation**: If data spans multiple files (e.g., Warehouse A & B), load each, add a source identifier if needed, and `pd.concat()` before reconciliation.
+ 2. **Load & Clean**:
+    - Strip whitespace, normalize case for string keys.
+    - Cast numeric columns explicitly (`pd.to_numeric(..., errors='coerce')`).
+-   - Standardize categorical casing (e.g., semesters, departments).
++   - Standardize categorical casing (e.g., semesters, departments, categories).
+ 3. **Reconcile & Validate**:
+    - Merge/join on ID keys.
+    - Flag unmatched IDs, missing prices/scores, or invalid quantities.
+    - Drop/impute per task rules. Print drop/keep stats before proceeding.
+-4. **Compute Metrics**:
+-   - Derive required columns (e.g., `REVENUE`, `MARGIN_PCT`, `WEIGHTED_SCORE`, `GRADE_BAND`).
++4. **Compute Metrics & Flags**:
++   - Derive required columns (e.g., `TOTAL_VALUE`, `MARGIN_PCT`, `WEIGHTED_SCORE`, `REORDER_FLAG`, `VALUE_TIER`).
+    - Handle division by zero safely.
+-5. **Generate Pivots & Rename**:
+-   - Use `df.groupby()` or `pd.pivot_table()` for aggregations.
+-   - **Column Naming Rule**: Pandas produces generic names (`Count`, `sum`, `Average_X`). Explicitly rename to match prompt/verifier exactly (e.g., `df.rename(columns={'Count': 'Loan Count'})`).
+-   - **Decision Rule**: Unless explicitly asked for *interactive Excel Pivot Tables*, output **static aggregated tables** via pandas.
++   - Apply conditional logic for status/tier flags using `np.select` or `pd.cut`.
++5. **Generate Pivots & Cross-Tabs**:
++   - Use `df.groupby()` or `pd.pivot_table()` for standard aggregations.
++   - **Matrix/Cross-Tab**: Use `pd.crosstab(index, columns, values, aggfunc='sum')` or `pd.pivot_table(..., columns=...)` for 2D breakdowns.
++   - **Column Naming Rule**: Pandas produces generic names (`Sum of X`, `Count`, `Average_X`). **Explicitly rename to match prompt/verifier exactly**.
++     - *Heuristic if unspecified*: `sum` → `Total <Metric>`, `count` → `<Metric> Count` or `Item Count`, `mean` → `Avg <Metric>`.
++     - **Decision Rule**: Unless explicitly asked for *interactive Excel Pivot Tables*, output **static aggregated tables** via pandas.
+ 6. **Write Output**:
+    - Use `pd.ExcelWriter(engine='openpyxl')`.
+    - Always pass `index=False`.
+@@ -42,6 +46,7 @@
+ - ❌ Assuming Excel columns are numeric → ✅ Always cast after loading.
+ - ❌ Writing pivots before verifying reconciliation counts → ✅ Print drop/keep stats first.
+ - ❌ Leaving `index=True` in `to_excel()` → ✅ Always use `index=False` unless explicitly requested.
++- ❌ Leaving pandas default aggregation names (`Sum of X`, `Count`) → ✅ Rename immediately. Verifiers strictly check header strings.
+ 
+ ## Verifier Alignment & Troubleshooting
+ - **Sheet Names**: Must match exactly. Trim whitespace and match casing.
+@@ -49,13 +54,14 @@
+ - **Data Types**: Ensure numeric columns are floats/ints, not strings. Use `pd.to_numeric()` before writing.
+ - **Missing Rows**: If verifier expects a specific row count, verify no silent drops occurred during merge/clean. Log all filtering steps.
+ - **Read-Back Verification**: Before submitting, run `pd.read_excel(output_path, sheet_name=None)` to print headers, dtypes, and row counts. Compare against requirements to catch mismatches early.
++- **Matrix Pivots**: Ensure the cross-tab includes all expected categories/warehouses. Use `pd.crosstab(..., margins=False)` unless totals are requested. Fill `NaN` with `0` if required.
+ 
+ ## Validation Checklist
+ - [ ] Source row count matches expected (or explain drops).
+ - [ ] All pivot sums/counts match source totals.
+ - [ ] Sheet names exactly match requirements.
+ - [ ] No `NaN` in required output columns.
+-- [ ] Headers match expected casing/naming exactly.
++- [ ] Headers match expected casing/naming exactly (no `Sum of`, `Count of` defaults).
+ - [ ] Read-back verification passes.
+ 
+ ## Scripts & References
+
+--- a/excel-pivot-report/scripts/pivot_report_template.py
++++ b/excel-pivot-report/scripts/pivot_report_template.py
+@@ -4,49 +4,57 @@
+ Adapt column names, file paths, and reconciliation rules per task.
+ """
+ import pandas as pd
++import numpy as np
+ import openpyxl
+-from openpyxl.utils import get_column_letter
+ import sys
+ 
+-def run_report(transactions_path, catalog_path, output_path):
+-    # 1. Load
+-    df = pd.read_excel(transactions_path)
+-    catalog = pd.read_excel(catalog_path) # Adjust if PDF/CSV
++def run_report(transaction_paths, catalog_path, output_path):
++    # 1. Load & Consolidate Multi-Source
++    dfs = [pd.read_excel(p) for p in transaction_paths]
++    df = pd.concat(dfs, ignore_index=True)
+     
++    # Load Catalog (PDF/Excel/CSV)
++    if catalog_path.endswith('.pdf'):
++        import pdfplumber
++        with pdfplumber.open(catalog_path) as pdf:
++            tables = pdf.pages[0].extract_tables()
++            catalog = pd.DataFrame(tables[0][1:], columns=tables[0][0])
++    else:
++        catalog = pd.read_excel(catalog_path)
++        
+     # 2. Clean & Cast
+-    df["PRODUCT_ID"] = df["PRODUCT_ID"].astype(str).str.strip()
+-    catalog["PRODUCT_ID"] = catalog["PRODUCT_ID"].astype(str).str.strip()
+-    for col in ["QUANTITY", "UNIT_PRICE", "UNIT_COST"]:
++    df["ID_KEY"] = df["ID_KEY"].astype(str).str.strip()
++    catalog["ID_KEY"] = catalog["ID_KEY"].astype(str).str.strip()
++    for col in ["QUANTITY", "UNIT_PRICE"]:
+         if col in df.columns:
+             df[col] = pd.to_numeric(df[col], errors="coerce")
+             
+     # 3. Reconcile
+     initial_rows = len(df)
+     df = df[df["QUANTITY"] > 0]
+-    print(f"Dropped {initial_rows - len(df)} non-positive quantity rows.")
++    print(f"Dropped {initial_rows - len(df)} invalid rows.")
+     
+-    df = df.merge(catalog, on="PRODUCT_ID", how="left", suffixes=("", "_cat"))
+-    unmatched = df[df["UNIT_PRICE"].isna()]
+-    print(f"Unmatched PRODUCT_IDs: {len(unmatched)}")
++    df = df.merge(catalog, on="ID_KEY", how="left", suffixes=("", "_cat"))
++    print(f"Unmatched IDs: {df['UNIT_PRICE'].isna().sum()}")
+     df = df.dropna(subset=["UNIT_PRICE"])
+     
+-    # 4. Compute
+-    df["REVENUE"] = df["QUANTITY"] * df["UNIT_PRICE"]
+-    df["PROFIT"] = df["REVENUE"] - (df["QUANTITY"] * df["UNIT_COST"])
+-    df["MARGIN_PCT"] = (df["PROFIT"] / df["REVENUE"].replace(0, pd.NA)).round(4)
++    # 4. Compute Metrics & Flags
++    df["TOTAL_VALUE"] = df["QUANTITY"] * df["UNIT_PRICE"]
++    df["STATUS_FLAG"] = np.where(df["QUANTITY"] <= df["REORDER_LEVEL"], "At Risk", "Healthy")
+     
+     # 5. Write
+     with pd.ExcelWriter(output_path, engine="openpyxl") as writer:
+         df.to_excel(writer, sheet_name="SourceData", index=False)
+         
+         # Example pivots with EXPLICIT COLUMN RENAMING
+-        rev_cat = df.groupby("CATEGORY")["REVENUE"].sum().reset_index()
+-        rev_cat = rev_cat.rename(columns={"REVENUE": "Total Revenue"})
+-        rev_cat.to_excel(writer, sheet_name="Revenue by Category", index=False)
++        pivot1 = df.groupby("CATEGORY")["TOTAL_VALUE"].sum().reset_index()
++        pivot1 = pivot1.rename(columns={"TOTAL_VALUE": "Total Value"})
++        pivot1.to_excel(writer, sheet_name="Value by Category", index=False)
+         
+-        units_reg = df.groupby("REGION")["QUANTITY"].sum().reset_index()
+-        units_reg = units_reg.rename(columns={"QUANTITY": "Total Units"})
+-        units_reg.to_excel(writer, sheet_name="Units by Region", index=False)
++        # Cross-Tab / Matrix Example
++        matrix = pd.crosstab(df["CATEGORY"], df["WAREHOUSE"], values=df["TOTAL_VALUE"], aggfunc="sum").reset_index()
++        matrix.columns.name = None
++        matrix.to_excel(writer, sheet_name="Category Warehouse Matrix", index=False)
+         
+     print(f"Report saved to {output_path}")
+     verify_report(output_path)
+@@ -56,10 +64,10 @@
+     xls = pd.ExcelFile(output_path)
+     for sheet in xls.sheet_names:
+         df = pd.read_excel(output_path, sheet_name=sheet)
++        bad_cols = [c for c in df.columns if any(x in c for x in ["Sum of", "Count of", "Average of", "Mean of"])]
++        if bad_cols:
++            print(f"[WARN] {sheet} has default pandas names: {bad_cols}. Rename explicitly!")
+         print(f"[VERIFY] {sheet}: {len(df)} rows, cols={list(df.columns)}, dtypes={df.dtypes.to_dict()}")
+ 
+ if __name__ == "__main__":
+-    if len(sys.argv) == 4:
+-        run_report(sys.argv[1], sys.argv[2], sys.argv[3])
+-    else:
+-        print("Usage: python3 pivot_report_template.py <transactions> <catalog> <output>")
++    print("Adapt this template to your specific file paths and column names.")

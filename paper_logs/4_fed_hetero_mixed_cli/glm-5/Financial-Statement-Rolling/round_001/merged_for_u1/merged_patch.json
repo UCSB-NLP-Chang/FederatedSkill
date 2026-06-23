@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Synthesized SKILL.md from u1+u2 patches with STOP-level circular reference section at top. Rejected u0's harmful \"Variant B\" patterns. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/scripts/verify_workbook.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "financial-rollforward-workbook/scripts/verify_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/scripts/verify_workbook.py"
+  ],
+  "cost_usd": 2.4421440000000003
+}

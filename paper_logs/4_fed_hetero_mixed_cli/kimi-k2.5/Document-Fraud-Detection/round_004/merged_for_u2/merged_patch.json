@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged R4 patches for u2: Applied target's domain-examples.md wholesale (fleet maintenance with JSON flattening), updated SKILL.md with fleet maintenance known invariants, domain mapping, and JSON format support. Rejected u1's cross-document-validation as duplicate workflow. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "cost_usd": 5.2278389999999995
+}

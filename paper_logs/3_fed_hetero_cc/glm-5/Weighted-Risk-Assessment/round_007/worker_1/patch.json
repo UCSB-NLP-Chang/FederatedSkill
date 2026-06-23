@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The agent's formulas were syntactically correct but the verifier failed, likely due to openpyxl not evaluating formulas. Adding explicit pre-computation workflow and value-verification step to catch this before submission.",
+  "upsert_paths": [
+    "excel-formula-automation/SKILL.md",
+    "excel-formula-automation/references/verifier-compatibility.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "85ea2ec0-17d5-4c3c-8313-faa4b4635017",
+    "started_at": "2026-05-23T22:59:35.618792",
+    "finished_at": "2026-05-23T23:01:41.471572",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-utilities-telecom-correlati__HhQb2cM"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

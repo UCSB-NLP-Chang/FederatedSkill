@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1. Applied target's preprocessing guidance (r=1.0) + folded u0's ZipInfo preservation. Kept broader name `hwpx-document-processing`. See DECISIONS.md.",
+  "upsert_paths": [
+    "hwpx-document-processing/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-document-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.421843
+}

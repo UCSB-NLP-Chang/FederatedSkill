@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace shows a hospital staffing calculation task that follows the same patterns as inventory calculations (coverage days \u2248 DOH, understaff date \u2248 OOS, shift blocks \u2248 pallets). The key new lessons are: (1) Boolean values must be explicitly Python `bool` type when writing to Excel\u2014integers like `1` appear as numbers not TRUE/FALSE; (2) Two-sheet output pattern (all results + flagged items only) is reusable; (3) The existing skill's calculation patterns generalize to staffing/capacity planning domains. Updating the existing skill to cover these patterns.",
+  "upsert_paths": [
+    "excel-inventory-calculations/SKILL.md"
+  ],
+  "delete_paths": []
+}

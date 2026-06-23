@@ -1,0 +1,49 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.4, pluggy-1.6.0 -- /opt/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.6
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ................sss.s..F..................                               [100%]
+E           =================================== FAILURES ===================================
+E           _______ TestSourceDataSheet.test_has_required_column[TEAM_NAME-<lambda>] _______
+E           
+E           self = <test_outputs.TestSourceDataSheet object at 0x7f86ded44080>
+E           headers = ['tx_id', 'team_code', 'expense_category', 'amount', 'fiscal_quarter', 'dept_name', ...]
+E           desc = 'TEAM_NAME', match_fn = <function <lambda> at 0x7f870a7bce00>
+E           
+E               @pytest.mark.parametrize("desc,match_fn", REQUIRED_COLUMNS)
+E               def test_has_required_column(self, headers, desc, match_fn):
+E           >       assert any(match_fn(h) for h in headers), f"Missing {desc} column. Found: {headers}"
+E           E       AssertionError: Missing TEAM_NAME column. Found: ['tx_id', 'team_code', 'expense_category', 'amount', 'fiscal_quarter', 'dept_name', 'division', 'fiscal_quarter', 'budget_amount', 'variance', 'utilization_pct']
+E           E       assert False
+E           E        +  where False = any(<generator object TestSourceDataSheet.test_has_required_column.<locals>.<genexpr> at 0x7f86ded41fc0>)
+E           
+E           /tests/test_outputs.py:110: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestSourceDataSheet::test_has_required_column[TEAM_NAME-<lambda>]
+E           1 failed, 37 passed, 4 skipped in 0.44s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.60s ===============================

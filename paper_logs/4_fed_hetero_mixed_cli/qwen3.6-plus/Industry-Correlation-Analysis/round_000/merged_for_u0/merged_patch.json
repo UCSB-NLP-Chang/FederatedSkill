@@ -1,0 +1,29 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's patch with lambda correction (\u03bb=14400 for monthly) and renamed to `economic-time-series-correlation`. Integrated u2's year-parsing reference file. Library now has 1 umbrella skill covering B1. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md",
+    "economic-time-series-correlation/scripts/hp_correlation.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-correlation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "economic-time-series-correlation/scripts/hp_correlation.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "economic-time-series-correlation/references/excel-year-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.49815899999999996
+}

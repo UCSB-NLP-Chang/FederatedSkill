@@ -1,0 +1,7 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "[patcher failed: PermissionError: [Errno 13] Permission denied: '/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-3fam-dashscope-rerun-M3-hetero/Operational-Recovery-Planning/round_004/worker_0/harbor_dc_recovery_01__6T7EpB4/agent/trajectory.json']",
+  "upsert_paths": [],
+  "delete_paths": []
+}

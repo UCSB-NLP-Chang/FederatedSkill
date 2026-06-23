@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "DONE \u2014 Merged u0's thyroid panel SKILL.md (r=0.808) + u2's quoted comma-decimal handling into clinical-lab-harmonization. Updated helper script and references for thyroid analytes. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/unit-conversions.md",
+    "clinical-lab-harmonization/scripts/harmonize_lab_csv.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/references/unit-conversions.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "clinical-lab-harmonization/scripts/harmonize_lab_csv.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8076923076923077
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "cost_usd": 5.998223999999999
+}

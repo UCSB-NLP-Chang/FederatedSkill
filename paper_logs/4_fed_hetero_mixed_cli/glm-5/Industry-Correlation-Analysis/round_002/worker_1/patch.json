@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Updated the economic-time-series-correlation skill to handle additional quarterly marker formats ('2025 Q1', 'Q2', 'Q3') that differ from the Roman numeral patterns already documented. Added detection regex and parsing examples for Arabic numeral quarters with space separator and continuation markers without year prefix.",
+  "upsert_paths": [
+    "economic-time-series-correlation/references/excel-year-parsing.md"
+  ],
+  "delete_paths": []
+}

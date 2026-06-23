@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's SKILL.md patch (JSON handling + correct dedup strategy + preserved STOP blocks). See DECISIONS.md for rationale on rejecting u1/u2's STOP block removal and incorrect JSON summing approach.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 1.489938
+}

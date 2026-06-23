@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Synthesized u2's mandatory checkpoint approach (highest reward 0.778) with u0's Summary Dashboard validation (addresses Y/Y formula column ref failure). Added explicit code blocks for pytest timing to fix qwen's execution adherence problem. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.7777777777777778
+    ]
+  },
+  "conflicts": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "cost_usd": 2.0279819999999997
+}

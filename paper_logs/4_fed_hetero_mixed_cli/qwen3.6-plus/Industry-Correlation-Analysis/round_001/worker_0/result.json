@@ -1,0 +1,29 @@
+{
+    "id": "5629fb21-fd77-4d90-9eb7-26777bf5c669",
+    "started_at": "2026-05-23T22:20:05.292767",
+    "finished_at": "2026-05-23T22:22:12.750206",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-equipment-software-correlat__UZqyWm6"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

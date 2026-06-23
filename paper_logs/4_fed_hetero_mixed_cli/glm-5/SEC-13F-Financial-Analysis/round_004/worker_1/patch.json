@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Added manager-issuer grid workflow to existing sec-13f-analysis skill. This pattern (cross-referencing specific managers against specific issuers) was missing and complements the existing manager-centric and issuer-centric workflows. The grid output schema and workflow steps are now documented for reuse.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/output-schemas.md"
+  ],
+  "delete_paths": []
+}

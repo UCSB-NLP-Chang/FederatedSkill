@@ -1,0 +1,20 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged my own recovery-log-template-based variant into the existing supply-chain-coverage-analysis skill, kept u0's generic excel-inventory-coverage skill for broader applicability, and consolidated/dropped u2's near-duplicate inventory-recovery-tracker skill to avoid redundancy.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "supply-chain-coverage-analysis/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: ",
+    "__task_update_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

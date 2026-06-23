@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Consolidated multi-series data handling, row-absolute reference locking, header row verification, QUARTILE.INC support, and mandatory entity count gate into the canonical template-formula-fill skill, adding a diagnostic script and merging known invariants from all workers.",
+  "upsert_paths": [
+    "template-formula-fill/SKILL.md",
+    "template-formula-fill/references/formula-patterns.md",
+    "template-formula-fill/scripts/diagnose_data_sheet.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "template-formula-fill/references/formula-patterns.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.5
+    ],
+    "template-formula-fill/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.5
+    ],
+    "template-formula-fill/scripts/diagnose_data_sheet.py": [
+      "upsert",
+      "llm_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

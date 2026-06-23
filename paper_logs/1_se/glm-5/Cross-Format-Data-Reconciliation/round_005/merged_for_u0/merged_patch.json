@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "u0",
+      0.75
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.0
+}

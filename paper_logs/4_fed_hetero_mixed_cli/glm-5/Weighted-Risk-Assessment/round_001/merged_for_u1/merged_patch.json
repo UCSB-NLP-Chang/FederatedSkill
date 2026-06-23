@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5). Applied target's SKILL.md patch with stronger test-execution enforcement, integrated u0's precision/invariants sections, added u2's check_test_data_only.py diagnostic script. See DECISIONS.md for rationale. Library: 1 skill (excel-formula-injection) + 3 scripts + 1 reference.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/scripts/check_test_data_only.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-injection/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ],
+    "excel-formula-injection/scripts/check_test_data_only.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "cost_usd": 2.448579
+}

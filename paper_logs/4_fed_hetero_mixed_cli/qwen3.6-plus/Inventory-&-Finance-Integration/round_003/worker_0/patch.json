@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The trace reveals a distinct capability: building capacity reconciliation Excel workbooks from JSON/CSV data with cross-sheet formulas, control rows, and specific openpyxl API patterns. This differs from the existing inventory-metrics-calculation skill (which reads/calculates from multi-sheet Excel inputs). The new skill captures the output-workbook construction workflow, three critical openpyxl pitfalls encountered (Border.Style, MergedCell clearing, float precision), and the verification pattern for formula-linked summary sheets.",
+  "upsert_paths": [
+    "excel-capacity-reconciliation/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) on OCR-Data-Extraction R4.\n\nApplied u1's SKILL.md (+16 lines, glm-5 validated style), u1's invoice-patterns.md (+60 lines, independent contribution), u0's utility-bill-patterns.md (new, clean). Rejected u2's utility-bill-patterns.md due to precision violation (`f\"{amt:.2f}\"`).\n\nAll workers converged on B4 patterns. Library now has 1 skill + 3 reference files covering B1-B4 task buckets.\n\nSee DECISIONS.md for detailed reasoning.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/invoice-patterns.md",
+    "image-data-extraction/references/utility-bill-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/references/utility-bill-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "image-data-extraction/references/invoice-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/utility-bill-patterns.md"
+  ],
+  "cost_usd": 0.5290404000000001
+}

@@ -1,0 +1,58 @@
+---
+name: hwpx-document-processing
+description: Process HWPX (Hancom Office) document files - extract, modify, and create HWPX archives. Use when working with .hwpx files, Korean document templates, or filling placeholders in Hancom documents.
+---
+
+# HWPX Document Processing
+
+HWPX files are ZIP archives containing XML content. This skill covers reading, modifying, and creating valid HWPX documents.
+
+## Structure
+
+```
+.hwpx (ZIP archive)
+├── Contents/
+│   ├── content.hpf    # Manifest/package file
+│   └── section0.xml   # Main document content (primary edit target)
+```
+
+## Workflow
+
+1. **Extract and inspect**: Use Python's `zipfile` module (not shell `unzip`, which may be unavailable)
+2. **Locate content**: Main text is in `Contents/section0.xml`
+3. **Modify XML**: Replace placeholders, update text in `<hp:t>` elements
+4. **Remove layout cache**: Delete `<hp:linesegarray>` elements from any modified `<hp:p>` paragraphs
+5. **Repackage**: Create new ZIP with same internal structure
+
+## Critical: Layout Cache Handling
+
+When modifying paragraph text content, **must remove `<hp:linesegarray>` elements** from that paragraph. These are layout caches that become stale when text changes, causing rendering issues.
+
+```xml
+<!-- Before: has stale layout cache -->
+<hp:p id="1"><hp:run><hp:t>회사명: {{회사명}}</hp:t></hp:run><hp:linesegarray>...</hp:linesegarray></hp:p>
+
+<!-- After: layout cache removed -->
+<hp:p id="1"><hp:run><hp:t>회사명: 실제값</hp:t></hp:run></hp:p>
+```
+
+## Placeholder Replacement Pattern
+
+Placeholders typically use `{{필드명}}` format (Korean field names). Replace with actual values while preserving surrounding text and XML structure.
+
+## Verification
+
+After creating output:
+1. Validate ZIP integrity with `zipfile.is_zipfile()`
+2. Check for remaining placeholders
+3. Parse XML to ensure well-formedness
+
+## Anti-Patterns
+
+- Do not use shell `unzip` command - may not be available
+- Do not preserve `<hp:linesegarray>` in modified paragraphs - causes rendering issues
+- Do not modify `content.hpf` unless changing document structure
+
+## Reference Script
+
+See `scripts/hwpx_fill_template.py` for a working implementation of template filling with layout cache removal.

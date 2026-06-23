@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5 on kimi-cli). Renamed skill to clinical-lab-harmonization to match peer consensus, added comprehensive hepatic panel conversions from target's own patch, incorporated u1's glucose SI-smaller insight, and kept baseline's correct precision guidance. See DECISIONS.md for full synthesis rationale.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": [
+    "clinical-csv-harmonization/SKILL.md"
+  ],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "clinical-csv-harmonization/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "cost_usd": 2.228955
+}

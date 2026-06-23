@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.8,
+  "summary": "The agent failed because it searched inside the PPTX file for a correction value ('FINAL board note: EUR to GBP = 0.8645') and used that, despite the skill explicitly warning that correction values must come from the task prompt, not internal file content. Strengthening the skill documentation to make this invariant more prominent and harder to ignore, with explicit anti-patterns and a clearer fallback workflow when the value is unclear.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE. Applied u0's SKILL.md (stdlib collision fix + row-offset gotcha) + u1's nan-none-handling.md reference. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "excel-audit-reporting/references/nan-none-handling.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-audit-reporting/references/nan-none-handling.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-audit-reporting/SKILL.md"
+  ],
+  "cost_usd": 1.9238069999999998
+}

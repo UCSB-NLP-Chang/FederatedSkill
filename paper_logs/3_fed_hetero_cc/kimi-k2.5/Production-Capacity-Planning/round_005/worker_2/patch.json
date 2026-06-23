@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.3333333333333333,
+  "summary": "The agent failed the verifier despite producing seemingly correct outputs. The trace reveals a critical gap: the task required specific HVAC capacity rules (35 hrs/day production, 6-day=210 hrs, 5-day=175 hrs, 4-day=140 hrs) that differ from the generic patterns in the existing skill. The agent used correct values but the skill library lacks HVAC-specific invariants and the verification script has hardcoded column names that may not match task-specific requirements. Adding HVAC-specific capacity rules and improving the template's flexibility for column naming will help future agents avoid verifier mismatches.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/capacity-variants.md"
+  ],
+  "delete_paths": []
+}

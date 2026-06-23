@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.3333333333333333,
+  "summary": "The agent failed the verifier by implementing a custom analysis script instead of using the existing statistical-process-analysis skill. This produced JSON with a non-standard schema (e.g., 'date_range_primary' vs 'primary_date_range', different record_count keys). The existing compute_spc.py script produces the exact schema the verifier expects. Updated the skill with stronger anti-patterns, explicit usage examples, and a schema reference to prevent future agents from reinventing the analysis logic.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/schema.md"
+  ],
+  "delete_paths": []
+}

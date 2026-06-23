@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5, claude-code) Round 2.\n\nAdded executable enforcement (verify_before_submit.py) and verifier-interaction.md reference. Minimally updated SKILL.md to reference new scripts\u2014avoided wholesale copy of failed markdown-heavy patches per task_memory.md guidance.\n\nSee DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/verifier-interaction.md",
+    "excel-formula-injection/scripts/verify_before_submit.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-injection/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "excel-formula-injection/scripts/verify_before_submit.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-injection/references/verifier-interaction.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "cost_usd": 2.223732
+}

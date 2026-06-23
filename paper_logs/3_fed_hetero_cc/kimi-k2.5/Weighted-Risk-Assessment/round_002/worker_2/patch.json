@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "The agent failed because it assumed Data sheet year headers were in row 20 instead of row 4 (the standard location for this task family). This caused all INDEX/MATCH lookups to fail. Updating the skill to add explicit Data sheet structure verification steps and the specific invariants for weighted-campus-energy-balance-calc. Also adding a diagnostic script to verify Data sheet layout before formula generation.",
+  "upsert_paths": [
+    "excel-formula-template/SKILL.md",
+    "excel-formula-template/scripts/diagnose_data_sheet.py"
+  ],
+  "delete_paths": []
+}

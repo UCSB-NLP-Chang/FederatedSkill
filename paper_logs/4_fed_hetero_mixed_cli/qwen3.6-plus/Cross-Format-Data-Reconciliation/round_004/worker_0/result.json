@@ -1,0 +1,29 @@
+{
+    "id": "f0c958ae-4dca-4672-b701-db17a0354dd0",
+    "started_at": "2026-05-18T00:57:31.382981",
+    "finished_at": "2026-05-18T00:59:07.670874",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "05-datacenter-hardware-registry__Tor8sX2"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

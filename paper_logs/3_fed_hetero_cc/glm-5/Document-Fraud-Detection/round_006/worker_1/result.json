@@ -1,0 +1,29 @@
+{
+    "id": "10d0850d-4fd2-49a8-a033-3bb9546a8cbd",
+    "started_at": "2026-05-15T04:08:37.908332",
+    "finished_at": "2026-05-15T04:11:11.170500",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "warehouse-coldchain-charge-revie__q72PR5z"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

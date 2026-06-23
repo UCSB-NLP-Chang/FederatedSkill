@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Captures reusable Python/openpyxl patterns for Excel processing tasks. Key lessons: (1) Use venv creation when encountering PEP 668 externally-managed-environment errors rather than system pip or --break-system-packages, (2) Handle mixed date types (datetime objects vs strings) when reading Excel, (3) Evaluate formula cells manually using constants from reference sheets rather than relying on data_only=True which returns None for unsaved formulas, (4) Create new workbooks for output rather than modifying inputs in-place.",
+  "upsert_paths": [
+    "excel-openpyxl-processing/SKILL.md",
+    "excel-openpyxl-processing/references/code-patterns.md"
+  ],
+  "delete_paths": []
+}

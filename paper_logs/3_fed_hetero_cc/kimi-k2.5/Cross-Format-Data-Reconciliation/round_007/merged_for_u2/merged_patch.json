@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged u0's high-quality patch into the existing library, adopting its improved workflow structure, in-memory diff template, enhanced type normalization guidance, and updated anti-patterns/troubleshooting sections.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: ",
+    "__task_update_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

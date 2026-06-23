@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Add shipping container domain terminology to the dataset-diff skill. The task used domain-specific output keys (missing_containers, changed_containers) that weren't in the existing mapping. Added these mappings and a sub-task invariant section to help future agents recognize shipping manifest diffs and use correct keys.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": []
+}

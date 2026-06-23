@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "harbor_gdpval_21__64KgMTt",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-%26-Finance-Integration/round_000/worker_0/harbor_gdpval_21__64KgMTt",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/round_000/worker_0/harbor_gdpval_21__64KgMTt",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "The existing excel-formula-automation skill already covers the core patterns used in this task (INDEX/MATCH, locking, MATCH mode, verifier compatibility). The trace shows the agent successfully verified formatting preservation and formula counts, which are reusable validation steps missing from the current skill. I'm adding two concise verification steps to the workflow and a brief formatting preservation note to prevent future agents from overlooking style/merge retention.",
+  "upsert_paths": [
+    "excel-formula-automation/SKILL.md"
+  ],
+  "delete_paths": []
+}

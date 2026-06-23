@@ -1,0 +1,29 @@
+{
+    "id": "dfddae69-d5e6-43a6-8120-64582e97b135",
+    "started_at": "2026-05-18T00:39:11.785102",
+    "finished_at": "2026-05-18T00:43:27.774232",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "new_task_12_mealkit_freshness_re__puobs7J"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

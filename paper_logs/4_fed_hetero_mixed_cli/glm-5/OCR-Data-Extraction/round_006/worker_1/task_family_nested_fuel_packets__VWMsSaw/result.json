@@ -1,0 +1,104 @@
+{
+    "id": "47d03c30-c779-4fe9-b8ae-83d17435f269",
+    "task_name": "task_family_nested_fuel_packets",
+    "trial_name": "task_family_nested_fuel_packets__VWMsSaw",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/round_006/worker_1/task_family_nested_fuel_packets__VWMsSaw",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/OCR-Data-Extraction/task_family_nested_fuel_packets"
+    },
+    "source": "OCR-Data-Extraction",
+    "task_checksum": "d27200e2d86b14a773b7f94b4d5ef8f086a36235b9e3cc662ad94a99d91d5036",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/OCR-Data-Extraction/task_family_nested_fuel_packets",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "OCR-Data-Extraction"
+        },
+        "trial_name": "task_family_nested_fuel_packets__VWMsSaw",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/round_006/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/OCR-Data-Extraction/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "6f6d458b-3416-431f-9e87-9a0feced5a2c"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 721306,
+        "n_cache_tokens": 593918,
+        "n_output_tokens": 13607,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-18T06:29:29.255807Z",
+    "finished_at": "2026-05-18T06:37:55.735294Z",
+    "environment_setup": {
+        "started_at": "2026-05-18T06:29:29.258356Z",
+        "finished_at": "2026-05-18T06:29:33.063665Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-18T06:29:33.063704Z",
+        "finished_at": "2026-05-18T06:29:34.341792Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-18T06:29:34.341885Z",
+        "finished_at": "2026-05-18T06:37:41.932016Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-18T06:37:41.986411Z",
+        "finished_at": "2026-05-18T06:37:43.751228Z"
+    }
+}

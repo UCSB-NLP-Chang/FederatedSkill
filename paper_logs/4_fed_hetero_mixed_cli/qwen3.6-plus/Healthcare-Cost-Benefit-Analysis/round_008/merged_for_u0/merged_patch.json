@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "R8 merge complete: applied u2's harbor-diagpanel-analysis wholesale (reward=1.0) to close B8 gap. u0's patch (reward=0.6) rejected due to file-name mismatches. Library now at 7 skills (consolidation deferred to R9). See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "harbor-diagpanel-analysis/SKILL.md",
+    "harbor-diagpanel-analysis/scripts/compute_diagpanel.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "harbor-diagpanel-analysis/scripts/compute_diagpanel.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "harbor-diagpanel-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "harbor-diagpanel-analysis/SKILL.md",
+    "harbor-diagpanel-analysis/scripts/compute_diagpanel.py"
+  ],
+  "cost_usd": 0.655784
+}

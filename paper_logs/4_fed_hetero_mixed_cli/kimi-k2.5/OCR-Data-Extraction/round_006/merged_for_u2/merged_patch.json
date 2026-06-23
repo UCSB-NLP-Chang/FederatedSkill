@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5/kimi-cli), Round 6. Added OCR artifact normalization to dedup_validation_patterns.md and SKILL.md B2 invariants. Kept baseline SKILL.md (table-driven style works for kimi; peer patches had reward=0.0 and prose-heavy style mismatch). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/dedup_validation_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/dedup_validation_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "ocr-data-extraction/SKILL.md",
+    "__task_update_failed__:RuntimeError:claude container timed out after 300s"
+  ],
+  "cost_usd": 3.1833390000000006
+}

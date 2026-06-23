@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Added project-cost-rollforward skill (u0 patch) for B5's unique formula pattern. Extended financial-rollforward-workbook with commission-asset invariants and B5 cross-reference. Rejected u1's SKILL.md and verify_workbook.py due to wrong B5 patterns. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "project-cost-rollforward/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "project-cost-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:project-cost-rollforward/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 3.8817750000000006
+}

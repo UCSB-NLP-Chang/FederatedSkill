@@ -1,0 +1,265 @@
+{
+  "family_name": "DMAIC-Quality-Analysis",
+  "n_workers": 3,
+  "n_rounds": 9,
+  "elapsed_sec": 12892.143266916275,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 27,
+    "mean": 0.0,
+    "max": 0.0,
+    "min": 0.0,
+    "n_passed": 0
+  },
+  "merger_cost_total_usd": 89.364798,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "harbor_soc_alert_analyze_01"
+        ],
+        [
+          "u1",
+          "harbor_soc_alert_analyze_01"
+        ],
+        [
+          "u2",
+          "harbor_soc_alert_analyze_01"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 9,
+      "merger_cost_usd": 10.520336999999998,
+      "elapsed_sec": 868.2556300163269
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "harbor_hospital_lab_analyze_02"
+        ],
+        [
+          "u1",
+          "harbor_hospital_lab_analyze_02"
+        ],
+        [
+          "u2",
+          "harbor_hospital_lab_analyze_02"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 9,
+      "merger_cost_usd": 9.322257,
+      "elapsed_sec": 957.7407624721527
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "harbor_field_service_analyze_03"
+        ],
+        [
+          "u1",
+          "harbor_field_service_analyze_03"
+        ],
+        [
+          "u2",
+          "harbor_field_service_analyze_03"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 11.676590999999998,
+      "elapsed_sec": 928.6592881679535
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "harbor_university_it_analyze_04"
+        ],
+        [
+          "u1",
+          "harbor_university_it_analyze_04"
+        ],
+        [
+          "u2",
+          "harbor_university_it_analyze_04"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 11.663177999999998,
+      "elapsed_sec": 1074.7189421653748
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_35"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_35"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_35"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 9.792654,
+      "elapsed_sec": 1090.3201117515564
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "harbor_hospital_safety_01"
+        ],
+        [
+          "u1",
+          "harbor_hospital_safety_01"
+        ],
+        [
+          "u2",
+          "harbor_hospital_safety_01"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 12.922083,
+      "elapsed_sec": 1756.2178165912628
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "harbor_devops_pipeline_02"
+        ],
+        [
+          "u1",
+          "harbor_devops_pipeline_02"
+        ],
+        [
+          "u2",
+          "harbor_devops_pipeline_02"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 14.201937000000001,
+      "elapsed_sec": 2287.6944949626923
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "harbor_logistics_chain_03"
+        ],
+        [
+          "u1",
+          "harbor_logistics_chain_03"
+        ],
+        [
+          "u2",
+          "harbor_logistics_chain_03"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 9.265760999999998,
+      "elapsed_sec": 1842.2345895767212
+    },
+    {
+      "round_idx": 8,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_37"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_37"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_37"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 2086.2997813224792
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u1/DMAIC-Quality-Analysis",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u2/DMAIC-Quality-Analysis"
+  }
+}

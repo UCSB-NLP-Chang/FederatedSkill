@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Updated excel-formula-injection/SKILL.md to prevent the agent's critical mistake of passing the data directory instead of the test directory to pre-flight and verification scripts. Added explicit steps to locate test files first, clarified pytest execution paths, and added a 'Formula String Exactness' section to address common verifier string-matching failures. Added troubleshooting entry for 'pytest collects 0 items'.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "delete_paths": []
+}

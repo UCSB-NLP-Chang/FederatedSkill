@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Extended inventory-load-planning skill to cover lane-based produce restock scenarios with sectioned data parsing, Load Status filtering, and date type handling. Added parsing patterns for 'Lane: COOLER-X' section headers, Load Status values (Ready/Docked include vs Draft/Cancelled exclude), and anti-pattern for datetime/date mixing. Updated sheet/column name variations to include produce lane terminology.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md"
+  ],
+  "delete_paths": []
+}

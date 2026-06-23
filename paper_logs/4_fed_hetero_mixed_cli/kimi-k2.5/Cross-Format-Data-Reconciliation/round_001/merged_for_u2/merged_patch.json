@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's validated SKILL.md and compute_diff.py wholesale (reward=1.0), integrated u0's python3 mandate and known invariants as orthogonal additions, rejected u0's divergent skill name. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/scripts/compute_diff.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/scripts/compute_diff.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md"
+  ],
+  "cost_usd": 2.936703
+}

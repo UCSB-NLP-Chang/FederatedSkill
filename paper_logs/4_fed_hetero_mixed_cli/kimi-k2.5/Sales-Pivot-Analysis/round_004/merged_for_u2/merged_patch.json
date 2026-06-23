@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2/kimi-k2.5 \u2014 applied target's own SKILL.md (N/A handling discovery) + u0's pdftotext fallback and cross-tab alignment. Removed helper script references per task_memory guidance. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md",
+    "sales-pivot-report/references/common-issues.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-report/references/common-issues.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.875
+    ],
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.875
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "cost_usd": 2.101719
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace revealed additional amount extraction patterns (PAY THIS AMOUNT, CURRENT CHARGES) and date formats (DD-MM-YYYY with dashes) not covered in the existing skill. Also highlighted the need to preserve template sheets when filling workbooks. Updating the existing ocr-data-extraction skill with these patterns.",
+  "upsert_paths": [
+    "ocr-data-extraction/references/regex_patterns.md"
+  ],
+  "delete_paths": []
+}

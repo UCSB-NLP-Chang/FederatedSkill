@@ -1,0 +1,242 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.4, pluggy-1.6.0 -- /opt/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.6
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: FFFFFFFFFFFFsssF...............F                                         [100%]
+E           =================================== FAILURES ===================================
+E           _ TestPivotTableConfiguration.test_pivot_exists[Avg Salary by Department-average-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605f5bf020>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Avg Salary by Department', expected_agg = 'average'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Avg Salary by Department'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:54: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Headcount by Location-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605d3e8800>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Headcount by Location', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Headcount by Location'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:54: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Total Compensation by Title-sum-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605d3e8d70>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Total Compensation by Title', expected_agg = 'sum'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Total Compensation by Title'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:54: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Department Location Matrix-average-job_title] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605f5c8620>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Department Location Matrix', expected_agg = 'average'
+E           col_field = 'job_title'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Department Location Matrix'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:54: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Avg Salary by Department-average-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605c3fda30>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Avg Salary by Department', expected_agg = 'average'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:58: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Headcount by Location-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605c3fdb80>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Headcount by Location', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:58: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Total Compensation by Title-sum-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605c3fdcd0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Total Compensation by Title', expected_agg = 'sum'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:58: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Department Location Matrix-average-job_title] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605c3fdd60>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Department Location Matrix', expected_agg = 'average'
+E           col_field = 'job_title'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:58: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Avg Salary by Department-average-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605c3fde80>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Avg Salary by Department', expected_agg = 'average'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:71: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Headcount by Location-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605c3fdfd0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Headcount by Location', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:71: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Total Compensation by Title-sum-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605c3fe120>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Total Compensation by Title', expected_agg = 'sum'
+E           col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:71: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Department Location Matrix-average-job_title] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605c3fe1b0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Department Location Matrix', expected_agg = 'average'
+E           col_field = 'job_title'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:71: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_col_field[Department Location Matrix-average-job_title] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7f605c3fe6c0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           sheet_name = 'Department Location Matrix', expected_agg = 'average'
+E           col_field = 'job_title'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_col_field(self, workbook, sheet_name, expected_agg, col_field):
+E                   if not col_field:
+E                       pytest.skip(f"'{sheet_name}' is not a matrix pivot")
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:79: IndexError
+E           _____________ TestDataTransformations.test_pivot_cache_has_fields ______________
+E           
+E           self = <test_outputs.TestDataTransformations object at 0x7f605f5bf320>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f605d3b37d0>
+E           
+E               def test_pivot_cache_has_fields(self, workbook):
+E           >       pivot = workbook["Avg Salary by Department"]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:197: IndexError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Avg Salary by Department-average-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Headcount by Location-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Total Compensation by Title-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Department Location Matrix-average-job_title]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Avg Salary by Department-average-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Headcount by Location-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Total Compensation by Title-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Department Location Matrix-average-job_title]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Avg Salary by Department-average-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Headcount by Location-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Total Compensation by Title-sum-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Department Location Matrix-average-job_title]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_col_field[Department Location Matrix-average-job_title]
+E           FAILED ../tests/test_outputs.py::TestDataTransformations::test_pivot_cache_has_fields
+E           14 failed, 15 passed, 3 skipped in 0.35s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: FF...
+============================== 1 failed in 0.57s ===============================

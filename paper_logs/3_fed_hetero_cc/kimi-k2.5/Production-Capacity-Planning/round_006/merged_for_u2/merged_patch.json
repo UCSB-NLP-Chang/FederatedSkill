@@ -1,0 +1,38 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) on Production-Capacity-Planning R6.\n\nApplied u0's verified SKILL.md (reward=1.0) with prompt-first directive and correct dye invariants (6-day=108); merged u1's summary format; adopted u2's capacity-derivation.md and template script (address failure pattern: skips prompt extraction). Rejected u2's wrong dye values (6-day=92).\n\nSee DECISIONS.md for full decision log. Library now has 1 skill, 2 scripts, 3 references.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/capacity-derivation.md",
+    "excel-capacity-planning/references/excel-patterns.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/references/capacity-derivation.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "excel-capacity-planning/references/excel-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/scripts/capacity_planner_template.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "cost_usd": 0.8951975999999998
+}

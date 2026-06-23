@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.875,
+  "summary": "The agent failed because it did not read test_output.py first (to discover expected sheet names/columns) and never ran pytest verification. It also struggled with Excel interpreting 'N/A' strings as NaN. Updates: (1) Add Quality Control domain to Domain Adaptation table, (2) Add quality-control-pivot invariants with exact expected sheets and derived columns, (3) Add Excel N/A handling issue to references, (4) Add warning about Excel writing strings that Excel interprets as NaN.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md",
+    "sales-pivot-report/references/common-issues.md"
+  ],
+  "delete_paths": []
+}

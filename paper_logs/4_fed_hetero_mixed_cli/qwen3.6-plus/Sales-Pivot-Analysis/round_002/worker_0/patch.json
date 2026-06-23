@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Updated sales-pivot-report/SKILL.md to generalize the workflow beyond sales, adding explicit domain adaptation guidance for library circulation and academic records. Added a PDF extraction fallback strategy (extract_table -> extract_text + keyword parsing) to handle unstructured PDF layouts. Reinforced the mandatory pytest execution rule and added library-circulation-pivot invariants to prevent future agents from skipping verification or hardcoding domain-specific names.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

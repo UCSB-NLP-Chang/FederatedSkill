@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "DONE. Applied u1's validated patch (reward=1.0) adding medication reconciliation key variants to known invariants. No peer conflicts \u2014 u0 had no changes, u2's LLM failed. Library stable, B1 covered. See DECISIONS.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.01187
+}

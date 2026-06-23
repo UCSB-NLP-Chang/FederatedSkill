@@ -1,0 +1,29 @@
+{
+    "id": "245ac5aa-8bcc-4c2a-8946-239ae353ab13",
+    "started_at": "2026-05-18T05:47:56.941607",
+    "finished_at": "2026-05-18T05:49:44.546094",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__SEC-13F-Financial-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "manager-pair-issuer-grid__CGSGhWJ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

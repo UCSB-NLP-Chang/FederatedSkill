@@ -1,0 +1,29 @@
+{
+    "id": "6b3d2053-6bcc-496e-9a83-3477829208af",
+    "started_at": "2026-05-17T20:59:39.683647",
+    "finished_at": "2026-05-17T21:01:42.871095",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__HWPX-Document-Automation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "hwpx-training-feedback__QhHP8sF"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

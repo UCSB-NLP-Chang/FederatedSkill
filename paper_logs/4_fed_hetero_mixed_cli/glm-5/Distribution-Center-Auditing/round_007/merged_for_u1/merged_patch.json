@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged u1's patch extending excel-audit-reporting with cycle-count-variance-audit sub-task invariant for B6 gap. Rejected u0's multi-file-join-audit to preserve validated umbrella architecture. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "excel-audit-reporting/references/cycle-count-variance-audit.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8333333333333334
+    ],
+    "excel-audit-reporting/references/cycle-count-variance-audit.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8333333333333334
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.363435000000001
+}

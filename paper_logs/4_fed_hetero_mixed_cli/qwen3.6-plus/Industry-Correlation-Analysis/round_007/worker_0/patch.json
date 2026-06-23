@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Update existing economic-time-series-correlation skill to cover the selector-workbook routing pattern for monthly updates, per-series deflator handling, blank-value exclusion during averaging, and scipy.stats.pearsonr as an alternative correlation method. These patterns appeared in the successful trace but were not documented in the existing skill.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md"
+  ],
+  "delete_paths": []
+}

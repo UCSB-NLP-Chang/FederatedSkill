@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Round 2 merge complete. Applied radical pre-done gate mechanism per task_memory suggestion \u2014 all 3 patches added imperative text which failed R0-R2. Preserved domain invariants from all patches. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "cost_usd": 1.5552000000000001
+}

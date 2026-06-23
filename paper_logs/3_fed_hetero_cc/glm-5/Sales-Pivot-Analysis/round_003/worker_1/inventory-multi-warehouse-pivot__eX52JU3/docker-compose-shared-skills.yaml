@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1/Sales-Pivot-Analysis:/root/.config/agent/skills

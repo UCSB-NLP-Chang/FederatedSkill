@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "Applied u0's clinical-lab-harmonization patch (reward=0.909) extending umbrella skill with JSON handling, status filtering, and respiratory panel analytes. Rejected u2's clinical-json-panel-harmonization (violates umbrella-first). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.9090909090909091
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.751729
+}

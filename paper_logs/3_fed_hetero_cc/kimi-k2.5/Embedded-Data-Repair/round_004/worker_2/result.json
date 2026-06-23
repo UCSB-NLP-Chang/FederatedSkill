@@ -1,0 +1,29 @@
+{
+    "id": "9d7f8a0d-e589-4510-b293-7dbdf74370e1",
+    "started_at": "2026-05-22T19:03:25.866683",
+    "finished_at": "2026-05-22T19:06:02.075551",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Embedded-Data-Repair": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "catalyst-balance-matrix-sync__qmx6kDL"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

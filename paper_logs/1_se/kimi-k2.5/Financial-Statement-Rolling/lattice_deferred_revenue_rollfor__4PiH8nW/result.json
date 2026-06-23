@@ -1,0 +1,103 @@
+{
+  "id": "db788699-97b9-487d-8726-6c76eb977b18",
+  "task_name": "lattice_deferred_revenue_rollforward",
+  "trial_name": "lattice_deferred_revenue_rollfor__4PiH8nW",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Financial-Statement-Rolling/lattice_deferred_revenue_rollfor__4PiH8nW",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Financial-Statement-Rolling/lattice_deferred_revenue_rollforward"
+  },
+  "source": "Financial-Statement-Rolling",
+  "task_checksum": "6ea237e444726726fdec9792d87e6d293bfc175b237afb2351f3021fd9545fe8",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Financial-Statement-Rolling/lattice_deferred_revenue_rollforward",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Financial-Statement-Rolling"
+    },
+    "trial_name": "lattice_deferred_revenue_rollfor__4PiH8nW",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Financial-Statement-Rolling",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "kimi-k2.5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "d49d86a1-4487-4a47-89f8-657d51e25733"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 360106,
+    "n_cache_tokens": 304405,
+    "n_output_tokens": 23756,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-13T05:35:34.223226Z",
+  "finished_at": "2026-05-13T05:42:25.876490Z",
+  "environment_setup": {
+    "started_at": "2026-05-13T05:35:34.226782Z",
+    "finished_at": "2026-05-13T05:35:35.493844Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-13T05:35:35.493873Z",
+    "finished_at": "2026-05-13T05:35:35.833488Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-13T05:35:35.833589Z",
+    "finished_at": "2026-05-13T05:42:14.579997Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-13T05:42:14.584215Z",
+    "finished_at": "2026-05-13T05:42:15.327780Z"
+  }
+}

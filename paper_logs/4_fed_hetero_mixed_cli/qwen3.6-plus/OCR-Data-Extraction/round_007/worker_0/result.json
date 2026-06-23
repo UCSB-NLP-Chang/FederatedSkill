@@ -1,0 +1,29 @@
+{
+    "id": "44c09b6d-2fb7-488e-817d-bc54ecc2afbe",
+    "started_at": "2026-05-18T03:07:26.482125",
+    "finished_at": "2026-05-18T03:17:48.612516",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "task_family_case_settlement_pack__bWzoich"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE \u2014 R6 merge for u2 (kimi-k2.5) complete. Synthesized production-planning/SKILL.md from all workers (u0's summary workflow + agricultural_examples.md, u1's verification protocol, u2's agricultural domain section with CRITICAL markers) per task_memory guidance for B3 gap. Added Domain Adaptation Guide table, Verification Protocol section, and Known Invariants for agricultural sub-task. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "production-planning/SKILL.md",
+    "production-planning/references/agricultural_examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-planning/references/agricultural_examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "production-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "production-planning/SKILL.md"
+  ],
+  "cost_usd": 1.408435
+}

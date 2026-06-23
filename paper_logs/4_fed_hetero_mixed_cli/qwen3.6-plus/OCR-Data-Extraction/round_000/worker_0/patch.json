@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for extracting structured data (dates, prices) from images using multi-strategy OCR. Captures the workflow of running multiple PSM/preprocessing configs, disambiguating date formats, normalizing prices, and verifying against raw OCR dumps to prevent hallucination. Includes a ready-to-run extraction script and parsing reference.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md",
+    "ocr-data-extraction/scripts/ocr_extract.py"
+  ],
+  "delete_paths": []
+}

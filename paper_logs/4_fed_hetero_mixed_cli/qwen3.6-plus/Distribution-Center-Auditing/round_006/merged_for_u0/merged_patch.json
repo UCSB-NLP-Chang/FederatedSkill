@@ -1,0 +1,35 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's reward=1.0 patch to multi-file-join-audit (template preservation + harbor-outbound-manifest-audit sub-task), added u1's event-log-reconciliation.md reference, and merged u1's sorted summary rule into excel-audit-reporting. Rejected u2's narrow outbound-manifest-audit skill (per-task specialization anti-pattern). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "multi-file-join-audit/SKILL.md",
+    "multi-file-join-audit/references/event-log-reconciliation.md",
+    "multi-file-join-audit/references/template-preservation.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-audit-reporting/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "multi-file-join-audit/references/event-log-reconciliation.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "multi-file-join-audit/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "multi-file-join-audit/references/template-preservation.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.957834
+}

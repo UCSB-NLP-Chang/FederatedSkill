@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "05-datacenter-hardware-registry__46bRb7u",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_004/worker_0/05-datacenter-hardware-registry__46bRb7u",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_004/worker_0/05-datacenter-hardware-registry__46bRb7u",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

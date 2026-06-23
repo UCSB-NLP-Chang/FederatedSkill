@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "hwpx-safety-audit-brief__BT6tDda",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/HWPX-Document-Automation/round_005/worker_2/hwpx-safety-audit-brief__BT6tDda",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/HWPX-Document-Automation/round_005/worker_2/hwpx-safety-audit-brief__BT6tDda",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Creates a skill for economic time series correlation analysis covering business cycle detrending (HP filter), deflation, and critical data cleaning patterns for statistical Excel files. Captures the specific failure modes encountered when parsing year markers (trailing dots, Roman numerals) and the workflow for handling mixed annual/quarterly data.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md",
+    "economic-time-series-correlation/scripts/hp_filter.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated excel-queue-simulation skill to handle non-1-based week indices and parameterized verification. Improved verify_outputs.py to accept --rows and --start-week flags, validate strictly ascending weeks, and use safer sentence counting. Updated SKILL.md to explicitly guide agents on week indexing and verifier usage.",
+  "upsert_paths": [
+    "excel-queue-simulation/SKILL.md",
+    "excel-queue-simulation/scripts/verify_outputs.py"
+  ],
+  "delete_paths": []
+}

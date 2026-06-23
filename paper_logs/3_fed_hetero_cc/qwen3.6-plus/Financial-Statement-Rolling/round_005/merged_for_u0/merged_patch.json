@@ -1,0 +1,35 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged R5 for u0/qwen3.6-plus. Created new financial-rollforward-workbook skill from scratch (all R5 patches had WRONG Variance formula =O-N instead of =N-N). Added structural enforcement via validate_formulas.py assertion. See DECISIONS.md.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/references/control-rows-template.md",
+    "financial-rollforward-workbook/scripts/build_rollforward.py",
+    "financial-rollforward-workbook/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-rollforward-workbook/references/control-rows-template.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "financial-rollforward-workbook/scripts/build_rollforward.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "financial-rollforward-workbook/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.3648309999999997
+}

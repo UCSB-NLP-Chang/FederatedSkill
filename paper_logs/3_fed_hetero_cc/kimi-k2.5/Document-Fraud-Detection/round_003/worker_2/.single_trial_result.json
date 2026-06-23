@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "field-service-workorder-audit__JwRJk7A",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/round_003/worker_2/field-service-workorder-audit__JwRJk7A",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero/Document-Fraud-Detection/round_003/worker_2/field-service-workorder-audit__JwRJk7A",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

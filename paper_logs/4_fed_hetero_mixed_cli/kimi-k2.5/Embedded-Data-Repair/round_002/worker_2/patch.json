@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Update edit-embedded-office-xml skill to include the slot-factor matrix variant and clarify when to extract correction values from slide content. Add openpyxl as the preferred modification method with XML editing as fallback. Distinguish between slide notes and text boxes to prevent lookup failures.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/references/openxml-structures.md"
+  ],
+  "delete_paths": []
+}

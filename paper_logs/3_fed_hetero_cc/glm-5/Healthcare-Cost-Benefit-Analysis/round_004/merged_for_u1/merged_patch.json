@@ -1,0 +1,44 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Library updated: cycle-margin-analysis (cross-reference added) + infusion-batch-analysis (new skill for B3). Key decisions: applied u2's correct script (precision + threshold), synthesized SKILL.md from u1+u2, added both reference files. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md",
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/references/calculation-examples.md",
+    "infusion-batch-analysis/references/invariants.md",
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cycle-margin-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.4
+    ],
+    "infusion-batch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "infusion-batch-analysis/references/invariants.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.4
+    ],
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.4
+    ],
+    "infusion-batch-analysis/references/calculation-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.4
+    ]
+  },
+  "conflicts": [
+    "infusion-batch-analysis/SKILL.md",
+    "__skill_md_invalid__:infusion-batch-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 3.2067479999999997
+}

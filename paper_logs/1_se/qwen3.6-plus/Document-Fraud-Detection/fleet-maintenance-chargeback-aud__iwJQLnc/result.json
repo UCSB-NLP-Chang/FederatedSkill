@@ -1,0 +1,102 @@
+{
+    "id": "12fb5af6-4705-4c60-9551-cc0fc13138c5",
+    "task_name": "fleet-maintenance-chargeback-audit",
+    "trial_name": "fleet-maintenance-chargeback-aud__iwJQLnc",
+    "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__Document-Fraud-Detection/fleet-maintenance-chargeback-aud__iwJQLnc",
+    "task_id": {
+        "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/fleet-maintenance-chargeback-audit"
+    },
+    "source": "Document-Fraud-Detection",
+    "task_checksum": "947e77d88ec4ed705c65aca34cc8d15742b2e85de2381c30565c9b8ee9f3a10e",
+    "config": {
+        "task": {
+            "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/fleet-maintenance-chargeback-audit",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Document-Fraud-Detection"
+        },
+        "trial_name": "fleet-maintenance-chargeback-aud__iwJQLnc",
+        "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r2/iter-baseline-qwen-r2__Document-Fraud-Detection",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "qwen3.6-plus",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "4d8cb1dc-2614-4753-9468-37d5dfe86ca7"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-11T01:30:19.790655Z",
+    "finished_at": "2026-05-11T01:32:42.186464Z",
+    "environment_setup": {
+        "started_at": "2026-05-11T01:30:19.795209Z",
+        "finished_at": "2026-05-11T01:30:20.687508Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-11T01:30:20.687519Z",
+        "finished_at": "2026-05-11T01:30:20.919969Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-11T01:30:20.920043Z",
+        "finished_at": "2026-05-11T01:32:31.090327Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-11T01:32:31.091947Z",
+        "finished_at": "2026-05-11T01:32:31.699632Z"
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 Extended umbrella skill `image-data-extraction` with construction support. Created `references/construction-patterns.md` with correct aggregation logic (latest date per project, form's total NOT computed sum) + quantity/price disambiguation. Rejected u0's new skill creation (umbrella-first principle). Kept SKILL.md at 227 lines for qwen. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/construction-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/references/construction-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md"
+  ],
+  "cost_usd": 1.0795073999999998
+}

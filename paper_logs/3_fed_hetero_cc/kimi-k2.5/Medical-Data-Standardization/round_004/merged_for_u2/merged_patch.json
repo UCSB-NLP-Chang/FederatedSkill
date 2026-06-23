@@ -1,0 +1,38 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) Round 4. Added lab-dedup-harmonization skill from u0 (reward=1.0) with range-based detection. Updated clinical-lab-harmonization with deduplication workflow and oncology support from u1. Rejected u2's own patch with wrong thresholds. See DECISIONS.md.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/oncology-factors.md",
+    "lab-dedup-harmonization/SKILL.md",
+    "lab-dedup-harmonization/references/oncology-ranges.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "lab-dedup-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.9285714285714286
+    ],
+    "clinical-lab-harmonization/references/oncology-factors.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.9285714285714286
+    ],
+    "lab-dedup-harmonization/references/oncology-ranges.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/oncology-factors.md"
+  ],
+  "cost_usd": 3.449886
+}

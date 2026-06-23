@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Synthesized patches from u0+u1+u2 to address persistent pytest-avoidance gap. Key changes: (1) \"ABSOLUTE GATE\" section at top forcing pytest requirement, (2) find_and_run_tests.py helper script, (3) spec-trust rule for blind development, (4) multi-file-merge patterns. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/multi-file-merges.md",
+    "excel-workbook-modeling/references/pytest-failures.md",
+    "excel-workbook-modeling/scripts/find_and_run_tests.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.4444444444444444
+    ],
+    "excel-workbook-modeling/references/pytest-failures.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.4444444444444444
+    ],
+    "excel-workbook-modeling/scripts/find_and_run_tests.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.4444444444444444
+    ],
+    "excel-workbook-modeling/references/multi-file-merges.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md"
+  ],
+  "cost_usd": 3.085362
+}

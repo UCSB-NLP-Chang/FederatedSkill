@@ -1,0 +1,29 @@
+{
+    "id": "a5ba52c2-12f6-4621-9b23-bb380d4b2756",
+    "started_at": "2026-05-17T21:02:59.712041",
+    "finished_at": "2026-05-17T21:12:22.103830",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Healthcare-Cost-Benefit-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_cyclemargin_30v90__eBjTSi5"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Added reusable unit/counter stripping pattern to Korean data transformations based on the trace's '32\uba85' -> '32' transformation. Updated SKILL.md pre-processing checklist and anti-patterns to explicitly mention unit stripping and custom formatting, ensuring future agents handle raw Korean values with units correctly before HWPX filling.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "R7 merge complete. Applied u1's validated parsing_patterns.md keyword specificity fix (reward=1.0). Rejected u0's SKILL.md changes (reward=0.0). See DECISIONS.md.",
+  "upsert_paths": [
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/parsing_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.411419
+}

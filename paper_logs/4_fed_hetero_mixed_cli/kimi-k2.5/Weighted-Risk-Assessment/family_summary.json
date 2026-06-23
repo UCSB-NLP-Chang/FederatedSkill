@@ -1,0 +1,238 @@
+{
+  "family_name": "Weighted-Risk-Assessment",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 14475.18699336052,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 0.0,
+    "max": 0.0,
+    "min": 0.0,
+    "n_passed": 0
+  },
+  "merger_cost_total_usd": 31.958031,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "weighted-cloud-reliability-calc"
+        ],
+        [
+          "u1",
+          "weighted-cloud-reliability-calc"
+        ],
+        [
+          "u2",
+          "weighted-cloud-reliability-calc"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 8,
+      "merger_cost_usd": 6.3279689999999995,
+      "elapsed_sec": 1186.0082347393036
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "weighted-hospital-bedflow-calc"
+        ],
+        [
+          "u1",
+          "weighted-hospital-bedflow-calc"
+        ],
+        [
+          "u2",
+          "weighted-hospital-bedflow-calc"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 10,
+      "merger_cost_usd": 8.278236,
+      "elapsed_sec": 966.2966296672821
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "weighted-campus-energy-balance-calc"
+        ],
+        [
+          "u1",
+          "weighted-campus-energy-balance-calc"
+        ],
+        [
+          "u2",
+          "weighted-campus-energy-balance-calc"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 6.907359,
+      "elapsed_sec": 915.219396352768
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "weighted-port-throughput-calc"
+        ],
+        [
+          "u1",
+          "weighted-port-throughput-calc"
+        ],
+        [
+          "u2",
+          "weighted-port-throughput-calc"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 5,
+      "merger_cost_usd": 10.444467,
+      "elapsed_sec": 1266.2539083957672
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "api-sla-at-risk-calc"
+        ],
+        [
+          "u1",
+          "api-sla-at-risk-calc"
+        ],
+        [
+          "u2",
+          "api-sla-at-risk-calc"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 2447.750447034836
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "campus-budget-at-risk-calc"
+        ],
+        [
+          "u1",
+          "campus-budget-at-risk-calc"
+        ],
+        [
+          "u2",
+          "campus-budget-at-risk-calc"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 2752.436492919922
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "factory-output-at-risk-calc"
+        ],
+        [
+          "u1",
+          "factory-output-at-risk-calc"
+        ],
+        [
+          "u2",
+          "factory-output-at-risk-calc"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 2476.4651618003845
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "hospital-capacity-at-risk-calc"
+        ],
+        [
+          "u1",
+          "hospital-capacity-at-risk-calc"
+        ],
+        [
+          "u2",
+          "hospital-capacity-at-risk-calc"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 2464.7552127838135
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Weighted-Ri<REDACTED>",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Weighted-Ri<REDACTED>",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Weighted-Ri<REDACTED>"
+  }
+}

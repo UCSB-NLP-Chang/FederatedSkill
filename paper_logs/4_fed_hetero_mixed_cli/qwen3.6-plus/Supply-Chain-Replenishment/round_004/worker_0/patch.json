@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The clinic_branch_transfer_gap task exercised the same core inventory-load-planning capability but introduced two reusable patterns not yet captured: (1) transfer/booking deduplication when the same ID appears multiple times with different dates/statuses, and (2) composite grouping keys (Branch+Item) for inbound aggregation. I'm updating the existing inventory-load-planning skill to add these patterns, extend the column synonym table, and clarify the dedup-then-filter workflow order.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

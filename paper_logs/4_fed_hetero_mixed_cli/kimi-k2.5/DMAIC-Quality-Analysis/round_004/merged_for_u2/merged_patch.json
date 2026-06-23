@@ -1,0 +1,32 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE. Merged u0's Excel-capable compute_metrics.py (de-rounded) + u1's schema field comparison table into baseline's procedural structure. Replaced buggy spc_calculations.py (wrong record_counts keys). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/scripts/compute_metrics.py"
+  ],
+  "delete_paths": [
+    "dmaic-statistical-analysis/scripts/spc_calculations.py"
+  ],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "dmaic-statistical-analysis/scripts/compute_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "dmaic-statistical-analysis/scripts/spc_calculations.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "dmaic-statistical-analysis/SKILL.md"
+  ],
+  "cost_usd": 3.1834409999999997
+}

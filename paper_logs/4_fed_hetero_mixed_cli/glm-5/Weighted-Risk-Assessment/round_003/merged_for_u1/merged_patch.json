@@ -1,0 +1,43 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. See DECISIONS.md for details.\n\nKey changes:\n- Applied u2's script exit code fixes (3 for check script, 4 for verify script) \u2014 executable enforcement layer\n- Applied u1's weighted mean formula patterns to formula-patterns.md \u2014 addresses R3 formula error\n- Added finding-tests.md reference from u2 \u2014 test location guidance\n- Minimal SKILL.md updates \u2014 documented exit codes and weighted mean troubleshooting\n\nStrategy: Script-level fixes over SKILL.md prose additions (task_memory.md...",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/finding-tests.md",
+    "excel-formula-injection/references/formula-patterns.md",
+    "excel-formula-injection/scripts/check_test_data_only.py",
+    "excel-formula-injection/scripts/verify_before_submit.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-injection/references/finding-tests.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "excel-formula-injection/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-injection/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "excel-formula-injection/scripts/verify_before_submit.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "excel-formula-injection/scripts/check_test_data_only.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "cost_usd": 4.356216
+}

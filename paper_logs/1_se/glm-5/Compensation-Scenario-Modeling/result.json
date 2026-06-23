@@ -1,0 +1,36 @@
+{
+    "id": "b09d782e-6b2c-4a29-a428-7ba49e38774c",
+    "started_at": "2026-04-27T00:55:20.481109",
+    "finished_at": "2026-04-27T02:51:31.370434",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Compensation-Scenario-Modeling": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "01_orchestra_foundation_model__xnFd4Z6",
+                            "02_orchestra_archive_refresh_mod__iqoRYBb",
+                            "03_university_faculty_model__Bph8v4W",
+                            "04_university_termload_refresh_m__8scmAsp",
+                            "05_property_management_model__6gwfvCK",
+                            "06_property_portfolio_refresh_mo__gika6dX",
+                            "07_airline_crew_model__2svQxPD",
+                            "08_construction_union_model__Jw2WiHf"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

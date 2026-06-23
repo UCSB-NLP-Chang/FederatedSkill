@@ -1,0 +1,276 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FFF.                                                                    [100%]
+E           =================================== FAILURES ===================================
+E           ___________ test_sheet_layout_and_rules[Current Capacity and Racks] ____________
+E           
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4513f5e960>
+E           due_map = {datetime.date(2018, 1, 22): (1065, 855), datetime.date(2018, 2, 1): (855, 555), datetime.date(2018, 2, 15): (900, 900), datetime.date(2018, 3, 1): (900, 575), ...}
+E           sheet_name = 'Current Capacity and Racks'
+E           
+E               @pytest.mark.parametrize("sheet_name", SHEET_NAMES)
+E               def test_sheet_layout_and_rules(workbook, due_map, sheet_name):
+E                   ws = workbook[sheet_name]
+E               
+E                   assert ws.max_row == LAST_ROW, f"{sheet_name}: expected exactly {LAST_ROW} rows."
+E               
+E                   assert ws["C2"].value == "Rack-Mount Web Servers"
+E                   assert ws["F2"].value == "Blade Database Servers"
+E                   assert ws["I2"].value == "Network Appliances"
+E               
+E                   expected_headers = [
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Actual Var to PO",
+E                       "Total Prod",
+E                       "Notes",
+E                   ]
+E                   actual_headers = [ws.cell(3, col).value for col in range(3, 12)]
+E                   assert set(actual_headers) == set(expected_headers), f"{sheet_name}: header mismatch in C3:K3."
+E               
+E                   first_date = as_date(ws.cell(FIRST_ROW, 2).value)
+E                   assert first_date == START_DATE, f"{sheet_name}: B4 must be {START_DATE}."
+E               
+E                   total_c = 0
+E                   c_days = 0
+E                   c_before_feb1 = 0
+E                   c_on_or_after_feb1 = 0
+E                   first_b_date = None
+E                   high_output_days = 0
+E                   a_backlog = 0
+E                   b_backlog = 0
+E               
+E                   for row in range(FIRST_ROW, LAST_ROW + 1):
+E                       d = START_DATE + timedelta(days=row - FIRST_ROW)
+E               
+E                       if row > FIRST_ROW:
+E                           b_value = ws.cell(row, 2).value
+E                           literal = as_date(b_value)
+E                           if literal is not None:
+E                               assert literal == d, f"{sheet_name}: B{row} has incorrect date."
+E                           else:
+E                               formula = normalize_formula(b_value)
+E                               assert formula is not None, f"{sheet_name}: B{row} must be date or formula."
+E                               assert f"B{row - 1}" in formula and "+1" in formula, (
+E                                   f"{sheet_name}: B{row} must advance date by 1 day."
+E                               )
+E               
+E                       a_plan = parse_nonnegative_int(ws.cell(row, 3).value, f"{sheet_name}!C{row}")
+E                       a_due = parse_nonnegative_int(ws.cell(row, 4).value, f"{sheet_name}!D{row}")
+E                       b_plan = parse_nonnegative_int(ws.cell(row, 6).value, f"{sheet_name}!F{row}")
+E                       b_due = parse_nonnegative_int(ws.cell(row, 7).value, f"{sheet_name}!G{row}")
+E                       c_plan = parse_nonnegative_int(ws.cell(row, 9).value, f"{sheet_name}!I{row}")
+E               
+E           >           assert_formula_contains(ws.cell(row, 5).value, [f"D{row}", f"C{row}"], f"{sheet_name}!E{row}")
+E           
+E           /tests/test_outputs.py:192: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           value = '=D4', tokens = ['D4', 'C4'], cell_ref = 'Current Capacity and Racks!E4'
+E           
+E               def assert_formula_contains(value, tokens, cell_ref):
+E                   formula = normalize_formula(value)
+E                   assert formula is not None, f"{cell_ref} must be a formula."
+E                   for token in tokens:
+E           >           assert token in formula, f"{cell_ref} formula is missing token '{token}'. Got: {value}"
+E           E           AssertionError: Current Capacity and Racks!E4 formula is missing token 'C4'. Got: =D4
+E           E           assert 'C4' in '=D4'
+E           
+E           /tests/test_outputs.py:39: AssertionError
+E           ___________ test_sheet_layout_and_rules[Relocated Network Equipment] ___________
+E           
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4513f5e960>
+E           due_map = {datetime.date(2018, 1, 22): (1065, 855), datetime.date(2018, 2, 1): (855, 555), datetime.date(2018, 2, 15): (900, 900), datetime.date(2018, 3, 1): (900, 575), ...}
+E           sheet_name = 'Relocated Network Equipment'
+E           
+E               @pytest.mark.parametrize("sheet_name", SHEET_NAMES)
+E               def test_sheet_layout_and_rules(workbook, due_map, sheet_name):
+E                   ws = workbook[sheet_name]
+E               
+E                   assert ws.max_row == LAST_ROW, f"{sheet_name}: expected exactly {LAST_ROW} rows."
+E               
+E                   assert ws["C2"].value == "Rack-Mount Web Servers"
+E                   assert ws["F2"].value == "Blade Database Servers"
+E                   assert ws["I2"].value == "Network Appliances"
+E               
+E                   expected_headers = [
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Actual Var to PO",
+E                       "Total Prod",
+E                       "Notes",
+E                   ]
+E                   actual_headers = [ws.cell(3, col).value for col in range(3, 12)]
+E                   assert set(actual_headers) == set(expected_headers), f"{sheet_name}: header mismatch in C3:K3."
+E               
+E                   first_date = as_date(ws.cell(FIRST_ROW, 2).value)
+E                   assert first_date == START_DATE, f"{sheet_name}: B4 must be {START_DATE}."
+E               
+E                   total_c = 0
+E                   c_days = 0
+E                   c_before_feb1 = 0
+E                   c_on_or_after_feb1 = 0
+E                   first_b_date = None
+E                   high_output_days = 0
+E                   a_backlog = 0
+E                   b_backlog = 0
+E               
+E                   for row in range(FIRST_ROW, LAST_ROW + 1):
+E                       d = START_DATE + timedelta(days=row - FIRST_ROW)
+E               
+E                       if row > FIRST_ROW:
+E                           b_value = ws.cell(row, 2).value
+E                           literal = as_date(b_value)
+E                           if literal is not None:
+E                               assert literal == d, f"{sheet_name}: B{row} has incorrect date."
+E                           else:
+E                               formula = normalize_formula(b_value)
+E                               assert formula is not None, f"{sheet_name}: B{row} must be date or formula."
+E                               assert f"B{row - 1}" in formula and "+1" in formula, (
+E                                   f"{sheet_name}: B{row} must advance date by 1 day."
+E                               )
+E               
+E                       a_plan = parse_nonnegative_int(ws.cell(row, 3).value, f"{sheet_name}!C{row}")
+E                       a_due = parse_nonnegative_int(ws.cell(row, 4).value, f"{sheet_name}!D{row}")
+E                       b_plan = parse_nonnegative_int(ws.cell(row, 6).value, f"{sheet_name}!F{row}")
+E                       b_due = parse_nonnegative_int(ws.cell(row, 7).value, f"{sheet_name}!G{row}")
+E                       c_plan = parse_nonnegative_int(ws.cell(row, 9).value, f"{sheet_name}!I{row}")
+E               
+E           >           assert_formula_contains(ws.cell(row, 5).value, [f"D{row}", f"C{row}"], f"{sheet_name}!E{row}")
+E           
+E           /tests/test_outputs.py:192: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           value = '=D4', tokens = ['D4', 'C4']
+E           cell_ref = 'Relocated Network Equipment!E4'
+E           
+E               def assert_formula_contains(value, tokens, cell_ref):
+E                   formula = normalize_formula(value)
+E                   assert formula is not None, f"{cell_ref} must be a formula."
+E                   for token in tokens:
+E           >           assert token in formula, f"{cell_ref} formula is missing token '{token}'. Got: {value}"
+E           E           AssertionError: Relocated Network Equipment!E4 formula is missing token 'C4'. Got: =D4
+E           E           assert 'C4' in '=D4'
+E           
+E           /tests/test_outputs.py:39: AssertionError
+E           _________ test_sheet_layout_and_rules[10 hr Shift Relocate Network Eq] _________
+E           
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7f4513f5e960>
+E           due_map = {datetime.date(2018, 1, 22): (1065, 855), datetime.date(2018, 2, 1): (855, 555), datetime.date(2018, 2, 15): (900, 900), datetime.date(2018, 3, 1): (900, 575), ...}
+E           sheet_name = '10 hr Shift Relocate Network Eq'
+E           
+E               @pytest.mark.parametrize("sheet_name", SHEET_NAMES)
+E               def test_sheet_layout_and_rules(workbook, due_map, sheet_name):
+E                   ws = workbook[sheet_name]
+E               
+E                   assert ws.max_row == LAST_ROW, f"{sheet_name}: expected exactly {LAST_ROW} rows."
+E               
+E                   assert ws["C2"].value == "Rack-Mount Web Servers"
+E                   assert ws["F2"].value == "Blade Database Servers"
+E                   assert ws["I2"].value == "Network Appliances"
+E               
+E                   expected_headers = [
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Planned Production",
+E                       "Purchase Orders Due",
+E                       "Cumulative Open Purchase Orders (EOD)",
+E                       "Actual Var to PO",
+E                       "Total Prod",
+E                       "Notes",
+E                   ]
+E                   actual_headers = [ws.cell(3, col).value for col in range(3, 12)]
+E                   assert set(actual_headers) == set(expected_headers), f"{sheet_name}: header mismatch in C3:K3."
+E               
+E                   first_date = as_date(ws.cell(FIRST_ROW, 2).value)
+E                   assert first_date == START_DATE, f"{sheet_name}: B4 must be {START_DATE}."
+E               
+E                   total_c = 0
+E                   c_days = 0
+E                   c_before_feb1 = 0
+E                   c_on_or_after_feb1 = 0
+E                   first_b_date = None
+E                   high_output_days = 0
+E                   a_backlog = 0
+E                   b_backlog = 0
+E               
+E                   for row in range(FIRST_ROW, LAST_ROW + 1):
+E                       d = START_DATE + timedelta(days=row - FIRST_ROW)
+E               
+E                       if row > FIRST_ROW:
+E                           b_value = ws.cell(row, 2).value
+E                           literal = as_date(b_value)
+E                           if literal is not None:
+E                               assert literal == d, f"{sheet_name}: B{row} has incorrect date."
+E                           else:
+E                               formula = normalize_formula(b_value)
+E                               assert formula is not None, f"{sheet_name}: B{row} must be date or formula."
+E                               assert f"B{row - 1}" in formula and "+1" in formula, (
+E                                   f"{sheet_name}: B{row} must advance date by 1 day."
+E                               )
+E               
+E                       a_plan = parse_nonnegative_int(ws.cell(row, 3).value, f"{sheet_name}!C{row}")
+E                       a_due = parse_nonnegative_int(ws.cell(row, 4).value, f"{sheet_name}!D{row}")
+E                       b_plan = parse_nonnegative_int(ws.cell(row, 6).value, f"{sheet_name}!F{row}")
+E                       b_due = parse_nonnegative_int(ws.cell(row, 7).value, f"{sheet_name}!G{row}")
+E                       c_plan = parse_nonnegative_int(ws.cell(row, 9).value, f"{sheet_name}!I{row}")
+E               
+E           >           assert_formula_contains(ws.cell(row, 5).value, [f"D{row}", f"C{row}"], f"{sheet_name}!E{row}")
+E           
+E           /tests/test_outputs.py:192: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           value = '=D4', tokens = ['D4', 'C4']
+E           cell_ref = '10 hr Shift Relocate Network Eq!E4'
+E           
+E               def assert_formula_contains(value, tokens, cell_ref):
+E                   formula = normalize_formula(value)
+E                   assert formula is not None, f"{cell_ref} must be a formula."
+E                   for token in tokens:
+E           >           assert token in formula, f"{cell_ref} formula is missing token '{token}'. Got: {value}"
+E           E           AssertionError: 10 hr Shift Relocate Network Eq!E4 formula is missing token 'C4'. Got: =D4
+E           E           assert 'C4' in '=D4'
+E           
+E           /tests/test_outputs.py:39: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_sheet_layout_and_rules[Current Capacity and Racks]
+E           FAILED ../tests/test_outputs.py::test_sheet_layout_and_rules[Relocated Network Equipment]
+E           FAILED ../tests/test_outputs.py::test_sheet_layout_and_rules[10 hr Shift Relocate Network Eq]
+E           3 failed, 2 passed in 0.16s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.37s ===============================

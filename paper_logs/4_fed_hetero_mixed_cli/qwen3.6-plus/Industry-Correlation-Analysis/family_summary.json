@@ -1,0 +1,238 @@
+{
+  "family_name": "Industry-Correlation-Analysis",
+  "n_workers": 3,
+  "n_rounds": 8,
+  "elapsed_sec": 6831.0610871315,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 24,
+    "mean": 1.0,
+    "max": 1.0,
+    "min": 1.0,
+    "n_passed": 24
+  },
+  "merger_cost_total_usd": 18.012358,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "econ-service-hospitality-correlation"
+        ],
+        [
+          "u1",
+          "econ-service-hospitality-correlation"
+        ],
+        [
+          "u2",
+          "econ-service-hospitality-correlation"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 8,
+      "merger_cost_usd": 1.969365,
+      "elapsed_sec": 711.5122084617615
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "econ-equipment-software-correlation"
+        ],
+        [
+          "u1",
+          "econ-equipment-software-correlation"
+        ],
+        [
+          "u2",
+          "econ-equipment-software-correlation"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 7,
+      "merger_cost_usd": 2.6636319999999998,
+      "elapsed_sec": 847.3385758399963
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "econ-broadcasting-advertising-correlation"
+        ],
+        [
+          "u1",
+          "econ-broadcasting-advertising-correlation"
+        ],
+        [
+          "u2",
+          "econ-broadcasting-advertising-correlation"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 1.9624729999999997,
+      "elapsed_sec": 800.0523631572723
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "econ-housing-materials-correlation"
+        ],
+        [
+          "u1",
+          "econ-housing-materials-correlation"
+        ],
+        [
+          "u2",
+          "econ-housing-materials-correlation"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 1.7524009999999999,
+      "elapsed_sec": 722.9836540222168
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "econ-utilities-telecom-correlation"
+        ],
+        [
+          "u1",
+          "econ-utilities-telecom-correlation"
+        ],
+        [
+          "u2",
+          "econ-utilities-telecom-correlation"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 2.108327,
+      "elapsed_sec": 637.0944187641144
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "econ-logistics-warehousing-correlation"
+        ],
+        [
+          "u1",
+          "econ-logistics-warehousing-correlation"
+        ],
+        [
+          "u2",
+          "econ-logistics-warehousing-correlation"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 2.810155,
+      "elapsed_sec": 951.4701867103577
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "econ-wholesale-packaging-correlation"
+        ],
+        [
+          "u1",
+          "econ-wholesale-packaging-correlation"
+        ],
+        [
+          "u2",
+          "econ-wholesale-packaging-correlation"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 2.3479929999999998,
+      "elapsed_sec": 1106.1797242164612
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "econ-coldchain-lastmile-correlation"
+        ],
+        [
+          "u1",
+          "econ-coldchain-lastmile-correlation"
+        ],
+        [
+          "u2",
+          "econ-coldchain-lastmile-correlation"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 2.398012,
+      "elapsed_sec": 1054.3616468906403
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u0/Industry-Correlation-Analysis",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u1/Industry-Correlation-Analysis",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/worker_skills/u2/Industry-Correlation-Analysis"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated inventory-metrics-calculation skill to include the stochastic fuel/refill planning variant, covering safety buffer calculations, tanker rounding, required date branching logic, and zero-rate handling. Added troubleshooting note for NoneType formatting in debug prints.",
+  "upsert_paths": [
+    "inventory-metrics-calculation/SKILL.md"
+  ],
+  "delete_paths": []
+}

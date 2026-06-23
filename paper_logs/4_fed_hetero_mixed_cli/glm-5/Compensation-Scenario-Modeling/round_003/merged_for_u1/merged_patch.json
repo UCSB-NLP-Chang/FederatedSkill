@@ -1,0 +1,37 @@
+{
+  "worker_id": "u1",
+  "summary": "R3 merge for u1 (glm-5): Synthesized workflow restructure (pytest as blocking gate at top) from u0+task_memory, u1 regression fix (don't dismiss verification failures), u2 compensation-patterns.md reference. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/compensation-patterns.md",
+    "excel-workbook-modeling/references/grading-patterns.md",
+    "excel-workbook-modeling/scripts/verify_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/references/compensation-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.6
+    ],
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6
+    ],
+    "excel-workbook-modeling/references/grading-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.4
+    ],
+    "excel-workbook-modeling/scripts/verify_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md"
+  ],
+  "cost_usd": 3.883959
+}

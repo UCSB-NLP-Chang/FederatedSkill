@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Fixed contradictory rounding instructions that caused verifier failure, added robust reusable harmonization script, and expanded conversion factors/ranges to cover hepatic panels. Explicitly mandates python3 and full-precision output.",
+  "upsert_paths": [
+    "clinical-lab-data-harmonization/SKILL.md",
+    "clinical-lab-data-harmonization/references/conversion-factors.md",
+    "clinical-lab-data-harmonization/scripts/harmonize.py"
+  ],
+  "delete_paths": []
+}

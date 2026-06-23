@@ -1,0 +1,29 @@
+{
+    "id": "86ec7929-c54e-4b7d-9c47-c82ac2e00198",
+    "started_at": "2026-05-22T02:36:17.584956",
+    "finished_at": "2026-05-22T02:38:42.094546",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Production-Capacity-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_gdpval_36_task7__3s5M9wY"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "b6e4bf2a-056a-4289-8937-9971f49ad63e",
+  "task_name": "new_task_10_maintenance_calcfields_restock",
+  "trial_name": "new_task_10_maintenance_calcfiel__W4QBJ9n",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Inventory-%26-Finance-Integration/new_task_10_maintenance_calcfiel__W4QBJ9n",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Inventory-&-Finance-Integration/new_task_10_maintenance_calcfields_restock"
+  },
+  "source": "Inventory-&-Finance-Integration",
+  "task_checksum": "64e6615a437089a878f92e78e27433b26d1ce86dac1e4922e533c3ac145ad2be",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Inventory-&-Finance-Integration/new_task_10_maintenance_calcfields_restock",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Inventory-&-Finance-Integration"
+    },
+    "trial_name": "new_task_10_maintenance_calcfiel__W4QBJ9n",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Inventory-&-Finance-Integration",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "kimi-k2.5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "810daf44-1dd5-428f-8ad8-d2c7002a4999"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 364077,
+    "n_cache_tokens": 220947,
+    "n_output_tokens": 9124,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-13T06:05:12.310275Z",
+  "finished_at": "2026-05-13T06:10:07.010911Z",
+  "environment_setup": {
+    "started_at": "2026-05-13T06:05:12.312968Z",
+    "finished_at": "2026-05-13T06:05:13.230924Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-13T06:05:13.230936Z",
+    "finished_at": "2026-05-13T06:05:13.488695Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-13T06:05:13.488748Z",
+    "finished_at": "2026-05-13T06:09:55.774252Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-13T06:09:55.774617Z",
+    "finished_at": "2026-05-13T06:09:56.404611Z"
+  }
+}

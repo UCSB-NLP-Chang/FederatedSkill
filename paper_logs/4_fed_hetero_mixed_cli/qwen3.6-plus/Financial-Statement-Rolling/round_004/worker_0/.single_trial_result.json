@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "orchid_project_cost_rollforward__tgCQGYq",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Financial-Statement-Rolling/round_004/worker_0/orchid_project_cost_rollforward__tgCQGYq",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Financial-Statement-Rolling/round_004/worker_0/orchid_project_cost_rollforward__tgCQGYq",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

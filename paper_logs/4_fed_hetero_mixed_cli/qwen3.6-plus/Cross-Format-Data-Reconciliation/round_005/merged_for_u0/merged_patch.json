@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (R5). Adopted u1's domain_mapping.md medications terminology (reward=1.0, validated). Rejected u2's SKILL.md rewrite and domain_mapping.md restructure (reward=0.5, verbose style doesn't transfer to qwen-code). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "cost_usd": 2.3637689999999996
+}

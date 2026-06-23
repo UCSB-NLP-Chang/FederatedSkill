@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__Industry-Correlation-Analysis/shared_skills/Industry-Correlation-Analysis:/root/.config/agent/skills

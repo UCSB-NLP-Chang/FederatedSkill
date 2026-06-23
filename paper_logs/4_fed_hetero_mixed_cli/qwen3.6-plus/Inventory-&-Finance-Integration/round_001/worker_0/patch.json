@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Generalized the existing inventory-metrics-calculation skill to cover the identical computational pattern seen in hospital staffing/shift scheduling tasks. Added explicit column mapping for staffing variants, clarified zero-rate handling (blank outputs instead of crashes), and added an anti-pattern warning about filtering earliest inbound dates by horizon. This prevents future agents from reinventing the wheel or making brittle domain-specific assumptions.",
+  "upsert_paths": [
+    "inventory-metrics-calculation/SKILL.md"
+  ],
+  "delete_paths": []
+}

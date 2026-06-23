@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "task_family_invoice_images__ofvzc9L",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/OCR-Data-Extraction/round_003/worker_2/task_family_invoice_images__ofvzc9L",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/OCR-Data-Extraction/round_003/worker_2/task_family_invoice_images__ofvzc9L",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

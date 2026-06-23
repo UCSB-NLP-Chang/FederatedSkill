@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged R0: created dmaic-statistical-analysis skill synthesizing u0+u1+u2 patches. Key additions: scipy.stats mandate (glm-5 p-value fix), output schema reference, I-MR date window alignment, business-day filtering. See DECISIONS.md.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/references/output_schema.md",
+    "dmaic-statistical-analysis/scripts/analysis_template.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-statistical-analysis/scripts/analysis_template.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-statistical-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:dmaic-statistical-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 4.272587999999999
+}

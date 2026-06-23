@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "new_task_3_returns_center_throug__MBepoQV",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-3missing-M3-hetero/Operational-Recovery-Planning/round_003/worker_1/new_task_3_returns_center_throug__MBepoQV",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-3missing-M3-hetero/Operational-Recovery-Planning/round_003/worker_1/new_task_3_returns_center_throug__MBepoQV",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

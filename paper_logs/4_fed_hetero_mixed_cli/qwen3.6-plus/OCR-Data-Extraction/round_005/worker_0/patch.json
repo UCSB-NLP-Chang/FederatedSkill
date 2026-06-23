@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Adds robust tabular/line-item extraction patterns to handle noisy OCR artifacts (e.g., `=`, `~`, `\u00a7`) and multi-column parsing failures seen in construction/measurement forms. Updates SKILL.md and parsing_patterns.md with artifact cleaning, priority regex, and number-position fallback strategies.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged R2 patches for u1. Structural fix: created separate run-pytest-verification skill (changes execution model from 1 skill to 2 skills with explicit handoff). Updated sales-pivot-report with domain adaptation table, PDF fallback, and library-circulation invariants. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "run-pytest-verification/SKILL.md",
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "run-pytest-verification/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "cost_usd": 2.166081
+}

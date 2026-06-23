@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero",
+  "family_name": "Weighted-Risk-Assessment",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "weighted-cloud-reliability-calc",
+      "weighted-hospital-bedflow-calc",
+      "weighted-campus-energy-balance-calc",
+      "weighted-port-throughput-calc",
+      "api-sla-at-risk-calc",
+      "campus-budget-at-risk-calc",
+      "factory-output-at-risk-calc",
+      "hospital-capacity-at-risk-calc"
+    ],
+    "u1": [
+      "weighted-cloud-reliability-calc",
+      "weighted-hospital-bedflow-calc",
+      "weighted-campus-energy-balance-calc",
+      "weighted-port-throughput-calc",
+      "api-sla-at-risk-calc",
+      "campus-budget-at-risk-calc",
+      "factory-output-at-risk-calc",
+      "hospital-capacity-at-risk-calc"
+    ],
+    "u2": [
+      "weighted-cloud-reliability-calc",
+      "weighted-hospital-bedflow-calc",
+      "weighted-campus-energy-balance-calc",
+      "weighted-port-throughput-calc",
+      "api-sla-at-risk-calc",
+      "campus-budget-at-risk-calc",
+      "factory-output-at-risk-calc",
+      "hospital-capacity-at-risk-calc"
+    ]
+  }
+}

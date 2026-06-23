@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Creates a dataset-diff skill capturing the reusable pattern for comparing structured data across different file formats (PDF, Excel, CSV). The trace shows the agent initially tried to read a binary .xlsx file with the Read tool (which failed), then correctly pivoted to Python/pandas. This skill documents the correct approach upfront, saving future agents from the same dead-end.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/scripts/diff_datasets.py"
+  ],
+  "delete_paths": []
+}

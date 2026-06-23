@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "cardio-panel-template-harmonizat__RbeJXjp",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/round_003/worker_1/cardio-panel-template-harmonizat__RbeJXjp",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/round_003/worker_1/cardio-panel-template-harmonizat__RbeJXjp",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

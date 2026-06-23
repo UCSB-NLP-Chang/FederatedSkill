@@ -1,0 +1,29 @@
+{
+    "id": "299da332-5228-4948-83f0-be2a1da1e3bf",
+    "started_at": "2026-05-18T06:49:05.842566",
+    "finished_at": "2026-05-18T06:51:48.408748",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-port-throughput-calc__dXDN6u3"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

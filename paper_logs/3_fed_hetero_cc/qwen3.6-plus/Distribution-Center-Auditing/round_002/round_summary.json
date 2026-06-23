@@ -1,0 +1,30 @@
+{
+  "round_idx": 2,
+  "assignments": [
+    [
+      "u0",
+      "harbor_promo_register_audit"
+    ],
+    [
+      "u1",
+      "harbor_promo_register_audit"
+    ],
+    [
+      "u2",
+      "harbor_promo_register_audit"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": "PermissionError: [Errno 13] Permission denied: '/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Distribution-Center-Auditing/round_002/worker_0/harbor_promo_register_audit__xmM65ch/agent/trajectory.json'",
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 647.420422077179
+}

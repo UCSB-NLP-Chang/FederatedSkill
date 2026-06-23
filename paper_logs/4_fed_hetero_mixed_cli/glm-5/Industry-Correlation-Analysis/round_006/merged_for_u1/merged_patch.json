@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's reward=1.0 patches wholesale: SKILL.md adds alias mapping (step 3) + priority deduplication (step 4); series-catalog-pattern.md adds Alias Mapping Pattern + Priority-Based Deduplication sections. u0's excel-year-parsing.md NOT applied (baseline already has FY-YYYY). u2 truncated (max_tokens). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/series-catalog-pattern.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-correlation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "economic-time-series-correlation/references/series-catalog-pattern.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-correlation/SKILL.md"
+  ],
+  "cost_usd": 1.1009529999999998
+}

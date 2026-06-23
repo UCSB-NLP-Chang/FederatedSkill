@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8,
+  "summary": "Update production-capacity-planning skill with two lessons from the trace: (1) add outcome-driven production design pattern for scenarios requiring specific business outcomes (e.g., 'May PO On-Time: No'), and (2) recommend literal dates over formulas in column B for more robust verification. Both are reusable decision rules that would have prevented the agent's initial working-day miscalculation and verification friction.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/outcome-design-patterns.md"
+  ],
+  "delete_paths": []
+}

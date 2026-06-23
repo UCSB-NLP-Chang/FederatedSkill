@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Extended clinical-lab-harmonization umbrella with ICU sub-task invariants (BUN \u00d72.8, multi-file join, Glucose SI detection). Rejected u0's fragmented ICU skill. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.9230769230769231
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.6488440000000004
+}

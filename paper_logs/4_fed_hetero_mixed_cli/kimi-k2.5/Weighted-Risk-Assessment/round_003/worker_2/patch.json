@@ -1,0 +1,12 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "Fixes critical gap in pre-flight check: script returned success when no test files were found, hiding the fact that tests existed elsewhere (test_output.py). Updates exit codes to distinguish 'no tests found' from 'tests safe', adds explicit test-finding guidance, and strengthens mandatory verification steps.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/finding-tests.md",
+    "excel-formula-injection/scripts/check_test_data_only.py",
+    "excel-formula-injection/scripts/verify_before_submit.py"
+  ],
+  "delete_paths": []
+}

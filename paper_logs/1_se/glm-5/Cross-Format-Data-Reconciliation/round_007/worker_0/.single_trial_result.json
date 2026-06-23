@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "08-university-course-catalog-dif__mcdXkoV",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_007/worker_0/08-university-course-catalog-dif__mcdXkoV",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_007/worker_0/08-university-course-catalog-dif__mcdXkoV",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

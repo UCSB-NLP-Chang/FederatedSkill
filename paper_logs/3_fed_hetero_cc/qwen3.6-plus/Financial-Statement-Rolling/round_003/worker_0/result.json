@@ -1,0 +1,29 @@
+{
+    "id": "1fdbdf22-0316-4c89-a89c-25afab0b65c5",
+    "started_at": "2026-05-13T23:59:09.742923",
+    "finished_at": "2026-05-14T00:04:53.082347",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "solstice_commission_asset_alignm__SEQpAqN"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

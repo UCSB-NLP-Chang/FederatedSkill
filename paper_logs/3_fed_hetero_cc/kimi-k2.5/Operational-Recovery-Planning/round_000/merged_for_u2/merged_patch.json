@@ -1,0 +1,41 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Applied 2 skills: excel-data-processing (u2's pandas Excel toolkit) and queue-capacity-planning (u0's domain simulation). Rejected u1's openpyxl twin to avoid redundancy. Fixed rounding in queue_simulator.py. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-data-processing/SKILL.md",
+    "excel-data-processing/scripts/verify_excel.py",
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-data-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "queue-capacity-planning/references/simulation_rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-data-processing/scripts/verify_excel.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "queue-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "queue-capacity-planning/scripts/queue_simulator.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.6556459999999998
+}

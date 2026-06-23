@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8333333333333334,
+  "summary": "The agent's self-verification passed but the actual verifier failed on a cycle count variance audit task. The trace reveals two key gaps: (1) the agent used `from copy import copy` for template/style preservation, which is fragile and deviates from the safer cell-by-cell value copy pattern already documented, and (2) the specific variance-based approval gap business rule (|Expected - Actual| > Allowed Variance when Approval Needed = YES) is not captured in existing skills. This patch adds a new known invariant for cycle count variance audits to multi-file-join-audit, reinforces the template preservation anti-pattern warning, and adds a reference for the variance approval gap computation pattern.",
+  "upsert_paths": [
+    "multi-file-join-audit/SKILL.md",
+    "multi-file-join-audit/references/variance-approval-gap.md"
+  ],
+  "delete_paths": []
+}

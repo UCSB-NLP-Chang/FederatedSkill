@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cycle Margin Analysis Output",
+  "description": "Schema for refill cycle margin analysis output",
+  "type": "object",
+  "required": ["assumptions", "therapies", "totals", "recommendation"],
+  "properties": {
+    "assumptions": {
+      "type": "object",
+      "required": ["patients_per_therapy", "fills_per_year_30_day", "fills_per_year_90_day", "switch_threshold_usd"],
+      "properties": {
+        "patients_per_therapy": { "type": "number" },
+        "fills_per_year_30_day": { "type": "number" },
+        "fills_per_year_90_day": { "type": "number" },
+        "doses_per_fill_30_day": { "type": "number" },
+        "doses_per_fill_90_day": { "type": "number" },
+        "switch_threshold_usd": { "type": "number" }
+      }
+    },
+    "therapies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "therapy",
+          "annual_margin_30_day_usd",
+          "annual_margin_90_day_usd",
+          "annual_margin_difference_90_minus_30_usd"
+        ],
+        "properties": {
+          "therapy": { "type": "string" },
+          "price_per_1000_doses_usd": { "type": "number" },
+          "canister_size_units": { "type": "number" },
+          "packaging_cost_usd": { "type": "number" },
+          "reimbursement_per_fill_240_patients_usd": { "type": "number" },
+          "annual_drug_cost_30_day_usd": { "type": "number" },
+          "annual_drug_cost_90_day_usd": { "type": "number" },
+          "annual_packaging_cost_30_day_usd": { "type": "number" },
+          "annual_packaging_cost_90_day_usd": { "type": "number" },
+          "annual_reimbursement_30_day_usd": { "type": "number" },
+          "annual_reimbursement_90_day_usd": { "type": "number" },
+          "annual_margin_30_day_usd": { "type": "number" },
+          "annual_margin_90_day_usd": { "type": "number" },
+          "annual_margin_difference_90_minus_30_usd": { "type": "number" }
+        }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "required": ["total_30_day_margin_usd", "total_90_day_margin_usd", "absolute_difference_usd"],
+      "properties": {
+        "total_30_day_margin_usd": { "type": "number" },
+        "total_90_day_margin_usd": { "type": "number" },
+        "absolute_difference_usd": { "type": "number" }
+      }
+    },
+    "recommendation": {
+      "type": "string",
+      "enum": ["keep_30_day", "switch_to_90_day"]
+    }
+  }
+}

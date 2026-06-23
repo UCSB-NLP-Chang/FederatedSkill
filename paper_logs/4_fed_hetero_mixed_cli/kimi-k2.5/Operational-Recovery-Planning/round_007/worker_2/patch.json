@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.4,
+  "summary": "The task failed verification despite agent self-reporting success, indicating a self-verification mismatch anti-pattern. The agent also struggled with exact production distribution vs capacity filling. Added Running Board domain mapping to variant patterns and strengthened anti-pattern guidance about calculating exact remaining need rather than filling available capacity.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "delete_paths": []
+}

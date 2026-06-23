@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "The agent failed because it skipped the pre-flight check and claimed success without running the test suite. The existing excel-formula-injection skill already contains this guidance, but it was not prominent enough to prevent the agent from bypassing it. This update adds a mandatory GATE CHECK at the top, a PRE-COMPLETION CHECKLIST that must be satisfied before claiming done, and strengthens the test-execution requirement to prevent future agents from self-verifying instead of running the actual verifier.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "delete_paths": []
+}

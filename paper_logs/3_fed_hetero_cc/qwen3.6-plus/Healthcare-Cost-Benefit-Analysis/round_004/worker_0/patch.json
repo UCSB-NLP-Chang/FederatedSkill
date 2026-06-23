@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8,
+  "summary": "Adds a new skill for infusion batch margin analysis, which differs from the existing cycle-margin-analysis skill by using a JSON therapy catalog, per-therapy patient overrides (highest approved revision), alias-based payment matching, and daily-dose drug cost calculations independent of delivery frequency. Includes a reusable Python script to handle the fragile joins and computations.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/scripts/compute_infusion_margin.py"
+  ],
+  "delete_paths": []
+}

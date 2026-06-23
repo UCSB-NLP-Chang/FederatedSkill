@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8,
+  "summary": "The agent's self-validation passed but the external verifier failed, revealing a gap in the production-planning skill: insufficient emphasis on cross-checking against exact task requirements (headers, on-time status format, summary file structure) and missing guidance for agricultural/harvest domain tasks. This patch updates production-planning/SKILL.md to strengthen the external verifier cross-check section, adds a summary markdown generation workflow, and creates a reference with agricultural domain examples and a stricter validation checklist.",
+  "upsert_paths": [
+    "production-planning/SKILL.md",
+    "production-planning/references/agricultural_examples.md"
+  ],
+  "delete_paths": []
+}

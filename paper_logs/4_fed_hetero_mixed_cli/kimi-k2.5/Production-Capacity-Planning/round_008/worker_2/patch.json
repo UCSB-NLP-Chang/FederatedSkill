@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Added JSON input handling patterns to the workload-capacity-planning skill. The task used a JSON demand file with nested objects (entry['data']['demand_per_week']), duplicate week entries, and null values. The skill now includes inspection, parsing, and duplicate-detection patterns for JSON arrays alongside existing Excel/CSV coverage.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

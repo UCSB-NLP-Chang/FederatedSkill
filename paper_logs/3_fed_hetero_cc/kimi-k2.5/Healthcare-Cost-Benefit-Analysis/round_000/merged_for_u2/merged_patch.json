@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u0's reward=1.0 skill wholesale with mandatory additions (Output precision, WRONG/RIGHT anti-pattern for packaging cost, Known invariants). Library: 1 skill (cycle-margin-analysis). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md",
+    "cycle-margin-analysis/scripts/compute_margin.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cycle-margin-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "cycle-margin-analysis/scripts/compute_margin.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.2631940000000004
+}

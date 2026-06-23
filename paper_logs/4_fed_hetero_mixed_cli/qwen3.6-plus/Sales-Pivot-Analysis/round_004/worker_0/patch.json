@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.875,
+  "summary": "Updated sales-pivot-report skill to include Quality Control domain adaptation, known invariants, and cross-tab alignment troubleshooting. Added pdftotext fallback for PDF extraction when pdfplumber is unavailable. Reinforced pytest verification gate to prevent manual verification traps seen in the trace.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

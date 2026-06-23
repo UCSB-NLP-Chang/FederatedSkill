@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Captures the successful workflow for generating multi-sheet Excel audit reports and Word executive briefs from raw transaction logs. Includes anti-patterns (avoiding read_file for binary .xlsx), deterministic aggregation rules, programmatic verification steps, and a reusable Python script template to accelerate future audit tasks.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "excel-audit-reporting/scripts/generate_audit.py"
+  ],
+  "delete_paths": []
+}

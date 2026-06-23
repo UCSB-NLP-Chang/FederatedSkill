@@ -1,0 +1,37 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Synthesized u0's Mandatory Pre-Coding Checklist structure (STOP-checkpoint for EB, skeleton enforcement) with u1's two-pattern note and u2's data filtering + verify_workbook.py update. All workers had reward=0.0 but patches implement task_memory recommendations for qwen. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/accrual_variant.md",
+    "deferred-revenue-rollforward/references/warranty_reserve_variant.md",
+    "deferred-revenue-rollforward/scripts/verify_workbook.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "deferred-revenue-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "deferred-revenue-rollforward/references/warranty_reserve_variant.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "deferred-revenue-rollforward/scripts/verify_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "deferred-revenue-rollforward/references/accrual_variant.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "deferred-revenue-rollforward/SKILL.md"
+  ],
+  "cost_usd": 2.0582537999999997
+}

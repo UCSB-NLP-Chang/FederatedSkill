@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8,
+  "summary": "Adds cross-sheet validation pattern and SLA audit invariants to the existing excel-audit-reporting skill. The trace shows a task requiring lookup of SLA rules from one sheet to validate tickets in another - a pattern not previously covered. The verifier failed despite agent claiming success, suggesting need for clearer validation patterns and SLA-specific guidance.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md",
+    "excel-audit-reporting/references/cross-sheet-validation.md"
+  ],
+  "delete_paths": []
+}

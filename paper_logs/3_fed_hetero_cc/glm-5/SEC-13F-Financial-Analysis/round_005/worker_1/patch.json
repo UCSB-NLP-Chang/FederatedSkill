@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The trace reveals gaps in handling edge cases for cross-quarter comparisons (missing baseline data) and variant output schemas (single largest buy/sell vs arrays, top 2 vs top 5 for issuer checks). The skill update adds explicit guidance for these scenarios and a new snapshot check schema.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "541328be-59c8-4a9d-be68-54fca501aed5",
+    "started_at": "2026-05-18T00:48:21.727652",
+    "finished_at": "2026-05-18T00:50:40.997806",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "04-university-program-funding-di__vcGRqoR"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

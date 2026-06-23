@@ -1,0 +1,43 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Created `pipeline-performance-analysis` skill for B2 task type with pure-numpy Wilson CI (no scipy), no rounding, structural enforcement for qwen3.6-plus. Details in DECISIONS.md.",
+  "upsert_paths": [
+    "pipeline-performance-analysis/SKILL.md",
+    "pipeline-performance-analysis/references/report_schema.md",
+    "pipeline-performance-analysis/scripts/pipeline_stats.py",
+    "pipeline-performance-analysis/scripts/validate_output.py",
+    "pipeline-performance-analysis/scripts/wilson_ci.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pipeline-performance-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.25
+    ],
+    "pipeline-performance-analysis/scripts/pipeline_stats.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ],
+    "pipeline-performance-analysis/scripts/wilson_ci.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ],
+    "pipeline-performance-analysis/references/report_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.25
+    ],
+    "pipeline-performance-analysis/scripts/validate_output.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "pipeline-performance-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.7239310000000003
+}

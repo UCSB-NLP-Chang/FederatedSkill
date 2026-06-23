@@ -1,0 +1,103 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ..FFF                                                                    [100%]
+E           =================================== FAILURES ===================================
+E           __________________________ test_formatted_data_logic ___________________________
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7fe8894f4290>
+E           source_data = ([{'Carrier': 'CarrierX', 'Lane': 'East', 'Line ID': 'L01', 'Planned Disposition': 'RESTOCK', ...}, {'Carrier': 'Carri.....}, ...], {}, {'DONATION': 'DONATE', 'LIQUIDATE': 'LIQUIDATE', 'LIQUIDATION': 'LIQUIDATE', 'RESTOCK': 'RESTOCK', ...})
+E           
+E               def test_formatted_data_logic(output_wb, source_data):
+E                   plan_rows, latest_completed, alias_map = source_data
+E                   ws = output_wb['Formatted Data']
+E                   headers = [ws.cell(1, c).value for c in range(1, 13)]
+E                   assert headers == FORMATTED_HEADERS
+E                   for i, row in enumerate(plan_rows, start=2):
+E                       out = [ws.cell(i, c).value for c in range(1, 13)]
+E                       assert out[:8] == [row[h] for h in BASE_HEADERS]
+E                       expected_missing, expected_mismatch, expected_total, expected_summary = calc_flags(row, latest_completed, alias_map)
+E           >           assert int(out[8]) == expected_missing
+E           E           assert 0 == 1
+E           E            +  where 0 = int(0)
+E           
+E           /tests/test_outputs.py:153: AssertionError
+E           _____________________ test_summary_sheet_matches_expected ______________________
+E           
+E           output_wb = <openpyxl.workbook.workbook.Workbook object at 0x7fe8894f4290>
+E           source_data = ([{'Carrier': 'CarrierX', 'Lane': 'East', 'Line ID': 'L01', 'Planned Disposition': 'RESTOCK', ...}, {'Carrier': 'Carri.....}, ...], {}, {'DONATION': 'DONATE', 'LIQUIDATE': 'LIQUIDATE', 'LIQUIDATION': 'LIQUIDATE', 'RESTOCK': 'RESTOCK', ...})
+E           
+E               def test_summary_sheet_matches_expected(output_wb, source_data):
+E                   plan_rows, latest_completed, alias_map = source_data
+E                   ws = output_wb['Summary']
+E                   headers = [ws.cell(1, c).value for c in range(1, 6)]
+E                   assert headers == SUMMARY_HEADERS
+E                   expected_rows, expected_totals, _ = expected_summary_rows(plan_rows, latest_completed, alias_map)
+E                   actual_rows = []
+E                   grand_total = None
+E                   for r in range(2, ws.max_row + 1):
+E                       vals = [ws.cell(r, c).value for c in range(1, 6)]
+E                       if all(v is None for v in vals):
+E                           continue
+E                       if str(vals[0]).strip() == 'Grand Total':
+E                           grand_total = (str(vals[0]), str(vals[1]), int(vals[2]), int(vals[3]), int(vals[4]))
+E                       else:
+E                           actual_rows.append((str(vals[0]), str(vals[1]), int(vals[2]), int(vals[3]), int(vals[4])))
+E           >       assert actual_rows == expected_rows
+E           E       AssertionError: assert [('WH-A', 'Ca...rZ', 1, 0, 1)] == [('WH-A', 'Ca...rM', 1, 0, 1)]
+E           E         
+E           E         At index 0 diff: ('WH-A', 'CarrierX', 1, 0, 1) != ('WH-A', 'CarrierX', 6, 0, 6)
+E           E         Right contains 2 more items, first extra item: ('WH-C', 'CarrierZ', 2, 0, 2)
+E           E         Use -v to get more diff
+E           
+E           /tests/test_outputs.py:175: AssertionError
+E           __________________________ test_word_summary_content ___________________________
+E           
+E           source_data = ([{'Carrier': 'CarrierX', 'Lane': 'East', 'Line ID': 'L01', 'Planned Disposition': 'RESTOCK', ...}, {'Carrier': 'Carri.....}, ...], {}, {'DONATION': 'DONATE', 'LIQUIDATE': 'LIQUIDATE', 'LIQUIDATION': 'LIQUIDATE', 'RESTOCK': 'RESTOCK', ...})
+E           
+E               def test_word_summary_content(source_data):
+E                   plan_rows, latest_completed, alias_map = source_data
+E                   assert Path(OUTPUT_DOCX).exists(), f'Missing output docx: {OUTPUT_DOCX}'
+E                   _, expected_totals, return_totals = expected_summary_rows(plan_rows, latest_completed, alias_map)
+E                   doc = Document(OUTPUT_DOCX)
+E                   text = '\n'.join(p.text for p in doc.paragraphs if p.text.strip()).lower()
+E                   assert 'missing final event' in text
+E                   assert 'disposition mismatch' in text
+E                   for value in expected_totals:
+E           >           assert str(value) in text
+E           E           AssertionError: assert '12' in 'this audit examined return disposition accuracy by comparing planned dispositions against final disposition events. a...rocessing. consider implementing automated alerts for events that remain in pending status beyond a defined threshold.'
+E           E            +  where '12' = str(12)
+E           
+E           /tests/test_outputs.py:188: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_formatted_data_logic - assert 0 == 1
+E           FAILED ../tests/test_outputs.py::test_summary_sheet_matches_expected - Assert...
+E           FAILED ../tests/test_outputs.py::test_word_summary_content - AssertionError: ...
+E           3 failed, 2 passed in 0.20s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.44s ===============================

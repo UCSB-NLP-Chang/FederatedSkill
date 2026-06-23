@@ -1,0 +1,44 @@
+{
+  "worker_id": "u0",
+  "summary": "R2 merge complete for u0 (qwen3.6-plus). Applied structural enforcement: removed spc_formulas.md to prevent custom code. Added validate_schema.py (from u1), field_service_example.md (from u2), updated schema.md with mismatches table. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md",
+    "statistical-process-analysis/references/field_service_example.md",
+    "statistical-process-analysis/references/schema.md",
+    "statistical-process-analysis/scripts/validate_schema.py"
+  ],
+  "delete_paths": [
+    "statistical-process-analysis/references/spc_formulas.md"
+  ],
+  "provenance": {
+    "statistical-process-analysis/references/spc_formulas.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "statistical-process-analysis/references/field_service_example.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/references/schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ],
+    "statistical-process-analysis/scripts/validate_schema.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.319291
+}

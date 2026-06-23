@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8888888888888888,
+  "summary": "Update pptx-xml-editing skill with lessons from trace: (1) string replacement for shape insertion is brittle due to namespace serialization variations, (2) slide path matching via .split() matches _rels paths, (3) add DOM-based shape replacement helper and explicit anti-patterns.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/scripts/pptx_helpers.py"
+  ],
+  "delete_paths": []
+}

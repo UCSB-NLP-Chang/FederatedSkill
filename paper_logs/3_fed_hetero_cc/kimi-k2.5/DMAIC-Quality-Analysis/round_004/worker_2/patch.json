@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.3333333333333333,
+  "summary": "Strengthened statistical-process-analysis skill to prevent custom code generation and handle Excel inputs. Added mandatory Excel-to-CSV conversion step, reinforced gated workflow with explicit failure modes from trace (p-value clamping, schema structure), and added troubleshooting section for common validation failures. The trace showed agent wrote custom analysis code producing invalid schema (nested objects instead of strings, p-value=0.0, missing keys) and skipped validation; these are now explicitly forbidden and trapped.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

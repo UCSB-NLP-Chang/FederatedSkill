@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779493972.3316648,
+            "stop": 1779493972.7260916
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.37511464580893517,
+                "start": 1779493972.338689,
+                "stop": 1779493972.725978,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .....F                                                                   [100%]\nE           =================================== FAILURES ===================================\nE           __________________________ test_word_summary_content ___________________________\nE           \nE           source_data = ([{'Allowed Variance': 2, 'Approval Needed': 'NO', 'Bin ID': 'BIN-A1', 'Expected Qty': 50, ...}, {'Allowed Variance': ...changed in the final workbook.'], ['Populate RawData, Formatted Data, and Summary with the completed audit results.']])\nE           \nE               def test_word_summary_content(source_data):\nE                   plan_rows, latest_final, _ = source_data\nE                   assert Path(OUTPUT_DOCX).exists(), f'Missing output docx: {OUTPUT_DOCX}'\nE                   _, expected_totals, session_totals = expected_summary_rows(plan_rows, latest_final)\nE                   doc = Document(OUTPUT_DOCX)\nE                   text = '\\n'.join(p.text for p in doc.paragraphs if p.text.strip()).lower()\nE                   assert 'missing final count' in text\nE                   assert 'approval gap' in text\nE                   for value in expected_totals:\nE                       assert str(value) in text\nE                   top_sessions = [f\"{fac}-{sess}\" for (fac, sess), total in sorted(session_totals.items(), key=lambda x: (-x[1], x[0])) if total > 0][:4]\nE                   mentioned = sum(1 for s in top_sessions if s.lower() in text or s.replace('-', ' ').lower() in text)\nE           >       assert mentioned >= 2, 'Word summary must mention at least two high-priority facility-session combinations'\nE           E       AssertionError: Word summary must mention at least two high-priority facility-session combinations\nE           E       assert 0 >= 2\nE           \nE           /tests/test_outputs.py:204: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_word_summary_content - AssertionError: ...\nE           1 failed, 5 passed in 0.17s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

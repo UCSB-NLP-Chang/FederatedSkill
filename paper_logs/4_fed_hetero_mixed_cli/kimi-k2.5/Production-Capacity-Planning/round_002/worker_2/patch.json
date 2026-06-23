@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Updated workload-capacity-planning skill to generalize period handling (Week vs Period terminology, arbitrary start periods like 1-52 or 4-53) and fixed hardcoded validation assertions that assumed specific week ranges. Added explicit guidance for verifying step-down transition boundaries.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "delete_paths": []
+}

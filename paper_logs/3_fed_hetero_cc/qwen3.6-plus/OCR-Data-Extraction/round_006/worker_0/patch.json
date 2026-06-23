@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Update image-data-extraction skill with critical lessons from fuel receipt task: (1) multi-line amount extraction must skip blank lines between keyword and value, not just check immediate next line; (2) reinforce raw float anti-pattern (agent formatted as strings with 2 decimals); (3) add nested directory traversal and document filtering patterns for receipt vs non-receipt images.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/transaction-receipt-patterns.md"
+  ],
+  "delete_paths": []
+}

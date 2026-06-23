@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Creates a new skill for infusion batch analysis (7-day vs 14-day delivery cycles) based on the successful execution trace. The skill handles therapy catalog JSON with aliases, bag cost CSVs, payment rate lookups, and patient status resolution (highest approved revision). It outputs JSON and Markdown reports with margin calculations using 364-day years (52 weeks) to ensure drug cost parity across cycles.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py"
+  ],
+  "delete_paths": []
+}

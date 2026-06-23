@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "06-hospital-medication-reconcili__Uma3LZx",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_005/worker_0/06-hospital-medication-reconcili__Uma3LZx",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_005/worker_0/06-hospital-medication-reconcili__Uma3LZx",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

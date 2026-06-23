@@ -1,0 +1,40 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus on qwen-code) \u2014 Round 7.\n\nAdded logistics-reliability-analysis skill to close B4 gap. Applied u0's patch with explicit WRONG/RIGHT key name table added to SKILL.md per task_memory.md recommendation for this model.\n\nSee DECISIONS.md for details.",
+  "upsert_paths": [
+    "logistics-reliability-analysis/SKILL.md",
+    "logistics-reliability-analysis/assets/brief_template.md",
+    "logistics-reliability-analysis/references/output_schema.md",
+    "logistics-reliability-analysis/scripts/compute_logistics_metrics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "logistics-reliability-analysis/assets/brief_template.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.1111111111111111
+    ],
+    "logistics-reliability-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.1111111111111111
+    ],
+    "logistics-reliability-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.1111111111111111
+    ],
+    "logistics-reliability-analysis/scripts/compute_logistics_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.1111111111111111
+    ]
+  },
+  "conflicts": [
+    "logistics-reliability-analysis/SKILL.md",
+    "logistics-reliability-analysis/assets/brief_template.md",
+    "logistics-reliability-analysis/references/output_schema.md",
+    "logistics-reliability-analysis/scripts/compute_logistics_metrics.py"
+  ],
+  "cost_usd": 5.3675489999999995
+}

@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's reward=1.0 patch wholesale + added Known invariants section from u0. Library: 2 skills (excel-inventory-calculations, python-package-installation). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-inventory-calculations/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-inventory-calculations/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.9806
+}

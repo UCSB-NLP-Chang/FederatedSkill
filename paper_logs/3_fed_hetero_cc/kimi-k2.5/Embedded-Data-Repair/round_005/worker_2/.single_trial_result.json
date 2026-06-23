@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "buffer-dilution-matrix-repair__oEHoLWC",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Embedded-Data-Repair/round_005/worker_2/buffer-dilution-matrix-repair__oEHoLWC",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Embedded-Data-Repair/round_005/worker_2/buffer-dilution-matrix-repair__oEHoLWC",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

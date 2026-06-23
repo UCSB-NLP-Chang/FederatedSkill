@@ -1,0 +1,103 @@
+{
+  "id": "b06b6d8d-0cfc-4fff-a491-b46ff4da417e",
+  "task_name": "hwpx-supplier-contact-sheet",
+  "trial_name": "hwpx-supplier-contact-sheet__yDghRrP",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__HWPX-Document-Automation/hwpx-supplier-contact-sheet__yDghRrP",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/HWPX-Document-Automation/hwpx-supplier-contact-sheet"
+  },
+  "source": "HWPX-Document-Automation",
+  "task_checksum": "f7530118202d840d5a6e936c6a61a6842085aa558d8e730c5b4cd071765b7121",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/HWPX-Document-Automation/hwpx-supplier-contact-sheet",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "HWPX-Document-Automation"
+    },
+    "trial_name": "hwpx-supplier-contact-sheet__yDghRrP",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__HWPX-Document-Automation",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "43b64966-171d-4229-b6af-88122f72f8e8"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 324229,
+    "n_cache_tokens": 262284,
+    "n_output_tokens": 3966,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-04-27T01:13:56.031992Z",
+  "finished_at": "2026-04-27T01:15:33.570396Z",
+  "environment_setup": {
+    "started_at": "2026-04-27T01:13:56.034238Z",
+    "finished_at": "2026-04-27T01:13:57.062417Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-04-27T01:13:57.062464Z",
+    "finished_at": "2026-04-27T01:13:57.282249Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-04-27T01:13:57.282337Z",
+    "finished_at": "2026-04-27T01:15:22.465212Z"
+  },
+  "verifier": {
+    "started_at": "2026-04-27T01:15:22.465683Z",
+    "finished_at": "2026-04-27T01:15:23.022511Z"
+  }
+}

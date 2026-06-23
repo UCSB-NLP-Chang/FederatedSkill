@@ -1,0 +1,29 @@
+{
+    "id": "2aae545c-7fca-4ca4-948d-18fc7587fd2d",
+    "started_at": "2026-05-13T12:48:29.158240",
+    "finished_at": "2026-05-13T12:51:44.774612",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "task_family_pharmacy_labels__uXu4iGp"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

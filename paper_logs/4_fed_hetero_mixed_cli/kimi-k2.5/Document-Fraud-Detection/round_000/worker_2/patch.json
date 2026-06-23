@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Created expense-claims-validation skill capturing the document cross-validation workflow, fuzzy matching logic, and fraud detection patterns. Includes reusable Python script for parsing PDF claims against structured reference data with Levenshtein-based name matching and five validation checks (account, amount, employee existence, trip validity, traveler match). Addresses the brittle string similarity issue encountered with 'Briann Ortega' and documents the pdfplumber > PyPDF2 preference.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/fuzzy-matching-guide.md",
+    "expense-claims-validation/scripts/validate_claims.py"
+  ],
+  "delete_paths": []
+}

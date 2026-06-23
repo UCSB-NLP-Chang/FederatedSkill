@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The existing economic-time-series-correlation skill covers the core workflow well, but the trace revealed a year marker format variant ('2025 Q1' with space-Q) not handled by the existing parse_year_markers.py script. The script currently handles colon format ('2025:I') and dash-Q format ('2025-Q1'), but not space-Q. This patch extends the parser to handle this variant, updates the reference documentation, and adds a test case.",
+  "upsert_paths": [
+    "economic-time-series-correlation/references/excel-year-parsing.md",
+    "economic-time-series-correlation/scripts/parse_year_markers.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged u0's lean reward=1.0 patch as base (same model fit), added u2's partial quarterly capture anti-pattern + u1's output precision section as orthogonal validated refinements. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.6623969999999999
+}

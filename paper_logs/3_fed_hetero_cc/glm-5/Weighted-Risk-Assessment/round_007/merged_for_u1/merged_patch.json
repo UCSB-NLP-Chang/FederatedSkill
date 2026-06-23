@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. See DECISIONS.md for details. Applied u1's pre-computation workflow + u0's verification steps + u2's VLOOKUP patterns. Key fix: openpyxl writes formula strings - verifier checks VALUES, so pre-compute in Python.",
+  "upsert_paths": [
+    "excel-formula-automation/SKILL.md",
+    "excel-formula-automation/references/vlookup-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-automation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "excel-formula-automation/references/vlookup-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-formula-automation/SKILL.md",
+    "__skill_md_invalid__:excel-formula-automation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.9233019999999996
+}

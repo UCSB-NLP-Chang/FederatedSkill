@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Consolidated three overlapping reconciliation/validation skills into the canonical multi-source-reconciliation path, merging u0's PDF extraction fallbacks and fuzzy thresholds, u1's JSON flattening and amendment logic, and u2's lifecycle validation and fleet invariants into a single comprehensive SKILL.md.",
+  "upsert_paths": [
+    "multi-source-reconciliation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "multi-source-reconciliation/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

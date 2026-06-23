@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "archive-photo-caption-cleanup__8Dx5D2u",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/round_006/worker_2/archive-photo-caption-cleanup__8Dx5D2u",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/round_006/worker_2/archive-photo-caption-cleanup__8Dx5D2u",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

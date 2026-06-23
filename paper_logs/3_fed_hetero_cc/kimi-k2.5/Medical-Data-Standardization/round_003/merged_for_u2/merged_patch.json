@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE \u2014 Applied u2's SKILL.md and cardiovascular-factors.md (correct cardiology factors: BNP \u00d70.143, NT_proBNP NO CONVERSION). Rejected u0/u1 wrong cardiology content (BNP 0.289/\u00f78.457). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/cardiovascular-factors.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.7
+    ],
+    "clinical-lab-harmonization/references/cardiovascular-factors.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md",
+    "clinical-lab-harmonization/references/conversion-factors.md"
+  ],
+  "cost_usd": 2.2066710000000005
+}

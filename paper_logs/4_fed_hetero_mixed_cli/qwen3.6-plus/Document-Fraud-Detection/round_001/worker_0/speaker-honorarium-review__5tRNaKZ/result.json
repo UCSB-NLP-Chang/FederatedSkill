@@ -1,0 +1,104 @@
+{
+    "id": "588e98f7-53ef-47a9-9b94-3890048cd15c",
+    "task_name": "speaker-honorarium-review",
+    "trial_name": "speaker-honorarium-review__5tRNaKZ",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Document-Fraud-Detection/round_001/worker_0/speaker-honorarium-review__5tRNaKZ",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/speaker-honorarium-review"
+    },
+    "source": "Document-Fraud-Detection",
+    "task_checksum": "9a913e6ec13e8b9064a861f75affe4d06e63ccbc1c0ed8c860d632c5cbb0e6a1",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/speaker-honorarium-review",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Document-Fraud-Detection"
+        },
+        "trial_name": "speaker-honorarium-review__5tRNaKZ",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Document-Fraud-Detection/round_001/worker_0",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallQwenCode",
+            "model_name": "qwen3.6-plus",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "OPENAI_API_KEY": "<REDACTED>",
+                "OPENAI_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1",
+                "OPENAI_MODEL": "qwen3.6-plus"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Document-Fraud-Detection/worker_skills/u0"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "fb8c2de2-473a-4847-acb7-8ef7e66f1f70"
+    },
+    "agent_info": {
+        "name": "qwen-coder",
+        "version": "\u001b[4m>>>> Executing external compose provider \"/usr/libexec/docker/cli-plugins/docker-compose\". Please see podman-compose(1) for how to disable this message. <<<<\n\n\u001b[0m0.15.2",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 137063,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 3266,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-18T00:23:07.822605Z",
+    "finished_at": "2026-05-18T00:24:45.973092Z",
+    "environment_setup": {
+        "started_at": "2026-05-18T00:23:07.823320Z",
+        "finished_at": "2026-05-18T00:23:11.660984Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-18T00:23:11.661020Z",
+        "finished_at": "2026-05-18T00:23:13.478609Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-18T00:23:13.478712Z",
+        "finished_at": "2026-05-18T00:24:32.533562Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-18T00:24:32.536637Z",
+        "finished_at": "2026-05-18T00:24:33.949042Z"
+    }
+}

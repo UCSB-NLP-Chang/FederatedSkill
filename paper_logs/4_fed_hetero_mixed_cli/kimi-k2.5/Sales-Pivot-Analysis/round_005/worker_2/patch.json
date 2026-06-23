@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.8823529411764706,
+  "summary": "The agent failed because it manually verified the output and declared success without running pytest, violating the skill's mandatory Step 11 gate. The skill already documented this anti-pattern but the agent missed the workflow sequence. Adding the 'employee-compensation' domain to the Domain Adaptation table and strengthening the blocking language around pytest verification will help future agents avoid this failure mode.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

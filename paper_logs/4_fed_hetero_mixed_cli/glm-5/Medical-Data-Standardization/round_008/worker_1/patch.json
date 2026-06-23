@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.9444444444444444,
+  "summary": "Adds neonatal-sepsis-panel as a new sub-task type to the existing clinical-lab-harmonization skill, with neonatal-specific physiological ranges, CRP conversion rules, and guidance for column names that explicitly encode unit ambiguity.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": []
+}

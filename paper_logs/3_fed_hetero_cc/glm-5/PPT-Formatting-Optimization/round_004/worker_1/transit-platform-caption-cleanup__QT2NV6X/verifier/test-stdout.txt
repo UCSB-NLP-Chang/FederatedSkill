@@ -1,0 +1,141 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ..FF..F..                                                                [100%]
+E           =================================== FAILURES ===================================
+E           _____________ test_cleaned_captions_exist_and_match_expected_text ______________
+E           
+E               def test_cleaned_captions_exist_and_match_expected_text() -> None:
+E                   alias_pairs = load_alias_pairs()
+E                   with zipfile.ZipFile(OUTPUT_PPTX, "r") as zipf:
+E                       slide_names = iter_slide_names(zipf)
+E                       for slide_cfg in CONFIG["slides"]:
+E                           expected = normalize_text(alias_pairs.get(normalize_text(str(slide_cfg["caption_raw"])), str(slide_cfg["caption_clean"])))
+E                           slide = load_slide(zipf, slide_names, int(slide_cfg["slide_number"]))
+E                           matches = find_paragraphs(slide, expected)
+E                           assert len(matches) == 1, f"Slide {slide_cfg['slide_number']} should contain exactly one cleaned caption"
+E                           runs = matches[0].findall("a:r", NS)
+E                           assert runs, f"Slide {slide_cfg['slide_number']} cleaned caption should contain text runs"
+E                           for run in runs:
+E           >                   assert_run_style(run)
+E           
+E           /tests/test_outputs.py:210: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           run = <Element '{http://schemas.openxmlformats.org/drawingml/2006/main}r' at 0x7f1daaf697b0>
+E           
+E               def assert_run_style(run: ET.Element) -> None:
+E                   style = CONFIG["style"]
+E                   rpr = run.find("a:rPr", NS)
+E                   assert rpr is not None, "Caption run is missing run properties"
+E                   _sz_val = int(rpr.get("sz") or 0)
+E           >       assert abs(_sz_val - int(style["size"])) <= 100, f"Caption font size mismatch: got {_sz_val}, expected {style['size']}"
+E           E       AssertionError: Caption font size mismatch: got 0, expected 1600
+E           E       assert 1600 <= 100
+E           E        +  where 1600 = abs((0 - 1600))
+E           E        +    where 1600 = int(1600)
+E           
+E           /tests/test_outputs.py:92: AssertionError
+E           ____________________ test_cleaned_captions_are_repositioned ____________________
+E           
+E               def test_cleaned_captions_are_repositioned() -> None:
+E                   alias_pairs = load_alias_pairs()
+E                   with zipfile.ZipFile(OUTPUT_PPTX, "r") as zipf:
+E                       slide_names = iter_slide_names(zipf)
+E                       slide_width, slide_height = get_slide_dimensions(zipf)
+E                       for slide_cfg in CONFIG["slides"]:
+E                           expected = normalize_text(alias_pairs.get(normalize_text(str(slide_cfg["caption_raw"])), str(slide_cfg["caption_clean"])))
+E                           slide = load_slide(zipf, slide_names, int(slide_cfg["slide_number"]))
+E                           paragraph = find_paragraphs(slide, expected)[0]
+E           >               assert_caption_position(slide, paragraph, slide_cfg, slide_width, slide_height)
+E           
+E           /tests/test_outputs.py:222: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           slide = <Element '{http://schemas.openxmlformats.org/presentationml/2006/main}sld' at 0x7f1daaf63880>
+E           paragraph = <Element '{http://schemas.openxmlformats.org/drawingml/2006/main}p' at 0x7f1daac94590>
+E           slide_cfg = {'caption_clean': 'Harbor Exchange Platform', 'caption_raw': 'Harbor Exchange Platform', 'container_mode': 'group', 'preserve_texts': ['Bay Line', 'Service alert: East escalator inspection overnight'], ...}
+E           slide_width = 12192000, slide_height = 6858000
+E           
+E               def assert_caption_position(slide: ET.Element, paragraph: ET.Element, slide_cfg: dict[str, object], slide_width: int, slide_height: int) -> None:
+E                   parent_map = build_parent_map(slide)
+E                   shape = find_parent_shape(paragraph, parent_map)
+E                   assert shape is not None, "Caption shape is missing"
+E               
+E                   if slide_cfg.get("container_mode") == "group":
+E                       container = find_parent_group(shape, parent_map)
+E                       assert container is not None, "Caption group container is missing"
+E                       xfrm = container.find("p:grpSpPr/a:xfrm", NS)
+E                   else:
+E                       xfrm = shape.find("p:spPr/a:xfrm", NS)
+E                   assert xfrm is not None, "Caption transform is missing"
+E               
+E                   off = xfrm.find("a:off", NS)
+E                   ext = xfrm.find("a:ext", NS)
+E                   assert off is not None and ext is not None, "Caption offset/extent is missing"
+E                   container_x = int(off.get("x"))
+E                   container_y = int(off.get("y"))
+E                   container_w = int(ext.get("cx"))
+E                   container_h = int(ext.get("cy"))
+E           >       assert container_w >= int(slide_width * 0.9), "Caption container should be widened for a single-line label"
+E           E       AssertionError: Caption container should be widened for a single-line label
+E           E       assert 3657600 >= 10972800
+E           E        +  where 10972800 = int((12192000 * 0.9))
+E           
+E           /tests/test_outputs.py:130: AssertionError
+E           __________________ test_final_summary_slide_title_and_bullets __________________
+E           
+E               def test_final_summary_slide_title_and_bullets() -> None:
+E                   expected = expected_unique_captions()
+E                   with zipfile.ZipFile(OUTPUT_PPTX, "r") as zipf:
+E                       slide_names = iter_slide_names(zipf)
+E                       assert len(slide_names) >= CONFIG["summary_slide_number"], "Summary slide number exceeds slide count"
+E                       summary = load_slide(zipf, slide_names, CONFIG["summary_slide_number"])
+E                   assert find_paragraphs(summary, CONFIG["summary_title"]), "Final summary slide title is incorrect"
+E                   bullet_titles: list[str] = []
+E                   for paragraph in summary.findall(".//a:p", NS):
+E                       text = paragraph_text(paragraph)
+E                       if not text or text == CONFIG["summary_title"]:
+E                           continue
+E                       bullet_titles.append(text)
+E                       ppr = paragraph.find("a:pPr", NS)
+E                       assert ppr is not None, "Summary bullet paragraph is missing paragraph properties"
+E           >           assert ppr.find("a:buAutoNum", NS) is not None, "Summary bullet paragraph must use auto-numbered bullets"
+E           E           AssertionError: Summary bullet paragraph must use auto-numbered bullets
+E           E           assert None is not None
+E           E            +  where None = <built-in method find of xml.etree.ElementTree.Element object at 0x7f1daac97d80>('a:buAutoNum', {'a': 'http://schemas.openxmlformats.org/drawingml/2006/main', 'p': 'http://schemas.openxmlformats.org/presentationml/2006/main'})
+E           E            +    where <built-in method find of xml.etree.ElementTree.Element object at 0x7f1daac97d80> = <Element '{http://schemas.openxmlformats.org/drawingml/2006/main}pPr' at 0x7f1daac97d80>.find
+E           
+E           /tests/test_outputs.py:267: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_cleaned_captions_exist_and_match_expected_text
+E           FAILED ../tests/test_outputs.py::test_cleaned_captions_are_repositioned - Ass...
+E           FAILED ../tests/test_outputs.py::test_final_summary_slide_title_and_bullets
+E           3 failed, 6 passed in 0.08s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.32s ===============================

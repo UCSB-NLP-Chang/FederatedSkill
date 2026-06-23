@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Round 1. Applied u0's verified patch wholesale to fix broken excel-capacity-planning skill (u0 reward=1.0, u1 reward=0.0). Rejected u2's new skill (different name, same workflow). See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/scripts/capacity_planner_template.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py"
+  ],
+  "cost_usd": 0.5158248
+}

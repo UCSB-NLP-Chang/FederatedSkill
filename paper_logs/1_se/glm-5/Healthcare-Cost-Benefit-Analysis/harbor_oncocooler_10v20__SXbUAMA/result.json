@@ -1,0 +1,103 @@
+{
+  "id": "1afd73a7-14d6-463f-b164-79beb931d9a4",
+  "task_name": "harbor_oncocooler_10v20",
+  "trial_name": "harbor_oncocooler_10v20__SXbUAMA",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Healthcare-Cost-Benefit-Analysis/harbor_oncocooler_10v20__SXbUAMA",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Healthcare-Cost-Benefit-Analysis/harbor_oncocooler_10v20"
+  },
+  "source": "Healthcare-Cost-Benefit-Analysis",
+  "task_checksum": "b831cd2c40062e0b5ce53fbf6e8ec8e838d3ab1c079ee0377681ea52f97455de",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Healthcare-Cost-Benefit-Analysis/harbor_oncocooler_10v20",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Healthcare-Cost-Benefit-Analysis"
+    },
+    "trial_name": "harbor_oncocooler_10v20__SXbUAMA",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r2/iter-baseline-glm-5-r2__Healthcare-Cost-Benefit-Analysis",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "da371e54-36d3-43b4-b533-6a6948a048ae"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 194541,
+    "n_cache_tokens": 121728,
+    "n_output_tokens": 15231,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-10T20:24:36.410423Z",
+  "finished_at": "2026-05-10T20:27:22.825633Z",
+  "environment_setup": {
+    "started_at": "2026-05-10T20:24:36.430401Z",
+    "finished_at": "2026-05-10T20:24:37.306015Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-10T20:24:37.306030Z",
+    "finished_at": "2026-05-10T20:24:37.545849Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-10T20:24:37.545912Z",
+    "finished_at": "2026-05-10T20:27:11.737745Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-10T20:27:11.738103Z",
+    "finished_at": "2026-05-10T20:27:12.280580Z"
+  }
+}

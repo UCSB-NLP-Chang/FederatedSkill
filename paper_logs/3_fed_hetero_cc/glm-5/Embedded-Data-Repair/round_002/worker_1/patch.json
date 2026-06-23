@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.75,
+  "summary": "The trace reveals a specific failure mode: openpyxl may save formula cells with empty cached values (`<v />`) instead of preserving or computing them. The existing skill mentions cached value issues but lacks a concrete detection and repair workflow. This update adds explicit guidance for detecting empty cached values and a reusable code pattern for fixing them.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/scripts/fix_cached_values.py"
+  ],
+  "delete_paths": []
+}

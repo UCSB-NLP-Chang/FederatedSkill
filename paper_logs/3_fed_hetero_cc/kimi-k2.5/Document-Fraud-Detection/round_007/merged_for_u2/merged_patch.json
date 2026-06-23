@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Consolidated near-duplicate expense validation and document reconciliation skills into a single comprehensive document-reconciliation skill with supporting amendment-handling reference, dropping the redundant expense-record-validation path.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/amendment-handling.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "document-reconciliation/references/amendment-handling.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      1.0
+    ],
+    "document-reconciliation/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

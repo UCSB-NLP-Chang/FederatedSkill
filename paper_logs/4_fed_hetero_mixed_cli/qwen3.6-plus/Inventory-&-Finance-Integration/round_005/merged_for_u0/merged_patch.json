@@ -1,0 +1,39 @@
+{
+  "worker_id": "u0",
+  "summary": "MERGE COMPLETE. Renamed `excel-financial-reconciliation` to `financial-reconciliation` to align with peers. Added trigger phrases and media-rights-rollforward variant from u0's patch. See DECISIONS.md.",
+  "upsert_paths": [
+    "financial-reconciliation/SKILL.md",
+    "financial-reconciliation/scripts/verify_rollforward.py"
+  ],
+  "delete_paths": [
+    "excel-financial-reconciliation/SKILL.md",
+    "excel-financial-reconciliation/scripts/verify_rollforward.py"
+  ],
+  "provenance": {
+    "financial-reconciliation/scripts/verify_rollforward.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-financial-reconciliation/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "excel-financial-reconciliation/scripts/verify_rollforward.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "financial-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "financial-reconciliation/SKILL.md",
+    "__skill_md_invalid__:financial-reconciliation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.679903
+}

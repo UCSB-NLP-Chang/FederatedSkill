@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task demonstrates a stochastic fuel/inventory planning variant with safety buffer calculations using standard deviation and Z-scores. This extends the existing inventory-metrics-calculation skill with a new variant for probabilistic demand scenarios.",
+  "upsert_paths": [
+    "inventory-metrics-calculation/SKILL.md",
+    "inventory-metrics-calculation/references/code-patterns.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. R0: consolidated 3 near-identical patches (u0/u1/u2, all reward=0.5) into one umbrella skill `excel-formula-fill` using u1's structure as base with u2's layered architecture and enhanced verification guidance. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-fill/SKILL.md",
+    "excel-formula-fill/references/formula-patterns.md",
+    "excel-formula-fill/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-fill/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-fill/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.8865698
+}

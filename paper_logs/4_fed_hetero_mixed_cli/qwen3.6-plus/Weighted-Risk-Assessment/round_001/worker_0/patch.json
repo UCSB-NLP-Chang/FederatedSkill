@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.6666666666666666,
+  "summary": "Updated excel-formula-injection/SKILL.md to enforce early verifier execution, discourage long inline scripts in favor of the bundled formula_injector.py, and add explicit troubleshooting for formula string mismatches that cause verifier failures despite correct manual calculations.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "delete_paths": []
+}

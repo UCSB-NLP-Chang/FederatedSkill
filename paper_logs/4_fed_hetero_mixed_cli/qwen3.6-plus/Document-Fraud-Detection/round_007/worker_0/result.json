@@ -1,0 +1,29 @@
+{
+    "id": "eed4517b-bfe3-4e56-80c5-c4df1956faf6",
+    "started_at": "2026-05-17T22:07:13.940805",
+    "finished_at": "2026-05-17T22:10:04.746654",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "clinical-trial-participant-relea__Xeg3PpP"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

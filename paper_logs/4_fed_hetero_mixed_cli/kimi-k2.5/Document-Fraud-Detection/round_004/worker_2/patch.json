@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The fleet-maintenance-chargeback-audit task validated successfully using the existing expense-claims-validation skill framework. The trace reveals a new domain variant (fleet maintenance) and a nested JSON approval database structure not explicitly covered in current examples. Adding this domain example documents the nested JSON flattening pattern and maintenance-order specific field mappings for future reuse.",
+  "upsert_paths": [
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": []
+}

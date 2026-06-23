@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace reveals a lane-based inventory structure variant where items are grouped by location within a single sheet, and uses different status values (Ready/Docked). Updated the existing inventory-load-planning skill to document this variant, add the new status values, and provide parsing guidance for sectioned/grouped inventory sheets.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md"
+  ],
+  "delete_paths": []
+}

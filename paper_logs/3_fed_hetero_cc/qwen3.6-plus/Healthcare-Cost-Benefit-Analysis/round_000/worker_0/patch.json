@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for pharmacy refill cycle margin analysis. Extracts the brittle inline Python logic from the trace into a robust, parameterized script that correctly handles CSV joins (packaging keyed by canister size, not therapy), standardizes rounding, and generates both JSON and Markdown outputs. Includes explicit workflow, data mapping notes, and anti-patterns to prevent common calculation errors.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md",
+    "cycle-margin-analysis/scripts/compute_margin.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,265 @@
+{
+  "family_name": "Financial-Statement-Rolling",
+  "n_workers": 3,
+  "n_rounds": 9,
+  "elapsed_sec": 11219.490846633911,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 27,
+    "mean": 0.0,
+    "max": 0.0,
+    "min": 0.0,
+    "n_passed": 0
+  },
+  "merger_cost_total_usd": 83.00562,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "lattice_deferred_revenue_rollforward"
+        ],
+        [
+          "u1",
+          "lattice_deferred_revenue_rollforward"
+        ],
+        [
+          "u2",
+          "lattice_deferred_revenue_rollforward"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 8.972183999999999,
+      "elapsed_sec": 717.7239382266998
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "cedar_accrual_rollforward"
+        ],
+        [
+          "u1",
+          "cedar_accrual_rollforward"
+        ],
+        [
+          "u2",
+          "cedar_accrual_rollforward"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 7.0853670000000015,
+      "elapsed_sec": 773.5644710063934
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "northstar_warranty_reserve_consolidation"
+        ],
+        [
+          "u1",
+          "northstar_warranty_reserve_consolidation"
+        ],
+        [
+          "u2",
+          "northstar_warranty_reserve_consolidation"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 11.010579,
+      "elapsed_sec": 780.3355433940887
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "solstice_commission_asset_alignment"
+        ],
+        [
+          "u1",
+          "solstice_commission_asset_alignment"
+        ],
+        [
+          "u2",
+          "solstice_commission_asset_alignment"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 8.976135,
+      "elapsed_sec": 1266.22851228714
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "orchid_project_cost_rollforward"
+        ],
+        [
+          "u1",
+          "orchid_project_cost_rollforward"
+        ],
+        [
+          "u2",
+          "orchid_project_cost_rollforward"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 12.431106000000002,
+      "elapsed_sec": 1281.7334349155426
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "peregrine_rebate_template_update"
+        ],
+        [
+          "u1",
+          "peregrine_rebate_template_update"
+        ],
+        [
+          "u2",
+          "peregrine_rebate_template_update"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 8.847824999999998,
+      "elapsed_sec": 1379.5837659835815
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "atlas_refund_reserve_template_merge"
+        ],
+        [
+          "u1",
+          "atlas_refund_reserve_template_merge"
+        ],
+        [
+          "u2",
+          "atlas_refund_reserve_template_merge"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 8.656589999999998,
+      "elapsed_sec": 1335.372570991516
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "meridian_contract_liability_orchestration"
+        ],
+        [
+          "u1",
+          "meridian_contract_liability_orchestration"
+        ],
+        [
+          "u2",
+          "meridian_contract_liability_orchestration"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 8.90151,
+      "elapsed_sec": 2087.319863319397
+    },
+    {
+      "round_idx": 8,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_20"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_20"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_20"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 5,
+      "merger_cost_usd": 8.124324000000001,
+      "elapsed_sec": 1597.6271176338196
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Financial-Statement-Rolling/worker_skills/u0/Financial-Statement-Rolling",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Financial-Statement-Rolling/worker_skills/u1/Financial-Statement-Rolling",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Financial-Statement-Rolling/worker_skills/u2/Financial-Statement-Rolling"
+  }
+}

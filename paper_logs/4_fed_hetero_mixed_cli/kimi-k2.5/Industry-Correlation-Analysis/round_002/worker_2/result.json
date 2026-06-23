@@ -1,0 +1,29 @@
+{
+    "id": "ee79d14e-0ce3-497c-8116-64b6b68c7b48",
+    "started_at": "2026-05-23T22:34:12.564332",
+    "finished_at": "2026-05-23T22:36:39.187951",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-broadcasting-advertising-co__oUNrZEn"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

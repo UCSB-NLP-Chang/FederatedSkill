@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's multi-series detection guidance + u2's header row verification. Added mandatory enforcement language for glm-5. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-fill/SKILL.md",
+    "excel-formula-fill/references/formula-patterns.md",
+    "excel-formula-fill/scripts/diagnose_data_sheet.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-fill/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-fill/scripts/diagnose_data_sheet.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 4.7620626
+}

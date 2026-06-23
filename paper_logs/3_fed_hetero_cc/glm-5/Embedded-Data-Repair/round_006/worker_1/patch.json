@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace reveals a new pattern: using a manifest file (live_embedding.json) to identify which of multiple embedded workbooks is 'live' vs 'archive', and filtering slide notes to ignore archived values. This extends the existing skill to handle selective updates when multiple embeddings exist in one Office document.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "delete_paths": []
+}

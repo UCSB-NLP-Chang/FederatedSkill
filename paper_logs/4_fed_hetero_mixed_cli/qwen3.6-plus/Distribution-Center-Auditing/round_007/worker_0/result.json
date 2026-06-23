@@ -1,0 +1,29 @@
+{
+    "id": "b6e42230-bf17-4adc-a3c3-b89f3e6dcaf3",
+    "started_at": "2026-05-18T01:50:26.677606",
+    "finished_at": "2026-05-18T01:54:11.132860",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Distribution-Center-Auditing": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_cycle_count_variance_audi__xi9f6Sy"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

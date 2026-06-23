@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "This trace reveals a field service work order audit task that combines: (1) multi-source reconciliation (registry, approvals, request documents), (2) alias/name resolution beyond simple fuzzy matching, and (3) work order state validation (active vs closed). The existing multi-source-reconciliation skill covers the core pattern but misses two critical extensions: (1) alias matching where contractors have multiple registered names, and (2) status/state checks on reference records. The agent successfully completed the audit but the skill library should capture these extensions explicitly. I'm updating the existing multi-source-reconciliation skill to include alias handling and stateful validation patterns.",
+  "upsert_paths": [
+    "multi-source-reconciliation/SKILL.md",
+    "multi-source-reconciliation/references/alias-patterns.md",
+    "multi-source-reconciliation/references/violation-types.md"
+  ],
+  "delete_paths": []
+}

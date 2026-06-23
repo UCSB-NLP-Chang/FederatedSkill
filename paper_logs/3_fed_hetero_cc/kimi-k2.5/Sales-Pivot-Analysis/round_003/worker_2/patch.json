@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "Added inventory-multi-warehouse-pivot variant to sales-pivot-analysis skill. This captures the specific join keys (SKU), derived column formulas (TOTAL_VALUE, TOTAL_WEIGHT, REORDER_FLAG, STOCK_STATUS, VALUE_TIER with exact threshold values), pivot table specifications, and exact string values required for inventory tasks. Also updated the description to include inventory/warehouse trigger scenarios.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

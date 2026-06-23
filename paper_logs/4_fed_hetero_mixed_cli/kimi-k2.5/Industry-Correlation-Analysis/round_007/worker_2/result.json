@@ -1,0 +1,29 @@
+{
+    "id": "07b52dd6-f7b8-466f-83f2-85f94491f8a7",
+    "started_at": "2026-05-23T23:44:30.390134",
+    "finished_at": "2026-05-23T23:46:19.302802",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-coldchain-lastmile-correlat__F29zTx8"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

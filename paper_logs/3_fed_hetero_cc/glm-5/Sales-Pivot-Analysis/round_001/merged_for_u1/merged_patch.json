@@ -1,0 +1,24 @@
+{
+  "worker_id": "u1",
+  "summary": "R1 merge complete for u1. Consolidated 3 divergent skill names into 1 umbrella `sales-pivot-analysis` with u1's type alignment fix + u0's output conformance guidance + u2's student-perf rules folded into Domain Variants. See DECISIONS.md.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": [
+    "sales-pivot-reporting/SKILL.md"
+  ],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sales-pivot-reporting/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.9894168000000001
+}

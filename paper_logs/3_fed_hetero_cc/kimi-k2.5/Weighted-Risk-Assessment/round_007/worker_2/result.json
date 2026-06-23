@@ -1,0 +1,29 @@
+{
+    "id": "62009e99-dc8a-4231-bfed-36bc58fe8a95",
+    "started_at": "2026-05-14T19:10:06.353749",
+    "finished_at": "2026-05-14T19:11:51.373548",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "hospital-capacity-at-risk-calc__BR4n5fy"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

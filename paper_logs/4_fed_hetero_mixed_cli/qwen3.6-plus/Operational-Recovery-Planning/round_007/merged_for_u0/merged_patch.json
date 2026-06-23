@@ -1,0 +1,32 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R7. Applied u0's SKILL.md (reward=0.8) with outcome-driven design (D1b), literal dates, and working day counting (D0). Absorbed u2's capacity-filling anti-pattern despite u2's regressed reward. Merged variant-patterns.md from u1+u2 with Running Board domain mapping. Added outcome-design-patterns.md reference. See DECISIONS.md for detailed reasoning.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/outcome-design-patterns.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "production-capacity-planning/references/outcome-design-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "production-capacity-planning/references/variant-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "cost_usd": 0.6980859
+}

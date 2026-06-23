@@ -1,0 +1,29 @@
+{
+    "id": "aa004a44-55d5-435f-bdbf-3849e1085649",
+    "started_at": "2026-05-18T01:06:06.256715",
+    "finished_at": "2026-05-18T01:14:50.316448",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Distribution-Center-Auditing": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_returns_disposition_audit__CcuSHTS"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "R7 merge complete for u0. Applied u0's SKILL.md restructuring (explicit numbered step 7 for cached-value fix, mandatory checklist) to address u0's gap pattern. Applied u1's script regex fix for `<v />` self-closing tags. Applied u2's emission-zone invariant and edge-case verification documentation. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/references/cached_value_fixing.md",
+    "edit-embedded-excel/scripts/fix_cached_values.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/scripts/fix_cached_values.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.6666666666666666
+    ],
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "edit-embedded-excel/references/cached_value_fixing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "cost_usd": 0.47879459999999996
+}

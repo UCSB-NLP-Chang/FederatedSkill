@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's patch with pdftotext fallback and Quality Control domain; incorporated u2's N/A handling and cross-tab alignment. Rejected helper script references. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pytest-verification/SKILL.md",
+    "sales-pivot-report/SKILL.md",
+    "sales-pivot-report/references/common-issues.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-report/references/common-issues.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.875
+    ],
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.875
+    ],
+    "pytest-verification/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "cost_usd": 3.699555
+}

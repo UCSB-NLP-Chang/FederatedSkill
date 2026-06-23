@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u2's reward=1.0 patch (horizontal Excel layout fix) to close u1's gap. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/horizontal-data-parsing.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/references/horizontal-data-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 1.887582
+}

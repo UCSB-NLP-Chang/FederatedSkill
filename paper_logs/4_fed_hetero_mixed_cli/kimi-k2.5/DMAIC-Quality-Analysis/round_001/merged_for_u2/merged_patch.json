@@ -1,0 +1,62 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Renamed skill from `dmaic-analyze` to `dmaic-statistical-analysis` for peer alignment. Applied u2's patch with stronger script enforcement and schema compliance guidance. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/references/formulas.md",
+    "dmaic-statistical-analysis/references/output_schema.md",
+    "dmaic-statistical-analysis/scripts/spc_calculations.py"
+  ],
+  "delete_paths": [
+    "dmaic-analyze/SKILL.md",
+    "dmaic-analyze/references/formulas.md",
+    "dmaic-analyze/references/output_schema.md",
+    "dmaic-analyze/scripts/spc_calculations.py"
+  ],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ],
+    "dmaic-analyze/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "dmaic-analyze/scripts/spc_calculations.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-statistical-analysis/references/formulas.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-analyze/references/output_schema.md": [
+      "delete",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "dmaic-analyze/references/formulas.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-statistical-analysis/scripts/spc_calculations.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-statistical-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "dmaic-statistical-analysis/SKILL.md"
+  ],
+  "cost_usd": 4.131516
+}

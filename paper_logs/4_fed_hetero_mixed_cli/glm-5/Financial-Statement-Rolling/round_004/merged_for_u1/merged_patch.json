@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Financial-Statement-Rolling R4.\n\nSummary: Kept baseline financial-rollforward-workbook SKILL.md (u1's patch added wrong B5 pattern). Added u0's project-cost-rollforward skill (correct B5 pattern with running balance formulas, summary\u2192O). Applied u1's verify_workbook.py improvements. Added VARIANT DETECTION section to help glm-5 choose correct skill.\n\nLibrary: 2 skills (financial-rollforward-workbook, project-cost-rollforward).\n\nSee DECISIONS.md for details.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/scripts/verify_workbook.py",
+    "project-cost-rollforward/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "project-cost-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ],
+    "financial-rollforward-workbook/scripts/verify_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:project-cost-rollforward/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 4.1441609999999995
+}

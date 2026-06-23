@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779092602.0624833,
+            "stop": 1779092602.2935703
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.21140841208398342,
+                "start": 1779092602.0688145,
+                "stop": 1779092602.293446,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: FF                                                                       [100%]\nE           =================================== FAILURES ===================================\nE           _______________________________ test_file_exists _______________________________\nE           \nE               def test_file_exists():\nE           >       assert OUTPUT_FILE.is_file()\nE           E       AssertionError: assert False\nE           E        +  where False = is_file()\nE           E        +    where is_file = PosixPath('/root/answers.json').is_file\nE           \nE           /tests/test_outputs.py:42: AssertionError\nE           _________________________________ test_answers _________________________________\nE           \nE               def test_answers():\nE           >       actual = load_json(OUTPUT_FILE)\nE                            ^^^^^^^^^^^^^^^^^^^^^^\nE           \nE           /tests/test_outputs.py:46: \nE           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nE           \nE           path = PosixPath('/root/answers.json')\nE           \nE               def load_json(path):\nE           >       with open(path) as f:\nE                        ^^^^^^^^^^\nE           E       FileNotFoundError: [Errno 2] No such file or directory: '/root/answers.json'\nE           \nE           /tests/test_outputs.py:7: FileNotFoundError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_file_exists - AssertionError: assert False\nE           FAILED ../tests/test_outputs.py::test_answers - FileNotFoundError: [Errno 2] ...\nE           2 failed in 0.03s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

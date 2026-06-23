@@ -1,0 +1,103 @@
+{
+  "id": "70d24e58-b21b-45d9-ba2b-b49088cfa52f",
+  "task_name": "task_family_travel_claim_merge",
+  "trial_name": "task_family_travel_claim_merge__oN4AfRB",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__OCR-Data-Extraction/task_family_travel_claim_merge__oN4AfRB",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/OCR-Data-Extraction/task_family_travel_claim_merge"
+  },
+  "source": "OCR-Data-Extraction",
+  "task_checksum": "75693d02e7858fcd60583c88a36d3fe8cd38b4d8c4d18b7cae82466dea4efcb5",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/OCR-Data-Extraction/task_family_travel_claim_merge",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "OCR-Data-Extraction"
+    },
+    "trial_name": "task_family_travel_claim_merge__oN4AfRB",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__OCR-Data-Extraction",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "kimi-k2.5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "6e9a0fa5-1ac3-4a76-aef8-ac0d70cf2262"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 776471,
+    "n_cache_tokens": 505211,
+    "n_output_tokens": 10471,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-13T05:50:10.340407Z",
+  "finished_at": "2026-05-13T06:08:47.363712Z",
+  "environment_setup": {
+    "started_at": "2026-05-13T05:50:10.349803Z",
+    "finished_at": "2026-05-13T05:50:11.279070Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-13T05:50:11.279080Z",
+    "finished_at": "2026-05-13T05:50:11.521921Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-13T05:50:11.521982Z",
+    "finished_at": "2026-05-13T06:08:36.118845Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-13T06:08:36.119078Z",
+    "finished_at": "2026-05-13T06:08:36.812178Z"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Adds a skill for comparing structured tabular data across different file formats (PDF, Excel). Captures the critical anti-pattern of attempting to use the Read tool on binary Excel files, and provides working extraction patterns using pdfplumber for PDF tables and pandas for Excel files.",
+  "upsert_paths": [
+    "tabular-data-diff/SKILL.md",
+    "tabular-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": []
+}

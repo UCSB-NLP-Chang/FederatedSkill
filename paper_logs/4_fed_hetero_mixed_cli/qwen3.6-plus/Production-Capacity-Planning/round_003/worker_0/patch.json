@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updates workload-capacity-planning skill to mandate a layout inspection step before parsing, preventing brittle assumptions about horizontal Excel layouts that caused initial script failures. Adds explicit python3 usage rule and clarifies vertical vs horizontal decision thresholds based on trace evidence.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 R5. See DECISIONS.md for changes: SKILL.md restructured with BLOCKING RULE to fix anti-pattern violation; domain_mapping.md updated with medications terminology and removed inline comparison escape hatch.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "cost_usd": 2.294613
+}

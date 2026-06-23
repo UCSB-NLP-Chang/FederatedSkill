@@ -1,0 +1,29 @@
+{
+    "id": "10f2836f-c70e-4fa4-9442-70b79a7d1eef",
+    "started_at": "2026-05-18T00:03:15.861861",
+    "finished_at": "2026-05-18T00:03:15.866900",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "01-cloud-service-portfolio-diff__rwVSVLE"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

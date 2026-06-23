@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Round 3 merge complete for u1 (glm-5). Added mailer-policy-analysis skill from u0's validated patch (reward=1.0), fixed drug cost invariant bug and decision string for library consistency. Library now has 2 skills covering B2 and B3. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "mailer-policy-analysis/SKILL.md",
+    "mailer-policy-analysis/scripts/compute_mailer_policy.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "mailer-policy-analysis/scripts/compute_mailer_policy.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "mailer-policy-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "mailer-policy-analysis/SKILL.md",
+    "mailer-policy-analysis/scripts/compute_mailer_policy.py"
+  ],
+  "cost_usd": 0.8012440000000001
+}

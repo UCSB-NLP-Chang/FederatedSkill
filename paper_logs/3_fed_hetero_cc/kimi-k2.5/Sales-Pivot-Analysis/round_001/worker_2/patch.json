@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "Creates a new skill for student performance analysis, capturing the critical STUDENT_ID data type mismatch pattern (PDF extracts strings, Excel has integers) that caused a silent join failure in the trace. Includes academic-specific calculated columns (GRADE_BAND, RETAKE_FLAG, WEIGHTED_SCORE) and standard education pivot patterns distinct from sales analysis.",
+  "upsert_paths": [
+    "student-performance-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

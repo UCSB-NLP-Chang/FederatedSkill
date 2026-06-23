@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "lattice_deferred_revenue_rollfor__XDyxY4y",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/round_000/worker_2/lattice_deferred_revenue_rollfor__XDyxY4y",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/round_000/worker_2/lattice_deferred_revenue_rollfor__XDyxY4y",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

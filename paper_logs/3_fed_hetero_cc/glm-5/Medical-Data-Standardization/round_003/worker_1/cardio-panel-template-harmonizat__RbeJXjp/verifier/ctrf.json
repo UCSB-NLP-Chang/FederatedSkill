@@ -1,0 +1,37 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.0.3"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068085421,
+            "stop": 1779068086223
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 796,
+                "start": 1779068085427,
+                "stop": 1779068086223,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ..............FFFFFF                                                     [100%]\nE           =================================== FAILURES ===================================\nE           ___________________ TestOutput.test_anchor_samples[sample0] ____________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7fcf01df4dd0>\nE           sample = {'col': 'BNP', 'row': 0, 'value': 124.0}\nE           \nE               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)\nE               def test_anchor_samples(self, sample):\nE                   actual = float(self.df.iloc[sample['row']][sample['col']])\nE           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)\nE           E       AssertionError: ({'col': 'BNP', 'row': 0, 'value': 124.0}, 1694.43)\nE           E       assert 1570.43 <= 0.01\nE           E        +  where 1570.43 = abs((1694.43 - 124.0))\nE           \nE           /tests/test_outputs.py:112: AssertionError\nE           ___________________ TestOutput.test_anchor_samples[sample1] ____________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7fcf01cc4500>\nE           sample = {'col': 'NT_proBNP', 'row': 0, 'value': 450.0}\nE           \nE               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)\nE               def test_anchor_samples(self, sample):\nE                   actual = float(self.df.iloc[sample['row']][sample['col']])\nE           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)\nE           E       AssertionError: ({'col': 'NT_proBNP', 'row': 0, 'value': 450.0}, 25814.65)\nE           E       assert 25364.65 <= 0.01\nE           E        +  where 25364.65 = abs((25814.65 - 450.0))\nE           \nE           /tests/test_outputs.py:112: AssertionError\nE           ___________________ TestOutput.test_anchor_samples[sample2] ____________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7fcf01cc47d0>\nE           sample = {'col': 'Troponin_I', 'row': 2, 'value': 0.02}\nE           \nE               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)\nE               def test_anchor_samples(self, sample):\nE                   actual = float(self.df.iloc[sample['row']][sample['col']])\nE           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)\nE           E       AssertionError: ({'col': 'Troponin_I', 'row': 2, 'value': 0.02}, 16.39)\nE           E       assert 16.37 <= 0.01\nE           E        +  where 16.37 = abs((16.39 - 0.02))\nE           \nE           /tests/test_outputs.py:112: AssertionError\nE           ___________________ TestOutput.test_anchor_samples[sample3] ____________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7fcf01cc4890>\nE           sample = {'col': 'Troponin_T', 'row': 4, 'value': 0.01}\nE           \nE               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)\nE               def test_anchor_samples(self, sample):\nE                   actual = float(self.df.iloc[sample['row']][sample['col']])\nE           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)\nE           E       AssertionError: ({'col': 'Troponin_T', 'row': 4, 'value': 0.01}, 4.16)\nE           E       assert 4.15 <= 0.01\nE           E        +  where 4.15 = abs((4.16 - 0.01))\nE           \nE           /tests/test_outputs.py:112: AssertionError\nE           ___________________ TestOutput.test_anchor_samples[sample4] ____________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7fcf01cc4950>\nE           sample = {'col': 'Creatinine', 'row': 2, 'value': 1.08}\nE           \nE               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)\nE               def test_anchor_samples(self, sample):\nE                   actual = float(self.df.iloc[sample['row']][sample['col']])\nE           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)\nE           E       AssertionError: ({'col': 'Creatinine', 'row': 2, 'value': 1.08}, 7.81)\nE           E       assert 6.7299999999999995 <= 0.01\nE           E        +  where 6.7299999999999995 = abs((7.81 - 1.08))\nE           \nE           /tests/test_outputs.py:112: AssertionError\nE           ___________________ TestOutput.test_anchor_samples[sample5] ____________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7fcf01cc4a10>\nE           sample = {'col': 'Magnesium', 'row': 4, 'value': 1.95}\nE           \nE               @pytest.mark.parametrize('sample', EXPECTED_SAMPLES)\nE               def test_anchor_samples(self, sample):\nE                   actual = float(self.df.iloc[sample['row']][sample['col']])\nE           >       assert abs(actual - sample['value']) <= 0.01, (sample, actual)\nE           E       AssertionError: ({'col': 'Magnesium', 'row': 4, 'value': 1.95}, 7.23)\nE           E       assert 5.28 <= 0.01\nE           E        +  where 5.28 = abs((7.23 - 1.95))\nE           \nE           /tests/test_outputs.py:112: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample0] - A...\nE           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample1] - A...\nE           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample2] - A...\nE           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample3] - A...\nE           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample4] - A...\nE           FAILED ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample5] - A...\nE           6 failed, 14 passed in 0.51s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

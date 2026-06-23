@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "R8 merge complete for u2. Added neonatal-panel-harmonization skill (4th, at cap) based on u2's bidirectional detection patch with critical Lactate direction fix (target mmol/L per B5 spec). Peer-majority name adopted. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "neonatal-panel-harmonization/SKILL.md",
+    "neonatal-panel-harmonization/references/bidirectional-detection.md",
+    "neonatal-panel-harmonization/references/neonatal-ranges.md",
+    "neonatal-panel-harmonization/scripts/harmonize_neonatal.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "neonatal-panel-harmonization/scripts/harmonize_neonatal.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "neonatal-panel-harmonization/references/bidirectional-detection.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "neonatal-panel-harmonization/references/neonatal-ranges.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ],
+    "neonatal-panel-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.6666666666666666
+    ]
+  },
+  "conflicts": [
+    "neonatal-panel-harmonization/SKILL.md"
+  ],
+  "cost_usd": 4.773122999999999
+}

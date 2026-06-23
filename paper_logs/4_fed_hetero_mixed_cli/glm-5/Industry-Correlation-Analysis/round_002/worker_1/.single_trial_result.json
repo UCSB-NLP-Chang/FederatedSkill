@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "econ-broadcasting-advertising-co__X388exZ",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/round_002/worker_1/econ-broadcasting-advertising-co__X388exZ",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/round_002/worker_1/econ-broadcasting-advertising-co__X388exZ",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

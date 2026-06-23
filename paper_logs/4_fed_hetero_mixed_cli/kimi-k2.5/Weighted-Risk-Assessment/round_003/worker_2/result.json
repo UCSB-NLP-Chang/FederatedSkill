@@ -1,0 +1,29 @@
+{
+    "id": "bed1ea95-5911-46a0-8e29-dade09931c36",
+    "started_at": "2026-05-18T06:49:05.846674",
+    "finished_at": "2026-05-18T06:54:05.870366",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-port-throughput-calc__5yZGTjr"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

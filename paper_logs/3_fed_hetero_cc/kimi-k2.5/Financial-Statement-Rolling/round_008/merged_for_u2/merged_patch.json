@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "MERGE COMPLETE. Applied u2's SKILL.md (correct GL column N guidance), u2's formula-templates.md (summary GL verification), and extended quick_validate.py with check_summary_gl_links() \u2014 the missing validation that caused u2's R8 failure. REJECTED u1's patch (introduces WRONG formula =O-N comparing two GL cells). REJECTED u0's patch (built from scratch, ignored skill). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/references/formula-templates.md",
+    "financial-rollforward-workbook/scripts/quick_validate.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-rollforward-workbook/references/formula-templates.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "financial-rollforward-workbook/scripts/quick_validate.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "cost_usd": 4.571721000000001
+}

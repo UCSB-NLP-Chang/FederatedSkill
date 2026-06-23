@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.3333333333333333,
+  "summary": "Agent ignored the existing skill's mandatory script requirement and wrote custom Python code, producing JSON with wrong schema keys that caused verifier failure. Updates strengthen the warning with a pre-flight checklist, add recovery guidance for when custom code was already written, and add a concrete failure example showing exactly what went wrong.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

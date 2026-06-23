@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779427848.5545878,
+            "stop": 1779427848.7384827
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.1640785876661539,
+                "start": 1779427848.56194,
+                "stop": 1779427848.7383718,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .F..                                                                     [100%]\nE           =================================== FAILURES ===================================\nE           _________________ test_overview_values_and_actions_are_present _________________\nE           \nE               def test_overview_values_and_actions_are_present():\nE                   section0_xml = load_section(OUTPUT_FILE, \"section0.xml\")\nE                   section1_xml = load_section(OUTPUT_FILE, \"section1.xml\")\nE                   combined = section0_xml + section1_xml\nE                   overview = json.loads(OVERVIEW_FILE.read_text(encoding=\"utf-8\"))[\"summary\"]\nE                   actions = json.loads(ACTIONS_FILE.read_text(encoding=\"utf-8\"))[\"immediate_actions\"]\nE                   severity_map = {\"High\": \"\uc989\uc2dc\uc870\uce58\", \"Medium\": \"\uacc4\ud68d\ubcf4\uc644\", \"Low\": \"\ubaa8\ub2c8\ud130\ub9c1\"}\nE                   for key, value in overview.items():\nE                       if key == \"\uc810\uac80\uc77c\":\nE                           assert value.replace(\"-\", \".\") in combined\nE                       elif key == \"\uc704\ud5d8\ub4f1\uae09\":\nE           >               assert f'{value} ({severity_map[value]})' in combined\nE           E               assert 'High (\uc989\uc2dc\uc870\uce58)' in '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\\n<hp:section xmlns:hp=\"http://www.hancom.co.kr/hwpml/2010/HWPML\" id=\"section0\"...  <hp:p id=\"45\" paraPrIDRef=\"0\"><hp:run charPrIDRef=\"0\"><hp:t>\ube44\uace0: \uc0ac\uc9c4 \ubd80\ub85d\uc740 \ubcc4\ub3c4 \ubcf4\uad00</hp:t></hp:run></hp:p>\\n</hp:section>\\n'\nE           \nE           /tests/test_outputs.py:38: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_overview_values_and_actions_are_present\nE           1 failed, 3 passed in 0.02s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

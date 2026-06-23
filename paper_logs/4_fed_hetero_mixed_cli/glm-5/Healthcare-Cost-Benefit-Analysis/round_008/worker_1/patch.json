@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.6,
+  "summary": "Creating a new skill for diagnostic panel replenishment cadence analysis (14-day vs 28-day cycles). This follows the same pattern as existing dispatch/cycle analysis skills but with domain-specific data sources: panel manifest, shipper costs, contract terms with effective weeks, network adjustments, lab capacity overrides with revision approval, and holdouts exclusion.",
+  "upsert_paths": [
+    "diagpanel-cadence-analysis/SKILL.md",
+    "diagpanel-cadence-analysis/scripts/compute_diagpanel.py"
+  ],
+  "delete_paths": []
+}

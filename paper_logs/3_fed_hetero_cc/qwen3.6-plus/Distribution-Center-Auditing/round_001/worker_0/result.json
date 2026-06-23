@@ -1,0 +1,29 @@
+{
+    "id": "a8dfdfb2-bad6-46d6-84db-6db77f8818b4",
+    "started_at": "2026-05-22T18:24:07.327018",
+    "finished_at": "2026-05-22T18:27:48.075968",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Distribution-Center-Auditing": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_trailer_detention_audit__VPa9Kpb"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

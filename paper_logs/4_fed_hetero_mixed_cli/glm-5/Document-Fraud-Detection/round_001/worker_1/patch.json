@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task succeeded using the existing cross-document-validation skill patterns. Adding speaker/honorarium terminology to the skill description and validation checks table, plus punctuation normalization to the fuzzy matching guide, to improve coverage for this common variant of cross-document validation tasks.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md",
+    "cross-document-validation/references/fuzzy-matching-guide.md"
+  ],
+  "delete_paths": []
+}

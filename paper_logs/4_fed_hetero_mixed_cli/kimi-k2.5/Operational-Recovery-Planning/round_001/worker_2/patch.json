@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Generalized the queue-recovery-planning skill to handle variable week ranges, domain-specific terminology (radiology vs SOC), differing capacity parameters, and flexible summary constraints. Added parameter extraction guide and domain mapping reference based on successful adaptation from 40-week SOC alerts (28hr capacity) to 49-week radiology reads (26hr capacity, weeks 6-54). Key insight: agents must inspect input structure rather than hardcoding row positions or week counts, and must extract daily capacity/thresholds from task context rather than using fixed values.",
+  "upsert_paths": [
+    "queue-recovery-planning/SKILL.md",
+    "queue-recovery-planning/references/domain-mappings.md"
+  ],
+  "delete_paths": []
+}

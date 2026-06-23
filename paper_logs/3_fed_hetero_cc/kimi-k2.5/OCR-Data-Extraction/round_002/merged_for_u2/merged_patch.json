@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) Round 2. Applied u2's comprehensive SKILL.md (reward=1.0) with travel-claims variant, integrated u1's patterns.md claim codes section, added u2's extract_travel_claims.py script (fixed amount formatting to raw float). All workers converged on same core patterns \u2014 no naming drift. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md",
+    "image-data-extraction/scripts/extract_travel_claims.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/scripts/extract_travel_claims.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "image-data-extraction/references/patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md"
+  ],
+  "cost_usd": 0.9460227
+}

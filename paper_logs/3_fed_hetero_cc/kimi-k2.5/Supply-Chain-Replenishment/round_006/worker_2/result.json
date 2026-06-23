@@ -1,0 +1,29 @@
+{
+    "id": "9a4109fc-83ec-4af8-8840-3646196d24df",
+    "started_at": "2026-05-13T20:29:43.589260",
+    "finished_at": "2026-05-13T20:34:57.805434",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "beauty_zone_alias_gap__ak7ZbYf"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

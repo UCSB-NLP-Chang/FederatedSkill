@@ -1,0 +1,29 @@
+{
+    "id": "2e48f9d8-2b65-457c-9283-f5b54834307e",
+    "started_at": "2026-05-18T00:54:04.530651",
+    "finished_at": "2026-05-18T00:57:54.721705",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "new_task_11_datacenter_stochasti__vvwkjt2"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

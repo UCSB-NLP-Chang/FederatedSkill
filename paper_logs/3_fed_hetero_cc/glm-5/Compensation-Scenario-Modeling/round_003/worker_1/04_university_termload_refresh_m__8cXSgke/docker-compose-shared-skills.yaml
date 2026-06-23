@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1/Compensation-Scenario-Modeling:/root/.config/agent/skills

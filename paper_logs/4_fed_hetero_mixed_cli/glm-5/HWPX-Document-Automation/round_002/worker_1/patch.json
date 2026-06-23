@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Added value preprocessing guidance and clarified when to use the script vs custom code. The trace showed the agent needed to calculate Korean age and normalize phone numbers before placeholder replacement - common transformations not covered in the existing skill.",
+  "upsert_paths": [
+    "hwpx-document-processing/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,152 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FF...                                                                   [100%]
+E           =================================== FAILURES ===================================
+E           ______________________________ test_lookup_blocks ______________________________
+E           
+E               def test_lookup_blocks():
+E                   wb = workbook()
+E                   ws = task_sheet(wb)
+E           >       assert_matrix(ws, EXPECTED_TOP, "top block")
+E           
+E           /tests/test_outputs.py:101: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           ws = <Worksheet "Task">
+E           expected_map = {'12': [612.5, 628.0, 645.6, 662.3, 679.2], '13': [540.1, 552.8, 565.6, 578.9, 592.5], '14': [488.0, 502.5, 517.1, 531.4, 546.0], '15': [575.4, 589.2, 603.3, 617.8, 632.6], ...}
+E           label = 'top block'
+E           
+E               def assert_matrix(ws, expected_map, label):
+E                   errors = []
+E                   for row, expected_values in expected_map.items():
+E                       for idx, col in enumerate(COLUMNS):
+E                           ref = f"{col}{row}"
+E                           actual = value(ws, ref)
+E                           expected = expected_values[idx]
+E                           if not isinstance(actual, (int, float)) or abs(actual - expected) > TOLERANCE:
+E                               errors.append(f"{ref}: expected {expected}, got {actual}")
+E           >       assert not errors, f"{label} mismatches:\n" + "\n".join(errors)
+E           E       AssertionError: top block mismatches:
+E           E         H12: expected 612.5, got None
+E           E         I12: expected 628.0, got None
+E           E         J12: expected 645.6, got None
+E           E         K12: expected 662.3, got None
+E           E         L12: expected 679.2, got None
+E           E         H13: expected 540.1, got None
+E           E         I13: expected 552.8, got None
+E           E         J13: expected 565.6, got None
+E           E         K13: expected 578.9, got None
+E           E         L13: expected 592.5, got None
+E           E         H14: expected 488.0, got None
+E           E         I14: expected 502.5, got None
+E           E         J14: expected 517.1, got None
+E           E         K14: expected 531.4, got None
+E           E         L14: expected 546.0, got None
+E           E         H15: expected 575.4, got None
+E           E         I15: expected 589.2, got None
+E           E         J15: expected 603.3, got None
+E           E         K15: expected 617.8, got None
+E           E         L15: expected 632.6, got None
+E           E         H16: expected 460.7, got None
+E           E         I16: expected 470.5, got None
+E           E         J16: expected 480.8, got None
+E           E         K16: expected 491.6, got None
+E           E         L16: expected 502.8, got None
+E           E         H17: expected 520.4, got None
+E           E         I17: expected 535.7, got None
+E           E         J17: expected 551.0, got None
+E           E         K17: expected 566.1, got None
+E           E         L17: expected 581.5, got None
+E           E       assert not ['H12: expected 612.5, got None', 'I12: expected 628.0, got None', 'J12: expected 645.6, got None', 'K12: expected 662.3, got None', 'L12: expected 679.2, got None', 'H13: expected 540.1, got None', ...]
+E           
+E           /tests/test_outputs.py:86: AssertionError
+E           ________________________ test_derived_values_and_stats _________________________
+E           
+E               def test_derived_values_and_stats():
+E                   wb = workbook()
+E                   ws = task_sheet(wb)
+E           >       assert_matrix(ws, EXPECTED_NET, "net metric")
+E           
+E           /tests/test_outputs.py:110: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           ws = <Worksheet "Task">
+E           expected_map = {'35': [4.499999999999997, 4.303112313937747, 4.340369393139839, 4.169884169884167, 4.045226130653272], '36': [-2.2459...90728477], '38': [6.460431654676256, 6.680731364275667, 6.918844566712511, 7.231182795698919, 7.6215505913272015], ...}
+E           label = 'net metric'
+E           
+E               def assert_matrix(ws, expected_map, label):
+E                   errors = []
+E                   for row, expected_values in expected_map.items():
+E                       for idx, col in enumerate(COLUMNS):
+E                           ref = f"{col}{row}"
+E                           actual = value(ws, ref)
+E                           expected = expected_values[idx]
+E                           if not isinstance(actual, (int, float)) or abs(actual - expected) > TOLERANCE:
+E                               errors.append(f"{ref}: expected {expected}, got {actual}")
+E           >       assert not errors, f"{label} mismatches:\n" + "\n".join(errors)
+E           E       AssertionError: net metric mismatches:
+E           E         H35: expected 4.499999999999997, got None
+E           E         I35: expected 4.303112313937747, got None
+E           E         J35: expected 4.340369393139839, got None
+E           E         K35: expected 4.169884169884167, got None
+E           E         L35: expected 4.045226130653272, got None
+E           E         H36: expected -2.245901639344251, got None
+E           E         I36: expected -1.330128205128216, got None
+E           E         J36: expected -0.3918495297805642, got None
+E           E         K36: expected 0.6595092024539807, got None
+E           E         L36: expected 1.7867867867867833, got None
+E           E         H37: expected -2.6666666666666625, got None
+E           E         I37: expected -1.672661870503599, got None
+E           E         J37: expected -0.6293706293706334, got None
+E           E         K37: expected 0.4421768707483032, got None
+E           E         L37: expected 1.6556291390728477, got None
+E           E         H38: expected 6.460431654676256, got None
+E           E         I38: expected 6.680731364275667, got None
+E           E         J38: expected 6.918844566712511, got None
+E           E         K38: expected 7.231182795698919, got None
+E           E         L38: expected 7.6215505913272015, got None
+E           E         H39: expected -1.9423076923076967, got None
+E           E         I39: expected -1.5196998123827434, got None
+E           E         J39: expected -0.9706959706959728, got None
+E           E         K39: expected -0.28622540250446615, got None
+E           E         L39: expected 0.4895104895104915, got None
+E           E         H40: expected 2.96875, got None
+E           E         I40: expected 2.5227963525835904, got None
+E           E         J40: expected 1.9970414201183433, got None
+E           E         K40: expected 1.4121037463977044, got None
+E           E         L40: expected 0.8848314606741509, got None
+E           E       assert not ['H35: expected 4.499999999999997, got None', 'I35: expected 4.303112313937747, got None', 'J35: expected 4.3403693931...84169884167, got None', 'L35: expected 4.045226130653272, got None', 'H36: expected -2.245901639344251, got None', ...]
+E           
+E           /tests/test_outputs.py:86: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_lookup_blocks - AssertionError: top blo...
+E           FAILED ../tests/test_outputs.py::test_derived_values_and_stats - AssertionErr...
+E           2 failed, 4 passed in 0.16s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.38s ===============================

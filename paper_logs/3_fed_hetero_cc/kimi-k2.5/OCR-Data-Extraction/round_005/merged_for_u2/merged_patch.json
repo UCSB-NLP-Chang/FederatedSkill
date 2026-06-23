@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "R5 merge complete for u2 (kimi-k2.5). Applied u2's SKILL.md and tabular-form-patterns.md (with precision fix), rejected u0's new skill (naming anti-pattern) and u1's reference file (wrong aggregation logic). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/tabular-form-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/references/tabular-form-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md"
+  ],
+  "cost_usd": 0.5930994
+}

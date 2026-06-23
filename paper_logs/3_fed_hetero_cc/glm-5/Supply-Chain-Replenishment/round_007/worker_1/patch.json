@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds a new variant (B5: Route+Queue) to the existing supply-chain-coverage-analysis skill, covering section-based route snapshots, queue exports with Row Type filtering, variable cases-per-load from Pack Matrix, and horizon-based dispatch filtering. Also adds a troubleshooting note for a common date arithmetic error.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

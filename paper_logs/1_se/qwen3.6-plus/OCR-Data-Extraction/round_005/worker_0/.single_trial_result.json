@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "task_family_construction_measure__RwKNnr7",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/OCR-Data-Extraction/round_005/worker_0/task_family_construction_measure__RwKNnr7",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/OCR-Data-Extraction/round_005/worker_0/task_family_construction_measure__RwKNnr7",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

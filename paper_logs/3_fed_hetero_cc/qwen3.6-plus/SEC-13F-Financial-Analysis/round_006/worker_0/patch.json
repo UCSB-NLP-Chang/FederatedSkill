@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a new skill for processing, deduplicating, and routing batches of SEC 13F alerts to existing sub-skills, preventing duplicate processing and distractor noise while enforcing header-aware parsing over brittle awk commands.",
+  "upsert_paths": [
+    "sec-13f-alert-processing/SKILL.md"
+  ],
+  "delete_paths": []
+}

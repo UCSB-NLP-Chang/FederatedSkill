@@ -1,0 +1,29 @@
+{
+    "id": "84a83998-4cf2-42ea-a5b0-a0a77984d3bb",
+    "started_at": "2026-05-24T00:17:21.047188",
+    "finished_at": "2026-05-24T00:19:48.865587",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "household_route_tracker_refresh__peCBadE"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

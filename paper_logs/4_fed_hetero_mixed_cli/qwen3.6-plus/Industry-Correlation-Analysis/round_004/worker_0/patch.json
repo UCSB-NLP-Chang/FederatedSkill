@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The trace confirms the existing economic-time-series-correlation skill's anti-patterns are accurate (agent hit both the `lam` vs `lamb` and cycle/trend unpacking mistakes). The only new reusable pattern is the 'wide matrix' Excel format where years are column headers and series are rows, which is common in statistical agency releases but not explicitly covered. Adding this pattern to the existing skill will help future agents handle this format without reinventing the extraction logic.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md"
+  ],
+  "delete_paths": []
+}

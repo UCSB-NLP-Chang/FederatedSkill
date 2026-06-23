@@ -1,0 +1,104 @@
+{
+    "id": "d1b2922d-738a-4859-9407-740a1922fd27",
+    "task_name": "rebate-band-live-embedding-fix",
+    "trial_name": "rebate-band-live-embedding-fix__Vj56mwD",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Embedded-Data-Repair/round_006/worker_1/rebate-band-live-embedding-fix__Vj56mwD",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Embedded-Data-Repair/rebate-band-live-embedding-fix"
+    },
+    "source": "Embedded-Data-Repair",
+    "task_checksum": "9b74a9ab1f73bb64f1cdcaa22aa7a20e47c3ad5c8574db296cd85ddc1ef8f442",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Embedded-Data-Repair/rebate-band-live-embedding-fix",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Embedded-Data-Repair"
+        },
+        "trial_name": "rebate-band-live-embedding-fix__Vj56mwD",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Embedded-Data-Repair/round_006/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 4.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun5-M3-hetero/Embedded-Data-Repair/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "4317a6e2-ffd7-41e4-b3dd-d77c3651bc63"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 362199,
+        "n_cache_tokens": 314624,
+        "n_output_tokens": 9696,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-22T23:31:41.033664Z",
+    "finished_at": "2026-05-22T23:36:13.790876Z",
+    "environment_setup": {
+        "started_at": "2026-05-22T23:31:41.034501Z",
+        "finished_at": "2026-05-22T23:31:43.537153Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-22T23:31:43.537198Z",
+        "finished_at": "2026-05-22T23:31:44.187506Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-22T23:31:44.187598Z",
+        "finished_at": "2026-05-22T23:35:59.926427Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-22T23:35:59.931566Z",
+        "finished_at": "2026-05-22T23:36:01.499842Z"
+    }
+}

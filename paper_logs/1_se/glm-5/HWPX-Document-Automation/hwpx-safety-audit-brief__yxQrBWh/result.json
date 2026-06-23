@@ -1,0 +1,103 @@
+{
+  "id": "3eee04d6-1078-4321-9df9-f9a67ad81ae6",
+  "task_name": "hwpx-safety-audit-brief",
+  "trial_name": "hwpx-safety-audit-brief__yxQrBWh",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__HWPX-Document-Automation/hwpx-safety-audit-brief__yxQrBWh",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/HWPX-Document-Automation/hwpx-safety-audit-brief"
+  },
+  "source": "HWPX-Document-Automation",
+  "task_checksum": "bce542c586d6ae27d18372c86d1d28a5b982b50660fb90922c443762e341fb59",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/HWPX-Document-Automation/hwpx-safety-audit-brief",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "HWPX-Document-Automation"
+    },
+    "trial_name": "hwpx-safety-audit-brief__yxQrBWh",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5/iter-baseline-glm-5__HWPX-Document-Automation",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "43b64966-171d-4229-b6af-88122f72f8e8"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 322289,
+    "n_cache_tokens": 246261,
+    "n_output_tokens": 5737,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-04-27T01:24:57.481330Z",
+  "finished_at": "2026-04-27T01:26:47.245511Z",
+  "environment_setup": {
+    "started_at": "2026-04-27T01:24:57.483068Z",
+    "finished_at": "2026-04-27T01:24:58.573851Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-04-27T01:24:58.573863Z",
+    "finished_at": "2026-04-27T01:24:58.807079Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-04-27T01:24:58.807139Z",
+    "finished_at": "2026-04-27T01:26:36.150006Z"
+  },
+  "verifier": {
+    "started_at": "2026-04-27T01:26:36.150466Z",
+    "finished_at": "2026-04-27T01:26:36.698401Z"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Adopted u1's verify_before_submit.py (executable test enforcement) and u2's verifier-interaction.md. Restructured SKILL.md to make scripts the central workflow steps instead of markdown guidance \u2014 task_memory.md says \"SKILL.md guidance is being ignored\" for 3 rounds, executable enforcement needed. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/verifier-interaction.md",
+    "excel-formula-injection/scripts/verify_before_submit.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-injection/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "excel-formula-injection/scripts/verify_before_submit.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-injection/references/verifier-interaction.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "cost_usd": 2.028321
+}

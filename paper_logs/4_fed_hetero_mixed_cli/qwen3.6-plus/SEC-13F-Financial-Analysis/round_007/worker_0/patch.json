@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Updates sec-13f-analysis to enforce using existing scripts over custom parsers, clarifies report_date formatting (use exact TSV dates, not directory labels), and adds a Template Filling Workflow to prevent verifier failures on structured output tasks.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

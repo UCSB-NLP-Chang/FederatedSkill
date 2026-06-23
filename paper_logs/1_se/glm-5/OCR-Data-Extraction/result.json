@@ -1,0 +1,38 @@
+{
+    "id": "0bdf045c-3815-43e8-91db-042e1a97c6e3",
+    "started_at": "2026-05-14T22:55:00.660180",
+    "finished_at": "2026-05-14T23:04:01.027402",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__OCR-Data-Extraction": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.625
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "task_family_ecommerce_orders__ShTpd2p",
+                            "task_family_pharmacy_labels__7MYi3KV",
+                            "task_family_travel_claim_merge__GBXCKHh",
+                            "task_family_invoice_images__DFecayh",
+                            "task_family_nested_fuel_packets__tPpvLM8"
+                        ],
+                        "0.0": [
+                            "task_family_construction_measure__FSk3J9S",
+                            "task_family_utility_bills_templa__ibAcmjV",
+                            "task_family_case_settlement_pack__gqpz4Ee"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

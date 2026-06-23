@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "task_family_travel_claim_merge__RA8AAUv",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/OCR-Data-Extraction/round_002/worker_0/task_family_travel_claim_merge__RA8AAUv",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/OCR-Data-Extraction/round_002/worker_0/task_family_travel_claim_merge__RA8AAUv",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

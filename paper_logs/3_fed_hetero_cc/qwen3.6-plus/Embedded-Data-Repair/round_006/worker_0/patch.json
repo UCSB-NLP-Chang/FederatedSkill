@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.75,
+  "summary": "The agent failed because it did not run fix_cached_values.py after updating the source cell, leaving the formula cell's cached <v> value stale. The existing edit-embedded-excel skill already covers cached value fixing, but the agent missed it. This update adds: (1) a decision rule for JSON manifests that identify which embedding to update when multiple exist (live vs archive pattern), (2) a mandatory pre-submission checklist that forces cached value fixing before verification, and (3) explicit XML cached value verification steps. These changes make the critical cached-value step unavoidable and cover the new live/archive embedding pattern seen in the trace.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for computing Pearson correlation of HP-filtered cyclical components from economic time series. Captures pitfalls around quarterly parsing, trailing zero formatting, python3 usage, and HP filter lambda selection.",
+  "upsert_paths": [
+    "hp-filter-correlation/SKILL.md",
+    "hp-filter-correlation/scripts/hp_correlation.py"
+  ],
+  "delete_paths": []
+}

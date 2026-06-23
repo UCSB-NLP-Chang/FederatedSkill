@@ -1,0 +1,35 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Created umbrella skill `dmaic-statistical-analysis` (4 files) from u0+u1+u2 patches. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/references/formulas.md",
+    "dmaic-statistical-analysis/references/output_schema.md",
+    "dmaic-statistical-analysis/scripts/compute_metrics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-statistical-analysis/scripts/compute_metrics.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-statistical-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-statistical-analysis/references/formulas.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.478096
+}

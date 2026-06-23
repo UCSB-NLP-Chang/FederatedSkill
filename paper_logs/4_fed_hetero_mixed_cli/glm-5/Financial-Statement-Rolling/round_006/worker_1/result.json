@@ -1,0 +1,29 @@
+{
+    "id": "c6bd98f4-6c69-400a-94ba-53f151bb1d7d",
+    "started_at": "2026-05-17T21:55:37.849471",
+    "finished_at": "2026-05-17T22:01:23.438875",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "atlas_refund_reserve_template_me__uJxPtKj"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

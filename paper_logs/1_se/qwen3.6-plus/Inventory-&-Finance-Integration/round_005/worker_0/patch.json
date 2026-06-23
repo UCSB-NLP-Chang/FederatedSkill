@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Updated excel-capacity-reconciliation/SKILL.md to address recurring agent failures observed in the trace: leftover default sheet, interleaved vs grouped monthly column layout mismatches, missing '=' prefix in formula strings, and unquoted cross-sheet references with special characters. Added explicit decision rules and anti-pattern warnings to prevent structural verifier failures.",
+  "upsert_paths": [
+    "excel-capacity-reconciliation/SKILL.md"
+  ],
+  "delete_paths": []
+}

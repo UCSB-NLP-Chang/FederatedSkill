@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-kimi6-glm-M3-hetero",
+  "family_name": "OCR-Data-Extraction",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "task_family_pharmacy_labels",
+      "task_family_ecommerce_orders",
+      "task_family_travel_claim_merge",
+      "task_family_invoice_images",
+      "task_family_utility_bills_template_update",
+      "task_family_construction_measurement",
+      "task_family_nested_fuel_packets",
+      "task_family_case_settlement_packets"
+    ],
+    "u1": [
+      "task_family_pharmacy_labels",
+      "task_family_ecommerce_orders",
+      "task_family_travel_claim_merge",
+      "task_family_invoice_images",
+      "task_family_utility_bills_template_update",
+      "task_family_construction_measurement",
+      "task_family_nested_fuel_packets",
+      "task_family_case_settlement_packets"
+    ],
+    "u2": [
+      "task_family_pharmacy_labels",
+      "task_family_ecommerce_orders",
+      "task_family_travel_claim_merge",
+      "task_family_invoice_images",
+      "task_family_utility_bills_template_update",
+      "task_family_construction_measurement",
+      "task_family_nested_fuel_packets",
+      "task_family_case_settlement_packets"
+    ]
+  }
+}

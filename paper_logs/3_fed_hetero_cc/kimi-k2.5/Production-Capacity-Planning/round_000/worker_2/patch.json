@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "This task involved creating a production catch-up plan with specific business logic: calculating weekly capacity based on days worked, determining overtime, and tracking backlog reduction. The agent succeeded but used ad-hoc Python scripts. The reusable capability is 'production planning with backlog-driven scheduling' - a pattern where days-worked decisions depend on current backlog state, with transitions between 6/5/4-day weeks based on thresholds. The skill captures this decision logic, validation patterns for Excel outputs, and the common pitfall of state-carry calculations across rows.",
+  "upsert_paths": [
+    "production-catchup-planning/SKILL.md",
+    "production-catchup-planning/scripts/verify_plan.py"
+  ],
+  "delete_paths": []
+}

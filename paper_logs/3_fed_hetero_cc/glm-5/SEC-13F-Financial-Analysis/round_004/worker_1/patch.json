@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Add B5 (Manager-Issuer Grid) schema and workflow to existing sec-13f-fund-analysis skill. This task type queries multiple managers \u00d7 multiple issuers, which is distinct from B4 (find all managers for one issuer). The trace shows a successful pattern using direct grep for targeted cross-product queries.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

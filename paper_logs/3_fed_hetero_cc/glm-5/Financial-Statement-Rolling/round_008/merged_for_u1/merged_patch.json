@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. REJECTED u1's SKILL.md patch (introduces WRONG formula guidance =O-N). Kept baseline SKILL.md with correct formulas, added prepaid-amortization variant with CORRECT formulas (=N-N), absorbed u2's formula-templates.md reference, extended quick_validate.py to check Summary GL links. See DECISIONS.md.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/references/formula-templates.md",
+    "financial-rollforward-workbook/scripts/quick_validate.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "financial-rollforward-workbook/references/formula-templates.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "financial-rollforward-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "financial-rollforward-workbook/scripts/quick_validate.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "financial-rollforward-workbook/SKILL.md"
+  ],
+  "cost_usd": 7.3944030000000005
+}

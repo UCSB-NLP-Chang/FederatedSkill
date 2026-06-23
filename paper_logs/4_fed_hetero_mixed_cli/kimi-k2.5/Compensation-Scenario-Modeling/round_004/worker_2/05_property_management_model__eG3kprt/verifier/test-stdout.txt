@@ -1,0 +1,109 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ..FF.F.FF                                                                [100%]
+E           =================================== FAILURES ===================================
+E           __________________ TestSheetStructure.test_named_ranges_count __________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f8745eb5f70>
+E           
+E               def test_named_ranges_count(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E           >       assert len(wb.defined_names) >= 46, \
+E                       f"Expected >=46 named ranges, got {len(wb.defined_names)}"
+E           E       AssertionError: Expected >=46 named ranges, got 45
+E           E       assert 45 >= 46
+E           E        +  where 45 = len({'BaseSal_Yr1': <openpyxl.workbook.defined_name.DefinedName object>\nParameters:\nname='BaseSal_Yr1', comment=None, cust...e, functionGroupId=None, shortcutKey=None, publishToServer=None, workbookParameter=None, attr_text='Assumptions!$E$20'})
+E           E        +    where {'BaseSal_Yr1': <openpyxl.workbook.defined_name.DefinedName object>\nParameters:\nname='BaseSal_Yr1', comment=None, cust...e, functionGroupId=None, shortcutKey=None, publishToServer=None, workbookParameter=None, attr_text='Assumptions!$E$20'} = <openpyxl.workbook.workbook.Workbook object at 0x7f87467438f0>.defined_names
+E           
+E           /tests/test_outputs.py:20: AssertionError
+E           ____________________ TestSheetStructure.test_summary_title _____________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f8745eb5be0>
+E           
+E               def test_summary_title(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['Summary']
+E           >       assert ws['B1'].value is not None, "Summary B1 should contain organization name"
+E           E       AssertionError: Summary B1 should contain organization name
+E           E       assert None is not None
+E           E        +  where None = <Cell 'Summary'.B1>.value
+E           
+E           /tests/test_outputs.py:26: AssertionError
+E           _______________ TestSheetStructure.test_quarterly_totals_row_91 ________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f8745eca570>
+E           
+E               def test_quarterly_totals_row_91(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['EE Calcs (Current)']
+E                   h91 = ws.cell(row=91, column=8).value
+E           >       assert h91 is not None, "Row 91 (quarterly totals) should exist in EE Calcs"
+E           E       AssertionError: Row 91 (quarterly totals) should exist in EE Calcs
+E           E       assert None is not None
+E           
+E           /tests/test_outputs.py:41: AssertionError
+E           _____________________ TestSheetStructure.test_roster_count _____________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f8745ec0e90>
+E           
+E               def test_roster_count(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws = wb['Roster']
+E                   count = sum(1 for r in ws.iter_rows(min_row=5, max_row=200, min_col=2, max_col=2) if r[0].value is not None)
+E           >       assert count >= 87, f"Expected >=87 roster entries, got {count}"
+E           E       AssertionError: Expected >=87 roster entries, got 85
+E           E       assert 85 >= 87
+E           
+E           /tests/test_outputs.py:56: AssertionError
+E           _______________ TestSheetStructure.test_yoy_service_progression ________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f8745ea6db0>
+E           
+E               def test_yoy_service_progression(self):
+E                   wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                   ws1 = wb['EE Calcs (Current)']
+E                   ws2 = wb['EE Calcs (Yr+1)']
+E                   for r in range(4, 91):
+E                       v1 = ws1.cell(row=r, column=6).value
+E                       v2 = ws2.cell(row=r, column=6).value
+E                       if v1 is not None and v2 is not None:
+E           >               assert v2 == v1 + 1, f"Yr+1 service should be +1"
+E                                        ^^^^^^
+E           E               TypeError: can only concatenate str (not "int") to str
+E           
+E           /tests/test_outputs.py:66: TypeError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_named_ranges_count
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_summary_title - Ass...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_quarterly_totals_row_91
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_roster_count - Asse...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_yoy_service_progression
+E           5 failed, 4 passed in 0.83s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 1.07s ===============================

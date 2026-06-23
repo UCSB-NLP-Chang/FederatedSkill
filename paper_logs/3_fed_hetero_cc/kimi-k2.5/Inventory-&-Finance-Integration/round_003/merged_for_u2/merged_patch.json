@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) round 3. Added excel-financial-reconciliation skill (u2 content + u0 anti-pattern merged). Library now has 2 skills covering B1 (gap analysis) + B2 (reconciliation pending verification). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-financial-reconciliation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-reconciliation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.141247
+}

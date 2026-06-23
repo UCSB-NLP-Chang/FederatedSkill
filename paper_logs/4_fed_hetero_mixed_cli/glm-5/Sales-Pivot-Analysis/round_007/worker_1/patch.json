@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8571428571428571,
+  "summary": "The agent failed because pytest collected 0 items but the verifier shows test_output.py::test_legacy_pytest_suite exists and failed. The agent gave up too early on test discovery. This patch strengthens the run-pytest-verification skill with more aggressive search strategies and clearer escalation paths when tests cannot be located.",
+  "upsert_paths": [
+    "run-pytest-verification/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,29 @@
+{
+    "id": "eec89ce3-ab3a-4c1d-b1a4-9cf18c1d2e29",
+    "started_at": "2026-05-17T21:28:07.584406",
+    "finished_at": "2026-05-17T21:31:01.695499",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "research-stipend-reconciliation__Hq8qeDM"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

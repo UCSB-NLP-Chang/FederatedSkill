@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's mailer-cycle-analysis patch (reward=1.0) with naming convergence to match existing `-cycle-analysis` pattern. Rejected u1 (reward=0.6). Library now has 2 skills: syncpack-cycle-analysis + mailer-cycle-analysis. See DECISIONS.md.",
+  "upsert_paths": [
+    "mailer-cycle-analysis/SKILL.md",
+    "mailer-cycle-analysis/scripts/compute_mailer_policy.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "mailer-cycle-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "mailer-cycle-analysis/scripts/compute_mailer_policy.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "mailer-policy-analysis/SKILL.md",
+    "mailer-policy-analysis/scripts/compute_mailer_policy.py"
+  ],
+  "cost_usd": 0.6509860000000001
+}

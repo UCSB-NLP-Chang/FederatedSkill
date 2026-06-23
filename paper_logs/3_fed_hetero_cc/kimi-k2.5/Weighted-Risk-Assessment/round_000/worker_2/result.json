@@ -1,0 +1,29 @@
+{
+    "id": "2c80ff6a-f3c5-4f38-934c-e9de1f6bc92f",
+    "started_at": "2026-05-13T22:37:41.379663",
+    "finished_at": "2026-05-13T22:43:01.391374",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Weighted-Risk-Assessment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-cloud-reliability-calc__B6GsMSH"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

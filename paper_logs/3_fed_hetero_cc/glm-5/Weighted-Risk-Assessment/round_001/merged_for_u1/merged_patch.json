@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Synthesized excel-formula-fill from u0+u2+target patches. Added entity-count verification, pre-save checklist, row-absolute SUMPRODUCT locking, hospital-bedflow variant. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-formula-fill/SKILL.md",
+    "excel-formula-fill/references/formula-patterns.md",
+    "excel-formula-fill/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-fill/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-fill/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.4542252999999996
+}

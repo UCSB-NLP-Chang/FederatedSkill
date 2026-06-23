@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "The agent failed because it used incorrect GL Balance column references in the Summary sheet. It used column O for GL Balance links (='PPD Exp #1250'!O51) when the GL Balance data actually lives in column N. This pattern is identical to the 'Variance formula uses column N' issue already documented in financial-rollforward-workbook, but the Summary sheet cross-sheet references were overlooked. The skill needs a specific section on Summary sheet formulas and a stronger validation rule about which column to use for GL Balance in cross-sheet references. The GL Balance row in detail sheets has values in E, H, K, N (monthly endings), so cross-sheet links from Summary to GL Balance must use column N, always.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/references/formula-templates.md"
+  ],
+  "delete_paths": []
+}

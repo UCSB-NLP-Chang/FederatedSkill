@@ -1,0 +1,29 @@
+{
+    "id": "aa8d8261-84c0-4792-972d-20b09b8d8296",
+    "started_at": "2026-05-17T21:11:16.510878",
+    "finished_at": "2026-05-17T21:16:28.497089",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "orchid_project_cost_rollforward__pTV7joe"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

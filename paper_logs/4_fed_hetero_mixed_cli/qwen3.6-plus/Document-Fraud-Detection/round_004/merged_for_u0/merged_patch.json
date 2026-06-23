@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "R4 merge complete for u0. Applied u0's SKILL.md (JSON flattening, decision filter) and u2's comprehensive domain-examples.md (explicit code patterns for nested JSON, amendments). Rejected u1's cross-document-validation (outlier name, prevents cross-worker drift). See DECISIONS.md.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "cost_usd": 3.0615210000000004
+}

@@ -1,0 +1,32 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's validated parse_year_markers.py and excel-year-parsing.md wholesale; minimal SKILL.md edit for Q-prefixed continuation markers. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/excel-year-parsing.md",
+    "economic-time-series-correlation/scripts/parse_year_markers.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-correlation/scripts/parse_year_markers.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "economic-time-series-correlation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "economic-time-series-correlation/references/excel-year-parsing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-correlation/references/excel-year-parsing.md",
+    "economic-time-series-correlation/scripts/parse_year_markers.py"
+  ],
+  "cost_usd": 0.687241
+}

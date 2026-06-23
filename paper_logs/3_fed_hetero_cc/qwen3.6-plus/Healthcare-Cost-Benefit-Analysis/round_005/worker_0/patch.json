@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.4,
+  "summary": "Adds a new skill for oncology supportive-care cooler dispatch analysis, capturing the distinct workflow of JSON catalog filtering, version-controlled site overrides with fallback, per-dispatch cooler costs (not per-site), and alias-based payment matching. Includes a deterministic computation script to prevent manual calculation errors and ensure consistent output formatting.",
+  "upsert_paths": [
+    "onco-cooler-dispatch-analysis/SKILL.md",
+    "onco-cooler-dispatch-analysis/scripts/compute_dispatch.py"
+  ],
+  "delete_paths": []
+}

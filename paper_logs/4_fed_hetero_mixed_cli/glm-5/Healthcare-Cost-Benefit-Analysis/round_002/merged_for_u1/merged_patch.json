@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u0's validated syncpack-cycle-analysis (SKILL.md + compute_syncpack.py) wholesale. u1's prose version (0.6) and u2's pharma-packaging-analysis (0.4) rejected. See DECISIONS.md for rationale. B2 gap closed; B1 gap pending.",
+  "upsert_paths": [
+    "syncpack-cycle-analysis/SKILL.md",
+    "syncpack-cycle-analysis/scripts/compute_syncpack.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "syncpack-cycle-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "syncpack-cycle-analysis/scripts/compute_syncpack.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "syncpack-cycle-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.694693
+}

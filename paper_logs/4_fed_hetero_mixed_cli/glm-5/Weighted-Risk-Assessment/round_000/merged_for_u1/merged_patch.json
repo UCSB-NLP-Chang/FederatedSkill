@@ -1,0 +1,35 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Consolidated 3 peer patches into 1 umbrella skill `excel-formula-injection` with 2 helper scripts and 1 reference file. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/formula-patterns.md",
+    "excel-formula-injection/scripts/calculate_stats.py",
+    "excel-formula-injection/scripts/formula_injector.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-injection/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-injection/scripts/calculate_stats.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-injection/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-injection/scripts/formula_injector.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.8696419999999998
+}

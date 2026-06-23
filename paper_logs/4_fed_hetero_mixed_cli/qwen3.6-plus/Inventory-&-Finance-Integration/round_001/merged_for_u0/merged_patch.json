@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 Applied u0's verified patch wholesale (generalized skill for staffing domain) + integrated u1's boolean handling guidance. See DECISIONS.md.",
+  "upsert_paths": [
+    "inventory-metrics-calculation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-metrics-calculation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.1954540000000002
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Add 40 hrs/day capacity variant (chemical production) to the known invariants table and capacity rules reference. The trace shows a successful application of the existing skill with a new capacity rate not previously documented.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

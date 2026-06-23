@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The agent failed the test suite due to two critical formula bugs that are explicitly documented as anti-patterns in the existing financial-rollforward-workbook skill: (1) Variance formula used =O12-N12 instead of =N12-N10, and (2) Ending Balance self-referenced =B10+C10-D10 instead of referencing Period Totals =B9+C9-D9. The agent also skipped running the validation script and test suite before declaring success. This patch strengthens the existing skill by adding a mandatory pre-submission checklist, elevating the anti-patterns to a prominent 'STOP AND CHECK' section, and adding a quick-validation script that agents can run in seconds before the full test suite.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/scripts/quick_validate.py"
+  ],
+  "delete_paths": []
+}

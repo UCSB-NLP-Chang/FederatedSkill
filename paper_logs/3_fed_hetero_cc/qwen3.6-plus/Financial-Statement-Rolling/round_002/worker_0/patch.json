@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The agent failed the warranty reserve task due to two recurring formula bugs already documented in the existing deferred-revenue-rollforward skill: (1) Ending Balance control row self-referencing its own empty Beginning Balance cell instead of referencing Period Totals, and (2) incorrect Variance formula. The agent also built from scratch instead of using the provided skeleton script. This patch strengthens the existing skill with a mandatory pre-coding checklist, explicit skeleton script usage rule, and adds the warranty reserve variant to the accrual reference.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/accrual_variant.md"
+  ],
+  "delete_paths": []
+}

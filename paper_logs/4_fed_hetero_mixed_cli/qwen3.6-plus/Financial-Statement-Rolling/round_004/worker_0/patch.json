@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The trace reveals a project cost rollforward variant that differs significantly from the existing financial-rollforward-workbook skill. Key differences: (1) nested JSON with revision deduplication logic, (2) CSV override application to specific row_ids, (3) different column layout (Cap Adds/Amortization vs Billings/Recognition), (4) Ending Balance row uses running balance formulas (E=B+C-D, H=E+F-G) instead of SUM, (5) Variance compares GL Balance column O to column N, (6) Summary links to column O (total adds/amortization) not final period ending balance. The agent succeeded in building the workbook but the verifier failed, likely because the existing verify_workbook.py doesn't account for this variant's formula patterns. This patch adds a new skill capturing the project cost rollforward workflow.",
+  "upsert_paths": [
+    "project-cost-rollforward/SKILL.md"
+  ],
+  "delete_paths": []
+}

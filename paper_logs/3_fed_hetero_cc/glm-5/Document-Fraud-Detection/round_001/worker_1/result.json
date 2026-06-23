@@ -1,0 +1,29 @@
+{
+    "id": "4eea5144-6b69-4ee9-8785-8719643f89bc",
+    "started_at": "2026-05-15T02:16:32.912890",
+    "finished_at": "2026-05-15T02:18:41.899266",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "speaker-honorarium-review__NTbZheN"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

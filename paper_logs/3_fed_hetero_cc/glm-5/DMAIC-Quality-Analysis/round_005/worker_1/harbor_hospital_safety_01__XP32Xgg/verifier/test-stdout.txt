@@ -1,0 +1,117 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FFFFF..                                                                 [100%]
+E           =================================== FAILURES ===================================
+E           ____________________________ test_process1_metrics _____________________________
+E           
+E           outputs = ({'extended_analysis': {'medication_errors_insights': {'capability_status': 'Capable', 'overall_error_rate_pct': 1.78,...opportunity) |\n\n---\n\n*Report generated from patient safety data analysis, January 2025 data collection period.*\n')
+E           expected_metrics = {'medication_errors': {'capability_vs_target': 'Capable', 'ci_high': 2.0449916928173404, 'ci_low': 1.5476291433808422,...'rows': 20, ...}, 'wait_times': {'cv': 0.11696357951838271, 'direction': 'decreasing', 'mean': 41.09234, 'n': 20, ...}}
+E           
+E               def test_process1_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   p1 = report["wait_times"]
+E                   exp = expected_metrics["wait_times"]
+E               
+E                   assert p1["n"] == exp["n"]
+E           >       assert_close(p1["mean_min"], exp["mean"], tol=1e-3)
+E                                ^^^^^^^^^^^^^^
+E           E       KeyError: 'mean_min'
+E           
+E           /tests/test_outputs.py:171: KeyError
+E           ____________________________ test_process2_metrics _____________________________
+E           
+E           outputs = ({'extended_analysis': {'medication_errors_insights': {'capability_status': 'Capable', 'overall_error_rate_pct': 1.78,...opportunity) |\n\n---\n\n*Report generated from patient safety data analysis, January 2025 data collection period.*\n')
+E           expected_metrics = {'medication_errors': {'capability_vs_target': 'Capable', 'ci_high': 2.0449916928173404, 'ci_low': 1.5476291433808422,...'rows': 20, ...}, 'wait_times': {'cv': 0.11696357951838271, 'direction': 'decreasing', 'mean': 41.09234, 'n': 20, ...}}
+E           
+E               def test_process2_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   p2 = report["medication_errors"]
+E                   exp = expected_metrics["medication_errors"]
+E               
+E           >       assert p2["points"] == exp["points"]
+E                          ^^^^^^^^^^^^
+E           E       KeyError: 'points'
+E           
+E           /tests/test_outputs.py:186: KeyError
+E           ____________________________ test_process3_metrics _____________________________
+E           
+E           outputs = ({'extended_analysis': {'medication_errors_insights': {'capability_status': 'Capable', 'overall_error_rate_pct': 1.78,...opportunity) |\n\n---\n\n*Report generated from patient safety data analysis, January 2025 data collection period.*\n')
+E           expected_metrics = {'medication_errors': {'capability_vs_target': 'Capable', 'ci_high': 2.0449916928173404, 'ci_low': 1.5476291433808422,...'rows': 20, ...}, 'wait_times': {'cv': 0.11696357951838271, 'direction': 'decreasing', 'mean': 41.09234, 'n': 20, ...}}
+E           
+E               def test_process3_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   p3 = report["readmission_rates"]
+E                   exp = expected_metrics["readmission_rates"]
+E               
+E           >       assert p3["rows"] == exp["rows"]
+E                          ^^^^^^^^^^
+E           E       KeyError: 'rows'
+E           
+E           /tests/test_outputs.py:208: KeyError
+E           __________________ test_variability_ranking_and_highest_risk ___________________
+E           
+E           outputs = ({'extended_analysis': {'medication_errors_insights': {'capability_status': 'Capable', 'overall_error_rate_pct': 1.78,...opportunity) |\n\n---\n\n*Report generated from patient safety data analysis, January 2025 data collection period.*\n')
+E           expected_metrics = {'medication_errors': {'capability_vs_target': 'Capable', 'ci_high': 2.0449916928173404, 'ci_low': 1.5476291433808422,...'rows': 20, ...}, 'wait_times': {'cv': 0.11696357951838271, 'direction': 'decreasing', 'mean': 41.09234, 'n': 20, ...}}
+E           
+E               def test_variability_ranking_and_highest_risk(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   ranking = report["variability_ranking"]
+E                   expected_ranking = expected_metrics["ranking"]
+E               
+E                   assert len(ranking) == 3
+E           >       assert [r["process"] for r in ranking] == [r["process"] for r in expected_ranking]
+E           E       AssertionError: assert ['Readmission... 'Wait Times'] == ['readmission... 'wait_times']
+E           E         
+E           E         At index 0 diff: 'Readmission Rates' != 'readmission_rates'
+E           E         Use -v to get more diff
+E           
+E           /tests/test_outputs.py:224: AssertionError
+E           ______________________ test_extended_analysis_consistency ______________________
+E           
+E           outputs = ({'extended_analysis': {'medication_errors_insights': {'capability_status': 'Capable', 'overall_error_rate_pct': 1.78,...opportunity) |\n\n---\n\n*Report generated from patient safety data analysis, January 2025 data collection period.*\n')
+E           
+E               def test_extended_analysis_consistency(outputs):
+E                   report, _ = outputs
+E                   ext = report["extended_analysis"]
+E                   highest = report["highest_variability_process"]
+E               
+E           >       assert ext["process"] == highest
+E                          ^^^^^^^^^^^^^^
+E           E       KeyError: 'process'
+E           
+E           /tests/test_outputs.py:239: KeyError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_process1_metrics - KeyError: 'mean_min'
+E           FAILED ../tests/test_outputs.py::test_process2_metrics - KeyError: 'points'
+E           FAILED ../tests/test_outputs.py::test_process3_metrics - KeyError: 'rows'
+E           FAILED ../tests/test_outputs.py::test_variability_ranking_and_highest_risk - ...
+E           FAILED ../tests/test_outputs.py::test_extended_analysis_consistency - KeyErro...
+E           5 failed, 3 passed in 0.48s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.83s ===============================

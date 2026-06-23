@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "R0 merge complete for u2 (kimi-k2.5): Created 1 umbrella skill `sales-pivot-analysis` synthesizing u2's full pipeline with u0's merge/pivot insights and u1's PDF extraction improvements. See DECISIONS.md.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.6254247
+}

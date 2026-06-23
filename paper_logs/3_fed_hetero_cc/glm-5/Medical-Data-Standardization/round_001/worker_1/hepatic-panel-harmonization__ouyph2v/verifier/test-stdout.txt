@@ -1,0 +1,809 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.4.1
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE                                          [100%]
+E           ==================================== ERRORS ====================================
+E           ________________ ERROR at setup of TestOutput.test_file_exists _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7ecdede0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           _______________ ERROR at setup of TestOutput.test_columns_exact ________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb135f0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           _________________ ERROR at setup of TestOutput.test_no_missing _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb13920>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           __________ ERROR at setup of TestOutput.test_no_scientific_or_commas ___________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb13bf0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ________________ ERROR at setup of TestOutput.test_two_decimals ________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb13ec0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ________________ ERROR at setup of TestOutput.test_ranges[AST] _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7ec6c680>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ________________ ERROR at setup of TestOutput.test_ranges[ALT] _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb13d40>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ________________ ERROR at setup of TestOutput.test_ranges[ALP] _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb13e30>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ________________ ERROR at setup of TestOutput.test_ranges[GGT] _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb13aa0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           __________ ERROR at setup of TestOutput.test_ranges[Total_Bilirubin] ___________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb13a70>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           __________ ERROR at setup of TestOutput.test_ranges[Direct_Bilirubin] __________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb13b60>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ______________ ERROR at setup of TestOutput.test_ranges[Albumin] _______________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb137d0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ___________ ERROR at setup of TestOutput.test_ranges[Total_Protein] ____________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb137a0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ________________ ERROR at setup of TestOutput.test_ranges[INR] _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb13890>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ______________ ERROR at setup of TestOutput.test_ranges[Ammonia] _______________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb134a0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           _____________ ERROR at setup of TestOutput.test_ranges[Platelets] ______________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb13470>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ________________ ERROR at setup of TestOutput.test_ranges[AFP] _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb132f0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           _____________ ERROR at setup of TestOutput.test_ranges[Bile_Acids] _____________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5fd5de9670>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           _____________ ERROR at setup of TestOutput.test_ranges[Creatinine] _____________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7f36ffb0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           _______________ ERROR at setup of TestOutput.test_ranges[Sodium] _______________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb38170>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           _____________ ERROR at setup of TestOutput.test_ranges[Hemoglobin] _____________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb380b0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ______________ ERROR at setup of TestOutput.test_ranges[Ferritin] ______________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb38710>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ______________ ERROR at setup of TestOutput.test_ranges[Glucose] _______________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb387d0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           _________________ ERROR at setup of TestOutput.test_row_count __________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb38aa0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           ___________ ERROR at setup of TestOutput.test_full_row_by_row_match ____________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb38e60>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           __________ ERROR at setup of TestOutput.test_anchor_samples[sample0] ___________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb391c0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           __________ ERROR at setup of TestOutput.test_anchor_samples[sample1] ___________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb394f0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           __________ ERROR at setup of TestOutput.test_anchor_samples[sample2] ___________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb395b0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           __________ ERROR at setup of TestOutput.test_anchor_samples[sample3] ___________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb39670>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           __________ ERROR at setup of TestOutput.test_anchor_samples[sample4] ___________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb39730>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           __________ ERROR at setup of TestOutput.test_anchor_samples[sample5] ___________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f5f7eb397f0>
+E           
+E               @pytest.fixture(autouse=True)
+E               def setup(self):
+E                   self.df = pd.read_csv(OUTPUT_FILE, dtype=str) if os.path.exists(OUTPUT_FILE) else None
+E           >       self.expected = build_expected()
+E                                   ^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:74: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E               def build_expected():
+E                   src = pd.read_csv(SOURCE_FILE, dtype=str)
+E                   numeric_cols = [c for c in src.columns if c.lower() != 'patient_id']
+E                   missing_mask = src[numeric_cols].map(lambda x: pd.isna(x) or str(x).strip() == '' or str(x).strip().lower() == 'nan').any(axis=1)
+E                   df = src.loc[~missing_mask].copy()
+E                   for col in numeric_cols:
+E           >           mode, factor, lo, hi = SPECS[col]
+E                       ^^^^^^^^^^^^^^^^^^^^
+E           E           ValueError: not enough values to unpack (expected 4, got 1)
+E           
+E           /tests/test_outputs.py:63: ValueError
+E           =========================== short test summary info ============================
+E           ERROR ../tests/test_outputs.py::TestOutput::test_file_exists - ValueError: no...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_columns_exact - ValueError: ...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_no_missing - ValueError: not...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_no_scientific_or_commas - Va...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_two_decimals - ValueError: n...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[AST] - ValueError: no...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[ALT] - ValueError: no...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[ALP] - ValueError: no...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[GGT] - ValueError: no...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Total_Bilirubin] - Va...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Direct_Bilirubin] - V...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Albumin] - ValueError...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Total_Protein] - Valu...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[INR] - ValueError: no...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Ammonia] - ValueError...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Platelets] - ValueErr...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[AFP] - ValueError: no...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Bile_Acids] - ValueEr...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Creatinine] - ValueEr...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Sodium] - ValueError:...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Hemoglobin] - ValueEr...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Ferritin] - ValueErro...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_ranges[Glucose] - ValueError...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_row_count - ValueError: not ...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_full_row_by_row_match - Valu...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample0] - Va...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample1] - Va...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample2] - Va...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample3] - Va...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample4] - Va...
+E           ERROR ../tests/test_outputs.py::TestOutput::test_anchor_samples[sample5] - Va...
+E           31 errors in 0.66s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: EE...
+============================== 1 failed in 1.10s ===============================

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Enhanced economic-time-series-correlation skill with series catalog mapping patterns and status precedence rules. The successful task used a catalog file to resolve column codes and deflators, and correctly prioritized 'revised' status over 'prelim' when processing quarterly updates.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/series-catalog-pattern.md"
+  ],
+  "delete_paths": []
+}

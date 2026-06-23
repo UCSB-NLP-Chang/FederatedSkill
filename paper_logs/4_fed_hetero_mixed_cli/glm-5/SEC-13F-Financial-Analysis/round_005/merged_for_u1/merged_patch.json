@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5, claude-code). Applied u1's null handling patch + u2's stop words, false positive warnings, and Cross-Quarter Reconciliation workflow. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/matching_strategies.md",
+    "sec-13f-analysis/references/output-schemas.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-analysis/references/matching_strategies.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "sec-13f-analysis/references/output-schemas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "sec-13f-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-analysis/SKILL.md"
+  ],
+  "cost_usd": 6.776916
+}

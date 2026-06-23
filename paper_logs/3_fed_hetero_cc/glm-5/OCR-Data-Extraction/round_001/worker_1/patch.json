@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Added order ID extraction patterns and duplicate handling guidance to the existing image-data-extraction skill. The trace showed a common document processing scenario where the same identifier appears across multiple images, requiring duplicate detection and null-value handling for subsequent occurrences.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md"
+  ],
+  "delete_paths": []
+}

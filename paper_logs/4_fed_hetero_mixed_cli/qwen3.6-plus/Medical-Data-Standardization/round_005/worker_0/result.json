@@ -1,0 +1,29 @@
+{
+    "id": "1f76c4c2-aedb-42b8-b43a-0b6ffdabfbaf",
+    "started_at": "2026-05-18T01:30:45.337178",
+    "finished_at": "2026-05-18T01:32:18.438898",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "icu-metabolic-harmonization__UNYgafg"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

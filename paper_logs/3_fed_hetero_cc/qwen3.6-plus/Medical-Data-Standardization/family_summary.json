@@ -1,0 +1,265 @@
+{
+  "family_name": "Medical-Data-Standardization",
+  "n_workers": 3,
+  "n_rounds": 9,
+  "elapsed_sec": 13975.82658457756,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 27,
+    "mean": 0.07407407407407407,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 2
+  },
+  "merger_cost_total_usd": 90.280287,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "electrolyte-rounding-harmonization"
+        ],
+        [
+          "u1",
+          "electrolyte-rounding-harmonization"
+        ],
+        [
+          "u2",
+          "electrolyte-rounding-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 4.744269,
+      "elapsed_sec": 1071.28205037117
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "hepatic-panel-harmonization"
+        ],
+        [
+          "u1",
+          "hepatic-panel-harmonization"
+        ],
+        [
+          "u2",
+          "hepatic-panel-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 6.922320000000001,
+      "elapsed_sec": 1379.9024257659912
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "thyroid-monitoring-harmonization"
+        ],
+        [
+          "u1",
+          "thyroid-monitoring-harmonization"
+        ],
+        [
+          "u2",
+          "thyroid-monitoring-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 10.784838,
+      "elapsed_sec": 2314.66153216362
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "cardio-panel-template-harmonization"
+        ],
+        [
+          "u1",
+          "cardio-panel-template-harmonization"
+        ],
+        [
+          "u2",
+          "cardio-panel-template-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 11.389398,
+      "elapsed_sec": 1689.5624725818634
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "oncology-followup-dedup-harmonization"
+        ],
+        [
+          "u1",
+          "oncology-followup-dedup-harmonization"
+        ],
+        [
+          "u2",
+          "oncology-followup-dedup-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 7.247612999999999,
+      "elapsed_sec": 1134.9790499210358
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "icu-metabolic-harmonization"
+        ],
+        [
+          "u1",
+          "icu-metabolic-harmonization"
+        ],
+        [
+          "u2",
+          "icu-metabolic-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 8,
+      "merger_cost_usd": 15.668108999999998,
+      "elapsed_sec": 1903.009459733963
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "respiratory-panel-json-harmonization"
+        ],
+        [
+          "u1",
+          "respiratory-panel-json-harmonization"
+        ],
+        [
+          "u2",
+          "respiratory-panel-json-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 9.156279,
+      "elapsed_sec": 1145.2916011810303
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "transplant-panel-alignment-harmonization"
+        ],
+        [
+          "u1",
+          "transplant-panel-alignment-harmonization"
+        ],
+        [
+          "u2",
+          "transplant-panel-alignment-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 10.782492,
+      "elapsed_sec": 888.1502244472504
+    },
+    {
+      "round_idx": 8,
+      "assignments": [
+        [
+          "u0",
+          "neonatal-sepsis-harmonization"
+        ],
+        [
+          "u1",
+          "neonatal-sepsis-harmonization"
+        ],
+        [
+          "u2",
+          "neonatal-sepsis-harmonization"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 9,
+      "merger_cost_usd": 13.584969,
+      "elapsed_sec": 2448.9860842227936
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/worker_skills/u0/Medical-Data-Standardization",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/worker_skills/u1/Medical-Data-Standardization",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/worker_skills/u2/Medical-Data-Standardization"
+  }
+}

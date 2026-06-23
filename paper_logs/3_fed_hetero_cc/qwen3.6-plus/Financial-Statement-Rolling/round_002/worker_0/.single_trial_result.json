@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "northstar_warranty_reserve_conso__Yo5CjMk",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/round_002/worker_0/northstar_warranty_reserve_conso__Yo5CjMk",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Financial-Statement-Rolling/round_002/worker_0/northstar_warranty_reserve_conso__Yo5CjMk",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

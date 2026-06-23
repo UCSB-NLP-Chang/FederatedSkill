@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace revealed a common PDF extraction pitfall: header rows can be captured as data rows, causing invalid IDs (like 'ID') to appear in results. Adding guidance to validate/filter extracted IDs by pattern prevents this class of errors.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": []
+}

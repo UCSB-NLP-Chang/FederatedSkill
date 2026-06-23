@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The agent failed because it wrote the workbook from scratch instead of using the existing skeleton script, introducing the self-referencing Ending Balance bug (=B10+C10-D10 instead of =B9+C9-D9). This is the #1 documented anti-pattern. The patch strengthens the skeleton requirement, adds commission asset rollforward as a recognized variant, and makes the self-referencing bug more prominent with a concrete detection rule.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/commission_asset_variant.md"
+  ],
+  "delete_paths": []
+}

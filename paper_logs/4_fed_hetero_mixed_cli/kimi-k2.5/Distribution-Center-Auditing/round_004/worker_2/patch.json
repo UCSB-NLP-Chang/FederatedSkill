@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Added timesheet-policy-audit invariant to document role-based break and overtime threshold patterns. The trace confirmed the existing workflow handles this variant correctly when loading BreakRules from a reference sheet and checking dual conditions (break minimums + approval requirements). Updated description to include timesheet triggers for better skill matching.",
+  "upsert_paths": [
+    "excel-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": []
+}

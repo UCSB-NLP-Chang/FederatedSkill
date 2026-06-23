@@ -1,0 +1,12 @@
+{
+  "worker_id": "u0",
+  "reward": 0.375,
+  "summary": "Adds a new skill for patient safety/healthcare quality analysis tasks. Captures the exact JSON schema, brief structure, statistical thresholds (t-stat \u00b12.0 for stability, Wilson CI for capability), and validation workflow that the previous agent missed, causing test failure. Includes a validation script to prevent schema mismatches and missing checklist items.",
+  "upsert_paths": [
+    "patient-safety-analysis/SKILL.md",
+    "patient-safety-analysis/references/brief-template.md",
+    "patient-safety-analysis/references/schema.md",
+    "patient-safety-analysis/scripts/validate_report.py"
+  ],
+  "delete_paths": []
+}

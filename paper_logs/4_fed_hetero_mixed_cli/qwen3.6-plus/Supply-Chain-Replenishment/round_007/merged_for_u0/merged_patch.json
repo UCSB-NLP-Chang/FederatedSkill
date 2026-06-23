@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "R7 merge complete for u0. Applied u0's reward=1.0 patch wholesale (route-dispatch-tracker patterns: Row Type filter, alias resolution, Pack Matrix lookup, route section parsing). u1/u2 truncated (empty patches). Library at 1 skill, family complete. See DECISIONS.md.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-load-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.3840990000000001
+}

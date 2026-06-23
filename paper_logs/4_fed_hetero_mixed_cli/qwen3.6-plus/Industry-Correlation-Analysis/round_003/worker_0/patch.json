@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Update existing economic-time-series-correlation skill with lessons from the trace: (1) hpfilter parameter is 'lamb' not 'lam', (2) monthly data annualization pattern, (3) filtering by release_status and period_kind columns common in statistical agency data.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,104 @@
+{
+    "id": "6f071b95-01c3-411e-aa18-a63f0ea8f2e5",
+    "task_name": "02-hospital-capacity-portfolio-diff",
+    "trial_name": "02-hospital-capacity-portfolio-d__yu3mhK4",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_001/worker_0/02-hospital-capacity-portfolio-d__yu3mhK4",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Cross-Format-Data-Reconciliation/02-hospital-capacity-portfolio-diff"
+    },
+    "source": "Cross-Format-Data-Reconciliation",
+    "task_checksum": "919759762b3845e8cd0cd6de5c001f1ea29ca1a15c3f88944ffd4741cba4cedf",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Cross-Format-Data-Reconciliation/02-hospital-capacity-portfolio-diff",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Cross-Format-Data-Reconciliation"
+        },
+        "trial_name": "02-hospital-capacity-portfolio-d__yu3mhK4",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/round_001/worker_0",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-glm-pdf5-M1-tokenplan-hetero/Cross-Format-Data-Reconciliation/worker_skills/u0"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "9fd4d114-8478-4758-963d-9e4a3e6406e1"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 73851,
+        "n_cache_tokens": 58690,
+        "n_output_tokens": 1325,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-16T20:03:44.940843Z",
+    "finished_at": "2026-05-16T20:04:50.567902Z",
+    "environment_setup": {
+        "started_at": "2026-05-16T20:03:44.941585Z",
+        "finished_at": "2026-05-16T20:03:46.433165Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-16T20:03:46.433221Z",
+        "finished_at": "2026-05-16T20:03:47.662703Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-16T20:03:47.662800Z",
+        "finished_at": "2026-05-16T20:04:34.015017Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-16T20:04:34.017800Z",
+        "finished_at": "2026-05-16T20:04:35.773914Z"
+    }
+}

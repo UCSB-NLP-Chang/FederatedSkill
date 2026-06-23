@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task succeeded using the existing economic-time-series-analysis skill. Adding targeted guidance for: (1) filtering by release_status (final vs prelim) - common in economic datasets, (2) monthly-to-annual aggregation pattern, and (3) checking price index for zeros before deflation.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

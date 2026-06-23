@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The agent successfully completed a promotional register audit task, computing Price Error (price mismatch) and Window Error (date range violation) metrics, producing a 3-sheet Excel workbook and executive Word brief. The trace reveals reusable patterns for retail/promotional audit tasks: date comparison logic, multi-key aggregation (SKU + Store), filtering summary to error-only rows, and structured executive summaries. The existing spreadsheet-audit-reporting skill already covers the core capability, so this update adds the promo-register variant patterns to references and updates SKILL.md with the new invariant and computed column patterns.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md",
+    "spreadsheet-audit-reporting/references/computed-column-examples.md"
+  ],
+  "delete_paths": []
+}

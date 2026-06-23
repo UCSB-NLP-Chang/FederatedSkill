@@ -1,0 +1,29 @@
+{
+    "id": "11a1c2c5-6354-45bd-a68d-ccb64e1fa797",
+    "started_at": "2026-05-17T21:32:38.247523",
+    "finished_at": "2026-05-17T21:39:33.702259",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "peregrine_rebate_template_update__oNufvyj"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

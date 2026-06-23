@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.7368421052631579,
+  "summary": "Adds a reusable skill for harmonizing messy clinical lab CSVs. Captures the critical workflow for parsing comma decimals/scientific notation, dropping incomplete rows, and safely detecting/converting alternate units by testing conversion direction against physiological plausibility. Includes anti-patterns to prevent blind factor multiplication and over-conversion of pathological-but-valid values.",
+  "upsert_paths": [
+    "clinical-csv-harmonization/SKILL.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,156 @@
+{
+  "family_name": "Inventory-&-Finance-Integration",
+  "n_workers": 1,
+  "n_rounds": 8,
+  "elapsed_sec": 2953.7465267181396,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 8,
+    "mean": 0.5,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 4
+  },
+  "merger_cost_total_usd": 0.0,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_21"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 301.20693945884705
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "new_task_9_hospital_staffing_resilience"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 258.5828769207001
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "new_task_10_maintenance_calcfields_restock"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 320.67502188682556
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "new_task_9_datacenter_capacity_rollforward"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 423.8113889694214
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "new_task_10_transit_subsidy_rollforward"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 486.0417604446411
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "new_task_11_media_rights_rollforward"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 484.758633852005
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "new_task_12_mealkit_freshness_replenishment"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 335.399875164032
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "new_task_11_datacenter_stochastic_refills"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 343.26903223991394
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "221c9410-807d-4803-a959-8bbf3b275c8d",
+  "task_name": "warehouse-coldchain-charge-review",
+  "trial_name": "warehouse-coldchain-charge-revie__ZX6xnig",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__Document-Fraud-Detection/warehouse-coldchain-charge-revie__ZX6xnig",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/warehouse-coldchain-charge-review"
+  },
+  "source": "Document-Fraud-Detection",
+  "task_checksum": "a79aa359edc3b719071bb71e1436d9995c7a4c8913e7e9e9966a9f147e3a97e5",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/warehouse-coldchain-charge-review",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Document-Fraud-Detection"
+    },
+    "trial_name": "warehouse-coldchain-charge-revie__ZX6xnig",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-glm-5-r1/iter-baseline-glm-5-r1__Document-Fraud-Detection",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "glm-5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "6decbc63-8f35-4028-9fb0-4f3681a47c6f"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 290600,
+    "n_cache_tokens": 145664,
+    "n_output_tokens": 7384,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-10T09:55:00.158434Z",
+  "finished_at": "2026-05-10T09:57:06.087363Z",
+  "environment_setup": {
+    "started_at": "2026-05-10T09:55:00.161330Z",
+    "finished_at": "2026-05-10T09:55:01.043156Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-10T09:55:01.043167Z",
+    "finished_at": "2026-05-10T09:55:01.288693Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-10T09:55:01.288744Z",
+    "finished_at": "2026-05-10T09:56:54.956940Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-10T09:56:54.957212Z",
+    "finished_at": "2026-05-10T09:56:55.564773Z"
+  }
+}

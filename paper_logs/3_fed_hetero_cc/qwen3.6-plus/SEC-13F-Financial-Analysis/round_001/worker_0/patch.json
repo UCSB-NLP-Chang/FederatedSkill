@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Update sec-13f-fund-analysis to reinforce TITLEOFCLASS-based classification (not issuer name), add explicit fund/stock pattern reference, and clarify output schema variations. The trace shows the agent initially misclassified holdings by checking NAMEOFISSUER for fund keywords, causing false positives. The existing skill already mentions TITLEOFCLASS but needs stronger enforcement and a reference pattern list.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/toc-patterns.md"
+  ],
+  "delete_paths": []
+}

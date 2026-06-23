@@ -1,0 +1,102 @@
+{
+    "id": "a37d24ab-6d3a-42ca-8457-b32cf61b615f",
+    "task_name": "rebate-band-live-embedding-fix",
+    "trial_name": "rebate-band-live-embedding-fix__Be3JmnE",
+    "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair/rebate-band-live-embedding-fix__Be3JmnE",
+    "task_id": {
+        "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Embedded-Data-Repair/rebate-band-live-embedding-fix"
+    },
+    "source": "Embedded-Data-Repair",
+    "task_checksum": "9b74a9ab1f73bb64f1cdcaa22aa7a20e47c3ad5c8574db296cd85ddc1ef8f442",
+    "config": {
+        "task": {
+            "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Embedded-Data-Repair/rebate-band-live-embedding-fix",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Embedded-Data-Repair"
+        },
+        "trial_name": "rebate-band-live-embedding-fix__Be3JmnE",
+        "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Embedded-Data-Repair",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "qwen3.6-plus",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "7fca436e-192a-41ca-b35f-ae341cad2e27"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-10T12:46:52.575327Z",
+    "finished_at": "2026-05-10T12:51:49.018801Z",
+    "environment_setup": {
+        "started_at": "2026-05-10T12:46:52.576265Z",
+        "finished_at": "2026-05-10T12:46:53.502545Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-10T12:46:53.502555Z",
+        "finished_at": "2026-05-10T12:46:53.756376Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-10T12:46:53.756435Z",
+        "finished_at": "2026-05-10T12:51:37.689200Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-10T12:51:37.689656Z",
+        "finished_at": "2026-05-10T12:51:38.429573Z"
+    }
+}

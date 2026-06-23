@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's SKILL.md and extraction_patterns.md wholesale (reward=1.0). Fixed type-mismatch bug in diff_datasets.py by adding safe_equal() helper (all 3 workers identified this issue in R2). Rejected u2's cross_format_diff.py to avoid script duplication. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md",
+    "cross-format-data-diff/scripts/diff_datasets.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "cross-format-data-diff/scripts/diff_datasets.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "cost_usd": 2.4126171000000003
+}

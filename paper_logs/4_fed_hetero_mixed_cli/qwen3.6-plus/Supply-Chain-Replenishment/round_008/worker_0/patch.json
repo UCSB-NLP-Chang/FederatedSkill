@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "The existing inventory-load-planning skill handled this task successfully, but the trace reveals two output column patterns not explicitly documented: (1) a conditional Required_Delivery_Date logic variant where the date depends on whether earliest inbound <= OOS date, and (2) a Rounding_Applied boolean column. Adding these as concise variant notes will prevent future agents from defaulting to the simpler formula when the task spec requires the conditional logic.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

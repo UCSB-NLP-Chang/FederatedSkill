@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Added reference documentation for parsing transposed/horizontal Excel layouts (weeks as columns) which was a key implementation detail in this successful task. Updated SKILL.md to alert future agents to check for non-standard Excel orientations and point to the new reference.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/horizontal-data-parsing.md"
+  ],
+  "delete_paths": []
+}

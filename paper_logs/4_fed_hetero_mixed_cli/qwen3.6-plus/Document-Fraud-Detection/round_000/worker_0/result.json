@@ -1,0 +1,29 @@
+{
+    "id": "0979f939-cdf8-4f6c-a184-275bb3099809",
+    "started_at": "2026-05-17T20:11:42.493892",
+    "finished_at": "2026-05-17T20:14:08.248360",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "travel-expense-screening__Cehpz9o"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

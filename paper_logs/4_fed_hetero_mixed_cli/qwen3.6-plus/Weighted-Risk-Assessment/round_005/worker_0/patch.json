@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "The agent failed because it treated 'no tests found' as permission to skip test execution entirely, rather than a blocking condition requiring exhaustive search. The test file test_output.py existed but was never located or run. This patch strengthens the excel-formula-injection skill to make test discovery failure a hard blocker, adds more aggressive search patterns, and provides a fallback verification workflow when tests truly cannot be found.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/scripts/find_tests.py"
+  ],
+  "delete_paths": []
+}

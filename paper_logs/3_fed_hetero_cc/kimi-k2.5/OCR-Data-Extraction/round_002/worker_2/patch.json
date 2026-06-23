@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "This task involved extracting structured data from images (travel claims) and merging with reference data (roster CSV) to produce an Excel output. The task succeeded and demonstrates patterns not fully covered by the existing image-data-extraction skill: claim code extraction with multiple label variants, multi-line amount parsing, roster lookup and merge, and handling unmatched records. The existing skill focuses on pharmacy labels and simple order extraction. This update adds a new 'travel-claims' variant section to the existing skill, capturing the specific patterns for claim code extraction, amount keywords, multi-line parsing, and roster merge logic.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/scripts/extract_travel_claims.py"
+  ],
+  "delete_paths": []
+}

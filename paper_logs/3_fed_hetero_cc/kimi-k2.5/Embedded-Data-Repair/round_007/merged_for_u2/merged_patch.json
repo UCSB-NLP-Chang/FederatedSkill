@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R7. Applied u2's validated SKILL.md and cached_value_fixing.md (reward=1.0), plus u1's script regex fix for `<v />` vs `<v></v>` edge case. Target's column shows covered for B2; u0/u1 remain gap workers. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/references/cached_value_fixing.md",
+    "edit-embedded-excel/scripts/fix_cached_values.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/scripts/fix_cached_values.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.6666666666666666
+    ],
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "edit-embedded-excel/references/cached_value_fixing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "cost_usd": 0.6325601999999999
+}

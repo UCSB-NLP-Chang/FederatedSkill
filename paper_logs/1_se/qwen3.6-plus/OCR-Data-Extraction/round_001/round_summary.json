@@ -1,0 +1,18 @@
+{
+  "round_idx": 1,
+  "assignments": [
+    [
+      "u0",
+      "task_family_ecommerce_orders"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0
+  },
+  "exceptions": {
+    "u0": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 263.41534185409546
+}

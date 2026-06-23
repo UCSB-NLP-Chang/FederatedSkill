@@ -1,0 +1,136 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.4.1
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .....F...FF.F.F..F                                                       [100%]
+E           =================================== FAILURES ===================================
+E           __________________ TestOutput.test_ranges[CRP_mg_L_or_mg_dL] ___________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f1aa1818f80>
+E           col = 'CRP_mg_L_or_mg_dL'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('CRP_mg_L_or_mg_dL', ['3641.75', '3481.73', '3070.16'])
+E           E       assert not ['3641.75', '3481.73', '3070.16']
+E           
+E           /tests/test_outputs.py:52: AssertionError
+E           _______________ TestOutput.test_ranges[Total_Bili_umol_or_mgdl] ________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f1a9f16a4b0>
+E           col = 'Total_Bili_umol_or_mgdl'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('Total_Bili_umol_or_mgdl', ['212.94', '346.63', '5784.55', '204.79', '365.22'])
+E           E       assert not ['212.94', '346.63', '5784.55', '204.79', '365.22', '2204.18', ...]
+E           
+E           /tests/test_outputs.py:52: AssertionError
+E           _______________ TestOutput.test_ranges[Direct_Bili_umol_or_mgdl] _______________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f1af62b9460>
+E           col = 'Direct_Bili_umol_or_mgdl'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('Direct_Bili_umol_or_mgdl', ['58.34', '149.39', '985.77', '121.46', '144.58'])
+E           E       assert not ['58.34', '149.39', '985.77', '121.46', '144.58', '129.87', ...]
+E           
+E           /tests/test_outputs.py:52: AssertionError
+E           ____________________ TestOutput.test_ranges[Platelet_Count] ____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f1af62b92e0>
+E           col = 'Platelet_Count'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('Platelet_Count', ['1.12', '0.89', '0.60', '1.06'])
+E           E       assert not ['1.12', '0.89', '0.60', '1.06']
+E           
+E           /tests/test_outputs.py:52: AssertionError
+E           _________________ TestOutput.test_ranges[Hemoglobin_gL_or_gdL] _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f1aa01dbf80>
+E           col = 'Hemoglobin_gL_or_gdL'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('Hemoglobin_gL_or_gdL', ['59.50', '86.53', '94.38', '137.63', '106.42'])
+E           E       assert not ['59.50', '86.53', '94.38', '137.63', '106.42', '103.33', ...]
+E           
+E           /tests/test_outputs.py:52: AssertionError
+E           ___________________ TestOutput.test_ranges[pCO2_kPa_or_mmHg] ___________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f1a9efe6f90>
+E           col = 'pCO2_kPa_or_mmHg'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('pCO2_kPa_or_mmHg', ['5.50', '5.01', '9.51', '4.79', '4.67'])
+E           E       assert not ['5.50', '5.01', '9.51', '4.79', '4.67', '4.59', ...]
+E           
+E           /tests/test_outputs.py:52: AssertionError
+E           =============================== warnings summary ===============================
+E           test_outputs.py::TestOutput::test_no_missing
+E             /tests/test_outputs.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+E               assert not (self.df.applymap(lambda x: str(x).strip() == '')).any().any()
+E           
+E           -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[CRP_mg_L_or_mg_dL]
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Total_Bili_umol_or_mgdl]
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Direct_Bili_umol_or_mgdl]
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Platelet_Count] - As...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Hemoglobin_gL_or_gdL]
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[pCO2_kPa_or_mmHg] - ...
+E           6 failed, 12 passed, 1 warning in 0.42s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.77s ===============================

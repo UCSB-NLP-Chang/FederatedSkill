@@ -1,0 +1,37 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5) Round 2. Applied u2's verified SKILL.md (reward=1.0) with deterministic policy pseudo-code and validation checklist to address glm-5's decision logic and verification gaps. Added verify_plan.py script. Kept u1's robust template script for transposed layout handling. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py",
+    "excel-capacity-planning/scripts/verify_plan.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-capacity-planning/references/excel-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "excel-capacity-planning/scripts/verify_plan.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-capacity-planning/scripts/capacity_planner_template.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 0.5573397
+}

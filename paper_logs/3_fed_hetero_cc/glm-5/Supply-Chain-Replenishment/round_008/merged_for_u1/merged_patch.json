@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "R8 merge complete for u1. Applied u1's reward=1.0 patch wholesale (B6 variant, pip guidance, f-string error). Rejected u0's reward=0.0 patch and unvalidated script. See DECISIONS.md.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "supply-chain-coverage-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "supply-chain-coverage-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.8973876
+}

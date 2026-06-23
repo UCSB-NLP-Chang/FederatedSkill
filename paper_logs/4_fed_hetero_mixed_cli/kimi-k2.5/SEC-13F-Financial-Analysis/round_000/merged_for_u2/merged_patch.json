@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Created single skill `sec-13f-analysis` synthesizing u0/u1 patches with fixed stock classification logic (includes COM/CL A/SHS). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/13f_schema.md",
+    "sec-13f-analysis/references/stock-classification.md",
+    "sec-13f-analysis/scripts/process_13f.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-analysis/references/stock-classification.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.42857142857142855
+    ],
+    "sec-13f-analysis/scripts/process_13f.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.42857142857142855
+    ],
+    "sec-13f-analysis/references/13f_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.42857142857142855
+    ]
+  },
+  "conflicts": [
+    "sec-13f-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.9488660000000002
+}

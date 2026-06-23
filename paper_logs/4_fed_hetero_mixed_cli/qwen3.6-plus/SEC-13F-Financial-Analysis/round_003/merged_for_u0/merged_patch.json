@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's SKILL.md (reward=1.0 for B4 Issuer Rollup) + u1's issuer_rollup.py helper script. B4 now covered for u0. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/scripts/issuer_rollup.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-analysis/scripts/issuer_rollup.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "sec-13f-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "sec-13f-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.229966
+}

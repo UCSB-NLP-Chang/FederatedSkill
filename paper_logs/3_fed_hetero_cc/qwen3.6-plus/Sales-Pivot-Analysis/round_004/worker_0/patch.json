@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.875,
+  "summary": "The existing sales-pivot-analysis skill covers the core workflow (PDF+Excel merge, pandas pivots, multi-sheet output) but lacks a Quality Control / Manufacturing Analysis domain variant. This task failed the verifier despite producing output, likely due to domain-specific derived column formulas, pivot specifications, or categorical values not being documented. Adding this variant prevents future agents from guessing formulas or pivot structures for quality control tasks.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

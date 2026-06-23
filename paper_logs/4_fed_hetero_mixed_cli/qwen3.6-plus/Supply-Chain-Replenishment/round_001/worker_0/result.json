@@ -1,0 +1,29 @@
+{
+    "id": "97553531-2f8e-443b-a811-8d517736d8fd",
+    "started_at": "2026-05-23T22:43:50.355528",
+    "finished_at": "2026-05-23T22:46:20.106484",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "petcare_midmonth_pallet_gap__Ye9BNtM"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

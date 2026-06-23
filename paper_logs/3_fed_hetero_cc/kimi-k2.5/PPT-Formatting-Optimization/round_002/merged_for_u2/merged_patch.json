@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Integrated u0's lxml qn() pattern + dimension persistence fallback and u1's auto-numbered bullet startAt guidance into u2's library. Rejected u2's own batch_normalize.py (regression source). See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/pptx-xml-schema.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/references/pptx-xml-schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "cost_usd": 3.5865729
+}

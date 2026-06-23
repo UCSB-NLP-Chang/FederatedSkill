@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "hwpx-event-announcement__uniHJ5K",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/HWPX-Document-Automation/round_001/worker_1/hwpx-event-announcement__uniHJ5K",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/HWPX-Document-Automation/round_001/worker_1/hwpx-event-announcement__uniHJ5K",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

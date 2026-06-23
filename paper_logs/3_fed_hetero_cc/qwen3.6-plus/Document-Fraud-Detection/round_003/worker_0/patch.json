@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated expense-record-validation skill to include field-service-workorder-audit variant, adding explicit rules for alias resolution, work order status gating, and revision amount resolution. This prevents future agents from missing closed WOs, draft revisions, or alias matches.",
+  "upsert_paths": [
+    "expense-record-validation/SKILL.md"
+  ],
+  "delete_paths": []
+}

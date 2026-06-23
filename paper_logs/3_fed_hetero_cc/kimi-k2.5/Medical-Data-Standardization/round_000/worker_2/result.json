@@ -1,0 +1,29 @@
+{
+    "id": "2fb74491-b708-46cb-9f1f-6fcf19d3d9a6",
+    "started_at": "2026-05-17T20:09:49.751402",
+    "finished_at": "2026-05-17T20:12:23.530924",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "electrolyte-rounding-harmonizati__89h25D2"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

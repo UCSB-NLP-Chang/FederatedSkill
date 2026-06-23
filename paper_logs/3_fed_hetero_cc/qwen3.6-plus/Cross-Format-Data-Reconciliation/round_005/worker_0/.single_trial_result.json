@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "06-hospital-medication-reconcili__hTE2aVL",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/round_005/worker_0/06-hospital-medication-reconcili__hTE2aVL",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/round_005/worker_0/06-hospital-medication-reconcili__hTE2aVL",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

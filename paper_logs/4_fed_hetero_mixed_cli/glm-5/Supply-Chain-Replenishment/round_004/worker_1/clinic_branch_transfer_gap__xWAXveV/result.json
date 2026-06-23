@@ -1,0 +1,104 @@
+{
+    "id": "511b2308-3934-4dd3-8c76-49f2b74029b5",
+    "task_name": "clinic_branch_transfer_gap",
+    "trial_name": "clinic_branch_transfer_gap__xWAXveV",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/round_004/worker_1/clinic_branch_transfer_gap__xWAXveV",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Supply-Chain-Replenishment/clinic_branch_transfer_gap"
+    },
+    "source": "Supply-Chain-Replenishment",
+    "task_checksum": "d3d655349822bc8e555d861988769ca2a8c76cf623bb9e0b65a5d6569138ab1d",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Supply-Chain-Replenishment/clinic_branch_transfer_gap",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Supply-Chain-Replenishment"
+        },
+        "trial_name": "clinic_branch_transfer_gap__xWAXveV",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/round_004/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 4.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-supply-rerun-M3-hetero/Supply-Chain-Replenishment/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "97aebecb-7915-4ff1-a057-cd4a2283ad11"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.150",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 167986,
+        "n_cache_tokens": 135424,
+        "n_output_tokens": 6483,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-24T03:28:59.596173Z",
+    "finished_at": "2026-05-24T03:32:56.666466Z",
+    "environment_setup": {
+        "started_at": "2026-05-24T03:28:59.597377Z",
+        "finished_at": "2026-05-24T03:29:18.632607Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-24T03:29:18.632647Z",
+        "finished_at": "2026-05-24T03:29:22.816760Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-24T03:29:22.816847Z",
+        "finished_at": "2026-05-24T03:32:38.167378Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-24T03:32:38.171474Z",
+        "finished_at": "2026-05-24T03:32:41.340499Z"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779091045.0816286,
+            "stop": 1779091045.3060665
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.20285796374082565,
+                "start": 1779091045.0896423,
+                "stop": 1779091045.3059466,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ...FFFF                                                                  [100%]\nE           =================================== FAILURES ===================================\nE           __________________________ test_stock_holdings_count ___________________________\nE           \nE               def test_stock_holdings_count():\nE                   \"\"\"Verify stock holdings count is reasonable.\"\"\"\nE                   answers = load_json(OUTPUT_FILE)\nE                   gt = load_json(GROUND_TRUTH)\nE               \nE                   # Allow some tolerance for counting\nE                   count_diff = abs(answers['stock_holdings'] - gt['stock_holdings'])\nE           >       assert count_diff <= 5, \\\nE                       f\"Stock holdings count too different: got {answers['stock_holdings']}, expected {gt['stock_holdings']} (diff={count_diff})\"\nE           E       AssertionError: Stock holdings count too different: got 11, expected 450 (diff=439)\nE           E       assert 439 <= 5\nE           \nE           /tests/test_outputs.py:68: AssertionError\nE           _______________________________ test_aum_values ________________________________\nE           \nE               def test_aum_values():\nE                   \"\"\"Verify AUM calculations.\"\"\"\nE                   answers = load_json(OUTPUT_FILE)\nE                   gt = load_json(GROUND_TRUTH)\nE               \nE                   # Check total AUM\nE                   aum_diff = abs(answers['aum'] - gt['aum'])\nE                   assert aum_diff < 1e-3, \\\nE                       f\"AUM mismatch: got {answers['aum']}, expected {gt['aum']} (diff={aum_diff})\"\nE               \nE                   # Check stock AUM\nE                   stock_aum_diff = abs(answers['stock_aum'] - gt['stock_aum'])\nE           >       assert stock_aum_diff < 1e-3, \\\nE                       f\"Stock AUM mismatch: got {answers['stock_aum']}, expected {gt['stock_aum']} (diff={stock_aum_diff})\"\nE           E       AssertionError: Stock AUM mismatch: got 20355901.0, expected 1015027364.0 (diff=994671463.0)\nE           E       assert 994671463.0 < 0.001\nE           \nE           /tests/test_outputs.py:84: AssertionError\nE           _______________________________ test_top3_cusips _______________________________\nE           \nE               def test_top3_cusips():\nE                   \"\"\"Verify top 3 CUSIPs by value.\"\"\"\nE                   answers = load_json(OUTPUT_FILE)\nE                   gt = load_json(GROUND_TRUTH)\nE               \nE                   # Check if top CUSIPs match (allowing some tolerance for ties)\nE           >       assert answers['top3_cusips_by_value'][0] == gt['top3_cusips_by_value'][0], \\\nE                       f\"Top CUSIP mismatch: got {answers['top3_cusips_by_value'][0]}, expected {gt['top3_cusips_by_value'][0]}\"\nE           E       AssertionError: Top CUSIP mismatch: got 76655K103, expected 67066G104\nE           E       assert '76655K103' == '67066G104'\nE           E         \nE           E         - 67066G104\nE           E         + 76655K103\nE           \nE           /tests/test_outputs.py:94: AssertionError\nE           _______________________________ test_full_output _______________________________\nE           \nE               def test_full_output():\nE                   \"\"\"Final comprehensive check against ground truth.\"\"\"\nE                   answers = load_json(OUTPUT_FILE)\nE                   gt = load_json(GROUND_TRUTH)\nE               \nE                   assert answers['fund_query'] == gt['fund_query']\nE                   assert answers['quarter'] == gt['quarter']\nE                   assert answers['matched_manager'] == gt['matched_manager']\nE                   assert answers['accession_number'] == gt['accession_number']\nE                   assert abs(answers['aum'] - gt['aum']) < 1e-3\nE           >       assert abs(answers['stock_holdings'] - gt['stock_holdings']) <= 5\nE           E       assert 439 <= 5\nE           E        +  where 439 = abs((11 - 450))\nE           \nE           /tests/test_outputs.py:113: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_stock_holdings_count - AssertionError: ...\nE           FAILED ../tests/test_outputs.py::test_aum_values - AssertionError: Stock AUM ...\nE           FAILED ../tests/test_outputs.py::test_top3_cusips - AssertionError: Top CUSIP...\nE           FAILED ../tests/test_outputs.py::test_full_output - assert 439 <= 5\nE           4 failed, 3 passed in 0.04s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

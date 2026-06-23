@@ -1,0 +1,46 @@
+--- a/excel-pivot-report/SKILL.md
++++ b/excel-pivot-report/SKILL.md
+@@ -28,6 +28,7 @@
+    - Handle division by zero safely.
+    - Apply conditional logic for status/tier flags using `np.select` or `pd.cut`.
+ 5. **Generate Pivots & Cross-Tabs**:
++   - **MANDATORY**: Use `pandas` for all aggregations. Do not use manual `openpyxl` loops for pivot logic.
+    - Use `df.groupby()` or `pd.pivot_table()` for standard aggregations.
+    - **Matrix/Cross-Tab**: Use `pd.crosstab(index, columns, values, aggfunc='sum')` or `pd.pivot_table(..., columns=...)` for 2D breakdowns.
+    - **Column Naming Rule**: Pandas produces generic names (`Sum of X`, `Count`, `Average_X`). **Explicitly rename to match prompt/verifier exactly**.
+@@ -41,6 +42,7 @@
+ 
+ ## Critical Anti-Patterns & Fixes
+ - ❌ Manual `openpyxl` cell writes for tabular data → ✅ Always use `df.to_excel()`. Manual writes cause deprecation warnings, header misalignment, and verifier mismatches.
++- ❌ Manual `sum/count` division for averages → ✅ Use `df.groupby().mean()`. Pandas automatically excludes `NaN`s from denominators. Manual division includes them, causing significant accuracy errors on sparse data.
+ - ❌ `from openpyxl.chart import PivotChart` → ✅ Does not exist. Use standard charts or pandas aggregation.
+ - ❌ `ws.cell(row=r, column=c, value)` with positional args → ✅ `ws.cell(row=r, column=c).value = val`
+ - ❌ Assuming Excel columns are numeric → ✅ Always cast after loading.
+@@ -52,6 +54,7 @@
+ - **Sheet Names**: Must match exactly. Trim whitespace and match casing.
+ - **Headers**: Verifiers often expect exact header strings. Avoid auto-generated names like `Average of SCORE`; rename to `Avg Score` or as specified.
+ - **Data Types**: Ensure numeric columns are floats/ints, not strings. Use `pd.to_numeric()` before writing.
++- **Averages & Rates**: Verifiers expect standard statistical behavior (exclude missing values). If using pandas `.mean()`, this is automatic. If manual, filter `df.dropna(subset=[col])` first.
+ - **Missing Rows**: If verifier expects a specific row count, verify no silent drops occurred during merge/clean. Log all filtering steps.
+ - **Read-Back Verification**: Before submitting, run `pd.read_excel(output_path, sheet_name=None)` to print headers, dtypes, and row counts. Compare against requirements to catch mismatches early.
+ - **Matrix Pivots**: Ensure the cross-tab includes all expected categories/warehouses. Use `pd.crosstab(..., margins=False)` unless totals are requested. Fill `NaN` with `0` if required.
+
+--- a/excel-pivot-report/scripts/pivot_report_template.py
++++ b/excel-pivot-report/scripts/pivot_report_template.py
+@@ -47,9 +47,16 @@
+         df.to_excel(writer, sheet_name="SourceData", index=False)
+         
+         # Example pivots with EXPLICIT COLUMN RENAMING
++        # Use pandas groupby/agg for reliability. It automatically handles NaNs correctly.
+         pivot1 = df.groupby("CATEGORY")["TOTAL_VALUE"].sum().reset_index()
+         pivot1 = pivot1.rename(columns={"TOTAL_VALUE": "Total Value"})
+         pivot1.to_excel(writer, sheet_name="Value by Category", index=False)
++        
++        # Average example: pandas .mean() excludes NaNs automatically.
++        # Do NOT manually divide sum/count unless you filter NaNs first.
++        pivot2 = df.groupby("CATEGORY")["TOTAL_VALUE"].mean().reset_index()
++        pivot2 = pivot2.rename(columns={"TOTAL_VALUE": "Avg Value"})
++        pivot2.to_excel(writer, sheet_name="Avg Value by Category", index=False)
+         
+         # Cross-Tab / Matrix Example
+         matrix = pd.crosstab(df["CATEGORY"], df["WAREHOUSE"], values=df["TOTAL_VALUE"], aggfunc="sum").reset_index()

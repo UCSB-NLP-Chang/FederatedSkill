@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u2's domain_mapping.md (more complete with decision rules section). Extended SKILL.md with shipping-container-manifest-diff invariants. Kept current SKILL.md structure (fits glm-5/claude-code) rather than u2's kimi-optimized format. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "cost_usd": 1.8120180000000004
+}

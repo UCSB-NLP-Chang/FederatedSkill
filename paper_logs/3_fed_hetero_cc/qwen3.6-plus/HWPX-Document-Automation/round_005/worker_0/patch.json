@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.75,
+  "summary": "Added support for YYYY.MM.DD dot-separated date formatting, which is standard in Korean official documents and appeared in this trace. Updated SKILL.md pre-processing list, troubleshooting section, and references/korean-data-transformations.md with the new function and table entry.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md",
+    "hwpx-template-filling/references/korean-data-transformations.md"
+  ],
+  "delete_paths": []
+}

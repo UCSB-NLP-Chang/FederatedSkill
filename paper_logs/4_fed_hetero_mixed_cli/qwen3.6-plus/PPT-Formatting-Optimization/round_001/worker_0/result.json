@@ -1,0 +1,29 @@
+{
+    "id": "101e6b51-82ad-46f9-817e-82e6e09554c5",
+    "started_at": "2026-05-18T01:41:16.439621",
+    "finished_at": "2026-05-18T01:48:25.743269",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__PPT-Formatting-Optimization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "wildlife-field-guide-caption-cle__Zu9xJ8M"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R2. Synthesized SKILL.md from u2 base + u1 two-pattern + u0 examples; applied u2's warranty_reserve_variant.md and verify_workbook.py; extended accrual_variant.md. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/accrual_variant.md",
+    "deferred-revenue-rollforward/references/warranty_reserve_variant.md",
+    "deferred-revenue-rollforward/scripts/verify_workbook.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "deferred-revenue-rollforward/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "deferred-revenue-rollforward/references/warranty_reserve_variant.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "deferred-revenue-rollforward/scripts/verify_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "deferred-revenue-rollforward/references/accrual_variant.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "deferred-revenue-rollforward/SKILL.md"
+  ],
+  "cost_usd": 2.0793981
+}

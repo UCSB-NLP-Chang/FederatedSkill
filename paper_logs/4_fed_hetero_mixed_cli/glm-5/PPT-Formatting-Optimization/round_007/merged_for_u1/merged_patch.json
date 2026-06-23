@@ -1,0 +1,17 @@
+{
+  "worker_id": "u1",
+  "summary": "R7 merge complete for u1 (glm-5). All patches empty due to max_tokens truncation (reward=0.889 for all workers). Drastic condensation of SKILL.md: 311\u2192147 lines (53% reduction) to address family-wide token budget emergency per task_memory.md guidance. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.609979
+}

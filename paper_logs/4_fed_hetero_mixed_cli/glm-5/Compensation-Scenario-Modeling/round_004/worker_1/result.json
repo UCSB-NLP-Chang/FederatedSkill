@@ -1,0 +1,29 @@
+{
+    "id": "b49170ad-ac18-41da-a836-e7422f4124e5",
+    "started_at": "2026-05-18T01:35:10.220112",
+    "finished_at": "2026-05-18T01:42:43.044283",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "05_property_management_model__GvyyJzp"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "id": "2ba41b65-f45d-40f4-ad3c-9b610b4b0f45",
+    "task_name": "beauty_zone_alias_gap",
+    "trial_name": "beauty_zone_alias_gap__PpRBYoc",
+    "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Supply-Chain-Replenishment/beauty_zone_alias_gap__PpRBYoc",
+    "task_id": {
+        "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Supply-Chain-Replenishment/beauty_zone_alias_gap"
+    },
+    "source": "Supply-Chain-Replenishment",
+    "task_checksum": "389e45e43ba985b79f6aef23de2e4a7a7c0c8b7e9f51ee42ee5243f62a15c430",
+    "config": {
+        "task": {
+            "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Supply-Chain-Replenishment/beauty_zone_alias_gap",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Supply-Chain-Replenishment"
+        },
+        "trial_name": "beauty_zone_alias_gap__PpRBYoc",
+        "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Supply-Chain-Replenishment",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "qwen3.6-plus",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "76778608-dfac-473c-9297-f5f039634822"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-11T04:10:33.953790Z",
+    "finished_at": "2026-05-11T04:15:18.863701Z",
+    "environment_setup": {
+        "started_at": "2026-05-11T04:10:33.954448Z",
+        "finished_at": "2026-05-11T04:10:34.814604Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-11T04:10:34.814615Z",
+        "finished_at": "2026-05-11T04:10:35.038625Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-11T04:10:35.038691Z",
+        "finished_at": "2026-05-11T04:15:07.758310Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-11T04:15:07.758822Z",
+        "finished_at": "2026-05-11T04:15:08.330384Z"
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.0.3"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779070796219,
+            "stop": 1779070797303
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 1077,
+                "start": 1779070796226,
+                "stop": 1779070797303,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ........F........F.....................                                  [100%]\nE           =================================== FAILURES ===================================\nE           _______________________ TestOutput.test_ranges[Glucose] ________________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7f0ec11e6240>, col = 'Glucose'\nE           \nE               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)\nE               def test_ranges(self, col):\nE                   lo = REFERENCE[col]['min']\nE                   hi = REFERENCE[col]['max']\nE                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]\nE           >       assert not bad, (col, bad[:5])\nE           E       AssertionError: ('Glucose', ['7.18', '6.73'])\nE           E       assert not ['7.18', '6.73']\nE           \nE           /tests/test_outputs.py:100: AssertionError\nE           _________________ TestOutput.test_ranges[Beta_Hydroxybutyrate] _________________\nE           \nE           self = <test_outputs.TestOutput object at 0x7f0ebe913710>\nE           col = 'Beta_Hydroxybutyrate'\nE           \nE               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)\nE               def test_ranges(self, col):\nE                   lo = REFERENCE[col]['min']\nE                   hi = REFERENCE[col]['max']\nE                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]\nE           >       assert not bad, (col, bad[:5])\nE           E       AssertionError: ('Beta_Hydroxybutyrate', ['105.17', '42.77', '78.42'])\nE           E       assert not ['105.17', '42.77', '78.42']\nE           \nE           /tests/test_outputs.py:100: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Glucose] - Assertion...\nE           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Beta_Hydroxybutyrate]\nE           2 failed, 37 passed in 0.78s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

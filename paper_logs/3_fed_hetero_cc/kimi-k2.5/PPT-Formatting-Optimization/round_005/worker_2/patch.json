@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.6666666666666666,
+  "summary": "The trace shows a PPTX caption standardization task that ultimately failed verification despite appearing successful. Key issues: (1) The agent used a naive caption detection heuristic (text length > 40 chars, top > 5 inches) that may not generalize; (2) The Evidence Log slide had TWO text shapes, and the agent only replaced one, leaving stale content; (3) The agent didn't verify the actual bullet numbering was applied (PowerPoint auto-numbering vs explicit numbers); (4) A tool name typo (' Bash' vs 'Bash') caused a retry. The existing pptx-manipulation skill covers basic API usage but lacks guidance on: detecting and replacing ALL matching shapes on a slide, handling PowerPoint's paragraph-level bullet/numbering API, and safe multi-shape replacement workflows. I'll add a reference doc for bullet/numbering manipulation and update SKILL.md with multi-shape replacement patterns and verification steps.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/bullets-numbering.md"
+  ],
+  "delete_paths": []
+}

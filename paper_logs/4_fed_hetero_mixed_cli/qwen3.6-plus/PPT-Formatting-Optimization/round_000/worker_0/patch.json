@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.6666666666666666,
+  "summary": "Adds a new skill for direct .pptx ZIP/XML manipulation, capturing lessons on EMU dimension calculations, relationship mapping pitfalls, and verification workflows from the museum caption cleanup task.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/pptx-structure.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.6666666666666666,
+  "summary": "Adds a reusable pptx-manipulation skill capturing lessons from the trace: handling multi-run text concatenation, avoiding NotImplementedError on shape types, safely iterating group shapes, precise XML formatting via lxml, and robust verification. Includes a verification script and XML reference notes.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/pptx_xml_notes.md",
+    "pptx-manipulation/scripts/verify_pptx_text.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "R5 merge complete. Applied u0's reward=1.0 patch wholesale (pdftotext, campus mismatch, multi-field amendments, research stipend example). Rejected u1's cross-document-validation skill to maintain consensus naming with u2. See DECISIONS.md.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/domain-examples.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.4446790000000003
+}

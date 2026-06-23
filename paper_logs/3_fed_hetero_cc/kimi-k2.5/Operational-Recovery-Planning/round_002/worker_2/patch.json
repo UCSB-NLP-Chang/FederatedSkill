@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "The agent failed the verifier despite producing what appeared to be correct outputs. The trace shows the agent used queue-capacity-planning skill for a welding/manufacturing capacity task, which is appropriate domain adaptation. However, the failure suggests the output didn't match verifier expectations exactly - likely header naming, column ordering, or summary format constraints. The agent also made a critical error: it showed negative backlog values propagating indefinitely (-71.19, -191.19, ... -5591.19) which violates the skill's own rule to clamp display values to zero. The skill needs clearer guidance on: (1) when domain adaptation requires header changes vs using exact task-specified headers, (2) enforcing max(0, queue) for ALL display columns not just one, (3) validating summary format against exact verifier requirements before declaring success, and (4) recognizing that manufacturing/welding domains may have different capacity calculations (30 hrs/day \u00d7 6 days = 180, not 168).",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md"
+  ],
+  "delete_paths": []
+}

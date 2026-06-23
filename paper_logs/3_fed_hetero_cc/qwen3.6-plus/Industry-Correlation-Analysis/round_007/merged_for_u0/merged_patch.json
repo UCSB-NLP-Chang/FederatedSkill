@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE.txt \u2014 R7 merge complete for u0 (qwen3.6-plus)\n\nApplied u0's lean 72-line patch (+4) to economic-time-series-analysis/SKILL.md, adding selector/version routing (step 6) and missing value handling (step 7). Rejected verbose u1/u2 patches (+369/+301) based on validated memory.md insight: qwen performs best with concise numbered-step SKILL.md. All workers covered B1 for 3 consecutive rounds; task bucket stable/dropped. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.6571370000000001
+}

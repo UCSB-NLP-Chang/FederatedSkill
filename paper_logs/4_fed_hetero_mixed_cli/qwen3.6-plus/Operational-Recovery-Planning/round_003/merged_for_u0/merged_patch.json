@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) Round 3. Applied target's validated SKILL.md (+30 lines variant detection), new variant-patterns.md reference, and merged u2's returns center data extraction pitfalls into calculation-details.md. See DECISIONS.md for full rationale. Library: 1 skill, 3 references, 2 scripts.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/calculation-details.md",
+    "production-capacity-planning/references/variant-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-capacity-planning/references/variant-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "production-capacity-planning/references/calculation-details.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "production-capacity-planning/SKILL.md"
+  ],
+  "cost_usd": 0.4257936
+}

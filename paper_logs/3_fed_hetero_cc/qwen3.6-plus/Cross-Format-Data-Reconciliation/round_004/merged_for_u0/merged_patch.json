@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "R4 merge complete. Applied u0's SKILL.md wholesale (reward=1.0, preserves prescriptive workflow for qwen), absorbed u1's ID validation pattern into extraction_patterns.md and SKILL.md as orthogonal safety enhancement. Library: 1 skill, stable architecture. See DECISIONS.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "cost_usd": 2.859915599999999
+}

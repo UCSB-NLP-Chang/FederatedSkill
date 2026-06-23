@@ -1,0 +1,29 @@
+{
+    "id": "12cda819-c933-4c67-a6a6-9445757d2380",
+    "started_at": "2026-05-14T18:42:03.669453",
+    "finished_at": "2026-05-14T19:00:39.536971",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__DMAIC-Quality-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_devops_pipeline_02__PXwwKSD"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

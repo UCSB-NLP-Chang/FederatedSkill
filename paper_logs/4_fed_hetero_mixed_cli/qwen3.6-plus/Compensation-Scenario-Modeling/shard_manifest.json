@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-mixed-cli-M3-hetero",
+  "family_name": "Compensation-Scenario-Modeling",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallQwenCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallKimiCli",
+      "agent_model": "openai/kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "01_orchestra_foundation_model",
+      "02_orchestra_archive_refresh_model",
+      "03_university_faculty_model",
+      "04_university_termload_refresh_model",
+      "05_property_management_model",
+      "06_property_portfolio_refresh_model",
+      "07_airline_crew_model",
+      "08_construction_union_model"
+    ],
+    "u1": [
+      "01_orchestra_foundation_model",
+      "02_orchestra_archive_refresh_model",
+      "03_university_faculty_model",
+      "04_university_termload_refresh_model",
+      "05_property_management_model",
+      "06_property_portfolio_refresh_model",
+      "07_airline_crew_model",
+      "08_construction_union_model"
+    ],
+    "u2": [
+      "01_orchestra_foundation_model",
+      "02_orchestra_archive_refresh_model",
+      "03_university_faculty_model",
+      "04_university_termload_refresh_model",
+      "05_property_management_model",
+      "06_property_portfolio_refresh_model",
+      "07_airline_crew_model",
+      "08_construction_union_model"
+    ]
+  }
+}

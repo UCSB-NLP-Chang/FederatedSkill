@@ -1,0 +1,29 @@
+{
+    "id": "177d5f78-08ae-4877-befe-100aabc00bb1",
+    "started_at": "2026-05-23T22:47:32.629788",
+    "finished_at": "2026-05-23T22:49:51.429805",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-housing-materials-correlati__RxocEQJ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

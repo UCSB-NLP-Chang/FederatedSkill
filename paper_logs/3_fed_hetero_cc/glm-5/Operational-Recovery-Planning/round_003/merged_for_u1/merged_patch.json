@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "DONE. Applied u1's reward=1.0 patch wholesale (SKILL.md + script with multi-row demand support). Merged simulation_rules.md with u2's Display_End_Queue formula and debug tip. Fixed indentation error in script. Kept excel-manipulation name with R0 evidence. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "queue-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "queue-capacity-planning/references/simulation_rules.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "queue-capacity-planning/scripts/queue_simulator.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md"
+  ],
+  "cost_usd": 0.878084
+}

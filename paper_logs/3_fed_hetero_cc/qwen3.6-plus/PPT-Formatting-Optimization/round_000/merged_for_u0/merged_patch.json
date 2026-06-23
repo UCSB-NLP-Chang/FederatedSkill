@@ -1,0 +1,41 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's powerpoint-automation skill with verification enhancements from u2. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "powerpoint-automation/SKILL.md",
+    "powerpoint-automation/references/auto-numbered-bullets.md",
+    "powerpoint-automation/references/pptx-xml-schema.md",
+    "powerpoint-automation/scripts/inspect_pptx.py",
+    "powerpoint-automation/scripts/verify_pptx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "powerpoint-automation/scripts/inspect_pptx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "powerpoint-automation/scripts/verify_pptx.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "powerpoint-automation/references/auto-numbered-bullets.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "powerpoint-automation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "powerpoint-automation/references/pptx-xml-schema.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.1624212999999997
+}

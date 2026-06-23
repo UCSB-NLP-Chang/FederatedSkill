@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "new_task_9_datacenter_capacity_r__djwA48V",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-%26-Finance-Integration/round_003/worker_1/new_task_9_datacenter_capacity_r__djwA48V",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-&-Finance-Integration/round_003/worker_1/new_task_9_datacenter_capacity_r__djwA48V",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-mixed-cli-M3-hetero",
+  "family_name": "Embedded-Data-Repair",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallQwenCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallKimiCli",
+      "agent_model": "openai/kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "fx-spot-matrix-refresh",
+      "fx-cross-rate-inverse-fix",
+      "warehouse-slot-factor-refresh",
+      "supplier-pack-matrix-refresh",
+      "catalyst-balance-matrix-sync",
+      "buffer-dilution-matrix-repair",
+      "rebate-band-live-embedding-fix",
+      "emission-zone-dual-matrix-repair"
+    ],
+    "u1": [
+      "fx-spot-matrix-refresh",
+      "fx-cross-rate-inverse-fix",
+      "warehouse-slot-factor-refresh",
+      "supplier-pack-matrix-refresh",
+      "catalyst-balance-matrix-sync",
+      "buffer-dilution-matrix-repair",
+      "rebate-band-live-embedding-fix",
+      "emission-zone-dual-matrix-repair"
+    ],
+    "u2": [
+      "fx-spot-matrix-refresh",
+      "fx-cross-rate-inverse-fix",
+      "warehouse-slot-factor-refresh",
+      "supplier-pack-matrix-refresh",
+      "catalyst-balance-matrix-sync",
+      "buffer-dilution-matrix-repair",
+      "rebate-band-live-embedding-fix",
+      "emission-zone-dual-matrix-repair"
+    ]
+  }
+}

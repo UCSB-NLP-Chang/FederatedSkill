@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "beauty_zone_alias_gap__ak7ZbYf",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Supply-Chain-Replenishment/round_006/worker_2/beauty_zone_alias_gap__ak7ZbYf",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Supply-Chain-Replenishment/round_006/worker_2/beauty_zone_alias_gap__ak7ZbYf",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

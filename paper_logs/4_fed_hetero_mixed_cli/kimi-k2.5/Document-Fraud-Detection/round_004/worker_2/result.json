@@ -1,0 +1,29 @@
+{
+    "id": "8c2b1e5a-d886-4d44-8312-edc8e6976cc0",
+    "started_at": "2026-05-17T21:04:14.727910",
+    "finished_at": "2026-05-17T21:12:59.085532",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "fleet-maintenance-chargeback-aud__D6krEGx"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

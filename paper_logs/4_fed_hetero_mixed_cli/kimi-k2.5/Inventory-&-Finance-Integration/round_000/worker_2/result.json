@@ -1,0 +1,29 @@
+{
+    "id": "ae5f70e8-b4ec-4636-a004-7ea7009913e9",
+    "started_at": "2026-05-17T22:32:07.160936",
+    "finished_at": "2026-05-17T22:36:48.228258",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_gdpval_21__6dLCdtb"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

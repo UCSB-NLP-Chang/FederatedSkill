@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "new_task_10_maintenance_calcfiel__mrXp9Rn",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-%26-Finance-Integration/round_002/worker_2/new_task_10_maintenance_calcfiel__mrXp9Rn",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-&-Finance-Integration/round_002/worker_2/new_task_10_maintenance_calcfiel__mrXp9Rn",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

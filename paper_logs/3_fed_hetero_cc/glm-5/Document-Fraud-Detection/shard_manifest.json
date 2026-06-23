@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-kimi-docfraud-dashscope-glm-M3-hetero",
+  "family_name": "Document-Fraud-Detection",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "travel-expense-screening",
+      "speaker-honorarium-review",
+      "clinic-shift-claim-review",
+      "field-service-workorder-audit",
+      "fleet-maintenance-chargeback-audit",
+      "research-stipend-reconciliation",
+      "warehouse-coldchain-charge-review",
+      "clinical-trial-participant-release-audit"
+    ],
+    "u1": [
+      "travel-expense-screening",
+      "speaker-honorarium-review",
+      "clinic-shift-claim-review",
+      "field-service-workorder-audit",
+      "fleet-maintenance-chargeback-audit",
+      "research-stipend-reconciliation",
+      "warehouse-coldchain-charge-review",
+      "clinical-trial-participant-release-audit"
+    ],
+    "u2": [
+      "travel-expense-screening",
+      "speaker-honorarium-review",
+      "clinic-shift-claim-review",
+      "field-service-workorder-audit",
+      "fleet-maintenance-chargeback-audit",
+      "research-stipend-reconciliation",
+      "warehouse-coldchain-charge-review",
+      "clinical-trial-participant-release-audit"
+    ]
+  }
+}

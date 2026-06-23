@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) on Embedded-Data-Repair R2. Applied u0's validated SKILL.md wholesale (reward=1.0, covered). Added slide notes parsing workflow, Output Precision section, enhanced Known Invariants. Rejected u1's fix_cached_values.py script (128-line CLI, u1 failed) and inline detection pattern (would edit validated SKILL.md). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "cost_usd": 0.31910579999999994
+}

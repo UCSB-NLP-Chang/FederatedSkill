@@ -1,0 +1,29 @@
+{
+    "id": "4ee2c038-663b-4b9a-9610-2441bbcc69c7",
+    "started_at": "2026-05-26T00:07:13.760011",
+    "finished_at": "2026-05-26T00:09:52.673836",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Operational-Recovery-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "new_task_2_radiology_reading_bac__iz53JZT"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

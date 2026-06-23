@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) on OCR-Data-Extraction R6. Synthesized u1's validated B6 patterns (nested traversal, filtering, OCR normalization) into ~140-line SKILL.md for qwen's style fit. Added u0's failure-mode fixes (blank-line skipping with `# SKIP BLANK LINES` comment, WRONG/RIGHT float example). Reference files transaction-receipt-patterns.md and batched-extraction-patterns.md added. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/batched-extraction-patterns.md",
+    "image-data-extraction/references/transaction-receipt-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/references/transaction-receipt-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "image-data-extraction/references/batched-extraction-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md"
+  ],
+  "cost_usd": 1.1530653000000002
+}

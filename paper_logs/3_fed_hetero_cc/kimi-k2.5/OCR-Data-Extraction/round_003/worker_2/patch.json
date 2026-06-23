@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The agent successfully extracted invoice data from images using OCR. Key insights: (1) The agent formatted amounts as strings with fixed 2 decimal places, but the skill already specifies 'Output precision - pass raw float values directly'. This is a discrepancy between practice and guidance that needs clarification. (2) The agent used a priority-based keyword matching strategy for totals (GRAND TOTAL > TOTAL DUE > TOTAL) with exclusion patterns for SUBTOTAL/TAX, which is a reusable pattern worth capturing. (3) Date parsing handled both unambiguous (YYYY-MM-DD) and ambiguous (DD/MM/YYYY vs MM/DD/YYYY) formats with proper disambiguation. (4) No preprocessing fallbacks were used despite the skill recommending them - the simple OCR worked for these clean images but might fail on lower quality ones. I'll update the existing image-data-extraction skill to add an invoice-specific reference doc and clarify the output precision guidance.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/invoice-patterns.md"
+  ],
+  "delete_paths": []
+}

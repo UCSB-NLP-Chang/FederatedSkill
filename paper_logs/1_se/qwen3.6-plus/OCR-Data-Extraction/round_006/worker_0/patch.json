@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Adds a new skill for extracting data from nested image directories with document classification, path-derived metadata, and OCR artifact normalization. Addresses the agent's failure caused by hardcoding values and ignoring O/0 OCR typos in transaction IDs.",
+  "upsert_paths": [
+    "nested-document-extraction/SKILL.md",
+    "nested-document-extraction/scripts/verify_nested.py"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,18 @@
+{
+  "round_idx": 5,
+  "assignments": [
+    [
+      "u0",
+      "new_task_11_media_rights_rollforward"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0
+  },
+  "exceptions": {
+    "u0": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 484.758633852005
+}

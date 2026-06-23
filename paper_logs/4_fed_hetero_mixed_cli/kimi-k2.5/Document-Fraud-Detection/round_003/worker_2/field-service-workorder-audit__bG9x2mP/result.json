@@ -1,0 +1,109 @@
+{
+    "id": "6114a5d1-566f-4bfb-be6a-0b5c6d3ff8ff",
+    "task_name": "field-service-workorder-audit",
+    "trial_name": "field-service-workorder-audit__bG9x2mP",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Document-Fraud-Detection/round_003/worker_2/field-service-workorder-audit__bG9x2mP",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/field-service-workorder-audit"
+    },
+    "source": "Document-Fraud-Detection",
+    "task_checksum": "bda0a9cab93c767587c2f0e6cd39056ffaa32bc37c1c9076332fcc2975b1326b",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Document-Fraud-Detection/field-service-workorder-audit",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Document-Fraud-Detection"
+        },
+        "trial_name": "field-service-workorder-audit__bG9x2mP",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Document-Fraud-Detection/round_003/worker_2",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallKimiCli",
+            "model_name": "openai/kimi-k2.5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_key": "$LKEAP_KEY",
+                "base_url": "https://api.lkeap.cloud.tencent.com/plan/v3"
+            },
+            "env": {
+                "OPENAI_API_KEY": "<REDACTED>",
+                "OPENAI_BASE_URL": "https://api.lkeap.cloud.tencent.com/plan/v3"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Document-Fraud-Detection/worker_skills/u2"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "285ca8a1-aeb5-4434-93ee-346d2e518f6e"
+    },
+    "agent_info": {
+        "name": "kimi-cli",
+        "version": "\u001b[4m>>>> Executing external compose provider \"/usr/libexec/docker/cli-plugins/docker-compose\". Please see podman-compose(1) for how to disable this message. <<<<\n\n\u001b[0mkimi, version 1.39.0",
+        "model_info": {
+            "name": "kimi-k2.5",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 92086,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 3722,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-18T00:49:56.841094Z",
+    "finished_at": "2026-05-18T00:52:55.160387Z",
+    "environment_setup": {
+        "started_at": "2026-05-18T00:49:56.841811Z",
+        "finished_at": "2026-05-18T00:50:25.194955Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-18T00:50:25.194999Z",
+        "finished_at": "2026-05-18T00:50:36.106198Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-18T00:50:36.106304Z",
+        "finished_at": "2026-05-18T00:52:24.335368Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-18T00:52:24.353620Z",
+        "finished_at": "2026-05-18T00:52:35.660311Z"
+    }
+}

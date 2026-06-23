@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8888888888888888,
+  "summary": "The agent failed verification likely due to auto-numbered bullet lists in PPTX XML where every paragraph had startAt=\"1\", causing each item to restart at 1 instead of sequencing. Adding this pitfall and the startAt attribute behavior to the existing skill prevents this class of error.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/pptx-xml-schema.md"
+  ],
+  "delete_paths": []
+}

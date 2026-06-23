@@ -1,0 +1,326 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: FFF...                                                                   [100%]
+E           =================================== FAILURES ===================================
+E           ________________________ test_file_and_sheet_structure _________________________
+E           
+E               def test_file_and_sheet_structure():
+E                   assert EXCEL_FILE.exists(), f"Missing output workbook: {EXCEL_FILE}"
+E           >       wb = workbook()
+E                        ^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:131: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:65: in workbook
+E               path = _get_reliable_workbook_path() if data_only else EXCEL_FILE
+E                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /tests/test_outputs.py:51: in _get_reliable_workbook_path
+E               _recalculated_path = _recalculate_with_ssconvert(EXCEL_FILE)
+E                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /tests/test_outputs.py:36: in _recalculate_with_ssconvert
+E               subprocess.run(
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           input = None, capture_output = True, timeout = None, check = True
+E           popenargs = (['ssconvert', '/root/output/result.xlsx', '/tmp/tmpd4ispuq3/recalculated.xlsx', '--recalculate'],)
+E           kwargs = {'stderr': -1, 'stdout': -1}
+E           process = <Popen: returncode: 1 args: ['ssconvert', '/root/output/result.xlsx', '/tmp/...>
+E           stdout = b''
+E           stderr = b"Unknown option --recalculate\nRun 'ssconvert --help' to see a full list of available command line options.\n"
+E           retcode = 1
+E           
+E               def run(*popenargs,
+E                       input=None, capture_output=False, timeout=None, check=False, **kwargs):
+E                   """Run command with arguments and return a CompletedProcess instance.
+E               
+E                   The returned instance will have attributes args, returncode, stdout and
+E                   stderr. By default, stdout and stderr are not captured, and those attributes
+E                   will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+E                   or pass capture_output=True to capture both.
+E               
+E                   If check is True and the exit code was non-zero, it raises a
+E                   CalledProcessError. The CalledProcessError object will have the return code
+E                   in the returncode attribute, and output & stderr attributes if those streams
+E                   were captured.
+E               
+E                   If timeout is given, and the process takes too long, a TimeoutExpired
+E                   exception will be raised.
+E               
+E                   There is an optional argument "input", allowing you to
+E                   pass bytes or a string to the subprocess's stdin.  If you use this argument
+E                   you may not also use the Popen constructor's "stdin" argument, as
+E                   it will be used internally.
+E               
+E                   By default, all communication is in bytes, and therefore any "input" should
+E                   be bytes, and the stdout and stderr will be bytes. If in text mode, any
+E                   "input" should be a string, and stdout and stderr will be strings decoded
+E                   according to locale encoding, or by "encoding" if set. Text mode is
+E                   triggered by setting any of text, encoding, errors or universal_newlines.
+E               
+E                   The other arguments are the same as for the Popen constructor.
+E                   """
+E                   if input is not None:
+E                       if kwargs.get('stdin') is not None:
+E                           raise ValueError('stdin and input arguments may not both be used.')
+E                       kwargs['stdin'] = PIPE
+E               
+E                   if capture_output:
+E                       if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+E                           raise ValueError('stdout and stderr arguments may not be used '
+E                                            'with capture_output.')
+E                       kwargs['stdout'] = PIPE
+E                       kwargs['stderr'] = PIPE
+E               
+E                   with Popen(*popenargs, **kwargs) as process:
+E                       try:
+E                           stdout, stderr = process.communicate(input, timeout=timeout)
+E                       except TimeoutExpired as exc:
+E                           process.kill()
+E                           if _mswindows:
+E                               # Windows accumulates the output in a single blocking
+E                               # read() call run on child threads, with the timeout
+E                               # being done in a join() on those threads.  communicate()
+E                               # _after_ kill() is required to collect that and add it
+E                               # to the exception.
+E                               exc.stdout, exc.stderr = process.communicate()
+E                           else:
+E                               # POSIX _communicate already populated the output so
+E                               # far into the TimeoutExpired exception.
+E                               process.wait()
+E                           raise
+E                       except:  # Including KeyboardInterrupt, communicate handled that.
+E                           process.kill()
+E                           # We don't call process.wait() as .__exit__ does that for us.
+E                           raise
+E                       retcode = process.poll()
+E                       if check and retcode:
+E           >               raise CalledProcessError(retcode, process.args,
+E                                                    output=stdout, stderr=stderr)
+E           E               subprocess.CalledProcessError: Command '['ssconvert', '/root/output/result.xlsx', '/tmp/tmpd4ispuq3/recalculated.xlsx', '--recalculate']' returned non-zero exit status 1.
+E           
+E           /usr/lib/python3.12/subprocess.py:571: CalledProcessError
+E           ______________________________ test_lookup_blocks ______________________________
+E           
+E               def test_lookup_blocks():
+E           >       wb = workbook()
+E                        ^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:139: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:65: in workbook
+E               path = _get_reliable_workbook_path() if data_only else EXCEL_FILE
+E                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /tests/test_outputs.py:51: in _get_reliable_workbook_path
+E               _recalculated_path = _recalculate_with_ssconvert(EXCEL_FILE)
+E                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /tests/test_outputs.py:36: in _recalculate_with_ssconvert
+E               subprocess.run(
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           input = None, capture_output = True, timeout = None, check = True
+E           popenargs = (['ssconvert', '/root/output/result.xlsx', '/tmp/tmpxcf1m0vb/recalculated.xlsx', '--recalculate'],)
+E           kwargs = {'stderr': -1, 'stdout': -1}
+E           process = <Popen: returncode: 1 args: ['ssconvert', '/root/output/result.xlsx', '/tmp/...>
+E           stdout = b''
+E           stderr = b"Unknown option --recalculate\nRun 'ssconvert --help' to see a full list of available command line options.\n"
+E           retcode = 1
+E           
+E               def run(*popenargs,
+E                       input=None, capture_output=False, timeout=None, check=False, **kwargs):
+E                   """Run command with arguments and return a CompletedProcess instance.
+E               
+E                   The returned instance will have attributes args, returncode, stdout and
+E                   stderr. By default, stdout and stderr are not captured, and those attributes
+E                   will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+E                   or pass capture_output=True to capture both.
+E               
+E                   If check is True and the exit code was non-zero, it raises a
+E                   CalledProcessError. The CalledProcessError object will have the return code
+E                   in the returncode attribute, and output & stderr attributes if those streams
+E                   were captured.
+E               
+E                   If timeout is given, and the process takes too long, a TimeoutExpired
+E                   exception will be raised.
+E               
+E                   There is an optional argument "input", allowing you to
+E                   pass bytes or a string to the subprocess's stdin.  If you use this argument
+E                   you may not also use the Popen constructor's "stdin" argument, as
+E                   it will be used internally.
+E               
+E                   By default, all communication is in bytes, and therefore any "input" should
+E                   be bytes, and the stdout and stderr will be bytes. If in text mode, any
+E                   "input" should be a string, and stdout and stderr will be strings decoded
+E                   according to locale encoding, or by "encoding" if set. Text mode is
+E                   triggered by setting any of text, encoding, errors or universal_newlines.
+E               
+E                   The other arguments are the same as for the Popen constructor.
+E                   """
+E                   if input is not None:
+E                       if kwargs.get('stdin') is not None:
+E                           raise ValueError('stdin and input arguments may not both be used.')
+E                       kwargs['stdin'] = PIPE
+E               
+E                   if capture_output:
+E                       if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+E                           raise ValueError('stdout and stderr arguments may not be used '
+E                                            'with capture_output.')
+E                       kwargs['stdout'] = PIPE
+E                       kwargs['stderr'] = PIPE
+E               
+E                   with Popen(*popenargs, **kwargs) as process:
+E                       try:
+E                           stdout, stderr = process.communicate(input, timeout=timeout)
+E                       except TimeoutExpired as exc:
+E                           process.kill()
+E                           if _mswindows:
+E                               # Windows accumulates the output in a single blocking
+E                               # read() call run on child threads, with the timeout
+E                               # being done in a join() on those threads.  communicate()
+E                               # _after_ kill() is required to collect that and add it
+E                               # to the exception.
+E                               exc.stdout, exc.stderr = process.communicate()
+E                           else:
+E                               # POSIX _communicate already populated the output so
+E                               # far into the TimeoutExpired exception.
+E                               process.wait()
+E                           raise
+E                       except:  # Including KeyboardInterrupt, communicate handled that.
+E                           process.kill()
+E                           # We don't call process.wait() as .__exit__ does that for us.
+E                           raise
+E                       retcode = process.poll()
+E                       if check and retcode:
+E           >               raise CalledProcessError(retcode, process.args,
+E                                                    output=stdout, stderr=stderr)
+E           E               subprocess.CalledProcessError: Command '['ssconvert', '/root/output/result.xlsx', '/tmp/tmpxcf1m0vb/recalculated.xlsx', '--recalculate']' returned non-zero exit status 1.
+E           
+E           /usr/lib/python3.12/subprocess.py:571: CalledProcessError
+E           ________________________ test_derived_values_and_stats _________________________
+E           
+E               def test_derived_values_and_stats():
+E           >       wb = workbook()
+E                        ^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:148: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /tests/test_outputs.py:65: in workbook
+E               path = _get_reliable_workbook_path() if data_only else EXCEL_FILE
+E                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /tests/test_outputs.py:51: in _get_reliable_workbook_path
+E               _recalculated_path = _recalculate_with_ssconvert(EXCEL_FILE)
+E                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           /tests/test_outputs.py:36: in _recalculate_with_ssconvert
+E               subprocess.run(
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           input = None, capture_output = True, timeout = None, check = True
+E           popenargs = (['ssconvert', '/root/output/result.xlsx', '/tmp/tmpnrukc5g6/recalculated.xlsx', '--recalculate'],)
+E           kwargs = {'stderr': -1, 'stdout': -1}
+E           process = <Popen: returncode: 1 args: ['ssconvert', '/root/output/result.xlsx', '/tmp/...>
+E           stdout = b''
+E           stderr = b"Unknown option --recalculate\nRun 'ssconvert --help' to see a full list of available command line options.\n"
+E           retcode = 1
+E           
+E               def run(*popenargs,
+E                       input=None, capture_output=False, timeout=None, check=False, **kwargs):
+E                   """Run command with arguments and return a CompletedProcess instance.
+E               
+E                   The returned instance will have attributes args, returncode, stdout and
+E                   stderr. By default, stdout and stderr are not captured, and those attributes
+E                   will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+E                   or pass capture_output=True to capture both.
+E               
+E                   If check is True and the exit code was non-zero, it raises a
+E                   CalledProcessError. The CalledProcessError object will have the return code
+E                   in the returncode attribute, and output & stderr attributes if those streams
+E                   were captured.
+E               
+E                   If timeout is given, and the process takes too long, a TimeoutExpired
+E                   exception will be raised.
+E               
+E                   There is an optional argument "input", allowing you to
+E                   pass bytes or a string to the subprocess's stdin.  If you use this argument
+E                   you may not also use the Popen constructor's "stdin" argument, as
+E                   it will be used internally.
+E               
+E                   By default, all communication is in bytes, and therefore any "input" should
+E                   be bytes, and the stdout and stderr will be bytes. If in text mode, any
+E                   "input" should be a string, and stdout and stderr will be strings decoded
+E                   according to locale encoding, or by "encoding" if set. Text mode is
+E                   triggered by setting any of text, encoding, errors or universal_newlines.
+E               
+E                   The other arguments are the same as for the Popen constructor.
+E                   """
+E                   if input is not None:
+E                       if kwargs.get('stdin') is not None:
+E                           raise ValueError('stdin and input arguments may not both be used.')
+E                       kwargs['stdin'] = PIPE
+E               
+E                   if capture_output:
+E                       if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+E                           raise ValueError('stdout and stderr arguments may not be used '
+E                                            'with capture_output.')
+E                       kwargs['stdout'] = PIPE
+E                       kwargs['stderr'] = PIPE
+E               
+E                   with Popen(*popenargs, **kwargs) as process:
+E                       try:
+E                           stdout, stderr = process.communicate(input, timeout=timeout)
+E                       except TimeoutExpired as exc:
+E                           process.kill()
+E                           if _mswindows:
+E                               # Windows accumulates the output in a single blocking
+E                               # read() call run on child threads, with the timeout
+E                               # being done in a join() on those threads.  communicate()
+E                               # _after_ kill() is required to collect that and add it
+E                               # to the exception.
+E                               exc.stdout, exc.stderr = process.communicate()
+E                           else:
+E                               # POSIX _communicate already populated the output so
+E                               # far into the TimeoutExpired exception.
+E                               process.wait()
+E                           raise
+E                       except:  # Including KeyboardInterrupt, communicate handled that.
+E                           process.kill()
+E                           # We don't call process.wait() as .__exit__ does that for us.
+E                           raise
+E                       retcode = process.poll()
+E                       if check and retcode:
+E           >               raise CalledProcessError(retcode, process.args,
+E                                                    output=stdout, stderr=stderr)
+E           E               subprocess.CalledProcessError: Command '['ssconvert', '/root/output/result.xlsx', '/tmp/tmpnrukc5g6/recalculated.xlsx', '--recalculate']' returned non-zero exit status 1.
+E           
+E           /usr/lib/python3.12/subprocess.py:571: CalledProcessError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_file_and_sheet_structure - subprocess.C...
+E           FAILED ../tests/test_outputs.py::test_lookup_blocks - subprocess.CalledProces...
+E           FAILED ../tests/test_outputs.py::test_derived_values_and_stats - subprocess.C...
+E           3 failed, 3 passed in 0.34s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: FF...
+============================== 1 failed in 0.55s ===============================

@@ -1,0 +1,29 @@
+{
+    "id": "de943e54-f935-473d-84e0-47cceda13860",
+    "started_at": "2026-05-17T20:50:40.959076",
+    "finished_at": "2026-05-17T21:12:16.946549",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "thyroid-monitoring-harmonization__H8XuwcD"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

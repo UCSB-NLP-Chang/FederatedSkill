@@ -1,0 +1,33 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged three high-reward patches into a unified image-data-extraction skill, consolidating OCR preprocessing fallbacks, date disambiguation, keyword-priority total extraction, roster merge logic, and invoice-specific patterns while preserving existing invariants and anti-patterns.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/invoice-patterns.md",
+    "image-data-extraction/references/patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/references/invoice-patterns.md": [
+      "upsert",
+      "llm_merge:top=u2",
+      1.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      1.0
+    ],
+    "image-data-extraction/references/patterns.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

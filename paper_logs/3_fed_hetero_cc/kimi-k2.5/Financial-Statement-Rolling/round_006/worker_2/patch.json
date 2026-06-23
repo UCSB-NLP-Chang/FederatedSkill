@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "The trace reveals the agent built a refund reserve workbook successfully but encountered several brittleness issues: (1) misaligning label rows with formula cells due to off-by-one errors in the Summary sheet layout, (2) using wrong column references for GL Balance in cross-sheet links (column O instead of N), (3) confusion about where to place section headers vs data rows. The agent also made editing mistakes due to partial string replacements and tool misinvocations. The existing financial-rollforward-workbook skill covers core formulas but lacks guidance on Summary sheet construction, GL Balance column selection (N not O), and template-based workflows starting from existing files. This update adds a new skill for template-driven rollforward builds that must start from an existing .xlsx template, with explicit guidance on Summary sheet row alignment, GL column selection, and verification patterns seen in the trace.",
+  "upsert_paths": [
+    "template-based-rollforward/SKILL.md",
+    "template-based-rollforward/scripts/verify_template_rollforward.py"
+  ],
+  "delete_paths": []
+}

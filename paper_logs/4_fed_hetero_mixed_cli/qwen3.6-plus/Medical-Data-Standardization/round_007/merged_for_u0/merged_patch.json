@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Round 7 merge complete. Applied u0's verified transplant-panel patch (reward=1.0) \u2014 added Tacrolimus, transplant join rules, Mg anti-pattern. Rejected u1's partial (precision failed) and u2's truncated output. See DECISIONS.md.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "clinical-lab-harmonization/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "cost_usd": 1.73931
+}

@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779069863.5069227,
+            "stop": 1779069863.7126977
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.18630250543355942,
+                "start": 1779069863.5139663,
+                "stop": 1779069863.7125783,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: ..FFF                                                                    [100%]\nE           =================================== FAILURES ===================================\nE           _____________________________ test_rows_and_order ______________________________\nE           \nE               def test_rows_and_order():\nE                   data = load_output()\nE                   expected_rows, _, _, _, _, _ = load_expected()\nE                   assert [r['therapy_code'] for r in data['therapies']] == [r['therapy_code'] for r in expected_rows]\nE                   for actual, expected in zip(data['therapies'], expected_rows):\nE                       assert set(actual.keys()) == set(expected.keys())\nE                       for key, expected_value in expected.items():\nE                           if isinstance(expected_value, str):\nE                               assert actual[key] == expected_value\nE                           elif isinstance(expected_value, int):\nE                               assert actual[key] == expected_value\nE                           else:\nE           >                   assert close(actual[key], expected_value)\nE           E                   assert False\nE           E                    +  where False = close(73651.71, 73834.34)\nE           \nE           /tests/test_outputs.py:141: AssertionError\nE           ___________________________ test_totals_and_decision ___________________________\nE           \nE               def test_totals_and_decision():\nE                   data = load_output()\nE                   _, total_7, total_14, total_diff, abs_diff, decision = load_expected()\nE                   totals = data['totals']\nE           >       assert close(totals['total_annual_margin_7_day_usd'], total_7)\nE           E       assert False\nE           E        +  where False = close(-462814.99, -455619.31)\nE           \nE           /tests/test_outputs.py:148: AssertionError\nE           __________________________ test_summary_requirements ___________________________\nE           \nE               def test_summary_requirements():\nE                   data = load_output()\nE                   text = OUTPUT_SUMMARY.read_text(encoding='utf-8')\nE                   lines = [line for line in text.splitlines() if line.strip()]\nE                   assert 4 <= len(lines) <= 8\nE                   decision = data['recommendation']['decision']\nE                   normalized = decision.replace('_', ' ').lower()\nE                   assert (decision in text) or (normalized in text.lower()), f\"Decision '{decision}' (or '{normalized}') not found in summary\"\nE                   for value in (data['totals']['total_annual_margin_7_day_usd'], data['totals']['total_annual_margin_14_day_usd'], data['totals']['absolute_total_margin_difference_usd']):\nE           >           assert f'{value:,.2f}' in text\nE           E           AssertionError: assert '-462,814.99' in '## Infusion Batching Analysis Summary\\n\\n- Total 7-day delivery annual margin: -$462,814.99 USD\\n- Total 14-day deliv...gin improvement under the 14-day model due to halved supply costs, while drug costs remain unchanged between models.\\n'\nE           \nE           /tests/test_outputs.py:165: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_rows_and_order - assert False\nE           FAILED ../tests/test_outputs.py::test_totals_and_decision - assert False\nE           FAILED ../tests/test_outputs.py::test_summary_requirements - AssertionError: ...\nE           3 failed, 2 passed in 0.03s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

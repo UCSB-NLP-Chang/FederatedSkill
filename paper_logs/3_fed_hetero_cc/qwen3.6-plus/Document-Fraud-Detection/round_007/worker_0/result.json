@@ -1,0 +1,29 @@
+{
+    "id": "1f79c373-eed3-413d-9900-64032908e6ca",
+    "started_at": "2026-05-15T04:29:15.528324",
+    "finished_at": "2026-05-15T04:31:56.933537",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Document-Fraud-Detection": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "clinical-trial-participant-relea__95buwPm"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

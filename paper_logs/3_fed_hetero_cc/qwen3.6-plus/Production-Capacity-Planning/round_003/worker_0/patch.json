@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Added explicit validation step for summary length constraints (word/sentence limits) to the output generation and checklist, as verifiers frequently enforce these. Reinforced the rule to extract capacity values exactly from the prompt rather than relying on examples.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

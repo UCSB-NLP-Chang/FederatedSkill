@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8888888888888888,
+  "summary": "Update pptx-manipulation skill with two critical patterns discovered in trace: (1) lxml namespace-qualified attribute setting for r:id and other prefixed attributes, which caused a ValueError when set directly, and (2) python-pptx dimension persistence bug where shape width/height changes don't survive save, requiring direct XML manipulation of a:off/a:ext elements. Added decision rules for when to fall back from python-pptx to lxml XML editing.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "delete_paths": []
+}

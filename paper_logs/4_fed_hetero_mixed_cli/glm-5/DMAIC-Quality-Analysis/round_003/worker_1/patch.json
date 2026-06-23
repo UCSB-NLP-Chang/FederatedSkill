@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.3333333333333333,
+  "summary": "The trace reveals a gap in I-MR control chart stability assessment: the agent initially only checked the Individuals chart for out-of-control points, then had to add Moving Range chart checks. The existing skill mentions I-MR but doesn't explicitly state that BOTH charts must be checked for process stability. Adding this clarification and a troubleshooting entry will prevent future agents from making the same incomplete stability assessment.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

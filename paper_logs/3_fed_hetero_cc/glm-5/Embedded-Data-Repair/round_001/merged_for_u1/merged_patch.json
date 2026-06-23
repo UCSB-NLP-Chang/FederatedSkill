@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u1's SKILL.md and openpyxl_cell_types.md with matrix-match precision (per task_memory recommendation), synthesized cached `<v>` handling guidance from all workers, added B2 Known invariants. Kept majority name edit-embedded-excel. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/references/openpyxl_cell_types.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ],
+    "edit-embedded-excel/references/openpyxl_cell_types.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "cost_usd": 0.6224586000000002
+}

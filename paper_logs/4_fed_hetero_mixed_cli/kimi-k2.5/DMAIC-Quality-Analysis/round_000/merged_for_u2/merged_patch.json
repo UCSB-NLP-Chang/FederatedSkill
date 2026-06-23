@@ -1,0 +1,35 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Consolidated 3 patches into 1 umbrella skill `dmaic-analyze` with references and script. Key fix: explicit I-MR window alignment. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dmaic-analyze/SKILL.md",
+    "dmaic-analyze/references/formulas.md",
+    "dmaic-analyze/references/output_schema.md",
+    "dmaic-analyze/scripts/spc_calculations.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-analyze/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "dmaic-analyze/scripts/spc_calculations.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ],
+    "dmaic-analyze/references/formulas.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dmaic-analyze/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.769653
+}

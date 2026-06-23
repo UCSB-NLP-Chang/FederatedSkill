@@ -1,0 +1,32 @@
+{
+  "worker_id": "u0",
+  "summary": "Merged worker u0's incremental update to deferred-revenue-rollforward/SKILL.md preserving its proven checklist structure and explicit formula warnings, while adopting the new project-cost-rollforward skill directory to encapsulate nested JSON deduplication, CSV overrides, and variant-specific layout.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "project-cost-rollforward/SKILL.md",
+    "project-cost-rollforward/references/project_cost_variant.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "deferred-revenue-rollforward/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.0
+    ],
+    "project-cost-rollforward/references/project_cost_variant.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.0
+    ],
+    "project-cost-rollforward/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

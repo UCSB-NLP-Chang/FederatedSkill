@@ -1,0 +1,193 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FFFFFFF                                                                 [100%]
+E           =================================== FAILURES ===================================
+E           __________________________ test_task_duration_metrics __________________________
+E           
+E           outputs = ({'extended_analysis': {'capability_summary': {'failure_rate_vs_target': 'Not Capable', 'overall_failure_rate_pct': 2....publish baseline report |\n\n---\n\n*Report generated deterministically from `/root/process_capability_data.xlsx`.*\n')
+E           expected_metrics = {'failure_rate': {'capability_vs_target': 'Not Capable', 'ci_high': 2.427832894380724, 'ci_low': 2.2480514602219364, '......}, 'task_duration': {'cv': 0.13743069646183279, 'direction': 'decreasing', 'mean': 44.93333333333333, 'n': 30, ...}}
+E           
+E               def test_task_duration_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   td = report["task_duration"]
+E                   exp = expected_metrics["task_duration"]
+E               
+E                   assert td["n"] == exp["n"]
+E           >       assert_close(td["mean_min"], exp["mean"], tol=1e-3)
+E                                ^^^^^^^^^^^^^^
+E           E       KeyError: 'mean_min'
+E           
+E           /tests/test_outputs.py:171: KeyError
+E           __________________________ test_failure_rate_metrics ___________________________
+E           
+E           outputs = ({'extended_analysis': {'capability_summary': {'failure_rate_vs_target': 'Not Capable', 'overall_failure_rate_pct': 2....publish baseline report |\n\n---\n\n*Report generated deterministically from `/root/process_capability_data.xlsx`.*\n')
+E           expected_metrics = {'failure_rate': {'capability_vs_target': 'Not Capable', 'ci_high': 2.427832894380724, 'ci_low': 2.2480514602219364, '......}, 'task_duration': {'cv': 0.13743069646183279, 'direction': 'decreasing', 'mean': 44.93333333333333, 'n': 30, ...}}
+E           
+E               def test_failure_rate_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   fr = report["failure_rate"]
+E                   exp = expected_metrics["failure_rate"]
+E               
+E           >       assert fr["points"] == exp["points"]
+E                          ^^^^^^^^^^^^
+E           E       KeyError: 'points'
+E           
+E           /tests/test_outputs.py:186: KeyError
+E           __________________________ test_system_error_metrics ___________________________
+E           
+E           outputs = ({'extended_analysis': {'capability_summary': {'failure_rate_vs_target': 'Not Capable', 'overall_failure_rate_pct': 2....publish baseline report |\n\n---\n\n*Report generated deterministically from `/root/process_capability_data.xlsx`.*\n')
+E           expected_metrics = {'failure_rate': {'capability_vs_target': 'Not Capable', 'ci_high': 2.427832894380724, 'ci_low': 2.2480514602219364, '......}, 'task_duration': {'cv': 0.13743069646183279, 'direction': 'decreasing', 'mean': 44.93333333333333, 'n': 30, ...}}
+E           
+E               def test_system_error_metrics(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   se = report["system_errors"]
+E                   exp = expected_metrics["system_errors"]
+E               
+E           >       assert se["rows"] == exp["rows"]
+E                          ^^^^^^^^^^
+E           E       KeyError: 'rows'
+E           
+E           /tests/test_outputs.py:208: KeyError
+E           __________________ test_variability_ranking_and_highest_risk ___________________
+E           
+E           outputs = ({'extended_analysis': {'capability_summary': {'failure_rate_vs_target': 'Not Capable', 'overall_failure_rate_pct': 2....publish baseline report |\n\n---\n\n*Report generated deterministically from `/root/process_capability_data.xlsx`.*\n')
+E           expected_metrics = {'failure_rate': {'capability_vs_target': 'Not Capable', 'ci_high': 2.427832894380724, 'ci_low': 2.2480514602219364, '......}, 'task_duration': {'cv': 0.13743069646183279, 'direction': 'decreasing', 'mean': 44.93333333333333, 'n': 30, ...}}
+E           
+E               def test_variability_ranking_and_highest_risk(outputs, expected_metrics):
+E                   report, _ = outputs
+E                   ranking = report["variability_ranking"]
+E                   expected_ranking = expected_metrics["ranking"]
+E               
+E                   assert len(ranking) == 3
+E           >       assert [r["process"] for r in ranking] == [r["process"] for r in expected_ranking]
+E           E       AssertionError: assert ['System Erro...ask Duration'] == ['system_erro...ask_duration']
+E           E         
+E           E         At index 0 diff: 'System Errors' != 'system_errors'
+E           E         Use -v to get more diff
+E           
+E           /tests/test_outputs.py:224: AssertionError
+E           ______________________ test_extended_analysis_consistency ______________________
+E           
+E           outputs = ({'extended_analysis': {'capability_summary': {'failure_rate_vs_target': 'Not Capable', 'overall_failure_rate_pct': 2....publish baseline report |\n\n---\n\n*Report generated deterministically from `/root/process_capability_data.xlsx`.*\n')
+E           
+E               def test_extended_analysis_consistency(outputs):
+E                   report, _ = outputs
+E                   ext = report["extended_analysis"]
+E                   highest = report["highest_variability_process"]
+E               
+E           >       assert ext["process"] == highest
+E                          ^^^^^^^^^^^^^^
+E           E       KeyError: 'process'
+E           
+E           /tests/test_outputs.py:239: KeyError
+E           _________________________ test_monitoring_plan_schema __________________________
+E           
+E           outputs = ({'extended_analysis': {'capability_summary': {'failure_rate_vs_target': 'Not Capable', 'overall_failure_rate_pct': 2....publish baseline report |\n\n---\n\n*Report generated deterministically from `/root/process_capability_data.xlsx`.*\n')
+E           
+E               def test_monitoring_plan_schema(outputs):
+E                   report, _ = outputs
+E                   mp = report["monitoring_plan"]
+E               
+E                   required_keys = [
+E                       "process_to_be_monitored",
+E                       "inputs",
+E                       "outputs",
+E                       "key_performance_indicators",
+E                       "frequency_of_monitoring",
+E                       "observation_format",
+E                       "roles",
+E                       "reporting_format",
+E                       "corrective_action_process",
+E                       "benchmarks",
+E                       "prioritized_actions",
+E                       "checklist",
+E                       "momentum_plan_30_60_90",
+E                       "project_codename",
+E                   ]
+E                   for key in required_keys:
+E                       assert key in mp, f"Missing monitoring_plan key: {key}"
+E               
+E                   assert isinstance(mp["inputs"], list) and len(mp["inputs"]) >= 2
+E                   assert isinstance(mp["outputs"], list) and len(mp["outputs"]) >= 2
+E                   assert isinstance(mp["key_performance_indicators"], list) and len(mp["key_performance_indicators"]) >= 3
+E                   assert isinstance(mp["prioritized_actions"], list) and len(mp["prioritized_actions"]) >= 3
+E                   assert 5 <= len(mp["checklist"]) <= 9
+E           >       assert all(k in mp["momentum_plan_30_60_90"] for k in ["day_30", "day_60", "day_90"])
+E           E       assert False
+E           E        +  where False = all(<generator object test_monitoring_plan_schema.<locals>.<genexpr> at 0x7f005cb47840>)
+E           
+E           /tests/test_outputs.py:274: AssertionError
+E           ___________________ test_markdown_sections_and_required_text ___________________
+E           
+E           outputs = ({'extended_analysis': {'capability_summary': {'failure_rate_vs_target': 'Not Capable', 'overall_failure_rate_pct': 2....publish baseline report |\n\n---\n\n*Report generated deterministically from `/root/process_capability_data.xlsx`.*\n')
+E           
+E               def test_markdown_sections_and_required_text(outputs):
+E                   _, markdown = outputs
+E               
+E                   required_headings = [
+E                       "Summary of Findings",
+E                       "Most Significant Risks",
+E                       "Prioritized Corrective Actions",
+E                       "Monitoring Plan",
+E                       "Process to be Monitored",
+E                       "Inputs",
+E                       "Outputs",
+E                       "Key Performance Indicators (KPIs)",
+E                       "Frequency of Monitoring",
+E                       "Observation Format",
+E                       "Roles",
+E                       "Reporting Format",
+E                       "Corrective Action Process",
+E                       "Benchmarks",
+E                   ]
+E               
+E                   for heading in required_headings:
+E                       pattern = rf"^#+\s+{re.escape(heading)}\s*$"
+E                       assert re.search(pattern, markdown, flags=re.MULTILINE), f"Missing markdown heading: {heading}"
+E               
+E                   assert "System Errors is the highest-risk process." in markdown
+E                   assert re.search(r"project codename\s*:", markdown, flags=re.IGNORECASE)
+E           >       assert re.search(r"30-day milestone", markdown, flags=re.IGNORECASE)
+E           E       AssertionError: assert None
+E           E        +  where None = <function search at 0x7f00b4a91f80>('30-day milestone', '# Process Capability & Stability Assessment — Brightland Processing Center\n\n**Project Codename:** Brightland-PC-CAP... publish baseline report |\n\n---\n\n*Report generated deterministically from `/root/process_capability_data.xlsx`.*\n', flags=re.IGNORECASE)
+E           E        +    where <function search at 0x7f00b4a91f80> = re.search
+E           E        +    and   re.IGNORECASE = re.IGNORECASE
+E           
+E           /tests/test_outputs.py:304: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_task_duration_metrics - KeyError: 'mean...
+E           FAILED ../tests/test_outputs.py::test_failure_rate_metrics - KeyError: 'points'
+E           FAILED ../tests/test_outputs.py::test_system_error_metrics - KeyError: 'rows'
+E           FAILED ../tests/test_outputs.py::test_variability_ranking_and_highest_risk - ...
+E           FAILED ../tests/test_outputs.py::test_extended_analysis_consistency - KeyErro...
+E           FAILED ../tests/test_outputs.py::test_monitoring_plan_schema - assert False
+E           FAILED ../tests/test_outputs.py::test_markdown_sections_and_required_text - A...
+E           7 failed, 1 passed in 0.52s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 0.87s ===============================

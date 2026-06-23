@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Round 7 merge complete. Extended infusion-batch-analysis umbrella skill to cover B6 (Vaxcrate Dispatch) as Variant C. Added STOP checkpoint for glm-5. Applied u0's correct compute_vaxcrate.py script (u2's generalized script has a bug multiplying supply cost by count). Library has 3 skills, all validated. See DECISIONS.md for full reasoning.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/references/invariants.md",
+    "infusion-batch-analysis/scripts/compute_vaxcrate.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "infusion-batch-analysis/references/invariants.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "infusion-batch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "infusion-batch-analysis/scripts/compute_vaxcrate.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:infusion-batch-analysis/SKILL.md: bad YAML (ScannerError)",
+    "__skill_md_invalid__:reagent-kit-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 8.925860999999998
+}

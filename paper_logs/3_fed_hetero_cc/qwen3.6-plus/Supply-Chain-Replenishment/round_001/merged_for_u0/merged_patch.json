@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE: Applied u0's reward=1.0 patch (dock status filtering + variant sheet names). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-load-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-load-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.36612959999999994
+}

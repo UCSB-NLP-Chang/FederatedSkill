@@ -1,0 +1,12 @@
+{
+  "worker_id": "u2",
+  "reward": 0.375,
+  "summary": "Creates a new skill for healthcare process variability analysis. The trace shows an agent attempted to use the DMAIC skill for a hospital safety task, but the task required different analyses (CV comparison, trend t-tests, Wilson intervals for proportions) and a different output schema. The agent wrote custom code which failed verification. This skill provides the correct reusable workflow for analyzing healthcare operational metrics (wait times, error rates, readmissions), computing variability rankings by CV, assessing trend stability, and generating the required JSON/brief outputs.",
+  "upsert_paths": [
+    "healthcare-process-variability-analysis/SKILL.md",
+    "healthcare-process-variability-analysis/assets/brief_template.md",
+    "healthcare-process-variability-analysis/references/output_schema.md",
+    "healthcare-process-variability-analysis/scripts/compute_healthcare_metrics.py"
+  ],
+  "delete_paths": []
+}

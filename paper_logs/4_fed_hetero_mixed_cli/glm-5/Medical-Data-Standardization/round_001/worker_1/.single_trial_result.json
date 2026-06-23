@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "hepatic-panel-harmonization__uSxoXdb",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/round_001/worker_1/hepatic-panel-harmonization__uSxoXdb",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/round_001/worker_1/hepatic-panel-harmonization__uSxoXdb",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

@@ -1,0 +1,30 @@
+{
+  "round_idx": 3,
+  "assignments": [
+    [
+      "u0",
+      "econ-housing-materials-correlation"
+    ],
+    [
+      "u1",
+      "econ-housing-materials-correlation"
+    ],
+    [
+      "u2",
+      "econ-housing-materials-correlation"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 722.9836540222168
+}

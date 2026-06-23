@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Added B6 cycle-count-variance-audit to multi-file-join-audit with critical rule + anti-pattern. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "multi-file-join-audit/SKILL.md",
+    "multi-file-join-audit/references/variance-approval-gap.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "multi-file-join-audit/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8333333333333334
+    ],
+    "multi-file-join-audit/references/variance-approval-gap.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8333333333333334
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 5.436513
+}

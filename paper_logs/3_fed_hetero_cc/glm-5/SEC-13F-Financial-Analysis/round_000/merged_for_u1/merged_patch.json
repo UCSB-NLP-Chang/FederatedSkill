@@ -1,0 +1,35 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Created single umbrella skill `sec-13f-filing-analysis` consolidating u0+u1+u2 patches with threshold-based matching (distance \u2264 4), SEC abbreviation stock classification, and output precision guidance. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-filing-analysis/SKILL.md",
+    "sec-13f-filing-analysis/references/normalization-rules.md",
+    "sec-13f-filing-analysis/scripts/classify_holdings.py",
+    "sec-13f-filing-analysis/scripts/match_manager.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-filing-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-filing-analysis/scripts/classify_holdings.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-filing-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-filing-analysis/scripts/match_manager.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.37407269999999987
+}

@@ -1,0 +1,29 @@
+{
+    "id": "889870b0-c049-42af-8f70-f8d7d9f836e3",
+    "started_at": "2026-05-17T20:54:05.312815",
+    "finished_at": "2026-05-17T20:56:36.101786",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Embedded-Data-Repair": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "supplier-pack-matrix-refresh__oiHhyFD"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

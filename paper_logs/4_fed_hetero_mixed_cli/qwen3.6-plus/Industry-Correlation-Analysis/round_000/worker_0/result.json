@@ -1,0 +1,29 @@
+{
+    "id": "1dabf14a-de39-40f3-9a8f-8576764c3602",
+    "started_at": "2026-05-23T22:08:13.696201",
+    "finished_at": "2026-05-23T22:10:43.972263",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Industry-Correlation-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "econ-service-hospitality-correla__rmphvyN"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

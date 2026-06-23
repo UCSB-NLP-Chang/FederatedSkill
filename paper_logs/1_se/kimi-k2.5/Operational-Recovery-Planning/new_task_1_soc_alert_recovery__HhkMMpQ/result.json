@@ -1,0 +1,103 @@
+{
+  "id": "fdd2e1a0-ae16-4ed4-b1bd-0bc5b7c4650f",
+  "task_name": "new_task_1_soc_alert_recovery",
+  "trial_name": "new_task_1_soc_alert_recovery__HhkMMpQ",
+  "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Operational-Recovery-Planning/new_task_1_soc_alert_recovery__HhkMMpQ",
+  "task_id": {
+    "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Operational-Recovery-Planning/new_task_1_soc_alert_recovery"
+  },
+  "source": "Operational-Recovery-Planning",
+  "task_checksum": "4dc27fa0a9b03eaee7edd9b16e1485682e1c590bfb312cfa0fcdf875d8c257ef",
+  "config": {
+    "task": {
+      "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Operational-Recovery-Planning/new_task_1_soc_alert_recovery",
+      "git_url": null,
+      "git_commit_id": null,
+      "overwrite": false,
+      "download_dir": null,
+      "source": "Operational-Recovery-Planning"
+    },
+    "trial_name": "new_task_1_soc_alert_recovery__HhkMMpQ",
+    "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-kimi-k2.5/iter-baseline-kimi-k2.5__Operational-Recovery-Planning",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+      "name": null,
+      "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "model_name": "kimi-k2.5",
+      "override_timeout_sec": null,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "kwargs": {},
+      "env": {
+        "ANTHROPIC_API_KEY": "<REDACTED>",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+      }
+    },
+    "environment": {
+      "type": "docker",
+      "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+      "force_build": false,
+      "delete": false,
+      "override_cpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_gpus": null,
+      "suppress_override_warnings": false,
+      "mounts_json": null,
+      "env": {},
+      "kwargs": {
+        "project_template_dir": null,
+        "copy_task_skills": false
+      }
+    },
+    "verifier": {
+      "override_timeout_sec": null,
+      "max_timeout_sec": null,
+      "disable": false
+    },
+    "artifacts": [],
+    "job_id": "c5c12fa3-aea5-41d2-8899-374a7f795401"
+  },
+  "agent_info": {
+    "name": "claude-code",
+    "version": "2.1.119",
+    "model_info": null
+  },
+  "agent_result": {
+    "n_input_tokens": 641765,
+    "n_cache_tokens": 484476,
+    "n_output_tokens": 9594,
+    "cost_usd": null,
+    "rollout_details": null,
+    "metadata": null,
+    "_backfilled_from": "session_jsonl"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  },
+  "exception_info": null,
+  "started_at": "2026-05-13T05:35:37.385980Z",
+  "finished_at": "2026-05-13T05:43:00.112994Z",
+  "environment_setup": {
+    "started_at": "2026-05-13T05:35:37.388540Z",
+    "finished_at": "2026-05-13T05:35:38.619495Z"
+  },
+  "agent_setup": {
+    "started_at": "2026-05-13T05:35:38.619529Z",
+    "finished_at": "2026-05-13T05:35:38.872213Z"
+  },
+  "agent_execution": {
+    "started_at": "2026-05-13T05:35:38.872313Z",
+    "finished_at": "2026-05-13T05:42:48.655072Z"
+  },
+  "verifier": {
+    "started_at": "2026-05-13T05:42:48.657588Z",
+    "finished_at": "2026-05-13T05:42:49.555072Z"
+  }
+}

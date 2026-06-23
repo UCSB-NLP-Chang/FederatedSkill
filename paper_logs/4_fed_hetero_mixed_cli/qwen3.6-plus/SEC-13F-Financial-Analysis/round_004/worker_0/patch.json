@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Added Manager-Issuer Grid workflow and output schema to sec-13f-analysis skill. Captures reusable patterns for cross-product holdings lookups, enforces VALUE aggregation across multiple rows, and prevents brittle line-number extraction observed in the trace.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/output-schemas.md"
+  ],
+  "delete_paths": []
+}

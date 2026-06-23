@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds a reusable skill for Excel-based inventory and shipment analysis. Captures the workflow for handling openpyxl installation in restricted environments, parsing mixed date/formula cells, calculating supply gaps (DOH, OOS, pallet rounding), and verifying output workbooks. Includes a helper script to prevent common import and date-parsing failures observed in the trace.",
+  "upsert_paths": [
+    "excel-inventory-analysis/SKILL.md",
+    "excel-inventory-analysis/scripts/setup_and_load.py"
+  ],
+  "delete_paths": []
+}

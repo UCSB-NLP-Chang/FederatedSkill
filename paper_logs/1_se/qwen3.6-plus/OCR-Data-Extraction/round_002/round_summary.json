@@ -1,0 +1,18 @@
+{
+  "round_idx": 2,
+  "assignments": [
+    [
+      "u0",
+      "task_family_travel_claim_merge"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0
+  },
+  "exceptions": {
+    "u0": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 457.42414927482605
+}

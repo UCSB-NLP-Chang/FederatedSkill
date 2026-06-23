@@ -1,0 +1,29 @@
+{
+    "id": "fea7e2ab-da21-4112-b286-444460fa5e0d",
+    "started_at": "2026-05-17T22:48:03.214762",
+    "finished_at": "2026-05-17T22:55:01.630274",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "respiratory-panel-json-harmoniza__t4225ka"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

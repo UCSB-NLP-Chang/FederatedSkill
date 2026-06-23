@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.7777777777777778,
+  "summary": "Updated pptx-manipulation skill to address verifier failures and brittle patterns observed in the trace. Key additions: explicit run-level formatting rules (paragraph.font is insufficient), idempotent CSV matching to catch pre-standardized text, strict warning against float assignment for shape geometry, and clarification on safe slide iteration to avoid 'list object has no attribute rId' errors. Reinforced external test requirement and added pointer to existing verify script.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md"
+  ],
+  "delete_paths": []
+}

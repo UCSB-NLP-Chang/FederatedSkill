@@ -1,0 +1,36 @@
+{
+    "id": "4a86cce1-b4a3-4e6e-890a-8729b1b1a97d",
+    "started_at": "2026-05-12T23:30:41.632381",
+    "finished_at": "2026-05-13T00:29:41.253043",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Sales-Pivot-Analysis": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "product-sales-pivot__RxivG3v",
+                            "student-performance-pivot__vBCZjVR",
+                            "library-circulation-pivot__T9WAEde",
+                            "inventory-multi-warehouse-pivot__NBEbay6",
+                            "quality-control-pivot__XN5YdGf",
+                            "employee-compensation-pivot__ecEj3u9",
+                            "event-registration-pivot__hjU6YC4",
+                            "budget-reconciliation-pivot__deTLtWz"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

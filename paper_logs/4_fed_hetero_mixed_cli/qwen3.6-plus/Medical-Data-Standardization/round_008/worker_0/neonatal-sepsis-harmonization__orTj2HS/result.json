@@ -1,0 +1,104 @@
+{
+    "id": "055ee01d-8a0a-4e39-9873-35b357cc5ec2",
+    "task_name": "neonatal-sepsis-harmonization",
+    "trial_name": "neonatal-sepsis-harmonization__orTj2HS",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/round_008/worker_0/neonatal-sepsis-harmonization__orTj2HS",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Medical-Data-Standardization/neonatal-sepsis-harmonization"
+    },
+    "source": "Medical-Data-Standardization",
+    "task_checksum": "d7698a03b4c075eda4673b8c6b04d6be2c0c2f68152c37deb88e61de09d75ea1",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Medical-Data-Standardization/neonatal-sepsis-harmonization",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Medical-Data-Standardization"
+        },
+        "trial_name": "neonatal-sepsis-harmonization__orTj2HS",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/round_008/worker_0",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallQwenCode",
+            "model_name": "qwen3.6-plus",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "OPENAI_API_KEY": "<REDACTED>",
+                "OPENAI_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1",
+                "OPENAI_MODEL": "qwen3.6-plus"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Medical-Data-Standardization/worker_skills/u0"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "1358f0b9-6812-4d79-9571-ade8a1cf0c7f"
+    },
+    "agent_info": {
+        "name": "qwen-coder",
+        "version": "\u001b[4m>>>> Executing external compose provider \"/usr/libexec/docker/cli-plugins/docker-compose\". Please see podman-compose(1) for how to disable this message. <<<<\n\n\u001b[0m0.15.2",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 277590,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 11570,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-18T06:43:06.897601Z",
+    "finished_at": "2026-05-18T06:47:39.723928Z",
+    "environment_setup": {
+        "started_at": "2026-05-18T06:43:06.898240Z",
+        "finished_at": "2026-05-18T06:43:08.816884Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-18T06:43:08.816927Z",
+        "finished_at": "2026-05-18T06:43:10.427454Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-18T06:43:10.427558Z",
+        "finished_at": "2026-05-18T06:47:25.828864Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-18T06:47:25.832470Z",
+        "finished_at": "2026-05-18T06:47:27.840432Z"
+    }
+}

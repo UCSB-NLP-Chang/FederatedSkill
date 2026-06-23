@@ -1,0 +1,29 @@
+{
+    "id": "0afbc5df-e636-4f48-bd38-200e89c0aca1",
+    "started_at": "2026-05-13T22:37:41.452243",
+    "finished_at": "2026-05-13T22:45:18.240645",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "lattice_deferred_revenue_rollfor__REs4789"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

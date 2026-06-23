@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.3333333333333333,
+  "summary": "Updated statistical-process-analysis/SKILL.md to strongly mandate using the bundled compute_spc.py script and explicitly forbid rounding/formatting of numeric outputs. The trace shows the agent wrote a custom script that rounded metrics, causing verifier tolerance failures. Added a 'Critical Rules' section to prevent this anti-pattern and improve verifier pass rates.",
+  "upsert_paths": [
+    "statistical-process-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

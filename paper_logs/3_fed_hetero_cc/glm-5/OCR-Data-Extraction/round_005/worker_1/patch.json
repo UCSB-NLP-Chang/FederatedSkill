@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "Extended image-data-extraction skill to support multi-sheet Excel output with line item extraction and project aggregation. The construction measurement task revealed gaps in the existing skill: extracting tabular line items from forms, creating multiple sheets (details + summary), and aggregating data by project code. Added new sub-task section and reference patterns for this use case.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/construction-patterns.md"
+  ],
+  "delete_paths": []
+}

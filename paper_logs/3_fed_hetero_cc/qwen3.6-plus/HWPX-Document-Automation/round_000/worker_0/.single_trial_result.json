@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "hwpx-supplier-contact-sheet__PK7LsrE",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/round_000/worker_0/hwpx-supplier-contact-sheet__PK7LsrE",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/HWPX-Document-Automation/round_000/worker_0/hwpx-supplier-contact-sheet__PK7LsrE",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

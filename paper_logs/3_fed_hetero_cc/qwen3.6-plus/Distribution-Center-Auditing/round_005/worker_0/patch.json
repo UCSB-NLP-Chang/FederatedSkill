@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.4,
+  "summary": "Updated spreadsheet-audit-reporting skill to include cross-file matching, alias normalization patterns, reinforced default sheet deletion timing, and added harbor-returns-disposition-audit invariant based on trace failures and successful resolution.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": []
+}

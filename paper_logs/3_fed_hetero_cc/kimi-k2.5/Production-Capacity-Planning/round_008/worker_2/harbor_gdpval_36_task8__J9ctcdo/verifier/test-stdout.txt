@@ -1,0 +1,65 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: F.                                                                       [100%]
+E           =================================== FAILURES ===================================
+E           __________________________ test_plan_math_and_policy ___________________________
+E           
+E               def test_plan_math_and_policy():
+E                   ref_demands = load_reference_demands()
+E                   rows = load_plan_rows()
+E               
+E                   expected_phases = list(range(PHASE_START, PHASE_END + 1))
+E                   actual_phases = [r[0] for r in rows]
+E                   assert actual_phases == expected_phases, "Phases must be continuous from 10 to 58 with no gaps"
+E               
+E                   calc_start = INITIAL_PHASE10_TOTAL - ref_demands[PHASE_START]
+E                   prev_end = None
+E                   for idx, (phase, days, demand, capacity, start_past_due, end_backlog_buffer, overtime) in enumerate(rows):
+E                       assert days in {4, 5, 6}, f"Phase {phase}: days must be one of 4/5/6"
+E               
+E                       # Demand must match reference data (first valid occurrence deduplicated).
+E                       assert abs(demand - ref_demands[phase]) <= 0.01, (
+E                           f"Phase {phase}: demand {demand} does not match reference {ref_demands[phase]}"
+E                       )
+E               
+E                       # Phase 10 initial condition.
+E                       if phase == PHASE_START:
+E           >               assert abs(start_past_due + demand - INITIAL_PHASE10_TOTAL) <= 0.01, (
+E                               "Phase 10 must satisfy Start of Phase Past Due + Scheduled Demand = 1453.06"
+E                           )
+E           E               AssertionError: Phase 10 must satisfy Start of Phase Past Due + Scheduled Demand = 1453.06
+E           E               assert 253.05999999999995 <= 0.01
+E           E                +  where 253.05999999999995 = abs(((1453.06 + 253.06) - 1453.06))
+E           
+E           /tests/test_outputs.py:116: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_plan_math_and_policy - AssertionError: ...
+E           1 failed, 1 passed in 0.11s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: F....
+============================== 1 failed in 0.31s ===============================

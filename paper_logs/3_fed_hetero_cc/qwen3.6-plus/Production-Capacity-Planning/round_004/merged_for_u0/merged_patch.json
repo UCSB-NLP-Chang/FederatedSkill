@@ -1,0 +1,33 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u2's validated patch wholesale for duplicate handling (first occurrence) + PCB assembly invariants. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "delete_paths": [
+    "excel-capacity-planning/references/excel-layouts.md"
+  ],
+  "provenance": {
+    "excel-capacity-planning/references/excel-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/references/excel-layouts.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md"
+  ],
+  "cost_usd": 0.5238075
+}

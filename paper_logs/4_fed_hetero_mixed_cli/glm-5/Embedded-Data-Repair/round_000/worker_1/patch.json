@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Creates a skill for editing embedded Office documents (like Excel workbooks inside PowerPoint presentations) by manipulating the underlying ZIP/XML structure, which the agent successfully used to update an FX rate matrix.",
+  "upsert_paths": [
+    "edit-embedded-office-documents/SKILL.md"
+  ],
+  "delete_paths": []
+}

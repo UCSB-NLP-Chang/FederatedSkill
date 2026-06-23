@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Merged u0's ElementTree anti-patterns + u2's validated buAutoNum/clone content into concise qwen-style library. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/pptx-structure.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.8888888888888888
+    ],
+    "pptx-xml-editing/references/pptx-structure.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/pptx-structure.md"
+  ],
+  "cost_usd": 2.99886
+}

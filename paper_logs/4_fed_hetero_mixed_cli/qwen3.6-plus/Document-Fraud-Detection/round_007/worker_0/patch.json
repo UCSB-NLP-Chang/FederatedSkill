@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Added explicit PDF page deduplication rule (highest revision, then later page) to the parsing workflow, updated the skill description to include clinical trial releases, and appended a Clinical Trial Participant Release Audit domain example to references covering nested JSON award catalogs and version-based amendment overrides.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/domain-examples.md"
+  ],
+  "delete_paths": []
+}

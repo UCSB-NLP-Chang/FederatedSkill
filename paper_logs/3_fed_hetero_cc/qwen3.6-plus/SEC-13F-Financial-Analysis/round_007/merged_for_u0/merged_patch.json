@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's alert-processing patch (template-filling workflow + troubleshooting table) to address B8 gap. Kept baseline for fund-analysis (peer patches have cross-model contamination issues). See DECISIONS.md for detailed reasoning.",
+  "upsert_paths": [
+    "sec-13f-alert-processing/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-alert-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.6769500000000002
+}

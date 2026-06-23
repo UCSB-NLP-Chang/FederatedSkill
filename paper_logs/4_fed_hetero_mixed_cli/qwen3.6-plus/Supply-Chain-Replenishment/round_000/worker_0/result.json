@@ -1,0 +1,29 @@
+{
+    "id": "83f19f62-3722-48fc-b309-943a80cf44c1",
+    "started_at": "2026-05-23T22:28:52.160128",
+    "finished_at": "2026-05-23T22:31:22.855942",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "snack_dc_august_load_plan__pi3823f"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

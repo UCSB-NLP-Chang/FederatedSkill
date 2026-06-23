@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "The trace revealed a critical gap in handling ambiguous date formats (DD/MM/YYYY vs MM/DD/YYYY) within the same document batch, and invoice-specific total label variations. The agent initially failed on inv_014.jpg (02/14/2024) because it assumed DD/MM format, then fixed it by adding fallback to MM/DD when the first interpretation yields invalid dates. Updates add date disambiguation workflows and invoice total patterns to existing OCR skill.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/regex_patterns.md"
+  ],
+  "delete_paths": []
+}

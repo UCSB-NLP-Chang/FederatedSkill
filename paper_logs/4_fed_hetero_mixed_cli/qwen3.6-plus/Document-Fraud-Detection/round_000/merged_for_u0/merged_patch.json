@@ -1,0 +1,29 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Created 1 umbrella skill `expense-claims-validation` from u2's comprehensive patch (reward=1.0) + u1's Excel Read-tool anti-pattern + required skill-system sections. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "expense-claims-validation/SKILL.md",
+    "expense-claims-validation/references/fuzzy-matching-guide.md",
+    "expense-claims-validation/scripts/validate_claims.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "expense-claims-validation/references/fuzzy-matching-guide.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "expense-claims-validation/scripts/validate_claims.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "expense-claims-validation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.331822
+}

@@ -1,0 +1,38 @@
+{
+    "id": "44d1598c-c854-4ff9-81b6-d0a02cb14897",
+    "started_at": "2026-05-14T22:55:00.678955",
+    "finished_at": "2026-05-14T23:48:41.481584",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Operational-Recovery-Planning": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.25
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_dc_recovery_01__UXDtF6h",
+                            "new_task_3_returns_center_throug__uX3L6Dh",
+                            "harbor_gdpval_36__D8DRnJH",
+                            "harbor_wh_recovery_02__iFq3Wfu",
+                            "harbor_ag_recovery_03__Na44Lzc",
+                            "harbor_gdpval_41__GXjLgGa"
+                        ],
+                        "1.0": [
+                            "new_task_2_radiology_reading_bac__8DHdMAH",
+                            "new_task_1_soc_alert_recovery__HhkMMpQ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

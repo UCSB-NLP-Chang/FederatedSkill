@@ -1,0 +1,38 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Renamed skill to match peers (edit-embedded-excel), synthesized fix addressing cached <v> value handling root cause with matrix-match precision. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md",
+    "edit-embedded-excel/references/openpyxl_cell_types.md"
+  ],
+  "delete_paths": [
+    "embedded-excel-edit/SKILL.md",
+    "embedded-excel-edit/references/openpyxl_cell_types.md"
+  ],
+  "provenance": {
+    "embedded-excel-edit/references/openpyxl_cell_types.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "embedded-excel-edit/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ],
+    "edit-embedded-excel/references/openpyxl_cell_types.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "cost_usd": 0.4202675999999999
+}

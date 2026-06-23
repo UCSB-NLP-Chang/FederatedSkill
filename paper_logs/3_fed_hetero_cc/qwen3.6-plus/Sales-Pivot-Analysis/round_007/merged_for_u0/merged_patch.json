@@ -1,0 +1,29 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 R7 merge complete for u0 (qwen3.6-plus). Applied u1's SKILL.md (B1-BudgetReconciliation domain variant), u0's budget reference/script, added pivot column casing enforcement. Rejected u2's new skill (fragmentation anti-pattern). Library: 1 umbrella + 2 scripts + 2 references. See DECISIONS.md.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md",
+    "sales-pivot-analysis/references/budget-reconciliation-patterns.md",
+    "sales-pivot-analysis/scripts/wide_to_long_budget.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.9047619047619048
+    ],
+    "sales-pivot-analysis/scripts/wide_to_long_budget.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8571428571428571
+    ],
+    "sales-pivot-analysis/references/budget-reconciliation-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8571428571428571
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.5895797999999999
+}

@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "neonatal-sepsis-harmonization__4DrNwSa",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/round_008/worker_1/neonatal-sepsis-harmonization__4DrNwSa",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/round_008/worker_1/neonatal-sepsis-harmonization__4DrNwSa",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

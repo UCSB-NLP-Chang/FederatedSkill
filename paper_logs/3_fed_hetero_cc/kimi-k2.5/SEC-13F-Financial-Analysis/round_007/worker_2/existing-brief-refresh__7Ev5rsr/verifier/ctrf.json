@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779222118.7790728,
+            "stop": 1779222118.9811316
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.18362540192902088,
+                "start": 1779222118.7852144,
+                "stop": 1779222118.981011,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: .F                                                                       [100%]\nE           =================================== FAILURES ===================================\nE           _________________________________ test_answers _________________________________\nE           \nE               def test_answers():\nE                   actual = load_json(OUTPUT_FILE)\nE                   expected = load_json(GROUND_TRUTH)\nE                   ok, msg = json_close(actual, expected)\nE           >       assert ok, msg\nE           E       AssertionError: At key 'sections': At index 0: At key 'items': At index 0: At key 'aum': Numeric mismatch: 75753182516 vs 1252307416.0 (tol=0.01)\nE           E       assert False\nE           \nE           /tests/test_outputs.py:49: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_answers - AssertionError: At key 'secti...\nE           1 failed, 1 passed in 0.02s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "id": "266075fb-dd60-40fd-a779-370a885273ae",
+    "task_name": "07_airline_crew_model",
+    "trial_name": "07_airline_crew_model__AdkBxto",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Compensation-Scenario-Modeling/round_006/worker_1/07_airline_crew_model__AdkBxto",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Compensation-Scenario-Modeling/07_airline_crew_model"
+    },
+    "source": "Compensation-Scenario-Modeling",
+    "task_checksum": "d5ba35b28eed09afe2b460297cb44c01468a9f5e8608e957a8b246f87d7b68c0",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Compensation-Scenario-Modeling/07_airline_crew_model",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Compensation-Scenario-Modeling"
+        },
+        "trial_name": "07_airline_crew_model__AdkBxto",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Compensation-Scenario-Modeling/round_006/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Compensation-Scenario-Modeling/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "e76cb0b2-3ec3-46c8-a463-78774923e7a0"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 635243,
+        "n_cache_tokens": 428723,
+        "n_output_tokens": 13725,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-18T06:22:43.831130Z",
+    "finished_at": "2026-05-18T06:29:50.103341Z",
+    "environment_setup": {
+        "started_at": "2026-05-18T06:22:43.831768Z",
+        "finished_at": "2026-05-18T06:22:45.792402Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-18T06:22:45.792443Z",
+        "finished_at": "2026-05-18T06:22:46.410864Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-18T06:22:46.410959Z",
+        "finished_at": "2026-05-18T06:29:34.542648Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-18T06:29:34.548866Z",
+        "finished_at": "2026-05-18T06:29:37.807183Z"
+    }
+}

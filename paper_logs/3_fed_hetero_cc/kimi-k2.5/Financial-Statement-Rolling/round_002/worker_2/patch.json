@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.0,
+  "summary": "Update deferred-revenue-rollforward skill to cover warranty reserve rollforwards (accrual pattern with Incurred/Paid columns). Add reference for warranty-specific data filtering (active/archived records) and account mapping JSON patterns. Fix verify_workbook.py to handle both 'Deferred' and 'Warranty' summary sheet naming.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/warranty_reserve_variant.md",
+    "deferred-revenue-rollforward/scripts/verify_workbook.py"
+  ],
+  "delete_paths": []
+}

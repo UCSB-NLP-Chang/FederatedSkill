@@ -1,0 +1,37 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) R5. Created `excel-formula-automation` skill with blocking validation script for `$` reference locking (the #1 gap from R2\u2013R5). Consolidated peer insights, aligned with peer naming consensus. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-automation/SKILL.md",
+    "excel-formula-automation/references/locking-patterns.md",
+    "excel-formula-automation/scripts/openpyxl_safe_ops.py",
+    "excel-formula-automation/scripts/validate_references.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-automation/references/locking-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-automation/scripts/validate_references.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-automation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-automation/scripts/openpyxl_safe_ops.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-formula-automation/SKILL.md"
+  ],
+  "cost_usd": 1.7547840000000003
+}

@@ -1,0 +1,38 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Applied u1's validated SKILL.md (reward=1.0) for B6 coverage, added batched-extraction-patterns.md reference, renamed tabular-form-patterns.md \u2192 construction-measurement-patterns.md for peer alignment. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/batched-extraction-patterns.md",
+    "image-data-extraction/references/construction-measurement-patterns.md"
+  ],
+  "delete_paths": [
+    "image-data-extraction/references/tabular-form-patterns.md"
+  ],
+  "provenance": {
+    "image-data-extraction/references/construction-measurement-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "image-data-extraction/references/batched-extraction-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/references/tabular-form-patterns.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md"
+  ],
+  "cost_usd": 0.7328121000000001
+}

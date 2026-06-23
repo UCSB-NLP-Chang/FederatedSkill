@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DMAIC Analysis Metrics",
+  "description": "Schema for SOC/DMAIC statistical analysis output",
+  "type": "object",
+  "required": [
+    "source_file",
+    "filters",
+    "record_counts",
+    "charter_metrics",
+    "anova_by_weekday",
+    "imr_summary",
+    "regression_day_index",
+    "ttest_vs_target",
+    "capability_against_lsl"
+  ],
+  "properties": {
+    "source_file": {
+      "type": "string",
+      "description": "Name of input data file"
+    },
+    "filters": {
+      "type": "object",
+      "required": ["primary_analysis_window", "imr_window"],
+      "properties": {
+        "primary_analysis_window": {
+          "type": "string",
+          "pattern": "\\d{4}-\\d{2}-\\d{2} to \\d{4}-\\d{2}-\\d{2}.*"
+        },
+        "imr_window": {
+          "type": "string",
+          "pattern": "\\d{4}-\\d{2}-\\d{2} to \\d{4}-\\d{2}-\\d{2}.*"
+        }
+      }
+    },
+    "record_counts": {
+      "type": "object",
+      "required": ["total_records", "primary_business_days", "imr_business_days"],
+      "properties": {
+        "total_records": { "type": "integer", "minimum": 0 },
+        "primary_business_days": { "type": "integer", "minimum": 0 },
+        "imr_business_days": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "charter_metrics": {
+      "type": "object",
+      "required": ["baseline_value", "target_value", "current_mean_value"],
+      "properties": {
+        "baseline_value": { "type": "number" },
+        "target_value": { "type": "number" },
+        "current_mean_value": { "type": "number" }
+      }
+    },
+    "anova_by_weekday": {
+      "type": "object",
+      "required": ["weekday_means", "p_value", "highest_mean_day", "lowest_mean_day"],
+      "properties": {
+        "weekday_means": {
+          "type": "object",
+          "additionalProperties": { "type": "number" }
+        },
+        "p_value": { "type": "number", "minimum": 0, "maximum": 1 },
+        "highest_mean_day": { "type": "string", "enum": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] },
+        "lowest_mean_day": { "type": "string", "enum": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] }
+      }
+    },
+    "imr_summary": {
+      "type": "object",
+      "required": ["points", "center_line", "ucl", "lcl", "mr_bar", "mr_ucl"],
+      "properties": {
+        "points": { "type": "integer", "minimum": 0 },
+        "center_line": { "type": "number" },
+        "ucl": { "type": "number" },
+        "lcl": { "type": "number" },
+        "mr_bar": { "type": "number" },
+        "mr_ucl": { "type": "number" }
+      }
+    },
+    "regression_day_index": {
+      "type": "object",
+      "required": ["slope", "intercept", "r_value", "p_value"],
+      "properties": {
+        "slope": { "type": "number" },
+        "intercept": { "type": "number" },
+        "r_value": { "type": "number", "minimum": 0 },
+        "p_value": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "ttest_vs_target": {
+      "type": "object",
+      "required": ["n", "mean_value", "t_stat", "p_value", "ci95_low", "ci95_high", "decision"],
+      "properties": {
+        "n": { "type": "integer", "minimum": 1 },
+        "mean_value": { "type": "number" },
+        "t_stat": { "type": "number" },
+        "p_value": { "type": "number", "minimum": 0, "maximum": 1 },
+        "ci95_low": { "type": "number" },
+        "ci95_high": { "type": "number" },
+        "decision": { "type": "string", "enum": ["reject_h0", "fail_to_reject"] }
+      }
+    },
+    "capability_against_lsl": {
+      "type": "object",
+      "required": ["lsl", "std_dev_sample", "cpk_lower"],
+      "properties": {
+        "lsl": { "type": "number" },
+        "std_dev_sample": { "type": "number", "minimum": 0 },
+        "cpk_lower": { "type": "number" }
+      }
+    }
+  }
+}

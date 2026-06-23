@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Creates a skill for working with HWPX (Hancom Office) document files, covering the ZIP-based structure, placeholder replacement, and critical layout cache handling that the agent discovered through successful execution.",
+  "upsert_paths": [
+    "hwpx-document-processing/SKILL.md",
+    "hwpx-document-processing/scripts/hwpx_fill_template.py"
+  ],
+  "delete_paths": []
+}

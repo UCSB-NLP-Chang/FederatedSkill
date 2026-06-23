@@ -1,0 +1,91 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: FF                                                                       [100%]
+E           =================================== FAILURES ===================================
+E           __________________________ test_plan_math_and_policy ___________________________
+E           
+E               def test_plan_math_and_policy():
+E                   ref = load_reference_demands(CONFIG)
+E                   rows = load_plan_rows(CONFIG)
+E                   expected_weeks = list(range(CONFIG['week_start'], CONFIG['week_end'] + 1))
+E                   actual_weeks = [r[0] for r in rows]
+E                   assert actual_weeks == expected_weeks, 'Weeks must be continuous and ordered.'
+E                   calc_start = round(CONFIG['initial_total'] - ref[CONFIG['week_start']], 2)
+E                   prev_end = None
+E                   seen = set()
+E                   for week, days, demand, capacity, start_queue, end_queue, overtime in rows:
+E                       seen.add(days)
+E                       assert days in {4, 5, 6}, f"Week {week}: invalid days {days}"
+E                       assert abs(demand - ref[week]) <= 0.01, f"Week {week}: demand mismatch"
+E                       if week == CONFIG['week_start']:
+E                           assert abs(start_queue + demand - CONFIG['initial_total']) <= 0.01
+E                       if prev_end is not None:
+E                           assert abs(calc_start - prev_end) <= 0.01
+E                       assert abs(start_queue - max(0.0, calc_start)) <= 0.01
+E                       assert abs(capacity - CONFIG['rate_per_day'] * days) <= 0.01
+E                       expected_end = round(calc_start + demand - capacity, 2)
+E           >           assert abs(end_queue - expected_end) <= 0.01
+E           E           assert 96.25 <= 0.01
+E           E            +  where 96.25 = abs((408.8 - 312.55))
+E           
+E           /tests/test_outputs.py:126: AssertionError
+E           ______________________________ test_summary_file _______________________________
+E           
+E               def test_summary_file():
+E                   summary_file = Path(CONFIG['output_summary'])
+E                   assert summary_file.exists(), f"Summary file missing: {summary_file}"
+E                   rows = load_plan_rows(CONFIG)
+E                   fw5 = next((w for w, d, *_ in rows if d == 5), None)
+E                   fw4 = next((w for w, d, *_ in rows if d == 4), None)
+E                   w5 = str(fw5) if fw5 is not None else 'N/A'
+E                   w4 = str(fw4) if fw4 is not None else 'N/A'
+E               
+E                   content = summary_file.read_text(encoding='utf-8').strip()
+E                   lines = content.splitlines()
+E                   assert abs(len(lines) - 3) <= 1, 'Summary must contain approximately 3 lines (2-4).'
+E               
+E                   m5 = re.fullmatch(r'First_Week_5_Days:\s*(\d+|N/A)', lines[0].strip())
+E                   m4 = re.fullmatch(r'First_Week_4_Days:\s*(\d+|N/A)', lines[1].strip())
+E                   assert m5, 'Line 1 must match First_Week_5_Days: <week-or-N/A>'
+E                   assert m4, 'Line 2 must match First_Week_4_Days: <week-or-N/A>'
+E                   assert m5.group(1) == w5
+E                   assert m4.group(1) == w4
+E               
+E           >       assert lines[2].startswith('Summary: ')
+E           E       AssertionError: assert False
+E           E        +  where False = <built-in method startswith of str object at 0x7f77db59ef70>('Summary: ')
+E           E        +    where <built-in method startswith of str object at 0x7f77db59ef70> = 'Project PulseLift stabilizes backlog by Week 15, reaching 4-day staffing at Week 19. Milestone achieved through aggressive surge deployment transitioning to steady-state capacity.'.startswith
+E           
+E           /tests/test_outputs.py:155: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_plan_math_and_policy - assert 96.25 <= ...
+E           FAILED ../tests/test_outputs.py::test_summary_file - AssertionError: assert F...
+E           2 failed in 0.18s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: FF...
+============================== 1 failed in 0.41s ===============================

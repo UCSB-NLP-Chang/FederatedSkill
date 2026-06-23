@@ -1,0 +1,31 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete: Applied u1's SKILL.md wholesale (target's own verified patch) + absorbed u2's orthogonal enhancements (compute_diff.py CLI flags, domain_mapping.md, pre-comparison validation, python3 guidance). Skipped u0's restructure (different model+CLI style). See DECISIONS.md.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md",
+    "dataset-diff/scripts/compute_diff.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "dataset-diff/scripts/compute_diff.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md"
+  ],
+  "cost_usd": 6.320072999999999
+}

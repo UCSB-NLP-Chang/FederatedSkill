@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Adds prepaid-expense-amortization skill for running-balance rollforwards from flat CSV, fixes verifier false-positive on same-row-different-column references, and updates financial-rollforward-workbook to route prepaid tasks correctly.",
+  "upsert_paths": [
+    "financial-rollforward-workbook/SKILL.md",
+    "financial-rollforward-workbook/scripts/verify_workbook.py",
+    "prepaid-expense-amortization/SKILL.md"
+  ],
+  "delete_paths": []
+}

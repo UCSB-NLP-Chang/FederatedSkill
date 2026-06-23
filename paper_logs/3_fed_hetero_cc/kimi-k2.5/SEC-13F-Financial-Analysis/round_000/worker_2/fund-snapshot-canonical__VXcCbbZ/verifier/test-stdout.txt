@@ -1,0 +1,107 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ...FFFF                                                                  [100%]
+E           =================================== FAILURES ===================================
+E           __________________________ test_stock_holdings_count ___________________________
+E           
+E               def test_stock_holdings_count():
+E                   """Verify stock holdings count is reasonable."""
+E                   answers = load_json(OUTPUT_FILE)
+E                   gt = load_json(GROUND_TRUTH)
+E               
+E                   # Allow some tolerance for counting
+E                   count_diff = abs(answers['stock_holdings'] - gt['stock_holdings'])
+E           >       assert count_diff <= 5, \
+E                       f"Stock holdings count too different: got {answers['stock_holdings']}, expected {gt['stock_holdings']} (diff={count_diff})"
+E           E       AssertionError: Stock holdings count too different: got 11, expected 450 (diff=439)
+E           E       assert 439 <= 5
+E           
+E           /tests/test_outputs.py:68: AssertionError
+E           _______________________________ test_aum_values ________________________________
+E           
+E               def test_aum_values():
+E                   """Verify AUM calculations."""
+E                   answers = load_json(OUTPUT_FILE)
+E                   gt = load_json(GROUND_TRUTH)
+E               
+E                   # Check total AUM
+E                   aum_diff = abs(answers['aum'] - gt['aum'])
+E                   assert aum_diff < 1e-3, \
+E                       f"AUM mismatch: got {answers['aum']}, expected {gt['aum']} (diff={aum_diff})"
+E               
+E                   # Check stock AUM
+E                   stock_aum_diff = abs(answers['stock_aum'] - gt['stock_aum'])
+E           >       assert stock_aum_diff < 1e-3, \
+E                       f"Stock AUM mismatch: got {answers['stock_aum']}, expected {gt['stock_aum']} (diff={stock_aum_diff})"
+E           E       AssertionError: Stock AUM mismatch: got 20355901, expected 1015027364.0 (diff=994671463.0)
+E           E       assert 994671463.0 < 0.001
+E           
+E           /tests/test_outputs.py:84: AssertionError
+E           _______________________________ test_top3_cusips _______________________________
+E           
+E               def test_top3_cusips():
+E                   """Verify top 3 CUSIPs by value."""
+E                   answers = load_json(OUTPUT_FILE)
+E                   gt = load_json(GROUND_TRUTH)
+E               
+E                   # Check if top CUSIPs match (allowing some tolerance for ties)
+E           >       assert answers['top3_cusips_by_value'][0] == gt['top3_cusips_by_value'][0], \
+E                       f"Top CUSIP mismatch: got {answers['top3_cusips_by_value'][0]}, expected {gt['top3_cusips_by_value'][0]}"
+E           E       AssertionError: Top CUSIP mismatch: got 76655K103, expected 67066G104
+E           E       assert '76655K103' == '67066G104'
+E           E         
+E           E         - 67066G104
+E           E         + 76655K103
+E           
+E           /tests/test_outputs.py:94: AssertionError
+E           _______________________________ test_full_output _______________________________
+E           
+E               def test_full_output():
+E                   """Final comprehensive check against ground truth."""
+E                   answers = load_json(OUTPUT_FILE)
+E                   gt = load_json(GROUND_TRUTH)
+E               
+E                   assert answers['fund_query'] == gt['fund_query']
+E                   assert answers['quarter'] == gt['quarter']
+E                   assert answers['matched_manager'] == gt['matched_manager']
+E                   assert answers['accession_number'] == gt['accession_number']
+E                   assert abs(answers['aum'] - gt['aum']) < 1e-3
+E           >       assert abs(answers['stock_holdings'] - gt['stock_holdings']) <= 5
+E           E       assert 439 <= 5
+E           E        +  where 439 = abs((11 - 450))
+E           
+E           /tests/test_outputs.py:113: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_stock_holdings_count - AssertionError: ...
+E           FAILED ../tests/test_outputs.py::test_aum_values - AssertionError: Stock AUM ...
+E           FAILED ../tests/test_outputs.py::test_top3_cusips - AssertionError: Top CUSIP...
+E           FAILED ../tests/test_outputs.py::test_full_output - assert 439 <= 5
+E           4 failed, 3 passed in 0.04s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.23s ===============================

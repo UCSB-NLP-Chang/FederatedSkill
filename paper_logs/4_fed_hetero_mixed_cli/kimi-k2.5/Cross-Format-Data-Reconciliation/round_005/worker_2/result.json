@@ -1,0 +1,29 @@
+{
+    "id": "7703b736-4ce8-4255-909f-5254339ac11d",
+    "started_at": "2026-05-18T01:09:03.565740",
+    "finished_at": "2026-05-18T01:11:45.520229",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "06-hospital-medication-reconcili__xohZHbZ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

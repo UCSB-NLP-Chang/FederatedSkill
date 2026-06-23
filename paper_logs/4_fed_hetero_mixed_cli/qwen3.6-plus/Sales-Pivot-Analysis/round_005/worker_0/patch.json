@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8823529411764706,
+  "summary": "Added Employee Compensation/HR domain to the existing sales-pivot-report skill. The trace shows a new domain variant (PDF department directory + CSV employee data) that follows the same pivot report pattern. Updated domain adaptation table, known invariants, and generalized the openpyxl.chart import anti-pattern to cover PivotTable variants. Reinforced pdftotext -layout flag for structured PDF extraction.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

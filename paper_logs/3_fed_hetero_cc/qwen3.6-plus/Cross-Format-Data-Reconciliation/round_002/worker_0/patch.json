@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updates the cross-format-data-diff skill to address a critical type-mismatch bug observed in the trace: pdfplumber extracts all cells as strings, causing direct != comparisons against pandas numeric types to yield false positives. Adds a safe_equal helper to references and explicit type-normalization rules to SKILL.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": []
+}

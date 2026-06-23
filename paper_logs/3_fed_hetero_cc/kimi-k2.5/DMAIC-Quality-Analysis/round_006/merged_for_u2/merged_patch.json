@@ -1,0 +1,43 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R6. Created 2 skills: pipeline-performance-analysis (peer-aligned name, CLI script with pure numpy, no rounding) and tool-name-hygiene (kimi-specific whitespace failure mode). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pipeline-performance-analysis/SKILL.md",
+    "pipeline-performance-analysis/references/output_schema.md",
+    "pipeline-performance-analysis/scripts/analyze_pipeline.py",
+    "pipeline-performance-analysis/scripts/wilson_ci.py",
+    "tool-name-hygiene/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pipeline-performance-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.25
+    ],
+    "pipeline-performance-analysis/scripts/wilson_ci.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.25
+    ],
+    "tool-name-hygiene/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.25
+    ],
+    "pipeline-performance-analysis/scripts/analyze_pipeline.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "pipeline-performance-analysis/references/output_schema.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "pipeline-performance-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.14998
+}

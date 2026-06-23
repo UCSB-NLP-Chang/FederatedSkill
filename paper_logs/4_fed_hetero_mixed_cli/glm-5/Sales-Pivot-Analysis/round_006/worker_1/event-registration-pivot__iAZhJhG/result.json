@@ -1,0 +1,104 @@
+{
+    "id": "b00bf2f3-a930-46fe-876a-f9a4ac3eb57e",
+    "task_name": "event-registration-pivot",
+    "trial_name": "event-registration-pivot__iAZhJhG",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Sales-Pivot-Analysis/round_006/worker_1/event-registration-pivot__iAZhJhG",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Sales-Pivot-Analysis/event-registration-pivot"
+    },
+    "source": "Sales-Pivot-Analysis",
+    "task_checksum": "339fc2eb5fd86d81109729f48894b1f2508d74bb3a5105f0a89da102cfee0111",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Sales-Pivot-Analysis/event-registration-pivot",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Sales-Pivot-Analysis"
+        },
+        "trial_name": "event-registration-pivot__iAZhJhG",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Sales-Pivot-Analysis/round_006/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Sales-Pivot-Analysis/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "2d5cf6c1-da89-4d23-bbd3-a3945a303196"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 421115,
+        "n_cache_tokens": 357760,
+        "n_output_tokens": 3107,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-18T11:14:09.950365Z",
+    "finished_at": "2026-05-18T11:16:35.066558Z",
+    "environment_setup": {
+        "started_at": "2026-05-18T11:14:09.950962Z",
+        "finished_at": "2026-05-18T11:14:13.358052Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-18T11:14:13.358097Z",
+        "finished_at": "2026-05-18T11:14:13.846419Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-18T11:14:13.846522Z",
+        "finished_at": "2026-05-18T11:16:21.389352Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-18T11:16:21.397824Z",
+        "finished_at": "2026-05-18T11:16:23.222724Z"
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. u2's library updated: SKILL.md condensed from 447\u2192283 lines (u1 base + u0 ZIP lifecycle pattern), pptx_helpers.py with safe_pptx_modify(), csv-text-standardization.md with edge cases. See DECISIONS.md.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/csv-text-standardization.md",
+    "pptx-xml-editing/scripts/pptx_helpers.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/references/csv-text-standardization.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8888888888888888
+    ],
+    "pptx-xml-editing/scripts/pptx_helpers.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "cost_usd": 3.888387
+}

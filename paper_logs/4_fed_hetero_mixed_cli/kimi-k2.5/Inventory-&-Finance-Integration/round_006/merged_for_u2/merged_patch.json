@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Applied u2's verified freshness patch (reward=1.0) to excel-openpyxl-processing, synthesized u1's inclusive date counting insight as universal rule. B2 financial-reconciliation unchanged. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-openpyxl-processing/SKILL.md",
+    "excel-openpyxl-processing/references/code-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-openpyxl-processing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "excel-openpyxl-processing/references/code-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.206041
+}

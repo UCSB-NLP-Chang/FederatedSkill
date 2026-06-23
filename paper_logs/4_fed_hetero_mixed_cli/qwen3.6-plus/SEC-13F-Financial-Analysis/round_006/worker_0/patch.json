@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Fix brittle CUSIP validation in issuer_rollup.py that incorrectly classified 9-letter issuer names (e.g., 'MICROSOFT') as CUSIPs, causing immediate lookup failures. Added a digit requirement to the CUSIP regex and implemented an automatic fallback to issuer-name grep when a presumed CUSIP yields no holdings. This prevents future agents from needing manual grep workarounds.",
+  "upsert_paths": [
+    "sec-13f-analysis/scripts/issuer_rollup.py"
+  ],
+  "delete_paths": []
+}

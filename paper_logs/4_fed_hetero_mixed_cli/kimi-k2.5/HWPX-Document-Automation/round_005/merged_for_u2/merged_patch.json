@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u2's SKILL.md and value-preprocessing.md (target's validated patches), u1's fill_hwpx.py (critical linesegarray regex bug fix). All workers reward=1.0, no gaps. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md",
+    "hwpx-template-fill/references/value-preprocessing.md",
+    "hwpx-template-fill/scripts/fill_hwpx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "hwpx-template-fill/scripts/fill_hwpx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "hwpx-template-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "hwpx-template-fill/references/value-preprocessing.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "hwpx-template-fill/references/value-preprocessing.md"
+  ],
+  "cost_usd": 1.701861
+}

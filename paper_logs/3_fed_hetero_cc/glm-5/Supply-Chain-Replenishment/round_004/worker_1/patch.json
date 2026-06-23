@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace reveals a new data variant (branch-stock-transfer-schedule) that follows the same coverage analysis workflow but with different sheet names, status values, and a deduplication requirement for transfer IDs. Updating the existing skill to document this variant prevents future agents from re-discovering these patterns.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md",
+    "supply-chain-coverage-analysis/references/calculation-formulas.md"
+  ],
+  "delete_paths": []
+}

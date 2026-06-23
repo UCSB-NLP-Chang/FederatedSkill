@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "thyroid-monitoring-harmonization__H8XuwcD",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/round_002/worker_2/thyroid-monitoring-harmonization__H8XuwcD",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi6-glm-M3-hetero/Medical-Data-Standardization/round_002/worker_2/thyroid-monitoring-harmonization__H8XuwcD",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

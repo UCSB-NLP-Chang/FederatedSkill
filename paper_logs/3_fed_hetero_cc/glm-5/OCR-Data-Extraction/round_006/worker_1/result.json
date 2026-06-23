@@ -1,0 +1,29 @@
+{
+    "id": "00298334-fd66-4d27-8c76-421e28c31cbb",
+    "started_at": "2026-05-13T15:46:55.865153",
+    "finished_at": "2026-05-13T16:07:53.024059",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "task_family_nested_fuel_packets__8sM63uG"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

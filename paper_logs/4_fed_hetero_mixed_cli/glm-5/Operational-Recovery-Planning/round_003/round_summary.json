@@ -1,0 +1,30 @@
+{
+  "round_idx": 3,
+  "assignments": [
+    [
+      "u0",
+      "new_task_3_returns_center_throughput"
+    ],
+    [
+      "u1",
+      "new_task_3_returns_center_throughput"
+    ],
+    [
+      "u2",
+      "new_task_3_returns_center_throughput"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 998.45521235466
+}

@@ -1,0 +1,29 @@
+{
+    "id": "0ec16db0-6360-4e74-8c27-9fa6f3bd267e",
+    "started_at": "2026-05-14T21:12:20.895461",
+    "finished_at": "2026-05-14T21:21:40.561201",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "07_airline_crew_model__t7WSe3d"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

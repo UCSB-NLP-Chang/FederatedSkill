@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus). Applied u0's lean patch + integrated R3 patterns from u1/u2 (release_status filtering, monthly aggregation) in compact format. Final SKILL.md: 69 lines (lean style proven for qwen). See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.710671
+}

@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE \u2014 R5 u2 merge complete. Merged u1's verified B4 multi-item extraction workflow (reward=1.0) into u2's library. Target had gap on B4 due to max_tokens infrastructure failure. Added: Multi-Item Extraction section, context-aware quantity extraction patterns, multi-item deduplication, B4 invariants. Maintained kimi's preferred table-driven style. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "ocr-data-extraction/references/parsing_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "ocr-data-extraction/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/parsing_patterns.md"
+  ],
+  "cost_usd": 5.067726
+}

@@ -1,0 +1,37 @@
+{
+    "id": "341eb190-6c3c-4a19-b190-0f440f1489ca",
+    "started_at": "2026-05-10T22:58:22.393036",
+    "finished_at": "2026-05-10T23:38:17.666814",
+    "n_total_trials": 9,
+    "stats": {
+        "n_trials": 9,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Supply-Chain-Replenishment": {
+                "n_trials": 9,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "snack_dc_august_load_plan__TbCHaZo",
+                            "petcare_midmonth_pallet_gap__8DjbsLr",
+                            "bakery_weekly_commit_gap__McHJ9bd",
+                            "produce_lane_restock_gap__fn8jqWK",
+                            "clinic_branch_transfer_gap__AbCZX8v",
+                            "frozen_meal_tracker_refresh__mXJdVX6",
+                            "beauty_zone_alias_gap__G4oqthz",
+                            "household_route_tracker_refresh__scAexwK",
+                            "harbor_gdpval_21__nmpTWmp"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

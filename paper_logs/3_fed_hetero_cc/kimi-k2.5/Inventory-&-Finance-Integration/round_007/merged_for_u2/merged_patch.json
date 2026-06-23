@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Applied u2's verified patch (reward=1.0) wholesale: extended excel-inventory-analysis with stochastic/fuel domain and safety buffer calculations. See DECISIONS.md for details. Rejected u0's patch (precision violation, reward=0.0). Library validated: 2 skills, no near-duplicates, under 4-skill cap.",
+  "upsert_paths": [
+    "excel-inventory-analysis/SKILL.md",
+    "excel-inventory-analysis/scripts/setup_and_load.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-inventory-analysis/scripts/setup_and_load.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "excel-inventory-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-inventory-analysis/SKILL.md",
+    "excel-inventory-analysis/scripts/setup_and_load.py"
+  ],
+  "cost_usd": 2.6750909999999997
+}

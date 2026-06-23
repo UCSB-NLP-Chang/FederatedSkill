@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.9047619047619048,
+  "summary": "The agent violated the existing 'do not hardcode PDF data' anti-pattern despite it being documented. Strengthening the enforcement with more prominent placement and adding budget-reconciliation as a new domain variant with wide-to-long transformation pattern, which was needed for this task.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

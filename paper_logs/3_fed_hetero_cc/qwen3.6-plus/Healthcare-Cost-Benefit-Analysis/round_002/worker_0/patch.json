@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updates cycle-margin-analysis SKILL.md to cover 28/56-day cycle variants, blister card packaging columns, and per-cycle reimbursement naming seen in recent tasks. Reinforces using the bundled script over inline Python and clarifies that per-cycle reimbursement math is identical to per-fill.",
+  "upsert_paths": [
+    "cycle-margin-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

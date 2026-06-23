@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.8888888888888888,
+  "summary": "The trace revealed a critical ZIP lifecycle bug: closing the input ZIP before reading all pass-through binary data, causing ValueError. The existing pptx-xml-editing skill warns against read/write same file but doesn't cover the 'read all data first, then close, then write' pattern. This patch adds a safe ZIP workflow template, a reusable helper script for the read-modify-write pattern, and explicit anti-pattern guidance to prevent this failure mode.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/scripts/pptx_helpers.py"
+  ],
+  "delete_paths": []
+}

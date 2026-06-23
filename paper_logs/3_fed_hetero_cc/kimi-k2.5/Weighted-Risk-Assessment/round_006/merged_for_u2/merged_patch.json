@@ -1,0 +1,38 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R6. Synthesized all 3 workers' patches addressing openpyxl evaluation gap: u2's pre-flight validation + MATCH mode=0, u0's verifier compatibility reference, u1's cross-row verification. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-automation/SKILL.md",
+    "excel-formula-automation/references/troubleshooting-index-match.md",
+    "excel-formula-automation/references/verifier-compatibility.md",
+    "excel-formula-automation/scripts/validate_data_sheet.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-automation/references/troubleshooting-index-match.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "excel-formula-automation/references/verifier-compatibility.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "excel-formula-automation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "excel-formula-automation/scripts/validate_data_sheet.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-formula-automation/SKILL.md",
+    "__skill_md_invalid__:excel-formula-automation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 5.003541000000001
+}

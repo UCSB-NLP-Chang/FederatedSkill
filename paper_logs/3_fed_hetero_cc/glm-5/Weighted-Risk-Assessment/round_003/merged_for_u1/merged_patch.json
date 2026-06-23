@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "R3 merge complete for u1 (glm-5): synthesized QUARTILE.INC param mapping + write-order safety from u0, deprecated function detection + port-throughput invariant from u2 into existing excel-formula-fill skill",
+  "upsert_paths": [
+    "excel-formula-fill/SKILL.md",
+    "excel-formula-fill/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-fill/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-fill/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 4.4130612000000005
+}

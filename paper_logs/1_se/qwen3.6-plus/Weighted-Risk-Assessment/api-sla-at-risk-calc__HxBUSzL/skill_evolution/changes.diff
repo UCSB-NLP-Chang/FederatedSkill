@@ -1,0 +1,32 @@
+--- a/excel-formula-population/SKILL.md
++++ b/excel-formula-population/SKILL.md
+@@ -18,6 +18,7 @@
+ 5. **Verify**:
+    - Reload the saved workbook.
+    - Extract all formula strings from target cells.
++   - **Statistics Range Check**: Explicitly verify that `MIN`, `MAX`, `MEDIAN`, `AVERAGE`, `PERCENTILE`, and `QUARTILE` reference multi-cell ranges (e.g., `H35:H40`), not single cells. This is a common initial mistake.
+    - Cross-check a sample against raw data values using manual Python math (since `openpyxl` does not evaluate formulas).
+    - Count total formulas to match task expectations.
+    - If a strict verifier fails on string comparison, normalize both expected and actual strings by removing spaces after commas before diffing. Run `scripts/verify_formulas.py` to dump exact formula strings.
+@@ -27,6 +28,7 @@
+ - **Derived Metric**: `=(H12-H19)/H26*100`
+ - **Statistics**: `MIN`, `MAX`, `MEDIAN`, `AVERAGE`, `PERCENTILE(range, k)`
+ - **Weighted Mean**: `=SUMPRODUCT(H$35:H$40,H$26:H$31)/SUM(H$26:H$31)`
++- **Percentile vs Quartile**: `PERCENTILE(range,0.25)` and `QUARTILE(range,1)` are mathematically equivalent, but **strict verifiers often expect `PERCENTILE`**. Use `PERCENTILE` unless the task explicitly requests `QUARTILE`. If you must use `QUARTILE`, verify the exact expected syntax before saving.
+ 
+ ## Anti-Patterns & Troubleshooting
+ - **Missing Headers**: `MATCH` fails if lookup headers are absent. Always verify and inject missing headers into the source sheet before writing formulas.
+@@ -36,11 +38,12 @@
+ - **Value Verification**: `openpyxl` does not calculate formulas. To verify correctness, compute expected values in Python using the same logic and compare against raw data, or use `xlcalculator` if available.
+ - **Pre-existing Formulas**: Count and preserve them. Do not overwrite cells in legacy columns unless instructed. Account for them when verifying total formula counts.
+ - **Path Handling**: Always save directly to the output path. Copying after saving can cause timestamp/path mismatches in verifiers.
++- **Statistics Single-Cell Trap**: When writing `MIN`, `MAX`, `MEDIAN`, `AVERAGE`, or percentile formulas across columns, ensure the range spans all relevant rows (e.g., `H35:H40`, not `H35`). Verify ranges immediately after generation.
+ 
+ ## Verifier Failure Fallback
+ If the verifier fails despite correct-looking formulas:
+ 1. Run `scripts/verify_formulas.py` to dump exact stored strings.
+-2. Diff against expected strings. Common mismatches: `openpyxl` auto-upcasing (`percentile` → `PERCENTILE`), missing `$` locks, or swapped row/column arguments in `INDEX`.
++2. Diff against expected strings. Common mismatches: `openpyxl` auto-upcasing (`percentile` → `PERCENTILE`), missing `$` locks, swapped row/column arguments in `INDEX`, or `QUARTILE` vs `PERCENTILE` syntax differences.
+ 3. If string matching is brittle but logic is sound, verify values programmatically in Python and explicitly state logical correctness in your response.
+ 4. Check for hidden sheet names or merged cells that shift coordinates.
+ 

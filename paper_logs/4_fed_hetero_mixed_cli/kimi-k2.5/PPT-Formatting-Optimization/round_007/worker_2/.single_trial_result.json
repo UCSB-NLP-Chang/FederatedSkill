@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "storm-damage-caption-cleanup__ZUzNpfq",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/round_007/worker_2/storm-damage-caption-cleanup__ZUzNpfq",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/round_007/worker_2/storm-damage-caption-cleanup__ZUzNpfq",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

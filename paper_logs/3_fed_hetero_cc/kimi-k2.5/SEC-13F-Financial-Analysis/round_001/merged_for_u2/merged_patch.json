@@ -1,0 +1,37 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) on SEC-13F-Financial-Analysis R1.\n\nSynthesized SKILL.md with: u2's schema variants (B1/B2), u1's semantic sanity-check + threshold enforcement, u0's toc-patterns reference. Added class_breakdown.py script. Key countermeasures for kimi's failure modes: hard threshold halts + explicit schema locking.\n\nSee DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/references/normalization-rules.md",
+    "sec-13f-fund-analysis/references/toc-patterns.md",
+    "sec-13f-fund-analysis/scripts/class_breakdown.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/references/toc-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-fund-analysis/references/normalization-rules.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "sec-13f-fund-analysis/scripts/class_breakdown.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.45214259999999995
+}

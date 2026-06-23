@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Healthcare-Cost-Benefit-Analysis/shared_skills/Healthcare-Cost-Benefit-Analysis:/root/.config/agent/skills

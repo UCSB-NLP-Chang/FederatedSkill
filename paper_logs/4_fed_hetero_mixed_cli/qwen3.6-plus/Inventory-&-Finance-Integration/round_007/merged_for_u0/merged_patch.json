@@ -1,0 +1,20 @@
+{
+  "worker_id": "u0",
+  "summary": "Applied u0's inventory-metrics-calculation/SKILL.md wholesale (reward=1.0) adding stochastic fuel/refill variant. Rejected u1's code-patterns.md reference file (493 lines; qwen prefers concise numbered steps). Cleaned __pycache__ junk. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "inventory-metrics-calculation/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-metrics-calculation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "inventory-metrics-calculation/SKILL.md",
+    "__skill_md_invalid__:financial-reconciliation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 3.334026
+}

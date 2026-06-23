@@ -1,0 +1,29 @@
+{
+    "id": "3aa7baa9-db2a-4bbd-ad17-d3e25bd1ea11",
+    "started_at": "2026-05-14T19:08:50.029415",
+    "finished_at": "2026-05-14T19:10:43.646211",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__DMAIC-Quality-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_logistics_chain_03__ZfpAAE7"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

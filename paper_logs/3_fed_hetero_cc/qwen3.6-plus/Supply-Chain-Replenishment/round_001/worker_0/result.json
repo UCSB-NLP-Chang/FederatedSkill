@@ -1,0 +1,29 @@
+{
+    "id": "eb23d267-ea35-418d-bce6-dafaf5bdf1c7",
+    "started_at": "2026-05-13T13:07:50.813016",
+    "finished_at": "2026-05-13T13:13:59.562489",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "petcare_midmonth_pallet_gap__jhkG4rp"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

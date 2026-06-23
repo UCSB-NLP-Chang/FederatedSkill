@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The trace reveals a critical pattern for duplicate detection when OCR misreads characters: simple character substitution (O\u21920) is insufficient because OCR can create different-length IDs (e.g., 'FUEL-N-OO1' vs 'FUEL-N-002'). The solution requires both character substitution AND numeric normalization (stripping leading zeros). This pattern is missing from the existing dedup documentation and will help future agents detect duplicates correctly despite OCR artifacts.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/dedup_validation_patterns.md"
+  ],
+  "delete_paths": []
+}

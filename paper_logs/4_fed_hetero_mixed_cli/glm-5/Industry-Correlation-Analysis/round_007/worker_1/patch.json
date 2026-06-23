@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds selector workbook pattern for explicit source/version selection when multiple update files exist, and blank value handling for monthly observations. These patterns extend the existing economic time series correlation skill.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/selector-workbook-pattern.md"
+  ],
+  "delete_paths": []
+}

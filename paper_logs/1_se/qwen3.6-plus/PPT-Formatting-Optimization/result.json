@@ -1,0 +1,36 @@
+{
+    "id": "7b349479-c795-4037-a7ac-a512529abf99",
+    "started_at": "2026-05-10T18:28:19.345270",
+    "finished_at": "2026-05-10T19:20:29.377045",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__PPT-Formatting-Optimization": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "museum-exhibit-caption-cleanup__8LULyCe",
+                            "wildlife-field-guide-caption-cle__bbaANAj",
+                            "coastal-trail-caption-cleanup__2PsFTAp",
+                            "property-portfolio-caption-clean__gR8n3gD",
+                            "transit-platform-caption-cleanup__KZkALaJ",
+                            "incident-briefing-caption-cleanu__FhifiM2",
+                            "archive-photo-caption-cleanup__yTfRt4X",
+                            "storm-damage-caption-cleanup__u4nPCan"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

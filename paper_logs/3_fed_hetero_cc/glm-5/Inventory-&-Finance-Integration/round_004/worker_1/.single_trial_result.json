@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "new_task_10_transit_subsidy_roll__4GHquoC",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-%26-Finance-Integration/round_004/worker_1/new_task_10_transit_subsidy_roll__4GHquoC",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-&-Finance-Integration/round_004/worker_1/new_task_10_transit_subsidy_roll__4GHquoC",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

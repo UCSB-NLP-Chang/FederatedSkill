@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.7368421052631579,
+  "summary": "Creates a skill for harmonizing clinical laboratory data with SI-to-US unit conversions, capturing the key decision rules for range-based unit detection that the agent discovered through trial and error.",
+  "upsert_paths": [
+    "clinical-lab-unit-conversion/SKILL.md",
+    "clinical-lab-unit-conversion/references/conversion-factors.md"
+  ],
+  "delete_paths": []
+}

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task succeeded using the existing ocr-data-extraction skill patterns. Adding invoice-specific regex patterns (GRAND TOTAL, TOTAL DUE, INVOICE DATE) to the reference library to improve discoverability for future invoice processing tasks.",
+  "upsert_paths": [
+    "ocr-data-extraction/references/regex_patterns.md"
+  ],
+  "delete_paths": []
+}

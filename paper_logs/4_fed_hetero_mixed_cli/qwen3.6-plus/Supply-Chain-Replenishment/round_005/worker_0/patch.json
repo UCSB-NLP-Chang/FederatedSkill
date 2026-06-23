@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Update inventory-load-planning skill with patterns observed in frozen meal tracker task: revision-based deduplication, template workbook handling, earlier-delivery logic with out-of-horizon loads, and openpyxl default sheet removal. These are incremental refinements that improve coverage for variant tasks without creating a parallel skill.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

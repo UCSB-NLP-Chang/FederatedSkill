@@ -1,0 +1,23 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R3. Applied target's patch + u0's QUARTILE.INC parameter mapping, write-order safety, stats table, and anti-patterns. Library has 1 skill (excel-formula-template) with blocking validation gate. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-template/SKILL.md",
+    "excel-formula-template/scripts/validate_formulas.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-template/scripts/validate_formulas.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "excel-formula-template/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 3.879872399999999
+}

@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Cherry-picked u1's R5 additive knowledge (medication key variants, MED ID pattern, modified-record schema invariant, output key mismatch example) into cross-format-data-diff/SKILL.md while preserving u0's prescriptive style. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.1297279999999998
+}

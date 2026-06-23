@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (qwen3.6-plus) on Embedded-Data-Repair R6. Applied u0's patch to edit-embedded-excel/SKILL.md: added mandatory pre-submission checklist (enforces cached-value fix), manifest handling for multiple embeddings (Step 3), and rebate-band-live-embedding-fix invariants. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-excel/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-excel/SKILL.md"
+  ],
+  "cost_usd": 0.3998382
+}

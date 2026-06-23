@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Merged u2's Quality Control domain variant with u1's semantic pivot content matching (sheet name implies aggregation type). Key fixes: (1) \"Fail Rate\" sheet shows rate/percentage NOT count, (2) QUALITY_GRADE='N/A' for null MEASUREMENT_MM, (3) explicit STOP rule #4 for semantic pivot matching. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.875
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "cost_usd": 1.3883226
+}

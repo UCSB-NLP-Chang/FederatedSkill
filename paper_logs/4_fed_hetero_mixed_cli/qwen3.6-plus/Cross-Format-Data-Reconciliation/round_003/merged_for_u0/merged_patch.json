@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. u0's concise SKILL.md preserved (+numpy JSON fix from u1, +pdf_excel_workflow.md from u2). See DECISIONS.md.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/pdf_excel_workflow.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/pdf_excel_workflow.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md"
+  ],
+  "cost_usd": 2.021883
+}

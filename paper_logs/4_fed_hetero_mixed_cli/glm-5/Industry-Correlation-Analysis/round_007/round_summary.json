@@ -1,0 +1,30 @@
+{
+  "round_idx": 7,
+  "assignments": [
+    [
+      "u0",
+      "econ-coldchain-lastmile-correlation"
+    ],
+    [
+      "u1",
+      "econ-coldchain-lastmile-correlation"
+    ],
+    [
+      "u2",
+      "econ-coldchain-lastmile-correlation"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 1054.3616468906403
+}

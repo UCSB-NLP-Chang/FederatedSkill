@@ -1,0 +1,29 @@
+{
+    "id": "3d704600-2ac8-4ba2-9de7-8b5d258d843f",
+    "started_at": "2026-05-13T17:48:47.441670",
+    "finished_at": "2026-05-13T17:52:38.137397",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "produce_lane_restock_gap__AECGqYP"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

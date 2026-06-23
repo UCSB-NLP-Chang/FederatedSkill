@@ -1,0 +1,20 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE. Applied u0's SKILL.md wholesale (reward=0.900) \u2014 adds broad test file search and spec contradiction decision rules. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.9
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/grading-patterns.md"
+  ],
+  "cost_usd": 2.5282260000000005
+}

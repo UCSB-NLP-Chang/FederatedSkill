@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Add openpyxl row-writing anti-pattern and roster-matching workflow to ocr-data-extraction skill. The trace revealed a common bug where ws.max_row + 1 inside a column loop causes each cell to write to a new row. Also captured the roster-matching pattern (extract keys \u2192 join with reference CSV \u2192 leave unmatched fields empty) which is distinct from the existing dedup/validation patterns.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/roster_matching_patterns.md"
+  ],
+  "delete_paths": []
+}

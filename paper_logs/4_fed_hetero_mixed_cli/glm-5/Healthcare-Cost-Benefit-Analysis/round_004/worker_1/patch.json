@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.6,
+  "summary": "Created a new 'infusion-batch-analysis' skill with a Python script to handle 7-day vs 14-day delivery cycle economics. The trace shows the agent manually calculated values which is error-prone. This skill follows the same proven pattern as mailer-policy-analysis and syncpack-cycle-analysis but handles the unique inputs (therapy_catalog.json, patient_overrides.csv with revision logic) and formulas specific to infusion therapy batch analysis.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py"
+  ],
+  "delete_paths": []
+}

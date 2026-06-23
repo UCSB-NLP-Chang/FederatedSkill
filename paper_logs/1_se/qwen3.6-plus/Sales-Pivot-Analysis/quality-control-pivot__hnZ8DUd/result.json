@@ -1,0 +1,102 @@
+{
+    "id": "51ca82ba-6158-4c71-bce0-bdb4b7b4d508",
+    "task_name": "quality-control-pivot",
+    "trial_name": "quality-control-pivot__hnZ8DUd",
+    "trial_uri": "file:///home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis/quality-control-pivot__hnZ8DUd",
+    "task_id": {
+        "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Sales-Pivot-Analysis/quality-control-pivot"
+    },
+    "source": "Sales-Pivot-Analysis",
+    "task_checksum": "5b5beba50223aa2d1f951ebe1b6ae9491e85d1c373e49ec101ccc01844e4c717",
+    "config": {
+        "task": {
+            "path": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/test_tasks/Sales-Pivot-Analysis/quality-control-pivot",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Sales-Pivot-Analysis"
+        },
+        "trial_name": "quality-control-pivot__hnZ8DUd",
+        "trials_dir": "/home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-full-baseline-qwen/iter-full-baseline-qwen__Sales-Pivot-Analysis",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "qwen3.6-plus",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "5c5a615c-caaa-4c88-98cb-bfd7b64aa344"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-04-24T11:39:25.798147Z",
+    "finished_at": "2026-04-24T11:44:26.286787Z",
+    "environment_setup": {
+        "started_at": "2026-04-24T11:39:25.799773Z",
+        "finished_at": "2026-04-24T11:39:26.677200Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-04-24T11:39:26.677212Z",
+        "finished_at": "2026-04-24T11:39:26.936765Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-04-24T11:39:26.936827Z",
+        "finished_at": "2026-04-24T11:44:14.700128Z"
+    },
+    "verifier": {
+        "started_at": "2026-04-24T11:44:14.700463Z",
+        "finished_at": "2026-04-24T11:44:15.719996Z"
+    }
+}

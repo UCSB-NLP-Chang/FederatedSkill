@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R3. Added mailer-policy-analysis skill from u0 (reward=1.0) for B3 coverage; kept syncpack-cycle-analysis from R2 for B2. Library now has 2 script-based skills aligned with peer naming. B1 gap remains pending. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "mailer-policy-analysis/SKILL.md",
+    "mailer-policy-analysis/scripts/compute_mailer_policy.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "mailer-policy-analysis/scripts/compute_mailer_policy.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "mailer-policy-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "mailer-policy-analysis/SKILL.md",
+    "mailer-policy-analysis/scripts/compute_mailer_policy.py"
+  ],
+  "cost_usd": 0.6379589999999999
+}

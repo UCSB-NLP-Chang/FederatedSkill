@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "R3 merge complete for u2: kept B1 umbrella (excel-openpyxl-processing), added compact B2 skill (excel-reconciliation-workbook) with rollforward formula constraints that peer skills lacked. See DECISIONS.md.",
+  "upsert_paths": [
+    "excel-reconciliation-workbook/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-reconciliation-workbook/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.825536
+}

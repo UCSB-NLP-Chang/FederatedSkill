@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.1111111111111111,
+  "summary": "The existing pipeline-performance-analysis skill is too narrowly scoped (CI/CD-specific). This update generalizes it to cover any process reliability analysis including logistics, manufacturing, and operations, while preserving all the working statistical methods and adding key lessons from the failed logistics task about scipy unavailability and schema flexibility.",
+  "upsert_paths": [
+    "process-reliability-analysis/SKILL.md"
+  ],
+  "delete_paths": []
+}

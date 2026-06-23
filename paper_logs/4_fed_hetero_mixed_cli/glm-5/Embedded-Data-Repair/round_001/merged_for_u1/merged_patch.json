@@ -1,0 +1,50 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Renamed skill to peer-majority name `edit-embedded-office-xml`. Applied u1's target patch addressing intermediate calculation rounding (added \"Calculation precision\" section). Merged helper script: u1's `repr()` precision + u0's formula protection. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/references/openxml-structures.md",
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py"
+  ],
+  "delete_paths": [
+    "edit-embedded-office-data/SKILL.md",
+    "edit-embedded-office-data/references/openxml-structures.md",
+    "edit-embedded-office-data/scripts/update_embedded_xlsx.py"
+  ],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "edit-embedded-office-xml/references/openxml-structures.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "edit-embedded-office-data/scripts/update_embedded_xlsx.py": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ],
+    "edit-embedded-office-data/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ],
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "edit-embedded-office-data/references/openxml-structures.md": [
+      "delete",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "cost_usd": 3.769671
+}

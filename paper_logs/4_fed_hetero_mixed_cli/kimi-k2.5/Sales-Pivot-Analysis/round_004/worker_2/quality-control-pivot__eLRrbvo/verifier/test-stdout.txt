@@ -1,0 +1,232 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.4, pluggy-1.6.0 -- /opt/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.6
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: FFFFFFFFFFFFsssF..............F                                          [100%]
+E           =================================== FAILURES ===================================
+E           _ TestPivotTableConfiguration.test_pivot_exists[Fail Rate by Line-count-None] __
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6ca7eb8f0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Fail Rate by Line', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Fail Rate by Line'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:53: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Avg Deviation by Line-average-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6ca187bc0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Avg Deviation by Line', expected_agg = 'average', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Avg Deviation by Line'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:53: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Inspections by Shift-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd71fcfb800>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Inspections by Shift', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Inspections by Shift'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:53: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_exists[Line Shift Matrix-count-shift] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd71f10cad0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Line Shift Matrix', expected_agg = 'count', col_field = 'shift'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_exists(self, workbook, sheet_name, expected_agg, col_field):
+E                   assert sheet_name in workbook.sheetnames, f"Missing sheet '{sheet_name}'"
+E                   pivots = workbook[sheet_name]._pivots
+E           >       assert len(pivots) > 0, f"No pivot table found in '{sheet_name}'"
+E           E       AssertionError: No pivot table found in 'Line Shift Matrix'
+E           E       assert 0 > 0
+E           E        +  where 0 = len([])
+E           
+E           /tests/test_outputs.py:53: AssertionError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Fail Rate by Line-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6c9809730>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Fail Rate by Line', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:57: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Avg Deviation by Line-average-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6c9809880>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Avg Deviation by Line', expected_agg = 'average', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:57: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Inspections by Shift-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6c98099d0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Inspections by Shift', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:57: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_row_field[Line Shift Matrix-count-shift] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6c9809a60>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Line Shift Matrix', expected_agg = 'count', col_field = 'shift'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_row_field(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:57: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Fail Rate by Line-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6c9809b80>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Fail Rate by Line', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:68: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Avg Deviation by Line-average-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6c9809cd0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Avg Deviation by Line', expected_agg = 'average', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:68: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Inspections by Shift-count-None] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6c9809e20>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Inspections by Shift', expected_agg = 'count', col_field = None
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:68: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_aggregation[Line Shift Matrix-count-shift] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6c9809eb0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Line Shift Matrix', expected_agg = 'count', col_field = 'shift'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_aggregation(self, workbook, sheet_name, expected_agg, col_field):
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:68: IndexError
+E           _ TestPivotTableConfiguration.test_pivot_col_field[Line Shift Matrix-count-shift] _
+E           
+E           self = <test_outputs.TestPivotTableConfiguration object at 0x7fd6c980a3c0>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           sheet_name = 'Line Shift Matrix', expected_agg = 'count', col_field = 'shift'
+E           
+E               @pytest.mark.parametrize("sheet_name,expected_agg,col_field", PIVOT_SHEETS)
+E               def test_pivot_col_field(self, workbook, sheet_name, expected_agg, col_field):
+E                   if not col_field:
+E                       pytest.skip(f"'{sheet_name}' is not a matrix pivot")
+E           >       pivot = workbook[sheet_name]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:76: IndexError
+E           _____________ TestDataTransformations.test_pivot_cache_has_fields ______________
+E           
+E           self = <test_outputs.TestDataTransformations object at 0x7fd6c980bb00>
+E           workbook = <openpyxl.workbook.workbook.Workbook object at 0x7fd6c980b890>
+E           
+E               def test_pivot_cache_has_fields(self, workbook):
+E           >       pivot = workbook["Fail Rate by Line"]._pivots[0]
+E           E       IndexError: list index out of range
+E           
+E           /tests/test_outputs.py:180: IndexError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Fail Rate by Line-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Avg Deviation by Line-average-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Inspections by Shift-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_exists[Line Shift Matrix-count-shift]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Fail Rate by Line-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Avg Deviation by Line-average-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Inspections by Shift-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_row_field[Line Shift Matrix-count-shift]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Fail Rate by Line-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Avg Deviation by Line-average-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Inspections by Shift-count-None]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_aggregation[Line Shift Matrix-count-shift]
+E           FAILED ../tests/test_outputs.py::TestPivotTableConfiguration::test_pivot_col_field[Line Shift Matrix-count-shift]
+E           FAILED ../tests/test_outputs.py::TestDataTransformations::test_pivot_cache_has_fields
+E           14 failed, 14 passed, 3 skipped in 0.41s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: FF...
+============================== 1 failed in 0.62s ===============================

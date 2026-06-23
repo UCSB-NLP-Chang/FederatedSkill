@@ -1,0 +1,31 @@
+{
+  "worker_id": "u0",
+  "summary": "R7 merge complete. Applied u0's verified SKILL.md wholesale (self-produced expanded style fits target), absorbed u1's selector-workbook-pattern.md reference file, merged u2's selector-based merging section into series-catalog-pattern.md. Library: 1 skill, 3 references, 2 scripts. See DECISIONS.md.",
+  "upsert_paths": [
+    "economic-time-series-correlation/SKILL.md",
+    "economic-time-series-correlation/references/selector-workbook-pattern.md",
+    "economic-time-series-correlation/references/series-catalog-pattern.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "economic-time-series-correlation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "economic-time-series-correlation/references/selector-workbook-pattern.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "economic-time-series-correlation/references/series-catalog-pattern.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "economic-time-series-correlation/SKILL.md"
+  ],
+  "cost_usd": 0.933481
+}

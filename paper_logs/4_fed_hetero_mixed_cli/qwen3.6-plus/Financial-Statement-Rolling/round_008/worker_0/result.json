@@ -1,0 +1,29 @@
+{
+    "id": "091b55bf-126d-455b-bd89-7e8b31b52795",
+    "started_at": "2026-05-17T22:52:40.555864",
+    "finished_at": "2026-05-17T22:57:13.386109",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Financial-Statement-Rolling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_gdpval_20__b6i74DF"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

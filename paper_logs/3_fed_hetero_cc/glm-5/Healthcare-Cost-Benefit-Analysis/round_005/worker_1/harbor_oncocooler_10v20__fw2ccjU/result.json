@@ -1,0 +1,104 @@
+{
+    "id": "52705f18-e773-4602-a93d-4ce76221f3ca",
+    "task_name": "harbor_oncocooler_10v20",
+    "trial_name": "harbor_oncocooler_10v20__fw2ccjU",
+    "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-hwpx-healthcare-glm-M3-hetero/Healthcare-Cost-Benefit-Analysis/round_005/worker_1/harbor_oncocooler_10v20__fw2ccjU",
+    "task_id": {
+        "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Healthcare-Cost-Benefit-Analysis/harbor_oncocooler_10v20"
+    },
+    "source": "Healthcare-Cost-Benefit-Analysis",
+    "task_checksum": "b831cd2c40062e0b5ce53fbf6e8ec8e838d3ab1c079ee0377681ea52f97455de",
+    "config": {
+        "task": {
+            "path": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/test_tasks/Healthcare-Cost-Benefit-Analysis/harbor_oncocooler_10v20",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "Healthcare-Cost-Benefit-Analysis"
+        },
+        "trial_name": "harbor_oncocooler_10v20__fw2ccjU",
+        "trials_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-hwpx-healthcare-glm-M3-hetero/Healthcare-Cost-Benefit-Analysis/round_005/worker_1",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": 1.0,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+            "model_name": "glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {
+                "ANTHROPIC_API_KEY": "<REDACTED>",
+                "ANTHROPIC_BASE_URL": "https://api.lkeap.cloud.tencent.com/plan/anthropic",
+                "ANTHROPIC_MAX_RETRIES": "999"
+            }
+        },
+        "environment": {
+            "type": null,
+            "import_path": "libs.terminus_env.environments.shared_skills_env:SharedSkillsDockerEnvironment",
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {
+                "project_template_dir": null,
+                "copy_task_skills": false,
+                "shared_skills_root": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-hwpx-healthcare-glm-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u1"
+            }
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "93ec8a09-32d4-4239-a7b9-d32ad15f5c54"
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.119",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": 123349,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 10040,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-05-18T02:20:14.582935Z",
+    "finished_at": "2026-05-18T02:24:04.811155Z",
+    "environment_setup": {
+        "started_at": "2026-05-18T02:20:14.583668Z",
+        "finished_at": "2026-05-18T02:20:17.815012Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-05-18T02:20:17.815053Z",
+        "finished_at": "2026-05-18T02:20:19.159710Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-05-18T02:20:19.159798Z",
+        "finished_at": "2026-05-18T02:23:50.261179Z"
+    },
+    "verifier": {
+        "started_at": "2026-05-18T02:23:50.265619Z",
+        "finished_at": "2026-05-18T02:23:51.861258Z"
+    }
+}

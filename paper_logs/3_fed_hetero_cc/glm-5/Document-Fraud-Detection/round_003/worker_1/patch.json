@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Extends document-reconciliation skill with work order status validation, revision handling (highest approved), alias table matching, and contractor-work order assignment checks. These patterns emerged from field service audit but apply broadly to any approval-based billing validation.",
+  "upsert_paths": [
+    "document-reconciliation/SKILL.md",
+    "document-reconciliation/references/violation-types.md",
+    "document-reconciliation/scripts/reconcile_claims.py"
+  ],
+  "delete_paths": []
+}

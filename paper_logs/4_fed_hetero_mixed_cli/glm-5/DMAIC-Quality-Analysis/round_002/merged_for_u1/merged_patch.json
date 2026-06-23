@@ -1,0 +1,32 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete for u1 (glm-5, claude-code) R2. Key decision: glm-5 ignores script directives (3 rounds evidence), so rewrote workflow to make inline code with embedded schema the primary path, script as alternative. Applied u1's updated script (phase-aware CLI args) + u0's brief_template.md. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "dmaic-statistical-analysis/assets/brief_template.md",
+    "dmaic-statistical-analysis/scripts/analysis_template.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dmaic-statistical-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.6666666666666666
+    ],
+    "dmaic-statistical-analysis/scripts/analysis_template.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.6666666666666666
+    ],
+    "dmaic-statistical-analysis/assets/brief_template.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.3333333333333333
+    ]
+  },
+  "conflicts": [
+    "dmaic-statistical-analysis/SKILL.md",
+    "__skill_md_invalid__:dmaic-statistical-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 4.371809999999999
+}

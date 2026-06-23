@@ -1,0 +1,29 @@
+{
+  "worker_id": "u1",
+  "summary": "R0 merge complete: built 1 umbrella skill `cross-format-data-diff` from u0's validated patch (reward=1.0), fixed script JSON serialization with u1's NumpyEncoder concept (syntax-fixed), added u2's extraction_patterns reference. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md",
+    "cross-format-data-diff/scripts/diff_datasets.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "cross-format-data-diff/scripts/diff_datasets.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.1556745999999998
+}

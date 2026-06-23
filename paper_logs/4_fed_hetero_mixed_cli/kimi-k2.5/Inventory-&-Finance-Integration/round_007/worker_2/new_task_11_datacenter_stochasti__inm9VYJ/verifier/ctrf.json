@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779080234.7934551,
+            "stop": 1779080235.0055695
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_node_checks",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.19269749335944653,
+                "start": 1779080234.7994974,
+                "stop": 1779080235.0054529,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_node_checks() -> None:\n        local_script = Path(__file__).with_name(\"test_outputs.js\")\n        harness_script = Path(\"/tests/test_outputs.js\")\n        script = harness_script if harness_script.exists() else local_script\n    \n        env = os.environ.copy()\n        if not env.get(\"NODE_PATH\"):\n            local_node_modules = script.parents[1] / \"node_modules\"\n            if local_node_modules.exists():\n                env[\"NODE_PATH\"] = str(local_node_modules)\n    \n        result = subprocess.run(\n            [\"node\", str(script)],\n            capture_output=True,\n            text=True,\n            check=False,\n            env=env,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: \nE           node:internal/assert/utils:77\nE               throw err;\nE               ^\nE           \nE           AssertionError [ERR_ASSERTION]: Site_Results R4C2 mismatch (actual=28, expected=27)\nE               at approx (/tests/test_outputs.js:290:3)\nE               at compareCell (/tests/test_outputs.js:297:5)\nE               at compareAoa (/tests/test_outputs.js:317:7)\nE               at main (/tests/test_outputs.js:339:3)\nE               at Object.<anonymous> (/tests/test_outputs.js:345:1)\nE               at Module._compile (node:internal/modules/cjs/loader:1705:14)\nE               at Object..js (node:internal/modules/cjs/loader:1838:10)\nE               at Module.load (node:internal/modules/cjs/loader:1441:32)\nE               at Function._load (node:internal/modules/cjs/loader:1263:12)\nE               at TracingChannel.traceSync (node:diagnostics_channel:328:14) {\nE             generatedMessage: false,\nE             code: 'ERR_ASSERTION',\nE             actual: false,\nE             expected: true,\nE             operator: '==',\nE             diff: 'simple'\nE           }\nE           \nE           Node.js v22.22.2\n\n/tests/test_output.py:27: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "worker_id": "u0",
+  "summary": "R1 merge complete for u0 (qwen3.6-plus). Synthesized u1's numbered workflow (reward=1.0) + u2's Column Name Variations and Known invariants. Added dock status filtering (critical gap from R1 failure). Library now has SKILL.md + references/formulas.md. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "inventory-load-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "inventory-load-planning/references/formulas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "inventory-load-planning/SKILL.md"
+  ],
+  "cost_usd": 0.7229979999999999
+}

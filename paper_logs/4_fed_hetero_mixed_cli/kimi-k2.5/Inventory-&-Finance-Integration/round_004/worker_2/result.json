@@ -1,0 +1,29 @@
+{
+    "id": "2152704f-ae20-4947-af65-10818f4a9402",
+    "started_at": "2026-05-17T23:55:01.527136",
+    "finished_at": "2026-05-18T00:01:10.284358",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "new_task_10_transit_subsidy_roll__5vBVKiw"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

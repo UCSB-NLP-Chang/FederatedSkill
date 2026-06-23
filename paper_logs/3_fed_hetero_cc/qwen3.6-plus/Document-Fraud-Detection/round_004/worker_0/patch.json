@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated expense-record-validation skill to incorporate lessons from fleet-maintenance-chargeback-audit: prioritized pdfplumber for structured PDF extraction, clarified alias sheet merging, added explicit ownership/order mismatch validation rule, and added the new sub-task invariant.",
+  "upsert_paths": [
+    "expense-record-validation/SKILL.md"
+  ],
+  "delete_paths": []
+}

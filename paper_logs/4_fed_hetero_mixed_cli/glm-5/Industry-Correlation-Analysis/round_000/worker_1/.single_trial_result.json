@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "econ-service-hospitality-correla__nCMU47z",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/round_000/worker_1/econ-service-hospitality-correla__nCMU47z",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-ica-rerun-M3-hetero/Industry-Correlation-Analysis/round_000/worker_1/econ-service-hospitality-correla__nCMU47z",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

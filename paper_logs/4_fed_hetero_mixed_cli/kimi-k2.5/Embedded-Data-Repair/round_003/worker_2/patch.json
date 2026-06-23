@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Enhanced the conversion-matrix-update section in edit-embedded-office-xml to explicitly handle the 'ARCHIVED vs LIVE/FINAL' correction pattern observed in the trace. Future agents encountering slide text with both archived and live corrections will now know to identify and ignore archived values while applying only the active/live correction. Also clarified the 'X to Y = value' text parsing pattern for matrix cell identification.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": []
+}

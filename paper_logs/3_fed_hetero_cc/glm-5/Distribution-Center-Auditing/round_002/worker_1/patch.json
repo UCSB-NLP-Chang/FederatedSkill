@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Adds harbor-promo-register-audit sub-task patterns to existing skill, including date window validation and price mismatch detection computed column patterns. The task succeeded and these patterns are reusable for similar promotional/transactional audits.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md",
+    "spreadsheet-audit-reporting/references/computed-column-examples.md"
+  ],
+  "delete_paths": []
+}

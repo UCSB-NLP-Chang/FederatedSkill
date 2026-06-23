@@ -1,0 +1,25 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete: Applied u1's reward=1.0 patch wholesale (SKILL.md + compare_quarters.py). u1 is reference worker for B3. Rejected u0/u2 contributions (reward=0.5). Library: 1 skill, 4 scripts, 1 reference. See DECISIONS.md.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/scripts/compare_quarters.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-fund-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "sec-13f-fund-analysis/scripts/compare_quarters.py": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "sec-13f-fund-analysis/SKILL.md"
+  ],
+  "cost_usd": 0.4092294
+}

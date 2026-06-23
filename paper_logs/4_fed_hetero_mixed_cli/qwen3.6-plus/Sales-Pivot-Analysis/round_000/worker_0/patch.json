@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "Captures the reusable workflow for generating multi-sheet Excel reports from mixed sources (PDF/XLSX), including data reconciliation, pivot table creation, and the critical fix for openpyxl MultiIndex export failures. Prevents future agents from hitting ValueError on tuple headers and provides a standardized verification checklist.",
+  "upsert_paths": [
+    "excel-pivot-report/SKILL.md"
+  ],
+  "delete_paths": []
+}

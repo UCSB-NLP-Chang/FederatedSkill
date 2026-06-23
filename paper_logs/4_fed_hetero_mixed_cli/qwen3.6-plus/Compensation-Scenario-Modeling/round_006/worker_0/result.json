@@ -1,0 +1,29 @@
+{
+    "id": "4d3ba2a5-7459-4edf-b8a1-d7b935f1b2aa",
+    "started_at": "2026-05-18T02:22:40.945150",
+    "finished_at": "2026-05-18T02:30:14.973918",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "07_airline_crew_model__KsxSEAS"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated excel-capacity-planning skill to handle transposed Excel layouts (weeks in columns), explicitly separate calculation backlog (can be negative) from reported past-due (clamped to 0), and improve the template script with robust data extraction and oscillation handling.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py"
+  ],
+  "delete_paths": []
+}

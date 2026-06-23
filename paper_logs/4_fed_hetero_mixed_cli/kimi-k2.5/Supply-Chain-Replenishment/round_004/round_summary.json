@@ -1,0 +1,30 @@
+{
+  "round_idx": 4,
+  "assignments": [
+    [
+      "u0",
+      "clinic_branch_transfer_gap"
+    ],
+    [
+      "u1",
+      "clinic_branch_transfer_gap"
+    ],
+    [
+      "u2",
+      "clinic_branch_transfer_gap"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 1.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 939.4375615119934
+}

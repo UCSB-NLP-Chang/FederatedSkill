@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "This trace demonstrates a multi-source data reconciliation task: matching expense claims from a PDF against employee directory (Excel) and trip approvals (CSV). The agent successfully handled fuzzy name matching for typos, cross-referenced multiple data sources, and flagged specific violation types. The reusable skill captures the workflow for multi-source validation, fuzzy matching strategies, and the specific violation detection patterns that should be checked in expense/approval screening tasks.",
+  "upsert_paths": [
+    "multi-source-reconciliation/SKILL.md",
+    "multi-source-reconciliation/references/violation-types.md",
+    "multi-source-reconciliation/scripts/reconcile_claims.py"
+  ],
+  "delete_paths": []
+}

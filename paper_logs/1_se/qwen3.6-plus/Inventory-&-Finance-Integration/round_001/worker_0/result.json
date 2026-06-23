@@ -1,0 +1,29 @@
+{
+    "id": "b1157350-9401-476a-9205-ba1d7184fba8",
+    "started_at": "2026-05-16T17:25:53.240285",
+    "finished_at": "2026-05-16T17:28:29.496023",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Inventory-&-Finance-Integration": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "new_task_9_hospital_staffing_res__vqk4Uay"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

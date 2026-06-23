@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "This patch creates a new skill for produce lane restock gap analysis - a distinct variant from the existing supply-demand gap analysis. Key differences: (1) lane-level granularity vs SKU-level, (2) Load Status filtering (Ready/Docked vs Draft/Cancelled) vs Booking State (Firm/Locked vs Tentative/Hold), (3) Earlier_Delivery_Required compares required delivery date against earliest qualifying arrival per lane/SKU, not against AsOfDate. The trace shows the agent had to discover data structures through Python/openpyxl since direct Read failed on binary Excel files - this pattern is now captured as a reusable workflow.",
+  "upsert_paths": [
+    "produce-lane-restock-gap/SKILL.md",
+    "produce-lane-restock-gap/references/binary-excel-patterns.md",
+    "produce-lane-restock-gap/scripts/calculate_lane_coverage.py"
+  ],
+  "delete_paths": []
+}

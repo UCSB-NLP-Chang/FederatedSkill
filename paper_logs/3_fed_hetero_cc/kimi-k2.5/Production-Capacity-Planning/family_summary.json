@@ -1,0 +1,265 @@
+{
+  "family_name": "Production-Capacity-Planning",
+  "n_workers": 3,
+  "n_rounds": 9,
+  "elapsed_sec": 9470.413031101227,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 27,
+    "mean": 0.6296296296296297,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 17
+  },
+  "merger_cost_total_usd": 15.948474599999999,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_36_task1"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_36_task1"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_36_task1"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 5,
+      "merger_cost_usd": 1.2283803,
+      "elapsed_sec": 797.5009269714355
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_36"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_36"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_36"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 9,
+      "merger_cost_usd": 1.5043137000000002,
+      "elapsed_sec": 1135.2143716812134
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_36_task2"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_36_task2"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_36_task2"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 1.3773632999999998,
+      "elapsed_sec": 818.3060867786407
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_36_task5"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_36_task5"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_36_task5"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 1.6461762000000002,
+      "elapsed_sec": 894.3351204395294
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_36_task3"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_36_task3"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_36_task3"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 1.5957918,
+      "elapsed_sec": 948.3680629730225
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_36_task4"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_36_task4"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_36_task4"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 3,
+      "merger_cost_usd": 2.3100279,
+      "elapsed_sec": 1088.327107667923
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_36_task6"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_36_task6"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_36_task6"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 2.1912021,
+      "elapsed_sec": 1371.4850187301636
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_36_task7"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_36_task7"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_36_task7"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 2.3014868999999996,
+      "elapsed_sec": 1161.6434020996094
+    },
+    {
+      "round_idx": 8,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_36_task8"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_36_task8"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_36_task8"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 1,
+      "merger_cost_usd": 1.7937324,
+      "elapsed_sec": 1255.1531796455383
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/Production-Capacity-Planning/worker_skills/u0/Production-Capacity-Planning",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/Production-Capacity-Planning/worker_skills/u1/Production-Capacity-Planning",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rerun3-M3-hetero/Production-Capacity-Planning/worker_skills/u2/Production-Capacity-Planning"
+  }
+}

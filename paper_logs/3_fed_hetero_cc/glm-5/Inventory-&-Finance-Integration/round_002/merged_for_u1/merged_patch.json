@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "Merge complete. Applied u0's comprehensive patch as base (includes critical date.replace() anti-pattern) + added u1's Terminology Variants section. See DECISIONS.md for details. Library: 2 skills, all workers covered for B1.",
+  "upsert_paths": [
+    "excel-inventory-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-inventory-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-inventory-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.6324519999999993
+}

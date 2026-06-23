@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Updated excel-capacity-planning/SKILL.md to address verifier failures caused by header synonym substitution ('Period' vs 'Week'), assumed capacity rules, and loose summary formatting. Added explicit step 0 for prompt extraction, strict header matching rules, and a verification checklist to prevent common benchmark traps.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

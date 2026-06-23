@@ -1,0 +1,38 @@
+{
+    "id": "e4a1b812-cad9-4eca-8e31-619631705597",
+    "started_at": "2026-05-10T19:19:27.489938",
+    "finished_at": "2026-05-10T19:48:16.523625",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__HWPX-Document-Automation": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.625
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "hwpx-supplier-contact-sheet__YoFaanQ",
+                            "hwpx-event-announcement__FSE2KcH",
+                            "hwpx-clinic-intake-summary__pktaRHZ",
+                            "hwpx-renewal-playbook-update__tXGshsh",
+                            "hwpx-inventory-report__Zk87KvQ"
+                        ],
+                        "0.0": [
+                            "hwpx-project-proposal__NJw6gry",
+                            "hwpx-training-feedback__mugDvwc",
+                            "hwpx-safety-audit-brief__DQt37RW"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

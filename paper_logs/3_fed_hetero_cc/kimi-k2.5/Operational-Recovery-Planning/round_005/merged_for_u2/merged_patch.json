@@ -1,0 +1,27 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged u0, u1, and u2 patches into a unified production-planning skill that generalizes to N products, enforces correct datetime/formula patterns, adds regional holiday references, external verifier cross-checks, and multi-product fulfillment patterns, while preserving all high-signal warnings and troubleshooting tables.",
+  "upsert_paths": [
+    "production-planning/SKILL.md",
+    "production-planning/references/scenario_templates.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-planning/references/scenario_templates.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      0.6
+    ],
+    "production-planning/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      0.6
+    ]
+  },
+  "conflicts": [
+    "production-planning/SKILL.md",
+    "production-planning/references/scenario_templates.md",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

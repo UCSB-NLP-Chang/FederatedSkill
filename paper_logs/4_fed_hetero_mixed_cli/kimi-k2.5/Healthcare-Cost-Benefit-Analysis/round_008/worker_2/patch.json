@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Adds harbor-diagpanel-analysis skill for 14-day vs 28-day diagnostic panel replenishment economics. Captures holdout exclusions, ISO-week billing resolution, network tier adjustments, and rev-based lab overrides with empty-value filtering. Includes reusable script and anti-patterns for line-count constraints.",
+  "upsert_paths": [
+    "harbor-diagpanel-analysis/SKILL.md",
+    "harbor-diagpanel-analysis/scripts/compute_diagpanel.py"
+  ],
+  "delete_paths": []
+}

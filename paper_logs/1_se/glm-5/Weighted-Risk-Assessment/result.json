@@ -1,0 +1,36 @@
+{
+    "id": "f51ca40f-1091-4133-8673-e1e22a95157d",
+    "started_at": "2026-04-27T11:16:48.100814",
+    "finished_at": "2026-04-27T11:43:49.196803",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Weighted-Risk-Assessment": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "weighted-cloud-reliability-calc__qAhmW8o",
+                            "weighted-hospital-bedflow-calc__RsdzP7G",
+                            "weighted-campus-energy-balance-c__6zrn8ck",
+                            "weighted-port-throughput-calc__TBUo3uq",
+                            "api-sla-at-risk-calc__3NKdYE6",
+                            "campus-budget-at-risk-calc__mPSscUn",
+                            "factory-output-at-risk-calc__crz5MGy",
+                            "hospital-capacity-at-risk-calc__EercP6c"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

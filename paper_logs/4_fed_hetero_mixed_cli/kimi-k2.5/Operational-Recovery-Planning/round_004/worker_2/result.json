@@ -1,0 +1,29 @@
+{
+    "id": "76a9adbb-8405-46e0-9b2c-bfdfb4980353",
+    "started_at": "2026-05-19T02:24:41.034791",
+    "finished_at": "2026-05-19T02:33:47.962309",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Operational-Recovery-Planning": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_dc_recovery_01__pKTTcQL"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

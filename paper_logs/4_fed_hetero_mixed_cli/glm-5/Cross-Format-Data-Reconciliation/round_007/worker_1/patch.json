@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The task succeeded using existing skill patterns. Adding 'courses' domain terminology to domain_mapping.md and a known invariants section for university course catalogs to help future agents recognize this context faster.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": []
+}

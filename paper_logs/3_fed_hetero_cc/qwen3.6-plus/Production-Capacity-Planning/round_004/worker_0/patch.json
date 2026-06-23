@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated excel-capacity-planning skill to handle duplicate period/phase identifiers in input data (default to first occurrence), added 20 hrs/day capacity variant, clarified terminology (Phase/Week/Period interchangeable), and fixed reference paths to match actual library files.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": []
+}

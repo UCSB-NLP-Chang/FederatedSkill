@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.8,
+  "summary": "The agent failed because test discovery was insufficient - the search script returned 'no test files found' but pytest successfully ran test_output.py. The agent then incorrectly proceeded with custom verification and declared success. This patch strengthens test discovery guidance with more search locations, explicit escalation steps when tests aren't found, and clearer warnings that custom verification cannot substitute for pytest.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/pytest-failures.md"
+  ],
+  "delete_paths": []
+}

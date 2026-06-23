@@ -1,0 +1,31 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (openai/kimi-k2.5) R0: Applied u0's workload-capacity-planning skill (reward=1.0) as primary domain skill; added required Output precision and Known invariants sections; extracted PEP 668 venv setup into environment-setup.md reference. Rejected u2's and u1's generic excel-python-processing skills. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/environment-setup.md",
+    "workload-capacity-planning/references/validation-checklist.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/references/environment-setup.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "workload-capacity-planning/references/validation-checklist.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "excel-python-processing/SKILL.md"
+  ],
+  "cost_usd": 2.396886
+}

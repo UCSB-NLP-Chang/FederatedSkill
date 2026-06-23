@@ -1,0 +1,35 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's logistics-reliability-analysis patch (domain-specific, script-based, reward=0.222). Kept pipeline-performance-analysis unchanged (u2's update had wrong script refs). Rejected u1's generic process-reliability (reward=0.111, failed) and u2's kimi-specific tool-name-hygiene. Library: 2 skills, within target. See DECISIONS.md.",
+  "upsert_paths": [
+    "logistics-reliability-analysis/SKILL.md",
+    "logistics-reliability-analysis/references/report_schema.md",
+    "logistics-reliability-analysis/scripts/analyze_logistics.py",
+    "logistics-reliability-analysis/scripts/validate_logistics.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "logistics-reliability-analysis/scripts/analyze_logistics.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.2222222222222222
+    ],
+    "logistics-reliability-analysis/scripts/validate_logistics.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.2222222222222222
+    ],
+    "logistics-reliability-analysis/references/report_schema.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.2222222222222222
+    ],
+    "logistics-reliability-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.2222222222222222
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.244789
+}

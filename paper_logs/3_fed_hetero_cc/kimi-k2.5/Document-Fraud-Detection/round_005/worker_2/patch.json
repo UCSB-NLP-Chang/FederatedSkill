@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "This task is a new domain variant (research stipends) of the existing multi-source reconciliation pattern. Key differences from existing patterns: (1) Campus field validation alongside amount/account, (2) Award-level state checking ('archived' vs 'active'), (3) Revision handling where campus_code can change across revisions, (4) Name matching with initials ('Amara S.' \u2192 'Amara Singh'). The existing skill handles most of this but needs explicit coverage for campus field mismatches and award-level state validation. The trace shows successful execution with no failures, so the patch adds documentation of this variant and extends the template script to handle campus/cross-field validation.",
+  "upsert_paths": [
+    "multi-source-reconciliation/SKILL.md"
+  ],
+  "delete_paths": []
+}

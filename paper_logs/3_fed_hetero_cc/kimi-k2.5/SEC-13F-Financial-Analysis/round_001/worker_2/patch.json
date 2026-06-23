@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "The task failed verification despite appearing correct. The agent computed class breakdown metrics but the output schema didn't match what the test expected. The key issue: the agent used a distance threshold override (max_distance=6) to force a match for 'elliott associates' to 'jvl associates llc', when the skill explicitly says distance > 4 should halt with null. The agent also invented new output fields (stock_row_count, stock_cusip_count, top_class_labels, top_class_counts) that weren't in the original skill schema. The skill needs: (1) clarification on when threshold override is acceptable vs when to halt, (2) a new script for class breakdown analysis to avoid ad-hoc inline code, (3) explicit schema variants for different output types, and (4) anti-pattern guidance against forcing matches when the skill says stop.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/scripts/class_breakdown.py"
+  ],
+  "delete_paths": []
+}

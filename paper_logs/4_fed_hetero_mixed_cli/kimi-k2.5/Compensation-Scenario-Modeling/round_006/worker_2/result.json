@@ -1,0 +1,29 @@
+{
+    "id": "6c83d873-015f-4556-9ec0-d108c4de4fe6",
+    "started_at": "2026-05-18T02:22:40.941173",
+    "finished_at": "2026-05-18T02:43:38.005867",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Compensation-Scenario-Modeling": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "07_airline_crew_model__5C9RRwM"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Added freshness/meal-kit inventory variant to excel-openpyxl-processing skill. The key reusable pattern is calculating 'usable inventory' by subtracting expiring units from current stock before running standard DOH/coverage calculations. This applies to perishable goods domains where shelf-life limits effective inventory.",
+  "upsert_paths": [
+    "excel-openpyxl-processing/SKILL.md",
+    "excel-openpyxl-processing/references/code-patterns.md"
+  ],
+  "delete_paths": []
+}

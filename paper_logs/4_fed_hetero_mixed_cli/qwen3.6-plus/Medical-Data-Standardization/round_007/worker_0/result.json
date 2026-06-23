@@ -1,0 +1,29 @@
+{
+    "id": "cc669e0b-5f9d-47f1-af84-e58929090695",
+    "started_at": "2026-05-18T02:18:36.054469",
+    "finished_at": "2026-05-18T02:27:46.322332",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "transplant-panel-alignment-harmo__R5Mvj2h"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

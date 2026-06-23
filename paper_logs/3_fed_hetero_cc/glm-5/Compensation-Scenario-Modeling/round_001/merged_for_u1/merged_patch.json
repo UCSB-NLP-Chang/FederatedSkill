@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "Synthesized SKILL.md from u0's test-driven workflow + u2's Y/Y dynamic row tracking; rejected u1's peripheral numpy fix (reward=0.0). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-financial-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.14285714285714285
+    ]
+  },
+  "conflicts": [
+    "excel-financial-modeling/SKILL.md"
+  ],
+  "cost_usd": 2.468499
+}

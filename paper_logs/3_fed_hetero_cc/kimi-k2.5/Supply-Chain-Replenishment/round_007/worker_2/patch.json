@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Adding a skill for route-based dispatch tracker refresh that handles variable load sizes from Pack Matrix, Route Snapshot section parsing, and template preservation. This complements the existing zone-based coverage skill with route-specific logic including variable case-per-load lookups and section-based Excel parsing.",
+  "upsert_paths": [
+    "route-dispatch-tracker/SKILL.md",
+    "route-dispatch-tracker/scripts/refresh_tracker.py"
+  ],
+  "delete_paths": []
+}

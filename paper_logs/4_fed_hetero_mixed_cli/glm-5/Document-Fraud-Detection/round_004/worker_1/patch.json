@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The fleet-maintenance-chargeback-audit task follows the same validation pattern as field-service-workorder-audit (provider with aliases, order status checks, amendment chains, provider mismatch). Adding this domain to the known invariants and noting that amendments can come from separate files will help future agents recognize the pattern faster.",
+  "upsert_paths": [
+    "cross-document-validation/SKILL.md",
+    "cross-document-validation/references/domain-examples.md"
+  ],
+  "delete_paths": []
+}

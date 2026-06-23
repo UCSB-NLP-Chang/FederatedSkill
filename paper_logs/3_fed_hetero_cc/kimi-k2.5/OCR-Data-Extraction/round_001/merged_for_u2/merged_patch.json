@@ -1,0 +1,34 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged OCR extraction skill with order ID patterns, deduplication logic (first-wins with empty markers), external validation, and a reference extraction script; resolved contradictions on duplicate handling and price precision by enforcing raw floats and row preservation.",
+  "upsert_paths": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md",
+    "image-data-extraction/scripts/extract_order_data.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "image-data-extraction/scripts/extract_order_data.py": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.0
+    ],
+    "image-data-extraction/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      1.0
+    ],
+    "image-data-extraction/references/patterns.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "image-data-extraction/SKILL.md",
+    "image-data-extraction/references/patterns.md",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container exited 1: ",
+    "__task_update_failed__:RuntimeError:claude container exited 1: "
+  ],
+  "cost_usd": 0.0
+}

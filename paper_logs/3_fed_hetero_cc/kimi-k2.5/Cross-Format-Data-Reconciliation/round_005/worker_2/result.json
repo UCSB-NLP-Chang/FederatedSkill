@@ -1,0 +1,29 @@
+{
+    "id": "3a50ae7c-2399-41a5-ac58-224638815511",
+    "started_at": "2026-05-14T00:09:44.659690",
+    "finished_at": "2026-05-14T00:11:42.923562",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Cross-Format-Data-Reconciliation": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "06-hospital-medication-reconcili__VLffASn"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

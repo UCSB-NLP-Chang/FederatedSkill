@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 0.5,
+  "summary": "The agent failed because it claimed success without running the actual test suite (exit code 4 from verify_before_submit.py). The test file test_output.py existed but wasn't found by the search. Additionally, the INDEX/MATCH formula used incorrect header row references (Data!$H$21:$L$21 instead of the correct header row). This update strengthens the blocking condition for missing tests, adds troubleshooting for formula reference mismatches, and expands test discovery locations.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/finding-tests.md",
+    "excel-formula-injection/scripts/verify_before_submit.py"
+  ],
+  "delete_paths": []
+}

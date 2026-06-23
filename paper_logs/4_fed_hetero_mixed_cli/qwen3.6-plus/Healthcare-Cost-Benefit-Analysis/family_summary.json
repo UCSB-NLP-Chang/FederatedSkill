@@ -1,0 +1,265 @@
+{
+  "family_name": "Healthcare-Cost-Benefit-Analysis",
+  "n_workers": 3,
+  "n_rounds": 9,
+  "elapsed_sec": 6852.637339830399,
+  "bailed_out_on_timeout": false,
+  "reward_stats": {
+    "n": 27,
+    "mean": 0.4444444444444444,
+    "max": 1.0,
+    "min": 0.0,
+    "n_passed": 12
+  },
+  "merger_cost_total_usd": 15.349848,
+  "rounds": [
+    {
+      "round_idx": 0,
+      "assignments": [
+        [
+          "u0",
+          "harbor_cyclemargin_30v90"
+        ],
+        [
+          "u1",
+          "harbor_cyclemargin_30v90"
+        ],
+        [
+          "u2",
+          "harbor_cyclemargin_30v90"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 0,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 608.0313820838928
+    },
+    {
+      "round_idx": 1,
+      "assignments": [
+        [
+          "u0",
+          "harbor_gdpval_42"
+        ],
+        [
+          "u1",
+          "harbor_gdpval_42"
+        ],
+        [
+          "u2",
+          "harbor_gdpval_42"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 1.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 0,
+      "merger_cost_usd": 0.0,
+      "elapsed_sec": 403.8047125339508
+    },
+    {
+      "round_idx": 2,
+      "assignments": [
+        [
+          "u0",
+          "harbor_syncpack_28v56"
+        ],
+        [
+          "u1",
+          "harbor_syncpack_28v56"
+        ],
+        [
+          "u2",
+          "harbor_syncpack_28v56"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 0.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 1.639173,
+      "elapsed_sec": 771.284880399704
+    },
+    {
+      "round_idx": 3,
+      "assignments": [
+        [
+          "u0",
+          "harbor_mailerfill_45v90"
+        ],
+        [
+          "u1",
+          "harbor_mailerfill_45v90"
+        ],
+        [
+          "u2",
+          "harbor_mailerfill_45v90"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 2.090189,
+      "elapsed_sec": 1016.5055396556854
+    },
+    {
+      "round_idx": 4,
+      "assignments": [
+        [
+          "u0",
+          "harbor_infusionbatch_7v14"
+        ],
+        [
+          "u1",
+          "harbor_infusionbatch_7v14"
+        ],
+        [
+          "u2",
+          "harbor_infusionbatch_7v14"
+        ]
+      ],
+      "rewards": {
+        "u0": 1.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 2.0116639999999997,
+      "elapsed_sec": 1111.8951206207275
+    },
+    {
+      "round_idx": 5,
+      "assignments": [
+        [
+          "u0",
+          "harbor_oncocooler_10v20"
+        ],
+        [
+          "u1",
+          "harbor_oncocooler_10v20"
+        ],
+        [
+          "u2",
+          "harbor_oncocooler_10v20"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 2.248223,
+      "elapsed_sec": 964.1286172866821
+    },
+    {
+      "round_idx": 6,
+      "assignments": [
+        [
+          "u0",
+          "harbor_reagentkit_bulk"
+        ],
+        [
+          "u1",
+          "harbor_reagentkit_bulk"
+        ],
+        [
+          "u2",
+          "harbor_reagentkit_bulk"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 4,
+      "merger_cost_usd": 2.138918,
+      "elapsed_sec": 982.8573429584503
+    },
+    {
+      "round_idx": 7,
+      "assignments": [
+        [
+          "u0",
+          "harbor_vaxcrate_6v12"
+        ],
+        [
+          "u1",
+          "harbor_vaxcrate_6v12"
+        ],
+        [
+          "u2",
+          "harbor_vaxcrate_6v12"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 6,
+      "merger_cost_usd": 2.8459950000000003,
+      "elapsed_sec": 1018.2055938243866
+    },
+    {
+      "round_idx": 8,
+      "assignments": [
+        [
+          "u0",
+          "harbor_diagpanel_14v28"
+        ],
+        [
+          "u1",
+          "harbor_diagpanel_14v28"
+        ],
+        [
+          "u2",
+          "harbor_diagpanel_14v28"
+        ]
+      ],
+      "rewards": {
+        "u0": 0.0,
+        "u1": 0.0,
+        "u2": 1.0
+      },
+      "synced": true,
+      "n_conflicts": 0,
+      "n_ops_in_merged": 2,
+      "merger_cost_usd": 2.375686,
+      "elapsed_sec": 987.6988363265991
+    }
+  ],
+  "final_skill_dir": {
+    "u0": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u0/Healthcare-Cost-Benefit-Analysis",
+    "u1": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u1/Healthcare-Cost-Benefit-Analysis",
+    "u2": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-healthcare-rerun-M3-hetero/Healthcare-Cost-Benefit-Analysis/worker_skills/u2/Healthcare-Cost-Benefit-Analysis"
+  }
+}

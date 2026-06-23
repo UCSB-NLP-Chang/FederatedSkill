@@ -1,0 +1,29 @@
+{
+    "id": "bda5e7fa-1248-490c-ba8a-f9cf690ea612",
+    "started_at": "2026-05-17T22:20:11.429863",
+    "finished_at": "2026-05-17T22:22:48.640408",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Healthcare-Cost-Benefit-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_oncocooler_10v20__c2FTwTD"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

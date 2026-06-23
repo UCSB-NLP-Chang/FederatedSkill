@@ -1,0 +1,30 @@
+{
+  "round_idx": 7,
+  "assignments": [
+    [
+      "u0",
+      "existing-brief-refresh"
+    ],
+    [
+      "u1",
+      "existing-brief-refresh"
+    ],
+    [
+      "u2",
+      "existing-brief-refresh"
+    ]
+  ],
+  "rewards": {
+    "u0": 0.0,
+    "u1": 0.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 2663.2719469070435
+}

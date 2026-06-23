@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "The agent failed test_legacy_pytest_suite despite producing structurally valid output. The trace reveals two critical anti-patterns: (1) using awk for CUSIP lookup instead of header-aware Python parsing, and (2) writing inline Python for issuer rollup aggregation instead of using the existing rollup_issuer.py script. The existing sec-13f-alert-processing skill covers routing but lacks explicit guidance on template-filling workflows and mandatory script usage. This patch updates sec-13f-alert-processing to add a template-filling workflow section, reinforces mandatory script usage with decision rules, and adds a troubleshooting section for common failure modes seen in this trace.",
+  "upsert_paths": [
+    "sec-13f-alert-processing/SKILL.md"
+  ],
+  "delete_paths": []
+}

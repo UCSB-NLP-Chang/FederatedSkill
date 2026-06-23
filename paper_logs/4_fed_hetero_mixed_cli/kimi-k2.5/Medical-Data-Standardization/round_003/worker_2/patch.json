@@ -1,0 +1,9 @@
+{
+  "worker_id": "u2",
+  "reward": 0.55,
+  "summary": "The trace reveals a failed cardiology panel harmonization task. The agent processed BNP, NT-proBNP, Troponin I, Troponin T, Creatinine, Sodium, Potassium, Magnesium but likely failed to convert cardiac marker units correctly. Extremely high Troponin I values (16392, 6636) suggest missing conversion from pg/mL (SI) to ng/mL (conventional). The existing clinical-lab-harmonization skill lacks cardiology-specific unit guidance. This update adds cardiology panel specifics to the existing skill rather than creating a duplicate, capturing the conversion factors and range validation needed for cardiac biomarkers.",
+  "upsert_paths": [
+    "clinical-lab-harmonization/SKILL.md"
+  ],
+  "delete_paths": []
+}

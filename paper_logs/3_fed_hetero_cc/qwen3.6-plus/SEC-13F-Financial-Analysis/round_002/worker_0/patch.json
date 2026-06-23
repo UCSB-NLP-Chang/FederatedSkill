@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Extends sec-13f-fund-analysis to support quarterly shift comparison (Schema C), adds a deterministic quarterly_shift.py script, and updates workflow/anti-patterns to prevent common delta calculation and schema mixing failures.",
+  "upsert_paths": [
+    "sec-13f-fund-analysis/SKILL.md",
+    "sec-13f-fund-analysis/scripts/quarterly_shift.py"
+  ],
+  "delete_paths": []
+}

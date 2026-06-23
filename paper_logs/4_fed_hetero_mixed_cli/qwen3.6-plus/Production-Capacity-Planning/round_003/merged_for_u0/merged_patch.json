@@ -1,0 +1,17 @@
+{
+  "worker_id": "u0",
+  "summary": "Applied u0's workload-capacity-planning patch (mandatory Step 0 layout inspection) + folded u1's Read-tool anti-pattern. See DECISIONS.md.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.497897
+}

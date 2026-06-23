@@ -1,0 +1,11 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "The trace shows a queue capacity planning task where demand was split across two rows (Standard Return Intake + Exception Review) that needed combining. The existing skill/script didn't support this pattern, causing the agent to write custom code. This update adds multi-row demand support and a new domain example to the skill.",
+  "upsert_paths": [
+    "queue-capacity-planning/SKILL.md",
+    "queue-capacity-planning/references/simulation_rules.md",
+    "queue-capacity-planning/scripts/queue_simulator.py"
+  ],
+  "delete_paths": []
+}

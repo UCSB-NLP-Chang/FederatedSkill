@@ -1,0 +1,32 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Synthesized SKILL.md from all three workers (u0's buAutoNum fix, u1's namelist ordering, u2's grouped caption workflow). Added validate_pptx.py script and grouped-caption-cleanup.md reference. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md",
+    "pptx-xml-editing/references/grouped-caption-cleanup.md",
+    "pptx-xml-editing/scripts/validate_pptx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-xml-editing/references/grouped-caption-cleanup.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.8888888888888888
+    ],
+    "pptx-xml-editing/scripts/validate_pptx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "pptx-xml-editing/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-xml-editing/SKILL.md",
+    "__task_update_failed__:RuntimeError:claude container timed out after 300s"
+  ],
+  "cost_usd": 3.5432940000000004
+}

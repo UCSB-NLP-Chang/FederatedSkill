@@ -1,0 +1,24 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete for u0 (R1). Renamed pivot-report \u2192 sales-pivot-report to match peer naming. Synthesized STOP-block test checkpoint (task_memory hypothesis), numbered procedural workflow (u0 style fit), and CRITICAL self-validation anti-pattern (u1). See DECISIONS.md for rationale. Both patches had reward=0; STOP-block format is a hypothesis to address execution adherence gap.",
+  "upsert_paths": [
+    "sales-pivot-report/SKILL.md"
+  ],
+  "delete_paths": [
+    "pivot-report/SKILL.md"
+  ],
+  "provenance": {
+    "pivot-report/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ],
+    "sales-pivot-report/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.2101790000000001
+}

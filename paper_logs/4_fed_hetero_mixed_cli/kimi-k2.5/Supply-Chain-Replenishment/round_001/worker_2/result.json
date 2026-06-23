@@ -1,0 +1,29 @@
+{
+    "id": "06e86429-aa26-4a51-b52a-81055719143a",
+    "started_at": "2026-05-23T22:43:50.358171",
+    "finished_at": "2026-05-23T22:46:04.777952",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "petcare_midmonth_pallet_gap__niDQXhc"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

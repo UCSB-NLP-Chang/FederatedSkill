@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "wildlife-field-guide-caption-cle__Zu9xJ8M",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/round_001/worker_0/wildlife-field-guide-caption-cle__Zu9xJ8M",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/PPT-Formatting-Optimization/round_001/worker_0/wildlife-field-guide-caption-cle__Zu9xJ8M",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

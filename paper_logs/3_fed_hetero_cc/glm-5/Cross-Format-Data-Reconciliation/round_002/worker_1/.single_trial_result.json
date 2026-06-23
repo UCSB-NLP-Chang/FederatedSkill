@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "03-retail-supply-category-diff__9UGu5Bj",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/round_002/worker_1/03-retail-supply-category-diff__9UGu5Bj",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Cross-Format-Data-Reconciliation/round_002/worker_1/03-retail-supply-category-diff__9UGu5Bj",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

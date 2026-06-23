@@ -1,0 +1,23 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u2's production-planning patch (renamed from tool-anchored to problem-domain) to close B3 gap. Existing queue-capacity-planning and excel-processing skills unchanged. See DECISIONS.md for full decision log.",
+  "upsert_paths": [
+    "production-planning/SKILL.md",
+    "production-planning/references/scenario_templates.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-planning/references/scenario_templates.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "production-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.2
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.8666020000000002
+}

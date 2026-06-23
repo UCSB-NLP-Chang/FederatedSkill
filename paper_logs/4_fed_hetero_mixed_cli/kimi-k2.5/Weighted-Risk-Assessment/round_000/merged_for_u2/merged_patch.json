@@ -1,0 +1,35 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Created unified skill `excel-formula-automation` merging u0+u1+u2 patches. See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "excel-formula-automation/SKILL.md",
+    "excel-formula-automation/references/formula-patterns.md",
+    "excel-formula-automation/scripts/calculate_stats.py",
+    "excel-formula-automation/scripts/formula_injector.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-automation/scripts/calculate_stats.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "excel-formula-automation/scripts/formula_injector.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-formula-automation/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "excel-formula-automation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 2.7765059999999995
+}

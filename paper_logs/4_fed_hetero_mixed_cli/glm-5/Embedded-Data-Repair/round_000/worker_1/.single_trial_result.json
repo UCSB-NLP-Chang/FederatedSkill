@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "fx-spot-matrix-refresh__fCtVsmL",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/round_000/worker_1/fx-spot-matrix-refresh__fCtVsmL",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Embedded-Data-Repair/round_000/worker_1/fx-spot-matrix-refresh__fCtVsmL",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

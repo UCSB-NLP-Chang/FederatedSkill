@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.4,
+  "summary": "The agent attempted a home infusion therapy batching analysis comparing 7-day vs 14-day delivery cycles. The task failed verification despite correct-looking calculations. Key issues: (1) The agent used `52` and `26` deliveries/year instead of exact `365/7\u224852.14` and `365/14\u224826.07`, causing precision errors. (2) The agent didn't use the existing cycle-margin-analysis skill which already handles similar calculations. (3) Patient override logic (highest approved revision) was hand-implemented instead of using reusable patterns. Creating a new skill for infusion batching that extends the existing margin analysis pattern with infusion-specific data joins (JSON catalog, CSV overrides, alias matching) and precise day-based calculations.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/references/calculation-examples.md",
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py"
+  ],
+  "delete_paths": []
+}

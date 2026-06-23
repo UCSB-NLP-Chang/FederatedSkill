@@ -1,0 +1,23 @@
+{
+  "worker_id": "u1",
+  "summary": "DONE \u2014 R4 merge complete. Applied u1's wholesale patch (reward=1.0) extending supply-chain-coverage-analysis umbrella to cover B3 branch-stock-transfer-schedule variant with Transfer ID deduplication. Rejected u2's narrow branch-inventory-coverage skill (umbrella already covers B3). Library: 1 umbrella skill + 1 reference file. See DECISIONS.md.",
+  "upsert_paths": [
+    "supply-chain-coverage-analysis/SKILL.md",
+    "supply-chain-coverage-analysis/references/calculation-formulas.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "supply-chain-coverage-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "supply-chain-coverage-analysis/references/calculation-formulas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.3480432
+}

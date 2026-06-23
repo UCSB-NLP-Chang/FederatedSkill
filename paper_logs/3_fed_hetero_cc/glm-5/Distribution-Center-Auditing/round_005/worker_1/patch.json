@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.4,
+  "summary": "The task revealed patterns for multi-file audit joins, alias normalization lookups, and event status filtering that extend the existing spreadsheet-audit-reporting skill. Adding these patterns enables future agents to handle similar multi-source audit tasks with value normalization.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md",
+    "spreadsheet-audit-reporting/references/computed-column-examples.md"
+  ],
+  "delete_paths": []
+}

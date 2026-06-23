@@ -1,0 +1,29 @@
+{
+    "id": "2ef5d899-f2a2-462c-a194-bcd6efd0df44",
+    "started_at": "2026-05-18T00:49:43.189698",
+    "finished_at": "2026-05-18T00:52:18.321487",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__OCR-Data-Extraction": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "task_family_ecommerce_orders__2jVcvst"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

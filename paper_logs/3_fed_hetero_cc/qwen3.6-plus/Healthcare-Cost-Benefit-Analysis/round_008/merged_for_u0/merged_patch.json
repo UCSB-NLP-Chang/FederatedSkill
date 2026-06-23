@@ -1,0 +1,32 @@
+{
+  "worker_id": "u0",
+  "summary": "R8 merge complete: Extended infusion-batch-analysis umbrella to cover B7 (diagnostic panel dispatch) instead of creating 4th narrow skill. Added compute_diagpanel.py script with 365.0 days/year and shipper\u00d7runs (matching cooler/crate pattern). All three workers' narrow-skill proposals rejected as anti-pattern. See DECISIONS.md.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/references/invariants.md",
+    "infusion-batch-analysis/scripts/compute_diagpanel.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "infusion-batch-analysis/scripts/compute_diagpanel.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "infusion-batch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "infusion-batch-analysis/references/invariants.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "__skill_md_invalid__:infusion-batch-analysis/SKILL.md: bad YAML (ScannerError)",
+    "__skill_md_invalid__:reagent-kit-analysis/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 6.281535000000001
+}

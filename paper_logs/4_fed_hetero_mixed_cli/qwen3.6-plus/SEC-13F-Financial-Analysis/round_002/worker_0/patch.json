@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "Adds cross-quarter comparison workflow and script to sec-13f-analysis, resolving the date format friction (YYYY-qN vs DD-MON-YYYY) and providing a reusable delta-analysis pipeline for portfolio shift tasks. Updates SKILL.md with explicit date format rules, comparison workflow, and script invocation guidance.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/scripts/compare_quarters.py"
+  ],
+  "delete_paths": []
+}

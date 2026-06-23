@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updated hwpx-template-fill/SKILL.md to strongly emphasize using the provided scripts as the zero-code preferred path, and added a troubleshooting note for the regex backreference error encountered during custom scripting. This prevents future agents from reinventing the wheel and failing on fragile regex patterns.",
+  "upsert_paths": [
+    "hwpx-template-fill/SKILL.md"
+  ],
+  "delete_paths": []
+}

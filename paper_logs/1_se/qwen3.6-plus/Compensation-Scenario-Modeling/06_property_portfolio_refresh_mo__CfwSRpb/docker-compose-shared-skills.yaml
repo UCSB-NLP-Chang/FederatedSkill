@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/root/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/etc/claude-code/.claude/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/root/.qwen/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/root/.codex/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/root/.gemini/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/root/.agents/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/root/.goose/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/root/.factory/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/root/.opencode/skill
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/root/.kimi/skills
+    - /home/deck/gyao/SkillFL/SkillFlow-benchmark/jobs/iter-baseline-qwen-r1/iter-baseline-qwen-r1__Compensation-Scenario-Modeling/shared_skills/Compensation-Scenario-Modeling:/root/.config/agent/skills

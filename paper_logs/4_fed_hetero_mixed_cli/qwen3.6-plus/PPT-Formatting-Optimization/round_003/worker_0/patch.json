@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Updates pptx-xml-editing skill with explicit workflows for shape targeting, multi-attribute formatting, and replacing existing text with buAutoNum bullets, derived from successful caption cleanup trace.",
+  "upsert_paths": [
+    "pptx-xml-editing/SKILL.md"
+  ],
+  "delete_paths": []
+}

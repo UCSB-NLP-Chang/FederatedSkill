@@ -1,0 +1,26 @@
+{
+  "worker_id": "u0",
+  "summary": "R2 merge complete for u0 (qwen3.6-plus). Applied target's own reward=1.0 patch wholesale (SKILL.md + extraction_patterns.md with safe_equal type-normalization). Rejected u2's 203-line script per memory.md guidance on qwen script-length limits. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/references/extraction_patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md",
+    "cross-format-data-diff/references/extraction_patterns.md"
+  ],
+  "cost_usd": 1.4524122
+}

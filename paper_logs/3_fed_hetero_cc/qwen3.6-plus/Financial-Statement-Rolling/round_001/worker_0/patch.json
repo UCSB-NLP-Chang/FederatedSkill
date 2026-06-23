@@ -1,0 +1,10 @@
+{
+  "worker_id": "u0",
+  "reward": 0.0,
+  "summary": "The agent failed the test suite despite building a structurally correct workbook. The trace reveals two reusable gaps: (1) summary sheet cell positions must follow the spec exactly rather than being guessed, requiring a spec-driven mapping approach; (2) the agent should run the test suite before declaring success. The existing deferred-revenue-rollforward skill covers the same core capability but needs generalization to handle accrual rollforwards (different column headers, same control-row logic) and stronger spec-compliance guidance. This patch updates the existing skill's description, adds spec-driven summary sheet workflow, adds test-first verification, and adds an accrual variant reference.",
+  "upsert_paths": [
+    "deferred-revenue-rollforward/SKILL.md",
+    "deferred-revenue-rollforward/references/accrual_variant.md"
+  ],
+  "delete_paths": []
+}

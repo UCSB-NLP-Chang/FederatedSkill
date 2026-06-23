@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/DMAIC-Quality-Analysis/worker_skills/u0/DMAIC-Quality-Analysis:/root/.config/agent/skills

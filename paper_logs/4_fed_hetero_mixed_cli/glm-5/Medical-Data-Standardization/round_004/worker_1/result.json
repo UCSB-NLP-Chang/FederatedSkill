@@ -1,0 +1,29 @@
+{
+    "id": "d4d70573-8a49-4143-8006-10baed5bccab",
+    "started_at": "2026-05-18T01:11:09.488010",
+    "finished_at": "2026-05-18T01:16:14.830317",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Medical-Data-Standardization": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "oncology-followup-dedup-harmoniz__P23bSM7"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

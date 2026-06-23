@@ -1,0 +1,14 @@
+services:
+  main:
+    volumes:
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/root/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/etc/claude-code/.claude/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/root/.qwen/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/root/.codex/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/root/.gemini/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/root/.agents/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/root/.goose/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/root/.factory/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/root/.opencode/skill
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/root/.kimi/skills
+    - /mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-permerge-self-qwen-only-M1-tokenplan-hetero/Inventory-&-Finance-Integration/worker_skills/u0/Inventory-&-Finance-Integration:/root/.config/agent/skills

@@ -1,0 +1,38 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5). Applied u2's class breakdown workflow and script (B2 absorbing), merged u1's column verification step, added u0's matching_strategies.md and u2's output-schemas.md references. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/matching_strategies.md",
+    "sec-13f-analysis/references/output-schemas.md",
+    "sec-13f-analysis/scripts/process_13f.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-analysis/references/matching_strategies.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-analysis/references/output-schemas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "sec-13f-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-analysis/scripts/process_13f.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/scripts/process_13f.py"
+  ],
+  "cost_usd": 2.749926
+}

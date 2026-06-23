@@ -1,0 +1,26 @@
+{
+  "worker_id": "u1",
+  "summary": "Merged u1's library for R2: synthesized SKILL.md with Pre-Flight Checklist at TOP (u2) + Pre-Completion Checklist at END (u1) + test discovery guidance (u0) to address glm-5's \"custom verification trap\" failure pattern. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/grading-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-workbook-modeling/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.9
+    ],
+    "excel-workbook-modeling/references/grading-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.8
+    ]
+  },
+  "conflicts": [
+    "excel-workbook-modeling/SKILL.md",
+    "excel-workbook-modeling/references/grading-patterns.md"
+  ],
+  "cost_usd": 3.8228250000000004
+}

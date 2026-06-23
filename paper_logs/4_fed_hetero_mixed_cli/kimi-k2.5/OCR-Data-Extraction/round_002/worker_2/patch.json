@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Created new skill for OCR-based data enrichment workflows. The trace shows extracting claim codes from images and merging with a roster CSV (left-join pattern). This is a distinct reusable capability from pure OCR extraction: it handles reference data lookups, flexible field name matching (CLAIM CODE vs CLAIM REF), and preserving orphan records. The skill complements the existing ocr-data-extraction skill by adding the merge/enrichment layer.",
+  "upsert_paths": [
+    "ocr-reference-merge/SKILL.md",
+    "ocr-reference-merge/scripts/merge_template.py"
+  ],
+  "delete_paths": []
+}

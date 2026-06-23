@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete: Applied u0's infusion-batch-analysis patch (reward=1.0) for standard CSV naming per task_memory. Library now has 3 skills (syncpack-cycle-analysis, mailer-policy-analysis, infusion-batch-analysis). See DECISIONS.md for rationale.",
+  "upsert_paths": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "infusion-batch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "infusion-batch-analysis/SKILL.md",
+    "infusion-batch-analysis/scripts/compute_infusion_batch.py"
+  ],
+  "cost_usd": 0.493425
+}

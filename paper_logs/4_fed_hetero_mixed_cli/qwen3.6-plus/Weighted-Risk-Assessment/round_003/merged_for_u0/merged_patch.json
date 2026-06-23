@@ -1,0 +1,43 @@
+{
+  "worker_id": "u0",
+  "summary": "MERGE COMPLETE \u2014 R3 for u0 (qwen3.6-plus) on Weighted-Risk-Assessment\n\nApplied u2's script fixes (exit code 3 for no tests found), synthesized SKILL.md with key elements from all patches. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-formula-injection/SKILL.md",
+    "excel-formula-injection/references/finding-tests.md",
+    "excel-formula-injection/references/formula-patterns.md",
+    "excel-formula-injection/scripts/check_test_data_only.py",
+    "excel-formula-injection/scripts/verify_before_submit.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "excel-formula-injection/references/finding-tests.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "excel-formula-injection/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      0.5
+    ],
+    "excel-formula-injection/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "excel-formula-injection/scripts/verify_before_submit.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ],
+    "excel-formula-injection/scripts/check_test_data_only.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "excel-formula-injection/SKILL.md"
+  ],
+  "cost_usd": 3.6668669999999994
+}

@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (kimi-k2.5) R5: Applied u2's verified oncocooler-dispatch-analysis skill (reward=1.0) wholesale. Rejected u0's cooler-dispatch-analysis (wrong name, unverified) and u1's version (same skill, lower reward). Library now at 4-skill cap with B2/B3/B4/B5 coverage. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "oncocooler-dispatch-analysis/SKILL.md",
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "oncocooler-dispatch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "oncocooler-dispatch-analysis/SKILL.md",
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py"
+  ],
+  "cost_usd": 0.725788
+}

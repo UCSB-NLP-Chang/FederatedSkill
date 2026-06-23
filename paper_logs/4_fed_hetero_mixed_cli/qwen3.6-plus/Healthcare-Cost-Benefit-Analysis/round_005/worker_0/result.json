@@ -1,0 +1,29 @@
+{
+    "id": "6a9f0994-41d8-4a40-8fd1-b39f56f8e759",
+    "started_at": "2026-05-24T05:57:39.720570",
+    "finished_at": "2026-05-24T06:01:09.425232",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Healthcare-Cost-Benefit-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_oncocooler_10v20__5pkwNdm"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

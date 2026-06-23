@@ -1,0 +1,11 @@
+{
+  "worker_id": "u2",
+  "reward": 0.5,
+  "summary": "Added cross-quarter fund shift screening capability to sec-13f-analysis skill. The task required comparing Bridgewater Associates holdings between Q2 and Q3 2025 to identify top increased, decreased, and new positions. The agent attempted this with inline shell scripts but failed verification. Added explicit Shift Screening Workflow to SKILL.md, created reusable shift_screen.py script with proper cross-quarter comparison logic, and documented output schema and anti-patterns specific to holdings comparison (handling CUSIP case sensitivity, distinguishing 'increased' from 'new', and validating manager matches in both quarters).",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/output-schemas.md",
+    "sec-13f-analysis/scripts/shift_screen.py"
+  ],
+  "delete_paths": []
+}

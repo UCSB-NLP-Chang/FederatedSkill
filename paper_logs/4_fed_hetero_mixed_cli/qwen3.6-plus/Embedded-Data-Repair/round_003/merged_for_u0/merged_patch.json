@@ -1,0 +1,19 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's verified SKILL.md (100 lines, reward=1.0) \u2014 target's own patch fits qwen's ~100-line style and captures R3 multi-sheet + archived-vs-live patterns. Reference file and script unchanged. See DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md"
+  ],
+  "cost_usd": 2.0424569999999997
+}

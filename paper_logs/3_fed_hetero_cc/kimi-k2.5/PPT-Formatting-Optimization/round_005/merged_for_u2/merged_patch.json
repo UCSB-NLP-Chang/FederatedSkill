@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE \u2014 R5 merge complete for u2 (kimi-k2.5). Merged SKILL.md synthesized from u2's multi-shape replacement pattern (addresses R5 stale-content failure), u0's buAutoNum XML pattern (highest reward 0.889), and u1's external verification emphasis. Added bullets-numbering.md reference file. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/bullets-numbering.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/references/bullets-numbering.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.6666666666666666
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md",
+    "__skill_md_invalid__:pptx-manipulation/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 2.7373529999999997
+}

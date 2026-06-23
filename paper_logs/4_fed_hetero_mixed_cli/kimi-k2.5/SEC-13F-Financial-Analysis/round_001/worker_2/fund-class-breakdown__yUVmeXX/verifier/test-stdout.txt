@@ -1,0 +1,62 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: FF                                                                       [100%]
+E           =================================== FAILURES ===================================
+E           _______________________________ test_file_exists _______________________________
+E           
+E               def test_file_exists():
+E           >       assert OUTPUT_FILE.is_file()
+E           E       AssertionError: assert False
+E           E        +  where False = is_file()
+E           E        +    where is_file = PosixPath('/root/answers.json').is_file
+E           
+E           /tests/test_outputs.py:42: AssertionError
+E           _________________________________ test_answers _________________________________
+E           
+E               def test_answers():
+E           >       actual = load_json(OUTPUT_FILE)
+E                            ^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:46: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           path = PosixPath('/root/answers.json')
+E           
+E               def load_json(path):
+E           >       with open(path) as f:
+E                        ^^^^^^^^^^
+E           E       FileNotFoundError: [Errno 2] No such file or directory: '/root/answers.json'
+E           
+E           /tests/test_outputs.py:7: FileNotFoundError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_file_exists - AssertionError: assert False
+E           FAILED ../tests/test_outputs.py::test_answers - FileNotFoundError: [Errno 2] ...
+E           2 failed in 0.03s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: FF...
+============================== 1 failed in 0.23s ===============================

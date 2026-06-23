@@ -1,0 +1,29 @@
+{
+    "id": "318f300b-728e-47c6-b3a0-8d5947229f5b",
+    "started_at": "2026-05-24T06:30:06.465213",
+    "finished_at": "2026-05-24T06:34:08.284332",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "qwen-coder__Healthcare-Cost-Benefit-Analysis": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_vaxcrate_6v12__CwN7mqh"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

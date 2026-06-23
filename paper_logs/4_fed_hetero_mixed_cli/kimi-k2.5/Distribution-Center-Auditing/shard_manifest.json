@@ -1,0 +1,60 @@
+{
+  "run_id": "fed-cloudskill-v5_9-mixed-cli-M3-hetero",
+  "family_name": "Distribution-Center-Auditing",
+  "n_workers": 3,
+  "partitioner": "ReplicatePartitioner()",
+  "sync_schedule": "EveryTaskSync()",
+  "merger": "CloudSkillMerge()",
+  "workers": [
+    {
+      "id": "u0",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallQwenCode",
+      "agent_model": "qwen3.6-plus"
+    },
+    {
+      "id": "u1",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallClaudeCode",
+      "agent_model": "glm-5"
+    },
+    {
+      "id": "u2",
+      "agent_name": "claude-code",
+      "agent_import_path": "libs.harbor_noinstall_agents.agents:NoInstallKimiCli",
+      "agent_model": "openai/kimi-k2.5"
+    }
+  ],
+  "shards": {
+    "u0": [
+      "harbor_receiving_exception_audit",
+      "harbor_trailer_detention_audit",
+      "harbor_promo_register_audit",
+      "harbor_service_queue_sla_audit",
+      "harbor_timesheet_policy_audit",
+      "harbor_returns_disposition_audit",
+      "harbor_outbound_manifest_audit",
+      "harbor_cycle_count_variance_audit"
+    ],
+    "u1": [
+      "harbor_receiving_exception_audit",
+      "harbor_trailer_detention_audit",
+      "harbor_promo_register_audit",
+      "harbor_service_queue_sla_audit",
+      "harbor_timesheet_policy_audit",
+      "harbor_returns_disposition_audit",
+      "harbor_outbound_manifest_audit",
+      "harbor_cycle_count_variance_audit"
+    ],
+    "u2": [
+      "harbor_receiving_exception_audit",
+      "harbor_trailer_detention_audit",
+      "harbor_promo_register_audit",
+      "harbor_service_queue_sla_audit",
+      "harbor_timesheet_policy_audit",
+      "harbor_returns_disposition_audit",
+      "harbor_outbound_manifest_audit",
+      "harbor_cycle_count_variance_audit"
+    ]
+  }
+}

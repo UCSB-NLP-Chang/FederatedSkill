@@ -1,0 +1,170 @@
+---
+name: workload-capacity-planning
+description: Simulates deterministic weekly capacity, backlog, and overtime policies from Excel, CSV, or JSON input data. Generates structured Excel plans and strictly formatted summary text files. Use when tasks require week-by-week workload simulation, backlog burn-down calculations, and output validation against strict formatting constraints. Trigger when you see Excel capacity data, weekly demand schedules, step-down plans, or phrases like 'catch-up plan', 'backlog clearance', 'overtime policy'.
+---
+
+# Workload & Capacity Planning Simulation
+
+## Step 0: Mandatory Layout Inspection
+**Never assume layout orientation or file format.** Always run a quick inspection before parsing. Use `python3` (not `python`).
+
+**For Excel (.xlsx)**:
+```python
+import openpyxl
+wb = openpyxl.load_workbook('input.xlsx', data_only=True)
+ws = wb.active
+print(f"Dimensions: {ws.dimensions}, MaxRow: {ws.max_row}, MaxCol: {ws.max_column}")
+for r in range(1, min(4, ws.max_row+1)):
+    print(f"Row {r}: {[ws.cell(row=r, column=c).value for c in range(1, min(4, ws.max_column+1))]}")
+```
+
+**For CSV (.csv)**:
+```python
+import csv
+with open('input.csv', 'r') as f:
+    for i, row in enumerate(csv.reader(f)):
+        print(f"Row {i}: {row[:5]}...")  # Print first 5 columns
+        if i >= 3: break
+```
+
+**For JSON (.json)**:
+```python
+import json
+with open('input.json', 'r') as f:
+    data = json.load(f)
+print(f"Type: {type(data)}, Length: {len(data)}")
+if data:
+    print(f"First entry keys: {list(data[0].keys())}")
+    print(f"Sample entry: {data[0]}")
+```
+
+**Decision Rule**:
+- If file ends with `.csv` → Use CSV parsing (can be inspected with ReadFile first if small).
+- If file ends with `.json` → Parse as JSON array of objects. Inspect with ReadFile if small, otherwise use Python `json` module.
+- If `max_column <= 3` and Row 1 contains labels like "Week", "Period", "Demand" → **Vertical Layout**. Parse with `ws.iter_rows(min_row=2, values_only=True)`.
+- If `max_column > 10` or CSV rows have many numeric columns → **Horizontal Layout**. See `references/horizontal-data-parsing.md`.
+
+**Terminology note**: Tasks may use "Week", "Period", or "Phase" interchangeably. Headers may say "Start of Week" or "Start of Period"—treat these as equivalent.
+
+## Step 1: Data Extraction & Duplicate Detection
+
+**For Excel/CSV** (vertical layout):
+```python
+phases = []
+demands = []
+for row in ws.iter_rows(min_row=2, values_only=True):
+    phase = row[0]
+    demand = row[1]
+    if phase is not None:
+        phases.append(int(phase))
+        demands.append(float(demand) if demand else 0)
+
+# Check for duplicates and resolve by summing
+duplicates = [p for p in set(phases) if phases.count(p) > 1]
+if duplicates:
+    print(f"WARNING: Duplicate phases detected: {duplicates}")
+    phase_demand = {}
+    for p, d in zip(phases, demands):
+        phase_demand[p] = phase_demand.get(p, 0) + d
+    phases = sorted(phase_demand.keys())
+    demands = [phase_demand[p] for p in phases]
+```
+
+**For JSON** (array of objects):
+```python
+phase_demand = {}
+for entry in data:
+    # Extract phase from common key variants
+    phase = entry.get('week') or entry.get('phase') or entry.get('period')
+    
+    # Extract demand (handle nested structures like entry['data']['demand_per_week'])
+    demand_val = entry.get('demand_per_week') or entry.get('demand')
+    if demand_val is None and isinstance(entry.get('data'), dict):
+        demand_val = entry['data'].get('demand_per_week') or entry['data'].get('demand')
+    
+    if phase is not None:
+        demand = float(demand_val) if demand_val else 0.0
+        phase_demand[int(phase)] = phase_demand.get(int(phase), 0) + demand
+
+if len(data) != len(phase_demand):
+    print(f"Note: Duplicate periods detected and summed. Unique phases: {len(phase_demand)}")
+
+phases = sorted(phase_demand.keys())
+demands = [phase_demand[p] for p in phases]
+```
+
+## Workflow
+1. **Extract Input Data**: Run layout inspection. Check for and resolve duplicate periods. Identify sheet orientation. Parse period-to-demand mapping carefully. Handle multiple sheets if present (e.g., base demand + adjustments).
+2. **Resolve Initial State**: Carefully separate "Start of Period Past Due" from "Scheduled Demand" if the prompt provides a combined initial condition (e.g., "Start + Demand = X"). Avoid double-counting demand in the first period's calculation.
+   - Formula: `calc_start = combined_value - demand[first_period]`
+   - If given explicit backlog number (e.g., "initial backlog of 850 hours"), use that directly as `start_past_due` for Period 1.
+3. **Define Policy Rules**: Map the deterministic decision tree from the prompt:
+   - Capacity per day (common: 20, 25, 28, or 30 std hrs)
+   - Days-to-capacity mapping (4 days = 80/100/112/120, 5 days = 100/125/140/150, 6 days = 120/150/168/180)
+   - Backlog clearing logic (choose minimum days to drive `End of Period <= 0`)
+   - Steady-state logic (if demand <= capacity_4d, use 4 days; else if <= capacity_5d, use 5 days, etc.)
+   - Overtime calculation: `ot_rate * max(0, days_worked - base_days)`
+4. **Run Simulation**: Iterate period-by-period. Track:
+   - `prior_end`: Signed backlog/buffer from previous period
+   - `start_past_due`: `max(0, prior_end)` for reporting
+   - `capacity`: Based on days selected by policy
+   - `overtime`: Based on days worked
+   - `end_of_period`: `start_past_due + demand - capacity`
+
+   Record first occurrences: first 4-day period, first 5-day period (track as `None` initially, assign period number when first triggered).
+   
+   **Note on transition ordering**: The first 4-day week may occur before the first 5-day week if demand spikes after backlog clears. Track actual occurrences, not assumed sequences.
+5. **Generate Excel Output**: Create workbook. Name sheet exactly as specified (e.g., `Plan`). Write headers and data rows. **Never round numeric values**—pass raw floats. Ensure period sequences are contiguous.
+6. **Generate Summary Text**: Format strictly per task spec. Common pattern: 3 lines (First_Period_5_Days, First_Period_4_Days, Summary).
+   - Use `N/A` for transitions never triggered
+   - Summary: max 60 words, max 3 sentences
+   - Must explicitly mention step-down period numbers or `N/A`
+   - **Python Tip**: Compute transition periods as integers first (`first_5 = int(...)`) before using them in f-strings or arithmetic to avoid type errors.
+7. **Verify Programmatically**: Run assertions before submitting. See `references/validation-checklist.md`.
+
+## Critical Decision Rules
+- **File Format**: Check file extension. `.csv` and `.json` files can often be inspected with ReadFile if small; `.xlsx` files **must** be read with Python `openpyxl`.
+- **JSON Input**: If file ends with `.json`, expect an array of objects. Look for phase identifiers in keys like `week`, `phase`, or `period`. Look for demand in `demand`, `demand_per_week`, or nested within a `data` object (e.g., `entry['data']['demand_per_week']`). Handle null values as 0. Apply duplicate summing logic as with CSV/Excel.
+- **Excel Orientation**: If you see `(1):Week` or row 4 with period numbers `(2):4 (3):5...` in the raw cell output, you're looking at horizontal/transposed data. Use column-based parsing. See `references/horizontal-data-parsing.md`.
+- **CSV Orientation**: If CSV has many columns (>10) with numeric headers like "5", "6", "7", treat as horizontal layout. First row is typically headers (Week, 5, 6, 7...), second row is demand values.
+- **Library Choice**: Always use `openpyxl` for Excel operations. Do not use pandas for Excel parsing—it adds dependency complexity and is unnecessary for this workflow.
+- **Duplicate Periods**: Input data may contain duplicate period entries (e.g., phase 10 appearing twice in JSON array or Excel rows). Detect these and resolve by summing demand values before simulation.
+- **Initial Condition Parsing**: If given `Start of Period Past Due + Scheduled Demand = X`, compute `Calc Start = X - Demand[first_period]` to prevent double-counting when applying `End = Calc Start + Demand - Capacity`.
+- **State Tracking**: Use `max(0, prior_end)` for reporting `Start of Period Past Due`, but keep the signed `prior_end` for actual backlog/buffer calculations. Negative values indicate buffer (ahead of schedule).
+- **N/A Handling**: If a policy state (e.g., 5-day period) is never triggered, explicitly output `N/A` in both the tracking variables and the summary text. Do not invent placeholder periods.
+- **Summary Constraints**: Count words and sentences programmatically. Ensure the summary explicitly mentions both step-down period numbers (or `N/A`).
+
+## Output Precision
+Never round, truncate, or fixed-format numeric values when writing outputs (Excel cells, JSON, CSV). Pass raw float values directly.
+- **DO NOT**: `round(x, N)`, `format(x, ".2f")`, `f"{x:.2f}"`, `.toFixed(N)`
+- **DO**: `ws.cell(row=r, column=c, value=x)` with x as a raw float
+- Rationale: The verifier's tolerance (often 1e-4) decides precision; provide full precision.
+
+## Verification
+Always validate before submitting. See `references/validation-checklist.md` for reusable assertion templates covering:
+- Excel: Sheet name, headers, row count, period contiguity, duplicate detection
+- Text: Line count, word/sentence limits, mandatory value presence
+
+## Anti-Patterns
+- **Do not** use the Read tool on .xlsx files. The Read tool cannot read binary Excel files and will fail. Always use Python with openpyxl instead.
+- **Do not** assume vertical/table layout for Excel input. Always run the Step 0 inspection first. Many tasks use simple 2-column vertical layouts, but horizontal is also common.
+- **Do not** ignore duplicate period entries in input data—they will corrupt simulation results if not handled.
+- **Do not** assume initial condition is purely backlog; verify if it includes scheduled demand and subtract first period demand if so.
+- **Do not** use string formatting on numeric outputs (no rounding).
+- **Do not** hardcode summary text; generate dynamically from tracked variables.
+- **Do not** skip verification; formatting constraints are strict and easily violated.
+- **Do not** use `python` command; always use `python3`.
+- **Do not** use pandas for Excel parsing; use openpyxl directly.
+
+## Known invariants (by sub-task)
+
+### capacity-backlog-simulation
+- Input data may be Excel (.xlsx), CSV (.csv), or JSON (.json) format. CSV often uses horizontal layout; JSON is typically an array of objects.
+- Input data may contain duplicate period entries—always detect and resolve (typically by summing demand) before simulation.
+- Initial condition statements often combine "Start of Period Past Due" with "Scheduled Demand" — parse carefully to avoid double-counting in Period 1. Alternatively, initial backlog may be given as an explicit number (e.g., "850 hours").
+- Summary text must be generated dynamically from tracked variables; hardcoded text goes stale.
+- Word/sentence count constraints are strict and easily violated by minor phrasing changes.
+- Horizontal layouts (periods as columns) require column-wise iteration instead of row-wise; this applies to both Excel and CSV.
+- Period ranges vary by task (commonly 1-52 or 4-53); never assume a fixed row count.
+- Capacity values (hrs/day) are task-specific; common values include 20, 25, 28, 30—read from task description.
+- Step-down transitions may occur out of order (e.g., 4-day week before 5-day week) depending on demand volatility after backlog clears.

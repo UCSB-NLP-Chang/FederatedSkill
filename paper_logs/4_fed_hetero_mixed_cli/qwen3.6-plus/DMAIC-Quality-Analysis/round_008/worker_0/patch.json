@@ -1,0 +1,12 @@
+{
+  "worker_id": "u0",
+  "reward": 0.125,
+  "summary": "Created process-capability-analysis skill for multi-sheet Excel process capability assessments. The agent wrote a custom script that passed self-validation but failed the verifier, likely due to subtle key mismatches, calculation errors, or missing required fields. This skill bundles a deterministic script following the proven statistical pattern (CV with ddof=1, Wilson CI, t-stat stability threshold) with exact schema enforcement and a monitoring plan structure including checklist (5-9 items) and momentum milestones.",
+  "upsert_paths": [
+    "process-capability-analysis/SKILL.md",
+    "process-capability-analysis/assets/brief_template.md",
+    "process-capability-analysis/references/output_schema.md",
+    "process-capability-analysis/scripts/compute_capability_metrics.py"
+  ],
+  "delete_paths": []
+}

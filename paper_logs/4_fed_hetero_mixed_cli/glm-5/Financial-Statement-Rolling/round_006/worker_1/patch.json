@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.0,
+  "summary": "The trace reveals a rebate-rollforward task that started from a template file, requiring cleanup of stale template content. The existing rebate-rollforward skill covers the core workflow but lacks explicit template handling guidance. This patch adds template merge instructions and reinforces the critical 'insert without status' anti-pattern that causes rows to be filtered out.",
+  "upsert_paths": [
+    "rebate-rollforward/SKILL.md"
+  ],
+  "delete_paths": []
+}

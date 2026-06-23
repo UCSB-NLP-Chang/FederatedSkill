@@ -1,0 +1,29 @@
+{
+    "id": "be8ef284-f4bc-41a6-a530-30f92addc8e7",
+    "started_at": "2026-05-24T00:01:14.250681",
+    "finished_at": "2026-05-24T00:04:07.325296",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "beauty_zone_alias_gap__bmwzbnv"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete for u2 (R7). Applied target's vaxcrate-dispatch-analysis patch wholesale (reward=1.0, validated). Rejected u0/u1 patches (script bugs: u0 KeyError, u1 missing campaign_name mapping). Library now 6 skills \u2014 justified as distinct workflows. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "vaxcrate-dispatch-analysis/SKILL.md",
+    "vaxcrate-dispatch-analysis/scripts/compute_vaxcrate.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "vaxcrate-dispatch-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "vaxcrate-dispatch-analysis/scripts/compute_vaxcrate.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "vaxcrate-dispatch-analysis/SKILL.md",
+    "vaxcrate-dispatch-analysis/scripts/compute_vaxcrate.py"
+  ],
+  "cost_usd": 0.9325
+}

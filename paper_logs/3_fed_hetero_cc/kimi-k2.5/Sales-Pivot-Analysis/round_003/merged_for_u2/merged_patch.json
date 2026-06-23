@@ -1,0 +1,19 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged SKILL.md synthesized from baseline + all three patches (all had reward=0.0). Added STOP-checkpoint for openpyxl anti-pattern (u0), inventory variant with exact categorical values (u2), stronger Step 9 validation (u0/u1). See DECISIONS.md for synthesis rationale.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-analysis/SKILL.md"
+  ],
+  "cost_usd": 2.3234136
+}

@@ -1,0 +1,36 @@
+{
+    "id": "a9541a71-904e-4cc4-9223-576bf56e5c55",
+    "started_at": "2026-05-10T01:42:49.642523",
+    "finished_at": "2026-05-10T02:14:39.286506",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Cross-Format-Data-Reconciliation": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "01-cloud-service-portfolio-diff__7ZEo6EE",
+                            "02-hospital-capacity-portfolio-d__dAUJDaz",
+                            "03-retail-supply-category-diff__gUmDNV4",
+                            "04-university-program-funding-di__dBvt6hs",
+                            "05-datacenter-hardware-registry__6pP7RJ5",
+                            "06-hospital-medication-reconcili__GvyneUP",
+                            "07-shipping-container-manifest-d__gmkVt9p",
+                            "08-university-course-catalog-dif__Pq8eZQg"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "round_idx": 0,
+  "assignments": [
+    [
+      "u0",
+      "01-cloud-service-portfolio-diff"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0
+  },
+  "exceptions": {
+    "u0": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 172.25685024261475
+}

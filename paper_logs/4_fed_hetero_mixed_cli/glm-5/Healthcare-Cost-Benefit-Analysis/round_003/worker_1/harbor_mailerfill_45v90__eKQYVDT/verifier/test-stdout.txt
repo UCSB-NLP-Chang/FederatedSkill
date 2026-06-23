@@ -1,0 +1,64 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ..FF.                                                                    [100%]
+E           =================================== FAILURES ===================================
+E           _____________________________ test_rows_and_order ______________________________
+E           
+E               def test_rows_and_order():
+E                   data = load_output()
+E                   expected_rows, _, _, _, _, _ = load_expected()
+E                   assert [row['medication'] for row in data['medications']] == [row['medication'] for row in expected_rows]
+E                   for actual, expected in zip(data['medications'], expected_rows):
+E                       assert set(actual.keys()) == set(expected.keys())
+E                       for key, expected_value in expected.items():
+E                           if isinstance(expected_value, str):
+E                               assert actual[key] == expected_value
+E                           else:
+E           >                   assert close(actual[key], expected_value)
+E           E                   assert False
+E           E                    +  where False = close(42.62, 6393.6)
+E           
+E           /tests/test_outputs.py:123: AssertionError
+E           ___________________________ test_totals_and_decision ___________________________
+E           
+E               def test_totals_and_decision():
+E                   data = load_output()
+E                   _, total_45, total_90, total_diff, abs_diff, decision = load_expected()
+E                   totals = data['totals']
+E           >       assert close(totals['total_annual_margin_45_day_usd'], total_45)
+E           E       assert False
+E           E        +  where False = close(69690.29, 27000.0)
+E           
+E           /tests/test_outputs.py:130: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_rows_and_order - assert False
+E           FAILED ../tests/test_outputs.py::test_totals_and_decision - assert False
+E           2 failed, 3 passed in 0.03s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 0.19s ===============================

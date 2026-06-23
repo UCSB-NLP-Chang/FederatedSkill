@@ -1,0 +1,32 @@
+{
+  "worker_id": "u2",
+  "summary": "DONE \u2014 Merged u2's structural SKILL.md changes (step 1 priority, verification checklist), u0's formula cell protection, and u1's repr() precision handling + reference file. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "edit-embedded-office-xml/SKILL.md",
+    "edit-embedded-office-xml/references/openxml-structures.md",
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "edit-embedded-office-xml/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "edit-embedded-office-xml/scripts/update_embedded_xlsx.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.8
+    ],
+    "edit-embedded-office-xml/references/openxml-structures.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "edit-embedded-office-xml/SKILL.md",
+    "__skill_md_invalid__:edit-embedded-office-xml/SKILL.md: bad YAML (ScannerError)"
+  ],
+  "cost_usd": 3.916029
+}

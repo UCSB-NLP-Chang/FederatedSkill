@@ -1,0 +1,56 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: F                                                                        [100%]
+E           =================================== FAILURES ===================================
+E           _________________________________ test_outputs _________________________________
+E           
+E               def test_outputs():
+E                   output_file = '/app/workspace/fuel_packets.xlsx'
+E                   expected_file = os.path.join(os.path.dirname(__file__), 'fuel_packets_oracle.xlsx')
+E                   assert os.path.exists(output_file), f'Missing output: {output_file}'
+E                   actual_sheets = _sheet_names(output_file)
+E                   assert actual_sheets == ['transactions'], f'Unexpected sheets: {actual_sheets}'
+E                   actual_rows = _read_rows(output_file, 'transactions')
+E                   expected_rows = _read_rows(expected_file, 'transactions')
+E                   assert actual_rows, 'Workbook is empty'
+E                   assert actual_rows[0] == ['batch_name', 'relative_path', 'txn_ref', 'date', 'total_amount'], f'Header mismatch: {actual_rows[0]}'
+E                   data_rows = [row for row in actual_rows[1:] if row and row[0] != '']
+E                   ordering = [row[1] for row in data_rows]
+E                   assert ordering == sorted(ordering), f'Rows not sorted as required: {ordering}'
+E                   ok, msg = rows_match(actual_rows, expected_rows)
+E           >       assert ok, f'Workbook differs from oracle: {msg}'
+E           E       AssertionError: Workbook differs from oracle: Row count mismatch: 9 vs 7
+E           E       assert False
+E           
+E           /tests/test_outputs.py:65: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_outputs - AssertionError: Workbook diff...
+E           1 failed in 0.13s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: F ...
+============================== 1 failed in 0.32s ===============================

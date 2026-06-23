@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Extended the ocr-data-extraction skill with e-commerce order ID patterns, reference-based validation workflows, and deduplication strategies observed in the successful trace. Added explicit guidance for handling known order lists, marking duplicates with nulls, and deterministic batch processing.",
+  "upsert_paths": [
+    "ocr-data-extraction/SKILL.md",
+    "ocr-data-extraction/references/regex_patterns.md"
+  ],
+  "delete_paths": []
+}

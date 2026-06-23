@@ -1,0 +1,29 @@
+{
+    "id": "f0fa4a7d-49d4-4c9b-b347-8e37f9e5858d",
+    "started_at": "2026-05-17T20:38:16.986572",
+    "finished_at": "2026-05-17T20:41:22.197956",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "kimi-cli__kimi-k2.5__Embedded-Data-Repair": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "warehouse-slot-factor-refresh__PQWDnYB"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

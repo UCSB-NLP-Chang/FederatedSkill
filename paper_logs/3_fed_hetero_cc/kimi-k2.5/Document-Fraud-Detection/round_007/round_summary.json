@@ -1,0 +1,30 @@
+{
+  "round_idx": 7,
+  "assignments": [
+    [
+      "u0",
+      "clinical-trial-participant-release-audit"
+    ],
+    [
+      "u1",
+      "clinical-trial-participant-release-audit"
+    ],
+    [
+      "u2",
+      "clinical-trial-participant-release-audit"
+    ]
+  ],
+  "rewards": {
+    "u0": 1.0,
+    "u1": 1.0,
+    "u2": 0.0
+  },
+  "exceptions": {
+    "u0": null,
+    "u1": null,
+    "u2": null
+  },
+  "synced": true,
+  "n_pending_after_round": 0,
+  "elapsed_sec": 2059.0477302074432
+}

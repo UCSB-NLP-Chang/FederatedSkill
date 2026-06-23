@@ -1,0 +1,19 @@
+{
+  "worker_id": "u1",
+  "summary": "R3 merge for u1 (glm-5): Applied target's known invariants patch (retired_schools/revised_schools + archive\u2192current semantics), absorbed u0's Custom Output Schema Template and type-mismatch anti-pattern. Rejected u2's redundant script. See DECISIONS.md.",
+  "upsert_paths": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "cross-format-data-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "cross-format-data-diff/SKILL.md"
+  ],
+  "cost_usd": 3.2602043999999997
+}

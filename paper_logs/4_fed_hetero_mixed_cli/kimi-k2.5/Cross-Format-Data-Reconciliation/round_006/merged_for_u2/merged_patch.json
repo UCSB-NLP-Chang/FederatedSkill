@@ -1,0 +1,25 @@
+{
+  "worker_id": "u2",
+  "summary": "R6 merge complete for u2. Applied target's SKILL.md and domain_mapping.md (reward=1.0). Rejected u1's domain_mapping.md because it reintroduces the \"Option 3: inline comparison\" escape hatch that caused u2's R5 anti-pattern violation. See DECISIONS.md.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "dataset-diff/references/domain_mapping.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/references/domain_mapping.md"
+  ],
+  "cost_usd": 1.8060060000000002
+}

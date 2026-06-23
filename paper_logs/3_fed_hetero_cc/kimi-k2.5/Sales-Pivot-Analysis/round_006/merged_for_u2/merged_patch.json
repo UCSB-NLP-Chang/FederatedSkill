@@ -1,0 +1,26 @@
+{
+  "worker_id": "u2",
+  "summary": "Consolidated sales-pivot-analysis SKILL.md by merging u0's verifier checklist and anti-patterns, u1's multi-source alignment and domain variants, and u2's structural improvements and references; added u2's event-registration-patterns.md reference file.",
+  "upsert_paths": [
+    "sales-pivot-analysis/SKILL.md",
+    "sales-pivot-analysis/references/event-registration-patterns.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sales-pivot-analysis/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u0",
+      0.9473684210526315
+    ],
+    "sales-pivot-analysis/references/event-registration-patterns.md": [
+      "upsert",
+      "llm_merge:top=u2",
+      0.9473684210526315
+    ]
+  },
+  "conflicts": [
+    "sales-pivot-analysis/SKILL.md",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

@@ -1,0 +1,62 @@
+{
+  "worker_id": "u0",
+  "summary": "R1 merge complete. Renamed cross-format-diff \u2192 dataset-diff (peer-majority), applied target's SKILL.md patch with u2's Type Handling section and compute_diff.py fixes (format_output, removed_ids, flat changed_records). See DECISIONS.md.",
+  "upsert_paths": [
+    "dataset-diff/SKILL.md",
+    "dataset-diff/references/diff-schema.md",
+    "dataset-diff/references/pdf-extraction.md",
+    "dataset-diff/scripts/compute_diff.py"
+  ],
+  "delete_paths": [
+    "cross-format-diff/SKILL.md",
+    "cross-format-diff/references/diff-schema.md",
+    "cross-format-diff/references/pdf-extraction.md",
+    "cross-format-diff/scripts/compute_diff.py"
+  ],
+  "provenance": {
+    "cross-format-diff/references/pdf-extraction.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "cross-format-diff/references/diff-schema.md": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dataset-diff/references/diff-schema.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "cross-format-diff/scripts/compute_diff.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dataset-diff/references/pdf-extraction.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "dataset-diff/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u1",
+      1.0
+    ],
+    "cross-format-diff/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "dataset-diff/scripts/compute_diff.py": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ]
+  },
+  "conflicts": [
+    "dataset-diff/SKILL.md"
+  ],
+  "cost_usd": 4.453716
+}

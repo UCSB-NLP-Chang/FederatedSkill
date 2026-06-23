@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "07-shipping-container-manifest-d__RtpmNpB",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Cross-Format-Data-Reconciliation/round_006/worker_0/07-shipping-container-manifest-d__RtpmNpB",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-mixed-cli-M3-hetero/Cross-Format-Data-Reconciliation/round_006/worker_0/07-shipping-container-manifest-d__RtpmNpB",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

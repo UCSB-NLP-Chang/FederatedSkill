@@ -1,0 +1,94 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: .FF                                                                      [100%]
+E           =================================== FAILURES ===================================
+E           ________________________ test_json_structure_and_values ________________________
+E           
+E               def test_json_structure_and_values():
+E                   expected = _expected_metrics()
+E                   payload = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+E               
+E                   for key in [
+E                       "source_file",
+E                       "filters",
+E                       "record_counts",
+E                       "charter_metrics",
+E                       "anova_by_weekday",
+E                       "imr_summary",
+E                       "regression_day_index",
+E                       "ttest_vs_target",
+E                       "capability_against_lsl",
+E                   ]:
+E                       assert key in payload, f"Missing top-level key: {key}"
+E               
+E                   assert payload["source_file"] == "field_service_data.csv"
+E               
+E                   total_primary, primary_biz, imr_records = expected["counts"]
+E           >       assert payload["record_counts"]["total_primary_records"] == total_primary
+E                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           E       KeyError: 'total_primary_records'
+E           
+E           /tests/test_outputs.py:138: KeyError
+E           _____________________ test_markdown_structure_and_content ______________________
+E           
+E               def test_markdown_structure_and_content():
+E                   text = OUT_MD.read_text(encoding="utf-8")
+E               
+E                   required_headers = [
+E                       f"# {BRIEF_TITLE}",
+E                       "## Project Charter",
+E                       "## Statistical Analysis",
+E                       "## A3 Summary",
+E                       "## Timeline and Next Steps",
+E                   ]
+E                   for h in required_headers:
+E                       assert h in text, f"Missing header: {h}"
+E               
+E                   required_subsections = [
+E                       "### One-Way ANOVA",
+E                       "### I-MR Control Chart",
+E                       "### Linear Regression (ClosedWorkOrders ~ day_index)",
+E                       "### One-Sample t-Test vs 140",
+E                       "### Process Capability",
+E                   ]
+E                   for s in required_subsections:
+E                       assert s in text, f"Missing subsection: {s}"
+E               
+E                   hit_count = sum(1 for i in IMPACTS if i in text)
+E           >       assert hit_count >= 2, "Need at least two required operational impacts in markdown"
+E           E       AssertionError: Need at least two required operational impacts in markdown
+E           E       assert 0 >= 2
+E           
+E           /tests/test_outputs.py:212: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::test_json_structure_and_values - KeyError: '...
+E           FAILED ../tests/test_outputs.py::test_markdown_structure_and_content - Assert...
+E           2 failed, 1 passed in 0.69s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .F...
+============================== 1 failed in 1.12s ===============================

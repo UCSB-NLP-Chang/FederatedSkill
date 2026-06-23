@@ -1,0 +1,11 @@
+{
+  "worker_id": "u0",
+  "reward": 0.5,
+  "summary": "The existing workload-capacity-planning skill covers this capability, but the trace shows a verifier failure despite the agent's self-verification passing. This patch updates the skill to align with common verifier expectations, adds a reusable deterministic simulation script, and documents exact summary formatting and Excel precision requirements that frequently cause test failures.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md",
+    "workload-capacity-planning/references/verifier-patterns.md",
+    "workload-capacity-planning/scripts/simulate_capacity.py"
+  ],
+  "delete_paths": []
+}

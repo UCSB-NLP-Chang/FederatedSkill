@@ -1,0 +1,80 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.4.1
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: ..........F......F.F...................                                  [100%]
+E           =================================== FAILURES ===================================
+E           _______________________ TestOutput.test_ranges[Calcium] ________________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f8a691238c0>, col = 'Calcium'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('Calcium', ['1.52', '2.83', '2.67'])
+E           E       assert not ['1.52', '2.83', '2.67']
+E           
+E           /tests/test_outputs.py:100: AssertionError
+E           _________________ TestOutput.test_ranges[Beta_Hydroxybutyrate] _________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f8a6ab5b2c0>
+E           col = 'Beta_Hydroxybutyrate'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('Beta_Hydroxybutyrate', ['105.17', '42.77', '78.42'])
+E           E       assert not ['105.17', '42.77', '78.42']
+E           
+E           /tests/test_outputs.py:100: AssertionError
+E           ____________________ TestOutput.test_ranges[pCO2_Arterial] _____________________
+E           
+E           self = <test_outputs.TestOutput object at 0x7f8ac03f1340>, col = 'pCO2_Arterial'
+E           
+E               @pytest.mark.parametrize('col', EXPECTED_COLUMNS)
+E               def test_ranges(self, col):
+E                   lo = REFERENCE[col]['min']
+E                   hi = REFERENCE[col]['max']
+E                   bad = [v for v in self.df[col] if not in_range(v, lo, hi)]
+E           >       assert not bad, (col, bad[:5])
+E           E       AssertionError: ('pCO2_Arterial', ['4.65', '5.88', '10.02'])
+E           E       assert not ['4.65', '5.88', '10.02']
+E           
+E           /tests/test_outputs.py:100: AssertionError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Calcium] - Assertion...
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[Beta_Hydroxybutyrate]
+E           FAILED ../tests/test_outputs.py::TestOutput::test_ranges[pCO2_Arterial] - Ass...
+E           3 failed, 36 passed in 0.81s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: .....
+============================== 1 failed in 1.13s ===============================

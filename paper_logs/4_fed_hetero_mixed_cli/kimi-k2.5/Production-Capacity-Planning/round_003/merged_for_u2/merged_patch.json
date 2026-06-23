@@ -1,0 +1,17 @@
+{
+  "worker_id": "u2",
+  "summary": "Merge complete. Applied u0's Step 0 inspection with explicit code block (valuable for kimi-cli's scripted-step pattern), folded u1's Read tool anti-pattern into existing Anti-Patterns section (umbrella-first principle), rejected separate excel-python-processing skill. Library remains at 1 umbrella + 3 references. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "workload-capacity-planning/SKILL.md"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "workload-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 1.0571730000000001
+}

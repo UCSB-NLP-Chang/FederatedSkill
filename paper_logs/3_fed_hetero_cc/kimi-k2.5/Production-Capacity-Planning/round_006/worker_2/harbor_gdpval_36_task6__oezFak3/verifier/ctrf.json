@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779430648.258239,
+            "stop": 1779430648.6274176
+        },
+        "tests": [
+            {
+                "name": "test_output.py::test_legacy_pytest_suite",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.35083209723234177,
+                "start": 1779430648.2667396,
+                "stop": 1779430648.6272223,
+                "retries": 0,
+                "file_path": "test_output.py",
+                "trace": "def test_legacy_pytest_suite() -> None:\n        local_test = Path(__file__).with_name(\"test_outputs.py\")\n        harness_test = Path(\"/tests/test_outputs.py\")\n        test_file = harness_test if harness_test.exists() else local_test\n    \n        result = subprocess.run(\n            [sys.executable, \"-m\", \"pytest\", str(test_file), \"-q\"],\n            capture_output=True,\n            text=True,\n            check=False,\n        )\n        if result.returncode != 0:\n>           raise AssertionError((result.stdout or \"\") + \"\\n\" + (result.stderr or \"\"))\nE           AssertionError: F.                                                                       [100%]\nE           =================================== FAILURES ===================================\nE           __________________________ test_plan_math_and_policy ___________________________\nE           \nE               def test_plan_math_and_policy():\nE                   ref_demands = load_reference_demands()\nE                   rows = load_plan_rows()\nE               \nE                   expected_weeks = list(range(WEEK_START, WEEK_END + 1))\nE                   actual_weeks = [r[0] for r in rows]\nE                   assert actual_weeks == expected_weeks, \"Weeks must be continuous from 3 to 51 with no gaps\"\nE               \nE                   calc_start = INITIAL_WEEK3_TOTAL - ref_demands[WEEK_START]\nE                   prev_end = None\nE                   for idx, (week, days, demand, capacity, start_past_due, end_backlog_buffer, overtime) in enumerate(rows):\nE                       assert days in {4, 5, 6}, f\"Week {week}: days must be one of 4/5/6\"\nE               \nE                       # Demand must match effective demand (Dye + Adjustment).\nE                       assert abs(demand - ref_demands[week]) <= 0.01, (\nE                           f\"Week {week}: demand {demand} does not match effective demand {ref_demands[week]}\"\nE                       )\nE               \nE                       # Week 3 initial condition.\nE                       if week == WEEK_START:\nE           >               assert abs(start_past_due + demand - INITIAL_WEEK3_TOTAL) <= 0.01, (\nE                               \"Week 3 must satisfy Start of Week Past Due + Scheduled Demand = 598.24\"\nE                           )\nE           E               AssertionError: Week 3 must satisfy Start of Week Past Due + Scheduled Demand = 598.24\nE           E               assert 98.24000000000001 <= 0.01\nE           E                +  where 98.24000000000001 = abs(((598.24 + 98.24000000000001) - 598.24))\nE           \nE           /tests/test_outputs.py:142: AssertionError\nE           =========================== short test summary info ============================\nE           FAILED ../tests/test_outputs.py::test_plan_math_and_policy - AssertionError: ...\nE           1 failed, 1 passed in 0.16s\n\n/tests/test_output.py:20: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

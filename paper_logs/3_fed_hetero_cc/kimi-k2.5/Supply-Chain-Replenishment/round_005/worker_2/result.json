@@ -1,0 +1,29 @@
+{
+    "id": "956741a9-d474-43c2-993b-121c24c5c076",
+    "started_at": "2026-05-13T18:28:22.449353",
+    "finished_at": "2026-05-13T18:32:39.150465",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Supply-Chain-Replenishment": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "frozen_meal_tracker_refresh__XwFqZDA"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

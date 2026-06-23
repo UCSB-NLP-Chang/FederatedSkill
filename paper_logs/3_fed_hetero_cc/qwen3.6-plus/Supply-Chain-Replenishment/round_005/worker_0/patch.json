@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Added the 'frozen-meal-recovery-tracker' variant to the existing excel-inventory-coverage skill, capturing multi-file input handling, revision-based deduplication, per-SKU pallet sizing from a template, and template sheet preservation. Updated core workflow steps to explicitly mention highest-revision deduplication and template copying.",
+  "upsert_paths": [
+    "excel-inventory-coverage/SKILL.md"
+  ],
+  "delete_paths": []
+}

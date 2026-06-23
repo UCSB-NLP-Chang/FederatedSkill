@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 1.0,
+  "summary": "Creates a data-reconciliation skill capturing the reusable workflow for cross-referencing multiple data sources to identify discrepancies. Key learnings: binary Excel files require pandas/python (Read tool fails), PDFs are readable, and validation rules follow consistent patterns (existence checks, field matching, reference lookups).",
+  "upsert_paths": [
+    "data-reconciliation/SKILL.md"
+  ],
+  "delete_paths": []
+}

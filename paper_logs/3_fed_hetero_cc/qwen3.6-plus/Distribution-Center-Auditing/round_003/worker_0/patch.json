@@ -1,0 +1,9 @@
+{
+  "worker_id": "u0",
+  "reward": 1.0,
+  "summary": "Adds the harbor-service-queue-sla-audit invariant to the existing spreadsheet-audit-reporting skill, capturing the specific SLA breach/missing escalation logic, multi-sheet structure, and grouping rules observed in the successful trace.",
+  "upsert_paths": [
+    "spreadsheet-audit-reporting/SKILL.md"
+  ],
+  "delete_paths": []
+}

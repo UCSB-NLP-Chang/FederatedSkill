@@ -1,0 +1,636 @@
+# Computed Column Examples
+
+This reference provides concrete computed column patterns used in audit tasks.
+
+## Disposition Alias Normalization
+
+When comparing planned vs actual dispositions that may use aliases or varying case:
+
+```python
+def load_alias_map(wb, sheet_name='Disposition_Alias'):
+    """Load disposition aliases into normalized mapping.
+    Returns dict: lowercase alias -> uppercase canonical value
+    """
+    alias_sheet = wb[sheet_name]
+    alias_map = {}
+    headers = [cell.value for cell in alias_sheet[1]]
+    
+    for row in alias_sheet.iter_rows(min_row=2, values_only=True):
+        if row[0] is not None:
+            canonical = row[0]  # e.g., 'LIQUIDATE'
+            # Map canonical to itself
+            alias_map[canonical.lower()] = canonical.upper()
+            # Map aliases
+            for alias in row[1:]:
+                if alias is not None:
+                    alias_map[str(alias).lower()] = canonical.upper()
+    return alias_map
+
+def normalize_disposition(value, alias_map):
+    """Normalize disposition value using alias map."""
+    if pd.isna(value):
+        return None
+    key = str(value).lower().strip()
+    return alias_map.get(key, key.upper())
+
+# Usage
+df['Normalized Planned'] = df['Planned Disposition'].apply(
+    lambda x: normalize_disposition(x, alias_map)
+)
+df['Disposition Mismatch'] = (
+    df['Normalized Planned'] != df['Normalized Actual']
+).astype(int)
+```
+
+## Missing Final Event Detection
+
+Flag when no COMPLETED event exists for a composite key:
+
+```python
+def load_completed_events(wb, sheet_name='Disposition_Event_Log'):
+    """Load completed events into lookup dict keyed by (Return ID, Line ID)."""
+    event_sheet = wb[sheet_name]
+    events = {}
+    headers = [cell.value for cell in event_sheet[1]]
+    
+    for row in event_sheet.iter_rows(min_row=2, values_only=True):
+        if row[0] is not None:
+            data = dict(zip(headers, row))
+            if data.get('Event Status') == 'COMPLETED':
+                key = (data['Return ID'], data['Line ID'])
+                events[key] = {
+                    'time': data['Event Time'],
+                    'disposition': data['Final Disposition']
+                }
+    return events
+
+def missing_final_event(row, completed_events):
+    """Check if no COMPLETED event exists for this return line."""
+    key = (row['Return ID'], row['Line ID'])
+    return 0 if key in completed_events else 1
+
+# Usage
+df['Missing Final Event'] = df.apply(
+    lambda row: missing_final_event(row, completed_events), axis=1
+)
+```
+
+## Break Deficit Detection (Timesheet Policy)
+
+Flag when break time falls below role-specific minimum for overtime entries:
+
+```python
+# Load break rules from separate sheet
+break_rules = {
+    'Analyst': {'Min Break Minutes': 30, 'OT Threshold Hours': 8},
+    'Supervisor': {'Min Break Minutes': 45, 'OT Threshold Hours': 9},
+    'Technician': {'Min Break Minutes': 30, 'OT Threshold Hours': 10},
+    'Coordinator': {'Min Break Minutes': 30, 'OT Threshold Hours': 8.5},
+}
+
+def break_deficit(row):
+    role = row['Role']
+    rules = break_rules.get(role, {})
+    min_break = rules.get('Min Break Minutes', 0)
+    ot_threshold = rules.get('OT Threshold Hours', float('inf'))
+    
+    # Only flag if worked overtime AND break is insufficient
+    if row['Hours Worked'] > ot_threshold and row['Break Minutes'] < min_break:
+        return 1
+    return 0
+
+df['Break Deficit'] = df.apply(break_deficit, axis=1)
+```
+
+## Approval Missing Detection (Timesheet Policy)
+
+Flag when overtime lacks proper approval code:
+
+```python
+def approval_missing(row):
+    role = row['Role']
+    rules = break_rules.get(role, {})
+    ot_threshold = rules.get('OT Threshold Hours', float('inf'))
+    
+    # Check if overtime worked without approval code
+    if row['Hours Worked'] > ot_threshold:
+        code = row.get('Approval Code')
+        if pd.isna(code) or str(code).strip() == '':
+            return 1
+    return 0
+
+df['Approval Missing'] = df.apply(approval_missing, axis=1)
+```
+
+## SLA Breach Detection (Service Queue)
+
+Flag when open age exceeds priority-specific threshold from rules sheet:
+
+```python
+# Load SLA rules into lookup dict
+sla_rules = {
+    'P1': {'Max Open Hours': 4, 'Escalation Required': 'Y'},
+    'P2': {'Max Open Hours': 8, 'Escalation Required': 'Y'},
+    'P3': {'Max Open Hours': 16, 'Escalation Required': 'N'},
+    'P4': {'Max Open Hours': 24, 'Escalation Required': 'N'},
+}
+
+def sla_breach(row):
+    tier = row['Priority Tier']
+    max_hours = sla_rules.get(tier, {}).get('Max Open Hours', float('inf'))
+    return 1 if row['Open Age Hours'] > max_hours else 0
+
+df['SLA Breach'] = df.apply(sla_breach, axis=1)
+```
+
+## Missing Escalation Detection (Service Queue)
+
+Flag when escalation is required but code is missing:
+
+```python
+def missing_escalation(row):
+    tier = row['Priority Tier']
+    escalation_required = sla_rules.get(tier, {}).get('Escalation Required', 'N')
+    if escalation_required == 'Y':
+        code = row.get('Escalation Code')
+        if pd.isna(code) or str(code).strip() == '':
+            return 1
+    return 0
+
+df['Missing Escalation'] = df.apply(missing_escalation, axis=1)
+```
+
+## Price Error Detection (Promotional Register)
+
+Flag when register price differs from promotional price:
+
+```python
+df['Price Error'] = (df['Register Price'] != df['Promo Price']).astype(int)
+```
+
+## Window Error Detection (Promotional Register)
+
+Flag when sale date falls outside promotional window:
+
+```python
+def window_error(row):
+    sale = row['Sale Date']
+    start = row['Promo Start Date']
+    end = row['Promo End Date']
+    # Handle both string and datetime comparisons
+    if isinstance(sale, str):
+        from datetime import datetime
+        sale = datetime.strptime(sale, '%Y-%m-%d').date() if isinstance(sale, str) else sale
+    if isinstance(start, str):
+        start = datetime.strptime(start, '%Y-%m-%d').date() if isinstance(start, str) else start
+    if isinstance(end, str):
+        end = datetime.strptime(end, '%Y-%m-%d').date() if isinstance(end, str) else end
+    return 1 if sale < start or sale > end else 0
+
+df['Window Error'] = df.apply(window_error, axis=1)
+```
+
+## Detention Overrun Detection
+
+Flag when actual hold time exceeds allowed threshold:
+
+```python
+df['Detention Overrun'] = (df['Actual Hold Hours'] > df['Allowed Hold Hours']).astype(int)
+```
+
+## Seal Compliance Error
+
+Flag when seal is required but not verified:
+
+```python
+def seal_error(row):
+    if row['Seal Required'] == 'YES':
+        # Seal Status may be null/NaN for non-sealed shipments
+        if pd.isna(row['Seal Status']) or row['Seal Status'] != 'VERIFIED':
+            return 1
+    return 0
+
+df['Seal Error'] = df.apply(seal_error, axis=1)
+```
+
+## Total Errors Column
+
+Sum multiple error flags:
+
+```python
+df['Total Errors'] = df['Price Error'] + df['Window Error']
+# Or for detention audits:
+# df['Total Errors'] = df['Detention Overrun'] + df['Seal Error']
+# Or for SLA audits:
+# df['Total Errors'] = df['SLA Breach'] + df['Missing Escalation']
+# Or for timesheet audits:
+# df['Total Errors'] = df['Break Deficit'] + df['Approval Missing']
+# Or for returns disposition audits:
+# df['Total Errors'] = df['Missing Final Event'] + df['Disposition Mismatch']
+```
+
+## Error Summary Text Column
+
+Build human-readable error summary from multiple error flags:
+
+```python
+def build_error_summary(row):
+    errors = []
+    if row.get('Price Error', 0) == 1:
+        errors.append('Price Error')
+    if row.get('Window Error', 0) == 1:
+        errors.append('Window Error')
+    if row.get('Detention Overrun', 0) == 1:
+        errors.append('Detention Overrun')
+    if row.get('Seal Error', 0) == 1:
+        errors.append('Seal Error')
+    if row.get('SLA Breach', 0) == 1:
+        errors.append('SLA Breach')
+    if row.get('Missing Escalation', 0) == 1:
+        errors.append('Missing Escalation')
+    if row.get('Break Deficit', 0) == 1:
+        errors.append('Break Deficit')
+    if row.get('Approval Missing', 0) == 1:
+        errors.append('Approval Missing')
+    if row.get('Missing Final Event', 0) == 1:
+        errors.append('Missing Final Event')
+    if row.get('Disposition Mismatch', 0) == 1:
+        errors.append('Disposition Mismatch')
+    return ', '.join(errors) if errors else 'None'
+
+df['Error Summary'] = df.apply(build_error_summary, axis=1)
+```
+
+## Summary Aggregation by Multiple Keys
+
+Group by carrier and yard with totals:
+
+```python
+summary = df.groupby(['Carrier', 'Yard']).agg({
+    'Detention Overrun': 'sum',
+    'Seal Error': 'sum',
+    'Total Errors': 'sum'
+}).reset_index()
+
+# Add Grand Total row
+grand_total = pd.DataFrame({
+    'Carrier': ['Grand Total'],
+    'Yard': ['-'],
+    'Detention Overrun': [df['Detention Overrun'].sum()],
+    'Seal Error': [df['Seal Error'].sum()],
+    'Total Errors': [df['Total Errors'].sum()]
+})
+summary = pd.concat([summary, grand_total], ignore_index=True)
+```
+
+## Summary Aggregation for Returns Disposition (Warehouse + Carrier)
+
+Group by Warehouse and Carrier, include all groups with errors:
+
+```python
+# Aggregate
+summary = df.groupby(['Warehouse', 'Carrier']).agg({
+    'Missing Final Event': 'sum',
+    'Disposition Mismatch': 'sum',
+    'Total Errors': 'sum'
+}).reset_index()
+
+# Filter to rows with errors
+summary = summary[summary['Total Errors'] > 0]
+
+# Sort by Warehouse then Carrier
+summary = summary.sort_values(['Warehouse', 'Carrier'])
+
+# Add Grand Total
+grand_total = pd.DataFrame({
+    'Warehouse': ['Grand Total'],
+    'Carrier': ['-'],
+    'Missing Final Event': [df['Missing Final Event'].sum()],
+    'Disposition Mismatch': [df['Disposition Mismatch'].sum()],
+    'Total Errors': [df['Total Errors'].sum()]
+})
+summary = pd.concat([summary, grand_total], ignore_index=True)
+```
+
+## Summary Aggregation for Promo Register (Filtered)
+
+Group by SKU and Store ID, filter to errors only, sort, then add Grand Total:
+
+```python
+# Aggregate
+summary = df.groupby(['SKU', 'Store ID']).agg({
+    'Price Error': 'sum',
+    'Window Error': 'sum', 
+    'Total Errors': 'sum'
+}).reset_index()
+
+# Filter to rows with errors
+summary = summary[summary['Total Errors'] > 0]
+
+# Sort by SKU then Store ID
+summary = summary.sort_values(['SKU', 'Store ID'])
+
+# Add Grand Total
+grand_total = pd.DataFrame({
+    'SKU': ['Grand Total'],
+    'Store ID': ['-'],
+    'Price Error': [df['Price Error'].sum()],
+    'Window Error': [df['Window Error'].sum()],
+    'Total Errors': [df['Total Errors'].sum()]
+})
+summary = pd.concat([summary, grand_total], ignore_index=True)
+```
+
+## Summary Aggregation for SLA Audit (Queue + Region)
+
+Group by Queue and Region, include all groups with errors:
+
+```python
+# Aggregate
+summary = df.groupby(['Queue', 'Region']).agg({
+    'SLA Breach': 'sum',
+    'Missing Escalation': 'sum',
+    'Total Errors': 'sum'
+}).reset_index()
+
+# Filter to rows with errors (optional - include all or filter)
+summary = summary[summary['Total Errors'] > 0]
+
+# Sort by Queue then Region
+summary = summary.sort_values(['Queue', 'Region'])
+
+# Add Grand Total
+grand_total = pd.DataFrame({
+    'Queue': ['Grand Total'],
+    'Region': ['-'],
+    'SLA Breach': [df['SLA Breach'].sum()],
+    'Missing Escalation': [df['Missing Escalation'].sum()],
+    'Total Errors': [df['Total Errors'].sum()]
+})
+summary = pd.concat([summary, grand_total], ignore_index=True)
+```
+
+## Summary Aggregation for Timesheet Audit (Employee + Week)
+
+Group by Employee ID and Week Ending, include all groups with errors:
+
+```python
+# Aggregate
+summary = df.groupby(['Employee ID', 'Week Ending']).agg({
+    'Break Deficit': 'sum',
+    'Approval Missing': 'sum',
+    'Total Errors': 'sum'
+}).reset_index()
+
+# Filter to rows with errors
+summary = summary[summary['Total Errors'] > 0]
+
+# Sort by Employee ID then Week Ending
+summary = summary.sort_values(['Employee ID', 'Week Ending'])
+
+# Add Grand Total
+grand_total = pd.DataFrame({
+    'Employee ID': ['Grand Total'],
+    'Week Ending': ['-'],
+    'Break Deficit': [df['Break Deficit'].sum()],
+    'Approval Missing': [df['Approval Missing'].sum()],
+    'Total Errors': [df['Total Errors'].sum()]
+})
+summary = pd.concat([summary, grand_total], ignore_index=True)
+```
+
+## Handling Null Values in Source Data
+
+Source Excel files may contain null/NaN values that need special handling:
+
+```python
+# Check for null before string comparison
+if pd.notna(row['Seal Status']) and row['Seal Status'] == 'VERIFIED':
+    # Verified status
+    pass
+
+# Or use fillna for simpler comparisons
+df['Seal Status'] = df['Seal Status'].fillna('')
+
+# For escalation codes, check both None and empty string
+code = row.get('Escalation Code')
+if pd.isna(code) or str(code).strip() == '':
+    # Missing escalation
+    pass
+
+# For approval codes, same pattern
+code = row.get('Approval Code')
+if pd.isna(code) or str(code).strip() == '':
+    # Missing approval
+    pass
+
+# For disposition comparisons, handle None after normalization
+planned = normalize_disposition(row['Planned Disposition'], alias_map)
+actual = normalize_disposition(row['Final Disposition'], alias_map)
+if planned is None or actual is None:
+    # Handle missing disposition data
+    pass
+```
+
+## Top-N Items by Exception Count
+
+Identify highest-priority items for executive brief:
+
+```python
+from collections import Counter
+
+# Count total errors per SKU
+sku_errors = df.groupby('SKU')['Total Errors'].sum()
+top_skus = sku_errors.nlargest(2)  # Get top 2
+print(f"Top SKUs: {list(top_skus.items())}")
+
+# Count total errors per Queue
+queue_errors = df.groupby('Queue')['Total Errors'].sum()
+top_queues = queue_errors.nlargest(2)
+print(f"Top Queues: {list(top_queues.items())}")
+
+# Count total errors per Employee (timesheet)
+emp_errors = df.groupby('Employee ID')['Total Errors'].sum()
+top_employees = emp_errors.nlargest(2)
+print(f"Top Employees: {list(top_employees.items())}")
+
+# Count total errors per Warehouse (returns disposition)
+wh_errors = df.groupby('Warehouse')['Total Errors'].sum()
+top_warehouses = wh_errors.nlargest(2)
+print(f"Top Warehouses: {list(top_warehouses.items())}")
+```
+
+## Loading Rules from Separate Sheet
+
+When thresholds are defined in a separate sheet:
+
+```python
+def load_sla_rules(wb, sheet_name='SLA_Rules'):
+    """Load SLA rules into dict keyed by Priority Tier."""
+    sla_sheet = wb[sheet_name]
+    sla_rules = {}
+    headers = [cell.value for cell in sla_sheet[1]]
+    
+    for row in sla_sheet.iter_rows(min_row=2, values_only=True):
+        if row[0] is not None:
+            rule = dict(zip(headers, row))
+            tier = rule['Priority Tier']
+            sla_rules[tier] = {
+                'Max Open Hours': rule['Max Open Hours'],
+                'Escalation Required': rule['Escalation Required']
+            }
+    return sla_rules
+
+def load_break_rules(wb, sheet_name='BreakRules'):
+    """Load break rules into dict keyed by Role."""
+    rules_sheet = wb[sheet_name]
+    break_rules = {}
+    headers = [cell.value for cell in rules_sheet[1]]
+    
+    for row in rules_sheet.iter_rows(min_row=2, values_only=True):
+        if row[0] is not None:
+            rule = dict(zip(headers, row))
+            role = rule['Role']
+            break_rules[role] = {
+                'Min Break Minutes': rule['Min Break Minutes'],
+                'OT Threshold Hours': rule['OT Threshold Hours']
+            }
+    return break_rules
+
+def load_alias_map(wb, sheet_name='Disposition_Alias'):
+    """Load disposition aliases into normalized mapping."""
+    alias_sheet = wb[sheet_name]
+    alias_map = {}
+    
+    for row in alias_sheet.iter_rows(min_row=2, values_only=True):
+        if row[0] is not None:
+            canonical = str(row[0]).upper()
+            # Map canonical to itself
+            alias_map[canonical.lower()] = canonical
+            # Map all aliases in remaining columns
+            for alias in row[1:]:
+                if alias is not None:
+                    alias_map[str(alias).lower()] = canonical
+    return alias_map
+```
+
+## Cycle Count Variance Patterns
+
+### Event Type Filtering (FINAL Only)
+
+When processing cycle count events, filter for FINAL events only. PRELIMINARY and VOID events should be excluded:
+
+```python
+# Build lookup from FINAL events only
+final_events = {}
+for _, row in events_df.iterrows():
+    if row['Event Type'] == 'FINAL':
+        key = (row['Facility'], row['Session ID'], row['Bin ID'])
+        final_events[key] = row['Count Qty']
+```
+
+### NULL Count Quantity Handling
+
+A FINAL event with NULL/NaN Count Qty should be treated as missing:
+
+```python
+# Check both key existence AND value validity
+key = (row['Facility'], row['Session ID'], row['Bin ID'])
+if key not in final_events or pd.isna(final_events[key]):
+    return 1  # Missing Final Count
+```
+
+### Missing Final Count Detection (Cycle Count)
+
+```python
+def missing_final_count(row, final_events):
+    """Check if no valid FINAL count exists for this plan line."""
+    key = (row['Facility'], row['Session ID'], row['Bin ID'])
+    if key not in final_events:
+        return 1
+    # Check for NULL count quantity
+    count_qty = final_events[key]
+    if pd.isna(count_qty):
+        return 1
+    return 0
+
+df['Missing Final Count'] = df.apply(
+    lambda row: missing_final_count(row, final_events), axis=1
+)
+```
+
+### Approval Gap Detection (Cycle Count)
+
+Flag when variance exceeds allowed threshold AND approval was required but missing:
+
+```python
+def approval_gap(row, final_events):
+    """Check if variance exceeds allowed AND approval required but missing."""
+    key = (row['Facility'], row['Session ID'], row['Bin ID'])
+    if key not in final_events:
+        return 0  # Missing final count is separate error
+    
+    final_qty = final_events[key]
+    if pd.isna(final_qty):
+        return 0  # NULL count handled by Missing Final Count
+    
+    expected = row['Expected Qty']
+    allowed = row['Allowed Variance']
+    approval_needed = str(row['Approval Needed']).upper() == 'YES'
+    
+    # Calculate absolute variance
+    variance = abs(final_qty - expected)
+    
+    # Gap exists if variance exceeds allowed AND approval was required but missing
+    if variance > allowed and approval_needed:
+        approval_code = row.get('Approval Code')
+        if pd.isna(approval_code) or str(approval_code).strip() == '':
+            return 1
+    return 0
+
+df['Approval Gap'] = df.apply(
+    lambda row: approval_gap(row, final_events), axis=1
+)
+```
+
+### Summary Aggregation for Cycle Count (Facility + Session ID)
+
+Group by Facility and Session ID, filter to errors only:
+
+```python
+# Aggregate
+summary = df.groupby(['Facility', 'Session ID']).agg({
+    'Missing Final Count': 'sum',
+    'Approval Gap': 'sum',
+    'Total Errors': 'sum'
+}).reset_index()
+
+# Filter to rows with errors
+summary = summary[summary['Total Errors'] > 0]
+
+# Sort by Facility then Session ID
+summary = summary.sort_values(['Facility', 'Session ID'])
+
+# Add Grand Total
+grand_total = pd.DataFrame({
+    'Facility': ['Grand Total'],
+    'Session ID': ['-'],
+    'Missing Final Count': [df['Missing Final Count'].sum()],
+    'Approval Gap': [df['Approval Gap'].sum()],
+    'Total Errors': [df['Total Errors'].sum()]
+})
+summary = pd.concat([summary, grand_total], ignore_index=True)
+```
+
+### High-Error Facility/Session for Word Brief
+
+Identify highest-error combinations for executive brief:
+
+```python
+# Count total errors per Facility/Session combination
+fac_session_errors = df.groupby(['Facility', 'Session ID'])['Total Errors'].sum()
+top_combos = fac_session_errors.nlargest(3)  # Get top 3
+for (facility, session), errors in top_combos.items():
+    if errors > 0:
+        print(f"{facility} / {session} with {int(errors)} errors")
+```

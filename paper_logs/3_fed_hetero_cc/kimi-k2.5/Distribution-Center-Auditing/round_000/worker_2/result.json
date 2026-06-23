@@ -1,0 +1,29 @@
+{
+    "id": "6c16a937-4374-474a-8891-a73482bc72f1",
+    "started_at": "2026-05-22T18:14:36.711904",
+    "finished_at": "2026-05-22T18:17:15.039628",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Distribution-Center-Auditing": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "harbor_receiving_exception_audit__mzA53Pp"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

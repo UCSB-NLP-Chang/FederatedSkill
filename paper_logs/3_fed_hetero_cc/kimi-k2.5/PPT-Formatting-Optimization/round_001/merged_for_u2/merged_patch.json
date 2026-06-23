@@ -1,0 +1,39 @@
+{
+  "worker_id": "u2",
+  "summary": "Merged pptx-manipulation skill by combining u1's critical ElementTree namespace warnings and regex-based workflow with u2's mandatory [Content_Types].xml registration and verification improvements, while consolidating scripts with best features from both.",
+  "upsert_paths": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/references/adding-slides.md",
+    "pptx-manipulation/scripts/extract_pptx.py",
+    "pptx-manipulation/scripts/verify_pptx.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "pptx-manipulation/scripts/verify_pptx.py": [
+      "upsert",
+      "llm_merge:top=u1",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/SKILL.md": [
+      "upsert",
+      "llm_merge:top=u1",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/references/adding-slides.md": [
+      "upsert",
+      "llm_merge:top=u2",
+      0.8888888888888888
+    ],
+    "pptx-manipulation/scripts/extract_pptx.py": [
+      "upsert",
+      "llm_merge:top=u2",
+      0.8888888888888888
+    ]
+  },
+  "conflicts": [
+    "pptx-manipulation/SKILL.md",
+    "pptx-manipulation/scripts/verify_pptx.py",
+    "__cloud_skill_agent_failed__:RuntimeError:claude container timed out after 600s"
+  ],
+  "cost_usd": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Extended inventory-load-planning skill to cover clinic/branch transfer scenarios with deduplication logic for duplicate transfer IDs, added status value mappings for Confirmed/Tentative/Cancelled patterns, and documented branch-item level calculations.",
+  "upsert_paths": [
+    "inventory-load-planning/SKILL.md",
+    "inventory-load-planning/references/formulas.md"
+  ],
+  "delete_paths": []
+}

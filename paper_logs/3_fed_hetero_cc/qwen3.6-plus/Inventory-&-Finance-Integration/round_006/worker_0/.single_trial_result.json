@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "new_task_12_mealkit_freshness_re__XunN8du",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-%26-Finance-Integration/round_006/worker_0/new_task_12_mealkit_freshness_re__XunN8du",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-variance5-glm-M3-hetero/Inventory-&-Finance-Integration/round_006/worker_0/new_task_12_mealkit_freshness_re__XunN8du",
+  "reward": 1.0,
+  "exception_type": null,
+  "exception_message": null
+}

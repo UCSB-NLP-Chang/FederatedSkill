@@ -1,0 +1,660 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collecting ... collected 1 item
+
+../tests/test_output.py::test_legacy_pytest_suite FAILED                 [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_legacy_pytest_suite ___________________________
+
+    def test_legacy_pytest_suite() -> None:
+        local_test = Path(__file__).with_name("test_outputs.py")
+        harness_test = Path("/tests/test_outputs.py")
+        test_file = harness_test if harness_test.exists() else local_test
+    
+        result = subprocess.run(
+            [sys.executable, "-m", "pytest", str(test_file), "-q"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+>           raise AssertionError((result.stdout or "") + "\n" + (result.stderr or ""))
+E           AssertionError: FFFFFFFFFF                                                               [100%]
+E           =================================== FAILURES ===================================
+E           _____________________ TestSheetStructure.test_file_exists ______________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f71fbf7b8c0>
+E           
+E               def test_file_exists(self):
+E           >       assert os.path.exists(OUTPUT_FILE), f"Output file not found: {OUTPUT_FILE}"
+E           E       AssertionError: Output file not found: /root/Construction_Union.xlsx
+E           E       assert False
+E           E        +  where False = <function exists at 0x7f71fce2b560>('/root/Construction_Union.xlsx')
+E           E        +    where <function exists at 0x7f71fce2b560> = <module 'posixpath' (frozen)>.exists
+E           E        +      where <module 'posixpath' (frozen)> = os.path
+E           
+E           /tests/test_outputs.py:10: AssertionError
+E           _____________________ TestSheetStructure.test_sheet_names ______________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f71fbf98bc0>
+E           
+E               def test_sheet_names(self):
+E           >       wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:13: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:346: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/Construction_Union.xlsx'
+E           mode = 'r', compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/Construction_Union.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           __________________ TestSheetStructure.test_named_ranges_count __________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f71fbf8ff20>
+E           
+E               def test_named_ranges_count(self):
+E           >       wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:19: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:346: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/Construction_Union.xlsx'
+E           mode = 'r', compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/Construction_Union.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           ____________________ TestSheetStructure.test_summary_title _____________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f71fbf8e8d0>
+E           
+E               def test_summary_title(self):
+E           >       wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:24: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:346: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/Construction_Union.xlsx'
+E           mode = 'r', compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/Construction_Union.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           __________________ TestSheetStructure.test_summary_comp_rows ___________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f71fbfa6b70>
+E           
+E               def test_summary_comp_rows(self):
+E           >       wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:31: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:346: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/Construction_Union.xlsx'
+E           mode = 'r', compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/Construction_Union.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           __________________ TestSheetStructure.test_ee_calcs_row_count __________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f71fbfa5160>
+E           
+E               def test_ee_calcs_row_count(self):
+E           >       wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:37: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:346: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/Construction_Union.xlsx'
+E           mode = 'r', compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/Construction_Union.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           _______________ TestSheetStructure.test_quarterly_totals_row_94 ________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f71fc0e2300>
+E           
+E               def test_quarterly_totals_row_94(self):
+E           >       wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:44: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:346: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/Construction_Union.xlsx'
+E           mode = 'r', compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/Construction_Union.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           ______________ TestSheetStructure.test_summary_references_row_94 _______________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f71fc0e2030>
+E           
+E               def test_summary_references_row_94(self):
+E           >       wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:50: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:346: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/Construction_Union.xlsx'
+E           mode = 'r', compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/Construction_Union.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           _____________________ TestSheetStructure.test_roster_count _____________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f71fc0e1eb0>
+E           
+E               def test_roster_count(self):
+E           >       wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:59: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:346: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/Construction_Union.xlsx'
+E           mode = 'r', compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/Construction_Union.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           _______________ TestSheetStructure.test_yoy_service_progression ________________
+E           
+E           self = <test_outputs.TestSheetStructure object at 0x7f71fc0e0860>
+E           
+E               def test_yoy_service_progression(self):
+E           >       wb = openpyxl.load_workbook(OUTPUT_FILE)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           
+E           /tests/test_outputs.py:65: 
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:346: in load_workbook
+E               reader = ExcelReader(filename, read_only, keep_vba,
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:123: in __init__
+E               self.archive = _validate_archive(fn)
+E                              ^^^^^^^^^^^^^^^^^^^^^
+E           /usr/local/lib/python3.12/dist-packages/openpyxl/reader/excel.py:95: in _validate_archive
+E               archive = ZipFile(filename, 'r')
+E                         ^^^^^^^^^^^^^^^^^^^^^^
+E           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+E           
+E           self = <zipfile.ZipFile [closed]>, file = '/root/Construction_Union.xlsx'
+E           mode = 'r', compression = 0, allowZip64 = True, compresslevel = None
+E           
+E               def __init__(self, file, mode="r", compression=ZIP_STORED, allowZip64=True,
+E                            compresslevel=None, *, strict_timestamps=True, metadata_encoding=None):
+E                   """Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',
+E                   or append 'a'."""
+E                   if mode not in ('r', 'w', 'x', 'a'):
+E                       raise ValueError("ZipFile requires mode 'r', 'w', 'x', or 'a'")
+E               
+E                   _check_compression(compression)
+E               
+E                   self._allowZip64 = allowZip64
+E                   self._didModify = False
+E                   self.debug = 0  # Level of printing: 0 through 3
+E                   self.NameToInfo = {}    # Find file info given name
+E                   self.filelist = []      # List of ZipInfo instances for archive
+E                   self.compression = compression  # Method of compression
+E                   self.compresslevel = compresslevel
+E                   self.mode = mode
+E                   self.pwd = None
+E                   self._comment = b''
+E                   self._strict_timestamps = strict_timestamps
+E                   self.metadata_encoding = metadata_encoding
+E               
+E                   # Check that we don't try to write with nonconforming codecs
+E                   if self.metadata_encoding and mode != 'r':
+E                       raise ValueError(
+E                           "metadata_encoding is only supported for reading files")
+E               
+E                   # Check if we were passed a file-like object
+E                   if isinstance(file, os.PathLike):
+E                       file = os.fspath(file)
+E                   if isinstance(file, str):
+E                       # No, it's a filename
+E                       self._filePassed = 0
+E                       self.filename = file
+E                       modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',
+E                                   'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}
+E                       filemode = modeDict[mode]
+E                       while True:
+E                           try:
+E           >                   self.fp = io.open(file, filemode)
+E                                         ^^^^^^^^^^^^^^^^^^^^^^^
+E           E                   FileNotFoundError: [Errno 2] No such file or directory: '/root/Construction_Union.xlsx'
+E           
+E           /usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError
+E           =========================== short test summary info ============================
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_file_exists - Asser...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_sheet_names - FileN...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_named_ranges_count
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_summary_title - Fil...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_summary_comp_rows
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_ee_calcs_row_count
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_quarterly_totals_row_94
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_summary_references_row_94
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_roster_count - File...
+E           FAILED ../tests/test_outputs.py::TestSheetStructure::test_yoy_service_progression
+E           10 failed in 0.39s
+
+/tests/test_output.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_output.py::test_legacy_pytest_suite - AssertionError: FF...
+============================== 1 failed in 0.60s ===============================

@@ -1,0 +1,9 @@
+{
+  "worker_id": "u1",
+  "reward": 0.75,
+  "summary": "Added guidance for non-placeholder text replacement scenarios and fixed verification approach to handle text split across XML elements. The trace showed that verification must check rendered text (stripping XML tags) rather than searching raw XML, since HWPX often splits text across multiple <hp:t> elements.",
+  "upsert_paths": [
+    "hwpx-template-filling/SKILL.md"
+  ],
+  "delete_paths": []
+}

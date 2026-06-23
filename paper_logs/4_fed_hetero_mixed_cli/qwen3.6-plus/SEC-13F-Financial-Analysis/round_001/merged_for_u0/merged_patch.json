@@ -1,0 +1,38 @@
+{
+  "worker_id": "u0",
+  "summary": "DONE \u2014 Merged u0 R1 patches for SEC-13F-Financial-Analysis.\n\nKey changes:\n- Added B2 (class breakdown) workflow from u2\n- Added word-level matching as explicit step 3\n- Added column verification as step 1 from u1\n- Fixed null handling (return null, not zeros)\n- Added matching_strategies.md and output-schemas.md references\n\nSee DECISIONS.md for full rationale.",
+  "upsert_paths": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/references/matching_strategies.md",
+    "sec-13f-analysis/references/output-schemas.md",
+    "sec-13f-analysis/scripts/process_13f.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "sec-13f-analysis/references/matching_strategies.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-analysis/references/output-schemas.md": [
+      "upsert",
+      "cloud_skill_merge:top=u2",
+      0.0
+    ],
+    "sec-13f-analysis/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ],
+    "sec-13f-analysis/scripts/process_13f.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      0.5
+    ]
+  },
+  "conflicts": [
+    "sec-13f-analysis/SKILL.md",
+    "sec-13f-analysis/scripts/process_13f.py"
+  ],
+  "cost_usd": 2.4892529999999997
+}

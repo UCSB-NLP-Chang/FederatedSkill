@@ -1,0 +1,10 @@
+{
+  "worker_id": "u2",
+  "reward": 1.0,
+  "summary": "Adds a new skill for vaccination crate dispatch analysis (6-day vs 12-day cycles) following the established pattern of oncocooler-dispatch-analysis. Captures the specific data resolution rules for suspensions.csv exclusions, billing.csv status/cycle_tag filtering, and location override revision logic observed in the trace.",
+  "upsert_paths": [
+    "vaxcrate-dispatch-analysis/SKILL.md",
+    "vaxcrate-dispatch-analysis/scripts/compute_vaxcrate.py"
+  ],
+  "delete_paths": []
+}

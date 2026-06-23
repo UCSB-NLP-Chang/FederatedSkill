@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "trial_name": "inventory-multi-warehouse-pivot__9n4VQm9",
+  "trial_uri": "file:///mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/round_003/worker_2/inventory-multi-warehouse-pivot__9n4VQm9",
+  "trial_dir": "/mnt/data/guanyu/SkillFL/SkillFlow-benchmark/jobs/fed-cloudskill-v5_9-kimi-rest10-glm-M3-hetero/Sales-Pivot-Analysis/round_003/worker_2/inventory-multi-warehouse-pivot__9n4VQm9",
+  "reward": 0.0,
+  "exception_type": null,
+  "exception_message": null
+}

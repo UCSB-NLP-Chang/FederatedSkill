@@ -1,0 +1,33 @@
+{
+    "id": "e57b6353-2cea-4bb7-af7f-80372bcccfef",
+    "started_at": "2026-05-18T07:22:39.474874",
+    "finished_at": "2026-05-18T07:53:00.036540",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 1,
+        "evals": {
+            "kimi-cli__kimi-k2.5__SEC-13F-Financial-Analysis": {
+                "n_trials": 1,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "existing-brief-refresh__LmBU35i"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "existing-brief-refresh__LmBU35i"
+                    ]
+                }
+            }
+        }
+    }
+}

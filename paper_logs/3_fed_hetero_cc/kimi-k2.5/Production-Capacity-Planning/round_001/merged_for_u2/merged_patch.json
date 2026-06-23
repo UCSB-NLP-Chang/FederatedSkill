@@ -1,0 +1,57 @@
+{
+  "worker_id": "u2",
+  "summary": "Round 1 merge complete. Renamed skill to `excel-capacity-planning` (peer-majority), applied u2's validated SKILL.md with oscillation handling from u0, added references/excel-patterns.md, kept baseline scripts (u0's script had calculation bug). See DECISIONS.md for details.",
+  "upsert_paths": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/references/excel-patterns.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py",
+    "excel-capacity-planning/scripts/verify_plan.py"
+  ],
+  "delete_paths": [
+    "capacity-backlog-planning/SKILL.md",
+    "capacity-backlog-planning/scripts/capacity_planner_template.py",
+    "capacity-backlog-planning/scripts/verify_plan.py"
+  ],
+  "provenance": {
+    "capacity-backlog-planning/scripts/capacity_planner_template.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "capacity-backlog-planning/SKILL.md": [
+      "delete",
+      "cloud_skill_merge:top=u2",
+      1.0
+    ],
+    "excel-capacity-planning/scripts/capacity_planner_template.py": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/references/excel-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "excel-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:top=u0",
+      1.0
+    ],
+    "excel-capacity-planning/scripts/verify_plan.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "capacity-backlog-planning/scripts/verify_plan.py": [
+      "delete",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [
+    "excel-capacity-planning/SKILL.md",
+    "excel-capacity-planning/scripts/capacity_planner_template.py"
+  ],
+  "cost_usd": 0.5726553000000001
+}

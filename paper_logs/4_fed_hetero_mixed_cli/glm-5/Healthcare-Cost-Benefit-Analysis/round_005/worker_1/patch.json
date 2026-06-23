@@ -1,0 +1,10 @@
+{
+  "worker_id": "u1",
+  "reward": 0.4,
+  "summary": "Creates a new skill for oncology cooler dispatch cycle analysis (10-day vs 20-day), following the established pattern of existing cycle-analysis skills. The agent manually calculated values without a script, which likely caused precision or formula errors. A dedicated script ensures correct calculations, proper output schema, and threshold-based decision logic.",
+  "upsert_paths": [
+    "oncocooler-dispatch-analysis/SKILL.md",
+    "oncocooler-dispatch-analysis/scripts/compute_oncocooler.py"
+  ],
+  "delete_paths": []
+}

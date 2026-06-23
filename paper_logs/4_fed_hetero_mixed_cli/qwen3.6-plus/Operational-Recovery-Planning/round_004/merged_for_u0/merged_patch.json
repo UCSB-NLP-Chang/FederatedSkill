@@ -1,0 +1,35 @@
+{
+  "worker_id": "u0",
+  "summary": "Merge complete. Applied u0's constrained-excel-planning patch (reward=0.4, highest) renamed to production-capacity-planning. Integrated u1's validate_workbook.py script and u2's distribution algorithm as reference files. Library: 1 skill (production-capacity-planning) with 1 script + 2 references. See DECISIONS.md for details.",
+  "upsert_paths": [
+    "production-capacity-planning/SKILL.md",
+    "production-capacity-planning/references/constraint-patterns.md",
+    "production-capacity-planning/references/formula-patterns.md",
+    "production-capacity-planning/scripts/validate_workbook.py"
+  ],
+  "delete_paths": [],
+  "provenance": {
+    "production-capacity-planning/SKILL.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "production-capacity-planning/references/constraint-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "production-capacity-planning/scripts/validate_workbook.py": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ],
+    "production-capacity-planning/references/formula-patterns.md": [
+      "upsert",
+      "cloud_skill_merge:synthesized",
+      0.0
+    ]
+  },
+  "conflicts": [],
+  "cost_usd": 0.4930553999999999
+}

@@ -1,0 +1,38 @@
+{
+    "id": "804416f4-b896-4d9a-857d-b75c16433755",
+    "started_at": "2026-05-10T03:33:10.083629",
+    "finished_at": "2026-05-10T04:24:33.665290",
+    "n_total_trials": 8,
+    "stats": {
+        "n_trials": 8,
+        "n_errors": 0,
+        "evals": {
+            "claude-code__Distribution-Center-Auditing": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.625
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "harbor_receiving_exception_audit__gug4aAb",
+                            "harbor_trailer_detention_audit__fYXcSGX",
+                            "harbor_service_queue_sla_audit__6PRyLnM",
+                            "harbor_timesheet_policy_audit__b868TjT",
+                            "harbor_outbound_manifest_audit__nvU45cE"
+                        ],
+                        "0.0": [
+                            "harbor_promo_register_audit__xQ63kRX",
+                            "harbor_returns_disposition_audit__h25kSgC",
+                            "harbor_cycle_count_variance_audi__H9w5vhw"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}
